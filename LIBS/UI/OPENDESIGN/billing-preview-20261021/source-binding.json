@@ -1,0 +1,13 @@
+{
+  "source": "LIBS/UI/STITCH/branch-preview-20261021/profile.source.html",
+  "sourceSha256": "302685475a299408c28af56edf5edbbe739f814c59f2eac53dc15089946cdeb4",
+  "entrySha256": "4fd06ab0565eeadd6390c1e7a416bc2644b8f7bf4a8c4ddd254001a5af3c98c8",
+  "changes": [
+    "Preserve the exported layout; append branch-preview.css and branch-preview.js.",
+    "Correct generated account/ownership/verification claims to unconnected preview states.",
+    "Use operator-specified shared $ROCHE balance; remove invented PDF resolution claims.",
+    "Remove generated expiry/protocol assumptions and local-token settlement claims."
+  ],
+  "mainAppImported": false,
+  "paymentsConnected": false
+}

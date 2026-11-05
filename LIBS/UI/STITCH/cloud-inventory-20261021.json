@@ -1,0 +1,381 @@
+{
+  "projectId": "8460014353109836944",
+  "projectTitle": "Natally Natal Astrology Companion",
+  "observedDate": "2026-10-21",
+  "access": "Authenticated Stitch MCP tools/call",
+  "baselineCount": 53,
+  "screens": [
+    {
+      "id": "556aa3cac68142529b0cd91cdcefa5b5",
+      "title": "PREPAID-03 · Bring Natally home",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "cea56b3ffa841dea0f6d147b9212bc620d7a293586ab7beed9ad0494d16c1e14"
+    },
+    {
+      "id": "dafb95e2f54345959ec39f7c6116dc5a",
+      "title": "PREPAID-01m · Choose your reading (Mobile)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "972716b69823f2ea9b382acdcace9a1a8206d98ed95e14a5863e992e65df6219"
+    },
+    {
+      "id": "ef31f17ffbd149cdab2fa56f21f16422",
+      "title": "natally — Product Requirements Document (PRD) & Brief",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "2afce93745fbd117d0ef3fa66116bb883dcc599d322be8748b35a5145362ae5e"
+    },
+    {
+      "id": "7bf6b460b99b4916b4cd70d6421891bd",
+      "title": "PREPAID-05m · x402 Protocol (Mobile)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "a31dbec764a404cb2859ab2f0439b56f2da39fb091e300eea43e009eb946183b"
+    },
+    {
+      "id": "ec8d004ee45947cab313432456866f7d",
+      "title": "Screen 3b — Conversation (Early Morning Mirroring)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "ba67fae52c68d199872e36a1a38871b5f643945c6fe67e0a4a198a50bf2c7fc7"
+    },
+    {
+      "id": "37efacdd27454245a75796a650e590ec",
+      "title": "Screen 5 — Atlas (Natal View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "588231b22ae6a6bc24ab596808769e5bbf744a349ee77d6a5eaa1068e3856ab9"
+    },
+    {
+      "id": "a9f625a6c5774f4784b6d00b02f902ab",
+      "title": "PREPAID-01 · Choose your reading",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "d019658b98668c18b93a73e7cc1e3ca0ec25c950f92ee35c0861e2d7e29cd033"
+    },
+    {
+      "id": "bbed16b0e65d4bcbbadef3c0ffaf92fc",
+      "title": "Screen 5 — Atlas (Natal View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "09955c6318667a196b04fd9914b40c06ee8c12df1c9dd0ed5133029247aa0bb3"
+    },
+    {
+      "id": "089e0b2677734763b70a945ab0b16c11",
+      "title": "PREPAID-02 · Make your chart interactive",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "451a37edccda934ad00714132bad1abcffd6d601421c4bbe89534b0432fe24ab"
+    },
+    {
+      "id": "5c3881b20007487eb93597b57a4209d2",
+      "title": "PREPAID-07 · Your reading is ready",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "293fb6ee89f62d3f61ddd1797c6918dabdcdeed01b167ac4e6dba5f3be5e80aa"
+    },
+    {
+      "id": "303e5c419e3e4a3a823f9e22cd3b786d",
+      "title": "Screen 13 — Checkout",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "a3c90e60012e0e512befa0c281b69c33214a981a04d470a9eb14ff97e88f64d2"
+    },
+    {
+      "id": "6519887f0fdd427daaea03118c7d34a8",
+      "title": "Screen 3 — Conversation (Main)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "d16f479bd469de78ca10c589a2b4af00857543e5eaa7f53ef2c6a44a323e2194"
+    },
+    {
+      "id": "969021191a1244089d50fe3a8282615c",
+      "title": "Screen 4 — Conversation (Trial State)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "526f83913e64d6e0ff4e499c6f1cf5d93b78afe8992adf345a2ef79903c661af"
+    },
+    {
+      "id": "816de4daca7444e4954580e61505a75e",
+      "title": "PREPAID-02m · Make your chart interactive (Mobile)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "684126a435e883a83469b8001b24ed247a352af872efdd5f6861153e04176534"
+    },
+    {
+      "id": "978dc297302c4030885eb4c465088f33",
+      "title": "PREPAID-04 · Alby marketplace",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "6d371ba45aed430c509a4c6d7e4b9cdef033e707440ecb24fb8e868224d6419d"
+    },
+    {
+      "id": "8fb2bb8593cb43119e7c739be755f380",
+      "title": "PREPAID-07m · Your reading is ready (Mobile)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "670061ee45e2e8336ef91f6cc29d17ee00f3330b3dfb0256ac6bf65c71eebb8d"
+    },
+    {
+      "id": "39eeaee7cda14c5a8595f1eae72920a4",
+      "title": "Screen 1 — Splash",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "a9ebc650f0058e6198d31079fae5c5e09aa5da38a500ea3c4d4bfa29167b6927"
+    },
+    {
+      "id": "3459e42ac652474390b118670584245b",
+      "title": "PREPAID-06 · Review your reading",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "4e8e3ad825ec9ac089b7347c752e560d84918f4f1f5d8bb0b3e09fd7fdecfda6"
+    },
+    {
+      "id": "bd4f5cd9553348aab76a5f5df710c8fc",
+      "title": "PREPAID-04m · Alby marketplace (Mobile)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "237167e5089fedb872d962a371067b657890c3dea2b184b9e2dd49865ec24bff"
+    },
+    {
+      "id": "7e30dae7aa234b5b83339065a3d26868",
+      "title": "Screen 10 — Settings",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "da0a3532b3dbe93a2e684b79a6323b538b6df87ed1136032a39455ed7e50b153"
+    },
+    {
+      "id": "baa258f3a9a242e6a9fd4c79b2b0fc23",
+      "title": "PREPAID-04 · Alby marketplace",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "ac2efa6c19ea791688b75ff8f57969f0023e3d4cc50911bb8eb3cafc6f88bdcd"
+    },
+    {
+      "id": "825505b4a6344ecb9a2f55d193e724c0",
+      "title": "Three.js",
+      "deviceType": "ASSET",
+      "htmlReadback": false,
+      "htmlSha256": null
+    },
+    {
+      "id": "5f74c5bbe1704a6a989cdae9a9627f6c",
+      "title": "PREPAID-05 · x402 Protocol",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "b2a3ed838afa553613b1a1401ff8b9043acdc8c0ef6debad3972b24ddefab722"
+    },
+    {
+      "id": "24c544d795f74ea1b1ff4a592a65665e",
+      "title": "natally Astrological Emblem",
+      "deviceType": "ASSET",
+      "htmlReadback": true,
+      "htmlSha256": "1f836f8222f37c526fb46fd760cb2ac48adec6734a207801e12db1c47d8e4d46"
+    },
+    {
+      "id": "9e7b983853db44f1b7f46cbb8d61a9c5",
+      "title": "Screen 2 — First-light Onboarding",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "20666083c157835d2c3bb6a7f170a40fbbb204ded58ca0255584136bdae38f54"
+    },
+    {
+      "id": "4623204863522572529",
+      "title": "natally-idle-400.webp",
+      "deviceType": "ASSET",
+      "htmlReadback": false,
+      "htmlSha256": null
+    },
+    {
+      "id": "1b06f5e5d8dd438fb1689f6d5d8f98c6",
+      "title": "Screen 3 — Conversation (Main)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "4da1adf58db3e587fa8c636e5135edcb129be39d8d259dc6ed3eef528e7763a1"
+    },
+    {
+      "id": "bc2847715ed94fa4b4c5174735cbd693",
+      "title": "Screen 7 — Atlas (Today View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "3bb8297dc5bb0daf44ecbd0612d139e65de95d6c8864c17a1bc36d810f898878"
+    },
+    {
+      "id": "7b533574087e4a70903afc7028008306",
+      "title": "Screen 6 — Atlas (Synastry View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "f1d0e79672b3aee21684b429d5bab4905f284524e2e6b5dbcaed28e11584cba1"
+    },
+    {
+      "id": "3f66ac36926641a08938a760c39a0ca6",
+      "title": "Screen 11 — About",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "08416dcb5ec79390164412589978d0f041984a34ef124658215f88eb5b444460"
+    },
+    {
+      "id": "8febc59a22a24566996a3b12acf2d895",
+      "title": "Screen 3 — Conversation (Main)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "ce71f8e37e1b2a8ee7d4b67f29a1bdeb511167af60d05d69300f4e45ecc6fe27"
+    },
+    {
+      "id": "5028105a7ebb4d6b896cb774346163bc",
+      "title": "Screen 7 — Atlas (Today View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "e8db082f96ab77a4ca464389cefd3fee029faced342a93403d70e68d74f5ddd0"
+    },
+    {
+      "id": "98aeecf8d64543b7981cadb4b80ad047",
+      "title": "Three.js",
+      "deviceType": "ASSET",
+      "htmlReadback": true,
+      "htmlSha256": "ef5daf241b988fabebb7ca4e4b23edd0c0e989e276e5888202cc46076436ccef"
+    },
+    {
+      "id": "a78db57092344a39b5e8dac69e05ca31",
+      "title": "PREPAID-03m · Bring Natally home (Mobile)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "da3c64636963c36b3253c31bc815606ece1f16882219258af2657667189ee4f9"
+    },
+    {
+      "id": "857967da379341cda39bbabbc6bdc29b",
+      "title": "PREPAID-02 · Make your chart interactive",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "8e5fd10b712faebc6eb7a1c79061d7de00ccdcde98ba83e4fdab78a833789e39"
+    },
+    {
+      "id": "fd3df99c71864981bd77e528421ccd6d",
+      "title": "Screen 7 — Atlas (Today View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "8cd53ecf08717fb7a86c3939a7cfcd55343844a118850b2e0a6ec63869e46fa4"
+    },
+    {
+      "id": "8dd69390bd284c3c80d0f7711f1f7457",
+      "title": "Screen 6 — Atlas (Synastry View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "9327439042a80718255ad40f7396029ed09a1618831af6f1ea6f6a1fd245326f"
+    },
+    {
+      "id": "a92de367d63d4ddc9d8c7dd278aed112",
+      "title": "Screen 3 — Conversation (Main)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "aa0ab2fcae23cdcdd6a79b2df450fd13c7161f88d15458f6ff856bd7d23053a6"
+    },
+    {
+      "id": "285eaf4aba3c400c98fa19cb1c290ba6",
+      "title": "Screen 5 — Atlas (Natal View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "aafdaba6cd302dfa373ce56d40b26cc5adbe429457b2ab391c503c3e68a859bf"
+    },
+    {
+      "id": "f3915a573b2f4dcfb8aef69b6b74564b",
+      "title": "PREPAID-05 · x402 Protocol",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "28c766a92377c5f4240e0ae2c17faa230a530af19da12a920169f24862f15268"
+    },
+    {
+      "id": "cb3179e44a044472922eea94d77dd875",
+      "title": "Screen 12 — Paywall",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "feb480fd81d3e8a34eef3f678ca484dd70a687831e35a6a3e556adbfabed96a3"
+    },
+    {
+      "id": "0fb4be79b3f446b5a4bf9746d138a70d",
+      "title": "Natal Astrolabe 3D — Houses & Interactive Tooltips",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "ff28158566243583b552f4a96a0d062019ca4f75608a3eb9038383d1c564a5ea"
+    },
+    {
+      "id": "c366de70b1484dfc90114d81d05eb12e",
+      "title": "PREPAID-08 · Pick up where you left off",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "b6848784b2bf009f6504331130ec6c0b85c119877e2e6f5bf6fabefc4e54b7c3"
+    },
+    {
+      "id": "5cd01b27813a4180ad86f2b19ade32c2",
+      "title": "Screen 6 — Atlas (Synastry View)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "f5506f67b3755874e37e1fd8d67338746b87d4c099234c8547667c1503060ab2"
+    },
+    {
+      "id": "2359dc249dc04ac5935cfc2693fe1f99",
+      "title": "PREPAID-03 · Bring Natally home",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "81a8d2ccdd07d15770b5bc87d39a79000bcec60daeb91fe5686e84f578d52442"
+    },
+    {
+      "id": "bc0be9d09f3546dfb0e384e75d5cf439",
+      "title": "Screen — Birth-Time Repair v1.35",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "ff8b64aef69e22780874ffc8837115d6fee7b4dffa64747b6155061d7061efb9"
+    },
+    {
+      "id": "4503c574e2fc4d209463cbab27616c19",
+      "title": "Charming friendly robotic fortune-teller automaton mascot named natally, cute retro-futuristic brass and enameled clockwork android head wearing a rich plum velvet turban adorned with a delicate gold crescent moon talisman, warm glowing ember eyes, holding a luminous soft glowing crystal glass orb displaying celestial star reflections, dark plum-black observatory background with warm golden ambient rim lighting, 3D character render, highly detailed, soft warm magical atmosphere, whimsical and friendly.",
+      "deviceType": "ASSET",
+      "htmlReadback": false,
+      "htmlSha256": null
+    },
+    {
+      "id": "6ce59ec7256a42428cabd5383a142001",
+      "title": "PREPAID-01 · Choose your reading",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "6f6816ecc39f2c9010276e1af479109d69442b8bd37fa68c7540974220876dab"
+    },
+    {
+      "id": "3fc5702dacfc41678c52e792c5328fff",
+      "title": "Natal Astrolabe 3D — Restored Chart Wheel",
+      "deviceType": "DESKTOP",
+      "htmlReadback": false,
+      "htmlSha256": null
+    },
+    {
+      "id": "a004cf5e0b664bde9c86768872a4c1ce",
+      "title": "Screen 8 — People",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "1bef915dd658f6f14cb71a1eac57f0a930d72e87e5ed10d67f58acb3698154f4"
+    },
+    {
+      "id": "07a9a049170c488b9c56283d45055389",
+      "title": "Screen — Birth-Time Repair",
+      "deviceType": "DESKTOP",
+      "htmlReadback": true,
+      "htmlSha256": "4617e42b39c0854f575ca53b4669acedbd4e383eab8abd1a7141cba6809a2b55"
+    },
+    {
+      "id": "826afb54fa854a7b8e7226c1216865b5",
+      "title": "Screen 4 — Conversation (Trial State)",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "954952ccae7733d544df5dbc9b8441c24571004d9ff12acdfccf6391db5fe840"
+    },
+    {
+      "id": "1421e81f312f47df8368a19a67228b29",
+      "title": "Screen 9 — Glossary Callout",
+      "deviceType": "MOBILE",
+      "htmlReadback": true,
+      "htmlSha256": "bb9b5dd95c751f2152d56a59a03cb8328c8fdb6154f3dfb5890e68958f7df80c"
+    }
+  ],
+  "finding": "No Profile/balance/top-up/billing-management journey found. Settings source was inspected; trial license restoration there is not billing account management."
+}

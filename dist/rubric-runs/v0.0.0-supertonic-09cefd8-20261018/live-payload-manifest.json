@@ -1,0 +1,119 @@
+{
+  "source": "09cefd8ef1d5afd8339b9c7c82013385eb6d87ed",
+  "surgeRelease": "1792375284583",
+  "domain": "https://natally.surge.sh",
+  "engine": "supertonic-onnx",
+  "verifiedAt": "2026-10-19T02:01:59.3644289Z",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 4301,
+      "sha256": "d2a0bc6f885bc55e4d6d478188c5d9611acc5b7c31ffe0ea16c2ad93aabba395"
+    },
+    {
+      "path": "natally-mascot.webp",
+      "bytes": 1777004,
+      "sha256": "a40780bad977525afdd6c7f92ed47a4b0ba090b1453921a0ad4248208301f873"
+    },
+    {
+      "path": "assets/__vite-browser-external-B42w3XRf.js",
+      "bytes": 90,
+      "sha256": "e07de2d03250b23a64ddfc5140f69e6080803412cbf2b21cd0ce37965fa637e2"
+    },
+    {
+      "path": "assets/app-CNPFfI-d.js",
+      "bytes": 1829562,
+      "sha256": "58cedce482adf2a2021c8dc37b51b791e6f8206bf19677ecb0eb5f34f4642c8f"
+    },
+    {
+      "path": "assets/app-fbSOHZUI.css",
+      "bytes": 11475,
+      "sha256": "fbf9d9c4c1a0c3ad057fb364ec68eec5bd689ad576654ab710873d7fa333705f"
+    },
+    {
+      "path": "assets/astrology-tools-6HLwduul.js",
+      "bytes": 238,
+      "sha256": "d755824fcc73f881b52dc0c93e37575fe7be2efac08000e6bfc0a08068ef7dd7"
+    },
+    {
+      "path": "assets/hostedInference-sTM_nkn3.js",
+      "bytes": 2758,
+      "sha256": "cdff1ce1baece6593690884aca3540cd75c35d24abeb0a5bf2b2da8177b0e905"
+    },
+    {
+      "path": "assets/html2canvas-D8sug6x4.js",
+      "bytes": 199455,
+      "sha256": "99276b5f539b7039f64e21b7e1ab2127ce53585656c7483c2e1bdea040dcaacf"
+    },
+    {
+      "path": "assets/index.es-CXq0D-XH.js",
+      "bytes": 151406,
+      "sha256": "11cdb7fc0017fb2a8f383c501b3a3f451f2927d8448da4320d954bc1f9a12d7a"
+    },
+    {
+      "path": "assets/ort-wasm-simd-threaded.asyncify-CxOG5pUO.wasm",
+      "bytes": 26861777,
+      "sha256": "49871f5a4409519797e127440868a6d1923339d9185907f301a5b2a1d90af082"
+    },
+    {
+      "path": "assets/purify.es-Dn3VvdGh.js",
+      "bytes": 28012,
+      "sha256": "37ef4b20a8d7efc7def9bd5d68900773f834c9797cb67a81d3740752470f1030"
+    },
+    {
+      "path": "assets/src-D2dXgmzo.css",
+      "bytes": 85798,
+      "sha256": "ba4cf418453f25c4e40fc15534eb2f37eac831ffdfb5d48e1c59e54a454ae8e9"
+    },
+    {
+      "path": "assets/src-j3V07s8c.js",
+      "bytes": 239633,
+      "sha256": "0be238227a5002ecd955c98f0d5b1e9a57980cf2df19baf74ddd2c64f796d7fc"
+    },
+    {
+      "path": "assets/supertonic.worker-BQarrr-O.js",
+      "bytes": 554366,
+      "sha256": "5316c1451a4eecf906c19583d221f01b66cf1303e89e05f9a66ec385765d39ee"
+    },
+    {
+      "path": "assets/swisseph-BqKK9TOX.wasm",
+      "bytes": 561871,
+      "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c"
+    },
+    {
+      "path": "assets/voiceVerification-XT9yGNfs.js",
+      "bytes": 1237,
+      "sha256": "80437b2c9e4b35bb30672696a3fabe5993fe651aa50a5470e8ccc37f7921f13c"
+    },
+    {
+      "path": "fonts/OFL-PlayfairDisplay.txt",
+      "bytes": 4541,
+      "sha256": "a32c1e30554f8227178d1643d182f9328b6529d92c9b43d86a16fb528381d857"
+    },
+    {
+      "path": "fonts/playfair-display-latin.woff2",
+      "bytes": 38404,
+      "sha256": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2"
+    },
+    {
+      "path": "tests/voice-browser.html",
+      "bytes": 1457,
+      "sha256": "98ed713f7ff4d18526a8f24c99dac2cadf477493e2990e0d2e7dbc42ccf69152"
+    },
+    {
+      "path": "vendor/swisseph/swisseph.data",
+      "bytes": 2151204,
+      "sha256": "1aac44b2ea3dfe668a063ed29dada99a7a96d8fa22fdce626cdf9e270b084ed0"
+    },
+    {
+      "path": "vendor/swisseph/swisseph.js",
+      "bytes": 74274,
+      "sha256": "451a518b26b446db5e0c9a834aad1e9428d0fff7411cbfc39fce523b43a79e32"
+    },
+    {
+      "path": "vendor/swisseph/swisseph.wasm",
+      "bytes": 561871,
+      "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c"
+    }
+  ]
+}

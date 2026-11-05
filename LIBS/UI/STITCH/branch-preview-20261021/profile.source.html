@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>natally-ai-studio — Profile and billing preview</title>
+<!-- Google Fonts: Fraunces, Nunito Sans, IBM Plex Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            observatory: '#18161B',
+            'raised-charcoal': '#242127',
+            'surface-dim': '#141217',
+            'surface-bright': '#3b383e',
+            starlight: '#F5F2E9',
+            ash: '#B8B2BA',
+            hairline: '#514953',
+            'celestial-brass': '#C9AA60',
+            'celestial-brass-hover': '#DFBE72',
+            'brass-dim': 'rgba(201, 170, 96, 0.15)',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            body: ['"Nunito Sans"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #18161B;
+      color: #F5F2E9;
+      font-family: 'Nunito Sans', sans-serif;
+      min-height: 100dvh;
+    }
+    .font-fraunces { font-family: 'Fraunces', serif; }
+    .font-mono { font-family: 'IBM Plex Mono', monospace; }
+    
+    /* View switching logic */
+    .view-section { display: none; }
+    .view-section.active { display: block; }
+    
+    /* Subtle focus states */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 2px solid #C9AA60;
+      outline-offset: 2px;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #18161B; }
+    ::-webkit-scrollbar-thumb { background: #514953; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C9AA60; }
+  </style>
+</head>
+<body class="bg-observatory text-starlight antialiased selection:bg-celestial-brass selection:text-observatory flex flex-col min-h-screen">
+<!-- TOP HEADER / BANNER -->
+<header class="border-b border-hairline/60 bg-surface-dim/90 sticky top-0 z-40 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Left: Brand / Studio Identity -->
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full border border-celestial-brass/50 overflow-hidden flex-shrink-0 bg-raised-charcoal">
+<img alt="Natally Automaton Mascot" class="w-full h-full object-cover" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCrfhL4lciCS2D4SfH-I-Aq0qL6NisgPYvi8x0pRtoqm0ZT-d8DZ3OiEaetjs5aI6RcGmyzIEtUDxgO7_ke3koF5-QzSocUK-zRvNfNbssqYzFQsKrwpdaw8gTTc1ps8FBv401bQfGhzP2rbE6JEcZieIy58sIGyoSB5Eco9eB1AdxjP5bHxO8HY-EZMKACzNBCGQh6blsU9a75CNgoqxX2h-uOp59BV_C7bbgi42rkaNBJBBZ2Z7wIRxEYVpgFod3LF91tPeOSRGM'" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-2">
+<span class="font-display font-semibold tracking-wide text-starlight text-lg leading-tight">Natally</span>
+<span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded border border-hairline text-ash">natally-ai-studio</span>
+</div>
+<span class="text-[11px] text-ash font-mono">codex/revenuecat-alby-preview</span>
+</div>
+</div>
+<!-- Center: Truthful Status Banner -->
+<div class="hidden md:flex items-center space-x-2 px-3 py-1 rounded-full border border-hairline bg-raised-charcoal/70">
+<span class="w-2 h-2 rounded-full bg-celestial-brass animate-pulse"></span>
+<span class="text-xs font-mono text-ash tracking-tight">Branch preview — payments not connected</span>
+</div>
+<!-- Right: User Name Clickable Trigger -->
+<div class="flex items-center space-x-3">
+<button aria-label="Open profile account management" class="flex items-center space-x-2 text-sm text-starlight hover:text-celestial-brass transition-colors py-1.5 px-3 rounded-md hover:bg-raised-charcoal border border-transparent hover:border-hairline" id="profile-name" onclick="switchView('profile')">
+<span class="w-2 h-2 rounded-full bg-celestial-brass/80"></span>
+<span class="font-medium underline underline-offset-4 decoration-celestial-brass/50">Reading preview</span>
+<svg class="w-4 h-4 text-ash" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<!-- LIVE ACCESSIBILITY ANNOUNCER -->
+<div aria-live="polite" class="sr-only" id="preview-status" role="status">
+    Profile view active. Payments not connected in this preview.
+  </div>
+<!-- MAIN EDITORIAL LAYOUT -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT SIDEBAR: ACCOUNT NAVIGATION (Desktop) / TOP ACCORDION (Mobile) -->
+<aside class="lg:col-span-4 xl:col-span-3 space-y-6">
+<!-- Companion Cameo Card -->
+<div class="p-5 rounded-xl border border-hairline bg-raised-charcoal/80 flex items-center space-x-4">
+<div class="w-14 h-14 rounded-full border-2 border-celestial-brass/60 overflow-hidden flex-shrink-0 bg-surface-dim">
+<img alt="Natally Mascot in Plum Velvet Turban" class="w-full h-full object-cover" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCrfhL4lciCS2D4SfH-I-Aq0qL6NisgPYvi8x0pRtoqm0ZT-d8DZ3OiEaetjs5aI6RcGmyzIEtUDxgO7_ke3koF5-QzSocUK-zRvNfNbssqYzFQsKrwpdaw8gTTc1ps8FBv401bQfGhzP2rbE6JEcZieIy58sIGyoSB5Eco9eB1AdxjP5bHxO8HY-EZMKACzNBCGQh6blsU9a75CNgoqxX2h-uOp59BV_C7bbgi42rkaNBJBBZ2Z7wIRxEYVpgFod3LF91tPeOSRGM'" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div>
+<h2 class="font-display font-medium text-starlight text-base">Observatory Atelier</h2>
+<p class="text-xs text-ash mt-0.5">Continuous companion presence</p>
+<div class="mt-2 inline-flex items-center text-[11px] font-mono text-celestial-brass bg-celestial-brass/10 px-2 py-0.5 rounded border border-celestial-brass/20">
+              Verified server-authoritative
+            </div>
+</div>
+</div>
+<!-- Semantic Navigation Bar -->
+<nav aria-label="Account management" class="p-3 rounded-xl border border-hairline bg-surface-dim space-y-1">
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors bg-raised-charcoal text-celestial-brass border border-hairline/80" id="view-profile" onclick="switchView('profile')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Account Profile</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors text-ash hover:text-starlight hover:bg-raised-charcoal/50" id="view-balance" onclick="switchView('balance')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Balance &amp; Usage</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors text-ash hover:text-starlight hover:bg-raised-charcoal/50" id="view-topup" onclick="switchView('topup')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Top Up Credits</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors text-ash hover:text-starlight hover:bg-raised-charcoal/50" id="view-offers" onclick="switchView('offers')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Buy Natal Chart</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors text-ash hover:text-starlight hover:bg-raised-charcoal/50" id="view-alby" onclick="switchView('alby')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80 text-celestial-brass" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Alby Per-Turn Reading</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors text-ash hover:text-starlight hover:bg-raised-charcoal/50" id="view-billing" onclick="switchView('billing')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Billing Account &amp; Receipts</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+<button class="nav-tab w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-left font-medium transition-colors text-ash hover:text-starlight hover:bg-raised-charcoal/50" id="view-conversation" onclick="switchView('conversation')">
+<span class="flex items-center space-x-3">
+<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Atelier Conversation</span>
+</span>
+<span class="text-xs font-mono text-ash">→</span>
+</button>
+</nav>
+<!-- Technical Architecture Disclaimer -->
+<div class="p-4 rounded-xl border border-hairline/60 bg-surface-dim text-xs text-ash space-y-2">
+<div class="font-mono text-[11px] text-celestial-brass uppercase font-semibold">Operator Directive · 21 Oct 2026</div>
+<p class="leading-relaxed">
+            WooCommerce buildout deferred. First launch isolated with <strong>RevenueCat</strong> (PDF/SPA purchases) and <strong>Alby</strong> (metered turns). No funds transfer or real settlement in this prototype.
+          </p>
+</div>
+</aside>
+<!-- RIGHT / MAIN CONTENT AREA -->
+<section class="lg:col-span-8 xl:col-span-9 bg-raised-charcoal border border-hairline rounded-2xl p-6 sm:p-8 relative min-h-[580px]">
+<!-- SECTION 1: PROFILE (Default Active) -->
+<div class="view-section active space-y-6" data-view="profile" id="section-profile">
+<div class="border-b border-hairline/80 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Account Overview</span>
+<h1 class="font-display text-2xl sm:text-3xl font-normal text-starlight mt-1">Profile &amp; Reading Access</h1>
+</div>
+<div class="inline-flex items-center px-3 py-1 rounded bg-surface-dim border border-hairline text-xs font-mono text-ash">
+              User: <strong class="text-starlight ml-1 font-normal">Reading preview</strong>
+</div>
+</div>
+<!-- Account Identity Summary -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-xl bg-surface-dim border border-hairline">
+<span class="text-xs font-mono text-ash block">Signed-in Identity</span>
+<span class="text-base font-semibold text-starlight mt-1 block">Reading preview</span>
+<span class="text-xs text-ash mt-1 block font-mono">auth: isolated-session</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-dim border border-hairline">
+<span class="text-xs font-mono text-ash block">Natal Reading Status</span>
+<span class="text-base font-semibold text-celestial-brass mt-1 block">Unpurchased</span>
+<span class="text-xs text-ash mt-1 block">PDF &amp; SPA not yet unlocked</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-dim border border-hairline">
+<span class="text-xs font-mono text-ash block">USD Credit Balance</span>
+<span class="text-base font-semibold text-starlight mt-1 block font-mono">Unavailable</span>
+<span class="text-xs text-ash mt-1 block">Awaiting verified account</span>
+</div>
+</div>
+<!-- Quick Actions Grid -->
+<div class="space-y-4 pt-2">
+<h2 class="text-sm font-mono uppercase tracking-wider text-ash">Available Actions</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Buy Natal Chart Action -->
+<div class="p-5 rounded-xl border border-celestial-brass/40 bg-surface-dim/80 hover:border-celestial-brass transition-colors flex flex-col justify-between space-y-4">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-celestial-brass font-semibold">Flagship Deliverable</span>
+<span class="text-[11px] font-mono bg-celestial-brass/10 text-celestial-brass px-2 py-0.5 rounded">Site-Centric</span>
+</div>
+<h3 class="font-display text-lg text-starlight mt-2">Buy natal chart (PDF + SPA)</h3>
+<p class="text-xs text-ash mt-1 leading-relaxed">
+                    High-resolution 300 DPI folio plus interactive conversational reading. Hosted via RevenueCat channel.
+                  </p>
+</div>
+<button class="w-full py-2.5 px-4 rounded-lg bg-celestial-brass text-observatory font-semibold text-sm hover:bg-celestial-brass-hover transition-colors flex items-center justify-center space-x-2" onclick="switchView('offers')">
+<span>Review chart packages</span>
+<span>→</span>
+</button>
+</div>
+<!-- Top Up & Metered Conversation -->
+<div class="p-5 rounded-xl border border-hairline bg-surface-dim/80 hover:border-hairline/80 transition-colors flex flex-col justify-between space-y-4">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-ash font-semibold">Conversational Metering</span>
+<span class="text-[11px] font-mono bg-raised-charcoal text-ash px-2 py-0.5 rounded">Alby / Sats</span>
+</div>
+<h3 class="font-display text-lg text-starlight mt-2">Per-turn atelier dialogue</h3>
+<p class="text-xs text-ash mt-1 leading-relaxed">
+                    Discrete planetary consultation turns settled via Alby. Ownership of PDF/SPA does not imply unlimited hosted turns.
+                  </p>
+</div>
+<div class="flex items-center space-x-2">
+<button class="flex-1 py-2.5 px-3 rounded-lg border border-hairline text-starlight font-medium text-xs hover:bg-raised-charcoal transition-colors" onclick="switchView('topup')">
+                    Top up balance
+                  </button>
+<button class="flex-1 py-2.5 px-3 rounded-lg border border-celestial-brass/50 text-celestial-brass font-medium text-xs hover:bg-celestial-brass/10 transition-colors" onclick="switchView('alby')">
+                    Quote Alby turn
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Expand Billing Account Link -->
+<div class="pt-4 border-t border-hairline/60 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-ash gap-2">
+<span>Need past receipts, invoice proofs, or order restoration?</span>
+<button class="text-celestial-brass hover:underline underline-offset-4 flex items-center space-x-1 font-mono" onclick="switchView('billing')">
+<span>Expand billing account management</span>
+<span>→</span>
+</button>
+</div>
+</div>
+<!-- SECTION 2: BALANCE & USAGE -->
+<div class="view-section space-y-6" data-view="balance" id="section-balance">
+<div class="border-b border-hairline/80 pb-4 flex items-center justify-between">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Account Ledger</span>
+<h1 class="font-display text-2xl font-normal text-starlight mt-1">Reading-Credit Balance</h1>
+</div>
+<button class="text-xs font-mono text-ash hover:text-starlight" onclick="switchView('profile')">← Return to Profile</button>
+</div>
+<!-- Truthful Balance Status Box -->
+<div class="p-6 rounded-xl border border-hairline bg-surface-dim space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<span class="text-xs font-mono text-ash">USD Reading-Credit Balance</span>
+<div class="text-3xl font-display text-starlight mt-1 font-medium tracking-tight">
+                  $0.00 <span class="text-xs font-mono text-ash font-normal tracking-normal">(Unavailable until verified)</span>
+</div>
+</div>
+<button class="px-4 py-2 rounded-lg bg-celestial-brass text-observatory font-semibold text-sm hover:bg-celestial-brass-hover transition-colors" onclick="switchView('topup')">
+                Request top-up quote
+              </button>
+</div>
+<p class="text-xs text-ash leading-relaxed border-t border-hairline/60 pt-3">
+              USD reading credits are strictly separate from Bitcoin Lightning / Alby satoshi turn quotes, and separate from provider treasury accounts. Settlement is server-authoritative.
+            </p>
+</div>
+<!-- Empty Usage State -->
+<div class="p-8 rounded-xl border border-dashed border-hairline bg-surface-dim/40 text-center space-y-3">
+<div class="w-10 h-10 rounded-full border border-hairline mx-auto flex items-center justify-center text-ash font-mono">
+              ∅
+            </div>
+<h2 class="font-display text-lg text-starlight">No recorded credit usage</h2>
+<p class="text-xs text-ash max-w-md mx-auto leading-relaxed">
+              Usage and itemized deductions will appear here once an authenticated account is provisioned with prepaid balances. No simulated deductions or mock receipts are manufactured in this design preview.
+            </p>
+</div>
+</div>
+<!-- SECTION 3: TOP UP -->
+<div class="view-section space-y-6" data-view="topup" id="section-topup">
+<div class="border-b border-hairline/80 pb-4 flex items-center justify-between">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Prepaid Recharge</span>
+<h1 class="font-display text-2xl font-normal text-starlight mt-1">Top Up Reading Credits</h1>
+</div>
+<button class="text-xs font-mono text-ash hover:text-starlight" onclick="switchView('profile')">← Return to Profile</button>
+</div>
+<!-- Top-Up Form -->
+<div class="p-6 rounded-xl border border-hairline bg-surface-dim space-y-5">
+<div>
+<label class="block text-xs font-mono uppercase text-ash tracking-wider mb-2" for="topup-amount">
+                Prepaid credit tier to quote
+              </label>
+<div class="relative max-w-xs">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-ash font-mono text-sm">$</span>
+<input class="w-full pl-8 pr-3 py-2 rounded-lg bg-raised-charcoal border border-hairline text-sm text-starlight font-mono focus:border-celestial-brass cursor-not-allowed" id="topup-amount" name="topup-amount" placeholder="Price shown in quote" readonly="" type="text" value="Price shown in server quote"/>
+</div>
+<p class="text-xs text-ash mt-1.5 font-mono">
+                Actual amount, fees, and currency network parameters are calculated server-authoritatively at quote issuance.
+              </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
+<div class="p-3 rounded-lg border border-hairline/60 bg-raised-charcoal">
+<span class="font-mono text-ash block text-[11px]">Payment State</span>
+<span class="text-starlight font-medium mt-0.5 block">Awaiting Quote</span>
+</div>
+<div class="p-3 rounded-lg border border-hairline/60 bg-raised-charcoal">
+<span class="font-mono text-ash block text-[11px]">Quote Expiry</span>
+<span class="text-starlight font-medium mt-0.5 block">Determined on request</span>
+</div>
+<div class="p-3 rounded-lg border border-hairline/60 bg-raised-charcoal">
+<span class="font-mono text-ash block text-[11px]">Settlement</span>
+<span class="text-celestial-brass font-medium mt-0.5 block">Zero simulation</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="py-3 px-6 rounded-lg bg-celestial-brass text-observatory font-semibold text-sm hover:bg-celestial-brass-hover transition-colors" id="request-topup" onclick="simulateQuoteNotice('Top-up quote requested. Server-authoritative calculation will determine final fees; design screens do not simulate real settlement.')">
+                Request server quote
+              </button>
+</div>
+<div class="border-t border-hairline/60 pt-3 text-xs text-ash space-y-1">
+<p><strong>Recovery notice:</strong> If a payment is interrupted or expires, orders can be resumed rather than settled twice.</p>
+</div>
+</div>
+</div>
+<!-- SECTION 4: BUY NATAL CHART OFFERS -->
+<div class="view-section space-y-6" data-view="offers" id="section-offers">
+<div class="border-b border-hairline/80 pb-4 flex items-center justify-between">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Offer Selection</span>
+<h1 class="font-display text-2xl font-normal text-starlight mt-1">Natal Chart Packages</h1>
+</div>
+<button class="text-xs font-mono text-ash hover:text-starlight" onclick="switchView('profile')">← Return to Profile</button>
+</div>
+<p class="text-xs text-ash leading-relaxed">
+            RevenueCat site-centric purchases. Choose an archival folio or interactive experience. Explicit note: metered conversational readings remain separate from static deliverables.
+          </p>
+<!-- Radio Selector List -->
+<div class="space-y-4">
+<!-- Tier 1: PDF Only -->
+<label class="p-5 rounded-xl border border-hairline bg-surface-dim block cursor-pointer hover:border-hairline/80 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3">
+<input class="accent-celestial-brass w-4 h-4" name="offer" type="radio" value="pdf-only"/>
+<div>
+<span class="font-display text-base text-starlight font-medium">Natal chart — PDF only</span>
+<span class="text-xs font-mono text-ash block mt-0.5">Static archival illuminated folio</span>
+</div>
+</div>
+<span class="text-xs font-mono text-celestial-brass">Price shown in checkout</span>
+</div>
+<p class="text-xs text-ash mt-3 pl-7 leading-relaxed">
+                A downloadable natal reading/folio formatted for 300 DPI high-density printing. Does not include browser SPA access or conversational companion hosting.
+              </p>
+</label>
+<!-- Tier 2: PDF + SPA (Featured) -->
+<label class="p-5 rounded-xl border-2 border-celestial-brass bg-surface-dim/90 block cursor-pointer relative shadow-lg shadow-black/40">
+<div class="absolute -top-3 right-4 px-2 py-0.5 rounded bg-celestial-brass text-observatory font-mono text-[10px] font-bold tracking-wider uppercase">
+                Recommended Deliverable
+              </div>
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3">
+<input checked="" class="accent-celestial-brass w-4 h-4" name="offer" type="radio" value="pdf-spa"/>
+<div>
+<span class="font-display text-base text-starlight font-medium">Natal chart — PDF + SPA</span>
+<span class="text-xs font-mono text-celestial-brass block mt-0.5">Includes interactive conversational reading</span>
+</div>
+</div>
+<span class="text-xs font-mono text-celestial-brass">Price shown in checkout</span>
+</div>
+<p class="text-xs text-ash mt-3 pl-7 leading-relaxed">
+                The complete 300 DPI archival PDF plus standalone interactive chart web app. Explorable orbital degrees, aspect highlights, and dedicated conversational reading entry.
+              </p>
+</label>
+<!-- Tier 3: Bring Natally Home (Upsell) -->
+<label class="p-5 rounded-xl border border-hairline bg-surface-dim block cursor-pointer hover:border-hairline/80 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3">
+<input class="accent-celestial-brass w-4 h-4" name="offer" type="radio" value="home"/>
+<div>
+<span class="font-display text-base text-starlight font-medium">Bring Natally home</span>
+<span class="text-xs font-mono text-ash block mt-0.5">Personal Natally SPA experience</span>
+</div>
+</div>
+<span class="text-xs font-mono text-celestial-brass">Price shown in checkout</span>
+</div>
+<p class="text-xs text-ash mt-3 pl-7 leading-relaxed">
+                Attuned standalone client environment for quiet ongoing reflection. Does not imply unlimited server inference, permanent hosting, or fixed turn allowance.
+              </p>
+</label>
+</div>
+<!-- Checkout & Recovery Controls -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto py-3 px-8 rounded-lg bg-celestial-brass text-observatory font-semibold text-sm hover:bg-celestial-brass-hover transition-colors" id="buy-reading" onclick="simulateQuoteNotice('Proceeding to checkout preview. Live settlement and RevenueCat billing account creation are server-authoritative; no payment is taken.')">
+              Continue to secure checkout →
+            </button>
+<button class="text-xs font-mono text-ash hover:text-celestial-brass underline underline-offset-4" id="restore-purchases" onclick="simulateQuoteNotice('Querying purchase receipts via RevenueCat API stub. No historical entitlement restored in this unauthenticated design branch.')">
+              Restore existing purchases
+            </button>
+</div>
+</div>
+<!-- SECTION 5: BILLING & RECEIPTS -->
+<div class="view-section space-y-6" data-view="billing" id="section-billing">
+<div class="border-b border-hairline/80 pb-4 flex items-center justify-between">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Account Records</span>
+<h1 class="font-display text-2xl font-normal text-starlight mt-1">Billing &amp; Receipts</h1>
+</div>
+<button class="text-xs font-mono text-ash hover:text-starlight" onclick="switchView('profile')">← Return to Profile</button>
+</div>
+<!-- Billing Portal Integration Card -->
+<div class="p-6 rounded-xl border border-hairline bg-surface-dim space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<h2 class="font-display text-lg text-starlight">Customer Billing Portal</h2>
+<p class="text-xs text-ash mt-0.5">Manage payment methods, vat details, and download formal tax receipts.</p>
+</div>
+<button class="py-2 px-4 rounded-lg border border-celestial-brass text-celestial-brass text-xs font-mono hover:bg-celestial-brass/10 transition-colors" id="open-billing-portal" onclick="simulateQuoteNotice('Customer billing portal would open authenticated RevenueCat management link. Payments are not connected on this preview branch.')">
+                Launch billing portal →
+              </button>
+</div>
+</div>
+<!-- Empty Receipts List -->
+<div class="space-y-3">
+<h3 class="text-xs font-mono uppercase text-ash tracking-wider">Purchase History &amp; Settlement Proofs</h3>
+<div class="p-8 rounded-xl border border-hairline bg-surface-dim/40 text-center space-y-2">
+<span class="font-mono text-ash text-xs">No active orders or receipts on this unconfigured preview.</span>
+<p class="text-[11px] text-ash/80 max-w-sm mx-auto">
+                Orders remain server-authoritative; design screens never state that payment is confirmed without live confirmation.
+              </p>
+</div>
+</div>
+<!-- Refund & Recovery Guidance -->
+<div class="p-4 rounded-xl border border-hairline/60 bg-surface-dim text-xs text-ash space-y-1.5">
+<span class="font-mono text-starlight font-semibold block">Order Recovery &amp; Dispute Policy</span>
+<p class="leading-relaxed">
+              If an order was settled but files were not downloaded, do not pay again. Use order recovery with your reference identifier to resume access. Refund management is deferred to the billing administrator.
+            </p>
+</div>
+</div>
+<!-- SECTION 6: ALBY MARKETPLACE (Per-Turn Reading) -->
+<div class="view-section space-y-6" data-view="alby" id="section-alby">
+<div class="border-b border-hairline/80 pb-4 flex items-center justify-between">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Alby Channel</span>
+<h1 class="font-display text-2xl font-normal text-starlight mt-1">Per-Turn Metered Reading</h1>
+</div>
+<button class="text-xs font-mono text-ash hover:text-starlight" onclick="switchView('profile')">← Return to Profile</button>
+</div>
+<div class="p-4 rounded-xl border border-celestial-brass/30 bg-celestial-brass/5 text-xs text-ash space-y-1">
+<span class="font-mono text-celestial-brass font-semibold">Distribution Boundary: Alby Marketplace</span>
+<p class="leading-relaxed">
+              Alby is a payment channel for per-turn astrological dialogue settled in Bitcoin satoshis. Alby is not a PDF storefront and does not grant unlimited conversation tokens.
+            </p>
+</div>
+<!-- Turn Composer -->
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-mono uppercase text-ash tracking-wider mb-2" for="reading-question">
+                Your astrological query for Natally
+              </label>
+<textarea class="w-full p-3.5 rounded-xl bg-surface-dim border border-hairline text-sm text-starlight font-body placeholder:text-ash/50 focus:border-celestial-brass" id="reading-question" placeholder="E.g., Inquire into upcoming Venus-Saturn transits or Placidus midheaven placements..." rows="3"></textarea>
+</div>
+<!-- Quote & Authorization Manifest -->
+<div class="p-4 rounded-xl border border-hairline bg-surface-dim grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+<div>
+<span class="font-mono text-ash block text-[11px]">Turn Rate</span>
+<span class="text-celestial-brass font-mono font-medium block mt-0.5">Quote on request</span>
+</div>
+<div>
+<span class="font-mono text-ash block text-[11px]">Invoice Expiry</span>
+<span class="text-starlight font-mono block mt-0.5">15 min window</span>
+</div>
+<div>
+<span class="font-mono text-ash block text-[11px]">Settlement</span>
+<span class="text-starlight block mt-0.5">Bitcoin Lightning (L402)</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<button class="py-2.5 px-5 rounded-lg bg-celestial-brass text-observatory font-semibold text-sm hover:bg-celestial-brass-hover transition-colors" id="quote-turn" onclick="simulateQuoteNotice('Alby Lightning quote requested for 1 reading turn. Real sats amount and hash challenge will be returned by server.')">
+                Quote 1 Turn
+              </button>
+<button class="py-2.5 px-5 rounded-lg border border-hairline text-starlight font-medium text-sm hover:bg-surface-dim transition-colors" id="pay-turn" onclick="simulateQuoteNotice('Prompting WebLN / Alby extension authorization. Prototype mode: no satoshis transmitted.')">
+                Pay Turn (WebLN)
+              </button>
+<button class="py-2.5 px-5 rounded-lg border border-hairline/60 text-ash hover:text-starlight text-xs font-mono transition-colors" id="resume-turn" onclick="simulateQuoteNotice('Checking paid-but-not-delivered turn registry. Verified turns will resume without double billing.')">
+                Resume Unsent Turn
+              </button>
+</div>
+<div class="p-3.5 rounded-lg border border-hairline/40 bg-surface-dim/60 text-[11px] text-ash space-y-1">
+<span class="font-mono font-semibold text-starlight">Delivery Protection:</span>
+<p>If satoshis are broadcast but the reading payload is interrupted, the turn is saved in your local verification token. Simply click Resume to re-fetch without re-paying.</p>
+</div>
+</div>
+</div>
+<!-- SECTION 7: ATELIER CONVERSATION -->
+<div class="view-section space-y-6" data-view="conversation" id="section-conversation">
+<div class="border-b border-hairline/80 pb-4 flex items-center justify-between">
+<div>
+<span class="text-xs font-mono text-celestial-brass uppercase tracking-wider">Atelier Space</span>
+<h1 class="font-display text-2xl font-normal text-starlight mt-1">Open Atelier Conversation</h1>
+</div>
+<button class="text-xs font-mono text-ash hover:text-starlight" onclick="switchView('profile')">← Return to Profile</button>
+</div>
+<!-- Atelier Scene Description & Asset Link -->
+<div class="p-6 rounded-xl border border-hairline bg-surface-dim space-y-5">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<div class="w-28 h-28 rounded-2xl border-2 border-celestial-brass/50 overflow-hidden flex-shrink-0 bg-observatory shadow-lg shadow-black">
+<img alt="Natally Mascot in Atmospheric Atelier" class="w-full h-full object-cover" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCrfhL4lciCS2D4SfH-I-Aq0qL6NisgPYvi8x0pRtoqm0ZT-d8DZ3OiEaetjs5aI6RcGmyzIEtUDxgO7_ke3koF5-QzSocUK-zRvNfNbssqYzFQsKrwpdaw8gTTc1ps8FBv401bQfGhzP2rbE6JEcZieIy58sIGyoSB5Eco9eB1AdxjP5bHxO8HY-EZMKACzNBCGQh6blsU9a75CNgoqxX2h-uOp59BV_C7bbgi42rkaNBJBBZ2Z7wIRxEYVpgFod3LF91tPeOSRGM'" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="space-y-2 text-center md:text-left">
+<h2 class="font-display text-xl text-starlight">The Nocturnal Astrolabe Sanctuary</h2>
+<p class="text-xs text-ash leading-relaxed">
+                  Preserving the original free-standing robot, warm candle gold, neatly shelved magical ephemera, night star sky, and delicate constellation lines.
+                </p>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1">
+<span class="px-2 py-0.5 rounded text-[11px] font-mono bg-raised-charcoal border border-hairline text-ash">Readable transcript</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-mono bg-raised-charcoal border border-hairline text-ash">Intimate composer</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-mono bg-raised-charcoal border border-hairline text-ash">No voice alteration</span>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-hairline/60 flex flex-col sm:flex-row items-center justify-between gap-3">
+<span class="text-xs text-ash font-mono">Original import: LIBS/UI/OPENDESIGN/atelier-conversation-20261017</span>
+<a class="py-2.5 px-5 rounded-lg bg-celestial-brass text-observatory font-semibold text-xs hover:bg-celestial-brass-hover transition-colors flex items-center space-x-1.5" href="#atelier" id="open-atelier" onclick="simulateQuoteNotice('Navigating to imported OpenDesign atelier view. Audio/ephemeris remain in preview mode.'); return false;">
+<span>Enter conversational atelier</span>
+<span>→</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="border-t border-hairline/60 bg-surface-dim py-6 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ash gap-4">
+<div class="flex items-center space-x-3">
+<span class="font-display text-starlight font-semibold">Natally</span>
+<span class="font-mono text-[11px]">natally-ai-studio · codex/revenuecat-alby-preview</span>
+</div>
+<div class="text-center sm:text-right font-mono text-[11px]">
+        Branch design review · No live payment or inference settlement
+      </div>
+</div>
+</footer>
+<!-- SCRIPT FOR VIEW SWITCHING & ACCESSIBLE NOTICES -->
+<script>
+    function switchView(viewName) {
+      // Hide all view sections
+      const sections = document.querySelectorAll('.view-section');
+      sections.forEach(sec => {
+        sec.classList.remove('active');
+      });
+
+      // Show target section
+      const targetSec = document.getElementById('section-' + viewName);
+      if (targetSec) {
+        targetSec.classList.add('active');
+      }
+
+      // Update active nav-tab style
+      const navTabs = document.querySelectorAll('.nav-tab');
+      navTabs.forEach(tab => {
+        tab.classList.remove('bg-raised-charcoal', 'text-celestial-brass', 'border', 'border-hairline/80');
+        tab.classList.add('text-ash');
+      });
+
+      const activeTab = document.getElementById('view-' + viewName);
+      if (activeTab) {
+        activeTab.classList.add('bg-raised-charcoal', 'text-celestial-brass', 'border', 'border-hairline/80');
+        activeTab.classList.remove('text-ash');
+      }
+
+      // Update ARIA status
+      const statusEl = document.getElementById('preview-status');
+      if (statusEl) {
+        statusEl.textContent = viewName.toUpperCase() + ' view active in design preview. Payments not connected.';
+      }
+
+      // Scroll to top of content on mobile
+      if (window.innerWidth < 1024) {
+        const mainSection = document.querySelector('section');
+        if (mainSection) {
+          mainSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    function simulateQuoteNotice(message) {
+      const statusEl = document.getElementById('preview-status');
+      if (statusEl) {
+        statusEl.textContent = message;
+      }
+      alert(message);
+    }
+  </script>
+</body>
+</html>
