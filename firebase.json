@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-remixastrosphere-1ee57c33-6487-411a-a872-59fbf4cbfc63",
+      "rules": "firebase/intake.rules"
+    }
+  ]
+}

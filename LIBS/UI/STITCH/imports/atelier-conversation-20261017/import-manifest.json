@@ -1,0 +1,65 @@
+{
+  "destinationRepo": "https://github.com/rebots-online/natally-ai-studio.git",
+  "sourceRepo": "https://github.com/rebots-online/natally-chatterbox.git",
+  "sourceCommit": "ce001a9c9f9d80b67e01313b603d7b2805295deb",
+  "sourceDirectory": "DOCS/DESIGN/OPEN-DESIGN-REFINED-20261017",
+  "openDesignRun": "5de9992f-660c-4de4-989b-5c5b5be0bd4b",
+  "importedAt": "2026-10-19T14:53:12.5217030Z",
+  "scope": "Attributed silent design prototype; Supertonic remains this repository audio engine",
+  "files": [
+    {
+      "path": "ARCHIVE-NOTES.md",
+      "bytes": 1043,
+      "sha256": "1ab126ba5454834ff839a6dfb6b193481bf25f5d5fb2a18204f6c8a61dfd2763"
+    },
+    {
+      "path": "assets/natally-mascot.webp",
+      "bytes": 1777004,
+      "sha256": "a40780bad977525afdd6c7f92ed47a4b0ba090b1453921a0ad4248208301f873"
+    },
+    {
+      "path": "assets/natally-still.webp",
+      "bytes": 31106,
+      "sha256": "05f7b2fc0f4fb160d85a8bd7a8cf4e27eedb48e3c70fac5607eab1cbed42f5db"
+    },
+    {
+      "path": "DESIGN-v2.md",
+      "bytes": 8325,
+      "sha256": "0305a07c5dec9429cdb48fd99ff726a580ce7c77d0b5dc572107c57bc92e21c4"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 12237,
+      "sha256": "9062531c300df4df3597a205cd653ce7d36ea3cc8c0e59b80fb26a9aac94d879"
+    },
+    {
+      "path": "index-v2.html",
+      "bytes": 52681,
+      "sha256": "192be7fe00827a97758217cb21865e295afc348da5a49a02471d9f378990bdac"
+    },
+    {
+      "path": "index.html",
+      "bytes": 87482,
+      "sha256": "1e9ace8d7b24ac06117ea5b230ef07dba70b0ef02a5ec9d8251a1558095dd27d"
+    },
+    {
+      "path": "inspected-desktop.jpg",
+      "bytes": 149126,
+      "sha256": "aee7d808e401bcfd04f989a114a0b86fcbb831bb75150d043c75f0d4c2894a20"
+    },
+    {
+      "path": "MOTION-CONTRACT-v2.md",
+      "bytes": 17985,
+      "sha256": "26de0a8d9f09fa3fe94abc645e787d3b956bf495be7fd47fcc0f50f33d4ec816"
+    },
+    {
+      "path": "MOTION-CONTRACT.md",
+      "bytes": 27198,
+      "sha256": "7ed22616967a09b3c332487880201c71d2188ee0cfd32b1019a455934692b223"
+    }
+  ],
+  "sourceOpenDesignProject": "natally-crystal-ball-conversation-2026-10-17-6733",
+  "destinationOpenDesignProject": "natally-ai-studio",
+  "fetchedThrough": "OpenDesign MCP get_artifact, explicit index.html entry",
+  "textNormalization": "index.html fetched verbatim from live MCP; repository archive differs only in blank lines"
+}

@@ -1,0 +1,8 @@
+[build]
+  # This site hosts the API; the React frontend is deployed separately to Surge.
+  command = "node --check netlify/functions/billing.mjs"
+  publish = "netlify/public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
