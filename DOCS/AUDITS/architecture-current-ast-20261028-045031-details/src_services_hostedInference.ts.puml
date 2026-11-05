@@ -1,0 +1,76 @@
+@startuml
+title src/services/hostedInference.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "hostedInference.ts\nfile L1-229\nfile:src/services/hostedInference.ts" as N0
+rectangle "../../netlify/lib/astrology-tools.mjs\nimport L1-1\nimport:2a613b9f4fffb4635c86534616e6c77a" as N1
+rectangle "./inferenceAccess\nimport L2-2\nimport:2d2bb84f3b3e29776872f8c5d8c75d62" as N2
+rectangle "./readingDeadline\nimport L3-3\nimport:5bff30fd50c3b3906492b483a30f63d8" as N3
+rectangle "HostedPayload\ninterface L5-14\ninterface:50ec321fc86c719b7f7fb894474e5be1" as N4
+rectangle "prompt\nproperty L6-6\nproperty:37f013e75a41e9892e5dbfc06c15f7ea" as N5
+rectangle "systemInstruction\nproperty L7-7\nproperty:d4695e391f217d3d665e81360e86f53d" as N6
+rectangle "history\nproperty L8-8\nproperty:46cb826670627c19885c3baa6322d510" as N7
+rectangle "image\nproperty L9-9\nproperty:fd4a3f61ae10f7464cdc4eca449c0458" as N8
+rectangle "temperature\nproperty L10-10\nproperty:69b77058f038feb6cebd6cfea3dd0593" as N9
+rectangle "openingStage\nproperty L11-11\nproperty:b97ee3be146d6bc4516ddda1d15ecb7f" as N10
+rectangle "openingIdentity\nproperty L12-12\nproperty:7a9ff69d73b5ad8fcfdde8019d2fef85" as N11
+rectangle "onProgress\nproperty L13-13\nproperty:3d7236e8030a29e722bffaa51c334a9d" as N12
+rectangle "HostedAuthenticationError\nclass L16-21\nclass:ae3e1a380fdebc76426e8eeb5cd9ebdf" as N13
+rectangle "code\nproperty L17-17\nproperty:e99a162cb73edac6ba16d079090e15ed" as N14
+rectangle "constructor\nmethod L18-20\nmethod:471345d2a9d038aaecf9a6a6b4975985" as N15
+rectangle "CalculationExecutor\ntype_alias L23-23\ntype_alias:9bbe8029730d958ccca5ec863319804c" as N16
+rectangle "hasCorruptReadingText\nfunction L26-28\nfunction:ddb26ec30f6cca322259143d850d69c6" as N17
+rectangle "readOpenRouterStream\nfunction L30-93\nfunction:bee5e6cf46a6853081e02050192d7391" as N18
+rectangle "event\nfunction L38-71\nfunction:91a425bbb984e54e194a6de23c6ecb05" as N19
+rectangle "feed\nfunction L72-80\nfunction:1234a256f1ff46e4ebd2079f61bf5d94" as N20
+rectangle "completeHosted\nfunction L96-210\nfunction:edc498a14f72bec86fa7f5969e7e1ce1" as N21
+rectangle "requestHostedInference\nfunction L212-228\nfunction:51cae60de6ef954e6d74ee38f0e5c3bb" as N22
+rectangle "isCurrent\nfunction L226-226\nfunction:8b2335ba26f3c32ecf64f8536473a3bb" as N23
+N0 --> N1 : contains E1724
+N0 --> N2 : contains E1725
+N0 --> N3 : contains E1726
+N0 --> N4 : contains E1727
+N4 --> N5 : contains E1728
+N4 --> N6 : contains E1729
+N4 --> N7 : contains E1730
+N4 --> N8 : contains E1731
+N4 --> N9 : contains E1732
+N4 --> N10 : contains E1733
+N4 --> N11 : contains E1734
+N4 --> N12 : contains E1735
+N0 --> N13 : contains E1736
+N13 --> N14 : contains E1737
+N13 --> N15 : contains E1738
+N0 --> N16 : contains E1739
+N0 --> N17 : contains E1740
+N0 --> N18 : contains E1741
+N18 --> N19 : contains E1742
+N18 --> N20 : contains E1743
+N0 --> N21 : contains E1744
+N0 --> N22 : contains E1745
+N22 --> N23 : contains E1746
+N19 --> N17 : calls E5717
+N20 --> N19 : calls E5718
+N18 --> N13 : instantiates E5719
+N18 --> N20 : calls E5720
+N18 --> N20 : calls E5721
+N21 --> N4 : references E5722
+N21 --> N16 : references E5723
+N21 --> N13 : instantiates E5724
+N21 --> N13 : instantiates E5726
+N21 --> N13 : instantiates E5727
+N21 --> N18 : calls E5728
+N21 --> N13 : instantiates E5729
+N21 --> N13 : instantiates E5730
+N21 --> N17 : calls E5731
+N21 --> N13 : instantiates E5732
+N22 --> N4 : references E5733
+N22 --> N16 : references E5734
+N22 --> N13 : instantiates E5735
+N22 --> N13 : instantiates E5736
+N22 --> N13 : instantiates E5737
+N22 --> N13 : instantiates E5739
+N22 --> N21 : calls E5741
+N22 --> N23 : references E5743
+@enduml

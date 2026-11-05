@@ -1,0 +1,44 @@
+@startuml
+title src/services/gazetteer.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "gazetteer.ts\nfile L1-73\nfile:src/services/gazetteer.ts" as N0
+rectangle "./gazetteer.json\nimport L1-1\nimport:c182392c9dca66ff913da7a9bc3a72cd" as N1
+rectangle "GazetteerEntry\ninterface L8-15\ninterface:9e630a49f264e73d8b8861696b159af5" as N2
+rectangle "id\nproperty L9-9\nproperty:0e76e9a53623618deae92273ca24bdb4" as N3
+rectangle "name\nproperty L10-10\nproperty:12817fe4486480847ba463a2953d2520" as N4
+rectangle "countryCode\nproperty L11-11\nproperty:70fb8421646444b263e07dd1a0dc1e6a" as N5
+rectangle "lat\nproperty L12-12\nproperty:80905663d6355d82277838b4ad3b7669" as N6
+rectangle "lon\nproperty L13-13\nproperty:6e8eaed3075bb8b8a28d3c58cf2f1316" as N7
+rectangle "tzid\nproperty L14-14\nproperty:b905a614286ab4a6b54aa119c7f5c114" as N8
+rectangle "cache\nvariable L17-17\nvariable:30a4fd76229baba3a6c8ccf639fc9eee" as N9
+rectangle "loadGazetteer\nfunction L19-22\nfunction:a57d9f08b016ac8ec5df3c82f211abfb" as N10
+rectangle "tzOffsetHours\nfunction L29-46\nfunction:e9f10b0de972f7504be5e0cec282355d" as N11
+rectangle "zoneOffsetMinutes\nfunction L48-72\nfunction:63969fe292dde450bb99f9e0ae3015d9" as N12
+rectangle "get\nfunction L59-60\nfunction:c19d6f0e6f703ab883ab02b5f991bb7c" as N13
+N0 --> N1 : contains E1679
+N0 --> N2 : contains E1680
+N2 --> N3 : contains E1681
+N2 --> N4 : contains E1682
+N2 --> N5 : contains E1683
+N2 --> N6 : contains E1684
+N2 --> N7 : contains E1685
+N2 --> N8 : contains E1686
+N0 --> N9 : contains E1687
+N0 --> N10 : contains E1688
+N0 --> N11 : contains E1689
+N0 --> N12 : contains E1690
+N12 --> N13 : contains E1691
+N0 --> N1 : imports E3438
+N9 --> N2 : references E5686
+N10 --> N2 : references E5687
+N11 --> N12 : calls E5689
+N11 --> N12 : calls E5690
+N12 --> N13 : calls E5691
+N12 --> N13 : calls E5692
+N12 --> N13 : calls E5693
+N12 --> N13 : calls E5694
+N12 --> N13 : calls E5695
+N12 --> N13 : calls E5696
+@enduml

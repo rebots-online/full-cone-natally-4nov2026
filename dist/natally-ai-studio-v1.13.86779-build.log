@@ -1,0 +1,64 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261028125952
+Username: DESKTOP-CN0GDTR\Admin
+RunAs User: DESKTOP-CN0GDTR\Admin
+Configuration Name: 
+Machine: DESKTOP-CN0GDTR (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-all-platforms.ps1
+Process ID: 15184
+PSVersion: 5.1.26100.7019
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7019
+BuildVersion: 10.0.26100.7019
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally windows build output: E:\BuildCache\natally-ai-studio\targets\windows
+
+
+
+
+
+
+Building Web --- v1.13.86779
+
+
+
+
+
+
+
+
+Building Windows --- v1.13.86779
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally windows build output: E:\BuildCache\natally-ai-studio\targets\windows
+
+
+
+
+
+Building Android --- v1.13.86779
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally android build output: E:\BuildCache\natally-ai-studio\targets\android
+
+
+
+
+
+
+
+
+
+
+Building Linux --- v1.13.86779
+
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20261028133159
+**********************

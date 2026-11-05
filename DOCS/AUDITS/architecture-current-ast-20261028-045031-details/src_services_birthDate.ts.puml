@@ -1,0 +1,32 @@
+@startuml
+title src/services/birthDate.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "birthDate.ts\nfile L1-57\nfile:src/services/birthDate.ts" as N0
+rectangle "BirthDateParts\ninterface L1-5\ninterface:51fecbe7e42b75ee8f6207d1d76ba4a8" as N1
+rectangle "day\nproperty L2-2\nproperty:6cb0e3378441f1dc9854a3220c8509e8" as N2
+rectangle "month\nproperty L3-3\nproperty:c9a8545b7765132a77ed53ab50d89065" as N3
+rectangle "year\nproperty L4-4\nproperty:4aa1c2cb11265ce7a32bd6941d75c65f" as N4
+rectangle "getBirthDateParts\nfunction L7-10\nfunction:5b062ff0a38cd5a0f80080c2da940df9" as N5
+rectangle "getBirthMonthDays\nfunction L12-15\nfunction:072110c5648c3ffb09abf5cd992a69bf" as N6
+rectangle "formatBirthDateInput\nfunction L17-31\nfunction:329e8c907bb493677fd6a4a0a107b3e0" as N7
+rectangle "validateBirthDate\nfunction L33-56\nfunction:9ba7f8e6f60d05d06aaab8a2cc34b5b2" as N8
+rectangle "invalid\nfunction L35-35\nfunction:c13b0257adab689dc6a3349eb6e48955" as N9
+N0 --> N1 : contains E1490
+N1 --> N2 : contains E1491
+N1 --> N3 : contains E1492
+N1 --> N4 : contains E1493
+N0 --> N5 : contains E1494
+N0 --> N6 : contains E1495
+N0 --> N7 : contains E1496
+N0 --> N8 : contains E1497
+N8 --> N9 : contains E1498
+N5 --> N1 : references E5598
+N7 --> N6 : calls E5600
+N8 --> N5 : calls E5601
+N8 --> N9 : calls E5602
+N8 --> N6 : calls E5603
+N8 --> N9 : calls E5604
+N8 --> N9 : calls E5605
+@enduml

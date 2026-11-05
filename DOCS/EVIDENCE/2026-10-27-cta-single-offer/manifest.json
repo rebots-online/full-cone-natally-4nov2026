@@ -1,0 +1,20 @@
+{
+  "paywallId": "pw5593c7341acd4ef5",
+  "revision": 18,
+  "editorSessionId": "d31d7c52-be52-47e8-a15c-c434a6ffd0d6",
+  "editorTraceId": "c1708940ab7d2f9cb9fa92317b240ff9",
+  "builderUrl": "https://app.revenuecat.com/projects/aba0bd94/paywalls/pw5593c7341acd4ef5/builder",
+  "status": "unpublished intermediate draft; not accepted; three-screen offer distinction pending",
+  "purchaseButtons": [
+    {
+      "id": "e369ce6e27",
+      "name": "Get my chart reading",
+      "action": "in_app_checkout",
+      "package": "natally_roche_test"
+    }
+  ],
+  "files": {
+    "paywall.json": "1c99c1b69997f936da92091b7b891496878813e43a29c8e8075d5a557843fa8f",
+    "preview.png": "7a43ece6be5361ad55ac7366b24313155358c517e2b475b21fd20e61b0e3edf0"
+  }
+}

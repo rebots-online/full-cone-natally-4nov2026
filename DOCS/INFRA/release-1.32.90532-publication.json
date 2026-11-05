@@ -1,0 +1,103 @@
+{
+  "version": "1.32.90532",
+  "versionCode": 100032,
+  "sourceCommit": "5efcd4f0075c39f112407ea13287c33e782c0aac",
+  "invocationId": "c5fa7479-7389-412c-b2bf-0cc5f8e24c1a",
+  "stampedAt": "2026-10-31T07:32:02.14Z",
+  "completedAt": "2026-10-31T07:34:26.545Z",
+  "sourceFingerprint": "92a777c9e35056da542cabdfe766fc29f0418daf091bd0a31ccf21d99bf336da",
+  "sourceInputsMatch": true,
+  "scope": "web",
+  "coordinatorExitCode": 0,
+  "selectedArtifactsComplete": true,
+  "artifactMatrixComplete": false,
+  "pendingTargets": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "rpm",
+    "apk",
+    "aab",
+    "android-symbols"
+  ],
+  "published": true,
+  "domains": [
+    {
+      "host": "natally.robin.mba",
+      "published": true,
+      "servedBytesMatch": true,
+      "checkedFiles": 95,
+      "failures": [],
+      "retainedDownloads": [
+        {
+          "path": "downloads/release.json",
+          "status": 200,
+          "sha256": "b1b973c068256d9effe0d2089e8a9c7bb336f60defef1f60607f44ff8b6a530e",
+          "match": true
+        },
+        {
+          "path": "downloads.html",
+          "status": 200,
+          "sha256": "ac1a1258b9e6d81d77b4c250a3ef1b14a01edf306199ee216d625033bda33d57",
+          "match": true
+        }
+      ]
+    },
+    {
+      "host": "natally.surge.sh",
+      "published": true,
+      "servedBytesMatch": true,
+      "checkedFiles": 95,
+      "failures": [],
+      "retainedDownloads": [
+        {
+          "path": "downloads/release.json",
+          "status": 200,
+          "sha256": "b1b973c068256d9effe0d2089e8a9c7bb336f60defef1f60607f44ff8b6a530e",
+          "match": true
+        },
+        {
+          "path": "downloads.html",
+          "status": 200,
+          "sha256": "ac1a1258b9e6d81d77b4c250a3ef1b14a01edf306199ee216d625033bda33d57",
+          "match": true
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "target": "web",
+      "path": "dist/natally-ai-studio-v1.32.90532-webapp.zip",
+      "bytes": 22685880,
+      "sha256": "694819420537eb8577c35fe8436c702b250cb670fa14d576485e34f4eaadd66e",
+      "verifiedAt": "2026-10-31T07:34:24.723Z"
+    },
+    {
+      "target": "web-installer",
+      "path": "dist/natally-ai-studio-v1.32.90532-install-web.sh",
+      "bytes": 2978,
+      "sha256": "f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce",
+      "verifiedAt": "2026-10-31T07:34:26.124Z"
+    },
+    {
+      "target": "pwa",
+      "path": "dist/natally-ai-studio-v1.32.90532-pwa-build.json",
+      "bytes": 1669,
+      "sha256": "cb115323ae8c118a963403075bb38ac8dd6691ac6b95c22702d47e71a61629a2",
+      "verifiedAt": "2026-10-31T07:34:25.115Z"
+    }
+  ],
+  "deploymentErrors": [],
+  "backendDeployedThisIteration": false,
+  "nativeBuildPerformed": false,
+  "separateTestsPerformed": false,
+  "paymentProbePerformed": false,
+  "redemptionProbePerformed": false,
+  "operatorReportedRedemptionFailure": true,
+  "purchaseAcceptanceClaimed": false,
+  "originalDeploymentReport": "build/deploy-1.32.90532-c5fa7479-7389-412c-b2bf-0cc5f8e24c1a/run-2026-10-31T07-34-26-813Z-38880/deployment-report.json",
+  "originalArtifactInventory": "dist/natally-ai-studio-v1.32.90532-test-build-inventory.json"
+}

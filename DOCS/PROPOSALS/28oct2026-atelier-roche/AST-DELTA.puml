@@ -1,0 +1,139 @@
+@startuml
+!pragma layout smetana
+title Natally | Proposed AST delta | 28 October 2026\nExisting source + explicit additions, awaiting sign-off
+top to bottom direction
+skinparam backgroundColor #FAF8F2
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam roundcorner 12
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+skinparam ArrowColor #6A5A80
+skinparam classBackgroundColor #EEE8F6
+skinparam classBackgroundColor<<add>> #DDF0E8
+skinparam classBackgroundColor<<authority>> #FFF0CC
+skinparam classBorderColor #695779
+hide empty members
+
+package "Entry / source modules" {
+  class "App.tsx : App" as App <<modify>> {
+    handleOnboarded(draft)
+    remove automatic offer interjection
+    enter atelier with calculated chart
+  }
+  class "marketing.tsx" as Marketing <<modify>> {
+    MarketingNatalChart
+    mount shared hero atelier
+  }
+}
+package "Existing atelier and dialogue" {
+  class "ReadingStage" as Stage <<modify>>
+  class "AtelierScene" as Room <<reuse>> {
+    AtelierCharacter / Trinkets / Ambience
+    expanded view + smaller cookie sign
+  }
+  class "NatallyChatbot" as Chat <<modify>> {
+    authored response OR paid conversation
+    preserved draft / session / chart
+  }
+  class "authoredChartExplanations.ts\nauthoredAtelierDialogue.ts (add)" as Authored <<modify>> {
+    real chart + firstName + curated variants
+    SOUL.md / soul.ts
+  }
+  class "voiceService.ts" as Voice <<reuse>> {
+    speakNatallyText(text)
+    same voice for lesson, chat and replay
+  }
+}
+package "Proposed interaction contracts" {
+  class "AtelierCommerceSigns.tsx" as Signs <<add>> {
+    RocheBalanceSign
+    KeepsakeSign
+  }
+  class "upsellPolicy.ts" as Upsell <<add>> {
+    free answer -> reading invitation
+    two paid turns -> keepsake invitation
+  }
+  class "rocheBalance.ts / RocheUsage" as Usage <<add>> {
+    confirmed balance + marked estimate
+    billed usage -> RC debit -> refresh
+  }
+}
+package "Offers and native / web payment" {
+  class "PurchaseAccessProvider\nFigmaPaywall / PurchaseIntent" as Purchase <<modify>> {
+    finite monthly ROCHE or keepsake
+    confirmation / pending / ready / restore
+    preserved return intent
+  }
+  class "checkoutPlatform.ts" as Platform <<add>> {
+    listOffers / purchase / restore
+    manageSubscription
+  }
+  class "revenueCatCheckout.ts" as Web <<modify>> {
+    RevenueCat Billing + Stripe Payments
+    desktop / web default: card
+  }
+  class "nativeRevenueCat.ts\nTauri plugin Rust + Kotlin" as Native <<add>> {
+    official RevenueCat Android SDK
+    Google Play monthly plan / top-up
+    pending receipt / restore / renewal
+  }
+}
+package "Existing authorities and fulfillment" {
+  class "RevenueCat" as RC <<authority>> {
+    customer / shared ROCHE
+    purchases / subscriptions / edition access
+    grant / debit / refund events
+  }
+  class "One-hour key routine\nOpenRouter" as OR <<reuse>> {
+    validate or issue -> set RC-derived ceiling
+    refresh allowance / expire / deactivate
+  }
+  class "Firebase" as FB <<authority>> {
+    identity / intake / conversations
+    RC-linked edition references
+  }
+  class "souvenir.ts / SouvenirViewer" as Souvenir <<modify>> {
+    local PDF + interactive SPA edition
+    prior answers + actual chart / synastry
+  }
+  class "Zight" as Zight <<authority>> {
+    existing artifact upload / content URLs
+  }
+}
+
+App --> Stage : existing render
+Stage --> Room : existing render
+App --> Chat : existing render
+Marketing ..> Room : add same scene
+Room ..> Signs : add shelf controls
+Chat ..> Authored : free route
+Authored --> Voice
+Chat --> Voice
+Chat ..> Upsell : completed response
+Upsell ..> Purchase : only if user responds
+Signs ..> Purchase : explicit offer / buy
+Signs ..> Usage : display
+Purchase ..> Platform
+Platform ..> Native : Android primary
+Platform ..> Web : desktop / web
+Native ..> RC : same customer
+Web --> RC
+Usage ..> RC : sole balance authority
+Chat ..> Usage : billed token usage
+Chat ..> OR : existing paid inference route
+OR ..> RC : current ROCHE -> ceiling
+Chat --> FB : operational history
+Purchase ..> Souvenir : confirmed edition access
+Souvenir --> Voice : replay prior answers
+Souvenir ..> Zight : artifact bytes
+Souvenir ..> FB : references / progress
+
+legend bottom
+  Purple: existing module to modify/reuse. Green: explicitly proposed addition.
+  Gold: existing provider authority. Dashed arrows: proposed integration wiring.
+  Play is required. Its purchased-currency scope needs explicit resolution with cross-app ROCHE.
+  Full project entity enumeration follows sign-off; these are only the affected sections.
+endlegend
+@enduml

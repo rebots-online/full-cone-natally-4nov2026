@@ -1,0 +1,39 @@
+@startuml
+title scripts/verify-android-symbols.py — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "verify-android-symbols.py\nfile L1-42\nfile:scripts/verify-android-symbols.py" as N0
+rectangle "pathlib\nimport L2-2\nimport:14e90beceb5d86b5e668228ea6b57624" as N1
+rectangle "subprocess\nimport L2-2\nimport:20c92dddc2eb1557433ce7e1cbb05d38" as N2
+rectangle "tempfile\nimport L2-2\nimport:40b34945ef25125c21b83e90effb2790" as N3
+rectangle "sys\nimport L2-2\nimport:5c85b6c72fb9b4b1884c62d622d738a4" as N4
+rectangle "zipfile\nimport L2-2\nimport:61a7dfeeef99dcf554737193cca4472b" as N5
+rectangle "re\nimport L2-2\nimport:61d4d4779406cf99ff5e6f9c078c6123" as N6
+rectangle "json\nimport L2-2\nimport:a92c1138741820360cdc50299a002fee" as N7
+rectangle "build_id\nfunction L12-18\nfunction:62b6d135535e43eca1085c3c0c1046b7" as N8
+rectangle "manifest\nvariable L21-21\nvariable:376f18fa1189603afbc955d1b01bbabc" as N9
+rectangle "native\nvariable L24-24\nvariable:0cef256add6a09df5721c36a8676b3f9" as N10
+rectangle "results\nvariable L27-27\nvariable:fc9f2486979e427de0d338451e4ea9da" as N11
+rectangle "candidates\nvariable L30-30\nvariable:345b47915c72ade33cdb52b94dbc6db5" as N12
+rectangle "left\nvariable L33-33\nvariable:f3dd645ebac7b69f549043a3a57242b1" as N13
+rectangle "right\nvariable L34-34\nvariable:20190590dc63f558473eab2fd5af6665" as N14
+rectangle "sections\nvariable L37-37\nvariable:71799e245f90b639518aa99fed95bdf1" as N15
+N0 --> N7 : contains E315
+N0 --> N1 : contains E316
+N0 --> N6 : contains E317
+N0 --> N2 : contains E318
+N0 --> N4 : contains E319
+N0 --> N3 : contains E320
+N0 --> N5 : contains E321
+N0 --> N8 : contains E322
+N0 --> N9 : contains E323
+N0 --> N10 : contains E324
+N0 --> N11 : contains E325
+N0 --> N12 : contains E326
+N0 --> N13 : contains E327
+N0 --> N14 : contains E328
+N0 --> N15 : contains E329
+N13 --> N8 : calls E4044
+N14 --> N8 : calls E4045
+@enduml

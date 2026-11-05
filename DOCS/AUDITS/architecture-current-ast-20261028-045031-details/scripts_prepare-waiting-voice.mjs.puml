@@ -1,0 +1,38 @@
+@startuml
+title scripts/prepare-waiting-voice.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "prepare-waiting-voice.mjs\nfile L1-27\nfile:scripts/prepare-waiting-voice.mjs" as N0
+rectangle "@huggingface/transformers\nimport L1-1\nimport:f9dbca20838a93baa1be182e23724574" as N1
+rectangle "node:fs/promises\nimport L2-2\nimport:0aa0ce84831d74485f59c706d8589516" as N2
+rectangle "node:path\nimport L3-3\nimport:9fe55b0e3cf9327d1c6148f3b7eb1129" as N3
+rectangle "revision\nconstant L4-4\nconstant:286060bd1f727269153aa7d69abc059f" as N4
+rectangle "phrases\nconstant L8-8\nconstant:dd7c1ecb88bf9ac3e7190e9acba371f4" as N5
+rectangle "steps\nconstant L9-9\nconstant:0885161c5aac28f65a755e32b9a0a605" as N6
+rectangle "out\nconstant L10-10\nconstant:12bdd9075d55c75310d950878d0e0db3" as N7
+rectangle "tts\nconstant L12-12\nconstant:526782411ff647f0274c266d8b4d8432" as N8
+rectangle "response\nconstant L13-13\nconstant:c2a96d2b19b414ae8a0a4506e6ab1ae7" as N9
+rectangle "embedding\nconstant L15-15\nconstant:5f9ba254d13dba69653fb28925efb807" as N10
+rectangle "result\nconstant L17-17\nconstant:0e1b2422ff6ae7ba4f71012a91366921" as N11
+rectangle "rate\nconstant L18-18\nconstant:9cf73941c26f2ab6abd31a75efe624b4" as N12
+rectangle "samples\nconstant L18-18\nconstant:f7ab5a60840371ebdacb202f35fd2315" as N13
+rectangle "wav\nconstant L20-20\nconstant:0ab60a81478ba5cd32974f40c46c02a7" as N14
+rectangle "i\nvariable L22-22\nvariable:591ca07a9bbf44f3fec7f7d4c4c7f29e" as N15
+N0 --> N1 : contains E228
+N0 --> N2 : contains E229
+N0 --> N3 : contains E230
+N0 --> N4 : contains E231
+N0 --> N5 : contains E232
+N0 --> N6 : contains E233
+N0 --> N7 : contains E234
+N0 --> N8 : contains E235
+N0 --> N9 : contains E236
+N0 --> N10 : contains E237
+N0 --> N11 : contains E238
+N0 --> N13 : contains E239
+N0 --> N12 : contains E240
+N0 --> N14 : contains E241
+N0 --> N15 : contains E242
+N11 --> N8 : calls E3984
+@enduml

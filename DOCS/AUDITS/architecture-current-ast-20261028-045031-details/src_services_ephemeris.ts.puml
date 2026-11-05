@@ -1,0 +1,236 @@
+@startuml
+title src/services/ephemeris.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ephemeris.ts\nfile L1-487\nfile:src/services/ephemeris.ts" as N0
+rectangle "./readingStyle\nimport L1-1\nimport:f42eb42baab7942d9cc18222960f678a" as N1
+rectangle "../vendor/swisseph/src/swisseph.js\nimport L3-3\nimport:f663122510935135face1fb54b25eae5" as N2
+rectangle "ZodiacSignInfo\ninterface L5-13\ninterface:93902ba2448c916808cb6028b367adcd" as N3
+rectangle "name\nproperty L6-6\nproperty:c200c20491912cdca6cfb2eed93723df" as N4
+rectangle "short\nproperty L7-7\nproperty:2642acbf3ba3b8333753c6c858f14837" as N5
+rectangle "glyph\nproperty L8-8\nproperty:d390169530fc465893c251a5dab9b6ab" as N6
+rectangle "lon\nproperty L9-9\nproperty:ddc3482d897364f4b726cedd548b7f01" as N7
+rectangle "desc\nproperty L10-10\nproperty:3e60ab09ede14d13ed40129b0e3c205e" as N8
+rectangle "element\nproperty L11-11\nproperty:d2aca95f4c74c97072147c10e0172f7a" as N9
+rectangle "modality\nproperty L12-12\nproperty:15bbe0b5f394a883f1569f214fec7119" as N10
+rectangle "ZODIAC_SIGNS\nconstant L15-28\nconstant:3aab62c4809b35fe57c057cd9adaad7b" as N11
+rectangle "HouseCuspData\ninterface L30-40\ninterface:2cb3cd60e6e8c002763061cd5154fc5f" as N12
+rectangle "num\nproperty L31-31\nproperty:e6a8201b039c1d746d67d6007535d3e8" as N13
+rectangle "lon\nproperty L32-32\nproperty:32053430879aea6283717d36cd82bc5f" as N14
+rectangle "label\nproperty L33-33\nproperty:18f8b1e9765d4d58ff4ee970aa1e8810" as N15
+rectangle "isCardo\nproperty L34-34\nproperty:c3883840a918c2e16f9fd7a72a499b38" as N16
+rectangle "title\nproperty L35-35\nproperty:33092c628cb09287204aa1744a351018" as N17
+rectangle "desc\nproperty L36-36\nproperty:b4efd1191bc390e734294efbf08f0595" as N18
+rectangle "signName\nproperty L37-37\nproperty:f41dba562de2cf74b5cd6c093541b51d" as N19
+rectangle "signGlyph\nproperty L38-38\nproperty:51ef0fdf12bb17c2987fa156b986eedc" as N20
+rectangle "formattedDeg\nproperty L39-39\nproperty:46036513822d770984f7246850d6adee" as N21
+rectangle "NatalBodyData\ninterface L42-63\ninterface:64ab6bce73c228d7c544ebbc463bd165" as N22
+rectangle "id\nproperty L43-43\nproperty:c3b42dedc1d18b0d0372b16a3418f14e" as N23
+rectangle "name\nproperty L44-44\nproperty:fbecb68da6632b6fed278177edecef5c" as N24
+rectangle "glyph\nproperty L45-45\nproperty:a9c9ede6cbfb9bdcb2321f07c27abb0c" as N25
+rectangle "lon\nproperty L46-46\nproperty:973b44f9e60494574bc0fe2b4f675dcf" as N26
+rectangle "lat\nproperty L47-47\nproperty:08139621b88c3e45df769be7d405da4a" as N27
+rectangle "speed\nproperty L48-48\nproperty:1f37a44c4e75e4d7b360d9bdd8b9f6a6" as N28
+rectangle "isRetrograde\nproperty L49-49\nproperty:c930ada4a04b1fd082aa5ccdefc7ec3b" as N29
+rectangle "signName\nproperty L50-50\nproperty:a44a1ad3e2f75c9d7042cb26157a8add" as N30
+rectangle "signShort\nproperty L51-51\nproperty:7f9d3f46c4e460a3ec27f8f5855d3826" as N31
+rectangle "signGlyph\nproperty L52-52\nproperty:f57ec88ae66335e0f2372ccc90482fb1" as N32
+rectangle "degInSign\nproperty L53-53\nproperty:d595cef405c54fb8060ff29e3cee1413" as N33
+rectangle "minInSign\nproperty L54-54\nproperty:7a7882b1b54edbc16bf98351cd6ce947" as N34
+rectangle "secInSign\nproperty L55-55\nproperty:78645a57902b6c8776572fe642a9fe12" as N35
+rectangle "degText\nproperty L56-56\nproperty:df8494bb37e726d3edd33ad174b4f2b1" as N36
+rectangle "fullDegText\nproperty L57-57\nproperty:874aba70f7c711538096b9e910687d3d" as N37
+rectangle "house\nproperty L58-58\nproperty:efcc93ff7cd83e5c77e2accc7b319367" as N38
+rectangle "color\nproperty L59-59\nproperty:243448d458e98daa4f7d26e3801a4875" as N39
+rectangle "tier\nproperty L60-60\nproperty:267f3dff560561053d32255cd66e4224" as N40
+rectangle "clusterAngle\nproperty L61-61\nproperty:64cc0068b5ee3415180a2e87d2db8f1c" as N41
+rectangle "detail\nproperty L62-62\nproperty:00eeddb878b68e1d1bf24ab4c383b391" as N42
+rectangle "AspectChordData\ninterface L65-78\ninterface:079eafd9d360cfbf91010d260f0cbcc1" as N43
+rectangle "from\nproperty L66-66\nproperty:29a315c10862b69de83e784f04569663" as N44
+rectangle "to\nproperty L67-67\nproperty:749fa9097d61454030884bddc1eb7afd" as N45
+rectangle "fromGlyph\nproperty L68-68\nproperty:9afa16deed265fb44ceba4082ec67c6d" as N46
+rectangle "toGlyph\nproperty L69-69\nproperty:315d143729bf1ffcf6fb36374ef68b96" as N47
+rectangle "type\nproperty L70-70\nproperty:971aea325f35eeed4bf6cbf7c77d5349" as N48
+rectangle "symbol\nproperty L71-71\nproperty:b72b6bb233d3d79ff2215d49bfc8cf83" as N49
+rectangle "angle\nproperty L72-72\nproperty:25ef158cd3adbd1394fbd48e868a731a" as N50
+rectangle "orb\nproperty L73-73\nproperty:5bfe1295ba7f44432aa3d79218b8a1a5" as N51
+rectangle "color\nproperty L74-74\nproperty:1e69e38ebfb03f36e2b20e37eeb76014" as N52
+rectangle "colorHex\nproperty L75-75\nproperty:f47020cfc43cad9e3693826207e90e7f" as N53
+rectangle "name\nproperty L76-76\nproperty:e125e1baef63f540ffee02d78af92b1f" as N54
+rectangle "detail\nproperty L77-77\nproperty:ad724ca36e5483edfc9c11dbf697c178" as N55
+rectangle "NatalChartInput\ninterface L80-96\ninterface:aa5f1d42a7fa3132c6a2f4cf6a060383" as N56
+rectangle "readingStyle\nproperty L81-81\nproperty:fc5809e1fc19ed977a4fe7cc39572095" as N57
+rectangle "name\nproperty L82-82\nproperty:24452e4ba148614bb65e186181e08e30" as N58
+rectangle "birthDate\nproperty L83-83\nproperty:f9300bf806aa121ea476c53365d35e11" as N59
+rectangle "birthTime\nproperty L84-84\nproperty:cfa821e802ac7bede8a7a94727dec1ad" as N60
+rectangle "placeName\nproperty L85-85\nproperty:53fb62dd794f4880ee82f8e60d2a1cfb" as N61
+rectangle "latitude\nproperty L86-86\nproperty:50fff7a1429556e984ec9362d4944ea3" as N62
+rectangle "longitude\nproperty L87-87\nproperty:7c458d6ef2f9596f9aab7eaa7b7a0de9" as N63
+rectangle "timezoneOffset\nproperty L88-88\nproperty:77bab992836050d9549e4f575e68a4f7" as N64
+rectangle "houseSystem\nproperty L89-89\nproperty:beb198cd6c38d521c6282ba2936fed49" as N65
+rectangle "currentLocationName\nproperty L90-90\nproperty:2752aca19faead0b3b66dce9454e4a78" as N66
+rectangle "currentLatitude\nproperty L91-91\nproperty:ff92466583e38a3acd03c2419901c474" as N67
+rectangle "currentLongitude\nproperty L92-92\nproperty:08404b9e9cae9c349f2186903ab81fa5" as N68
+rectangle "currentTimezoneOffset\nproperty L93-93\nproperty:c9fdaf1666ab9092a6b815e5371defe0" as N69
+rectangle "currentTimezoneId\nproperty L94-94\nproperty:4189e7ed73ddb1ab7910f679f62414c8" as N70
+rectangle "birthTimeUnknown\nproperty L95-95\nproperty:2ae59ac521d531b406f019305922a076" as N71
+rectangle "CurrentSkySnapshot\ninterface L98-102\ninterface:6c2331cb48950ab6eb6a6675aeb8b059" as N72
+rectangle "observedAt\nproperty L99-99\nproperty:39c603560d9d63268b53e2fab10aae0c" as N73
+rectangle "bodies\nproperty L100-100\nproperty:749a2a50447666890caa5b64c072c4d2" as N74
+rectangle "aspects\nproperty L101-101\nproperty:012514bba7375a62586fdf9b58a77e9d" as N75
+rectangle "NatalChartResult\ninterface L104-121\ninterface:29e24157ff57aa25bc3c4a00bf5509f5" as N76
+rectangle "input\nproperty L105-105\nproperty:abc235c956af64857f2157fc95f49eea" as N77
+rectangle "julianDayUT\nproperty L106-106\nproperty:832f41d98466a87e71f6fe0b397fbc43" as N78
+rectangle "siderealTimeHours\nproperty L107-107\nproperty:4324aa11064d3ee6fe45565579b5dbed" as N79
+rectangle "ascLon\nproperty L108-108\nproperty:2cdbc271ec4724eab9c069cfcf3944cc" as N80
+rectangle "mcLon\nproperty L109-109\nproperty:06a5f965a414b6a85281bfc503cd42d6" as N81
+rectangle "dscLon\nproperty L110-110\nproperty:64a8434e33bb16a03d74402a9f73ebf6" as N82
+rectangle "icLon\nproperty L111-111\nproperty:3ddc4cb9ff3427091e249659b357431b" as N83
+rectangle "ascFormatted\nproperty L112-112\nproperty:767cfae9cd5d50f5c7d2bcd9cd85bba2" as N84
+rectangle "mcFormatted\nproperty L113-113\nproperty:890f236f1eb3c2e79649185d4518a9f9" as N85
+rectangle "sunFormatted\nproperty L114-114\nproperty:1ee40d54c9dd976bbaee960d648de8bc" as N86
+rectangle "moonFormatted\nproperty L115-115\nproperty:fb2048ab3f00e839cf09966e9bd687b5" as N87
+rectangle "houseCusps\nproperty L116-116\nproperty:ee816e655ab0750e2d1a37d21e835245" as N88
+rectangle "natalBodies\nproperty L117-117\nproperty:49ec91803b5e3a2f5536a041aa9c4d87" as N89
+rectangle "aspectChords\nproperty L118-118\nproperty:9d26a3ed0b7e26ddd264454988a2b49c" as N90
+rectangle "engineVersion\nproperty L119-119\nproperty:a306b00b8824d2ea81e00aff93ca347c" as N91
+rectangle "currentSky\nproperty L120-120\nproperty:58efb470b88c5ae975338daf81af3130" as N92
+rectangle "HOUSE_MEANINGS\nconstant L123-136\nconstant:a0fb809a902a5d8a46f4571733c26201" as N93
+rectangle "PLANET_ARCHETYPES\nconstant L138-151\nconstant:581a443c7b91684df253da56f63de89e" as N94
+rectangle "formatLongitude\nfunction L153-188\nfunction:171a2fb98d005e897281a3a6e12e5c4b" as N95
+rectangle "getHouseForLongitude\nfunction L190-203\nfunction:5096786709a8b74d77fb559d5025df77" as N96
+rectangle "sharedSweInstance\nvariable L205-205\nvariable:4417d553bc894df94a4022d7d9e61652" as N97
+rectangle "initPromise\nvariable L206-206\nvariable:8166c3e52bba1ec5850b8d9dee54ec38" as N98
+rectangle "getSwissEph\nfunction L208-220\nfunction:404ac18373c779863c4ad3225c65de4c" as N99
+rectangle "calculateNatalChart\nfunction L222-486\nfunction:293c8de44c19c4045b5fe7bf2228baa7" as N100
+N0 --> N1 : contains E1565
+N0 --> N2 : contains E1566
+N0 --> N3 : contains E1567
+N3 --> N4 : contains E1568
+N3 --> N5 : contains E1569
+N3 --> N6 : contains E1570
+N3 --> N7 : contains E1571
+N3 --> N8 : contains E1572
+N3 --> N9 : contains E1573
+N3 --> N10 : contains E1574
+N0 --> N11 : contains E1575
+N0 --> N12 : contains E1576
+N12 --> N13 : contains E1577
+N12 --> N14 : contains E1578
+N12 --> N15 : contains E1579
+N12 --> N16 : contains E1580
+N12 --> N17 : contains E1581
+N12 --> N18 : contains E1582
+N12 --> N19 : contains E1583
+N12 --> N20 : contains E1584
+N12 --> N21 : contains E1585
+N0 --> N22 : contains E1586
+N22 --> N23 : contains E1587
+N22 --> N24 : contains E1588
+N22 --> N25 : contains E1589
+N22 --> N26 : contains E1590
+N22 --> N27 : contains E1591
+N22 --> N28 : contains E1592
+N22 --> N29 : contains E1593
+N22 --> N30 : contains E1594
+N22 --> N31 : contains E1595
+N22 --> N32 : contains E1596
+N22 --> N33 : contains E1597
+N22 --> N34 : contains E1598
+N22 --> N35 : contains E1599
+N22 --> N36 : contains E1600
+N22 --> N37 : contains E1601
+N22 --> N38 : contains E1602
+N22 --> N39 : contains E1603
+N22 --> N40 : contains E1604
+N22 --> N41 : contains E1605
+N22 --> N42 : contains E1606
+N0 --> N43 : contains E1607
+N43 --> N44 : contains E1608
+N43 --> N45 : contains E1609
+N43 --> N46 : contains E1610
+N43 --> N47 : contains E1611
+N43 --> N48 : contains E1612
+N43 --> N49 : contains E1613
+N43 --> N50 : contains E1614
+N43 --> N51 : contains E1615
+N43 --> N52 : contains E1616
+N43 --> N53 : contains E1617
+N43 --> N54 : contains E1618
+N43 --> N55 : contains E1619
+N0 --> N56 : contains E1620
+N56 --> N57 : contains E1621
+N56 --> N58 : contains E1622
+N56 --> N59 : contains E1623
+N56 --> N60 : contains E1624
+N56 --> N61 : contains E1625
+N56 --> N62 : contains E1626
+N56 --> N63 : contains E1627
+N56 --> N64 : contains E1628
+N56 --> N65 : contains E1629
+N56 --> N66 : contains E1630
+N56 --> N67 : contains E1631
+N56 --> N68 : contains E1632
+N56 --> N69 : contains E1633
+N56 --> N70 : contains E1634
+N56 --> N71 : contains E1635
+N0 --> N72 : contains E1636
+N72 --> N73 : contains E1637
+N72 --> N74 : contains E1638
+N72 --> N75 : contains E1639
+N0 --> N76 : contains E1640
+N76 --> N77 : contains E1641
+N76 --> N78 : contains E1642
+N76 --> N79 : contains E1643
+N76 --> N80 : contains E1644
+N76 --> N81 : contains E1645
+N76 --> N82 : contains E1646
+N76 --> N83 : contains E1647
+N76 --> N84 : contains E1648
+N76 --> N85 : contains E1649
+N76 --> N86 : contains E1650
+N76 --> N87 : contains E1651
+N76 --> N88 : contains E1652
+N76 --> N89 : contains E1653
+N76 --> N90 : contains E1654
+N76 --> N91 : contains E1655
+N76 --> N92 : contains E1656
+N0 --> N93 : contains E1657
+N0 --> N94 : contains E1658
+N0 --> N95 : contains E1659
+N0 --> N96 : contains E1660
+N0 --> N97 : contains E1661
+N0 --> N98 : contains E1662
+N0 --> N99 : contains E1663
+N0 --> N100 : contains E1664
+N95 --> N11 : references E1665
+N99 --> N98 : references E1666
+N99 --> N97 : references E1667
+N100 --> N94 : references E1668
+N100 --> N93 : references E1669
+N0 --> N2 : imports E3436
+N11 --> N3 : references E5659
+N75 --> N43 : references E5661
+N77 --> N56 : references E5662
+N88 --> N12 : references E5663
+N89 --> N22 : references E5664
+N90 --> N43 : references E5665
+N92 --> N72 : references E5666
+N95 --> N3 : references E5667
+N100 --> N56 : references E5669
+N100 --> N76 : references E5670
+N100 --> N99 : calls E5672
+N100 --> N12 : references E5673
+N100 --> N95 : calls E5674
+N100 --> N22 : references E5675
+N100 --> N95 : calls E5676
+N100 --> N96 : calls E5677
+N100 --> N22 : references E5678
+N100 --> N43 : references E5679
+N100 --> N43 : references E5680
+N100 --> N95 : calls E5681
+N100 --> N95 : calls E5682
+N100 --> N95 : calls E5683
+N100 --> N95 : calls E5684
+@enduml

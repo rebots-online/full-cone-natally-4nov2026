@@ -1,0 +1,17 @@
+@startuml
+title src/services/accountStorage.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "accountStorage.ts\nfile L1-23\nfile:src/services/accountStorage.ts" as N0
+rectangle "./historyLifecycle\nimport L1-1\nimport:5f0d59bc3ecfeb98fc1bb7b798493c98" as N1
+rectangle "accountStorageKey\nfunction L4-6\nfunction:e2352f2127bec08ad4479d690ab5eb82" as N2
+rectangle "loadAccountValue\nfunction L8-15\nfunction:6ed5c937ce2d52dd6d922741d6dc8c68" as N3
+rectangle "saveAccountValue\nfunction L17-22\nfunction:88a68135fe1a01675b0011007327ccc7" as N4
+N0 --> N1 : contains E1312
+N0 --> N2 : contains E1313
+N0 --> N3 : contains E1314
+N0 --> N4 : contains E1315
+N3 --> N2 : calls E5376
+N4 --> N2 : calls E5378
+@enduml

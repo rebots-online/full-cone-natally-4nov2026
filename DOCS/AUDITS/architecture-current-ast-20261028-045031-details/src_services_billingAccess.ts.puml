@@ -1,0 +1,88 @@
+@startuml
+title src/services/billingAccess.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "billingAccess.ts\nfile L1-210\nfile:src/services/billingAccess.ts" as N0
+rectangle "./firebase\nimport L1-1\nimport:c2e35daf9449f724d0c92b9908ceca9f" as N1
+rectangle "./inferenceAccess\nimport L2-2\nimport:48a41a0006eb945ce7d6a7499a341ebe" as N2
+rectangle "./revenueCatCheckout\nimport L3-3\nimport:fa8066dd0695a5380dc5fe12dcbe66e6" as N3
+rectangle "BillingAccess\ntype_alias L5-14\ntype_alias:bc104fc18ee0697562734a80aff60361" as N4
+rectangle "state\nproperty L6-6\nproperty:a109485bc800582599a16468b089fcbc" as N5
+rectangle "message\nproperty L7-7\nproperty:d8d7531f1e71f216cbf5bc35db23a5f6" as N6
+rectangle "installed\nproperty L8-8\nproperty:912f9eb56f4def6ff59438babae03391" as N7
+rectangle "limitUsd\nproperty L9-9\nproperty:2e03bebb865d1a100421cc03fb5d4d81" as N8
+rectangle "usageUsd\nproperty L10-10\nproperty:44cddbc34e932ba08c49f3afacb48439" as N9
+rectangle "remainingTurns\nproperty L11-11\nproperty:f219c6b5934b12586d5502a85f3150af" as N10
+rectangle "souvenirOpeningAvailable\nproperty L12-12\nproperty:dc7670f6a7cb592951450cbbbcf9096a" as N11
+rectangle "source\nproperty L13-13\nproperty:e518c9c8540efddb6821ac5374f7c502" as N12
+rectangle "billingEndpoint\nfunction L16-24\nfunction:512a61605a9a5a50134a1058beb8acfb" as N13
+rectangle "ensureFundedKey\nfunction L33-63\nfunction:73c596e5ad88ae179712c1d8fccca3ec" as N14
+rectangle "current\nfunction L35-35\nfunction:6ad5bd9a11235f381ded63a823bd346a" as N15
+rectangle "requireRoche\nfunction L71-79\nfunction:cd24a02a6d9a0218ddc0351013ce5452" as N16
+rectangle "requestBillingAccess\nfunction L82-137\nfunction:10306f4c88ef6041613ef4f5c9a05e9c" as N17
+rectangle "current\nfunction L87-87\nfunction:9f555c70de208e90a43b34a260a901d0" as N18
+rectangle "ensureReadingAccess\nfunction L140-165\nfunction:69bd6b669f3ddb8d6481031558a5afa4" as N19
+rectangle "current\nfunction L146-146\nfunction:b48fb10291f57adbb838260b93d0a3c3" as N20
+rectangle "keyCurrent\nfunction L149-149\nfunction:fafc9dc0c5e4cc8d7eb162e6d7b2d4bd" as N21
+rectangle "reconcileBillingAccess\nfunction L167-169\nfunction:b7449c876a247cce9652439fc4d79ce1" as N22
+rectangle "readBillingAccess\nfunction L171-173\nfunction:52be3f32f6397480f957e7d6924c37bc" as N23
+rectangle "readPaidConversationAccess\nfunction L181-209\nfunction:61c2bddc245fd8105cd04bbde2f87c36" as N24
+rectangle "current\nfunction L186-186\nfunction:9301491096ada198e8709ef4dea65b8d" as N25
+N0 --> N1 : contains E1465
+N0 --> N2 : contains E1466
+N0 --> N3 : contains E1467
+N0 --> N4 : contains E1468
+N4 --> N5 : contains E1469
+N4 --> N6 : contains E1470
+N4 --> N7 : contains E1471
+N4 --> N8 : contains E1472
+N4 --> N9 : contains E1473
+N4 --> N10 : contains E1474
+N4 --> N11 : contains E1475
+N4 --> N12 : contains E1476
+N0 --> N13 : contains E1477
+N0 --> N14 : contains E1478
+N14 --> N15 : contains E1479
+N0 --> N16 : contains E1480
+N0 --> N17 : contains E1481
+N17 --> N18 : contains E1482
+N0 --> N19 : contains E1483
+N19 --> N20 : contains E1484
+N19 --> N21 : contains E1485
+N0 --> N22 : contains E1486
+N0 --> N23 : contains E1487
+N0 --> N24 : contains E1488
+N24 --> N25 : contains E1489
+N14 --> N15 : calls E5542
+N14 --> N15 : calls E5543
+N14 --> N15 : calls E5544
+N14 --> N15 : calls E5545
+N14 --> N15 : calls E5546
+N17 --> N4 : references E5549
+N17 --> N13 : calls E5554
+N17 --> N18 : calls E5555
+N17 --> N18 : calls E5556
+N17 --> N18 : calls E5559
+N17 --> N18 : calls E5562
+N21 --> N20 : calls E5566
+N19 --> N14 : calls E5568
+N19 --> N16 : calls E5569
+N19 --> N20 : calls E5570
+N19 --> N23 : calls E5572
+N19 --> N20 : calls E5573
+N19 --> N20 : calls E5575
+N19 --> N14 : calls E5577
+N19 --> N20 : calls E5578
+N19 --> N16 : calls E5580
+N19 --> N20 : calls E5581
+N19 --> N20 : calls E5583
+N22 --> N4 : references E5585
+N22 --> N17 : calls E5587
+N23 --> N4 : references E5588
+N23 --> N17 : calls E5590
+N24 --> N25 : calls E5593
+N24 --> N19 : calls E5595
+N24 --> N25 : calls E5596
+N19 --> N21 : references E5597
+@enduml

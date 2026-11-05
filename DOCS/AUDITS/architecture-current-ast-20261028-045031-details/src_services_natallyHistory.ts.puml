@@ -1,0 +1,26 @@
+@startuml
+title src/services/natallyHistory.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "natallyHistory.ts\nfile L1-52\nfile:src/services/natallyHistory.ts" as N0
+rectangle "./accountStorage\nimport L1-1\nimport:aadef25b1e673d3bf117d5c4f5ddbac8" as N1
+rectangle "./readingAudio\nimport L2-2\nimport:166dc64d6d64dcd30dcc2cff838af94d" as N2
+rectangle "./atelierMemories\nimport L3-3\nimport:d5cef6a3b47161e4d3c30548e0a6cdc6" as N3
+rectangle "./historyLifecycle\nimport L4-4\nimport:dfcaba9b42a82539d480e4e0eacff0ae" as N4
+rectangle "onboardingRestartKey\nfunction L6-6\nfunction:bd255574265679a0c77537ba7e3488b6" as N5
+rectangle "requiresFreshOnboarding\nfunction L8-10\nfunction:33939c583bed00f4694de8c39700b6d8" as N6
+rectangle "completeFreshOnboarding\nfunction L12-14\nfunction:ab724c4d24d59e3476b95fd4db09a716" as N7
+rectangle "eraseWholeNatallyHistory\nfunction L17-51\nfunction:93eb195ae97b640a2358df0037db4ede" as N8
+N0 --> N1 : contains E1839
+N0 --> N2 : contains E1840
+N0 --> N3 : contains E1841
+N0 --> N4 : contains E1842
+N0 --> N5 : contains E1843
+N0 --> N6 : contains E1844
+N0 --> N7 : contains E1845
+N0 --> N8 : contains E1846
+N6 --> N5 : calls E5819
+N7 --> N5 : calls E5820
+N8 --> N5 : calls E5825
+@enduml

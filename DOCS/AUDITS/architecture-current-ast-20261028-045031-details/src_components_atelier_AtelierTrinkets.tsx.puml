@@ -1,0 +1,135 @@
+@startuml
+title src/components/atelier/AtelierTrinkets.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AtelierTrinkets.tsx\nfile L1-196\nfile:src/components/atelier/AtelierTrinkets.tsx" as N0
+rectangle "./CrystalPool\nimport L1-1\nimport:11f09dc630ecc91e1139e7412098bbd5" as N1
+rectangle "react\nimport L2-2\nimport:95e5f9498df52f915ff534de40fedbf2" as N2
+rectangle "./AtelierScene\nimport L3-3\nimport:a360000e9dd7fab4172ec81dd12e4bdd" as N3
+rectangle "../../services/atelierSound\nimport L4-4\nimport:1d3e4a2c745dddd896ed3fd064e99803" as N4
+rectangle "./AtelierCharacter\nimport L5-5\nimport:d8fd5e4db6c4f51dba3d469cb9871665" as N5
+rectangle "../../services/atelierMemories\nimport L6-6\nimport:7b4143487e260279ad1ef4a902825330" as N6
+rectangle "ITEMS\nconstant L9-9\nconstant:93db4bc34f3ae5aacdf13c1de8ba8009" as N7
+rectangle "SHELVES\nconstant L11-20\nconstant:7b3cc71db2a53a2399a233a4b8cdc06a" as N8
+rectangle "Shelf\ntype_alias L21-21\ntype_alias:9ac390cea83f5d97cc3583be4387979f" as N9
+rectangle "nearestShelf\nfunction L22-25\nfunction:fece63f07760c55a175a75305446e576" as N10
+rectangle "distance\nfunction L23-23\nfunction:75b14d24d6e4aa386e24a2c932941791" as N11
+rectangle "ShelfObject\nfunction L27-36\nfunction:04c06179ee4d1c04a8fbd7537bbc6de2" as N12
+rectangle "AtelierTrinkets\nfunction L38-195\nfunction:acd0701b6abde21dc08b6f0606a47bc2" as N13
+rectangle "update\nfunction L54-54\nfunction:0a2d1627320f689b10d6ae6b98b94384" as N14
+rectangle "positionOf\nfunction L58-58\nfunction:5573b36201bb69691a9b66b1b4707726" as N15
+rectangle "shatter\nfunction L59-63\nfunction:07875ecf3e6c39f1396cdfd7d831c588" as N16
+rectangle "dropOnShelf\nfunction L64-80\nfunction:483c8e3ec805807ada8bf864310b31ce" as N17
+rectangle "putBack\nfunction L81-81\nfunction:e3bf9363ee8de0b1b71f681f59bf992c" as N18
+rectangle "nudge\nfunction L82-92\nfunction:1dc24b35ac8d1f84dbea6b12127d065c" as N19
+rectangle "beginDrag\nfunction L93-98\nfunction:dec99e1f1abd6c92f5e15a5a0cfe8474" as N20
+rectangle "moveDrag\nfunction L99-99\nfunction:6895feeb649d7309a45e3af787248f9b" as N21
+rectangle "endDrag\nfunction L100-100\nfunction:77fbc73ae717285a33441197c0046d5c" as N22
+rectangle "moveByKey\nfunction L101-105\nfunction:e1258604cbf5edb52238beec2c78e698" as N23
+rectangle "itemProps\nfunction L106-106\nfunction:d5a7e538939bfceb0c43c3a6a4e0afc8" as N24
+rectangle "ref\nfunction L108-108\nfunction:3aaae23345d8b43255d766d92dd55735" as N25
+N0 --> N1 : contains E660
+N0 --> N2 : contains E661
+N0 --> N3 : contains E662
+N0 --> N4 : contains E663
+N0 --> N5 : contains E664
+N0 --> N6 : contains E665
+N0 --> N7 : contains E666
+N0 --> N8 : contains E667
+N0 --> N9 : contains E668
+N0 --> N10 : contains E669
+N10 --> N11 : contains E670
+N0 --> N12 : contains E671
+N0 --> N13 : contains E672
+N13 --> N14 : contains E673
+N13 --> N15 : contains E674
+N13 --> N16 : contains E675
+N13 --> N17 : contains E676
+N13 --> N18 : contains E677
+N13 --> N19 : contains E678
+N13 --> N20 : contains E679
+N13 --> N21 : contains E680
+N13 --> N22 : contains E681
+N13 --> N23 : contains E682
+N13 --> N24 : contains E683
+N13 --> N25 : contains E684
+N10 --> N8 : references E685
+N10 --> N7 : references E686
+N12 --> N7 : references E687
+N13 --> N8 : references E688
+N13 --> N7 : references E689
+N14 --> N7 : references E690
+N15 --> N7 : references E691
+N16 --> N7 : references E692
+N17 --> N7 : references E693
+N20 --> N7 : references E694
+N21 --> N7 : references E695
+N23 --> N7 : references E696
+N24 --> N7 : references E697
+N10 --> N9 : references E4384
+N11 --> N9 : references E4386
+N10 --> N11 : calls E4387
+N10 --> N11 : calls E4388
+N16 --> N15 : calls E4399
+N17 --> N9 : references E4403
+N17 --> N15 : calls E4404
+N17 --> N10 : calls E4405
+N17 --> N15 : calls E4409
+N17 --> N15 : calls E4410
+N17 --> N15 : calls E4411
+N17 --> N16 : calls E4413
+N18 --> N17 : calls E4415
+N19 --> N16 : calls E4417
+N20 --> N10 : calls E4421
+N20 --> N15 : calls E4422
+N21 --> N10 : calls E4423
+N21 --> N15 : calls E4424
+N22 --> N17 : calls E4425
+N23 --> N18 : calls E4427
+N23 --> N17 : calls E4428
+N23 --> N10 : calls E4429
+N23 --> N15 : calls E4430
+N13 --> N24 : calls E4432
+N13 --> N25 : calls E4433
+N13 --> N25 : calls E4434
+N13 --> N25 : calls E4435
+N13 --> N25 : calls E4436
+N13 --> N24 : calls E4437
+N13 --> N25 : calls E4438
+N13 --> N25 : calls E4439
+N13 --> N25 : calls E4440
+N13 --> N25 : calls E4441
+N13 --> N24 : calls E4442
+N13 --> N24 : calls E4443
+N13 --> N24 : calls E4444
+N13 --> N25 : calls E4445
+N13 --> N25 : calls E4446
+N13 --> N25 : calls E4447
+N13 --> N25 : calls E4448
+N13 --> N25 : calls E4449
+N13 --> N25 : calls E4450
+N13 --> N25 : calls E4451
+N13 --> N25 : calls E4452
+N13 --> N25 : calls E4453
+N13 --> N25 : calls E4454
+N13 --> N25 : calls E4455
+N13 --> N25 : calls E4456
+N13 --> N25 : calls E4457
+N13 --> N25 : calls E4458
+N13 --> N25 : calls E4459
+N13 --> N19 : calls E4460
+N13 --> N20 : calls E4461
+N13 --> N21 : calls E4462
+N13 --> N19 : calls E4463
+N13 --> N17 : calls E4464
+N13 --> N10 : calls E4465
+N13 --> N15 : calls E4466
+N13 --> N23 : calls E4468
+N13 --> N17 : calls E4469
+N13 --> N16 : calls E4471
+N13 --> N14 : references E4480
+N13 --> N22 : references E4481
+N13 --> N18 : references E4482
+N13 --> N12 : calls E6946
+@enduml

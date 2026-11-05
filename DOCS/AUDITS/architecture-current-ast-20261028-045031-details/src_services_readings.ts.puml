@@ -1,0 +1,89 @@
+@startuml
+title src/services/readings.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "readings.ts\nfile L1-131\nfile:src/services/readings.ts" as N0
+rectangle "./hostedInference\nimport L1-1\nimport:50cb59d49ba6e326b22c70ee4ffa43ee" as N1
+rectangle "./readingStyle\nimport L2-2\nimport:d69d9a647f1dec4008cd3f7d51d726f9" as N2
+rectangle "./inferenceTurn\nimport L3-3\nimport:9760e24495cab08cb579d568afa3a5fb" as N3
+rectangle "./ephemeris\nimport L4-4\nimport:a055569fbdcb1c8265b890e2900e84d4" as N4
+rectangle "./transits\nimport L5-5\nimport:3e3e2ffc81b76c7c97ad6f11d380580e" as N5
+rectangle "./natallyChat\nimport L6-6\nimport:6b91e3012bb90c1afa8a4d8ca3399528" as N6
+rectangle "./presentation\nimport L7-7\nimport:a4e36f30eb8fc532e5868125aafbc51d" as N7
+rectangle "./chartTargets\nimport L8-8\nimport:d780027551c108430e994f3fdbd17bf7" as N8
+rectangle "./soul\nimport L9-9\nimport:608bf8c88173ee9bc0d284d641f7686b" as N9
+rectangle "./calculationTools\nimport L10-10\nimport:e15e0a72a3ac588f65d549950ad5aa1b" as N10
+rectangle "ReadingRequest\ninterface L12-29\ninterface:de2bd12102e68ac0740f7f0d156d2834" as N11
+rectangle "onProgress\nproperty L13-13\nproperty:3b61e30422a21002d9e337dc34c5cceb" as N12
+rectangle "quickNow\nproperty L14-14\nproperty:83e7f33469e7b48821285353d16e2ce1" as N13
+rectangle "seasonalMood\nproperty L15-15\nproperty:ee7ba0f59072c72e0756fa4ff4cac2fc" as N14
+rectangle "accountUid\nproperty L16-16\nproperty:03962616154a29c9a4d120bb98cb7ddf" as N15
+rectangle "presentation\nproperty L17-17\nproperty:c881c8c90501c7efa7f820bf37816522" as N16
+rectangle "isCurrentSession\nproperty L18-18\nproperty:a4bc9c3506b653b08d6b522330217aa0" as N17
+rectangle "type\nproperty L19-19\nproperty:bbeed4b26f0a693c42bb0cf79e000711" as N18
+rectangle "targetKey\nproperty L20-20\nproperty:21fb117945ac9bdf8c8ff0a7ffac47bf" as N19
+rectangle "chart\nproperty L21-21\nproperty:91a0f9025673ffea34e6324e36d2185b" as N20
+rectangle "partnerChart\nproperty L22-22\nproperty:494c34595b74e09107c0f094ae2fd4b4" as N21
+rectangle "length\nproperty L23-23\nproperty:d464e18df164c392b52ca6774b67f130" as N22
+rectangle "userLore\nproperty L24-24\nproperty:1c4fa3be14ad72a4a9b65015ab6c64ed" as N23
+rectangle "transitDate\nproperty L25-25\nproperty:59b2c405825bf6ebb163f7b309721b78" as N24
+rectangle "transitTime\nproperty L26-26\nproperty:4b7e2168497688277f4aa74a40b09914" as N25
+rectangle "transitPlace\nproperty L27-27\nproperty:bc843d07c49696ee0dca807e2027054f" as N26
+rectangle "transitTimezoneOffset\nproperty L28-28\nproperty:2d29396f3ac6c69392bbb43baae3b284" as N27
+rectangle "ReadingResponse\ninterface L31-43\ninterface:af41bfa80c888dde847de6e8ef4ecca0" as N28
+rectangle "model\nproperty L32-32\nproperty:f07fa8d516d60a6d80082bb4862255c2" as N29
+rectangle "title\nproperty L33-33\nproperty:d625e5d5325692a9ea80dc1618a204c7" as N30
+rectangle "subtitle\nproperty L34-34\nproperty:b415c83bd7b1e0717b06fc09d9a663b7" as N31
+rectangle "content\nproperty L35-35\nproperty:505aa74e1342805a84e74201509a1e6b" as N32
+rectangle "chartCues\nproperty L36-36\nproperty:b57296649e758e2be50c4486696d518b" as N33
+rectangle "presentationVersion\nproperty L37-37\nproperty:ecd2c4e0eb1803eac5e440bac81526c6" as N34
+rectangle "presentationCues\nproperty L38-38\nproperty:8c0109aeaf8893948abf87e6b469d72a" as N35
+rectangle "soulNotice\nproperty L39-39\nproperty:728d9e1aed9b83b5feda9bfea9cb6f38" as N36
+rectangle "chartFocusKey\nproperty L40-40\nproperty:a19a481660bbea3bd072efbcc4ec2d27" as N37
+rectangle "generatedAt\nproperty L41-41\nproperty:658ddbd769180296bca7e7e0217d8648" as N38
+rectangle "observationSnapshot\nproperty L42-42\nproperty:3cf2e884ce3b67ecb9dea27727e30490" as N39
+rectangle "generateAstrologicalReading\nfunction L46-130\nfunction:d5ff0d4fb6a01f6f479e9f821997dc8b" as N40
+N0 --> N1 : contains E1985
+N0 --> N2 : contains E1986
+N0 --> N3 : contains E1987
+N0 --> N4 : contains E1988
+N0 --> N5 : contains E1989
+N0 --> N6 : contains E1990
+N0 --> N7 : contains E1991
+N0 --> N8 : contains E1992
+N0 --> N9 : contains E1993
+N0 --> N10 : contains E1994
+N0 --> N11 : contains E1995
+N11 --> N12 : contains E1996
+N11 --> N13 : contains E1997
+N11 --> N14 : contains E1998
+N11 --> N15 : contains E1999
+N11 --> N16 : contains E2000
+N11 --> N17 : contains E2001
+N11 --> N18 : contains E2002
+N11 --> N19 : contains E2003
+N11 --> N20 : contains E2004
+N11 --> N21 : contains E2005
+N11 --> N22 : contains E2006
+N11 --> N23 : contains E2007
+N11 --> N24 : contains E2008
+N11 --> N25 : contains E2009
+N11 --> N26 : contains E2010
+N11 --> N27 : contains E2011
+N0 --> N28 : contains E2012
+N28 --> N29 : contains E2013
+N28 --> N30 : contains E2014
+N28 --> N31 : contains E2015
+N28 --> N32 : contains E2016
+N28 --> N33 : contains E2017
+N28 --> N34 : contains E2018
+N28 --> N35 : contains E2019
+N28 --> N36 : contains E2020
+N28 --> N37 : contains E2021
+N28 --> N38 : contains E2022
+N28 --> N39 : contains E2023
+N0 --> N40 : contains E2024
+N40 --> N11 : references E5951
+N40 --> N28 : references E5952
+@enduml

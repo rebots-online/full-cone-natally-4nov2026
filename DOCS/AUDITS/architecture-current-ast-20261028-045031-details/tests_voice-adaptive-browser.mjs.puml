@@ -1,0 +1,35 @@
+@startuml
+title tests/voice-adaptive-browser.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voice-adaptive-browser.mjs\nfile L1-81\nfile:tests/voice-adaptive-browser.mjs" as N0
+rectangle "playwright\nimport L1-1\nimport:7e7ad66d6f2709b01dfc9946d9731016" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:b29ecbbf7dafdcd313cf4526e39fa7eb" as N2
+rectangle "node:fs/promises\nimport L3-3\nimport:0234f9782166d181fdbbea82ad2d1856" as N3
+rectangle "node:os\nimport L4-4\nimport:e997a2f9f4d1e13d9ab1c1ea205a4dfb" as N4
+rectangle "browser\nconstant L6-6\nconstant:1d4c5533171a6682d9691008cfec21c6" as N5
+rectangle "page\nconstant L7-7\nconstant:2232fe7ec42659fde4c94baea0675f03" as N6
+rectangle "failures\nconstant L8-8\nconstant:d9ec6233e00e9a3e1d9f870c561f5588" as N7
+rectangle "device\nconstant L13-48\nconstant:96df9624bd9828df8a4659f0a72fe0e1" as N8
+rectangle "text\nconstant L49-49\nconstant:5c6ec90685bd5955b372794e6037ab4c" as N9
+rectangle "gentle\nconstant L53-53\nconstant:f0bfb4e81e47bf7e944194052d1a4533" as N10
+rectangle "i\nvariable L59-59\nvariable:e6b805c519bae8877eef9c2c8f73fd90" as N11
+rectangle "autoText\nconstant L66-66\nconstant:66bdfe9623d324a4a6b8c719f98b25a2" as N12
+rectangle "auto\nconstant L69-69\nconstant:d6dc81cce7c12cacb0a351f7445c73a7" as N13
+rectangle "report\nconstant L76-76\nconstant:2057b7549deef7f966a104d2ef5a3df5" as N14
+N0 --> N1 : contains E2808
+N0 --> N2 : contains E2809
+N0 --> N3 : contains E2810
+N0 --> N4 : contains E2811
+N0 --> N5 : contains E2812
+N0 --> N6 : contains E2813
+N0 --> N7 : contains E2814
+N0 --> N8 : contains E2815
+N0 --> N9 : contains E2816
+N0 --> N10 : contains E2817
+N0 --> N11 : contains E2818
+N0 --> N12 : contains E2819
+N0 --> N13 : contains E2820
+N0 --> N14 : contains E2821
+@enduml

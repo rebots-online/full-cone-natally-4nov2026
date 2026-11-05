@@ -1,0 +1,97 @@
+{
+  "observedAtUtc": "2026-10-28T16:53:31.5872116Z",
+  "scope": "UX-PLAY-1 native RevenueCat bridge and normalized passive customer projection",
+  "status": "IN_PROGRESS",
+  "files": [
+    {
+      "path": "src/services/nativeRevenueCat.ts",
+      "sha256": "39b89e5119468506852b05375cd68afe605a812d72cefef93281c3733dc894e1"
+    },
+    {
+      "path": "src/services/revenueCatCheckout.ts",
+      "sha256": "b4b6bacb206075dc1c2fc709deb21eabb55be7bf0d9d7ca2cc69988721173a09"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "ac18b652739c6ccb95660775be9819e4545f31adfe6e9d1e96b5bf445e7b4603"
+    },
+    {
+      "path": "src/services/downloadAccess.ts",
+      "sha256": "64e2b93a843b550b9c1f1fd64b9ecd1d3fda625e51f8b58fb4c757661dfe472f"
+    },
+    {
+      "path": "src-tauri/src/native_billing.rs",
+      "sha256": "c71e6cb97e76f38ecc1ba5be5d44dfb340b3d9939bd5ebdb9787ad7cdc622840"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "sha256": "b7deadcbc9cb7651df3b8a88ae344bcff6dc4bd34f5e35b6d268100ebb64e133"
+    },
+    {
+      "path": "src-tauri/gen/android/build.gradle.kts",
+      "sha256": "086f4a0585d09767ed870156c137773054174007b4d12e4ac61d7c5b29ce468f"
+    },
+    {
+      "path": "src-tauri/gen/android/app/build.gradle.kts",
+      "sha256": "09c16e7e36896357471a14986a58f4ea84595db54ccaef53b0bd54388e39b6a9"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/AndroidManifest.xml",
+      "sha256": "2590f2445ac2c411fd1649bb78780cd400f1f2f476fc7343cde32a09f3859171"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/MainActivity.kt",
+      "sha256": "427f22550dd2735daf0c1e54251776d936509da8007fa5db112b688908a4d6cd"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/NatallyBillingPlugin.kt",
+      "sha256": "9dfc3d68958a3d5ebc83fe57c6b3ad3848ef67c9e466724938a03330da92a3e1"
+    },
+    {
+      "path": "tests/native-billing.test.mjs",
+      "sha256": "7bca870b8497112ae5c4a4b0f07c114f6e5418e87dc58314a8c7bf7cfe483d4e"
+    }
+  ],
+  "mechanicalImplementation": {
+    "model": "zai/glm-4.7",
+    "session": "8cad757e-58a7-4d58-b8ed-88ea3533df1a",
+    "thinking": false,
+    "implementationReviewAndFinalCorrection": "Three successful terminal runs; reviewed staged changes applied only after baseline hashes matched.",
+    "runtime": "Crush"
+  },
+  "checks": [
+    {
+      "detail": "Full TypeScript noEmit check against live native and concurrent payment UI source.",
+      "result": "PASS",
+      "command": "npm run lint"
+    },
+    {
+      "tests": 11,
+      "failed": 0,
+      "result": "PASS",
+      "detail": "Production service code with controlled auth, IPC, and provider boundaries. Covers product-history mapping, platform failure, owner/generation, passive versus Restore, monthly terms, quote consumption, pending/cancelled/purchased outcomes, stale callback, currency, entitlement expiry, and Web projection.",
+      "command": "node --test tests/native-billing.test.mjs"
+    },
+    {
+      "detail": "Both preparations left all 11 native source file SHA256 hashes identical. Does not compile or stamp a build.",
+      "result": "PASS",
+      "command": "node scripts/configure-android.mjs (twice)"
+    },
+    {
+      "detail": "Rust syntax accepted; no compilation claim.",
+      "result": "PASS",
+      "command": "rustfmt --emit stdout --edition 2021 staged native_billing.rs"
+    }
+  ],
+  "freeLessonVerification": {
+    "result": "PASS",
+    "runtimeSpendObserved": false,
+    "detail": "All 60 ordinary authored target fixtures retained general prose after normalizing allowed names, calculated coordinates/houses/orbs/dates; fetch trap saw zero calls. Source routes normal clicks to authored explanation/local Supertonic voice and explicit personal discussion to paid message path. No lesson source change required by clarified coordinate allowance."
+  },
+  "outstanding": [
+    "Native compilation through the prescribed full build coordinator.",
+    "Real configured Google Play products and store-distributed purchase/restore/pending/account-switch acceptance.",
+    "Native device IME and purchase-return behavior."
+  ],
+  "baseline": "Completed v1.12.86707 twelve-target matrix predates this bridge; these checks do not change its release evidence."
+}

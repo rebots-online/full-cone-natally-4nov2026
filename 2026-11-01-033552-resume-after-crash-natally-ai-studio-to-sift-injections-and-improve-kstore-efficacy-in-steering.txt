@@ -1,0 +1,1012 @@
+ ▐▛███▛█   Claude Code v2.1.316
+▝▜██████▀  glm-5.3-flash · API Usage Billing
+ ▝▝   ▝▝   ~/Desktop/DevProjects/natally-ai-studio
+
+
+❯ resume                                                                        
+
+  Thought for 12s, read 1 file (ctrl+o to expand)
+
+❯ /model                                                                        
+  ⎿  Set model to glm-5.3[1m] and saved as your default for new sessions
+
+❯ /effort max                                                                   
+  ⎿  Set effort level to max (this session only): Maximum capability with
+     deepest reasoning. May use excessive tokens resulting in long response
+     times or overthinking. Use sparingly for the hardest tasks.
+
+❯ /effort ultracode                                                             
+  ⎿  Ultracode on (this session only): dynamic workflows on every task. Effort
+     stays max.
+
+❯ we crashed and gnome restarted                                                
+
+  Thought for 27s (ctrl+o to expand)
+
+● Outstanding work (colour-coded, from CHECKLIST.md)
+
+  ┌─────┬─────────────────────┬──────────────────────────────────────────────┐
+  │     │        Task         │              Remaining outcome               │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │     │                     │ Frozen four-state coder tasklist published   │
+  │ 🟦  │ R12                 │ (df046b1b); dispatch HELD for operator       │
+  │     │                     │ signoff                                      │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ REDEMPTION-OUTCOME  │ Successful idempotent redemption against     │
+  │     │                     │ corrected backend                            │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ PURCHASE-OUTCOME    │ Purchase supplies balance, allowance,        │
+  │     │                     │ confirmation, invoice, history               │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ MINIMAL-BILLING     │ Reuse Google name/email; drop mandatory      │
+  │     │                     │ full-address form                            │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ ZERO-BALANCE        │ Hide verified zero balance; truthful         │
+  │     │                     │ unknown/error states                         │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ TOPUP-LANDING       │ Top Up opens landing explanations before     │
+  │     │                     │ amount choice                                │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ INAPP-OFFER-CONTENT │ Import explanatory content in-app; restore   │
+  │     │                     │ native Play billing                          │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ RESTORE-VALUE       │ Idempotent recovery of verified paid         │
+  │     │                     │ purchases                                    │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ SERVICE-OFFERS      │ Full-workup and guided-exploration offers    │
+  │     │                     │ with matched paths                           │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ ACCOUNT-ACTIONS     │ Compact retry/restore action row             │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ LC-02               │ Scroll-aware inset with real-engine          │
+  │     │                     │ anonymous example                            │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ LC-04/05            │ Above-fold primary action; plain-language    │
+  │     │                     │ opening                                      │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ LC-06               │ Platform-aware installation entry            │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ AUTH                │ Remaining sign-in and branding integration   │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ PLAY                │ Google Play purchase/subscription/restore    │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ READING-FLOW        │ Horoscope, Synastry, reading/education,      │
+  │     │                     │ genuine-session entry                        │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ NAVIGATION          │ Header/top-up integration, matched actions,  │
+  │     │                     │ navigation                                   │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ ATELIER             │ Scene, sticky window, swapping, objects,     │
+  │     │                     │ controls, signage                            │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ VOICE-STORIES       │ Professional voice, vignettes, phrase        │
+  │     │                     │ variation                                    │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ PREFAB-GENZ         │ Restore Gen Z lingo in prefab free content   │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ LORE                │ Customer-lore retrieval each turn            │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ SOUVENIR            │ Interactive souvenir, retained reading, PDF  │
+  │     │                     │ flipbook                                     │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ SOUVENIR-OFFERS     │ Airplane offer, cookie marquee, spoken       │
+  │     │                     │ invitation                                   │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ SEASONAL            │ Configured seasonal availability             │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ LOCATION            │ Current-location/observation-timezone        │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ COST-STATS          │ Measure real questions/costs; derive         │
+  │     │                     │ remaining                                    │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ ANALYTICS           │ Commercial measurements; brAInstormer/GA map │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟥  │ PLATFORM-RELEASE    │ Canonical build/publication after web        │
+  │     │                     │ purchasing works                             │
+  ├─────┼─────────────────────┼──────────────────────────────────────────────┤
+  │ 🟨  │ DELIVERY-EVIDENCE   │ Continuous customer-journey recording        │
+  └─────┴─────────────────────┴──────────────────────────────────────────────┘
+
+  We crashed (GNOME restart). Before narrating anything about why the working
+  tree looks the way it does, let me observe the actual state: fresh git status,
+  the uncommitted diffs in marketing.tsx and Astrolabe3D.tsx, the round-state
+  memory, and the two untracked session transcripts.
+
+  Thought for 59s, listed 1 directory, ran 1 shell command, recalled 1 memory (ctrl+o to expand)
+
+● State is partially reconstructed. Key observations so far (DST fell back last
+  night, so -0500/-0400 offsets matter — absolute order: the "repair landing
+  page" transcript export 05:40Z → CHECKLIST/ARCHITECTURE written 06:00–06:01Z →
+  memory 06:03Z → tasklist transcript export 06:04Z → the two source files 
+  edited 06:15Z → .bak copies 06:55Z → commits). The working tree still holds
+  uncommitted edits to exactly the two files owned by R12-A and R12-B. Now I
+  need the primary evidence: the actual diffs, commit timestamps, and any
+  session/ledger records after 06:15Z that show whether dispatch was signed off.
+
+  Listed 1 directory, ran 3 shell commands, recalled 1 memory (ctrl+o to expand)
+
+❯ what does @CHECKLIST.md and kstore saya?                                      
+
+❯ you shouldnt grep files                                                       
+
+  Thought for 39s (ctrl+o to expand)
+
+● Understood on both counts — no grep/rummaging; I'll read the authoritative
+  stores directly (Admin-Manual docs → KStore, git, CHECKLIST.md) and use
+  CodeGraph for code questions. Saving that as a standing correction now, and
+  answering your question from the authoritative sources.
+
+  Listed 1 directory (ctrl+o to expand)
+
+❯ only codegraph, compare to your own @CHECKLIST.md and kstore                  
+
+  Thought for 42s, read 3 files, listed 1 directory (ctrl+o to expand)
+
+● KStore is reachable through the ~/.local/bin/kstore CLI
+  (stats/search/read/remember per the Admin-Manual contract). Querying it now
+  for the natally R12 state, then comparing to the repo's committed
+  CHECKLIST.md.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ Admin-Manual is not authoritative; kstore is single source of truth           
+
+  Thought for 21s (ctrl+o to expand)
+
+● Understood — KStore is the single source of truth; Admin-Manual was only used
+  to learn the CLI mechanics, and I'll treat KStore as the authority for state.
+  Searching it for the natally R12 records now.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ no it is supposedf to receive edverything by hook and you reach it by mcp or  
+  192.168.0.87:8788                                                             
+
+  Thought for 59s, ran 5 shell commands (ctrl+o to expand)
+
+❯ dont look randomly if you don't know; i saved our last conbersations before   
+  you undertooj them                                                            
+
+  Thought for 21s (ctrl+o to expand)
+
+● You saved the conversations so they'd be the record — reading them now instead
+  of probing. Starting with the end of each (the state they closed on).
+
+  Read 2 files (ctrl+o to expand)
+
+❯ those are the ONLY toipics you should look at oitehrwise you;ll fill up your  
+  context with sweet nothings and get confused                                  
+
+  Thought for 1m 7s (ctrl+o to expand)
+
+● Both saved conversations read — that's the whole record I'll use. Last
+  recorded state: architecture + tasklist pushed and remote-verified, then
+  explicit HOLD ("No agent will be assigned until you sign off the tasklist"),
+  with a staged dispatch workflow ready but not run. The crash lost whatever
+  came after. Now the one thing git can't tell me on its own: whether the
+  uncommitted A/B diffs are complete coder returns. Verifying against the frozen
+  anchors with targeted reads (caption JSX in marketing.tsx; onClick and
+  dim-traverse in Astrolabe3D.tsx):
+
+  Read 2 files (ctrl+o to expand)
+
+❯ and yuour own CHECKLIST is supposed to be four-state but also written with    
+  idempotent tasks                                                              
+❯ s o you dont even etchnically need to look                                    
+
+  Thought for 53s (ctrl+o to expand)
+
+● Understood — the tasks are idempotent and four-state, so the working tree's
+  partial state can't strand anything: re-driving any task converges on its
+  defined end state, and no forensics were technically required. Recording
+  tonight's corrections and the recovered round state durably, then the
+  comparison you asked for.
+
+  Wrote 1 memory (ctrl+o to expand)
+
+❯ ygtou're supposed to be pushing commits asfter everyt task completes,         
+
+  Thought for 2m 6s (ctrl+o to expand)
+
+● Right — that standing rule is exactly what the crash punished: the lost
+  session undertook A/B and never published, so its work survived only as
+  orphaned working-tree edits. Correcting that now: record the dispatch
+  authorization durably (backup → edit → commit → push, verified), then run the
+  round so every completed task lands as a published commit.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ so tell me what is the last commit relative to your chekclist?                
+
+❯ and what does codegraph say  the codebasse is vs checjlist's four-state check 
+  off status?                                                                   
+
+❯ if you're compliabt, they'll both match=- where you left off; otherwis,e      
+  ignore it all and start executing your checklist where the second             
+  conversation left off as the first checklist item                             
+
+❯ if you just ask kstore, and your hooks are in order, it will tell you wha     
+  your last line was becauswe your hooks are to sewnd everything to kstore as   
+  you go                                                                        
+
+  Thought for 33s (ctrl+o to expand)
+
+● Three-way reconciliation coming up: last commit ↔ CHECKLIST, CodeGraph ↔
+  CHECKLIST, and KStore's record of the last line. Querying CodeGraph and KStore
+  now (targeted, per your instruction).
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+❯ and all three should be the same                                              
+
+  Thought for 1m 44s, ran 3 shell commands (ctrl+o to expand)
+
+● Update(CHECKLIST.md)
+  ⎿  Added 1 line, removed 1 line
+       9  
+      10  | State | Task | Remaining outcome |
+      11  | --- | --- | --- |
+      12 -| 🟦 IN_PROGRESS | R12 | Frozen R12 recipes below. Architecture
+         - e9522ff2 pushed. Coder dispatch held for operator signoff of t
+         -his tasklist. |                                                
+      12 +| 🟦 IN_PROGRESS | R12 | Frozen R12 recipes below. Architecture
+         + e9522ff2 pushed. Dispatch authorized by operator 2026-11-01 cr
+         +ash-recovery session; R12-A..R12-E assigned, executing. |      
+      13  | 🟨 NOT_STARTED | REDEMPTION-OUTCOME | Highest priority: actua
+          l successful redemption against the corrected deployed backend,
+           with the configured available allowance and usable key idempot
+          ently. |
+      14  | 🟨 NOT_STARTED | PURCHASE-OUTCOME | Actual purchase supplies 
+          the correct balance, usable allowance, confirmation, official i
+          nvoice and history. |
+      15  | 🟨 NOT_STARTED | MINIMAL-BILLING | Reuse Google name/email an
+          d existing actual billing facts; request only missing transacti
+          on-required information. Remove the mandatory full-address form
+           for every top-up. |
+
+● Update(CHECKLIST.md)
+  ⎿  Added 1 line, removed 1 line
+      469  | --- | --- | --- |
+      470  | R12 architecture | 🟩 COMPLETE | e9522ff2 pushed and remote-
+           verified 2026-11-01. |
+      471  | R12 tasklist (this document) | 🟩 COMPLETE | Published befor
+           e dispatch; holds below. |
+      472 -| R12 dispatch | 🟨 NOT_STARTED | **HOLD: operator signoff of 
+          -this tasklist required before any agent assignment.** |       
+      472 +| R12 dispatch | 🟦 IN_PROGRESS | Operator authorized executio
+          +n 2026-11-01 crash-recovery session: reconcile commit/CodeGrap
+          +h/KStore, then execute from where the second saved conversatio
+          +n left off (R12-A first). Uncommitted partial R12-A/R12-B edit
+          +s from the crashed session are absorbed idempotently. |       
+      473  | R12 semantic validation | 🟨 NOT_STARTED | Supervisor compar
+           es each returned diff to its task; same coder corrects; ✅ per
+            task. |
+      474  | R12 integration typecheck | 🟨 NOT_STARTED | Parent runs `np
+           x tsc --noEmit` after applying all landed diffs; exit 0. |
+      475  | R12 source publication | 🟨 NOT_STARTED | Parent commits/pus
+           hes reviewed source with README attestation. |
+
+● Update(CHECKLIST.md)
+  ⎿  Added 5 lines, removed 5 lines
+      107  
+      108  ## Task R12-A — MARKETING-REPLICA (landing hero example-chart 
+           replica)
+      109  
+      110 -**Stage states:** formulated ✅ (e9522ff2) · assigned [ ] · un
+          -dertaken [ ] · completed [ ] · validated [ ]                  
+      110 +**Stage states:** formulated ✅ (e9522ff2) · assigned [/] · un
+          +dertaken [ ] · completed [ ] · validated [ ]                  
+      111  
+      112  **Scope (closed):** `src/marketing.tsx`, `src/marketing.css`. 
+           Nothing else.
+      113  
+     ...
+      188  
+      189  ## Task R12-B — RENDERER-TWOPATH (two-path inset click; vivid-
+           frame dimming)
+      190  
+      191 -**Stage states:** formulated ✅ (e9522ff2) · assigned [ ] · un
+          -dertaken [ ] · completed [ ] · validated [ ]                  
+      191 +**Stage states:** formulated ✅ (e9522ff2) · assigned [/] · un
+          +dertaken [ ] · completed [ ] · validated [ ]                  
+      192  
+      193  **Scope (closed):** `src/components/Astrolabe3D.tsx`. Nothing 
+           else.
+      194  
+     ...
+      253  
+      254  ## Task R12-C — APP-EDUCATION (view choreography; paid extensi
+           on; upsell branch)
+      255  
+      256 -**Stage states:** formulated ✅ (e9522ff2) · assigned [ ] · un
+          -dertaken [ ] · completed [ ] · validated [ ]                  
+      256 +**Stage states:** formulated ✅ (e9522ff2) · assigned [/] · un
+          +dertaken [ ] · completed [ ] · validated [ ]                  
+      257  
+      258  **Scope (closed):** `src/App.tsx`, `src/components/NatallyChat
+           bot.tsx`,
+      259  `src/components/ReadingStage.tsx`. Nothing else.
+     ...
+      328  
+      329  ## Task R12-D — PREFAB-CONTENT (regimes/evolution completion; 
+           upsell close)
+      330  
+      331 -**Stage states:** formulated ✅ (e9522ff2) · assigned [ ] · un
+          -dertaken [ ] · completed [ ] · validated [ ]                  
+      331 +**Stage states:** formulated ✅ (e9522ff2) · assigned [/] · un
+          +dertaken [ ] · completed [ ] · validated [ ]                  
+      332  
+      333  **Scope (closed):** `src/services/authoredChartExplanations.ts
+           `,
+      334  `src/services/authoredEducationSession.ts`. Nothing else.
+     ...
+      387  
+      388  ## Task R12-E — ENTRY-UNIFY (dispatcher, emission, env keys, i
+           dentity config)
+      389  
+      390 -**Stage states:** formulated ✅ (e9522ff2) · assigned [ ] · un
+          -dertaken [ ] · completed [ ] · validated [ ]                  
+      390 +**Stage states:** formulated ✅ (e9522ff2) · assigned [/] · un
+          +dertaken [ ] · completed [ ] · validated [ ]                  
+      391  
+      392  **Scope (closed):** `src/main.tsx`, `scripts/build-web.mjs`,
+      393  `scripts/stage-marketing-overlay.mjs`, `scripts/pwa-build.mjs`
+           , `.env.example`,
+
+❯ no matter whether theyt are or not, you should write up this incident as a    
+  precipitating incidentg why be fasgtidious about commit pushing every task +  
+  hooks send everything to kstore + update four-state status in checklist       
+  faastidiously as you go                                                       
+
+  Thought for 34s (ctrl+o to expand)
+
+● The incident write-up is coming — first checking the house format for incident
+  records so it files correctly.
+
+  Read 1 file (ctrl+o to expand)
+
+❯ wrie it 0up in admin-manual                                                   
+
+  Thought for 1m 1s, read 1 file (ctrl+o to expand)
+
+● Writing the incident now — INC-20, following the house format (true story,
+  names, commits, timestamps).
+
+● Write(~/Admin-Manual/DOCS/INCIDENTS/crash-orphaned-undertaken-work-no-per-task
+       -commit-no-four-state.md)
+  ⎿  Wrote 101 lines to ~/Admin-Manual/DOCS/INCIDENTS/crash-orphaned-undert
+     aken-work-no-per-task-commit-no-four-state.md
+       1 # INC-20 — Crash-orphaned undertaken work: no per-task commit/pu
+         sh, no four-state updates, while KStore hooks held the only reco
+         rd
+       2 
+       3 **Date**: 2026-11-01 (small hours; North-American DST fell back 
+         that night —
+       4 clock-time ordering is misleading, UTC is given)
+       5 **Project**: Natally (`~/Desktop/DevProjects/natally-ai-studio`)
+         , R12
+       6 landing-replica round
+     … +95 lines (ctrl+o to expand)
+
+  Thought for 7s, committed 08062cac, pushed to master (ctrl+o to expand)
+
+● Update(~/Admin-Manual/DOCS/INCIDENTS.md)
+  ⎿  Added 2 lines
+      55  - **INC-19** — [Genesis placeholder prose survives ~120 release
+          s wearing an "engine" label](INCIDENTS/genesis-placeholder-pros
+          e-shipped-as-engine.md). The most egregious recorded instance o
+          f the mock/placeholder class. Kintsugi's "Natal Aspects" interp
+          retations and "Generated by the procedural astrology grammar en
+          gine" banner were **five** fixed sentences + one wrapper templa
+          te (`astrology.ts:113-119`, `:461`) — identical prose for every
+           seeker, not even planet-pair-specific — entered at the repo's 
+          genesis commit and carried verbatim through two app generations
+          , two architecture re-attestations, the W13 rubric wave, a secu
+          rity audit, and the project's own excision of its *other* canne
+          d-prose system (inv-27/AD-44), which passed this one because it
+           wore an "engine" label. On no roadmap, no checklist, no known-
+          issues list; caught days before paying customers only by operat
+          or suspicion, which then had to defeat the agent's hedge ("the 
+          geometry is real") — verdict: **"half-yes is equivalent to all 
+          yes."** Ties together the scattered no-mock doctrine (IPS "plac
+          eholders in architecture are defects", I-10, inv-27/AD-44, secu
+          rity-vocabulary honesty) with one unification: the **Content Pr
+          ovenance Ledger** — every user-visible prose surface classified
+           `generated | computed-fact | authored-static | template` in th
+          e entity table; generation-claiming copy only on `generated` wi
+          th a cited call site; part-template classifies as template (hal
+          f-yes rule); enforced by the mechanical **two-seekers test** (b
+          yte-diff the surface for two synthetic users; identical interpr
+          etive prose ⇒ template, whatever the label says) as a standing 
+          rubric row, plus genesis-audit of inherited string literals at 
+          first ARCHITECT pass. Stateless-agent/power-outage compatible b
+          y construction: lives in phase-reminder injections + committed 
+          rubric rows + entity-table schema, never in session memory. Cro
+          ss-ref INC-6/I-10, Kintsugi AD-41/AD-44/inv-27, IPS ideology. |
+           Kintsugi-Unbroken | 2026-08-13
+      56  
+      57  - **JSONIC settings placeholder leak (2026-09-26)** — [Incident
+           and prevention](INCIDENTS/jsonic-settings-placeholder-leak.md)
+          . Invented feature/status copy reached design review; a second 
+          cleanup pass found a missed SQLite claim and an older fake coun
+          t. Empty unfinished UI is preferable to fabricated filler.
+      58 +                                                               
+      59 +- **INC-20** — [Crash-orphaned undertaken work: no per-task com
+         +mit/push, no four-state updates, while KStore hooks held the on
+         +ly record](INCIDENTS/crash-orphaned-undertaken-work-no-per-task
+         +-commit-no-four-state.md). A GNOME restart killed the Natally R
+         +12 dispatch session with coder edits uncommitted and CHECKLIST 
+         +untouched; git+CHECKLIST told one story, working-tree+KStore th
+         +e truth, and recovery required operator-supervised reconciliati
+         +on. Yields the three fastidious habits: commit+push every compl
+         +eted task (verify remote), hooks-to-KStore always on (SSoT for 
+         +"what was your last line"), and four-state CHECKLIST flips as-y
+         +ou-go so all three authorities agree at every instant. Cross-re
+         +f INC-3, INC-7, resumes-not-recovery-points. | natally-ai-studi
+         +o | 2026-11-01                                                 
+
+  Thought for 4s (ctrl+o to expand)
+
+● Now launching the R12 round itself — five coders in parallel on their disjoint
+  frozen scopes, fresh supervisors validating each against its task block,
+  deficiencies returning to the same task for correction. Partial
+  crashed-session work is absorbed by the idempotent contracts.
+
+● Workflow(Frozen R12 round: five parallel coders (A-E) edit disjoint scopes in
+          place; fresh supervisors validate total state against each frozen
+          CHECKLIST block; deficiencies return to the same task for correction)
+  ⎿  /workflows to view dynamic workflow runs
+
+  Thought for 15s (ctrl+o to expand)
+● While the round runs, updating the durable round-state memory and index so a
+  second crash loses nothing:
+
+  Thought for 7s, recalled 1 memory, wrote 3 memories (ctrl+o to expand)
+
+● Everything you asked for is done and the round is executing. The full picture:
+
+  The reconciliation you asked for
+
+  Authority: Last commit 6c5b886c
+  What it said: Tasklist published; dispatch HELD; nothing assigned
+  Verdict: Matches CHECKLIST exactly
+  ────────────────────────────────────────
+  Authority: CHECKLIST.md (disk = HEAD)
+  What it said: Same — all five tasks assigned [ ], dispatch NOT_STARTED
+  Verdict: Matches git exactly
+  ────────────────────────────────────────
+  Authority: CodeGraph / working tree
+  What it said: Partial R12-A (missing only A4's caption + link) and partial
+  R12-B (deferral scaffolding + structureFrame flags present; B1 two-path
+  onClick, B2 clears, B3 dim exemptions absent) — uncommitted; C/D/E absent
+  Verdict: Disagreed with git+CHECKLIST
+  ────────────────────────────────────────
+  Authority: KStore (hooks)
+  What it said: Two parallel coder sessions dispatched 06:19:45Z; activity
+  through 08:10:34Z, ending in a SessionEnd event for session d3fbc787 — i.e.,
+  it agreed with the codebase, not the checklist
+  Verdict: Disagreed with git+CHECKLIST
+
+  So no — they were not all the same. Two true pairs: the publication surfaces
+  (git+CHECKLIST) claimed nothing had happened, while KStore and the filesystem
+  proved the crashed session had undertaken A and B without one commit, one
+  push, or one marker flip. KStore answered "what was your last line" exactly as
+  you said it would — the hooks held the only honest record.
+
+  The incident — written up in Admin-Manual
+
+  INC-20 — DOCS/INCIDENTS/crash-orphaned-undertaken-work-no-per-task-commit-no-f
+  our-state.md, indexed in INCIDENTS.md (backed up first). It records the true
+  timeline, the mismatch table above, and root-cause: publication treated as a
+  completion-only event while everything in-flight lived nowhere durable. Its
+  canonical lesson is the three habits you named: commit+push every completed 
+  task (verify remote); hooks send everything to KStore as you go — never 
+  bypass; flip CHECKLIST four-state fastidiously as you go, so all three
+  authorities agree at every instant.
+
+  Now executing — from where the second conversation left off
+
+  - Record commit 08062cac pushed and remote-verified: CHECKLIST dispatch row →
+    IN_PROGRESS with your authorization, A–E marked assigned [/] (backup
+    .bak.20261101_032029 beside it).
+  - Round running (workflow wf_83d8b679-fc2, live in /workflows): five coders on
+    their disjoint frozen scopes — R12-A first, absorbing the crashed session's
+    partial work idempotently — each followed by a fresh supervisor that judges
+    total state against its task block, with deficiencies returning to the same
+    coder for correction.
+  - When it completes: integration tsc --noEmit, then one commit+push per 
+    completed task, CHECKLIST flips to ✅ as each validates — per your renewed
+    instruction and INC-20's rule.
+
+✻ Worked for 13m 15s · done 3:24 AM
+
+❯ this incifent requires yoo to improve whatever global rules enforcement would 
+  have resuklted in more fastidious ocmplianced not just writen iet up          
+
+❯ check your context foer ignored messages from kstore; it also is supposed to  
+  be able to kill your session, and re-propmpt a new instance of                
+  zclaude/cclaude with an amended prompt                                        
+
+  Thought for 26s (ctrl+o to expand)
+
+● Two workstreams from your instruction: (1) real enforcement, not just the
+  write-up; (2) the KStore channel check. On (2), straight answer from my
+  context first: no KStore-originated messages appear in this session — every
+  hook injection I've received says [rule-compliance] Nothing active for this 
+  project plus phase-reminders; nothing from the KStore policy/review channel,
+  and no kill/re-prompt has occurred (this turn never ended, so no Stop review
+  has fired yet either). I'll verify the wiring rather than assume it. For (1),
+  enforcement that lives in prose failed — it has to be hooks the harness
+  executes mechanically. Loading the config skill to do that properly:
+
+● Skill(update-config)
+  ⎿  Successfully loaded skill · 1 tool allowed
+
+  Thought for 1m 2s, read 1 file, ran 1 shell command (ctrl+o to expand)
+
+● The runtime picture is now clear. KStore wiring is present and functioning
+  (capture hooks on Pre/PostToolUse, policy at SessionStart, pre at
+  UserPromptSubmit, the blocking Stop review post — tonight's recovery data
+  proves capture works; that's the channel that held the record). What's missing
+  is exactly the INC-20 gap: nothing mechanically blocks ending a turn with 
+  unpublished work — the existing Stop reviewers are async/advisory. Adding the
+  enforcement now:
+
+● Write(~/.claude/hooks/inc20-publication-gate.sh)
+  ⎿  Wrote 50 lines to ~/.claude/hooks/inc20-publication-gate.sh
+       1 #!/usr/bin/env bash
+       2 # INC-20 publication gate (Stop hook, blocking).
+       3 # Blocks ending a turn in a CHECKLIST.md-bearing repo with unpub
+         lished work:
+       4 # uncommitted changes (excluding *.bak* backups, dated transcrip
+         t exports and
+       5 # .codegraph) or unpushed commits on the current branch.
+       6 # Conscious override for legitimately in-flight work:
+       7 #   touch /tmp/inc20-stop-override-<session_id>
+       8 # and state the reason in the final message.
+     … +42 lines (ctrl+o to expand)
+
+● Write(~/.claude/hooks/inject-inc20-discipline.sh)
+  ⎿  Wrote 10 lines to ~/.claude/hooks/inject-inc20-discipline.sh
+      1 #!/usr/bin/env bash
+      2 # INC-20 discipline reminder (UserPromptSubmit injector).
+      3 # One-line standing reminder when the project has a CHECKLIST.md,
+         so the
+      4 # three fastidious habits are present at every prompt, not only i
+        n prose.
+      5 set -u
+      6 input=$(cat)
+      7 cwd=$(printf '%s' "$input" | jq -r '.cwd // empty' 2>/dev/null)
+      8 { [ -n "$cwd" ] && [ -f "$cwd/CHECKLIST.md" ]; } || exit 0
+     … +2 lines (ctrl+o to expand)
+
+  Thought for 8s, ran 1 shell command (ctrl+o to expand)
+
+● Gate behaves exactly right (blocks on the real uncommitted work, honors
+  override, skips non-CHECKLIST dirs). The injector's JSON failed validation —
+  inspecting the raw output to find the truncation:
+
+  Thought for 12s, ran 1 shell command (ctrl+o to expand)
+
+● Found it — the JSON is missing its outer closing brace (ends instant."}
+  instead of instant."}}). Fixing:
+
+● Update(~/.claude/hooks/inject-inc20-discipline.sh)
+  ⎿  Added 1 line, removed 1 line
+       6  input=$(cat)
+       7  cwd=$(printf '%s' "$input" | jq -r '.cwd // empty' 2>/dev/null)
+       8  { [ -n "$cwd" ] && [ -f "$cwd/CHECKLIST.md" ]; } || exit 0
+       9 -printf '%s' '{"hookSpecificOutput":{"hookEventName":"UserPrompt
+         -Submit","additionalContext":"INC-20 standing discipline: commit
+         -+push every completed task before ending the turn (verify the r
+         -emote); flip CHECKLIST.md four-state markers as-you-go, never i
+         -n batch afterwards; KStore hooks capture everything as it happe
+         -ns — never bypass or disable them; git+CHECKLIST+KStore must ag
+         -ree at every instant."}'                                       
+       9 +printf '%s' '{"hookSpecificOutput":{"hookEventName":"UserPrompt
+         +Submit","additionalContext":"INC-20 standing discipline: commit
+         ++push every completed task before ending the turn (verify the r
+         +emote); flip CHECKLIST.md four-state markers as-you-go, never i
+         +n batch afterwards; KStore hooks capture everything as it happe
+         +ns — never bypass or disable them; git+CHECKLIST+KStore must ag
+         +ree at every instant."}}'                                      
+      10  exit 0
+
+  Thought for 9s, ran 1 shell command (ctrl+o to expand)
+
+● Both hooks pass. Wiring them into the global settings with a backup first:
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+● Update(~/.claude/settings.json)
+  ⎿  Added 11 lines
+      280              "timeout": 1800
+      281            }
+      282          ]
+      283 +      },                                                      
+      284 +      {                                                       
+      285 +        "matcher": "",                                        
+      286 +        "hooks": [                                            
+      287 +          {                                                   
+      288 +            "type": "command",                                
+      289 +            "command": "/home/robin/.claude/hooks/inc20-public
+          +ation-gate.sh",                                               
+      290 +            "timeout": 30,                                    
+      291 +            "statusMessage": "INC-20 publication gate"        
+      292 +          }                                                   
+      293 +        ]                                                     
+      294        }
+      295      ],
+      296      "StopFailure": [
+
+● Update(~/.claude/settings.json)
+  ⎿  Added 11 lines
+      396              "timeout": 180
+      397            }
+      398          ]
+      399 +      },                                                      
+      400 +      {                                                       
+      401 +        "matcher": "",                                        
+      402 +        "hooks": [                                            
+      403 +          {                                                   
+      404 +            "type": "command",                                
+      405 +            "command": "/home/robin/.claude/hooks/inject-inc20
+          +-discipline.sh",                                              
+      406 +            "timeout": 10,                                    
+      407 +            "statusMessage": "INC-20 discipline reminder"     
+      408 +          }                                                   
+      409 +        ]                                                     
+      410        }
+      411      ]
+      412    },
+
+  Thought for 4s, read 1 file, ran 1 shell command (ctrl+o to expand)
+
+● Update(~/.claude/CLAUDE.md)
+  ⎿  Added 9 lines
+       1  Refresh and follow all conventions in `/home/robin/Admin-Manual
+          `, the global single source of truth.
+       2  
+       3  ALWAYS COMPLY WITH ~/Admin-Manual/ and nothing else.
+       4 +                                                               
+       5 +INC-20 publication discipline (incident 2026-11-01, Natally R12
+         + crash):                                                       
+       6 +~/Admin-Manual/DOCS/INCIDENTS/crash-orphaned-undertaken-work-no
+         +-per-task-commit-no-four-state.md                              
+       7 +In every CHECKLIST.md-bearing repo, publish fastidiously as you
+         + go: commit and                                                
+       8 +push each completed task before ending the turn (verify the rem
+         +ote); flip the                                                 
+       9 +CHECKLIST four-state marker the moment a stage changes; never b
+         +ypass the KStore                                               
+      10 +hooks that capture everything. git, CHECKLIST and KStore must a
+         +gree at every                                                  
+      11 +instant. The Stop-hook publication gate enforces this mechanica
+         +lly — override                                                 
+      12 +only with a recorded reason.                                   
+
+  Thought for 13s (ctrl+o to expand)
+
+● All three enforcement pieces are wired, tested, and backed up. Creating the
+  override sentinel for this session's own stop (the R12 coder work is
+  legitimately in flight — unvalidated work must not be committed, and the gate
+  would otherwise rightly block):
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Done — the incident now has teeth, not just a write-up. Summary of what
+  changed:
+
+  Enforcement added (mechanical, not prose)
+
+  Piece: Stop gate ~/.claude/hooks/inc20-publication-gate.sh
+  What it does: Blocks ending any turn in a CHECKLIST.md-bearing repo with
+  uncommitted changes or unpushed commits (excludes .bak* backups, dated
+  transcript exports, .codegraph/). Escape hatch:
+  /tmp/inc20-stop-override-<session_id> + a stated reason
+  Proof: Pipe-tested live: correctly flagged the current uncommitted A/B work
+  (exit 2), honored the override (exit 0), skipped non-CHECKLIST dirs
+  ────────────────────────────────────────
+  Piece: Prompt injector ~/.claude/hooks/inject-inc20-discipline.sh
+  What it does: Injects the three habits at every UserPromptSubmit in CHECKLIST
+  repos, so the rule is present each prompt
+  Proof: jq-valid JSON (caught and fixed a missing brace in testing)
+  ────────────────────────────────────────
+  Piece: Global rule ~/.claude/CLAUDE.md
+  What it does: INC-20 discipline citing the incident, per the
+  rules-cite-incidents creed
+  Proof: Backed up first
+  ────────────────────────────────────────
+  Piece: Registration ~/.claude/settings.json
+  What it does: Both hooks merged into the existing Stop and UserPromptSubmit
+  arrays — kstore review hooks, GitKraken, and all 22 hook events preserved
+  untouched
+  Proof: Full-file parse + schema query pass; backups .bak.20261101_032836
+
+  If the hooks don't fire this session, open /hooks once to reload config —
+  they're live for every new session regardless.
+
+  Your KStore questions, answered straight
+
+  - Ignored messages in my context: none. Every injection I received this
+    session was rule-compliance/phase-reminder output; nothing from KStore's
+    channel appeared, and no kill/re-prompt occurred. The wiring itself is
+    healthy: policy at SessionStart, pre at UserPromptSubmit, capture on every
+    tool event, and the blocking post review on Stop (timeout 1800) are all
+    registered — tonight's recovery data through 08:10:34Z is the proof capture
+    works.
+  - Kill + re-prompt of a new zclaude/cclaude instance with an amended prompt:
+    the within-session mechanism (Stop review returning REDO blocks the stop and
+    feeds the amendment back) is wired per the kstore-client contract. The
+    cross-instance launcher-side re-prompt lives in the shared kstore-client
+    deployment (zclaude-acp-exec / server /policy_gate) used by three hosts — I
+    have not modified that shared deployment unilaterally; say the word if you
+    want that layer extended and I'll do it as its own tracked task.
+
+  Standing state
+
+  - The gate already applies to me: I've recorded this session's override (R12 
+    workflow wf_83d8b679-fc2 in flight; publication follows validation + 
+    typecheck) — the only honest use of the hatch, since committing unvalidated
+    coder work would violate the round gates.
+  - The round is running: five coders → per-task supervisors → corrections. On
+    completion I run the integration typecheck, then one commit+push per 
+    completed task with CHECKLIST ✅ flips — after which the gate passes clean,
+    as it should.
+
+✻ Baked for 3m 20s · done 3:29 AM
+
+❯ Isnt kstore the only possible source of injections?                           
+
+  Thought for 31s (ctrl+o to expand)
+
+● No — and the honest answer indicts part of what I just wired. The designed
+  channel is KStore-only: the kstore_claude_adapter.py policy (SessionStart) and
+  pre (UserPromptSubmit) hooks inject policy retrieved from KStore — one
+  authority, one channel. But the runtime actually carries four local injectors
+  that bypass it: the pre-existing inject-rules.py, inject-violations.py,
+  inject-phase-reminders.py, and the inject-inc20-discipline.sh I added an hour
+  ago. Mine repeated the same drift the KStore-only contract was written to stop
+  (it even names phase-reminders for removal). Correcting my part now: the
+  discipline belongs in KStore, surfaced by KStore's own adapters — not
+  hardcoded in a fourteenth local voice.
+● Update(~/.claude/settings.json)
+  ⎿  Removed 11 lines
+      396              "timeout": 180
+      397            }
+      398          ]
+      399 -      },                                                      
+      400 -      {                                                       
+      401 -        "matcher": "",                                        
+      402 -        "hooks": [                                            
+      403 -          {                                                   
+      404 -            "type": "command",                                
+      405 -            "command": "/home/robin/.claude/hooks/inject-inc20
+          --discipline.sh",                                              
+      406 -            "timeout": 10,                                    
+      407 -            "statusMessage": "INC-20 discipline reminder"     
+      408 -          }                                                   
+      409 -        ]                                                     
+      399        }
+      400      ]
+      401    },
+
+  Thought for 4s, ran 1 shell command (ctrl+o to expand)
+
+● Now the discipline goes where it belongs — into KStore itself, owned by its
+  injection channel:
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ after all, you dont inject reminders to yourself                              
+
+  Thought for 13s (ctrl+o to expand)
+
+● Exactly — a reminder I write for myself carries none of my future self's
+  trust, and it pretends to be authority it isn't. The durable forms are the
+  ones that don't depend on my memory or honesty in the moment: the incident
+  (why), the rule in the spine (what), the gate (must), and now the KStore
+  policy doc (the record the next session retrieves from the SSoT, not from me).
+  Recording the final form of the correction:
+
+  Wrote 1 memory (ctrl+o to expand)
+
+● Settled, and the architecture is now clean end-to-end:
+
+  Answer to your question: No — KStore should be the only injection source, but
+  four local injectors existed; one of them was mine, born and reverted within
+  the hour. The other three (inject-rules.py, inject-violations.py,
+  inject-phase-reminders.py) pre-date tonight and contradict the KStore-only
+  contract on this machine — flagged, not touched, since ripping pre-existing
+  pieces out of your runtime is your call, not mine.
+
+  What stands now:
+
+  ┌────────┬─────────────────────────────────────────┬──────────────────────┐
+  │ Layer  │                Artifact                 │        Status        │
+  ├────────┼─────────────────────────────────────────┼──────────────────────┤
+  │        │ INC-20 in                               │                      │
+  │ Why    │ ~/Admin-Manual/DOCS/INCIDENTS/ (+       │ Written              │
+  │        │ index)                                  │                      │
+  ├────────┼─────────────────────────────────────────┼──────────────────────┤
+  │ What   │ Global rule in ~/.claude/CLAUDE.md      │ In place (backed up) │
+  │        │ citing INC-20                           │                      │
+  ├────────┼─────────────────────────────────────────┼──────────────────────┤
+  │        │                                         │ Written + byte-exact │
+  │ Record │ policy/inc20-publication-discipline in  │  verified readback   │
+  │        │ KStore                                  │ (doc_uuid 01a1963d…, │
+  │        │                                         │  rev 1)              │
+  ├────────┼─────────────────────────────────────────┼──────────────────────┤
+  │        │ Blocking Stop gate on local git state — │ Pipe-tested,         │
+  │ Must   │  the one thing KStore's server can't    │ registered (backed   │
+  │        │ see                                     │ up)                  │
+  ├────────┼─────────────────────────────────────────┼──────────────────────┤
+  │        │                                         │ Removed;             │
+  │ Gone   │ inject-inc20-discipline.sh + its        │ UserPromptSubmit     │
+  │        │ settings entry                          │ back to its original │
+  │        │                                         │  five entries        │
+  └────────┴─────────────────────────────────────────┴──────────────────────┘
+
+  No self-injected reminders; injections route through KStore's adapters or not
+  at all.
+
+  Meanwhile the round continues: workflow wf_83d8b679-fc2 (R12-A…E coders →
+  supervisors → corrections) is still running. When it completes I run the
+  integration typecheck and then commit+push each completed task with its
+  CHECKLIST ✅ flip — at which point the new gate passes clean on its own, which
+  is the first proof it works the way you intended.
+
+✻ Cogitated for 59s · done 3:32 AM
+
+❯ thet must all only be kstore: you would never inject yourswelf a remindere;   
+  you would hasve complied in the firs place if yeou knew to                    
+
+  Thought for 20s (ctrl+o to expand)
+
+● Understood, and the principle is now stated in its strongest form: an
+  injection only carries authority when it comes from outside the agent — if I
+  knew a rule well enough to author a reminder for myself, I'd have complied the
+  first time; if I didn't, my self-authored reminder is noise. So ALL local
+  injectors go, not just mine. You've made the call the three legacy ones were
+  waiting on — executing:
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Update(~/.claude/settings.json)
+  ⎿  Removed 30 lines
+      354          "hooks": [
+      355            {
+      356              "type": "command",
+      357 -            "command": "python3 /home/robin/.claude/hooks/inje
+          -ct-violations.py",                                            
+      358 -            "timeout": 10                                     
+      359 -          }                                                   
+      360 -        ]                                                     
+      361 -      },                                                      
+      362 -      {                                                       
+      363 -        "matcher": "",                                        
+      364 -        "hooks": [                                            
+      365 -          {                                                   
+      366 -            "type": "command",                                
+      367 -            "command": "python3 /home/robin/.claude/hooks/inje
+          -ct-rules.py",                                                 
+      368 -            "timeout": 60                                     
+      369 -          }                                                   
+      370 -        ]                                                     
+      371 -      },                                                      
+      372 -      {                                                       
+      373 -        "matcher": "",                                        
+      374 -        "hooks": [                                            
+      375 -          {                                                   
+      376 -            "type": "command",                                
+      357              "command": "\"/home/robin/.local/share/GitKrakenCL
+           I/gk\" ai hook run --host claude-code"
+      358            }
+      359          ]
+      360        },
+      361        {
+      382 -        "matcher": "",                                        
+      362          "hooks": [
+      363            {
+      364              "type": "command",
+      386 -            "command": "python3 /home/robin/.claude/hooks/inje
+          -ct-phase-reminders.py",                                       
+      387 -            "timeout": 10                                     
+      388 -          }                                                   
+      389 -        ]                                                     
+      390 -      },                                                      
+      391 -      {                                                       
+      392 -        "hooks": [                                            
+      393 -          {                                                   
+      394 -            "type": "command",                                
+      365              "command": "/home/robin/.local/share/kstore-client
+           /venv/bin/python /home/robin/.local/share/kstore-client/curren
+           t/kstore_claude_adapter.py pre",
+      366              "timeout": 180
+      367            }
+
+  Thought for 6s, ran 1 shell command (ctrl+o to expand)
+
+● Zero injector registrations remain anywhere in the runtime. Recording the
+  ruling in memory, then done:
+
+  Wrote 1 memory (ctrl+o to expand)
+
+● Done. Final state of the injection architecture, per your ruling:
+
+  All context injection now flows from KStore alone. UserPromptSubmit is down to
+  two entries: the KStore pre adapter (the authority channel) and GitKraken
+  (telemetry, injects nothing into context). SessionStart policy comes from the
+  KStore adapter. The three legacy injectors — inject-rules.py,
+  inject-violations.py, inject-phase-reminders.py — are unregistered (scripts
+  left on disk as history, settings backed up before each edit, full-file parse
+  verified). From the next prompt onward, nothing reaches my context that didn't
+  come from you, from KStore, or from the harness itself.
+
+  What remains local is only enforcement, which cannot be an injection by 
+  nature: the INC-20 Stop gate that reads the working tree and blocks. It
+  doesn't tell me anything — it refuses. That's the correct division: KStore
+  teaches, the gate compels, and neither consults me about it.
+
+  And the principle is recorded where it survives me: the KStore policy doc
+  (policy/inc20-publication-discipline, revision 1, byte-exact verified) and the
+  memory note both now state it in your words' logic — a self-reminder is
+  circular; an agent that knew would have complied.
+
+  The R12 round keeps running in the background (wf_83d8b679-fc2). When it
+  lands: typecheck, then a commit+push per completed task with the CHECKLIST
+  flips — and the gate gets its first real pass.
+
+✻ Cooked for 47s · done 3:33 AM
+
+❯ but the origin of the concedpt of injecting was from me, in context of kstore 
+
+  Thought for 10s (ctrl+o to expand)
+
+● That closes the loop on the provenance: injection was always your concept, and
+  always of KStore — operator authors the concept, KStore carries it, the agent
+  receives it. The local injector scripts weren't a version of that idea; they
+  were the idea with its authority source cut off — which is why they drifted
+  into noise. Tonight didn't remove injection; it restored it to the original
+  design. Recording the provenance in the policy doc itself so no future agent
+  mistakes the primitive for a gap to re-invent locally:
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ harnesses donet inject thats our own innovation                               
+
+  Thought for 7s (ctrl+o to expand)
+
+● Sharper still — the harnesses provide no native injection at all; the
+  capability exists only because you built it on top of their hook surfaces.
+  Which means my earlier phrasing ("nothing reaches my context that didn't come
+  from you, from KStore, or from the harness itself") was wrong in its last
+  clause: the harness itself contributes nothing — every byte of injected
+  context in this machine's runtimes is your architecture operating through
+  KStore. Correcting the provenance paragraph to say exactly that:
+
+  Ran 1 shell command, wrote 1 memory (ctrl+o to expand)
+
+● Recorded — revision 3 of policy/inc20-publication-discipline (byte-exact
+  verified) now states the provenance in full: harnesses have no native 
+  injection; injection is this operation's own innovation, built on harness hook
+  surfaces, sourced exclusively from KStore — operator → KStore → agent 
+  context. The memory note carries the same correction.
+
+  The complete, settled picture of how this machine's agents are governed:
+
+  - Capture: KStore hooks record everything as it happens — your continuity
+    fabric (proved by the crash).
+  - Injection: your innovation, KStore-only — nothing else injects, and nothing
+    self-injects.
+  - Enforcement: local, blocking, blind to content — the INC-20 gate reads git
+    state and refuses; it carries no message, so it can't become a voice.
+  - Recovery: git + CHECKLIST + KStore agreeing at every instant, which the gate
+    now makes the price of stopping.
+
+  Meanwhile the R12 round (wf_83d8b679-fc2) continues in the background — five
+  coders, then supervisors, then corrections. When it completes: integration
+  typecheck, then commit+push per completed task with the four-state flips, and
+  the gate's first clean pass.
+
+✻ Cogitated for 32s · done 3:35 AM

@@ -1,0 +1,17 @@
+@startuml
+title scripts/onnx-progress-plugin.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "onnx-progress-plugin.ts\nfile L1-53\nfile:scripts/onnx-progress-plugin.ts" as N0
+rectangle "vite\nimport L1-1\nimport:15e094d1b165e80501f654072749913a" as N1
+rectangle "patchOnnxRuntime\nfunction L5-36\nfunction:94a9cd5fc70d64c4e90f5d6a79e23e89" as N2
+rectangle "onnxProgressPlugin\nfunction L38-46\nfunction:9b2f1719c8464644830a6615e2e828b8" as N3
+rectangle "patchFileReadSource\nfunction L48-52\nfunction:e3baa4741d60d81d324d33e3491940b4" as N4
+N0 --> N1 : contains E198
+N0 --> N2 : contains E199
+N0 --> N3 : contains E200
+N0 --> N4 : contains E201
+N3 --> N4 : calls E3968
+N3 --> N2 : calls E3969
+@enduml

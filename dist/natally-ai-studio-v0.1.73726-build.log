@@ -1,0 +1,62 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261019112628
+Username: DESKTOP-CN0GDTR\Admin
+RunAs User: DESKTOP-CN0GDTR\Admin
+Configuration Name: 
+Machine: DESKTOP-CN0GDTR (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-all-platforms.ps1
+Process ID: 22432
+PSVersion: 5.1.26100.7019
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7019
+BuildVersion: 10.0.26100.7019
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally windows build output: E:\BuildCache\natally-ai-studio\targets\windows
+
+
+WARNING: Existing Ubuntu-24.04 did not answer the bounded preflight; collecting native Windows/Android and web results continues.
+Building Web Ã¢â‚¬â€ v0.1.73726
+
+
+
+PS>TerminatingError(): "Web ZIP collected; installer validation requires the existing Ubuntu-24.04 to respond"
+>> TerminatingError(): "Web ZIP collected; installer validation requires the existing Ubuntu-24.04 to respond"
+WARNING: Web ZIP collected; installer validation requires the existing Ubuntu-24.04 to respond
+
+Building Windows Ã¢â‚¬â€ v0.1.73726
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally windows build output: E:\BuildCache\natally-ai-studio\targets\windows
+
+
+
+
+
+Building Android Ã¢â‚¬â€ v0.1.73726
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally android build output: E:\BuildCache\natally-ai-studio\targets\android
+
+
+PS>TerminatingError(): "Android build failed: 1; available artifacts were staged"
+>> TerminatingError(): "Android build failed: 1; available artifacts were staged"
+WARNING: Android build failed: 1; available artifacts were staged
+
+
+
+Building Linux Ã¢â‚¬â€ v0.1.73726
+PS>TerminatingError(): "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+>> TerminatingError(): "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+WARNING: The existing Ubuntu-24.04 is not responding; no substitute distribution was created
+
+
+
+PS>TerminatingError(): "node failed with exit 1"
+**********************
+Windows PowerShell transcript end
+End time: 20261019114109
+**********************

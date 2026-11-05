@@ -1,0 +1,43 @@
+@startuml
+title src/services/historicalPresentation.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "historicalPresentation.ts\nfile L1-68\nfile:src/services/historicalPresentation.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:a42ef308c9a5a4445b0b4f6a45969b09" as N1
+rectangle "./chartTargets\nimport L2-2\nimport:d7fa92fa55883a0a3a66147dee65e568" as N2
+rectangle "./presentation\nimport L3-3\nimport:a8501b721a5b46eafe057fb9687873ae" as N3
+rectangle "./presentation\nimport L4-4\nimport:e6de07f91b3101946c00b93407632363" as N4
+rectangle "RecoveredReference\ninterface L6-6\ninterface:fd65930fc6c436b13504024086ec60b3" as N5
+rectangle "target\nproperty L6-6\nproperty:8c791c857df88824a64b2af56fa1a813" as N6
+rectangle "end\nproperty L6-6\nproperty:a9ab601aa820f1811ace994710b8338b" as N7
+rectangle "start\nproperty L6-6\nproperty:eaa5b8acb06d2e4c089d38781ba4341d" as N8
+rectangle "HistoricalFocus\ninterface L7-7\ninterface:ae25a2b009bd3521a85c963f8b646d6f" as N9
+rectangle "references\nproperty L7-7\nproperty:04ea1fc239d920b301318079acb37298" as N10
+rectangle "notice\nproperty L7-7\nproperty:9caa5dc801ebef169123e38ae568357b" as N11
+rectangle "cues\nproperty L7-7\nproperty:a2a054b3ef58bfc3bc1d2563d7d5a3c2" as N12
+rectangle "escape\nfunction L8-8\nfunction:74819d34ede4fb33e73438b8290150b3" as N13
+rectangle "offChart\nconstant L9-9\nconstant:69f08f1c094d599d87175f80d3c46b85" as N14
+rectangle "recoverHistoricalFocus\nfunction L12-67\nfunction:0845ab9dbf8de6edd362f6a883a2f33c" as N15
+N0 --> N1 : contains E1692
+N0 --> N2 : contains E1693
+N0 --> N3 : contains E1694
+N0 --> N4 : contains E1695
+N0 --> N5 : contains E1696
+N5 --> N8 : contains E1697
+N5 --> N7 : contains E1698
+N5 --> N6 : contains E1699
+N0 --> N9 : contains E1700
+N9 --> N12 : contains E1701
+N9 --> N10 : contains E1702
+N9 --> N11 : contains E1703
+N0 --> N13 : contains E1704
+N0 --> N14 : contains E1705
+N0 --> N15 : contains E1706
+N15 --> N14 : references E1707
+N10 --> N5 : references E5698
+N15 --> N9 : references E5701
+N15 --> N5 : references E5706
+N15 --> N5 : references E5708
+N15 --> N13 : references E5710
+@enduml

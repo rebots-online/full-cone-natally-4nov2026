@@ -1,0 +1,97 @@
+{
+  "version": "1.31.90483",
+  "invocationId": "3a2306c5-fbd9-42dd-9525-bc4eda398760",
+  "sourceCommit": "b62742160a8142ac685b641f77cb44d1dd46a047",
+  "sourceFingerprint": "02f03608c99844c47cd45ae25ad4ff12d300d309bea1c2875a228680c66682ca",
+  "scope": "web-only",
+  "webArtifacts": {
+    "web": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v1.31.90483-webapp.zip",
+      "bytes": 22684543,
+      "sha256": "5778a5807a9ef8ba9449fa3e10071701648cad01cb57561105a911188bd11098",
+      "evidence": "Web production bundle and visible v1.31.90483; archive includes site, version and installer",
+      "verifiedAt": "2026-10-31T06:46:46.519Z"
+    },
+    "web-installer": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v1.31.90483-install-web.sh",
+      "bytes": 2978,
+      "sha256": "f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce",
+      "evidence": "nginx/Apache installer; syntax and both previews pass under Bash on native Windows (MSYS2); target-server installation not exercised",
+      "verifiedAt": "2026-10-31T06:46:47.933Z"
+    },
+    "pwa": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v1.31.90483-pwa-build.json",
+      "bytes": 1669,
+      "sha256": "42eac062777b3ce6397cbd5af9ddba94097c1b5a52fe7d308a19cb559f171dd3",
+      "evidence": "Generated PWA shell inventory matches canonical release; device installation acceptance is separate",
+      "verifiedAt": "2026-10-31T06:46:46.820Z"
+    }
+  },
+  "nativeArtifactsBuilt": false,
+  "previousNativeVersion": "1.30.90390",
+  "backend": {
+    "project": "rochemediaservices-infra",
+    "region": "us-west1",
+    "service": "natally-billing",
+    "url": "https://natally-billing-bd2e6ftjfq-uw.a.run.app",
+    "revision": "projects/rochemediaservices-infra/locations/us-west1/services/natally-billing/revisions/natally-billing-00005-j5j",
+    "sourceSha256": "43c1149a397c96580417e939257feb142f790ac3dad2d430a902bc2ce472d224",
+    "image": "us-west1-docker.pkg.dev/rochemediaservices-infra/natally-billing/runtime@sha256:e68810664a2a993b35d4c2d6b3f6d0c3058c00e5e7e198dc16a7a0a557ae37fa",
+    "buildOperation": "operations/build/rochemediaservices-infra/N2IyZjE2MDQtZDMyNS00YmQ5LTlhNmMtNTRjOGIxYTlmMTA3",
+    "healthStatus": 200,
+    "deployedAt": "2026-10-31T06:43:15.742Z"
+  },
+  "webPublication": {
+    "state": "published",
+    "published": true,
+    "domains": [
+      "natally.robin.mba",
+      "natally.surge.sh"
+    ],
+    "report": "build/deploy-1.31.90483-3a2306c5-fbd9-42dd-9525-bc4eda398760/run-2026-10-31T06-46-48-368Z-37212/deployment-report.json",
+    "results": [
+      {
+        "host": "natally.robin.mba",
+        "ok": true,
+        "checkedFiles": 95,
+        "preservedDownloads": [
+          {
+            "path": "downloads/release.json",
+            "status": 200,
+            "match": true,
+            "sha256": "b1b973c068256d9effe0d2089e8a9c7bb336f60defef1f60607f44ff8b6a530e"
+          },
+          {
+            "path": "downloads.html",
+            "status": 200,
+            "match": true,
+            "sha256": "ac1a1258b9e6d81d77b4c250a3ef1b14a01edf306199ee216d625033bda33d57"
+          }
+        ]
+      },
+      {
+        "host": "natally.surge.sh",
+        "ok": true,
+        "checkedFiles": 95,
+        "preservedDownloads": [
+          {
+            "path": "downloads/release.json",
+            "status": 200,
+            "match": true,
+            "sha256": "b1b973c068256d9effe0d2089e8a9c7bb336f60defef1f60607f44ff8b6a530e"
+          },
+          {
+            "path": "downloads.html",
+            "status": 200,
+            "match": true,
+            "sha256": "ac1a1258b9e6d81d77b4c250a3ef1b14a01edf306199ee216d625033bda33d57"
+          }
+        ]
+      }
+    ]
+  },
+  "purchaseTransactionPerformed": false
+}

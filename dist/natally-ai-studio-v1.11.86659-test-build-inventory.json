@@ -1,0 +1,98 @@
+{
+  "major": 1,
+  "minor": 11,
+  "build": 86659,
+  "version": "1.11.86659",
+  "semverVersion": "1.11.86659",
+  "versionCode": 100011,
+  "stampedAt": "2026-10-28T14:59:46.603Z",
+  "msiVersion": "1.0.11.21123",
+  "prefix": "natally-ai-studio-v1.11.86659",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "1ce3f103d497d8444b8f5e0cb0d51fc29048a9b0",
+  "invocationId": "063d7c71-9320-4b70-84a3-31bf09f936d6",
+  "phase": "preparing",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "rpm",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer",
+    "pwa"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "nsis": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "msi": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "rpm": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "apk": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "aab": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "web": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "web-installer": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    },
+    "pwa": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit 1"
+    }
+  },
+  "inputError": "Release inputs changed or are not frozen. Start a new full matrix invocation; do not reuse this stamp.",
+  "sourceInputsMatch": false,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "rpm",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer",
+    "pwa"
+  ],
+  "completedAt": "2026-10-28T15:02:56.269Z"
+}

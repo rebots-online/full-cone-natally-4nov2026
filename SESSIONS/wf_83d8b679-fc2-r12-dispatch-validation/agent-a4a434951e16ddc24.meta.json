@@ -1,0 +1,1 @@
+{"agentType":"workflow-subagent","isBuiltIn":true,"description":"verify:R12-C","workflowPhase":"Validate","spawnDepth":1,"requestShape":"foreground","requestNonInteractive":false}

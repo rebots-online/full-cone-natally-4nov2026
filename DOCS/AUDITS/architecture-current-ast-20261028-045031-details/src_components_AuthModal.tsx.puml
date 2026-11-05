@@ -1,0 +1,76 @@
+@startuml
+title src/components/AuthModal.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AuthModal.tsx\nfile L1-433\nfile:src/components/AuthModal.tsx" as N0
+rectangle "react\nimport L1-1\nimport:f6ef56f0e27a5680c62926ccb09607f9" as N1
+rectangle "./NatallyIcon\nimport L2-2\nimport:a1da699e343d0e65352ef4f4d0feae1a" as N2
+rectangle "lucide-react\nimport L3-3\nimport:60f93113bcc83c4771134ce272db069c" as N3
+rectangle "../services/firebase\nimport L4-14\nimport:dd2b9f817263f7ec7f4a0b9214a9766c" as N4
+rectangle "firebase/auth\nimport L15-15\nimport:7524927b6bc277cdaeba3619d0f7e6a2" as N5
+rectangle "./InferenceAccessSettings\nimport L16-16\nimport:b0e78079bd186fe0629638bd184a5ba7" as N6
+rectangle "../services/nativeAuth\nimport L17-17\nimport:2ea71c5d72971f5c9afe1ce7f05861fe" as N7
+rectangle "AuthModalProps\ninterface L19-25\ninterface:a295cc23748112d461b61fda019e9570" as N8
+rectangle "user\nproperty L20-20\nproperty:4dd71bd5e213f701ba5b40a273d993e0" as N9
+rectangle "onClose\nproperty L21-21\nproperty:667c17be0bcd127b294f4014bbdfa9fd" as N10
+rectangle "onReonboard\nproperty L23-23\nproperty:6e488ae1c9becae5e7dd3b60945b3113" as N11
+rectangle "required\nproperty L24-24\nproperty:f1ae9a4a267318ec412d8fc99e159a2b" as N12
+rectangle "AuthModal\nfunction L27-432\nfunction:d7eafca37cb3674ad3b75f07ec3ce592" as N13
+rectangle "clearPhoneVerifier\nfunction L44-48\nfunction:8fca5428e7209321fb9919be629e8233" as N14
+rectangle "resetPhone\nfunction L58-65\nfunction:9344db4954cc3456ae289771a6537038" as N15
+rectangle "handleGoogleSignIn\nfunction L67-85\nfunction:13c3bc76c54351f06e95d026e7ab09f0" as N16
+rectangle "handleNativePhone\nfunction L87-103\nfunction:11fae033001a244943c10ac7407c1e99" as N17
+rectangle "handleEmailAuth\nfunction L105-121\nfunction:ca2efdba23341f9b7d1e697837284874" as N18
+rectangle "handleSendPhoneCode\nfunction L123-144\nfunction:260300c1632c99000009dbfa51efc189" as N19
+rectangle "current\nfunction L128-128\nfunction:fc7849de9d831aaca8ee29e4dc39ecb7" as N20
+rectangle "handleVerifyPhoneCode\nfunction L146-162\nfunction:bfaffacbe9e09f17cc51eff83d8fcbff" as N21
+rectangle "current\nfunction L151-151\nfunction:6bba2000153e17f2d7fba78784151ffa" as N22
+rectangle "handleSignOut\nfunction L164-167\nfunction:6491dc4e100f587f0d6d57ca237441ce" as N23
+N0 --> N1 : contains E702
+N0 --> N2 : contains E703
+N0 --> N3 : contains E704
+N0 --> N4 : contains E705
+N0 --> N5 : contains E706
+N0 --> N6 : contains E707
+N0 --> N7 : contains E708
+N0 --> N8 : contains E709
+N8 --> N9 : contains E710
+N8 --> N10 : contains E711
+N8 --> N11 : contains E712
+N8 --> N12 : contains E713
+N0 --> N13 : contains E714
+N13 --> N14 : contains E715
+N13 --> N15 : contains E716
+N13 --> N16 : contains E717
+N13 --> N17 : contains E718
+N13 --> N18 : contains E719
+N13 --> N19 : contains E720
+N19 --> N20 : contains E721
+N13 --> N21 : contains E722
+N21 --> N22 : contains E723
+N13 --> N23 : contains E724
+N13 --> N14 : calls E4487
+N15 --> N14 : calls E4489
+N16 --> N10 : calls E4491
+N17 --> N10 : calls E4493
+N19 --> N14 : calls E4494
+N19 --> N20 : calls E4495
+N19 --> N20 : calls E4496
+N19 --> N14 : calls E4497
+N19 --> N20 : calls E4498
+N21 --> N22 : calls E4499
+N21 --> N10 : calls E4500
+N21 --> N22 : calls E4501
+N21 --> N22 : calls E4502
+N13 --> N15 : calls E4504
+N13 --> N15 : calls E4505
+N13 --> N15 : calls E4506
+N13 --> N23 : references E4507
+N13 --> N16 : references E4508
+N13 --> N18 : references E4509
+N13 --> N17 : references E4510
+N13 --> N19 : references E4511
+N13 --> N21 : references E4512
+N13 --> N15 : references E4513
+@enduml

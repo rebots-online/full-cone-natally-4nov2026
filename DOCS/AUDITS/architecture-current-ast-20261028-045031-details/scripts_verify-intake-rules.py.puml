@@ -1,0 +1,57 @@
+@startuml
+title scripts/verify-intake-rules.py — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "verify-intake-rules.py\nfile L1-64\nfile:scripts/verify-intake-rules.py" as N0
+rectangle "json\nimport L1-1\nimport:705522b9f12df45ade14f0f1da540cd6" as N1
+rectangle "pathlib\nimport L2-2\nimport:7a6903ae3394c94bbc0fbb183266a2e5" as N2
+rectangle "subprocess\nimport L3-3\nimport:e7bebfbbd8f73ce759cf2f53c838e545" as N3
+rectangle "urllib.request\nimport L4-4\nimport:062e00f820159e01ac916a57c73a2efc" as N4
+rectangle "root\nvariable L6-6\nvariable:5c506d9925f0bc0e7ec62d4261c94ec8" as N5
+rectangle "config\nvariable L7-7\nvariable:1bcf47011df14b8dac0581cec2ce8729" as N6
+rectangle "project\nvariable L8-8\nvariable:28d241d0da04af92edee729999583be0" as N7
+rectangle "database\nvariable L9-9\nvariable:2c43ca5c1ea4a55a1849bb571c147168" as N8
+rectangle "token\nvariable L10-10\nvariable:0388c46a3ba5d8c85b71afe81816d629" as N9
+rectangle "profile\nvariable L11-15\nvariable:294e18c618ce001829ca02f2c290895f" as N10
+rectangle "cases\nvariable L16-16\nvariable:c52b8a7ea7c035528116768473f791be" as N11
+rectangle "labels\nvariable L17-17\nvariable:33c42249e9676488de311a110ffb8047" as N12
+rectangle "case\nfunction L20-28\nfunction:710b73116cec11f3b07a9b073986bbda" as N13
+rectangle "body\nvariable L44-44\nvariable:f86ce9395a81741b512c4fc31b81d337" as N14
+rectangle "request\nvariable L45-49\nvariable:46157c673e7c621b66eff53a937c813e" as N15
+rectangle "result\nvariable L51-51\nvariable:6668342c22373ba5fbabd6fd34800014" as N16
+rectangle "failures\nvariable L52-52\nvariable:5cb00293f2cdbb65cf6b90b7914b8f6d" as N17
+rectangle "results\nvariable L53-53\nvariable:c74fadbf8e1170dc658a532df2694eb5" as N18
+N0 --> N1 : contains E349
+N0 --> N2 : contains E350
+N0 --> N3 : contains E351
+N0 --> N4 : contains E352
+N0 --> N5 : contains E353
+N0 --> N6 : contains E354
+N0 --> N7 : contains E355
+N0 --> N8 : contains E356
+N0 --> N9 : contains E357
+N0 --> N10 : contains E358
+N0 --> N11 : contains E359
+N0 --> N12 : contains E360
+N0 --> N13 : contains E361
+N0 --> N14 : contains E362
+N0 --> N15 : contains E363
+N0 --> N16 : contains E364
+N0 --> N17 : contains E365
+N0 --> N18 : contains E366
+N0 --> N4 : imports E2888
+N0 --> N13 : calls E4053
+N0 --> N13 : calls E4054
+N0 --> N13 : calls E4055
+N0 --> N13 : calls E4056
+N0 --> N13 : calls E4057
+N0 --> N13 : calls E4058
+N0 --> N13 : calls E4059
+N0 --> N13 : calls E4060
+N0 --> N13 : calls E4061
+N0 --> N13 : calls E4062
+N0 --> N13 : calls E4063
+N0 --> N13 : calls E4064
+N0 --> N13 : calls E4065
+@enduml

@@ -1,0 +1,437 @@
+# Natally v1.30 — frozen implementation architecture
+
+Round: 31 October 2026. Baseline: 6c207843a65123a6d0038ef33d7eac9e3faa1b42.
+The first publication is superseded by the operator's subsequent grant-semantics
+corrections before any coder starts. Freeze begins at publication of the corrected
+architecture commit. No architecture edits
+are permitted until coding for this round completes. The operator groups these
+repairs into one round with parallel coders. Earlier conflicting specifications
+are historical: DOCS/ARCHIVE/architecture-before-v1.30.md.
+
+## Complete product boundary
+
+Preserve the existing React/TypeScript application and marketing entry, Firebase
+authentication and named Firestore, Swiss Ephemeris calculations, Three.js chart
+and atelier, authored education, OpenRouter inference, Supertonic ONNX voice,
+account history/SOUL, saved readings, RevenueCat purchase evidence, and Tauri
+Windows/Android/Linux shells. Preserve onboarding, chart mathematics, room
+interactions, layout, configured voice, personal keys, retained reading playback,
+account isolation and legitimate purchase ownership.
+
+architecture-v1.30-baseline-inventory.json enumerates and hashes all 334 inherited
+tracked production source/configuration/asset files. The archived architecture
+retains their entity inventory and existing subsystem behavior. The contracts
+below supersede conflicting billing, speech and release behavior only.
+
+| Subsystem | Implementation boundary |
+| --- | --- |
+| App/auth/onboarding/accounts | App/main, src/auth, onboarding components, Firebase/profile/account/history services |
+| Marketing/room/education | marketing.html, marketing.tsx/styles, atelier components, authored education/nudges |
+| Astrology/presentation | Astrolabe/selection/reading components, ephemeris/gazetteer/transit/target/presentation services, vendored Swiss runtime |
+| Conversation/saved readings | NatallyChatbot, hostedInference/natallyChat/comprehensiveReading/openingReading/inferenceTurn, souvenir/readings/history/audio |
+| Speech/character | voiceService, streamingSpeech, Supertonic worker/TTS/download, soul, authoredNudges, RetainedReadingAudio, sprite/character |
+| Commerce/access | PurchaseAccess, AccountBillingDialog, AccountCreditsEntry, checkoutCatalog/revenueCatCheckout/billingAccess/inferenceAccess, billing/ |
+| Historical adapters | server.ts, server/inference, netlify: preserve unrelated behavior; do not revive Netlify billing deployment |
+| Native/release/assets | src-tauri, public, standardized assets, canonical environment/build/release/deployment scripts |
+
+## R1 — redemption first
+
+The FULL annotated .env.example and effective annotated .env default to:
+BILLING_REDEMPTION_CODE="Ch4n3l.C3351"
+BILLING_REDEMPTION_ALLOWANCE_USD="10.00"
+
+The code includes a lowercase l before the dot. The operator explicitly corrects
+this installation's old misspelling. Preserve unrelated settings/comments/local
+overrides and exact pre-edit checkpoints. The live handler consumes those settings.
+There is NO campaign: no campaign setting, ID, UI or analytics property is required.
+The obsolete million-credit setting must not gate redemption. These defaults
+apply only to this permanent, reusable code. The runtime reads the configured
+allowance; the operator may change it at any time. Business code must not hardcode
+USD10. This specific permanent code grants a real key with the configured spend limit.
+Do not add an account-wide restriction or invent another default-code policy.
+The general redemption-code table and arbitrary actions are future work, outside
+this implementation; this repair must not constrain that future design.
+
+Authenticated POST /billing/redeem {code,requestId} compares exact configured content after
+outer whitespace trim. Parse USD exactly to integer micros: default 10,000,000.
+Idempotency belongs to each grant request, never to an account-wide redemption
+limit. Persist the exact request identity and configured action atomically with
+its actual grant/key operation. Retrying the same request recovers the same
+result; a new valid request can grant again. Do not implement a general redemption-code table in this repair. Future codes
+may be single-use or multiple-use and may perform arbitrary configured actions.
+Do not impose blanket restrictions on setting/restoring/replenishing balances. Invalid code mutates nothing. Return
+the durable receipt and actual managed access. Recover provider work after a grant
+is committed; configuration alone is not completed redemption.
+
+## R2 — presets, custom amounts and purchase evidence
+
+Active presets USD5/USD10/USD25; default USD5. USD1 is deprecated and MUST NOT
+be reintroduced. Allow a typed custom USD amount strictly greater than USD5,
+with cents precision and matching client/server validation. Show actual amount,
+currency, cadence, applicable tax and total before payment. Preserve monthly-first
+selection where real configured monthly products exist and actual one-time choices.
+
+RevenueCat is commercial evidence; Firebase UID is customer identity. Repair the
+real existing RevenueCat Billing catalog/bindings and preserve its SDK flow.
+Custom one-time amounts use supported Stripe Checkout and real fixed Prices for
+exact integer cents, not custom_unit_amount or invented SDK Package objects.
+Use the existing merchant account connected to the same RevenueCat project.
+
+POST /billing/checkout {amountUsd,requestId} creates/reuses actual exact Price/
+product using durable bindings and provider idempotency. Session metadata binds
+UID/Price/request. Collect billing address and create paid invoices. Verify actual
+Canadian tax registration before enabling tax calculation. Return actual Checkout
+URL. Signed webhook and authenticated return verify live paid session ownership,
+expected amount and Price. Import its Checkout Session ID via RevenueCat
+POST /v1/receipts, X-Platform:stripe, actual Stripe-app public key; verify purchase
+evidence before granting. Do not infer success from a redirect or callback.
+
+## R3 — durable allowance, inference costs and HST
+
+Use existing named Firestore, natallyCreditAccounts/natallyCreditGrants; no second
+wallet. Explicit monetary schema contains integer USD grants, immutable source
+receipts, reversals, usage checkpoints, encrypted key state and operation intent.
+No invented token conversion. Approximate tokens are not dollars or turns.
+Display actual USD reading allowance and actual reported token counts if available.
+Errors/missing state are not fabricated zero; obsolete ROCHE does not gate access.
+
+For verified payments, allowance=floor(tax-exclusive eligible USD micros*4000/10000).
+Snapshot actual original currency, paid subtotal/taxes/total, store transaction,
+product/date/policy/evidence. Use real provider USD settlement for non-USD history,
+never guessed FX. Recover the operator's actual unfulfilled Natally purchases
+exactly once. Deduplicate by store payment identity, not product; invoices,
+callbacks, restore and webhooks must not double-grant the same charge.
+
+Refunds append deterministic reversals, retain original receipts and signed debt,
+and lower usable capacity. Actual collected HST is a separate payable by currency,
+never inference budget. RevenueCat estimated analytical tax is not HST evidence.
+Account available=max(0, grants-reversals-provider costs). Monotonic per-key usage
+checkpoints debit only new actual provider cost deltas atomically. Existing key
+absolute limit=its cumulative usage+remaining account allowance. Renewal funds only
+remaining allowance, after disabling/verifying old key and recording usage; retain
+retired hashes to reconcile late costs. Automatic reload/expiry alone does not
+create a grant. An authorized redemption can explicitly override, restore or
+replenish balances according to its configured action. Record adjustments and
+before/after balances durably so a retried request cannot apply twice.
+
+Migrate old balances only from actual grant receipts and provider usage, not
+approximate creditBalance. Unreconstructable money retains its evidence for repair,
+not a silent reset or invented balance.
+
+## R4 — managed keys and recovery
+
+Firestore CAS and durable customer operation/lease serialize mutations. Persist
+intent before external writes and real outcomes afterward; lease expiry does not
+authorize repeating unresolved operations. OpenRouter keys start at zero, retain
+one-hour expiry, and are funded only after durable custody and accounting.
+Use declared BILLING_KEY_ENCRYPTION_KEY with AES-256-GCM, UID/hash/version AAD.
+If genuinely absent generate a real encryption key once and store annotated in
+KStore with exact readback; never put it in repository or plaintext env.
+
+Read back known-hash PATCH operations. Reconcile uncertain creation using stable
+operation name and actual paginated provider keys; unfunded orphans never become
+funded duplicates. Ready requires verified identity, expiry, enabled state and
+available capacity. Logout disables only owned matching generation and clears
+local access; account changes discard stale data. Reconcile grants even while
+an existing key is installed; preserve deliberate personal-key use.
+
+## R5 — deployed runtime and client contract
+
+Portable billing/runtime.mjs and billing/server.mjs run on Google Cloud Run in
+rochemediaservices-infra/us-central1. Existing Google login deploys; managed runtime
+identity accesses unchanged Natally Firebase identity/named database. Firebase
+server auth supports refreshed managed metadata OAuth and valid explicit service
+accounts. Verify Firebase JWT signature/issuer/audience/subject/expiry; never accept
+body UID as authentication.
+
+Endpoints: GET /billing/access, POST /billing/reconcile, POST /billing/redeem,
+POST /billing/checkout, GET /billing/history, GET /billing/invoices/:id,
+GET /billing/invoices/:id/file, POST /billing/logout, authenticated RevenueCat
+/billing/webhook and raw-body signature-verified /billing/stripe-webhook.
+Allow actual approved web/native origins; customer responses are private.
+
+Access envelope: accountUid, short response expiresAt, explicit state, source/
+provider, monetary balance, durable redemption receipt if present. Ready managed
+access also carries actual apiKey/hash/keyGeneration/accessExpiresAt/limitUsd/
+usageUsd. Client guards stale account/generation results. Purchase completion
+installs funded access, gives confirmation and provides history/invoice access.
+
+## R6 — history, official receipts and invoices
+
+Account & billing exposes Purchase history. Show repeated transactions individually
+with actual date, description, amount/currency, status and invoice action.
+Restore reads every provider page and repairs missing grants exactly once.
+Documents remain accessible after allowance is spent.
+
+Actual paid invoices/receipts contain Roche Media Services, HST826393555RT0001,
+88 CORPORATE DR., TORONTO, ON M1H 3G6; unique invoice number/date; purchaser
+details; description; actual currency/subtotal/tax name/rate/amount/total; payment
+date/terms/status. Use verified Stripe/RevenueCat invoice/payment/tax facts, not
+Ontario tax applied worldwide or unknown tax changed to zero. Configure provider
+seller/receipt fields. Provide original PDF and printable official invoice from
+complete actual facts. Record HST payable separately; do not claim a bank transfer.
+
+## R7 — speech and lore
+
+Preserve Supertonic ONNX and current voice. Shared speech ownership covers
+preparation/synthesis/playback/chunk gaps/waiting voice/retained playback. Streamed
+reading retains engagement while waiting for more text. Stale completion/abort
+cannot release or stop a newer owner. Busy idle admission returns false before
+stopping anything or synthesizing: NO idle queue. Explicit user replay/selection
+may supersede, stopping old playback first.
+
+Main/marketing timers check shared busy plus existing draft/input/inference/
+visibility/account guards before story selection, after async resolution and at
+final admission. Intervening activity discards the attempt and restarts quiet
+timing. Retained legacy sprite idle paths obey the same rule.
+
+Only admitted stories append. Deduplicate editable lore by authored ID or exact
+content normalized for whitespace, preserving earliest identity/timestamp and all
+distinct stories/user conversations. Repeated story reuses the entry. Deduplicate
+SOUL by normalized content as well as ID. Preserve immutable souvenir snapshots.
+
+## R8 — configuration, release and demonstrations
+
+Use full annotated environment synchronization, original checkpoints, preserved
+overrides and fresh process-only KStore pointer resolution. Public examples have
+schema/defaults but no KStore references. Project only approved public bindings.
+Deploy actual billing runtime and verify its URL before freezing release inputs.
+
+Canonical coordinator advances existing1.29 automatically to1.30 and builds all12
+targets. Include billing/runtime/deployment sources in its fingerprint. Required:
+Windows standalone/NSIS/MSI; Android APK/AAB/matching symbols; Linux AppImage/DEB/
+RPM; web ZIP/installer/PWA. Android release uses shared production upload key from
+CREDENTIALS/prefetch-android-signing.md, never debug fallback. Verify APK and AAB
+certificate SHA256=56C13674EF22DF95DEB1E5C468820E8CFA3EA2F522511749AB7B6E5BDE3BD943.
+Recover the same frozen invocation without stamping1.31. Deploy matching completed
+artifacts via coordinator to natally.robin.mba and natally.surge.sh; verify bytes.
+
+Publish architecture, then independent four-state checklist/preauthored real
+demonstration rubric, then parallel code. Supervisor semantically compares each
+assignment and returns defects to same coder. Review all session code against this
+document and record truthful README attestation. Continuous real recording covers
+redemption/retry/inference/cost, previous-purchase recovery/invoice, preset/custom
+checkout/confirmation, busy speech/idle suppression/lore reload, and release proof.
+No fake customer/payment/result or substitution of source checks for live proof.
+
+Canonical exact readbacks: production rev2
+61b3ed908e404fae1b7b7e149195744cfe9bf5464b70d266eb1364a9d655ad7f;
+delivery rev1 ec7a2496a40827acc83f57295ac9044dce9871c52869bb7dcd022aebe6e6c962;
+environment rev2 6daa3b2cc4af84e64c11371e24ab8a0850c2fec417f2632655d9a89510a87d00.
+API bases: RevenueCat external Stripe purchases/invoice APIs, Stripe Checkout/Tax/
+paid invoices, OpenRouter Keys, CRA RC4022 invoice requirements.
+
+## Architecture attestation
+
+I checked this specification against current operator instructions, inspected
+implementation, production inventory and provider documentation. It defines the
+complete intended product boundary and requested changes for this round. Coding
+must realize only these contracts while preserving inherited behavior. This
+certifies the reviewed target specification; it does not falsely certify that
+unfinished existing code already realizes it. Certification of complete/correct
+1:1 delivered code belongs in README after semantic review and real execution
+evidence. No live completion is asserted by this architecture.
+
+## R9 — Compact balance and direct purchase correction, 31 October 2026
+
+The preceding code round is complete. This operator-requested correction is a
+separate automatically numbered release; published v1.30 artifacts remain frozen.
+This section is frozen before its coding begins.
+
+1. The customer balance uses the exact suffix `Cr`, never a dollar currency symbol
+   or a spelled-out credits caption in the top line. The operator's example is
+   `400 Cr` for the internal USD4 allowance. An annotated public display setting
+   `VITE_CREDIT_DISPLAY_PER_USD=100` provides that denomination. This is display
+   denomination only: account money, actual inference costs, payment totals, HST,
+   the40% allocation and configured redemption spend limit remain unchanged.
+2. All balance surfaces share the formatter, with at most two fractional Cr
+   digits. Invalid display configuration must not invent a balance. Purchase
+   prices and official invoices retain their actual currency facts.
+3. The top line has consistent control typography, baseline/vertical alignment,
+   spacing and button heights. Use one control font size and family across the
+   row; emphasis comes from weight, not an assortment of sizes. The balance is a
+   compact one-line `400 Cr` control. Remove its redundant caption. Preserve every
+   existing account, navigation, menu, sound and purchase action. Groups must wrap
+   deliberately on narrow screens without horizontal overflow or overlap.
+4. Each USD5/10/25 preset is an immediate explicit purchase action. One tap calls
+   the existing authenticated checkout endpoint for that exact amount and opens
+   the returned hosted checkout. Do not merely select a preset and require a
+   second button. Custom amount entry remains strictly greater than USD5 with up
+   to two decimal places and a clearly labelled submit action. Preserve stable
+   retry identities, busy/owner guards, expired/completed recovery and real server
+   confirmation; never start another charge from an ambiguous response.
+5. Use CodeGraph for implementation questions and source context. Supervision
+   compares the produced code only to these assignments. Publish the review
+   attestation before invoking the automatic version/build coordinator. Inspect
+   the actual deployed top line at desktop and narrow widths in vivo before
+   closing this correction. No unrelated signage or backend redesign is included.
+
+R9 attestation: these five points capture the complete requested correction:
+compact Cr denomination, balanced top-line typography/layout and direct preset
+checkout. Its code may implement only these requirements while preserving the
+existing production behavior described above.
+
+## R10 — Correct the existing purchase assignment and customer language
+
+R9 coding is complete. Before further coding, the operator corrected the payment
+interpretation: RevenueCat remains the established customer/purchase authority;
+Natally handles its own HST accounting. A Stripe Tax registration or automatic-tax
+service is NOT a prerequisite. Earlier requirements introducing that prerequisite
+are superseded here because they misinterpreted the operator's assignment.
+
+1. Reuse the existing authenticated RevenueCat package/SDK checkout for configured
+   USD5/10/25 purchases. One explicit preset tap starts the actual corresponding
+   purchase. Ownership, cancellation, pending payment and transaction identities
+   remain authoritative. Never substitute the deprecated USD1 product.
+2. Custom values above USD5 must use a real product at the exact requested price.
+   The SDK has no amount override. Use the officially supported RevenueCat store
+   plan/apply catalog interface to create/read back an immutable per-amount product
+   and real package, with durable project-level serialization and idempotency.
+   Existing RevenueCat administrative authorization is resolved from canonical
+   credential references. No invented package price or metadata-based fake charge.
+3. Verify purchases against RevenueCat's server records and authenticated purchase
+   events. Use actual paid amount/currency and transaction identity, not a listed
+   price assumed to equal a discounted payment. Fulfill each transaction once,
+   account for provider consumption, and keep the configured40% allocation.
+4. Apply Natally's annotated manual GST/HST policy to actual transaction and buyer
+   facts, reserve collected tax separately, and issue the required official
+   receipt/invoice with the supplied registration and business address. Do not
+   invoke Stripe Tax, fabricate tax facts, or describe analytical estimates as
+   actual collected tax. Retain original payment evidence with the calculation.
+5. Customer screens show Balance, Cr, purchases, receipts and meaningful actions.
+   Remove reading access, installed keys, managed credentials, provider names,
+   provisioning and internal account-control explanations from visible wording.
+   Show a concise Balance heading above the actual Cr amount. Remove the long
+   paragraphs in the reported account panel. Preserve automatic fulfillment and
+   restore behavior; do not ask customers to manage technical connections.
+6. A checkout-start failure says the purchase could not start; it must not claim
+   a purchase already happened or tell the customer that another purchase is not
+   needed. Reserve paid/pending-payment wording for actual authoritative facts.
+7. Complete the source comparison and publish its attestation before the next
+   automatic web build. Deploy for the operator's real purchase attempt and report
+   readiness accurately. Native builds remain held until web purchasing works.
+
+R10 attestation: this is the corrected recipe boundary for the already assigned
+purchase flow and the newly reiterated customer wording. It adds no alternative
+payment authority or external tax service and does not authorize fake payment,
+balance, invoice or fulfillment evidence.
+
+## Operator clarification: balance authority and tax presentation
+
+Recorded before the corresponding correction is coded. RevenueCat is the sole
+customer Cr balance and transaction authority, using the existing literal ROCHE
+currency. The browser reads that balance. The denomination remains 100 Cr per USD
+of inference allowance, with matching server configuration. Currency adjustments
+use RevenueCat's idempotent integer transaction interface.
+
+Operational leases, receipt/tax facts, encrypted provider-key custody and actual
+usage checkpoints may remain in Natally's backend, without a competing customer
+balance. Usage debits RevenueCat once with stable identities; fractional units
+carry forward without repeated rounding. Provider allowance derives from the
+authoritative balance minus unposted usage. The environment-defined permanent
+redemption sets available allowance to the configured USD target idempotently,
+without a one-per-account rule. Existing local snapshots remain provenance, not
+automatic new grants or repeated charges for historical usage.
+
+The selected purchase amount is before applicable tax. Natally adds manually
+calculated GST/HST from actual buyer jurisdiction, shows base/tax/total and uses a
+real product at that exact total. The 40% allocation uses the verified amount
+before tax. Ontario USD10 base means USD1.30 HST, USD11.30 total and USD4/400 Cr
+allowance. Catalog identity distinguishes base and tax policy where equal totals
+could yield different grants. No local SDK price override.
+
+The operator approved the existing hosted callback while requiring concurrent
+domain/hosting due diligence. Cloud Run is a hosting choice, not a RevenueCat
+requirement. Customer balance authority remains RevenueCat regardless of host.
+This clarification adds no analytics, brAInstormer or signage coding to this round.
+
+Clarification attestation: this completely specifies the operator's balance and
+tax correction for its coder assignment, without claiming unfinished delivery.
+
+## R11 — Restore customer value and unobscured inset explanations
+
+31 October 2026. The operator explicitly requested this work while performing
+the deployed purchase attempt, and requires architecture first, then assigned
+subagent coding. This amendment is frozen before that coding starts. The two
+independent assignments below restore customer explanations removed or suppressed
+by earlier changes; existing purchase and chart interactions are preserved.
+
+### INSET-CALLOUTS
+
+1. A customer can mouse over a planet, sign, house or aspect in the inset natal
+   chart and receive the existing real chart object's name and explanation.
+   Becoming an inset must not disable that hover explanation. Clicking/tapping
+   to bring the inset into focus, chart rotation, zoom and selection retain their
+   existing behavior.
+2. The full visible inset pane, including its border, is an exclusion rectangle.
+   The entire callout card must be outside it with visible separation. Moving a
+   tooltip a few pixels away from the mouse while it still covers the chart does
+   not satisfy this requirement. Existing endpoint label cards must also remain
+   off the inset chart; their foreground-chart behavior is preserved.
+3. The shared Astrolabe3D renderer owns the hover callout. ReadingStage and the
+   marketing chart pane identify the actual exclusion boundary, so the same rule
+   covers the app, the landing inset and the existing souvenir ReadingStage.
+   Rendering is in a viewport overlay outside transformed/clipped pane ancestors;
+   text keeps its readable screen-pixel size. Each renderer owns its own overlay
+   and cleanup rather than sharing another chart's mutable tooltip.
+4. Placement measures the current pane and actual callout in viewport coordinates.
+   It chooses a fitting side, then above/below where appropriate; wraps within
+   the available viewport band and maintains an8px viewport margin and at least
+   12px clearance from the pane (covering the existing outer border). Dragging,
+   scrolling, resize, zoom and inset/foreground transitions refresh placement or
+   dismiss stale content. There is no fallback over the chart: if no readable
+   outside rectangle exists, dismiss until one is available. Never show stale
+   content from an earlier chart, hidden page, obscured canvas or unmounted owner.
+5. Hovering highlights the existing actual target without changing selection or
+   starting narration. Leaving the target, dragging or opening an obscuring
+   dialog dismisses its callout. Keep the existing warm, restrained callout style
+   and reduced-motion behavior. No new inference call, data or invented chart.
+
+### ACCOUNT-VALUE
+
+1. Account & billing first explains the customer benefit, ahead of balance and
+   purchase controls. It serves someone deciding whether Natally is useful;
+   payment mechanics follow that explanation. Keep normal account identity and
+   the existing close control. Use the same value explanation in the separate
+   balance/purchase settings entry, without repeating it within one surface.
+2. Exact customer copy:
+
+   **Explore what your chart means for you**
+
+   "Get a personal reading from Natally, then ask follow-up questions about the
+   placements, patterns and relationships that matter to you."
+
+   "Cr pays for your personal readings and conversations. Your balance is used
+   as Natally creates a reading or reply; longer replies can use more Cr."
+
+   "Choose an amount when you’re ready, then return to your reading."
+
+   These sentences explain purpose, purchased value and how that value is used.
+   Keep them readable, concise and visually subordinate to the benefit heading,
+   with the existing purchase actions following in the same dialog.
+3. Balance remains a compact amount suffixed Cr. The customer is not asked to
+   understand provider names, keys, provisioning, inference spend allocation or
+   access-control internals. Do not add a fixed question count, fabricated
+   savings, guarantees, unimplemented benefits or a claim that a souvenir is
+   included. Purchase prices, tax, invoices and one-tap actions retain their real
+   existing behavior. Payment requests must not stand alone without this value
+   explanation.
+4. One shared customer-value component supplies both entry points so later copy
+   changes cannot silently remove the explanation from one. This is a content
+   and hierarchy correction; it changes no purchase, redemption, tax, balance or
+   provider behavior while the operator performs the purchase attempt.
+
+### Delivery and attestation
+
+Publish this architecture and its independent CHECKLIST recipes and demonstration
+rubric before assigning the two coders. Each coder changes only its named scope.
+The supervisor compares its result semantically against these requirements,
+returns deviations to that same coder, and publishes the source attestation
+before the canonical automatic web build. The operator's current purchase attempt
+continues independently. Native builds retain the existing hold.
+
+R11 architecture attestation: I checked this amendment against the operator's
+current requests and the existing renderer, inset boundaries and account entry
+points. It completely specifies these two corrections and their preserved
+behavior; its assigned code must realize these requirements one to one. This
+certifies the specification, not unfinished implementation or live observation.

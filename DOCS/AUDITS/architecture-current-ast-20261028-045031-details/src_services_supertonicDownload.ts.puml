@@ -1,0 +1,29 @@
+@startuml
+title src/services/supertonicDownload.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "SUPERTONIC_MODEL_FILES\nconstant L1-11\nconstant:ea9fb5eb2804288ce4b0d47726d1786a" as N0
+rectangle "supertonicDownload.ts\nfile L1-33\nfile:src/services/supertonicDownload.ts" as N1
+rectangle "SupertonicDownloadProgress\nclass L13-32\nclass:48b78ffd6842938df36acee280bcbcd4" as N2
+rectangle "loaded\nproperty L14-14\nproperty:30477b19521a8a9c3c63197f9b36f93a" as N3
+rectangle "sources\nproperty L15-15\nproperty:8e071b8091b4d6ca5c559475a8a7b4ae" as N4
+rectangle "attemptBytes\nproperty L16-16\nproperty:0d7ba7c2a0de79fbcd0bc5e93bdc0506" as N5
+rectangle "totalBytes\nmethod L17-17\nmethod:56ee341937530a0bc7fa40a0a156df6c" as N6
+rectangle "update\nmethod L19-29\nmethod:e36cbc6106fb2d4756d18ea96570de22" as N7
+rectangle "lastReadBytes\nmethod L30-30\nmethod:bcc6233bf45ab8cb9c2e6aae05fe6750" as N8
+rectangle "files\nmethod L31-31\nmethod:48f4d548ae7bfb872091de842fdda0ac" as N9
+N1 --> N0 : contains E2323
+N1 --> N2 : contains E2324
+N2 --> N3 : contains E2325
+N2 --> N4 : contains E2326
+N2 --> N5 : contains E2327
+N2 --> N6 : contains E2328
+N2 --> N7 : contains E2329
+N2 --> N8 : contains E2330
+N2 --> N9 : contains E2331
+N6 --> N0 : references E2332
+N7 --> N0 : references E2333
+N9 --> N0 : references E2334
+N7 --> N6 : references E6311
+@enduml

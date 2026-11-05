@@ -1,0 +1,19 @@
+@startuml
+title src/components/VoiceMeasurementPanel.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "VoiceMeasurementPanel.tsx\nfile L1-45\nfile:src/components/VoiceMeasurementPanel.tsx" as N0
+rectangle "react\nimport L1-1\nimport:5b9e2568e3108b34da31c2074a11472f" as N1
+rectangle "../services/voiceMeasurements\nimport L2-2\nimport:60087569c66493465be162b92c8ff130" as N2
+rectangle "labels\nconstant L4-4\nconstant:0dd44d532a4cdcb0468fd0b41981d7c5" as N3
+rectangle "VoiceMeasurementPanel\nfunction L5-44\nfunction:ef55cddaf743a53b588e0b061e7ae72e" as N4
+rectangle "exportReport\nfunction L14-18\nfunction:be6bc54d800413480d679f7b770dcc9b" as N5
+N0 --> N1 : contains E1277
+N0 --> N2 : contains E1278
+N0 --> N3 : contains E1279
+N0 --> N4 : contains E1280
+N4 --> N5 : contains E1281
+N4 --> N5 : calls E5343
+N4 --> N5 : references E5346
+@enduml

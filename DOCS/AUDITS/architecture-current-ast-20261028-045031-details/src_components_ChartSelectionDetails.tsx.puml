@@ -1,0 +1,15 @@
+@startuml
+title src/components/ChartSelectionDetails.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ChartSelectionDetails.tsx\nfile L1-22\nfile:src/components/ChartSelectionDetails.tsx" as N0
+rectangle "react\nimport L1-1\nimport:e15c582014122e066f8bb003aa320dc9" as N1
+rectangle "../services/ephemeris\nimport L2-2\nimport:1a16df5e38a17e473f2567f66efd4a4c" as N2
+rectangle "../services/chartTargets\nimport L3-3\nimport:a0f5543dda61ad702429d06ec4e9630c" as N3
+rectangle "ChartSelectionDetails\nfunction L4-21\nfunction:05fea3c1fdef54562c7def33dad0661b" as N4
+N0 --> N1 : contains E731
+N0 --> N2 : contains E732
+N0 --> N3 : contains E733
+N0 --> N4 : contains E734
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+title src/main.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "main.tsx\nfile L1-41\nfile:src/main.tsx" as N0
+rectangle "isNative\nconstant L3-3\nconstant:a0df2d95e24a0bd7927e35fe0c3bfb48" as N1
+rectangle "params\nconstant L4-4\nconstant:fb9b0a59c4404bc0d9548fb6f9568fdd" as N2
+rectangle "hasAppEntry\nconstant L5-5\nconstant:e63b8b50c6bbdf9b9d54a013f78b6f2a" as N3
+rectangle "offer\nconstant L6-6\nconstant:a4f9275e5c2296367388b3ef9574914e" as N4
+rectangle "hasValidOffer\nconstant L7-7\nconstant:dffe9841feb9c8f59edde02d53568be5" as N5
+N0 --> N1 : contains E1287
+N0 --> N2 : contains E1288
+N0 --> N3 : contains E1289
+N0 --> N4 : contains E1290
+N0 --> N5 : contains E1291
+@enduml

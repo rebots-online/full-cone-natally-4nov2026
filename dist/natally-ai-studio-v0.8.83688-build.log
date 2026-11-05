@@ -1,0 +1,91 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261026092855
+Username: DESKTOP-CN0GDTR\Admin
+RunAs User: DESKTOP-CN0GDTR\Admin
+Configuration Name: 
+Machine: DESKTOP-CN0GDTR (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-all-platforms.ps1
+Process ID: 44708
+PSVersion: 5.1.26100.7019
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7019
+BuildVersion: 10.0.26100.7019
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally windows build output: E:\BuildCache\natally-ai-studio\targets\windows
+
+
+
+
+
+
+Building Web --- v0.8.83688
+
+
+
+
+
+
+
+Building Windows --- v0.8.83688
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally windows build output: E:\BuildCache\natally-ai-studio\targets\windows
+
+
+
+
+
+Building Android --- v0.8.83688
+Pearl native Windows toolchain selected; shared tools and caches use E:\DevTools.
+Natally android build output: E:\BuildCache\natally-ai-studio\targets\android
+
+
+
+
+
+
+
+
+
+
+Building Linux --- v0.8.83688
+
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20261026094717
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20261026095615
+Username: DESKTOP-CN0GDTR\Admin
+RunAs User: DESKTOP-CN0GDTR\Admin
+Configuration Name: 
+Machine: DESKTOP-CN0GDTR (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-all-platforms.ps1 -Continue
+Process ID: 12880
+PSVersion: 5.1.26100.7019
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7019
+BuildVersion: 10.0.26100.7019
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+Already verified: Web
+Already verified: Windows
+Already verified: Android
+Already verified: Linux
+
+**********************
+Windows PowerShell transcript end
+End time: 20261026095617
+**********************

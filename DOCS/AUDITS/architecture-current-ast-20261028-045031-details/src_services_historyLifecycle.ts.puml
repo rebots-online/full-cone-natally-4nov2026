@@ -1,0 +1,41 @@
+@startuml
+title src/services/historyLifecycle.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "HISTORY_ERASURE_EVENT\nconstant L1-1\nconstant:8b2a352fcd51cecd7663f291b3a96fb3" as N0
+rectangle "historyLifecycle.ts\nfile L1-41\nfile:src/services/historyLifecycle.ts" as N1
+rectangle "PREFIX\nconstant L2-2\nconstant:ec58390605168ae72b932dc7302cc9d9" as N2
+rectangle "phase\nproperty L3-3\nproperty:7d29fef3fb5ca46bfb74714bdf0990dd" as N3
+rectangle "accountUid\nproperty L3-3\nproperty:b50b0469cbaad270eee99ce1bad13e86" as N4
+rectangle "operation\nproperty L3-3\nproperty:e3f6a957a340ae4857163f39220f94ec" as N5
+rectangle "HistoryErasureNotice\ntype_alias L3-3\ntype_alias:7d905dd3859e9c5b07adfd6bdb21c5f6" as N6
+rectangle "pending\nconstant L4-4\nconstant:5c9ac3b89799198e1c52609dbb7a4d11" as N7
+rectangle "settled\nconstant L5-5\nconstant:381a8d323e63e928e90f23f2d5e8f0a3" as N8
+rectangle "publish\nfunction L7-11\nfunction:f43d1d5d73b5afd91bed595d6ade5aa0" as N9
+rectangle "isNatallyHistoryErasing\nfunction L13-21\nfunction:19a9e6f31fafdaace2e4ffdbef992d56" as N10
+rectangle "announceHistoryErasure\nfunction L23-27\nfunction:a135a28c9b69e316bdb9a6957c6d9661" as N11
+rectangle "finishHistoryErasure\nfunction L29-32\nfunction:e1696321e68babebd5a8ba5d3f54f813" as N12
+N1 --> N0 : contains E1708
+N1 --> N2 : contains E1709
+N1 --> N6 : contains E1710
+N6 --> N4 : contains E1711
+N6 --> N3 : contains E1712
+N6 --> N5 : contains E1713
+N1 --> N7 : contains E1714
+N1 --> N8 : contains E1715
+N1 --> N9 : contains E1716
+N1 --> N10 : contains E1717
+N1 --> N11 : contains E1718
+N1 --> N12 : contains E1719
+N9 --> N0 : references E1720
+N10 --> N2 : references E1721
+N11 --> N2 : references E1722
+N12 --> N2 : references E1723
+N9 --> N6 : references E5711
+N11 --> N6 : references E5712
+N11 --> N9 : calls E5713
+N12 --> N6 : references E5714
+N12 --> N9 : calls E5715
+N1 --> N9 : calls E5716
+@enduml

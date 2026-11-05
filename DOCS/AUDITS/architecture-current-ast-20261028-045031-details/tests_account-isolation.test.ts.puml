@@ -1,0 +1,19 @@
+@startuml
+title tests/account-isolation.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "account-isolation.test.ts\nfile L1-81\nfile:tests/account-isolation.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:4948c6e395ffccc392b3ab5ac0d1e0b9" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:cbb147f77a8b678a0663cc092bacf870" as N2
+rectangle "../src/services/accountStorage\nimport L3-3\nimport:a19d988b4f686cd2c4049863ea61bdc9" as N3
+rectangle "../src/services/locations\nimport L4-4\nimport:ece2d5d1721480753ffe4218527214e8" as N4
+rectangle "../src/services/hostedInference\nimport L5-5\nimport:c2101daaf45cc04bf8e0d2eeee1318e5" as N5
+rectangle "storage\nconstant L7-7\nconstant:5c25091a928d638fd2a75ee8a01b7444" as N6
+N0 --> N1 : contains E2613
+N0 --> N2 : contains E2614
+N0 --> N3 : contains E2615
+N0 --> N4 : contains E2616
+N0 --> N5 : contains E2617
+N0 --> N6 : contains E2618
+@enduml

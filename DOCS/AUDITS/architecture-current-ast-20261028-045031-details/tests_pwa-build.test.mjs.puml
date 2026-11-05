@@ -1,0 +1,21 @@
+@startuml
+title tests/pwa-build.test.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "pwa-build.test.mjs\nfile L1-63\nfile:tests/pwa-build.test.mjs" as N0
+rectangle "node:test\nimport L1-1\nimport:f3c7af7efb3249b8f71eb89372a47a87" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:ec398de4002839de3b6096c5f12d2a50" as N2
+rectangle "node:fs\nimport L3-3\nimport:ecd2afcc49c8fcd776552d5ff36af41e" as N3
+rectangle "node:os\nimport L4-4\nimport:9930888a6f446c0a02f1b95f65e93640" as N4
+rectangle "node:path\nimport L5-5\nimport:2d88d0d46e1ff81e5fd64ef6b4cc1652" as N5
+rectangle "node:vm\nimport L6-6\nimport:eb41aef1cbb28e3e9978df7dd45fb6fb" as N6
+rectangle "../scripts/pwa-build.mjs\nimport L7-7\nimport:3fda8c41876932072bcd70e7401dee0f" as N7
+N0 --> N1 : contains E2729
+N0 --> N2 : contains E2730
+N0 --> N3 : contains E2731
+N0 --> N4 : contains E2732
+N0 --> N5 : contains E2733
+N0 --> N6 : contains E2734
+N0 --> N7 : contains E2735
+@enduml

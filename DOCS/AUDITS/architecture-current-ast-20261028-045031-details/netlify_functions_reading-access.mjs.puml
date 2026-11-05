@@ -1,0 +1,30 @@
+@startuml
+title netlify/functions/reading-access.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "reading-access.mjs\nfile L1-56\nfile:netlify/functions/reading-access.mjs" as N0
+rectangle "../../firebase-applet-config.json\nimport L1-1\nimport:bf97883714459db73496718bda3c2f61" as N1
+rectangle "readingAccess\nfunction L4-53\nfunction:6a6fc5b49abd5095600367d97ae13204" as N2
+rectangle "env\nfunction L5-5\nfunction:fd1be2b0a8966be65970e5c13dd00b83" as N3
+rectangle "reply\nfunction L17-17\nfunction:c694d72a1ebddffeb80651bcce2982d1" as N4
+rectangle "config\nconstant L55-55\nconstant:14c74994a219aee8f2b7eafabcbaebd8" as N5
+N0 --> N1 : contains E52
+N0 --> N2 : contains E53
+N2 --> N3 : contains E54
+N2 --> N4 : contains E55
+N0 --> N5 : contains E56
+N0 --> N1 : imports E2870
+N2 --> N3 : calls E3825
+N2 --> N4 : calls E3826
+N2 --> N4 : calls E3827
+N2 --> N4 : calls E3828
+N2 --> N4 : calls E3829
+N2 --> N4 : calls E3830
+N2 --> N3 : calls E3831
+N2 --> N3 : calls E3832
+N2 --> N3 : calls E3833
+N2 --> N4 : calls E3834
+N2 --> N4 : calls E3835
+N2 --> N4 : calls E3836
+@enduml

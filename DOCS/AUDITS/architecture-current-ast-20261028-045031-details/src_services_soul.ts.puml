@@ -1,0 +1,111 @@
+@startuml
+title src/services/soul.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "soul.ts\nfile L1-135\nfile:src/services/soul.ts" as N0
+rectangle "./openingReading\nimport L1-1\nimport:0580f9e51f5852d7d03f186f0ad43656" as N1
+rectangle "./accountStorage\nimport L2-2\nimport:283393d893867a856c476f2cb29e85e4" as N2
+rectangle "./atelierMemories\nimport L3-3\nimport:39739d420c3ca8b74b934e95d21bdbb8" as N3
+rectangle "./historyLifecycle\nimport L4-4\nimport:502163d12838f6027dea76540d49cc3a" as N4
+rectangle "CHARACTER_KEY\nconstant L6-6\nconstant:2d074c069c728dd44d5fe5eaa3d59707" as N5
+rectangle "USER_KEY\nconstant L7-7\nconstant:db30d95fd2722fa5dc3ec5fd670c2911" as N6
+rectangle "MAX_ENTRIES\nconstant L8-8\nconstant:b8bc73c1c65ab29fb0ec5a0de98fb7b7" as N7
+rectangle "MAX_TEXT\nconstant L9-9\nconstant:601716592c7dcc2e989c9021840ae916" as N8
+rectangle "SoulEntry\ninterface L11-11\ninterface:0b4409388193e726f75c9854297283a3" as N9
+rectangle "at\nproperty L11-11\nproperty:05c6a8b31e846a7668987e99e2272178" as N10
+rectangle "text\nproperty L11-11\nproperty:84d0e53957566c8f842ff40d0503d0c4" as N11
+rectangle "id\nproperty L11-11\nproperty:c5bc6bb1c179d9dd9ab6c87e90b8794b" as N12
+rectangle "CharacterLore\ninterface L12-12\ninterface:c9f9684e2b7c64842e18831f9f047efd" as N13
+rectangle "version\nproperty L12-12\nproperty:3f9848a8f2d793a1fb8421bf3db1f4b1" as N14
+rectangle "entries\nproperty L12-12\nproperty:64cab28ce697b0aee1c8772881194ca1" as N15
+rectangle "seed\nproperty L12-12\nproperty:8be4b070f74d06c00af058c55e766ead" as N16
+rectangle "owner\nproperty L12-12\nproperty:c61886e747ac5ceb07d06af66d1955ef" as N17
+rectangle "UserLore\ninterface L13-13\ninterface:0d4d9317042cf69508fbee373558fa85" as N18
+rectangle "version\nproperty L13-13\nproperty:0ccd05a70745cfce23c94e1769a39335" as N19
+rectangle "owner\nproperty L13-13\nproperty:0f46d745de92610fbdae4032807c4bdf" as N20
+rectangle "entries\nproperty L13-13\nproperty:280d49e4a4dfd39e5db9f999e45143c5" as N21
+rectangle "SoulState\ninterface L14-19\ninterface:0e3fa2f8c968aaa3af0699573c13ea1a" as N22
+rectangle "uid\nproperty L15-15\nproperty:cfc1f6d1aa71ba384d75e888e4ef4410" as N23
+rectangle "character\nproperty L16-16\nproperty:2b3779ca21e4832e524930ff591ea1c7" as N24
+rectangle "user\nproperty L17-17\nproperty:382d9258caf2095b9942f63360ba673e" as N25
+rectangle "notice\nproperty L18-18\nproperty:d5f48f412d54400e204514caade943cd" as N26
+rectangle "seeds\nconstant L21-26\nconstant:e596a92d486419abaeaa7c253cb5f7dc" as N27
+rectangle "seedFor\nfunction L30-34\nfunction:8278da6c6e6ca3d0bfe3c32f4a4e718e" as N28
+rectangle "validEntries\nfunction L36-41\nfunction:3e51d6e80981c540a50a52b5d7c12a71" as N29
+rectangle "readStore\nfunction L43-52\nfunction:8f4d6a2630edb1791b6fa641a4f49c93" as N30
+rectangle "loadSoulState\nfunction L55-84\nfunction:35861c5dd9f4714b7bfa7d261742644c" as N31
+rectangle "remember\nfunction L86-102\nfunction:b30c510bc75187a316ed038bbf78a0e9" as N32
+rectangle "rememberUserDisclosure\nfunction L105-107\nfunction:4937398b5ba9791a650821844fc868ea" as N33
+rectangle "rememberCharacterDevelopment\nfunction L110-112\nfunction:8f094fc782f8997c13c22f9a3ea9c1ee" as N34
+rectangle "extractSoulDevelopments\nfunction L115-123\nfunction:dfb257164a0e0a3db4672980f2ae9891" as N35
+rectangle "buildSoulPrompt\nfunction L125-134\nfunction:9738f9011f146482ee5daf80d7c66ad8" as N36
+N0 --> N1 : contains E2131
+N0 --> N2 : contains E2132
+N0 --> N3 : contains E2133
+N0 --> N4 : contains E2134
+N0 --> N5 : contains E2135
+N0 --> N6 : contains E2136
+N0 --> N7 : contains E2137
+N0 --> N8 : contains E2138
+N0 --> N9 : contains E2139
+N9 --> N12 : contains E2140
+N9 --> N11 : contains E2141
+N9 --> N10 : contains E2142
+N0 --> N13 : contains E2143
+N13 --> N14 : contains E2144
+N13 --> N17 : contains E2145
+N13 --> N16 : contains E2146
+N13 --> N15 : contains E2147
+N0 --> N18 : contains E2148
+N18 --> N19 : contains E2149
+N18 --> N20 : contains E2150
+N18 --> N21 : contains E2151
+N0 --> N22 : contains E2152
+N22 --> N23 : contains E2153
+N22 --> N24 : contains E2154
+N22 --> N25 : contains E2155
+N22 --> N26 : contains E2156
+N0 --> N27 : contains E2157
+N0 --> N28 : contains E2158
+N0 --> N29 : contains E2159
+N0 --> N30 : contains E2160
+N0 --> N31 : contains E2161
+N0 --> N32 : contains E2162
+N0 --> N33 : contains E2163
+N0 --> N34 : contains E2164
+N0 --> N35 : contains E2165
+N0 --> N36 : contains E2166
+N29 --> N8 : references E2167
+N29 --> N7 : references E2168
+N31 --> N6 : references E2169
+N31 --> N5 : references E2170
+N32 --> N6 : references E2171
+N32 --> N5 : references E2172
+N32 --> N7 : references E2173
+N32 --> N8 : references E2174
+N15 --> N9 : references E6069
+N21 --> N9 : references E6070
+N24 --> N13 : references E6071
+N25 --> N18 : references E6072
+N29 --> N9 : references E6073
+N30 --> N29 : calls E6075
+N31 --> N22 : references E6076
+N31 --> N22 : references E6079
+N31 --> N30 : calls E6080
+N31 --> N30 : calls E6081
+N31 --> N28 : calls E6084
+N32 --> N22 : references E6087
+N32 --> N9 : references E6088
+N32 --> N22 : references E6089
+N32 --> N31 : calls E6092
+N33 --> N22 : references E6094
+N33 --> N9 : references E6095
+N33 --> N22 : references E6096
+N33 --> N32 : calls E6098
+N34 --> N22 : references E6099
+N34 --> N9 : references E6100
+N34 --> N22 : references E6101
+N34 --> N32 : calls E6103
+N36 --> N22 : references E6104
+@enduml

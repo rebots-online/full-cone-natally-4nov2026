@@ -1,0 +1,810 @@
+@startuml
+title Natally as-built CodeGraph snapshot — descriptive candidate only
+caption Commit f3470d4ffec6438582e643f6f2e7e542513676d1 | 2026-10-28 04:50:31 UTC
+skinparam linetype ortho
+skinparam shadowing false
+note "CodeGraph 1.6.2: 156 files, 2715 nodes, 6853 edges.\nNot approved architecture; not a full compiler AST or runtime proof.\nEvery depicted relationship derives from indexed source/target nodes.\nSee details/index.json and graph.json for exact IDs and metadata." as Scope
+component "billing/openrouter.mjs" as F0
+component "netlify/functions/blink-checkout.mjs" as F1
+component "netlify/functions/reading-access.mjs" as F2
+component "netlify/lib/astrology-tools.mjs" as F3
+component "netlify/lib/blink-lightning.mjs" as F4
+component "netlify/lib/blink-revenuecat.mjs" as F5
+component "netlify/lib/blink-store.mjs" as F6
+component "public/pwa.js" as F7
+component "scripts/benchmark-supertonic.mjs" as F8
+component "scripts/build-opening-recovery-fixture.mjs" as F9
+component "scripts/build-web.mjs" as F10
+component "scripts/configure-android.mjs" as F11
+component "scripts/onnx-progress-plugin.ts" as F12
+component "scripts/package-android-symbols.py" as F13
+component "scripts/prepare-icons.mjs" as F14
+component "scripts/prepare-waiting-voice.mjs" as F15
+component "scripts/pwa-build.mjs" as F16
+component "scripts/release-state.mjs" as F17
+component "scripts/run-command.py" as F18
+component "scripts/stage-marketing-overlay.mjs" as F19
+component "scripts/summarize-voice-measurements.ts" as F20
+component "scripts/verify-android-symbols.py" as F21
+component "scripts/verify-calculation-api.mjs" as F22
+component "scripts/verify-intake-rules.py" as F23
+component "scripts/verify-live.mjs" as F24
+component "scripts/verify-natally-brand.mjs" as F25
+component "scripts/voice-instrumentation-landmarks.ts" as F26
+component "server.ts" as F27
+component "src-tauri/src/lib.rs" as F28
+component "src-tauri/src/main.rs" as F29
+component "src-tauri/src/native_auth.rs" as F30
+component "src/App.tsx" as F31
+component "src/auth/nativeBridge.ts" as F32
+component "src/components/AboutDialog.tsx" as F33
+component "src/components/Astrolabe3D.tsx" as F34
+component "src/components/AuthModal.tsx" as F35
+component "src/components/BuildStamp.tsx" as F36
+component "src/components/ChartSelectionDetails.tsx" as F37
+component "src/components/DraggableCard.tsx" as F38
+component "src/components/EraseNatallyHistoryDialog.tsx" as F39
+component "src/components/ExportModal.tsx" as F40
+component "src/components/FigmaPaywall.tsx" as F41
+component "src/components/InferenceAccessSettings.tsx" as F42
+component "src/components/LearnAndPayments.tsx" as F43
+component "src/components/NatalInputForm.tsx" as F44
+component "src/components/NatallyAvatar.tsx" as F45
+component "src/components/NatallyChatbot.tsx" as F46
+component "src/components/NatallyConfigModal.tsx" as F47
+component "src/components/NatallyIcon.tsx" as F48
+component "src/components/NatallySprite.tsx" as F49
+component "src/components/PurchaseAccess.tsx" as F50
+component "src/components/ReadingStage.tsx" as F51
+component "src/components/ReadingStyleControl.tsx" as F52
+component "src/components/ReadingsModal.tsx" as F53
+component "src/components/RetainedReadingAudio.tsx" as F54
+component "src/components/RichText.tsx" as F55
+component "src/components/SelectedComponentsBar.tsx" as F56
+component "src/components/SouvenirViewer.tsx" as F57
+component "src/components/ThemesAndWisdomBox.tsx" as F58
+component "src/components/VoiceDownloadStatus.tsx" as F59
+component "src/components/VoiceMeasurementPanel.tsx" as F60
+component "src/components/atelier/AtelierAmbience.tsx" as F61
+component "src/components/atelier/AtelierCharacter.tsx" as F62
+component "src/components/atelier/AtelierScene.tsx" as F63
+component "src/components/atelier/AtelierSeason.tsx" as F64
+component "src/components/atelier/AtelierThemeSelector.tsx" as F65
+component "src/components/atelier/AtelierTrinkets.tsx" as F66
+component "src/components/atelier/CrystalPool.tsx" as F67
+component "src/components/onboarding/BirthDateFields.tsx" as F68
+component "src/components/onboarding/CalendarPicker.tsx" as F69
+component "src/components/onboarding/FirstLight.tsx" as F70
+component "src/hooks/useVisualViewport.ts" as F71
+component "src/main.tsx" as F72
+component "src/marketing.tsx" as F73
+component "src/services/accountStorage.ts" as F74
+component "src/services/astrowisdom.ts" as F75
+component "src/services/atelierMemories.ts" as F76
+component "src/services/atelierMotion.ts" as F77
+component "src/services/atelierSound.ts" as F78
+component "src/services/atelierTheme.ts" as F79
+component "src/services/authoredChartExplanations.ts" as F80
+component "src/services/billingAccess.ts" as F81
+component "src/services/birthDate.ts" as F82
+component "src/services/buildIdentity.ts" as F83
+component "src/services/calculationTools.ts" as F84
+component "src/services/chartFocusVisuals.ts" as F85
+component "src/services/chartTargets.ts" as F86
+component "src/services/chatViewport.ts" as F87
+component "src/services/comprehensiveReading.ts" as F88
+component "src/services/downloadAccess.ts" as F89
+component "src/services/ephemeris.ts" as F90
+component "src/services/firebase.ts" as F91
+component "src/services/gazetteer.ts" as F92
+component "src/services/historicalPresentation.ts" as F93
+component "src/services/historyLifecycle.ts" as F94
+component "src/services/hostedInference.ts" as F95
+component "src/services/inferenceAccess.ts" as F96
+component "src/services/inferenceTurn.ts" as F97
+component "src/services/karaokeScroll.ts" as F98
+component "src/services/locations.ts" as F99
+component "src/services/natallyChat.ts" as F100
+component "src/services/natallyHistory.ts" as F101
+component "src/services/nativeAuth.ts" as F102
+component "src/services/onboarding.ts" as F103
+component "src/services/openingReading.ts" as F104
+component "src/services/presentation.ts" as F105
+component "src/services/purchaseIntent.ts" as F106
+component "src/services/readingAudio.ts" as F107
+component "src/services/readingDeadline.ts" as F108
+component "src/services/readingStyle.ts" as F109
+component "src/services/readings.ts" as F110
+component "src/services/revenueCatCheckout.ts" as F111
+component "src/services/sessionProfile.ts" as F112
+component "src/services/soul.ts" as F113
+component "src/services/souvenir.ts" as F114
+component "src/services/souvenirPdf.ts" as F115
+component "src/services/streamingSpeech.ts" as F116
+component "src/services/supertonic.worker.ts" as F117
+component "src/services/supertonicDownload.ts" as F118
+component "src/services/supertonicTts.ts" as F119
+component "src/services/torusGestures.ts" as F120
+component "src/services/transits.ts" as F121
+component "src/services/voiceMeasurements.ts" as F122
+component "src/services/voiceService.ts" as F123
+component "src/services/x402Access.ts" as F124
+component "tests/account-isolation-browser.mjs" as F125
+component "tests/account-isolation.test.ts" as F126
+component "tests/birth-date.test.ts" as F127
+component "tests/browser/icon-reaction.tsx" as F128
+component "tests/browser/opening-recovery.tsx" as F129
+component "tests/build-identity.browser.mjs" as F130
+component "tests/calculation-tools.test.ts" as F131
+component "tests/chart-presentation-browser.mjs" as F132
+component "tests/chart-presentation.test.ts" as F133
+component "tests/hosted-chat.test.mjs" as F134
+component "tests/icon-reaction.browser.mjs" as F135
+component "tests/karaoke.test.ts" as F136
+component "tests/mascot.test.tsx" as F137
+component "tests/mobile-layout.test.ts" as F138
+component "tests/natally-regression-suite.ts" as F139
+component "tests/pwa-browser.test.mjs" as F140
+component "tests/pwa-build.test.mjs" as F141
+component "tests/reading-camera.test.ts" as F142
+component "tests/reading-deadline.test.ts" as F143
+component "tests/release-state.test.mjs" as F144
+component "tests/session-profile.test.ts" as F145
+component "tests/supertonic.test.ts" as F146
+component "tests/torus-browser.mjs" as F147
+component "tests/torus-browser.tsx" as F148
+component "tests/transits.test.ts" as F149
+component "tests/voice-adaptive-browser.mjs" as F150
+component "tests/voice-cached-startup.test.mjs" as F151
+component "tests/voice-measurements.test.ts" as F152
+component "tests/voice-recovery.test.ts" as F153
+component "tests/voice-runtime-progress.test.ts" as F154
+component "vite.config.ts" as F155
+F1 --> F4 : calls (4)
+F1 --> F4 : imports (5)
+F1 --> F5 : calls (1)
+F1 --> F5 : imports (2)
+F1 --> F6 : calls (1)
+F1 --> F6 : imports (2)
+F10 --> F16 : calls (1)
+F10 --> F16 : imports (2)
+F10 --> F17 : calls (1)
+F10 --> F17 : imports (2)
+F20 --> F122 : calls (1)
+F20 --> F122 : imports (3)
+F22 --> F84 : calls (1)
+F22 --> F84 : imports (2)
+F22 --> F90 : calls (1)
+F22 --> F90 : imports (2)
+F22 --> F95 : calls (1)
+F22 --> F95 : imports (2)
+F22 --> F100 : calls (1)
+F22 --> F100 : imports (3)
+F26 --> F12 : calls (2)
+F26 --> F12 : imports (3)
+F27 --> F100 : imports (1)
+F31 --> F33 : calls (1)
+F31 --> F33 : imports (2)
+F31 --> F34 : calls (1)
+F31 --> F34 : imports (2)
+F31 --> F35 : calls (1)
+F31 --> F35 : imports (2)
+F31 --> F37 : calls (1)
+F31 --> F37 : imports (2)
+F31 --> F38 : calls (1)
+F31 --> F38 : imports (2)
+F31 --> F40 : calls (1)
+F31 --> F40 : imports (2)
+F31 --> F43 : calls (1)
+F31 --> F43 : imports (2)
+F31 --> F44 : calls (1)
+F31 --> F44 : imports (2)
+F31 --> F46 : calls (1)
+F31 --> F46 : imports (2)
+F31 --> F48 : calls (1)
+F31 --> F48 : imports (2)
+F31 --> F49 : imports (2)
+F31 --> F51 : calls (1)
+F31 --> F51 : imports (2)
+F31 --> F53 : calls (1)
+F31 --> F53 : imports (2)
+F31 --> F56 : calls (1)
+F31 --> F56 : imports (2)
+F31 --> F57 : calls (1)
+F31 --> F57 : imports (2)
+F31 --> F58 : calls (1)
+F31 --> F58 : imports (2)
+F31 --> F65 : calls (1)
+F31 --> F65 : imports (2)
+F31 --> F70 : calls (1)
+F31 --> F70 : imports (2)
+F31 --> F74 : calls (5)
+F31 --> F74 : imports (3)
+F31 --> F75 : calls (1)
+F31 --> F75 : imports (3)
+F31 --> F79 : calls (1)
+F31 --> F79 : imports (2)
+F31 --> F80 : calls (1)
+F31 --> F80 : imports (2)
+F31 --> F81 : calls (1)
+F31 --> F81 : imports (2)
+F31 --> F86 : calls (14)
+F31 --> F86 : imports (5)
+F31 --> F86 : references (1)
+F31 --> F90 : calls (1)
+F31 --> F90 : imports (5)
+F31 --> F90 : references (4)
+F31 --> F91 : imports (2)
+F31 --> F92 : calls (1)
+F31 --> F92 : imports (2)
+F31 --> F94 : calls (1)
+F31 --> F94 : imports (4)
+F31 --> F100 : imports (2)
+F31 --> F101 : calls (4)
+F31 --> F101 : imports (3)
+F31 --> F103 : calls (7)
+F31 --> F103 : imports (10)
+F31 --> F103 : references (1)
+F31 --> F105 : calls (10)
+F31 --> F105 : imports (6)
+F31 --> F105 : references (2)
+F31 --> F109 : calls (1)
+F31 --> F109 : imports (2)
+F31 --> F110 : calls (1)
+F31 --> F110 : imports (2)
+F31 --> F111 : calls (1)
+F31 --> F111 : imports (2)
+F31 --> F112 : calls (2)
+F31 --> F112 : imports (4)
+F31 --> F121 : calls (2)
+F31 --> F121 : imports (2)
+F31 --> F123 : calls (8)
+F31 --> F123 : imports (5)
+F33 --> F39 : calls (1)
+F33 --> F39 : imports (2)
+F33 --> F41 : calls (1)
+F33 --> F83 : imports (2)
+F34 --> F50 : calls (15)
+F34 --> F85 : calls (1)
+F34 --> F85 : imports (3)
+F34 --> F90 : calls (1)
+F34 --> F90 : imports (3)
+F34 --> F90 : references (1)
+F34 --> F120 : calls (2)
+F34 --> F120 : imports (3)
+F35 --> F42 : calls (1)
+F35 --> F42 : imports (2)
+F35 --> F48 : calls (1)
+F35 --> F48 : imports (2)
+F35 --> F91 : imports (3)
+F35 --> F102 : calls (5)
+F35 --> F102 : imports (4)
+F36 --> F83 : imports (3)
+F36 --> F83 : references (1)
+F37 --> F86 : calls (2)
+F37 --> F86 : imports (3)
+F37 --> F90 : imports (2)
+F37 --> F90 : references (1)
+F39 --> F41 : calls (1)
+F39 --> F91 : imports (2)
+F39 --> F101 : calls (1)
+F39 --> F101 : imports (2)
+F40 --> F50 : calls (1)
+F40 --> F50 : imports (2)
+F40 --> F86 : calls (4)
+F40 --> F86 : imports (2)
+F40 --> F88 : calls (1)
+F40 --> F88 : imports (2)
+F40 --> F90 : imports (2)
+F40 --> F90 : references (1)
+F40 --> F114 : calls (2)
+F40 --> F114 : imports (3)
+F40 --> F115 : calls (1)
+F40 --> F115 : imports (2)
+F41 --> F106 : imports (2)
+F41 --> F106 : references (2)
+F42 --> F81 : calls (1)
+F42 --> F81 : imports (2)
+F42 --> F91 : calls (1)
+F42 --> F91 : imports (2)
+F42 --> F96 : calls (2)
+F42 --> F96 : imports (2)
+F42 --> F111 : calls (1)
+F42 --> F111 : imports (2)
+F43 --> F50 : calls (1)
+F43 --> F50 : imports (2)
+F44 --> F90 : imports (2)
+F44 --> F90 : references (2)
+F44 --> F99 : calls (12)
+F44 --> F99 : imports (6)
+F44 --> F99 : references (2)
+F46 --> F47 : calls (1)
+F46 --> F47 : imports (2)
+F46 --> F48 : calls (1)
+F46 --> F48 : imports (2)
+F46 --> F50 : calls (3)
+F46 --> F50 : imports (2)
+F46 --> F54 : calls (1)
+F46 --> F54 : imports (2)
+F46 --> F55 : calls (1)
+F46 --> F55 : imports (2)
+F46 --> F71 : calls (1)
+F46 --> F71 : imports (2)
+F46 --> F74 : calls (2)
+F46 --> F74 : imports (3)
+F46 --> F80 : calls (3)
+F46 --> F80 : imports (3)
+F46 --> F81 : calls (1)
+F46 --> F81 : imports (2)
+F46 --> F84 : calls (2)
+F46 --> F84 : imports (2)
+F46 --> F86 : calls (14)
+F46 --> F86 : imports (7)
+F46 --> F86 : references (1)
+F46 --> F87 : calls (1)
+F46 --> F87 : imports (2)
+F46 --> F90 : imports (2)
+F46 --> F90 : references (12)
+F46 --> F93 : calls (1)
+F46 --> F93 : imports (2)
+F46 --> F94 : calls (1)
+F46 --> F94 : imports (4)
+F46 --> F98 : calls (1)
+F46 --> F98 : imports (2)
+F46 --> F100 : calls (4)
+F46 --> F100 : imports (7)
+F46 --> F100 : references (1)
+F46 --> F104 : calls (3)
+F46 --> F104 : imports (4)
+F46 --> F104 : references (3)
+F46 --> F105 : calls (9)
+F46 --> F105 : imports (9)
+F46 --> F105 : references (5)
+F46 --> F106 : calls (2)
+F46 --> F106 : imports (2)
+F46 --> F107 : calls (2)
+F46 --> F107 : imports (3)
+F46 --> F113 : calls (6)
+F46 --> F113 : imports (5)
+F46 --> F116 : calls (1)
+F46 --> F116 : imports (2)
+F46 --> F123 : calls (16)
+F46 --> F123 : imports (8)
+F46 --> F123 : references (2)
+F47 --> F60 : calls (1)
+F47 --> F60 : imports (2)
+F47 --> F119 : calls (1)
+F47 --> F119 : imports (3)
+F47 --> F123 : calls (8)
+F47 --> F123 : imports (8)
+F47 --> F123 : references (3)
+F49 --> F45 : calls (1)
+F49 --> F45 : imports (2)
+F49 --> F90 : imports (2)
+F49 --> F90 : references (1)
+F49 --> F123 : calls (5)
+F49 --> F123 : imports (4)
+F49 --> F123 : references (1)
+F50 --> F41 : calls (1)
+F50 --> F41 : imports (3)
+F50 --> F41 : references (2)
+F50 --> F81 : calls (2)
+F50 --> F81 : imports (2)
+F50 --> F89 : calls (2)
+F50 --> F89 : imports (3)
+F50 --> F89 : references (3)
+F50 --> F91 : imports (2)
+F50 --> F106 : calls (2)
+F50 --> F106 : imports (4)
+F50 --> F106 : references (4)
+F50 --> F111 : calls (4)
+F50 --> F111 : imports (5)
+F50 --> F131 : references (1)
+F51 --> F61 : calls (1)
+F51 --> F61 : imports (2)
+F51 --> F63 : calls (1)
+F51 --> F63 : imports (3)
+F51 --> F63 : references (1)
+F51 --> F86 : imports (2)
+F51 --> F86 : references (1)
+F51 --> F105 : imports (3)
+F51 --> F105 : references (2)
+F52 --> F109 : imports (2)
+F52 --> F109 : references (1)
+F53 --> F55 : calls (1)
+F53 --> F55 : imports (2)
+F53 --> F90 : calls (1)
+F53 --> F90 : imports (4)
+F53 --> F90 : references (3)
+F53 --> F99 : calls (13)
+F53 --> F99 : imports (6)
+F53 --> F99 : references (3)
+F53 --> F100 : calls (1)
+F53 --> F100 : imports (2)
+F53 --> F105 : imports (2)
+F53 --> F105 : references (1)
+F53 --> F110 : calls (3)
+F53 --> F110 : imports (3)
+F53 --> F110 : references (1)
+F53 --> F116 : calls (1)
+F53 --> F116 : imports (2)
+F53 --> F123 : calls (3)
+F53 --> F123 : imports (4)
+F54 --> F50 : calls (22)
+F54 --> F50 : imports (2)
+F54 --> F107 : calls (6)
+F54 --> F107 : imports (7)
+F54 --> F123 : calls (5)
+F54 --> F123 : imports (4)
+F56 --> F86 : calls (1)
+F56 --> F86 : imports (2)
+F57 --> F34 : calls (1)
+F57 --> F34 : imports (2)
+F57 --> F35 : calls (1)
+F57 --> F35 : imports (2)
+F57 --> F46 : calls (1)
+F57 --> F46 : imports (3)
+F57 --> F46 : references (1)
+F57 --> F51 : calls (1)
+F57 --> F51 : imports (2)
+F57 --> F55 : calls (1)
+F57 --> F55 : imports (2)
+F57 --> F63 : imports (2)
+F57 --> F86 : calls (12)
+F57 --> F86 : imports (5)
+F57 --> F86 : references (1)
+F57 --> F90 : imports (2)
+F57 --> F90 : references (4)
+F57 --> F91 : imports (2)
+F57 --> F105 : calls (6)
+F57 --> F105 : imports (6)
+F57 --> F105 : references (2)
+F57 --> F114 : calls (1)
+F57 --> F114 : imports (3)
+F57 --> F115 : calls (1)
+F57 --> F115 : imports (2)
+F57 --> F123 : calls (5)
+F57 --> F123 : imports (4)
+F58 --> F75 : imports (2)
+F58 --> F75 : references (1)
+F59 --> F119 : calls (1)
+F59 --> F119 : imports (3)
+F59 --> F119 : references (1)
+F60 --> F122 : calls (8)
+F60 --> F122 : imports (6)
+F60 --> F122 : references (1)
+F61 --> F63 : imports (2)
+F61 --> F63 : references (1)
+F61 --> F105 : imports (2)
+F61 --> F105 : references (1)
+F62 --> F63 : imports (2)
+F62 --> F63 : references (1)
+F62 --> F123 : imports (2)
+F63 --> F62 : calls (1)
+F63 --> F62 : imports (2)
+F63 --> F64 : calls (1)
+F63 --> F64 : imports (2)
+F63 --> F66 : calls (1)
+F63 --> F66 : imports (2)
+F63 --> F77 : calls (1)
+F63 --> F77 : imports (2)
+F63 --> F78 : calls (1)
+F63 --> F78 : imports (2)
+F63 --> F78 : references (1)
+F63 --> F79 : calls (1)
+F63 --> F79 : imports (2)
+F64 --> F78 : calls (2)
+F64 --> F78 : imports (3)
+F64 --> F79 : imports (2)
+F64 --> F79 : references (1)
+F65 --> F79 : calls (3)
+F65 --> F79 : imports (5)
+F66 --> F62 : imports (3)
+F66 --> F63 : imports (2)
+F66 --> F63 : references (1)
+F66 --> F67 : calls (1)
+F66 --> F67 : imports (2)
+F66 --> F76 : calls (14)
+F66 --> F76 : imports (9)
+F66 --> F76 : references (11)
+F66 --> F78 : calls (8)
+F66 --> F78 : imports (6)
+F66 --> F78 : references (2)
+F68 --> F82 : calls (3)
+F68 --> F82 : imports (4)
+F70 --> F68 : calls (1)
+F70 --> F68 : imports (2)
+F70 --> F82 : calls (1)
+F70 --> F82 : imports (2)
+F70 --> F92 : imports (2)
+F70 --> F92 : references (1)
+F70 --> F103 : imports (2)
+F70 --> F103 : references (1)
+F70 --> F119 : imports (2)
+F70 --> F119 : references (1)
+F70 --> F121 : calls (1)
+F70 --> F121 : imports (3)
+F71 --> F87 : imports (2)
+F71 --> F87 : references (2)
+F73 --> F34 : calls (1)
+F73 --> F34 : imports (2)
+F73 --> F90 : calls (2)
+F73 --> F90 : imports (4)
+F73 --> F90 : references (3)
+F73 --> F91 : imports (2)
+F73 --> F101 : calls (1)
+F73 --> F101 : imports (2)
+F73 --> F103 : calls (2)
+F73 --> F103 : imports (3)
+F74 --> F94 : calls (1)
+F74 --> F94 : imports (2)
+F75 --> F90 : imports (2)
+F75 --> F90 : references (1)
+F76 --> F94 : calls (2)
+F76 --> F94 : imports (2)
+F78 --> F76 : imports (2)
+F78 --> F76 : references (2)
+F80 --> F86 : calls (5)
+F80 --> F86 : imports (4)
+F80 --> F90 : calls (1)
+F80 --> F90 : imports (3)
+F80 --> F90 : references (3)
+F81 --> F91 : calls (3)
+F81 --> F91 : imports (2)
+F81 --> F96 : calls (18)
+F81 --> F96 : imports (4)
+F81 --> F111 : calls (2)
+F81 --> F111 : imports (3)
+F84 --> F90 : calls (1)
+F84 --> F90 : imports (3)
+F84 --> F90 : references (2)
+F84 --> F92 : calls (3)
+F84 --> F92 : imports (3)
+F84 --> F100 : calls (2)
+F84 --> F100 : imports (3)
+F84 --> F121 : calls (2)
+F84 --> F121 : imports (3)
+F86 --> F90 : calls (1)
+F86 --> F90 : imports (3)
+F86 --> F90 : references (5)
+F88 --> F75 : calls (1)
+F88 --> F75 : imports (2)
+F88 --> F90 : imports (2)
+F88 --> F90 : references (1)
+F89 --> F91 : calls (1)
+F89 --> F91 : imports (2)
+F89 --> F106 : imports (2)
+F89 --> F106 : references (1)
+F89 --> F111 : calls (2)
+F89 --> F111 : imports (3)
+F90 --> F109 : imports (2)
+F90 --> F109 : references (1)
+F93 --> F86 : calls (3)
+F93 --> F86 : imports (3)
+F93 --> F90 : imports (2)
+F93 --> F90 : references (1)
+F93 --> F105 : calls (1)
+F93 --> F105 : imports (4)
+F93 --> F105 : references (3)
+F95 --> F3 : imports (3)
+F95 --> F3 : references (1)
+F95 --> F81 : calls (1)
+F95 --> F96 : calls (1)
+F95 --> F96 : imports (2)
+F95 --> F108 : calls (1)
+F95 --> F108 : imports (2)
+F96 --> F74 : calls (7)
+F96 --> F74 : imports (2)
+F99 --> F74 : calls (2)
+F99 --> F74 : imports (2)
+F100 --> F84 : calls (1)
+F100 --> F84 : imports (2)
+F100 --> F86 : calls (6)
+F100 --> F86 : imports (4)
+F100 --> F90 : imports (2)
+F100 --> F90 : references (9)
+F100 --> F93 : calls (1)
+F100 --> F93 : imports (2)
+F100 --> F95 : calls (2)
+F100 --> F95 : imports (3)
+F100 --> F97 : calls (1)
+F100 --> F97 : imports (2)
+F100 --> F105 : calls (2)
+F100 --> F105 : imports (5)
+F100 --> F105 : references (4)
+F100 --> F109 : calls (2)
+F100 --> F109 : imports (2)
+F100 --> F113 : calls (1)
+F100 --> F113 : imports (2)
+F100 --> F121 : calls (1)
+F100 --> F121 : imports (2)
+F101 --> F74 : calls (2)
+F101 --> F74 : imports (2)
+F101 --> F76 : calls (1)
+F101 --> F76 : imports (2)
+F101 --> F94 : calls (3)
+F101 --> F94 : imports (3)
+F101 --> F107 : calls (1)
+F101 --> F107 : imports (2)
+F103 --> F90 : imports (2)
+F103 --> F90 : references (5)
+F103 --> F91 : imports (2)
+F103 --> F92 : calls (2)
+F103 --> F92 : imports (3)
+F103 --> F109 : calls (1)
+F103 --> F109 : imports (3)
+F103 --> F109 : references (1)
+F103 --> F121 : imports (2)
+F103 --> F121 : references (1)
+F105 --> F86 : calls (8)
+F105 --> F86 : imports (5)
+F105 --> F90 : imports (2)
+F105 --> F90 : references (4)
+F107 --> F123 : imports (2)
+F107 --> F123 : references (3)
+F110 --> F84 : calls (1)
+F110 --> F84 : imports (2)
+F110 --> F86 : calls (2)
+F110 --> F86 : imports (3)
+F110 --> F90 : imports (2)
+F110 --> F90 : references (5)
+F110 --> F95 : calls (1)
+F110 --> F95 : imports (2)
+F110 --> F97 : calls (1)
+F110 --> F97 : imports (2)
+F110 --> F100 : calls (4)
+F110 --> F100 : imports (7)
+F110 --> F100 : references (1)
+F110 --> F105 : calls (2)
+F110 --> F105 : imports (5)
+F110 --> F105 : references (2)
+F110 --> F109 : calls (2)
+F110 --> F109 : imports (2)
+F110 --> F113 : calls (3)
+F110 --> F113 : imports (4)
+F110 --> F121 : calls (3)
+F110 --> F121 : imports (4)
+F111 --> F91 : calls (5)
+F111 --> F91 : imports (2)
+F111 --> F106 : imports (2)
+F111 --> F106 : references (5)
+F113 --> F74 : calls (5)
+F113 --> F74 : imports (2)
+F113 --> F76 : calls (1)
+F113 --> F76 : imports (2)
+F113 --> F94 : calls (2)
+F113 --> F94 : imports (2)
+F113 --> F104 : calls (1)
+F113 --> F104 : imports (2)
+F114 --> F74 : calls (4)
+F114 --> F74 : imports (3)
+F114 --> F80 : calls (4)
+F114 --> F80 : imports (2)
+F114 --> F86 : calls (1)
+F114 --> F86 : imports (2)
+F114 --> F90 : imports (2)
+F114 --> F90 : references (8)
+F114 --> F91 : calls (2)
+F114 --> F91 : imports (3)
+F114 --> F100 : imports (2)
+F114 --> F100 : references (2)
+F114 --> F105 : imports (2)
+F114 --> F105 : references (2)
+F114 --> F111 : calls (1)
+F114 --> F111 : imports (2)
+F114 --> F123 : calls (1)
+F114 --> F123 : imports (4)
+F114 --> F123 : references (2)
+F115 --> F91 : imports (2)
+F115 --> F114 : calls (1)
+F115 --> F114 : imports (4)
+F115 --> F114 : references (1)
+F116 --> F119 : calls (2)
+F116 --> F119 : imports (3)
+F116 --> F123 : calls (6)
+F116 --> F123 : imports (8)
+F116 --> F123 : references (2)
+F117 --> F118 : calls (8)
+F117 --> F118 : imports (3)
+F117 --> F118 : instantiates (1)
+F117 --> F119 : imports (3)
+F117 --> F119 : references (3)
+F117 --> F122 : imports (2)
+F117 --> F122 : references (1)
+F119 --> F122 : calls (2)
+F119 --> F122 : imports (4)
+F121 --> F89 : calls (1)
+F121 --> F90 : calls (2)
+F121 --> F90 : imports (4)
+F121 --> F90 : references (5)
+F123 --> F119 : calls (5)
+F123 --> F119 : imports (5)
+F126 --> F74 : calls (15)
+F126 --> F74 : imports (4)
+F126 --> F95 : calls (3)
+F126 --> F95 : imports (4)
+F126 --> F99 : calls (4)
+F126 --> F99 : imports (3)
+F127 --> F68 : imports (2)
+F127 --> F68 : references (1)
+F127 --> F82 : calls (24)
+F127 --> F82 : imports (5)
+F128 --> F48 : imports (2)
+F129 --> F46 : calls (1)
+F129 --> F46 : imports (2)
+F129 --> F86 : calls (1)
+F129 --> F86 : imports (2)
+F129 --> F105 : calls (1)
+F129 --> F105 : imports (2)
+F129 --> F123 : calls (1)
+F129 --> F123 : imports (2)
+F131 --> F3 : calls (5)
+F131 --> F3 : imports (2)
+F131 --> F84 : calls (2)
+F131 --> F84 : imports (2)
+F131 --> F90 : calls (1)
+F131 --> F90 : imports (2)
+F131 --> F95 : calls (3)
+F131 --> F95 : imports (2)
+F132 --> F93 : calls (2)
+F133 --> F90 : calls (1)
+F133 --> F90 : imports (2)
+F133 --> F100 : calls (20)
+F133 --> F100 : imports (2)
+F136 --> F55 : imports (2)
+F136 --> F55 : references (1)
+F136 --> F98 : calls (4)
+F136 --> F98 : imports (2)
+F136 --> F123 : calls (1)
+F136 --> F123 : imports (2)
+F137 --> F45 : imports (2)
+F137 --> F48 : imports (2)
+F138 --> F87 : calls (6)
+F138 --> F87 : imports (3)
+F138 --> F87 : references (1)
+F138 --> F120 : calls (8)
+F138 --> F120 : imports (3)
+F139 --> F95 : calls (6)
+F139 --> F95 : imports (3)
+F140 --> F16 : calls (1)
+F140 --> F16 : imports (2)
+F140 --> F43 : calls (1)
+F141 --> F16 : calls (3)
+F141 --> F16 : imports (2)
+F142 --> F105 : calls (19)
+F142 --> F105 : imports (3)
+F143 --> F108 : calls (2)
+F143 --> F108 : imports (2)
+F144 --> F17 : calls (20)
+F144 --> F17 : imports (6)
+F145 --> F112 : calls (14)
+F145 --> F112 : imports (4)
+F145 --> F112 : references (6)
+F146 --> F118 : calls (12)
+F146 --> F118 : imports (3)
+F146 --> F118 : instantiates (1)
+F146 --> F119 : calls (12)
+F146 --> F119 : imports (3)
+F146 --> F123 : calls (33)
+F146 --> F123 : imports (9)
+F148 --> F34 : imports (2)
+F148 --> F90 : calls (1)
+F148 --> F90 : imports (2)
+F149 --> F90 : calls (1)
+F149 --> F90 : imports (2)
+F149 --> F121 : calls (13)
+F149 --> F121 : imports (5)
+F152 --> F20 : calls (2)
+F152 --> F20 : imports (2)
+F152 --> F122 : calls (43)
+F152 --> F122 : imports (4)
+F152 --> F122 : instantiates (6)
+F153 --> F119 : calls (8)
+F153 --> F119 : imports (4)
+F154 --> F155 : calls (1)
+F154 --> F155 : imports (2)
+F155 --> F12 : calls (2)
+F155 --> F12 : imports (2)
+F155 --> F17 : calls (1)
+F155 --> F17 : imports (2)
+@enduml

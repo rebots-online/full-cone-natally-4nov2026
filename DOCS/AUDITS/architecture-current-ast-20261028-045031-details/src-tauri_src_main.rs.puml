@@ -1,0 +1,9 @@
+@startuml
+title src-tauri/src/main.rs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "main.rs\nfile L1-7\nfile:src-tauri/src/main.rs" as N0
+rectangle "main\nfunction L4-6\nfunction:720775546890f21ccb03d84b1f519958" as N1
+N0 --> N1 : contains E2570
+@enduml

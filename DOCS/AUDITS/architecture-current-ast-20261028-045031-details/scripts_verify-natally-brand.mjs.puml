@@ -1,0 +1,33 @@
+@startuml
+title scripts/verify-natally-brand.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "verify-natally-brand.mjs\nfile L1-72\nfile:scripts/verify-natally-brand.mjs" as N0
+rectangle "playwright\nimport L1-1\nimport:c837922cb3c89755626e0aabd3503c5e" as N1
+rectangle "node:fs\nimport L2-2\nimport:112c614630cca8a1c174ff8bc9a0c673" as N2
+rectangle "node:assert/strict\nimport L3-3\nimport:ff7b253dc208c04a725b7b602bc08a09" as N3
+rectangle "node:url\nimport L4-4\nimport:a65d1e11c813b88ed02d341a67be0221" as N4
+rectangle "node:path\nimport L5-5\nimport:b083b16374f39dce4bb8a3b2cea1967e" as N5
+rectangle "base\nconstant L7-7\nconstant:92fea5311ce7dc7a172c0fbd415d0f18" as N6
+rectangle "output\nconstant L8-8\nconstant:4f8ac9985383cfd53da6de18998e1879" as N7
+rectangle "browser\nconstant L9-9\nconstant:e7028afe744748c1ac32aeee8c33add5" as N8
+rectangle "page\nconstant L11-11\nconstant:005c67c997ce541d000acd0b1b0c585a" as N9
+rectangle "errors\nconstant L12-12\nconstant:3e126296a2405d689b92ff0cf51a2076" as N10
+rectangle "baseline\nconstant L16-21\nconstant:deb0e27a60ddbd6d29dc73dbbd2ac11c" as N11
+rectangle "preferences\nconstant L51-55\nconstant:da601356941c67fe0d4f1d6bde3e3eef" as N12
+rectangle "result\nconstant L64-66\nconstant:9cf57b5d0e21f4e47f2725950d63a433" as N13
+N0 --> N1 : contains E391
+N0 --> N2 : contains E392
+N0 --> N3 : contains E393
+N0 --> N4 : contains E394
+N0 --> N5 : contains E395
+N0 --> N6 : contains E396
+N0 --> N7 : contains E397
+N0 --> N8 : contains E398
+N0 --> N9 : contains E399
+N0 --> N10 : contains E400
+N0 --> N11 : contains E401
+N0 --> N12 : contains E402
+N0 --> N13 : contains E403
+@enduml

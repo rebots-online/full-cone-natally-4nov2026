@@ -1,0 +1,25 @@
+@startuml
+title src/components/ThemesAndWisdomBox.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ThemesAndWisdomBox.tsx\nfile L1-230\nfile:src/components/ThemesAndWisdomBox.tsx" as N0
+rectangle "react\nimport L1-1\nimport:95bc56c238bf36b67576966eaf48df95" as N1
+rectangle "lucide-react\nimport L2-2\nimport:635a4075ec42a5fdcbf2d64a2c12a2b1" as N2
+rectangle "../services/astrowisdom\nimport L3-3\nimport:c0c6b51824c335e4a34c56afad66fa79" as N3
+rectangle "ThemesAndWisdomBoxProps\ninterface L5-10\ninterface:1e33654d541e28b3a045f2cadbc433df" as N4
+rectangle "wisdom\nproperty L6-6\nproperty:4c18d3c4400e8a990a168d20dfc9b8a4" as N5
+rectangle "onOpenReading\nproperty L7-7\nproperty:e35b525a49cd841914f10ba013c9efe2" as N6
+rectangle "onDiscussWithNatally\nproperty L8-8\nproperty:662a5f10794264050cfcfef5bcdecca7" as N7
+rectangle "embedded\nproperty L9-9\nproperty:5114f9ca99ab861fc706542eb7516600" as N8
+rectangle "ThemesAndWisdomBox\nfunction L12-229\nfunction:2ecfc688bd415ee97bc13b405b35a307" as N9
+N0 --> N1 : contains E1263
+N0 --> N2 : contains E1264
+N0 --> N3 : contains E1265
+N0 --> N4 : contains E1266
+N4 --> N5 : contains E1267
+N4 --> N6 : contains E1268
+N4 --> N7 : contains E1269
+N4 --> N8 : contains E1270
+N0 --> N9 : contains E1271
+@enduml

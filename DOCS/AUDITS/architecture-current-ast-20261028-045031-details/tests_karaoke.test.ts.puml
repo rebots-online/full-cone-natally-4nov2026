@@ -1,0 +1,28 @@
+@startuml
+title tests/karaoke.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "karaoke.test.ts\nfile L1-49\nfile:tests/karaoke.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:586f7d6b324ccb6532768982139bdd84" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:4d5b40f523b74d842d8cf410b0b326d4" as N2
+rectangle "react\nimport L3-3\nimport:37e741be3520bf526af7da02ebdf5799" as N3
+rectangle "react-dom/server\nimport L4-4\nimport:6568c403b4f49b88b8e6a2eccd77675e" as N4
+rectangle "../src/components/RichText\nimport L5-5\nimport:ec5389c236c107d4e85873683c6f03b1" as N5
+rectangle "../src/services/voiceService\nimport L6-6\nimport:b23a7c956b78738ef99250e7db007ba7" as N6
+rectangle "../src/services/karaokeScroll\nimport L7-7\nimport:072016174809a3ecb5c6710d3d0f4460" as N7
+rectangle "word\nfunction L32-32\nfunction:e297f4eb4f1b8392496a3629f63a7641" as N8
+N0 --> N1 : contains E2693
+N0 --> N2 : contains E2694
+N0 --> N3 : contains E2695
+N0 --> N4 : contains E2696
+N0 --> N5 : contains E2697
+N0 --> N6 : contains E2698
+N0 --> N7 : contains E2699
+N0 --> N8 : contains E2700
+N0 --> N8 : calls E6577
+N0 --> N8 : calls E6579
+N0 --> N8 : calls E6581
+N0 --> N8 : calls E6583
+N0 --> N8 : references E6584
+@enduml

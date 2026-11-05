@@ -1,0 +1,26 @@
+@startuml
+title tests/voice-cached-startup.test.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voice-cached-startup.test.mjs\nfile L1-50\nfile:tests/voice-cached-startup.test.mjs" as N0
+rectangle "node:test\nimport L1-1\nimport:44110944dd617f6b86e126ee3a24d404" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:80a302c6c66da08098ad391883258878" as N2
+rectangle "node:fs\nimport L3-3\nimport:6a6d747bfcdc8de05e1f74faff71cd77" as N3
+rectangle "node:vm\nimport L4-4\nimport:974adcaa9e95ced6522f7283f611c3c8" as N4
+rectangle "esbuild\nimport L5-5\nimport:c630345d19bc61d3153b2b9de03cafaf" as N5
+rectangle "../node_modules/@huggingface/transformers/src/env.js\nimport L6-6\nimport:d9b16327e39f4fdccd1f905258514bcf" as N6
+rectangle "../node_modules/@huggingface/transformers/src/utils/model_registry/get_tokenizer_files.js\nimport L7-7\nimport:cfd859219de2ea2b4c8037312b3df5c3" as N7
+rectangle "../node_modules/@huggingface/transformers/src/utils/model_registry/get_file_metadata.js\nimport L8-8\nimport:0c6245790525c0aac22d0e83b1f9f85f" as N8
+N0 --> N1 : contains E2822
+N0 --> N2 : contains E2823
+N0 --> N3 : contains E2824
+N0 --> N4 : contains E2825
+N0 --> N5 : contains E2826
+N0 --> N6 : contains E2827
+N0 --> N7 : contains E2828
+N0 --> N8 : contains E2829
+N0 --> N6 : imports E3729
+N0 --> N7 : imports E3730
+N0 --> N8 : imports E3731
+@enduml

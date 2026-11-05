@@ -1,0 +1,105 @@
+{
+  "version": "1.30.90390",
+  "invocationId": "7beec5dd-2d59-46e3-a57f-b68e5a0821d3",
+  "sourceFingerprint": "bf695b0c54c65ea9508347358dd504f0e5ec83189f71e5ed5b55746ab5efa8bd",
+  "gitCommit": "f931ebcc79ee8aabbec4ff50f6fca7834eecaddf",
+  "artifactMatrixComplete": true,
+  "artifacts": [
+    {
+      "target": "windows-exe",
+      "file": "natally-ai-studio-v1.30.90390-win11-x64-standalone.exe",
+      "bytes": 29111808,
+      "sha256": "84685dd4e62f5d274b20c2588ecb3511207c7ab61501c16518a4ce422f5a3e1e",
+      "generation": "1793425468687946",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-win11-x64-standalone.exe"
+    },
+    {
+      "target": "nsis",
+      "file": "natally-ai-studio-v1.30.90390-win11-x64-nsis.exe",
+      "bytes": 22263696,
+      "sha256": "4a6252bd220091dd158d6ecc62943e6cd22e9a0991cb6a2a7464e1bd165f6f63",
+      "generation": "1793425473238407",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-win11-x64-nsis.exe"
+    },
+    {
+      "target": "msi",
+      "file": "natally-ai-studio-v1.30.90390-win11-x64-msi.msi",
+      "bytes": 23261184,
+      "sha256": "a3ef020f43312de318b147749105c176db73eb88c01b6267790442b8d09a63c0",
+      "generation": "1793425478026224",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-win11-x64-msi.msi"
+    },
+    {
+      "target": "appimage",
+      "file": "natally-ai-studio-v1.30.90390-linux-amd64.AppImage",
+      "bytes": 112122360,
+      "sha256": "d18a83de871d3aedac312fd4c92aa71b9876fd23607f78cf6682e7d44c933bd1",
+      "generation": "1793425498020575",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-linux-amd64.AppImage"
+    },
+    {
+      "target": "deb",
+      "file": "natally-ai-studio-v1.30.90390-linux-amd64.deb",
+      "bytes": 39101650,
+      "sha256": "b0908193074cb3e4196a567a4acbc21a1725352ce444319bab711e80393be754",
+      "generation": "1793425505567148",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-linux-amd64.deb"
+    },
+    {
+      "target": "rpm",
+      "file": "natally-ai-studio-v1.30.90390-linux-x86_64.rpm",
+      "bytes": 39096943,
+      "sha256": "10610b625c0cd7367f1e8a97f5839f258b3be0fe0c003b404a332c91f0699870",
+      "generation": "1793425513134560",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-linux-x86_64.rpm"
+    },
+    {
+      "target": "apk",
+      "file": "natally-ai-studio-v1.30.90390-android-arm64.apk",
+      "bytes": 92031780,
+      "sha256": "87b23d0d8784c1f0110c04fd9dda824ea7bd50383a0ea56b3e5fe90adcc75906",
+      "generation": "1793425529512597",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-android-arm64.apk"
+    },
+    {
+      "target": "aab",
+      "file": "natally-ai-studio-v1.30.90390-android-arm64.aab",
+      "bytes": 41971519,
+      "sha256": "e68121f9e114c69ec6b1c4eac06b7900d8a3bedcaf39d30711b218f067763fab",
+      "generation": "1793425537840984",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-android-arm64.aab"
+    },
+    {
+      "target": "android-symbols",
+      "file": "natally-ai-studio-v1.30.90390-android-arm64-native-debug-symbols.zip",
+      "bytes": 12550547,
+      "sha256": "b4f50935a4b6655a2058fe9a838d425bc889889064e70e6b4cedf616fca0e292",
+      "generation": "1793425540736509",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-android-arm64-native-debug-symbols.zip"
+    },
+    {
+      "target": "web",
+      "file": "natally-ai-studio-v1.30.90390-webapp.zip",
+      "bytes": 22680176,
+      "sha256": "ffdc17706d4cfa1fa91b88bae9969847305dc2a86c650e5ecd4d472a23aecc75",
+      "generation": "1793425545455606",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-webapp.zip"
+    },
+    {
+      "target": "web-installer",
+      "file": "natally-ai-studio-v1.30.90390-install-web.sh",
+      "bytes": 2978,
+      "sha256": "f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce",
+      "generation": "1793425546152985",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-install-web.sh"
+    },
+    {
+      "target": "pwa",
+      "file": "natally-ai-studio-v1.30.90390-pwa-build.json",
+      "bytes": 1669,
+      "sha256": "0b33d8fd9b02d3bd8b2d171b8b69e62e8e2a11cdc26b88fb6c61aa938adf19cb",
+      "generation": "1793425546721042",
+      "url": "https://storage.googleapis.com/rochemediaservices-infra-natally-releases/v1.30.90390/natally-ai-studio-v1.30.90390-pwa-build.json"
+    }
+  ]
+}
