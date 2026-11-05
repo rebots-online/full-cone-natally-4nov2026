@@ -1,0 +1,21 @@
+@startuml
+title scripts/configure-android.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "configure-android.mjs\nfile L1-39\nfile:scripts/configure-android.mjs" as N0
+rectangle "node:fs\nimport L1-1\nimport:5b1c0bdba12a2d1e1cf7d414b3a0761a" as N1
+rectangle "file\nconstant L2-2\nconstant:f12667b27a9a9de8f59cb4d363d9b882" as N2
+rectangle "source\nvariable L3-3\nvariable:cf7cf773f75dd0ab20d3a54512180456" as N3
+rectangle "properties\nconstant L21-21\nconstant:4cd226bb5dcc76b9dd2d1b9d41cd624c" as N4
+rectangle "props\nvariable L22-22\nvariable:e5cf3b0c41cf8a472907915b62365ab0" as N5
+rectangle "current\nvariable L29-29\nvariable:696bdb25e42b00352e6d0cf24158ab1d" as N6
+rectangle "prepared\nconstant L37-37\nconstant:e8ab9da892ee3c65d0dd23b3640c9e9b" as N7
+N0 --> N1 : contains E191
+N0 --> N2 : contains E192
+N0 --> N3 : contains E193
+N0 --> N4 : contains E194
+N0 --> N5 : contains E195
+N0 --> N6 : contains E196
+N0 --> N7 : contains E197
+@enduml

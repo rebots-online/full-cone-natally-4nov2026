@@ -1,0 +1,13 @@
+@startuml
+title tests/reading-deadline.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "reading-deadline.test.ts\nfile L1-28\nfile:tests/reading-deadline.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:b9872a7def80b92becac4567e106b56c" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:e88b9838f3025a5ed3a8ed5e3c08acc3" as N2
+rectangle "../src/services/readingDeadline\nimport L3-3\nimport:0840dd074f81ff8b9b56f9dbc751bb19" as N3
+N0 --> N1 : contains E2739
+N0 --> N2 : contains E2740
+N0 --> N3 : contains E2741
+@enduml

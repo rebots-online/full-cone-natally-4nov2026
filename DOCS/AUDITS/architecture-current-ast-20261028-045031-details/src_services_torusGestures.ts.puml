@@ -1,0 +1,30 @@
+@startuml
+title src/services/torusGestures.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "torusGestures.ts\nfile L1-91\nfile:src/services/torusGestures.ts" as N0
+rectangle "getTorusZoomDistance\nfunction L1-5\nfunction:9aab77b87afe47db105ccceb27a178cd" as N1
+rectangle "bindTorusTouch\nfunction L7-90\nfunction:952ac4393b0ee97806998ac08b6532fc" as N2
+rectangle "separation\nfunction L19-22\nfunction:ce112459a6bb01e34ddb0fe2aae12aa7" as N3
+rectangle "resetBaseline\nfunction L23-40\nfunction:5af060e0b6f5bf2d9e90ab8c00754432" as N4
+rectangle "onStart\nfunction L41-44\nfunction:777f1df9d5ae66106ad9b7f8b598d2c7" as N5
+rectangle "onMove\nfunction L45-65\nfunction:0700679ececec95c143642d6000cc9c7" as N6
+rectangle "onCancel\nfunction L66-74\nfunction:30983be6d9a97a01ed56ffda59873750" as N7
+N0 --> N1 : contains E2382
+N0 --> N2 : contains E2383
+N2 --> N3 : contains E2384
+N2 --> N4 : contains E2385
+N2 --> N5 : contains E2386
+N2 --> N6 : contains E2387
+N2 --> N7 : contains E2388
+N4 --> N3 : calls E6335
+N5 --> N4 : calls E6336
+N6 --> N4 : calls E6337
+N6 --> N3 : calls E6338
+N2 --> N7 : calls E6339
+N2 --> N5 : references E6340
+N2 --> N6 : references E6341
+N2 --> N4 : references E6342
+N2 --> N7 : references E6343
+@enduml

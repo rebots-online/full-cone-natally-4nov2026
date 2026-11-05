@@ -1,0 +1,85 @@
+{
+  "observedDate": "2026-10-21",
+  "project": "natally-ai-studio",
+  "method": "OpenDesign MCP write_file(base64), get_artifact(include=all) exact UTF-8 byte readback",
+  "files": [
+    {
+      "path": "billing-preview-20261021/source-binding.json",
+      "sha256": "b772a7df1cc0fe3713dd47aa62bd817a77cc360de246d828a9fc7569e0cbbb76",
+      "mcpReadbackMatches": true
+    },
+    {
+      "path": "billing-preview-20261021/revenuecat-project.json",
+      "sha256": "21c30f5a5aafc7bc050ebabaa448d9f62acdba93ba169360e0e6f4311c91fcbb",
+      "mcpReadbackMatches": true
+    },
+    {
+      "path": "billing-preview-20261021/README.md",
+      "sha256": "7fafba0c60ca5348d4cc62be83857f5e2802a038ac87b6eb34698f4ddf2a787a",
+      "mcpReadbackMatches": true
+    },
+    {
+      "path": "billing-preview-20261021/index.html",
+      "sha256": "4fd06ab0565eeadd6390c1e7a416bc2644b8f7bf4a8c4ddd254001a5af3c98c8",
+      "mcpReadbackMatches": true
+    },
+    {
+      "path": "billing-preview-20261021/branch-preview.js",
+      "sha256": "70281a13db2f31f91d279fd7dee193992c4cbf8dbab8b148db8319e27663b5da",
+      "mcpReadbackMatches": true
+    },
+    {
+      "path": "billing-preview-20261021/branch-preview.css",
+      "sha256": "6eb674d571dd461cc8c834a7449991ce8f76f87867660f6f8ac87b481bf910a1",
+      "mcpReadbackMatches": true
+    },
+    {
+      "path": "billing-preview-20261021/atelier.html",
+      "sha256": "c62c831e604299b826b5e94980a2d0bd4db00ee7a96d58eb917a5b63c6dddbbb",
+      "mcpReadbackMatches": true
+    }
+  ],
+  "scope": "Design preview source only, not payment/inference/device acceptance",
+  "browserAcceptance": {
+    "surface": "Codex in-app browser, computer-use API",
+    "date": "2026-10-21",
+    "desktopViews": [
+      "profile",
+      "balance",
+      "topup",
+      "offers",
+      "billing",
+      "alby",
+      "conversation"
+    ],
+    "nameClickOpensProfile": true,
+    "nameEnterOpensProfile": true,
+    "historyBackForward": true,
+    "noPreselectedPaidOffer": true,
+    "emptyOfferSelectionBlocked": true,
+    "checkoutReportsNotConnected": true,
+    "topupEmptyAmountBlocked": true,
+    "topup50CreditsReportsNotConnected": true,
+    "albyEmptyQuestionBlocked": true,
+    "albyQuoteReportsNotConnected": true,
+    "walletPaymentDisabledWithoutQuote": true,
+    "originalAtelierOpenedAndNameReturnedToProfile": true,
+    "mobileViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "mobileAllSevenViewsHaveOneActiveSection": true,
+    "mobileDocumentWidths": [
+      384,
+      384,
+      384,
+      384,
+      384,
+      384,
+      384
+    ],
+    "allThreeOriginalCharacterImagesLoaded": true,
+    "observedConsoleErrors": [],
+    "paymentOrInferenceAcceptance": false
+  }
+}

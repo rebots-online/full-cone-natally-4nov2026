@@ -1,0 +1,38 @@
+@startuml
+title src/services/readingStyle.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "readingStyle.ts\nfile L1-28\nfile:src/services/readingStyle.ts" as N0
+rectangle "../../SOUL.md?raw\nimport L1-1\nimport:b2685a934ea94933c1714bc0fef22aca" as N1
+rectangle "../../READING_RUBRIC.md?raw\nimport L2-2\nimport:64ad7fbbcd7c9977b9d5ef7a1d585927" as N2
+rectangle "ReadingStyle\ntype_alias L5-5\ntype_alias:8b0e9625557a5a43e0fefbc45df2fda5" as N3
+rectangle "READING_STYLE_EVENT\nconstant L6-6\nconstant:57ddb0e8aac5b5e38d5ee9ed43efd287" as N4
+rectangle "storageKey\nfunction L7-7\nfunction:442ca58fcec14ad2989450a75d660c3d" as N5
+rectangle "normalizeReadingStyle\nfunction L8-8\nfunction:7dd047f4f351aef79aeaa8f02da39d9f" as N6
+rectangle "loadReadingStyle\nfunction L9-9\nfunction:6c4dfceb8abced0f403cf3cfef22f76c" as N7
+rectangle "saveReadingStyle\nfunction L10-14\nfunction:453c07cca82271df890281987e9e645a" as N8
+rectangle "clearReadingStyle\nfunction L15-19\nfunction:63e0cbcfc001fc9faee64e5c033daf1e" as N9
+rectangle "readingStylePrompt\nfunction L20-27\nfunction:0153240cc06abed93248c9daef2cca69" as N10
+N0 --> N1 : contains E2025
+N0 --> N2 : contains E2026
+N0 --> N3 : contains E2027
+N0 --> N4 : contains E2028
+N0 --> N5 : contains E2029
+N0 --> N6 : contains E2030
+N0 --> N7 : contains E2031
+N0 --> N8 : contains E2032
+N0 --> N9 : contains E2033
+N0 --> N10 : contains E2034
+N8 --> N4 : references E2035
+N9 --> N4 : references E2036
+N0 --> N1 : imports E3549
+N0 --> N2 : imports E3550
+N6 --> N3 : references E5974
+N7 --> N3 : references E5976
+N7 --> N3 : references E5977
+N8 --> N3 : references E5979
+N8 --> N5 : calls E5980
+N9 --> N5 : calls E5981
+N10 --> N3 : references E5982
+@enduml

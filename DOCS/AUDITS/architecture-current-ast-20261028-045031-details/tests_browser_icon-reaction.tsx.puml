@@ -1,0 +1,16 @@
+@startuml
+title tests/browser/icon-reaction.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "icon-reaction.tsx\nfile L1-10\nfile:tests/browser/icon-reaction.tsx" as N0
+rectangle "react\nimport L1-1\nimport:3ecc6869e39e71ed251662cecdbb83ec" as N1
+rectangle "react-dom/client\nimport L2-2\nimport:dd89c5f60c3d4ab666c4349498fbd512" as N2
+rectangle "../../src/components/NatallyIcon\nimport L3-3\nimport:3d97e5def1efccd9bee88e7d7ce290e7" as N3
+rectangle "../../src/components/natally-icon.css\nimport L4-4\nimport:35118ceca79f5bdcdf947b3bd013519b" as N4
+N0 --> N1 : contains E2626
+N0 --> N2 : contains E2627
+N0 --> N3 : contains E2628
+N0 --> N4 : contains E2629
+N0 --> N4 : imports E3643
+@enduml

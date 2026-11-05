@@ -1,0 +1,21 @@
+@startuml
+title src/hooks/useVisualViewport.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "useVisualViewport.ts\nfile L1-35\nfile:src/hooks/useVisualViewport.ts" as N0
+rectangle "react\nimport L1-1\nimport:fd737a9e60740e41dd69b54474652c62" as N1
+rectangle "../services/chatViewport\nimport L2-2\nimport:154e01596243c96fea3c305503a99b6d" as N2
+rectangle "readViewport\nfunction L4-16\nfunction:a079aa311abb4b2d9b5af790cd6c0d0e" as N3
+rectangle "useVisualViewport\nfunction L18-34\nfunction:e587f32751c877bd0e365cbf0df9febf" as N4
+rectangle "update\nfunction L22-22\nfunction:d5805eaeba4eb1df49e4f7c543815045" as N5
+N0 --> N1 : contains E1282
+N0 --> N2 : contains E1283
+N0 --> N3 : contains E1284
+N0 --> N4 : contains E1285
+N4 --> N5 : contains E1286
+N5 --> N3 : calls E5351
+N4 --> N5 : calls E5352
+N4 --> N3 : references E5353
+N4 --> N5 : references E5354
+@enduml

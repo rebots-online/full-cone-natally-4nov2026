@@ -1,0 +1,100 @@
+@startuml
+title src/services/authoredChartExplanations.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "authoredChartExplanations.ts\nfile L1-304\nfile:src/services/authoredChartExplanations.ts" as N0
+rectangle "./chartTargets\nimport L5-5\nimport:ca41937c6d349019826858e55313a225" as N1
+rectangle "./ephemeris\nimport L6-6\nimport:94e467c4345c1e79d544a649b2fa8726" as N2
+rectangle "targets\nproperty L8-8\nproperty:265730256098141e7b04a69629e637d6" as N3
+rectangle "title\nproperty L8-8\nproperty:64baded3d2186a1cfda522c3966034aa" as N4
+rectangle "text\nproperty L8-8\nproperty:df05bb6a37cd64ab5fda40153ea85986" as N5
+rectangle "AuthoredExplanation\ntype_alias L8-8\ntype_alias:45a3202f91a59f712e0c0890b5657d61" as N6
+rectangle "CONTEXT_LINE\nconstant L10-10\nconstant:ebfd5f3eaca70475462e926f868ef36c" as N7
+rectangle "OFFER_LINE\nconstant L11-11\nconstant:90a13df3dfae967d0fcb92bb5abc9bb0" as N8
+rectangle "sanitizeName\nfunction L13-14\nfunction:d9e3dc3676d6608aea73f1780fcffe30" as N9
+rectangle "ordinal\nfunction L16-20\nfunction:1db7ffcb9627e673b829e6b83de28f41" as N10
+rectangle "ancient\nproperty L22-22\nproperty:0fb18f39e1a9c062f5d3d62a20eeef02" as N11
+rectangle "what\nproperty L22-22\nproperty:3718b15eb818521a6566770e9cadbae7" as N12
+rectangle "q\nproperty L22-22\nproperty:4c49c4cc78cead5eb5a1658c003d67e1" as N13
+rectangle "modern\nproperty L22-22\nproperty:59d3e85b9bb33ccc5427b0b86d204013" as N14
+rectangle "why\nproperty L22-22\nproperty:66a830993648325e6ce42e0d3a0aeb56" as N15
+rectangle "trad\nproperty L22-22\nproperty:9f99b08ab6ceec72f3fa98f3fcc28ff4" as N16
+rectangle "LessonCore\ntype_alias L22-22\ntype_alias:d9fd8dd7b85ace87dd17d9eb71572011" as N17
+rectangle "BODIES\nconstant L24-120\nconstant:ae395777493edb0830c8562e821e3c9e" as N18
+rectangle "HOUSE_SYSTEMS_CONTEXT\nconstant L122-122\nconstant:6235115746062d8a5ed1cb6512436d91" as N19
+rectangle "HOUSE_CORES\nconstant L124-137\nconstant:9b44ed9d85286b88d275a610184f8922" as N20
+rectangle "SIGN_CORES\nconstant L139-152\nconstant:d345c8d20ae98f2a24f267213e836893" as N21
+rectangle "ASPECT_CORES\nconstant L154-160\nconstant:4d1dd11dba0d2d5e4631678539ae8d9c" as N22
+rectangle "GENERAL_TITLE\nconstant L162-162\nconstant:ffc442c5f97f82bf2e22b92b2c377c8e" as N23
+rectangle "GENERAL_LESSON\nconstant L163-168\nconstant:4d08a500a1d40fb670c21f5eb0102f89" as N24
+rectangle "HOUSE_TOPICS\nconstant L170-183\nconstant:3ae1f3e02560c2651683b8d4b4899d79" as N25
+rectangle "buildLesson\nfunction L185-201\nfunction:c3e9dea4421973ce1b83f306206574aa" as N26
+rectangle "bodyFacts\nfunction L203-217\nfunction:f62362169b2149b6b59b9d1e31320efd" as N27
+rectangle "resolveDatedTarget\nfunction L219-240\nfunction:7f7b79f7e80a314926dfbd5ad23f2d1e" as N28
+rectangle "getAuthoredChartExplanation\nfunction L242-292\nfunction:9dd9b0d1be13e4bcf1aea67ab2c92dcb" as N29
+rectangle "getAuthoredConversationClose\nfunction L294-303\nfunction:013d0bb9429743dd1ec918309bf337af" as N30
+N0 --> N1 : contains E1425
+N0 --> N2 : contains E1426
+N0 --> N6 : contains E1427
+N6 --> N4 : contains E1428
+N6 --> N5 : contains E1429
+N6 --> N3 : contains E1430
+N0 --> N7 : contains E1431
+N0 --> N8 : contains E1432
+N0 --> N9 : contains E1433
+N0 --> N10 : contains E1434
+N0 --> N17 : contains E1435
+N17 --> N12 : contains E1436
+N17 --> N16 : contains E1437
+N17 --> N15 : contains E1438
+N17 --> N13 : contains E1439
+N17 --> N11 : contains E1440
+N17 --> N14 : contains E1441
+N0 --> N18 : contains E1442
+N0 --> N19 : contains E1443
+N0 --> N20 : contains E1444
+N0 --> N21 : contains E1445
+N0 --> N22 : contains E1446
+N0 --> N23 : contains E1447
+N0 --> N24 : contains E1448
+N0 --> N25 : contains E1449
+N0 --> N26 : contains E1450
+N0 --> N27 : contains E1451
+N0 --> N28 : contains E1452
+N0 --> N29 : contains E1453
+N0 --> N30 : contains E1454
+N26 --> N8 : references E1455
+N26 --> N7 : references E1456
+N29 --> N24 : references E1457
+N29 --> N23 : references E1458
+N29 --> N22 : references E1459
+N29 --> N19 : references E1460
+N29 --> N20 : references E1461
+N29 --> N25 : references E1462
+N29 --> N21 : references E1463
+N29 --> N18 : references E1464
+N18 --> N17 : references E5506
+N20 --> N17 : references E5507
+N21 --> N17 : references E5508
+N22 --> N17 : references E5509
+N24 --> N17 : references E5510
+N26 --> N17 : references E5511
+N26 --> N6 : references E5512
+N27 --> N10 : calls E5515
+N29 --> N6 : references E5521
+N29 --> N9 : calls E5523
+N29 --> N26 : calls E5525
+N29 --> N28 : calls E5527
+N29 --> N26 : calls E5528
+N29 --> N26 : calls E5529
+N29 --> N27 : calls E5530
+N29 --> N26 : calls E5532
+N29 --> N26 : calls E5533
+N29 --> N10 : calls E5534
+N29 --> N26 : calls E5535
+N29 --> N26 : calls E5536
+N29 --> N26 : calls E5537
+N30 --> N6 : references E5538
+N30 --> N9 : calls E5540
+@enduml

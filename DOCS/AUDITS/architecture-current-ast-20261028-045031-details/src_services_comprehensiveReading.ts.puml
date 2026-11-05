@@ -1,0 +1,44 @@
+@startuml
+title src/services/comprehensiveReading.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "comprehensiveReading.ts\nfile L1-282\nfile:src/services/comprehensiveReading.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:af0b7d37ceb28b7fb1f02a64872f90d1" as N1
+rectangle "./astrowisdom\nimport L2-2\nimport:708407cc83ac5a03d536262117033049" as N2
+rectangle "ComprehensiveReadingSection\ninterface L4-8\ninterface:b499dc72e9cf2f96d5e5fb7beb02e696" as N3
+rectangle "title\nproperty L5-5\nproperty:05838eca863fd3075bcfffc27d274dac" as N4
+rectangle "subtitle\nproperty L6-6\nproperty:f4f23c866e68a34d58bef3c1f3ca99fd" as N5
+rectangle "content\nproperty L7-7\nproperty:a7ba79630d0035d2d1b17581b5d28c67" as N6
+rectangle "ComprehensiveReadingResult\ninterface L10-17\ninterface:ce5e3d88d9cfc56bab031c7c86d4fdbd" as N7
+rectangle "title\nproperty L11-11\nproperty:b89102f04f9ba9e7ae2b0b74c8646cb8" as N8
+rectangle "nativeName\nproperty L12-12\nproperty:f1dd33514902ecd3ab370ba32300c393" as N9
+rectangle "observationContext\nproperty L13-13\nproperty:9dd46c04971c2a8551719dcba07f9a36" as N10
+rectangle "sections\nproperty L14-14\nproperty:5e9773b6ce31cf44d85f11384fbba02c" as N11
+rectangle "natallyPersonalNote\nproperty L15-15\nproperty:ee3e75133f9bbe50b0682f4f9583a6af" as N12
+rectangle "fullMarkdown\nproperty L16-16\nproperty:074d43a935bc2e54ce7e6f54c209fdc1" as N13
+rectangle "SIGN_DESCRIPTIONS\nconstant L19-92\nconstant:666fa6b80e9e12f0bf6eeab41582109b" as N14
+rectangle "PLANET_ARCHETYPAL_ROLES\nconstant L94-107\nconstant:ff287a3bff60b9a8d136960792d33e88" as N15
+rectangle "generateComprehensiveNatalReading\nfunction L109-281\nfunction:382a10921cf7b79533bdccd225446768" as N16
+N0 --> N1 : contains E1536
+N0 --> N2 : contains E1537
+N0 --> N3 : contains E1538
+N3 --> N4 : contains E1539
+N3 --> N5 : contains E1540
+N3 --> N6 : contains E1541
+N0 --> N7 : contains E1542
+N7 --> N8 : contains E1543
+N7 --> N9 : contains E1544
+N7 --> N10 : contains E1545
+N7 --> N11 : contains E1546
+N7 --> N12 : contains E1547
+N7 --> N13 : contains E1548
+N0 --> N14 : contains E1549
+N0 --> N15 : contains E1550
+N0 --> N16 : contains E1551
+N16 --> N14 : references E1552
+N16 --> N15 : references E1553
+N11 --> N3 : references E5645
+N16 --> N7 : references E5647
+N16 --> N3 : references E5650
+@enduml

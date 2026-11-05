@@ -1,0 +1,51 @@
+{
+  "manifestVersion": 1,
+  "createdAt": "2026-10-27",
+  "openDesignProject": "natally-ai-studio",
+  "folder": "natally-completion-20261027",
+  "proposedFinalHtmlArtifact": "natally-marketing-landing",
+  "evidenceBoundary": "Design artifacts only. No authentication, quote, charge, settlement, grant, preload or inference occurred. CP, CTA and PB rows remain NOT RECORDED.",
+  "previewUrlNote": "Local Open Design daemon raw-file URLs; reachable only on this machine while the daemon runs. No public preview exists.",
+  "artifacts": [
+    {
+      "id": "natally-marketing-landing",
+      "path": "natally-completion-20261027/marketing-landing.html",
+      "kind": "html",
+      "role": "Public marketing entry with one matching buy action per USP section (PB30, CTA01)",
+      "proposedFinal": true,
+      "sha256": "f644d27d164177558cea52e6d956f789b85f741f0bf145390694d7288dc7f0bc",
+      "previewUrl": "http://127.0.0.1:7456/api/projects/natally-ai-studio/raw/natally-completion-20261027/marketing-landing.html"
+    },
+    {
+      "id": "natally-purchase-states",
+      "path": "natally-completion-20261027/purchase-states.html",
+      "kind": "html",
+      "role": "Sixteen purchase/access presentations: sign-in handoff, paywall loading/quoted/unavailable, checkout open, pending, preparing, ready/preloaded, cancelled, failed, restore checking, nothing found, reconciling, account changed, turns used, capacity unavailable",
+      "proposedFinal": false,
+      "acceptsQuery": "?product=reading|conversation&source=<section-id>",
+      "sha256": "9198dc4df2a92ad1cb9e08556b2d525acfb41d186253dfeab978cc43cbf4350f",
+      "previewUrl": "http://127.0.0.1:7456/api/projects/natally-ai-studio/raw/natally-completion-20261027/purchase-states.html"
+    },
+    {
+      "id": "natally-design-integration",
+      "path": "natally-completion-20261027/DESIGN-DECISIONS-AND-INTEGRATION.md",
+      "kind": "markdown",
+      "role": "Design decisions and exact callback/data contracts for mechanical integration",
+      "proposedFinal": false,
+      "previewUrl": "http://127.0.0.1:7456/api/projects/natally-ai-studio/raw/natally-completion-20261027/DESIGN-DECISIONS-AND-INTEGRATION.md"
+    }
+  ],
+  "assets": [
+    { "path": "natally-completion-20261027/assets/natally-paywall-original.webp", "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95", "width": 1586, "height": 992, "source": "Artwork referenced by approved Figma Make paywall qaDnpIyfhFmqa7E5fRDIwY public/paywall.html; hash equals repo public/paywall/natally-original.webp" },
+    { "path": "natally-completion-20261027/assets/natally-still.webp", "sha256": "05f7b2fc0f4fb160d85a8bd7a8cf4e27eedb48e3c70fac5607eab1cbed42f5db", "width": 400, "height": 400, "source": "atelier-conversation-20261017/assets/natally-still.webp (copy)" },
+    { "path": "natally-completion-20261027/assets/natally-mascot.webp", "sha256": "a40780bad977525afdd6c7f92ed47a4b0ba090b1453921a0ad4248208301f873", "width": 400, "height": 400, "source": "atelier-conversation-20261017/assets/natally-mascot.webp (copy, unreferenced)" }
+  ],
+  "preservedUnmodified": [
+    "natally-completion-20261027/DESIGN.md",
+    "natally-completion-20261027/PRD.md",
+    "natally-completion-20261027/ARCHITECTURE.md",
+    "atelier-conversation-20261017/",
+    "billing-preview-20261021/",
+    "Figma Make qaDnpIyfhFmqa7E5fRDIwY public/paywall.html (read only)"
+  ]
+}

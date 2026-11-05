@@ -1,0 +1,21 @@
+@startuml
+title src/components/atelier/AtelierSeason.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AtelierSeason.tsx\nfile L1-82\nfile:src/components/atelier/AtelierSeason.tsx" as N0
+rectangle "react\nimport L1-1\nimport:5ba539e4a1fcd1b12aea55e191074ac1" as N1
+rectangle "../../services/atelierSound\nimport L2-2\nimport:bc01cfd8f068ef2af78fd0edf1790506" as N2
+rectangle "../../services/atelierTheme\nimport L3-3\nimport:8c7c3787a6be55bf5b2f718b4c7ac075" as N3
+rectangle "FRESH_COOKIES\nconstant L4-4\nconstant:fb6b8f26dfe8282738f6ff0e043805aa" as N4
+rectangle "AtelierSeason\nfunction L6-81\nfunction:3ec999350cd321b50607fe3204b13cf4" as N5
+rectangle "bite\nfunction L21-21\nfunction:860faebd493ad6c8a2f41af56b637f39" as N6
+N0 --> N1 : contains E650
+N0 --> N2 : contains E651
+N0 --> N3 : contains E652
+N0 --> N4 : contains E653
+N0 --> N5 : contains E654
+N5 --> N6 : contains E655
+N5 --> N4 : references E656
+N5 --> N6 : references E4379
+@enduml

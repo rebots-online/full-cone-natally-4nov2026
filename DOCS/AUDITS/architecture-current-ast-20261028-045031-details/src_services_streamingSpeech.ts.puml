@@ -1,0 +1,36 @@
+@startuml
+title src/services/streamingSpeech.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "streamingSpeech.ts\nfile L1-92\nfile:src/services/streamingSpeech.ts" as N0
+rectangle "./supertonicTts\nimport L1-1\nimport:4f759da235c1f24db5705bb85a30c844" as N1
+rectangle "./voiceService\nimport L2-2\nimport:84da79c79529099f2417ad3f610f8039" as N2
+rectangle "createStreamingSpeech\nfunction L5-91\nfunction:d821067eef102f24c4a394a33c945c47" as N3
+rectangle "active\nfunction L20-20\nfunction:7834b55e78acbfef3fe72fed0426db7a" as N4
+rectangle "prime\nfunction L21-28\nfunction:fec044ff5a63126a871461d64dd3f68d" as N5
+rectangle "pump\nfunction L29-48\nfunction:525d3941e8e156652bd454ba4dc076a8" as N6
+rectangle "flush\nfunction L49-74\nfunction:0dd70703bee1caa099bd48863c64e15b" as N7
+N0 --> N1 : contains E2288
+N0 --> N2 : contains E2289
+N0 --> N3 : contains E2290
+N3 --> N4 : contains E2291
+N3 --> N5 : contains E2292
+N3 --> N6 : contains E2293
+N3 --> N7 : contains E2294
+N5 --> N4 : calls E6249
+N6 --> N4 : calls E6254
+N6 --> N4 : calls E6255
+N6 --> N5 : calls E6256
+N6 --> N5 : calls E6257
+N6 --> N4 : calls E6259
+N6 --> N4 : calls E6260
+N6 --> N4 : calls E6261
+N6 --> N4 : calls E6262
+N7 --> N4 : calls E6263
+N7 --> N5 : calls E6265
+N7 --> N6 : calls E6266
+N3 --> N7 : calls E6267
+N3 --> N7 : calls E6268
+N3 --> N4 : calls E6269
+@enduml

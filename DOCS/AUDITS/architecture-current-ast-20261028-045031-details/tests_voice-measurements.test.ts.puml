@@ -1,0 +1,15 @@
+@startuml
+title tests/voice-measurements.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voice-measurements.test.ts\nfile L1-91\nfile:tests/voice-measurements.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:d8d834288becbb1fa088966f858c1d4e" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:89b2cf8f02eb50350d21b045103ecab4" as N2
+rectangle "../src/services/voiceMeasurements\nimport L3-3\nimport:62c23ea71cc469f2acfa9ce871975793" as N3
+rectangle "../scripts/summarize-voice-measurements\nimport L4-4\nimport:2dd7177758a03417814254bc903a70ed" as N4
+N0 --> N1 : contains E2830
+N0 --> N2 : contains E2831
+N0 --> N3 : contains E2832
+N0 --> N4 : contains E2833
+@enduml

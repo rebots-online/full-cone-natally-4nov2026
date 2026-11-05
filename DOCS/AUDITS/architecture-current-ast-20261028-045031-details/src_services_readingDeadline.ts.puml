@@ -1,0 +1,13 @@
+@startuml
+title src/services/readingDeadline.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "readingDeadline.ts\nfile L1-14\nfile:src/services/readingDeadline.ts" as N0
+rectangle "createReadingDeadline\nfunction L2-13\nfunction:cfebba0554aea5dc5939a506c42b0b91" as N1
+rectangle "progress\nfunction L6-10\nfunction:b85b16bdaac96cc1daaa9179d9b980de" as N2
+N0 --> N1 : contains E1983
+N1 --> N2 : contains E1984
+N1 --> N2 : calls E5942
+N1 --> N2 : references E5943
+@enduml

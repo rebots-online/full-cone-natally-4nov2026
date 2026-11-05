@@ -1,0 +1,48 @@
+@startuml
+title scripts/verify-calculation-api.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "verify-calculation-api.mjs\nfile L1-61\nfile:scripts/verify-calculation-api.mjs" as N0
+rectangle "node:fs/promises\nimport L1-1\nimport:8448357e7ec7665dad449e021756d2f3" as N1
+rectangle "node:crypto\nimport L2-2\nimport:f1839ab8c136dc711a1b7519ca20bbbb" as N2
+rectangle "../src/services/ephemeris.ts\nimport L3-3\nimport:f9fafb1f3d48f6d1ab828351b5b3f573" as N3
+rectangle "../src/services/calculationTools.ts\nimport L4-4\nimport:fcf9d79a325cd38cc36effe18c13b9eb" as N4
+rectangle "../src/services/natallyChat.ts\nimport L5-5\nimport:e78be18c83b5a00f6440cf39f3d8f34e" as N5
+rectangle "../src/services/hostedInference.ts\nimport L6-6\nimport:adcb43e1dfa24e2914f1f4de0ec8c3f9" as N6
+rectangle "config\nconstant L8-8\nconstant:9d404afbe8e0d87d5f53b4f0f2634f2a" as N7
+rectangle "endpoint\nconstant L9-9\nconstant:d6958ea78914d38c157c4b3dd95ed32e" as N8
+rectangle "originalFetch\nconstant L10-10\nconstant:33bd84d01d60411918c859a22730d7ce" as N9
+rectangle "calls\nconstant L11-11\nconstant:15afbda937161102cfc28401f0aaee3d" as N10
+rectangle "diagnostics\nconstant L12-12\nconstant:956793a061821137dea6086f4eeadc50" as N11
+rectangle "identity\nfunction L21-26\nfunction:30fe46e16691cbf481d654e7c3bfc5ef" as N12
+rectangle "token\nvariable L27-27\nvariable:25a11ca140df1d9296700e08442d6902" as N13
+rectangle "result\nvariable L28-28\nvariable:69f48af0fc6a9cc8c36c8b3959b0d0cb" as N14
+rectangle "failure\nvariable L29-29\nvariable:6f534297860725a20b51ff259feea31a" as N15
+rectangle "signup\nconstant L31-31\nconstant:db6ee4d9dbf9edc17821702d326e8562" as N16
+rectangle "chart\nconstant L33-33\nconstant:7b6738cc4357d6d25ed1952b6899df62" as N17
+rectangle "session\nconstant L34-34\nconstant:cebdd8f30ccdf76f47806018785fc610" as N18
+rectangle "operations\nconstant L46-46\nconstant:d106ef8c33cfa503066fddbef05cc8b4" as N19
+N0 --> N1 : contains E330
+N0 --> N2 : contains E331
+N0 --> N3 : contains E332
+N0 --> N4 : contains E333
+N0 --> N5 : contains E334
+N0 --> N6 : contains E335
+N0 --> N7 : contains E336
+N0 --> N8 : contains E337
+N0 --> N9 : contains E338
+N0 --> N10 : contains E339
+N0 --> N11 : contains E340
+N0 --> N12 : contains E341
+N0 --> N13 : contains E342
+N0 --> N14 : contains E343
+N0 --> N15 : contains E344
+N0 --> N16 : contains E345
+N0 --> N17 : contains E346
+N0 --> N18 : contains E347
+N0 --> N19 : contains E348
+N0 --> N9 : calls E4046
+N16 --> N12 : calls E4047
+N0 --> N12 : calls E4052
+@enduml

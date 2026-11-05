@@ -1,0 +1,26 @@
+@startuml
+title src/components/InferenceAccessSettings.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "InferenceAccessSettings.tsx\nfile L1-100\nfile:src/components/InferenceAccessSettings.tsx" as N0
+rectangle "react\nimport L1-1\nimport:7d3fe18983a5bd6d3fad654d8da51528" as N1
+rectangle "../services/firebase\nimport L2-2\nimport:dcf20f5c1b54bcc58d8d16eadf79e49f" as N2
+rectangle "../services/revenueCatCheckout\nimport L3-3\nimport:b11d1f3e695fb3f1f2e3e8ec205698b2" as N3
+rectangle "../services/inferenceAccess\nimport L4-4\nimport:8d06e99c6677115b0e76be2c51717304" as N4
+rectangle "../services/billingAccess\nimport L5-5\nimport:2ef57dade8ded3ab99386b85f57918b9" as N5
+rectangle "InferenceAccessSettings\nfunction L7-99\nfunction:0f1be9d227693c0bc0c6520e8176b021" as N6
+rectangle "refreshBalance\nfunction L18-49\nfunction:8ed16bf6ec7bd4e842b7e28eb14a6945" as N7
+rectangle "refreshBilling\nfunction L65-76\nfunction:bab07809a215cafe552eedcaed68bc85" as N8
+N0 --> N1 : contains E818
+N0 --> N2 : contains E819
+N0 --> N3 : contains E820
+N0 --> N4 : contains E821
+N0 --> N5 : contains E822
+N0 --> N6 : contains E823
+N6 --> N7 : contains E824
+N6 --> N8 : contains E825
+N6 --> N7 : calls E4582
+N6 --> N7 : references E4585
+N6 --> N8 : references E4586
+@enduml

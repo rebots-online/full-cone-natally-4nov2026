@@ -1,0 +1,102 @@
+@startuml
+title netlify/lib/blink-store.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "blink-store.mjs\nfile L1-298\nfile:netlify/lib/blink-store.mjs" as N0
+rectangle "node:crypto\nimport L20-20\nimport:b2dc169e8a34dffdaddb78bc97c7ba72" as N1
+rectangle "../../firebase-applet-config.json\nimport L21-21\nimport:a26100489ec318c5b8416a85df425f63" as N2
+rectangle "TOKEN_ENDPOINT\nconstant L23-23\nconstant:5c184a93f435c032bdb493df7f35fb76" as N3
+rectangle "OAUTH_SCOPE\nconstant L24-24\nconstant:a64750491836e390e0bec75d34d9c623" as N4
+rectangle "TIMEOUT_MS\nconstant L25-25\nconstant:36b4630ea4c12e32896222065061f76c" as N5
+rectangle "COLLECTION_ID\nconstant L26-26\nconstant:d789b31a1a3d7de7868113a8c331503c" as N6
+rectangle "ID_PATTERN\nconstant L27-27\nconstant:affec440c85b96061af470655c8ba3c6" as N7
+rectangle "PRECONDITION_FAILED\nconstant L28-28\nconstant:7e632d12cb1d3f5db50ee538dc15fb0b" as N8
+rectangle "sanitizeError\nfunction L30-34\nfunction:31f26051fab08be26597aa8633859e76" as N9
+rectangle "fail\nfunction L36-38\nfunction:688f5ed8d1c7b540ac17594025ecd276" as N10
+rectangle "readEnvValue\nfunction L40-44\nfunction:e689253a3df68bd4a5a9f510ce97c3ba" as N11
+rectangle "base64url\nfunction L46-48\nfunction:8b1629a8611bed9abc6a6f8c6a112d95" as N12
+rectangle "fetchAccessToken\nfunction L50-93\nfunction:61a90c90d95c90ff313ed86f89f5464b" as N13
+rectangle "createBlinkStore\nfunction L108-297\nfunction:70e5d077ef3cba9e862b5f21d7db210a" as N14
+rectangle "requireId\nfunction L150-155\nfunction:291ab440f56dee9296ac186222f9316c" as N15
+rectangle "resourceName\nfunction L157-159\nfunction:86b13629ba37b1839d8aca2a8a3b90b7" as N16
+rectangle "documentUrl\nfunction L161-163\nfunction:4708108f7999da49d441757f15395a06" as N17
+rectangle "commit\nfunction L165-179\nfunction:c7d03d8b205ca1073bf5061620ead5dc" as N18
+rectangle "payloadFields\nfunction L181-183\nfunction:df7fa776cc8284a626bae436eaff7f4f" as N19
+rectangle "readUpdateAndParse\nfunction L185-221\nfunction:21ad52b1bd7c37e21f72bae172c24495" as N20
+rectangle "conditionalErrorStatus\nfunction L227-237\nfunction:e3056d8b0ded261233ca542f83603788" as N21
+N0 --> N1 : contains E125
+N0 --> N2 : contains E126
+N0 --> N3 : contains E127
+N0 --> N4 : contains E128
+N0 --> N5 : contains E129
+N0 --> N6 : contains E130
+N0 --> N7 : contains E131
+N0 --> N8 : contains E132
+N0 --> N9 : contains E133
+N0 --> N10 : contains E134
+N0 --> N11 : contains E135
+N0 --> N12 : contains E136
+N0 --> N13 : contains E137
+N0 --> N14 : contains E138
+N14 --> N15 : contains E139
+N14 --> N16 : contains E140
+N14 --> N17 : contains E141
+N14 --> N18 : contains E142
+N14 --> N19 : contains E143
+N14 --> N20 : contains E144
+N14 --> N21 : contains E145
+N13 --> N5 : references E146
+N13 --> N3 : references E147
+N13 --> N4 : references E148
+N14 --> N8 : references E149
+N14 --> N5 : references E150
+N14 --> N6 : references E151
+N14 --> N7 : references E152
+N15 --> N7 : references E153
+N16 --> N6 : references E154
+N18 --> N5 : references E155
+N20 --> N5 : references E156
+N0 --> N2 : imports E2871
+N10 --> N9 : calls E3920
+N13 --> N12 : calls E3921
+N13 --> N12 : calls E3922
+N13 --> N10 : calls E3923
+N13 --> N10 : calls E3924
+N13 --> N10 : calls E3925
+N13 --> N10 : calls E3926
+N14 --> N11 : calls E3927
+N14 --> N10 : calls E3928
+N14 --> N10 : calls E3929
+N14 --> N10 : calls E3930
+N14 --> N10 : calls E3931
+N14 --> N10 : calls E3932
+N14 --> N10 : calls E3933
+N14 --> N10 : calls E3934
+N14 --> N13 : calls E3935
+N15 --> N10 : calls E3936
+N17 --> N16 : calls E3937
+N18 --> N10 : calls E3938
+N20 --> N17 : calls E3939
+N20 --> N10 : calls E3940
+N20 --> N10 : calls E3941
+N20 --> N10 : calls E3942
+N20 --> N10 : calls E3943
+N20 --> N10 : calls E3944
+N20 --> N10 : calls E3945
+N14 --> N20 : calls E3946
+N14 --> N15 : calls E3947
+N14 --> N15 : calls E3948
+N14 --> N18 : calls E3949
+N14 --> N16 : calls E3950
+N14 --> N19 : calls E3951
+N14 --> N21 : calls E3952
+N14 --> N10 : calls E3953
+N14 --> N15 : calls E3954
+N14 --> N10 : calls E3955
+N14 --> N18 : calls E3956
+N14 --> N16 : calls E3957
+N14 --> N19 : calls E3958
+N14 --> N21 : calls E3959
+N14 --> N10 : calls E3960
+@enduml

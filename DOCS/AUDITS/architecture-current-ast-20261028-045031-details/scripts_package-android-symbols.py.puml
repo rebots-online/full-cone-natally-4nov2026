@@ -1,0 +1,23 @@
+@startuml
+title scripts/package-android-symbols.py — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "package-android-symbols.py\nfile L1-23\nfile:scripts/package-android-symbols.py" as N0
+rectangle "pathlib\nimport L2-2\nimport:2ae81dc01f9fef6845bb950e766f1d18" as N1
+rectangle "subprocess\nimport L3-3\nimport:74a779f5712d028b8deda985c809267b" as N2
+rectangle "sys\nimport L4-4\nimport:57e3750a58d57c0c7c4cfccfb865ff09" as N3
+rectangle "tempfile\nimport L5-5\nimport:6a0841fcbed26a4c0997b323764f0df4" as N4
+rectangle "zipfile\nimport L6-6\nimport:a93378d338abd8ac6d75ab8bdd3ceeff" as N5
+rectangle "libraries\nvariable L10-10\nvariable:832ba839b26dca77b16a9d20a7cf080e" as N6
+rectangle "source\nvariable L18-18\nvariable:44647c38cdd792ae0e6b8a5bbe085af2" as N7
+rectangle "debug\nvariable L19-19\nvariable:1e7e155eedb515d8a3d28e256fb69394" as N8
+N0 --> N1 : contains E202
+N0 --> N2 : contains E203
+N0 --> N3 : contains E204
+N0 --> N4 : contains E205
+N0 --> N5 : contains E206
+N0 --> N6 : contains E207
+N0 --> N7 : contains E208
+N0 --> N8 : contains E209
+@enduml

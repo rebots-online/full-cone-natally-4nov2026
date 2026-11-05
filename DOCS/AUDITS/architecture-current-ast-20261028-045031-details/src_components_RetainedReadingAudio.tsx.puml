@@ -1,0 +1,61 @@
+@startuml
+title src/components/RetainedReadingAudio.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "RetainedReadingAudio.tsx\nfile L1-206\nfile:src/components/RetainedReadingAudio.tsx" as N0
+rectangle "react\nimport L1-1\nimport:a4c755d809f9908563d5a02333eea612" as N1
+rectangle "../services/readingAudio\nimport L2-2\nimport:c62804b63cb000b8d3f785c2cc895ef1" as N2
+rectangle "./PurchaseAccess\nimport L3-3\nimport:f3369d8d48f5d1c4380144f7fa080841" as N3
+rectangle "../services/voiceService\nimport L4-4\nimport:e1bad12218aa0a06b64a0e7dec817a37" as N4
+rectangle "RetainedReadingAudio\nfunction L6-205\nfunction:9c9873597966fcbeb78416c45a721d78" as N5
+rectangle "visualEnd\nfunction L31-38\nfunction:e90c6a0df79228a171e3f5a9799bbbdb" as N6
+rectangle "endPlayback\nfunction L39-45\nfunction:16f8560097d408069bd4fe858a496a92" as N7
+rectangle "refresh\nfunction L50-58\nfunction:8e2cfa786e8d32056fc6b370e3cb992a" as N8
+rectangle "change\nfunction L60-62\nfunction:fe664c5014e3d367d64c739115a743a5" as N9
+rectangle "mishap\nfunction L64-77\nfunction:a1996f83df33d616e15c49451ae1204e" as N10
+rectangle "prepareReplay\nfunction L93-103\nfunction:4ac8091599d75ab57088fe3a55a05e06" as N11
+rectangle "replay\nfunction L104-139\nfunction:cfab911b3f5d752c1f88c864553479fc" as N12
+rectangle "position\nfunction L113-137\nfunction:4ff8dd2e159bb40e658b28f361041f3b" as N13
+rectangle "seekPosition\nfunction L141-150\nfunction:7ce0d8606f66e8b8fc98194f6f28d0e3" as N14
+rectangle "exportPdf\nfunction L152-179\nfunction:7f481b7166c7c18fa568e170b3384a62" as N15
+rectangle "clear\nfunction L181-187\nfunction:721c1d275e59a4e88d052ef5d41b1512" as N16
+N0 --> N1 : contains E1192
+N0 --> N2 : contains E1193
+N0 --> N3 : contains E1194
+N0 --> N4 : contains E1195
+N0 --> N5 : contains E1196
+N5 --> N6 : contains E1197
+N5 --> N7 : contains E1198
+N5 --> N8 : contains E1199
+N5 --> N9 : contains E1200
+N5 --> N10 : contains E1201
+N5 --> N11 : contains E1202
+N5 --> N12 : contains E1203
+N12 --> N13 : contains E1204
+N5 --> N14 : contains E1205
+N5 --> N15 : contains E1206
+N5 --> N16 : contains E1207
+N7 --> N6 : calls E5193
+N5 --> N8 : calls E5197
+N9 --> N8 : calls E5198
+N10 --> N7 : calls E5201
+N10 --> N6 : calls E5202
+N5 --> N7 : calls E5203
+N5 --> N7 : calls E5204
+N11 --> N7 : calls E5209
+N13 --> N7 : calls E5213
+N12 --> N13 : calls E5215
+N16 --> N7 : calls E5225
+N5 --> N6 : calls E5229
+N5 --> N7 : calls E5230
+N5 --> N7 : calls E5232
+N5 --> N7 : calls E5233
+N5 --> N16 : calls E5237
+N5 --> N9 : references E5238
+N5 --> N10 : references E5239
+N5 --> N11 : references E5240
+N5 --> N12 : references E5241
+N5 --> N14 : references E5242
+N5 --> N15 : references E5243
+@enduml

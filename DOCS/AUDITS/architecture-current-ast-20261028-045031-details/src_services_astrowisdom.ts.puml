@@ -1,0 +1,68 @@
+@startuml
+title src/services/astrowisdom.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "astrowisdom.ts\nfile L1-269\nfile:src/services/astrowisdom.ts" as N0
+rectangle "./ephemeris\nimport L2-2\nimport:95b4385e4ed7f16ec5a96803e5c972a4" as N1
+rectangle "NumerologyAndThemes\ninterface L4-25\ninterface:fbb87f07ec84bb5d32db43c4cd33460c" as N2
+rectangle "lifePathNumber\nproperty L5-5\nproperty:c73278a7337eb5058bbdebb3d3bb9b48" as N3
+rectangle "lifePathMeaning\nproperty L6-6\nproperty:1c6f3c0c85d0390b8d83c4d56a831c38" as N4
+rectangle "sunSign\nproperty L7-7\nproperty:6e2b89283f271eb031b2cca20a4e8e1f" as N5
+rectangle "sunSignGlyph\nproperty L8-8\nproperty:c7636743d7384659f8d2f1f9e84ddfc6" as N6
+rectangle "sunSignElement\nproperty L9-9\nproperty:ac1cbb2e42d3d8c10caa5ea093cea8e9" as N7
+rectangle "moonSign\nproperty L10-10\nproperty:07034af43c87f6d1f0466fb2f684f29c" as N8
+rectangle "moonSignGlyph\nproperty L11-11\nproperty:1d0f67a3a4d4acc38e658212582caafb" as N9
+rectangle "moonSignElement\nproperty L12-12\nproperty:0036532f007a4d26da381c54664ae73b" as N10
+rectangle "risingSign\nproperty L13-13\nproperty:66d707518dc2a8fae7b0c372738bed52" as N11
+rectangle "risingSignGlyph\nproperty L14-14\nproperty:6aef182608b571242ccbb40705cb6ea6" as N12
+rectangle "risingSignElement\nproperty L15-15\nproperty:f532813e95639bf4ecb99db98d589275" as N13
+rectangle "corePolarity\nproperty L16-16\nproperty:e4579588a90df51f7113207bc1a8bb1e" as N14
+rectangle "majorThemes\nproperty L17-17\nproperty:f4df12828b193f10ccf382356a6640dd" as N15
+rectangle "astrologicalEventsOfNote\nproperty L18-23\nproperty:617fdd707e25f0c3fe94cf014b0eca68" as N16
+rectangle "traditionalBriefInterpretation\nproperty L24-24\nproperty:965951c4010668ad5daea5640e4785fd" as N17
+rectangle "LIFE_PATH_DESCRIPTIONS\nconstant L27-40\nconstant:f5ff0282e3c69cad13e63932ba7be8d2" as N18
+rectangle "calculateLifePathNumber\nfunction L42-68\nfunction:70bef52db404944fd01bd48f3d54d844" as N19
+rectangle "reduceDigits\nfunction L47-53\nfunction:692dfacb474888b06ecb4b3c0729ec15" as N20
+rectangle "SIGN_ELEMENTS\nconstant L70-83\nconstant:234c12234eda4dca27a804f763e033e0" as N21
+rectangle "SIGN_MODALITIES\nconstant L85-98\nconstant:0c973e0506bb0816cc358ddad9914ab4" as N22
+rectangle "computeThemesAndWisdom\nfunction L100-268\nfunction:2c7991475366c558620fb3ac9af434f6" as N23
+rectangle "hasAspectBetween\nfunction L133-139\nfunction:7e3ca7c5a20171766fb393dd606dc4b4" as N24
+N0 --> N1 : contains E1316
+N0 --> N2 : contains E1317
+N2 --> N3 : contains E1318
+N2 --> N4 : contains E1319
+N2 --> N5 : contains E1320
+N2 --> N6 : contains E1321
+N2 --> N7 : contains E1322
+N2 --> N8 : contains E1323
+N2 --> N9 : contains E1324
+N2 --> N10 : contains E1325
+N2 --> N11 : contains E1326
+N2 --> N12 : contains E1327
+N2 --> N13 : contains E1328
+N2 --> N14 : contains E1329
+N2 --> N15 : contains E1330
+N2 --> N16 : contains E1331
+N2 --> N17 : contains E1332
+N0 --> N18 : contains E1333
+N0 --> N19 : contains E1334
+N19 --> N20 : contains E1335
+N0 --> N21 : contains E1336
+N0 --> N22 : contains E1337
+N0 --> N23 : contains E1338
+N23 --> N24 : contains E1339
+N19 --> N18 : references E1340
+N23 --> N22 : references E1341
+N23 --> N21 : references E1342
+N19 --> N20 : calls E5379
+N19 --> N20 : calls E5380
+N19 --> N20 : calls E5381
+N23 --> N2 : references E5383
+N23 --> N19 : calls E5385
+N23 --> N24 : calls E5386
+N23 --> N24 : calls E5387
+N23 --> N24 : calls E5388
+N23 --> N24 : calls E5389
+N23 --> N24 : calls E5390
+@enduml

@@ -1,0 +1,81 @@
+@startuml
+title src/components/onboarding/FirstLight.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "FirstLight.tsx\nfile L1-503\nfile:src/components/onboarding/FirstLight.tsx" as N0
+rectangle "react\nimport L1-1\nimport:d7f9216f8db24198c4d18d9cc8f3cef0" as N1
+rectangle "react-dom\nimport L2-2\nimport:55acce7bbee76982f2295603730478e7" as N2
+rectangle "../../services/gazetteer\nimport L3-3\nimport:91b8aa3e6c186817e7e6cc13d2f15bd8" as N3
+rectangle "../../services/onboarding\nimport L4-4\nimport:ebf888063b1237c33495437073671059" as N4
+rectangle "./first-light.css\nimport L5-5\nimport:a363e137d50654715722e272f3d96e21" as N5
+rectangle "../../services/supertonicTts\nimport L6-6\nimport:3c94ccf472f8dbc056bd42bbf2640f11" as N6
+rectangle "../../services/transits\nimport L7-7\nimport:f22557904ba7cb07940f44b3e554b1a6" as N7
+rectangle "../../services/birthDate\nimport L8-8\nimport:129cc80631d843572938926236677fef" as N8
+rectangle "./BirthDateFields\nimport L9-9\nimport:944dac2f8b23e8e23947dbbb0d72d02c" as N9
+rectangle "FirstLightProps\ninterface L13-18\ninterface:f4ec35df22c933ac9d70f746cf9bc06c" as N10
+rectangle "gazetteer\nproperty L14-14\nproperty:0606c3b11c3461db55fc8a903236fae5" as N11
+rectangle "busy\nproperty L15-15\nproperty:450ede79890b51b4dba90808d7601a91" as N12
+rectangle "error\nproperty L16-16\nproperty:7fd986f700d22ef3ec9b79772f52b3cc" as N13
+rectangle "onCreate\nproperty L17-17\nproperty:79cf163b1aa5153845de479054510d2a" as N14
+rectangle "QUESTION_SEQUENCE\nconstant L20-26\nconstant:a0b7c406e7bd0fdd373ac4de4e0ea574" as N15
+rectangle "MAX_BIRTH_DATE\nconstant L29-33\nconstant:0aae1e3ca50019e8fc61c68b76b3e147" as N16
+rectangle "stars\nconstant L35-45\nconstant:7fa2443866a15742f4b71ba5a960abde" as N17
+rectangle "seed\nfunction L36-36\nfunction:7ea26b97da649383c3dcf4595c4988a0" as N18
+rectangle "normalizePlaceLabel\nfunction L47-48\nfunction:7d9ed65043c8d5bcde473ad22b67f30a" as N19
+rectangle "FirstLight\nfunction L51-500\nfunction:3da6180871ead7f3c71a4c06ab869ab6" as N20
+rectangle "latLabel\nfunction L99-99\nfunction:58d547e930c58b6cfddd0e2116a0b37b" as N21
+rectangle "lonLabel\nfunction L100-100\nfunction:df4d91c488febb4cd6c48ca61f93ea61" as N22
+rectangle "update\nfunction L117-117\nfunction:d9e68f0d36c75c12f9136c0fd6188be2" as N23
+rectangle "syncCaret\nfunction L149-152\nfunction:0dc11185adae5a483d9d2675492b38bd" as N24
+rectangle "advance\nfunction L154-180\nfunction:55fcb7da62cf70c79e58da426a8f6d8e" as N25
+N0 --> N1 : contains E1052
+N0 --> N2 : contains E1053
+N0 --> N3 : contains E1054
+N0 --> N4 : contains E1055
+N0 --> N5 : contains E1056
+N0 --> N6 : contains E1057
+N0 --> N7 : contains E1058
+N0 --> N8 : contains E1059
+N0 --> N9 : contains E1060
+N0 --> N10 : contains E1061
+N10 --> N11 : contains E1062
+N10 --> N12 : contains E1063
+N10 --> N13 : contains E1064
+N10 --> N14 : contains E1065
+N0 --> N15 : contains E1066
+N0 --> N16 : contains E1067
+N0 --> N17 : contains E1068
+N17 --> N18 : contains E1069
+N0 --> N19 : contains E1070
+N0 --> N20 : contains E1071
+N20 --> N21 : contains E1072
+N20 --> N22 : contains E1073
+N20 --> N23 : contains E1074
+N20 --> N24 : contains E1075
+N20 --> N25 : contains E1076
+N20 --> N15 : references E1077
+N20 --> N16 : references E1078
+N25 --> N15 : references E1079
+N0 --> N5 : imports E3238
+N17 --> N18 : calls E4940
+N17 --> N18 : calls E4941
+N17 --> N18 : calls E4942
+N17 --> N18 : calls E4943
+N17 --> N18 : calls E4944
+N20 --> N10 : references E4945
+N20 --> N19 : calls E4946
+N20 --> N19 : calls E4947
+N20 --> N19 : calls E4948
+N20 --> N19 : calls E4949
+N20 --> N19 : calls E4950
+N20 --> N19 : calls E4951
+N20 --> N24 : calls E4953
+N20 --> N24 : calls E4954
+N20 --> N24 : calls E4955
+N20 --> N24 : calls E4956
+N20 --> N21 : calls E4957
+N20 --> N22 : calls E4958
+N20 --> N23 : references E4961
+N20 --> N25 : references E4962
+@enduml

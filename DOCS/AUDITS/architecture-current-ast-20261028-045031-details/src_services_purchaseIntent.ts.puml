@@ -1,0 +1,25 @@
+@startuml
+title src/services/purchaseIntent.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "purchaseIntent.ts\nfile L1-15\nfile:src/services/purchaseIntent.ts" as N0
+rectangle "PurchaseKind\ntype_alias L2-2\ntype_alias:2a9749031df3a24b336fa7d4ceb0af1d" as N1
+rectangle "PurchaseIntent\ntype_alias L3-7\ntype_alias:c1b5a51cb246178e3b84e49b1e1de358" as N2
+rectangle "kind\nproperty L4-4\nproperty:73cca25451fd1ffce235124ffe2012ff" as N3
+rectangle "productId\nproperty L5-5\nproperty:056dac3b12597daa590c734f78faed7f" as N4
+rectangle "sourceSection\nproperty L6-6\nproperty:6122df4d208b880904020be71ba18123" as N5
+rectangle "products\nconstant L8-11\nconstant:efd06756eb25bd3e697f06fb055d28fb" as N6
+rectangle "purchaseIntent\nfunction L12-14\nfunction:8e65b2ac648fa1f00b99003e18432fd6" as N7
+N0 --> N1 : contains E1918
+N0 --> N2 : contains E1919
+N2 --> N3 : contains E1920
+N2 --> N4 : contains E1921
+N2 --> N5 : contains E1922
+N0 --> N6 : contains E1923
+N0 --> N7 : contains E1924
+N2 --> N1 : references E5898
+N6 --> N1 : references E5900
+N7 --> N1 : references E5901
+N7 --> N2 : references E5902
+@enduml

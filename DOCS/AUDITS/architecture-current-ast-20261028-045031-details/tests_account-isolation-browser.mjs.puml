@@ -1,0 +1,41 @@
+@startuml
+title tests/account-isolation-browser.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "account-isolation-browser.mjs\nfile L1-112\nfile:tests/account-isolation-browser.mjs" as N0
+rectangle "node:assert/strict\nimport L1-1\nimport:3230c226be1ac585e7e9f0043c496d3a" as N1
+rectangle "vite\nimport L2-2\nimport:5a38d9d70816d29de2ba310addd13b85" as N2
+rectangle "playwright\nimport L3-3\nimport:dcb2dc2e3015ccba954b27a0cae0d3f1" as N3
+rectangle "fixture\nconstant L6-30\nconstant:633345ea4addb947c3347619db445182" as N4
+rectangle "server\nconstant L31-55\nconstant:2fe7100a9d98db87438e936580fb7998" as N5
+rectangle "browser\nvariable L56-56\nvariable:db3db10e0c2769af9afe6ea29307373c" as N6
+rectangle "page\nconstant L60-60\nconstant:c812aa3b2dc66e8e5ec4259e8c06877e" as N7
+rectangle "errors\nconstant L61-61\nconstant:804d3ae35de6910d3b8eeef93224f0c4" as N8
+rectangle "base\nconstant L65-65\nconstant:d4a43aea9726ca72270caa7d9000e89b" as N9
+rectangle "legacy\nconstant L66-66\nconstant:0e625461f3868b07b02b68114ae911bb" as N10
+rectangle "send\nfunction L71-71\nfunction:53ca3459af422b50fd283c816318b497" as N11
+rectangle "mount\nfunction L72-72\nfunction:b216505fd1e2a7378a1e8edf53f1e138" as N12
+rectangle "speechCount\nconstant L79-79\nconstant:3e4f7755774ceab2139c9e3af4272c44" as N13
+rectangle "storedB\nconstant L91-91\nconstant:1bf7a53a22dcb783d689e9c2c56814e1" as N14
+N0 --> N1 : contains E2599
+N0 --> N2 : contains E2600
+N0 --> N3 : contains E2601
+N0 --> N4 : contains E2602
+N0 --> N5 : contains E2603
+N0 --> N6 : contains E2604
+N0 --> N7 : contains E2605
+N0 --> N8 : contains E2606
+N0 --> N9 : contains E2607
+N0 --> N10 : contains E2608
+N0 --> N11 : contains E2609
+N0 --> N12 : contains E2610
+N0 --> N13 : contains E2611
+N0 --> N14 : contains E2612
+N0 --> N11 : calls E6448
+N0 --> N12 : calls E6449
+N0 --> N12 : calls E6450
+N0 --> N11 : calls E6451
+N0 --> N12 : calls E6452
+N0 --> N12 : calls E6453
+@enduml

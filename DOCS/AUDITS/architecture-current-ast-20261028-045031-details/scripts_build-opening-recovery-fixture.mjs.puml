@@ -1,0 +1,17 @@
+@startuml
+title scripts/build-opening-recovery-fixture.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "build-opening-recovery-fixture.mjs\nfile L1-19\nfile:scripts/build-opening-recovery-fixture.mjs" as N0
+rectangle "esbuild\nimport L1-1\nimport:651bb24ff4979549a03c1424f3902323" as N1
+rectangle "node:fs/promises\nimport L2-2\nimport:4840a5412d7ebd3e7ea92b064a48cc50" as N2
+rectangle "node:child_process\nimport L3-3\nimport:544625a0dc6f81503eb14d6463c9fae1" as N3
+rectangle "baseline\nconstant L4-4\nconstant:7e954a30b87151bf92251bcfc0ebf47f" as N4
+rectangle "name\nconstant L15-15\nconstant:01e516050fd895c37954f336628767f1" as N5
+N0 --> N1 : contains E180
+N0 --> N2 : contains E181
+N0 --> N3 : contains E182
+N0 --> N4 : contains E183
+N0 --> N5 : contains E184
+@enduml

@@ -1,0 +1,144 @@
+@startuml
+title src/services/readingAudio.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "readingAudio.ts\nfile L1-251\nfile:src/services/readingAudio.ts" as N0
+rectangle "./voiceService\nimport L1-1\nimport:7e03dade0a5439fb3bdbaf40fd5d157e" as N1
+rectangle "DATABASE\nconstant L3-3\nconstant:80e2d1db8d81437a537c7a6a98a55979" as N2
+rectangle "STORE\nconstant L4-4\nconstant:38653039ea168aa5453c6e80805b7308" as N3
+rectangle "SAMPLE_RATE\nconstant L5-5\nconstant:3cca8a7e09e0491807ca6a0c5de65bec" as N4
+rectangle "MAX_RECORD_BYTES\nconstant L6-6\nconstant:de1f2c9e4f90c74cdbc1ef3de0025615" as N5
+rectangle "MAX_ACCOUNT_BYTES\nconstant L7-7\nconstant:e3e913b6b103ae9e787d884d78104448" as N6
+rectangle "MAX_RECORDINGS\nconstant L8-8\nconstant:975a4a75ced77596df6dfb670881abe6" as N7
+rectangle "READING_AUDIO_EVENT\nconstant L9-9\nconstant:74f4978e5140a754b93972ad7cb87f2c" as N8
+rectangle "ReadingAudioSegment\ninterface L11-17\ninterface:f9b3ffa350270d0464dc4159b6c522b6" as N9
+rectangle "samples\nproperty L12-12\nproperty:9beac298df27edfe15b087ab3c98314c" as N10
+rectangle "sampleRate\nproperty L13-13\nproperty:169b385f637e4c23d4282a63e041be2c" as N11
+rectangle "sourceOffset\nproperty L14-14\nproperty:70aff48115cdc46137441baf1cc4345c" as N12
+rectangle "sourceEnd\nproperty L15-15\nproperty:b8c6a2a8bf29ce6962191750ea8becec" as N13
+rectangle "pitch\nproperty L16-16\nproperty:daf1d9b308a342e795229535365518be" as N14
+rectangle "ReadingAudioStatus\ninterface L18-21\ninterface:837ece95eaefd671e992f8bc332451b1" as N15
+rectangle "state\nproperty L19-19\nproperty:50ebc95110d3b543c4e949966b770a3d" as N16
+rectangle "message\nproperty L20-20\nproperty:efb2b44b42401ce9cd6718bb08230ece" as N17
+rectangle "ReadingAudioRecord\ninterface L22-36\ninterface:22076f7a08791555528cb6e96dba0ed1" as N18
+rectangle "key\nproperty L23-23\nproperty:54f37a5fcef6e954a5282c12428e4630" as N19
+rectangle "version\nproperty L24-24\nproperty:839226f29215a56c02f636e6f9c0a094" as N20
+rectangle "accountUid\nproperty L25-25\nproperty:5f00cfd927e8aa1702e2ffdffab5c142" as N21
+rectangle "messageId\nproperty L26-26\nproperty:53a10bd83a224496fc5ec6f1796d68ef" as N22
+rectangle "text\nproperty L27-27\nproperty:f9b9a2ce895f4382025cee001ed81f50" as N23
+rectangle "createdAt\nproperty L28-28\nproperty:65d9b5ecd74bbb957b45702071ea0b1b" as N24
+rectangle "complete\nproperty L29-29\nproperty:111afe4575b40fe76226fb6d32000509" as N25
+rectangle "sampleRate\nproperty L30-30\nproperty:aec1cb2548df3a22ad9466d8c35638bc" as N26
+rectangle "duration\nproperty L31-31\nproperty:a6f28bd9ba1813dd47bed3d4171a9511" as N27
+rectangle "bytes\nproperty L32-32\nproperty:c0dcfcab0f9c2a95ac7eab1e9b405fa8" as N28
+rectangle "voiceSettings\nproperty L33-33\nproperty:5ea6fbb3567e12a6aaa2b389d3e674f8" as N29
+rectangle "segments\nproperty L34-34\nproperty:11e90cbf5e40d5333b8571477794a936" as N30
+rectangle "wav\nproperty L35-35\nproperty:4550cea24b5258a62312acff7d1d6cbc" as N31
+rectangle "keyFor\nfunction L38-38\nfunction:f82ba9ead0b9c013485844b8d5da1a00" as N32
+rectangle "changed\nfunction L39-41\nfunction:9f58a47a3daf87ef814f9a546448c2f2" as N33
+rectangle "openDatabase\nfunction L42-54\nfunction:3096293998c820e5731d20711ef97c40" as N34
+rectangle "loadReadingAudio\nfunction L56-71\nfunction:207e2a157c80734f739dc1be16041f6b" as N35
+rectangle "clearReadingAudio\nfunction L73-84\nfunction:2dcbbffae3c6c3c21878438638a65a6b" as N36
+rectangle "clearAccountReadingAudio\nfunction L87-103\nfunction:9b0460fb27281ffcd6b19f8ae11d26b3" as N37
+rectangle "saveReadingAudio\nfunction L105-128\nfunction:d5fc7f43d44a650022fbe21b9f800dd9" as N38
+rectangle "wavHeader\nfunction L130-139\nfunction:2140c3066d2a08137e7c2cf5d1407040" as N39
+rectangle "write\nfunction L133-133\nfunction:5ae11728545c50152487388cc138885b" as N40
+rectangle "applyVoiceTone\nfunction L141-162\nfunction:9e892d656b4813d2c9a2264fdc8800f5" as N41
+rectangle "createReadingAudioCapture\nfunction L165-240\nfunction:77a33a5a2006cf92f69cd7e7f7f5b6ee" as N42
+rectangle "status\nfunction L178-180\nfunction:be940f17a482eab8bb320628c4505a9b" as N43
+rectangle "readingAudioFilename\nfunction L242-244\nfunction:2a35431f05b05f2e9735184aa281cb5c" as N44
+rectangle "downloadReadingAudio\nfunction L246-250\nfunction:25b6404d4a155c8e97d36a4525d72c44" as N45
+N0 --> N1 : contains E1925
+N0 --> N2 : contains E1926
+N0 --> N3 : contains E1927
+N0 --> N4 : contains E1928
+N0 --> N5 : contains E1929
+N0 --> N6 : contains E1930
+N0 --> N7 : contains E1931
+N0 --> N8 : contains E1932
+N0 --> N9 : contains E1933
+N9 --> N10 : contains E1934
+N9 --> N11 : contains E1935
+N9 --> N12 : contains E1936
+N9 --> N13 : contains E1937
+N9 --> N14 : contains E1938
+N0 --> N15 : contains E1939
+N15 --> N16 : contains E1940
+N15 --> N17 : contains E1941
+N0 --> N18 : contains E1942
+N18 --> N19 : contains E1943
+N18 --> N20 : contains E1944
+N18 --> N21 : contains E1945
+N18 --> N22 : contains E1946
+N18 --> N23 : contains E1947
+N18 --> N24 : contains E1948
+N18 --> N25 : contains E1949
+N18 --> N26 : contains E1950
+N18 --> N27 : contains E1951
+N18 --> N28 : contains E1952
+N18 --> N29 : contains E1953
+N18 --> N30 : contains E1954
+N18 --> N31 : contains E1955
+N0 --> N32 : contains E1956
+N0 --> N33 : contains E1957
+N0 --> N34 : contains E1958
+N0 --> N35 : contains E1959
+N0 --> N36 : contains E1960
+N0 --> N37 : contains E1961
+N0 --> N38 : contains E1962
+N0 --> N39 : contains E1963
+N39 --> N40 : contains E1964
+N0 --> N41 : contains E1965
+N0 --> N42 : contains E1966
+N42 --> N43 : contains E1967
+N0 --> N44 : contains E1968
+N0 --> N45 : contains E1969
+N33 --> N8 : references E1970
+N34 --> N3 : references E1971
+N34 --> N2 : references E1972
+N35 --> N3 : references E1973
+N36 --> N3 : references E1974
+N37 --> N3 : references E1975
+N38 --> N6 : references E1976
+N38 --> N7 : references E1977
+N38 --> N3 : references E1978
+N39 --> N4 : references E1979
+N41 --> N4 : references E1980
+N42 --> N4 : references E1981
+N42 --> N5 : references E1982
+N35 --> N18 : references E5905
+N35 --> N34 : calls E5907
+N35 --> N32 : calls E5908
+N35 --> N18 : references E5909
+N36 --> N34 : calls E5910
+N36 --> N32 : calls E5911
+N36 --> N33 : calls E5912
+N37 --> N34 : calls E5913
+N37 --> N33 : calls E5914
+N38 --> N18 : references E5915
+N38 --> N34 : calls E5916
+N38 --> N33 : calls E5917
+N39 --> N40 : calls E5918
+N39 --> N40 : calls E5919
+N39 --> N40 : calls E5920
+N39 --> N40 : calls E5921
+N42 --> N15 : references E5924
+N42 --> N18 : references E5925
+N43 --> N15 : references E5926
+N42 --> N43 : calls E5927
+N42 --> N43 : calls E5928
+N42 --> N43 : calls E5929
+N42 --> N41 : calls E5930
+N42 --> N43 : calls E5931
+N42 --> N39 : calls E5932
+N42 --> N18 : references E5933
+N42 --> N32 : calls E5934
+N42 --> N38 : calls E5935
+N42 --> N43 : calls E5936
+N42 --> N43 : calls E5937
+N42 --> N43 : calls E5938
+N44 --> N18 : references E5939
+N45 --> N18 : references E5940
+N45 --> N44 : calls E5941
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+title src/services/downloadAccess.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "downloadAccess.ts\nfile L1-37\nfile:src/services/downloadAccess.ts" as N0
+rectangle "./firebase\nimport L1-1\nimport:3436a415c9d0d98e2fdb8dcf2620b02f" as N1
+rectangle "./purchaseIntent\nimport L2-2\nimport:c354943bdd970346093fa77cd697667e" as N2
+rectangle "./revenueCatCheckout\nimport L3-3\nimport:657957ac66b11a9f7704d6d760ce046d" as N3
+rectangle "resourceId\nproperty L5-5\nproperty:2cc7058327460061ac3e88214266db5d" as N4
+rectangle "purchaseIntent\nproperty L5-5\nproperty:4b9cb63e55ce7d393333411db9e51992" as N5
+rectangle "format\nproperty L5-5\nproperty:8f0c967dbd32f7cd5e9df6641e7f301f" as N6
+rectangle "DownloadRequest\ntype_alias L5-5\ntype_alias:afff308bc6b7a2176a1d190e9245ed73" as N7
+rectangle "DownloadAccess\ntype_alias L6-8\ntype_alias:8e2ba4d221fba311871f91899cada5ab" as N8
+rectangle "DOWNLOAD_FORMATS\nconstant L10-10\nconstant:f22311f88c8b202eaaed9599e69f50e8" as N9
+rectangle "checkDownloadAccess\nfunction L13-36\nfunction:e68a92600ae7707f29db1925641ec487" as N10
+N0 --> N1 : contains E1554
+N0 --> N2 : contains E1555
+N0 --> N3 : contains E1556
+N0 --> N7 : contains E1557
+N7 --> N6 : contains E1558
+N7 --> N4 : contains E1559
+N7 --> N5 : contains E1560
+N0 --> N8 : contains E1561
+N0 --> N9 : contains E1562
+N0 --> N10 : contains E1563
+N10 --> N9 : references E1564
+N10 --> N7 : references E5653
+N10 --> N8 : references E5654
+@enduml

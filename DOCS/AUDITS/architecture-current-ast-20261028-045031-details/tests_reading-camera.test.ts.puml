@@ -1,0 +1,13 @@
+@startuml
+title tests/reading-camera.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "reading-camera.test.ts\nfile L1-57\nfile:tests/reading-camera.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:0b289607487c0cad58d2f21bfc6ce965" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:4977fc2fd62fecb188704a2b4d0e0d49" as N2
+rectangle "../src/services/presentation\nimport L3-3\nimport:9857a82a1ddb01cc549eb19e9d625f08" as N3
+N0 --> N1 : contains E2736
+N0 --> N2 : contains E2737
+N0 --> N3 : contains E2738
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+title src/services/inferenceTurn.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "inferenceTurn.ts\nfile L1-13\nfile:src/services/inferenceTurn.ts" as N0
+rectangle "turns\nconstant L3-3\nconstant:e0541a5410990b052771ef3f20acd9ef" as N1
+rectangle "withInferenceTurn\nfunction L4-12\nfunction:64fda8bc7c764387de7dcf7084043700" as N2
+N0 --> N1 : contains E1762
+N0 --> N2 : contains E1763
+@enduml

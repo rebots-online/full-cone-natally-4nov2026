@@ -1,0 +1,81 @@
+@startuml
+title src/components/atelier/AtelierScene.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AtelierScene.tsx\nfile L1-80\nfile:src/components/atelier/AtelierScene.tsx" as N0
+rectangle "react\nimport L1-1\nimport:1ab8fa3ffc602950b63bf9ec4a0fff8a" as N1
+rectangle "../../services/atelierMotion\nimport L2-2\nimport:a95e8fdd339efcdf03d2bac2bb5b0632" as N2
+rectangle "./AtelierTrinkets\nimport L3-3\nimport:b801cbe607288ae258018f609443451d" as N3
+rectangle "./AtelierCharacter\nimport L4-4\nimport:e6ca202367bc5d3fa36c4e14de4184e4" as N4
+rectangle "./AtelierScene.css\nimport L5-5\nimport:fe31186405e28143b9dad6c850aa5fd6" as N5
+rectangle "./AtelierSeason\nimport L6-6\nimport:130a139f80d4993a3d40641e4785625d" as N6
+rectangle "../../services/atelierTheme\nimport L7-7\nimport:347eaab75fa127d38f9cd14838fc3a1e" as N7
+rectangle "../../services/atelierSound\nimport L8-8\nimport:7119a26c6263aeefc8e415e6f631bbef" as N8
+rectangle "ConversationPhase\ntype_alias L10-10\ntype_alias:43f43c97f0f3eea00ff9cf6afa7148f0" as N9
+rectangle "PHASE_LABELS\nconstant L11-11\nconstant:db59ce1fc0c8f015edba16e720c23c08" as N10
+rectangle "blink\nproperty L12-12\nproperty:8a379bec07b78e674d7fd6179a4900bf" as N11
+rectangle "gesture\nproperty L12-12\nproperty:b0f5eff44d6f529de9134da647840a02" as N12
+rectangle "IdlePose\ntype_alias L12-12\ntype_alias:bbb12179fe05bb65e8e816546f4ff178" as N13
+rectangle "AtelierScene\nfunction L14-79\nfunction:b10d358fd9114be557b6cb7f6b973f76" as N14
+rectangle "retryArtwork\nfunction L23-23\nfunction:4306d6c7b240298d941e2f6d949cc364" as N15
+rectangle "visibility\nfunction L25-25\nfunction:c27eddd2bbe5f90a45da1c59ef9f9cde" as N16
+rectangle "motion\nfunction L27-27\nfunction:7774bf5a80aebedead5492d1c32b9b25" as N17
+rectangle "online\nfunction L28-28\nfunction:198f6e1811fe07f25fd3807a35525310" as N18
+rectangle "schedule\nfunction L42-42\nfunction:9a5658b121ff6776c2fb7a4125923c90" as N19
+rectangle "blink\nfunction L43-46\nfunction:a293d166df25dc85e065f4e551814c47" as N20
+rectangle "gesture\nfunction L47-52\nfunction:a57e908e5464be9940383632035e18c7" as N21
+rectangle "next\nfunction L53-56\nfunction:97d4368704c517f62278ebffbb3b7c02" as N22
+rectangle "mishap\nfunction L57-62\nfunction:17b83bd5feca8312f5b3e4e8b3ea5e34" as N23
+N0 --> N1 : contains E626
+N0 --> N2 : contains E627
+N0 --> N3 : contains E628
+N0 --> N4 : contains E629
+N0 --> N5 : contains E630
+N0 --> N6 : contains E631
+N0 --> N7 : contains E632
+N0 --> N8 : contains E633
+N0 --> N9 : contains E634
+N0 --> N10 : contains E635
+N0 --> N13 : contains E636
+N13 --> N11 : contains E637
+N13 --> N12 : contains E638
+N0 --> N14 : contains E639
+N14 --> N15 : contains E640
+N14 --> N16 : contains E641
+N14 --> N17 : contains E642
+N14 --> N18 : contains E643
+N14 --> N19 : contains E644
+N14 --> N20 : contains E645
+N14 --> N21 : contains E646
+N14 --> N22 : contains E647
+N14 --> N23 : contains E648
+N14 --> N10 : references E649
+N0 --> N5 : imports E3030
+N10 --> N9 : references E4346
+N14 --> N9 : references E4347
+N20 --> N19 : calls E4351
+N20 --> N19 : calls E4352
+N21 --> N19 : calls E4353
+N21 --> N19 : calls E4354
+N21 --> N19 : calls E4355
+N22 --> N19 : calls E4356
+N22 --> N19 : calls E4357
+N23 --> N19 : calls E4358
+N23 --> N19 : calls E4359
+N23 --> N19 : calls E4360
+N14 --> N19 : calls E4361
+N14 --> N19 : calls E4362
+N14 --> N19 : calls E4363
+N14 --> N18 : references E4365
+N14 --> N16 : references E4366
+N14 --> N17 : references E4367
+N23 --> N20 : references E4368
+N23 --> N22 : references E4369
+N23 --> N21 : references E4370
+N14 --> N20 : references E4371
+N14 --> N22 : references E4372
+N14 --> N21 : references E4373
+N14 --> N23 : references E4374
+N14 --> N15 : references E4375
+@enduml

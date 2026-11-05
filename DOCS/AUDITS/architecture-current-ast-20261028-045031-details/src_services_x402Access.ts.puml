@@ -1,0 +1,44 @@
+@startuml
+title src/services/x402Access.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "x402Access.ts\nfile L1-95\nfile:src/services/x402Access.ts" as N0
+rectangle "GUEST_ACCESS_KEY\nconstant L13-13\nconstant:fdc05b1ceca5d43926fbda19a1263ca2" as N1
+rectangle "GUEST_PRICE_SATS\nconstant L14-14\nconstant:0d443ac693ff8642af53048c3d855b48" as N2
+rectangle "WebLNProvider\ninterface L16-19\ninterface:8f5cbcd825d3d7bf4b7b9671437dbc00" as N3
+rectangle "sendPayment\nmethod L17-17\nmethod:5712519fd6670ee1d625e975640019f1" as N4
+rectangle "enable\nmethod L18-18\nmethod:d45ed2525892fcf0d9035e7cd2f8e82e" as N5
+rectangle "Window\ninterface L22-24\ninterface:e82438d7824d8e71ec4490a7adbabc2c" as N6
+rectangle "webln\nproperty L23-23\nproperty:2eea90191e13087eb752b844a12a26d3" as N7
+rectangle "hasWebLn\nfunction L27-29\nfunction:68728428cd2a8924e0420ddf40ff8ee8" as N8
+rectangle "GuestAccessResult\ninterface L31-34\ninterface:8c59adbd31bf070129722e6fb935021e" as N9
+rectangle "granted\nproperty L32-32\nproperty:4df31faf3982a8d4a4e38867775c03e4" as N10
+rectangle "reason\nproperty L33-33\nproperty:3c391ea25e1d3d7ea0a1b7350edc2505" as N11
+rectangle "payForGuestAccess\nfunction L36-81\nfunction:765611157706c9a1ff5a36279e9d04c9" as N12
+rectangle "guestAccessActive\nfunction L83-92\nfunction:9ab39845f7fee5589e35309fff201b2d" as N13
+rectangle "GUEST_PRICE_LABEL\nconstant L94-94\nconstant:e28eaef70f26f53a0b789a1e14e3afbe" as N14
+N0 --> N1 : contains E2551
+N0 --> N2 : contains E2552
+N0 --> N3 : contains E2553
+N3 --> N4 : contains E2554
+N3 --> N5 : contains E2555
+N0 --> N6 : contains E2556
+N6 --> N7 : contains E2557
+N0 --> N8 : contains E2558
+N0 --> N9 : contains E2559
+N9 --> N10 : contains E2560
+N9 --> N11 : contains E2561
+N0 --> N12 : contains E2562
+N0 --> N13 : contains E2563
+N0 --> N14 : contains E2564
+N12 --> N2 : references E2565
+N12 --> N1 : references E2566
+N13 --> N1 : references E2567
+N14 --> N2 : references E2568
+N7 --> N3 : references E6430
+N12 --> N9 : references E6431
+N12 --> N8 : calls E6433
+N12 --> N5 : calls E6434
+N12 --> N4 : calls E6435
+@enduml

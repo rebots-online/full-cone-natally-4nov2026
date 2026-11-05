@@ -1,0 +1,27 @@
+@startuml
+title vite.config.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "vite.config.ts\nfile L1-67\nfile:vite.config.ts" as N0
+rectangle "@tailwindcss/vite\nimport L1-1\nimport:e599f30a14b887510231c95a309fd481" as N1
+rectangle "@vitejs/plugin-react\nimport L2-2\nimport:07314d2b81e5c296c3317562d915e2d9" as N2
+rectangle "path\nimport L3-3\nimport:801534375fbefd4c461f40611cb2f3b3" as N3
+rectangle "node:child_process\nimport L4-4\nimport:14161cfe61089f6824c87d70c7772530" as N4
+rectangle "node:fs\nimport L5-5\nimport:b08a792e4be5ce83325d882c2a6ba643" as N5
+rectangle "vite\nimport L6-6\nimport:dc424a3f0b7c99875e665455123e242d" as N6
+rectangle "./scripts/onnx-progress-plugin.ts\nimport L7-7\nimport:c91839a98254fa574866c56d236e128c" as N7
+rectangle "./scripts/release-state.mjs\nimport L8-8\nimport:07fd51e0f25a385f948f7805e7d62ccd" as N8
+rectangle "git\nfunction L12-15\nfunction:d3fc8bf2becae916ad571a0030872be4" as N9
+N0 --> N1 : contains E2851
+N0 --> N2 : contains E2852
+N0 --> N3 : contains E2853
+N0 --> N4 : contains E2854
+N0 --> N5 : contains E2855
+N0 --> N6 : contains E2856
+N0 --> N7 : contains E2857
+N0 --> N8 : contains E2858
+N0 --> N9 : contains E2859
+N0 --> N9 : calls E6899
+N0 --> N9 : calls E6900
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+title tests/hosted-chat.test.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "hosted-chat.test.mjs\nfile L1-91\nfile:tests/hosted-chat.test.mjs" as N0
+rectangle "node:test\nimport L1-1\nimport:fc2150d54d874829f646e9d736b97231" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:8df5ffc0e12354982e2234706c8c4307" as N2
+rectangle "../netlify/functions/chat.mjs\nimport L3-3\nimport:8c00c0a925bbd09fbc235e16fc2fabc7" as N3
+rectangle "env\nconstant L5-5\nconstant:417326a0f0c1ffa10bce7847d74499da" as N4
+rectangle "payload\nconstant L6-6\nconstant:a54bd34a02b6fab6eb5e23e1dbf77262" as N5
+rectangle "request\nfunction L7-9\nfunction:fd2d5dd22e4738f0b928c23f116de418" as N6
+rectangle "json\nfunction L10-10\nfunction:411f7cd5bc3617f29c3e282628a8d922" as N7
+N0 --> N1 : contains E2679
+N0 --> N2 : contains E2680
+N0 --> N3 : contains E2681
+N0 --> N4 : contains E2682
+N0 --> N5 : contains E2683
+N0 --> N6 : contains E2684
+N0 --> N7 : contains E2685
+N0 --> N3 : imports E3664
+N0 --> N6 : calls E6557
+N0 --> N6 : calls E6558
+N0 --> N7 : calls E6559
+N0 --> N6 : calls E6560
+N0 --> N7 : calls E6561
+N0 --> N7 : calls E6562
+N0 --> N6 : calls E6563
+N0 --> N7 : calls E6564
+N0 --> N7 : calls E6565
+N0 --> N6 : calls E6566
+N0 --> N7 : calls E6567
+N0 --> N7 : calls E6568
+N0 --> N6 : calls E6569
+N0 --> N6 : calls E6570
+N0 --> N6 : calls E6571
+N0 --> N7 : calls E6572
+N0 --> N7 : calls E6573
+N0 --> N6 : calls E6574
+@enduml

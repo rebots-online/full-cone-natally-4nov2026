@@ -1,0 +1,18 @@
+@startuml
+title src/components/ReadingStyleControl.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ReadingStyleControl.tsx\nfile L1-10\nfile:src/components/ReadingStyleControl.tsx" as N0
+rectangle "../services/readingStyle\nimport L1-1\nimport:bf6defc2c275a6238af18df961bb31a9" as N1
+rectangle "ReadingStyleControlProps\ninterface L2-2\ninterface:e2dbffcd6a39d6498fec2c04cc97a39f" as N2
+rectangle "accountUid\nproperty L2-2\nproperty:a1cac1d2d520246300fcf8b51adc9239" as N3
+rectangle "initialStyle\nproperty L2-2\nproperty:a7a1b046090114b2f7ccbbbe4815ad7d" as N4
+rectangle "ReadingStyleControl\nfunction L3-9\nfunction:990c8c6bc0bfec731167ce296fb35997" as N5
+N0 --> N1 : contains E1187
+N0 --> N2 : contains E1188
+N2 --> N3 : contains E1189
+N2 --> N4 : contains E1190
+N0 --> N5 : contains E1191
+N5 --> N2 : references E5188
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+title src/services/calculationTools.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "calculationTools.ts\nfile L1-59\nfile:src/services/calculationTools.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:9141daa30e91eb8abd902f1fe2796019" as N1
+rectangle "./gazetteer\nimport L2-2\nimport:6852c67353f86bd3297406e26d9da4ae" as N2
+rectangle "./transits\nimport L3-3\nimport:82bc26cba868b6dee4a8e217fa6d4691" as N3
+rectangle "./natallyChat\nimport L4-4\nimport:4fe04ce21c0e8c8096cb29b80e91bcda" as N4
+rectangle "createCalculationSession\nfunction L6-58\nfunction:497b9d8225e2bda53d762627fbe284b2" as N5
+rectangle "chart\nfunction L9-13\nfunction:d5305687e8c0f8de02dede50630e0785" as N6
+N0 --> N1 : contains E1509
+N0 --> N2 : contains E1510
+N0 --> N3 : contains E1511
+N0 --> N4 : contains E1512
+N0 --> N5 : contains E1513
+N5 --> N6 : contains E1514
+N5 --> N6 : calls E5617
+N5 --> N6 : calls E5619
+N5 --> N6 : calls E5620
+@enduml

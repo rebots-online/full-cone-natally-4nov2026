@@ -1,0 +1,22 @@
+@startuml
+title src/components/NatallyIcon.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "NatallyIcon.tsx\nfile L1-57\nfile:src/components/NatallyIcon.tsx" as N0
+rectangle "react\nimport L1-1\nimport:3c7acaeeadbf4a202731559e827f9f3a" as N1
+rectangle "NatallyIconProps\ninterface L3-7\ninterface:ef7f10359c285c55585d4280b5c314b9" as N2
+rectangle "size\nproperty L4-4\nproperty:aa9f5d3c9dedd576e865a480d6fe72e1" as N3
+rectangle "isSpeaking\nproperty L5-5\nproperty:003891dee1965c5f3646ac01583a858c" as N4
+rectangle "className\nproperty L6-6\nproperty:110f5f50cb7f5b59ad9b7dbe0a60e351" as N5
+rectangle "NatallyIcon\nfunction L9-56\nfunction:95067e7bd6946fad3414b754180f2815" as N6
+rectangle "guide\nfunction L25-28\nfunction:ecb851f9a4235391ccf57801dc156f84" as N7
+N0 --> N1 : contains E995
+N0 --> N2 : contains E996
+N2 --> N3 : contains E997
+N2 --> N4 : contains E998
+N2 --> N5 : contains E999
+N0 --> N6 : contains E1000
+N6 --> N7 : contains E1001
+N6 --> N7 : references E4909
+@enduml

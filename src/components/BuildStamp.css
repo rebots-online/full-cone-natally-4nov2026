@@ -1,0 +1,19 @@
+.natally-build-stamp {
+  position: fixed;
+  inset: auto max(8px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) auto;
+  margin: 0;
+  width: max-content;
+  height: auto;
+  border: 0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: #120c1ce8;
+  color: #f2ca50;
+  font: 10px monospace;
+  pointer-events: none;
+  z-index: 2147483647;
+}
+.natally-build-stamp::backdrop { background: transparent; pointer-events: none; }
+@supports not selector(:popover-open) {
+  .natally-build-stamp { display: block; }
+}

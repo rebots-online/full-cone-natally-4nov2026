@@ -1,0 +1,21 @@
+@startuml
+title scripts/run-command.py — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "run-command.py\nfile L1-17\nfile:scripts/run-command.py" as N0
+rectangle "argparse\nimport L2-2\nimport:3862f4937f881494c88127753fa667a9" as N1
+rectangle "subprocess\nimport L3-3\nimport:01a9b56ebf44fedf318d0c80fc5e0858" as N2
+rectangle "sys\nimport L4-4\nimport:891641f25ed3ac5b2f77bcba422554cb" as N3
+rectangle "parser\nvariable L6-6\nvariable:db95f9d8de2585f5a511f612c8ff1eef" as N4
+rectangle "args\nvariable L9-9\nvariable:65e4637c5b557d0c8e2559e6640143b0" as N5
+rectangle "command\nvariable L10-10\nvariable:e1ab4d7852fba6a0d52f205a1ab2a264" as N6
+rectangle "result\nvariable L12-12\nvariable:e0eb2c36dbe7e25af96123a6b6dae91c" as N7
+N0 --> N1 : contains E285
+N0 --> N2 : contains E286
+N0 --> N3 : contains E287
+N0 --> N4 : contains E288
+N0 --> N5 : contains E289
+N0 --> N6 : contains E290
+N0 --> N7 : contains E291
+@enduml

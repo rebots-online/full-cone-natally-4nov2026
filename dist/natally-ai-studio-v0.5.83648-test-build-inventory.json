@@ -1,0 +1,86 @@
+{
+  "major": 0,
+  "minor": 5,
+  "build": 83648,
+  "version": "0.5.83648",
+  "semverVersion": "0.5.83648",
+  "versionCode": 5,
+  "stampedAt": "2026-10-26T12:48:54.402Z",
+  "msiVersion": "0.0.5.18112",
+  "prefix": "natally-ai-studio-v0.5.83648",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "9d33808e631f875ac4c832dbbf3e22ea95540cd9",
+  "invocationId": "b5dd6d34-2159-4f8c-9a23-f26f24577de1",
+  "phase": "preparing",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "nsis": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "msi": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "apk": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "aab": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "web": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    },
+    "web-installer": {
+      "state": "failed",
+      "error": "Preparation failed: npm.cmd failed with exit -4048"
+    }
+  },
+  "inputError": "Release inputs changed or are not frozen. Start a new full matrix invocation; do not reuse this stamp.",
+  "sourceInputsMatch": false,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "completedAt": "2026-10-26T12:49:13.572Z"
+}

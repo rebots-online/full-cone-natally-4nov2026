@@ -1,0 +1,28 @@
+@startuml
+title src/services/buildIdentity.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "buildIdentity.ts\nfile L1-15\nfile:src/services/buildIdentity.ts" as N0
+rectangle "BuildIdentity\ninterface L2-9\ninterface:d2c9f8a20a5e7beb2c16f8c8f8d9f4b2" as N1
+rectangle "version\nproperty L3-3\nproperty:5e630ef813a79e830e880e9338ce9167" as N2
+rectangle "stampedAt\nproperty L4-4\nproperty:436f80eb537ba6636ce3f389fd02fd83" as N3
+rectangle "invocationId\nproperty L5-5\nproperty:c3c7e04936bfccc822203cb7289eac21" as N4
+rectangle "sourceRevision\nproperty L6-6\nproperty:1740f0d7a7359392a541f94cb704da56" as N5
+rectangle "sourceFingerprint\nproperty L7-7\nproperty:ffd7de8330aa535a38f856f97337a83a" as N6
+rectangle "dirty\nproperty L8-8\nproperty:e12775d675b3540591b11b65871e6b34" as N7
+rectangle "__NATALLY_BUILD__\nconstant L11-11\nconstant:dcb61a62271c81e6ca281d22c8592e75" as N8
+rectangle "buildIdentity\nconstant L13-14\nconstant:140bafa750ab3801256eaa0e5277d7e1" as N9
+N0 --> N1 : contains E1499
+N1 --> N2 : contains E1500
+N1 --> N3 : contains E1501
+N1 --> N4 : contains E1502
+N1 --> N5 : contains E1503
+N1 --> N6 : contains E1504
+N1 --> N7 : contains E1505
+N0 --> N8 : contains E1506
+N0 --> N9 : contains E1507
+N9 --> N8 : references E1508
+N8 --> N1 : references E5606
+N9 --> N1 : references E5607
+@enduml

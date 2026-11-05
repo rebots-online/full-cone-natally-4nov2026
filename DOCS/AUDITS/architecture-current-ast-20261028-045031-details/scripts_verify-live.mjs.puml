@@ -1,0 +1,59 @@
+@startuml
+title scripts/verify-live.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "verify-live.mjs\nfile L1-52\nfile:scripts/verify-live.mjs" as N0
+rectangle "node:assert/strict\nimport L1-1\nimport:c14c1e08125365e033a89dd330379f09" as N1
+rectangle "node:crypto\nimport L2-2\nimport:5a730666a4321a60ba8ad7a81032a3ea" as N2
+rectangle "node:fs/promises\nimport L3-3\nimport:7240018e11bd8b7599e70d0689b0618c" as N3
+rectangle "node:path\nimport L4-4\nimport:2011db8035bca96b51cc17e5d440128b" as N4
+rectangle "playwright\nimport L5-5\nimport:002072dfd97eb02e9d09d199d807faa9" as N5
+rectangle "origin\nconstant L7-7\nconstant:227dc4f94a26d4df45a3a5852493745e" as N6
+rectangle "release\nconstant L8-8\nconstant:3f27c3aaa8a4304f6c059b3c0ded7a92" as N7
+rectangle "root\nconstant L10-10\nconstant:bcf229ed1f4d716832f280d6988532b5" as N8
+rectangle "evidenceDirectory\nconstant L11-11\nconstant:68bbf33ed086a2aea0401740c17160d4" as N9
+rectangle "walk\nfunction L13-16\nfunction:bb20228401b4c69c76caf9c6538e6d15" as N10
+rectangle "files\nconstant L17-18\nconstant:7137952a544693ba13b39e184d3a5ce5" as N11
+rectangle "sha256\nfunction L19-19\nfunction:327cbc3e6f247232ac1852c0a73d2012" as N12
+rectangle "assets\nconstant L20-20\nconstant:082a7b2554946ea5d045c6195f9ce92d" as N13
+rectangle "relative\nconstant L22-22\nconstant:173dc7d604cb0bee597590456a4ce8ed" as N14
+rectangle "local\nconstant L23-23\nconstant:a62fd996ef907630de511ed53e2ff000" as N15
+rectangle "response\nconstant L24-24\nconstant:0cdb2d51897184c80a30acfafcd8ed91" as N16
+rectangle "remote\nconstant L26-26\nconstant:6a1ff03b38151949233c7ec931b12f31" as N17
+rectangle "appAsset\nconstant L30-30\nconstant:4abc299ceadc644dc7d0a9cfa1803a33" as N18
+rectangle "browser\nvariable L33-33\nvariable:c443e77886bafda99f62192dbf9325e4" as N19
+rectangle "errors\nconstant L34-34\nconstant:32f757f641eccca10f4f470a48028cd1" as N20
+rectangle "browserResult\nvariable L35-35\nvariable:6b682c2d5e022ec5df082d463a3e7c4f" as N21
+rectangle "page\nconstant L38-38\nconstant:9f2b691246c582f76aaf844d1a817185" as N22
+rectangle "report\nconstant L47-49\nconstant:75200f4c5ab618c853a203ca0b70b70f" as N23
+N0 --> N1 : contains E367
+N0 --> N2 : contains E368
+N0 --> N3 : contains E369
+N0 --> N4 : contains E370
+N0 --> N5 : contains E371
+N0 --> N6 : contains E372
+N0 --> N7 : contains E373
+N0 --> N8 : contains E374
+N0 --> N9 : contains E375
+N0 --> N10 : contains E376
+N0 --> N11 : contains E377
+N0 --> N12 : contains E378
+N0 --> N13 : contains E379
+N0 --> N14 : contains E380
+N0 --> N15 : contains E381
+N0 --> N16 : contains E382
+N0 --> N17 : contains E383
+N0 --> N18 : contains E384
+N0 --> N19 : contains E385
+N0 --> N20 : contains E386
+N0 --> N21 : contains E387
+N0 --> N22 : contains E388
+N0 --> N23 : contains E389
+N23 --> N21 : references E390
+N10 --> N10 : calls E4066
+N11 --> N10 : calls E4067
+N0 --> N12 : calls E4068
+N0 --> N12 : calls E4069
+N0 --> N12 : calls E4070
+@enduml

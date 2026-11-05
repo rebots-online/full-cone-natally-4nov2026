@@ -1,0 +1,101 @@
+@startuml
+title src/services/atelierSound.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "atelierSound.ts\nfile L1-92\nfile:src/services/atelierSound.ts" as N0
+rectangle "./atelierMemories\nimport L1-1\nimport:7886ca5c6f1974eff551e8b4e2fcdf4a" as N1
+rectangle "AtelierAudioStatus\ntype_alias L2-2\ntype_alias:24118a11498b6d178ff44fe518d97d72" as N2
+rectangle "audioStatus\nvariable L3-3\nvariable:f020f01f95649818ce59f023c0853be1" as N3
+rectangle "audioListeners\nconstant L4-4\nconstant:56df42e8fff59804be5b986d1ec8b934" as N4
+rectangle "preparing\nvariable L5-5\nvariable:b6baa029be8d098f43a71fbb951c5b76" as N5
+rectangle "setAudioStatus\nfunction L6-6\nfunction:66b486507747e46dcf0a71646400a570" as N6
+rectangle "getAtelierAudioStatus\nfunction L7-7\nfunction:053a496808a6890316c1d64bba9ce6ff" as N7
+rectangle "subscribeAtelierAudioStatus\nfunction L8-8\nfunction:ff3c3a90e5ae5ba495c2941c2711c373" as N8
+rectangle "effectContext\nvariable L9-9\nvariable:2c2fc60d6ed0ae9dee42ba6112d5ecd5" as N9
+rectangle "crunchBuffer\nvariable L10-10\nvariable:6b051fc41e21e69f39ef7d8cd752083d" as N10
+rectangle "currentCrunch\nvariable L11-11\nvariable:2ea4a1efbd2e4e41027532d54e2bb1ec" as N11
+rectangle "loadCrunch\nfunction L12-18\nfunction:fcc09be96808775c893b5439c29e36a1" as N12
+rectangle "allowed\nfunction L19-22\nfunction:d32f25c740248d6c9068e443968c3a0f" as N13
+rectangle "unlockAtelierSound\nfunction L24-33\nfunction:47d807ea3b85c7ddb606bbd81fe5d173" as N14
+rectangle "FoleyName\ntype_alias L34-34\ntype_alias:3d77013a73bfc6864c59fdaf686e1fc3" as N15
+rectangle "foleyBuffers\nconstant L35-35\nconstant:337d52373b9f53015cdd0a957da659e5" as N16
+rectangle "currentWobble\nvariable L36-36\nvariable:d20294874669016650eb23945ea4fe4a" as N17
+rectangle "wobbleUntil\nvariable L37-37\nvariable:267df92afef778b19aa80fc1eb71e1b5" as N18
+rectangle "breakUntil\nvariable L38-38\nvariable:2d9950c010afc912cc0738d49578bd6a" as N19
+rectangle "loadFoley\nfunction L39-45\nfunction:4a050dc0de7d1ee4a80ddcbd623bdbcb" as N20
+rectangle "playFoley\nfunction L46-62\nfunction:e443779d47004067d37df3d29ac39350" as N21
+rectangle "playAtelierBreak\nfunction L64-68\nfunction:f80f03640336e1d100199fea3176cbbe" as N22
+rectangle "playAtelierWobble\nfunction L70-75\nfunction:bb4d5786b45d8449bf54d60461fa7f56" as N23
+rectangle "playAtelierCrunch\nfunction L76-91\nfunction:b65ed24ac79853f5cfc46e7e891f83b9" as N24
+N0 --> N1 : contains E1374
+N0 --> N2 : contains E1375
+N0 --> N3 : contains E1376
+N0 --> N4 : contains E1377
+N0 --> N5 : contains E1378
+N0 --> N6 : contains E1379
+N0 --> N7 : contains E1380
+N0 --> N8 : contains E1381
+N0 --> N9 : contains E1382
+N0 --> N10 : contains E1383
+N0 --> N11 : contains E1384
+N0 --> N12 : contains E1385
+N0 --> N13 : contains E1386
+N0 --> N14 : contains E1387
+N0 --> N15 : contains E1388
+N0 --> N16 : contains E1389
+N0 --> N17 : contains E1390
+N0 --> N18 : contains E1391
+N0 --> N19 : contains E1392
+N0 --> N20 : contains E1393
+N0 --> N21 : contains E1394
+N0 --> N22 : contains E1395
+N0 --> N23 : contains E1396
+N0 --> N24 : contains E1397
+N6 --> N4 : references E1398
+N6 --> N3 : references E1399
+N7 --> N3 : references E1400
+N8 --> N4 : references E1401
+N12 --> N10 : references E1402
+N14 --> N3 : references E1403
+N14 --> N9 : references E1404
+N20 --> N16 : references E1405
+N21 --> N17 : references E1406
+N21 --> N19 : references E1407
+N21 --> N9 : references E1408
+N22 --> N19 : references E1409
+N22 --> N17 : references E1410
+N23 --> N18 : references E1411
+N23 --> N19 : references E1412
+N24 --> N11 : references E1413
+N24 --> N9 : references E1414
+N3 --> N2 : references E5462
+N6 --> N2 : references E5463
+N8 --> N2 : references E5464
+N14 --> N13 : calls E5465
+N14 --> N6 : calls E5466
+N14 --> N6 : calls E5467
+N14 --> N6 : calls E5468
+N14 --> N12 : calls E5469
+N14 --> N20 : calls E5470
+N14 --> N6 : calls E5471
+N14 --> N6 : calls E5472
+N14 --> N6 : calls E5473
+N20 --> N15 : references E5474
+N21 --> N15 : references E5475
+N21 --> N14 : calls E5476
+N21 --> N13 : calls E5477
+N21 --> N20 : calls E5478
+N21 --> N13 : calls E5479
+N21 --> N13 : calls E5480
+N21 --> N6 : calls E5481
+N22 --> N21 : calls E5483
+N23 --> N13 : calls E5485
+N23 --> N21 : calls E5486
+N24 --> N14 : calls E5487
+N24 --> N13 : calls E5488
+N24 --> N12 : calls E5489
+N24 --> N13 : calls E5490
+N24 --> N13 : calls E5491
+N24 --> N6 : calls E5492
+@enduml

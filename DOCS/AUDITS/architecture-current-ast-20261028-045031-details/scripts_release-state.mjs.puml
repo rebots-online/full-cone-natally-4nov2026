@@ -1,0 +1,121 @@
+@startuml
+title scripts/release-state.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "release-state.mjs\nfile L1-156\nfile:scripts/release-state.mjs" as N0
+rectangle "node:fs\nimport L1-1\nimport:9b0bed5bab7ff9858a14046d12a0d0bc" as N1
+rectangle "node:crypto\nimport L2-2\nimport:c3783feb03401cb185683b9ba97975aa" as N2
+rectangle "node:child_process\nimport L3-3\nimport:4004c18dc2d20e50dc0884fcbfd57b2c" as N3
+rectangle "node:path\nimport L4-4\nimport:6ce3b1e6ae2da24019efe739c947d931" as N4
+rectangle "node:url\nimport L5-5\nimport:70f57c4da9d71a8ddd5967a59312b270" as N5
+rectangle "root\nconstant L7-7\nconstant:1af726e51cec6a95891aec2f0729bc1e" as N6
+rectangle "required\nconstant L8-8\nconstant:1323c76ab2db3894598661631aaf74a6" as N7
+rectangle "statePath\nconstant L9-9\nconstant:fc49ced6f5ffa7522b80bfe83167166c" as N8
+rectangle "readJson\nfunction L10-10\nfunction:36ddaec4b2fb167b1af843aa8dd866bd" as N9
+rectangle "writeJson\nfunction L11-11\nfunction:14e115eea2b1f878a0bc6f91149c9849" as N10
+rectangle "sha\nfunction L12-12\nfunction:1b5f73fefcd3037dab2a9529f6520206" as N11
+rectangle "nextStamp\nfunction L14-20\nfunction:f55763df526ebdfad84b81aee9284057" as N12
+rectangle "validateBuildContext\nfunction L22-28\nfunction:1b841331a6937c2043f94af27b73371a" as N13
+rectangle "releaseBuildInfo\nfunction L30-34\nfunction:73d981b3b9a22b0844415f4d0fa8a5d1" as N14
+rectangle "matrixStatus\nfunction L36-39\nfunction:982b97dccc290b9c189bd91f2621b17c" as N15
+rectangle "msiVersionFor\nfunction L41-44\nfunction:9b35b439f562c7ec1900cd8196ff1bb3" as N16
+rectangle "sourceInputs\nfunction L46-54\nfunction:1e0d0cca6623e894b493af77cc8f1a06" as N17
+rectangle "fingerprint\nfunction L55-55\nfunction:cdf36785067503a9ded6821d4a3886da" as N18
+rectangle "state\nfunction L57-57\nfunction:f1bae74673d804ab11acbdd0317c3eaf" as N19
+rectangle "verifyRetainedArtifacts\nfunction L58-65\nfunction:79e6e15fde5dfdb4e4fb7a85fdd0fc0c" as N20
+rectangle "persist\nfunction L66-69\nfunction:86e4f866b81b690422a0bf9c23c8f513" as N21
+rectangle "assertFrozen\nfunction L70-78\nfunction:2af901add432dab1311d9e5dc899ad0f" as N22
+rectangle "stamp\nfunction L80-111\nfunction:ce56b44f8bb6d25e960f6f9860af7227" as N23
+rectangle "stage\nfunction L113-124\nfunction:3dd0d5cf5febf15e67eb319d1cc1b1be" as N24
+rectangle "finish\nfunction L126-141\nfunction:81413e8507c4806933dbb1ca660a2c83" as N25
+rectangle "s\nconstant L146-146\nconstant:2b0db9f2a1b7ccba69b546890e1fcf75" as N26
+rectangle "s\nconstant L148-148\nconstant:b9cfa8c948dd05d98f0d27efc8b0c687" as N27
+rectangle "s\nconstant L149-149\nconstant:90063515f4c1fa4dfa45893114603c66" as N28
+rectangle "s\nconstant L150-150\nconstant:ae017bf9e7080de50da5388e25bf6340" as N29
+rectangle "s\nconstant L152-152\nconstant:7a82926ecd4566642bc4cf72c4d0ae2a" as N30
+N0 --> N1 : contains E253
+N0 --> N2 : contains E254
+N0 --> N3 : contains E255
+N0 --> N4 : contains E256
+N0 --> N5 : contains E257
+N0 --> N6 : contains E258
+N0 --> N7 : contains E259
+N0 --> N8 : contains E260
+N0 --> N9 : contains E261
+N0 --> N10 : contains E262
+N0 --> N11 : contains E263
+N0 --> N12 : contains E264
+N0 --> N13 : contains E265
+N0 --> N14 : contains E266
+N0 --> N15 : contains E267
+N0 --> N16 : contains E268
+N0 --> N17 : contains E269
+N0 --> N18 : contains E270
+N0 --> N19 : contains E271
+N0 --> N20 : contains E272
+N0 --> N21 : contains E273
+N0 --> N22 : contains E274
+N0 --> N23 : contains E275
+N0 --> N24 : contains E276
+N0 --> N25 : contains E277
+N0 --> N26 : contains E278
+N0 --> N27 : contains E279
+N0 --> N28 : contains E280
+N0 --> N29 : contains E281
+N0 --> N30 : contains E282
+N19 --> N8 : references E283
+N21 --> N8 : references E284
+N14 --> N19 : calls E3987
+N14 --> N22 : calls E3988
+N14 --> N13 : calls E3989
+N14 --> N18 : calls E3990
+N17 --> N11 : calls E3991
+N18 --> N11 : calls E3992
+N19 --> N9 : calls E3993
+N20 --> N11 : calls E3994
+N21 --> N10 : calls E3995
+N21 --> N10 : calls E3996
+N22 --> N9 : calls E3997
+N22 --> N17 : calls E3998
+N22 --> N18 : calls E3999
+N23 --> N12 : calls E4000
+N23 --> N9 : calls E4001
+N23 --> N10 : calls E4002
+N23 --> N9 : calls E4003
+N23 --> N10 : calls E4004
+N23 --> N9 : calls E4005
+N23 --> N10 : calls E4006
+N23 --> N9 : calls E4007
+N23 --> N16 : calls E4008
+N23 --> N10 : calls E4009
+N23 --> N21 : calls E4010
+N24 --> N19 : calls E4011
+N24 --> N22 : calls E4012
+N24 --> N20 : calls E4013
+N24 --> N11 : calls E4014
+N24 --> N21 : calls E4015
+N25 --> N19 : calls E4016
+N25 --> N22 : calls E4017
+N25 --> N20 : calls E4018
+N25 --> N15 : calls E4019
+N25 --> N21 : calls E4020
+N0 --> N23 : calls E4021
+N26 --> N19 : calls E4022
+N0 --> N17 : calls E4023
+N0 --> N18 : calls E4024
+N0 --> N21 : calls E4025
+N0 --> N22 : calls E4026
+N0 --> N19 : calls E4027
+N27 --> N14 : calls E4028
+N28 --> N14 : calls E4029
+N0 --> N20 : calls E4030
+N29 --> N19 : calls E4031
+N0 --> N22 : calls E4032
+N0 --> N20 : calls E4033
+N0 --> N15 : calls E4034
+N0 --> N24 : calls E4035
+N30 --> N19 : calls E4036
+N0 --> N21 : calls E4037
+N0 --> N25 : calls E4038
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+title tests/chart-presentation.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "chart-presentation.test.ts\nfile L1-63\nfile:tests/chart-presentation.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:1fa7d74dcfa133d00249ee51c364529e" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:56812420fbef0f18cbc1063b68379a76" as N2
+rectangle "../src/services/natallyChat\nimport L3-3\nimport:70695832a6c91465d00e53cc3096d0a7" as N3
+rectangle "../src/services/ephemeris\nimport L4-4\nimport:46e3884ab6fa956820df7d2676339261" as N4
+rectangle "chart\nconstant L6-7\nconstant:65fecfa17866c13c9887591f24fdf290" as N5
+N0 --> N1 : contains E2674
+N0 --> N2 : contains E2675
+N0 --> N3 : contains E2676
+N0 --> N4 : contains E2677
+N0 --> N5 : contains E2678
+@enduml

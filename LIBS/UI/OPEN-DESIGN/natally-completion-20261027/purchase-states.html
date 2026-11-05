@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Natally — purchase, pending, cancellation, restore, ready and failure presentations</title>
+<style>
+:root{
+  --bg:oklch(0.17 0.022 294);
+  --surface:oklch(0.205 0.027 294);
+  --surface-2:oklch(0.235 0.03 294);
+  --fg:oklch(0.94 0.014 79);
+  --muted:oklch(0.74 0.025 294);
+  --border:oklch(0.35 0.035 294);
+  --accent:oklch(0.81 0.105 80);
+  --accent-hover:oklch(0.89 0.09 82);
+  --accent-ink:oklch(0.17 0.022 294);
+  --violet:oklch(0.65 0.16 309);
+  --violet-light:oklch(0.79 0.105 309);
+  --deep:oklch(0.12 0.023 294);
+  --success:oklch(0.8 0.065 158);
+  --error:oklch(0.83 0.10 30);
+  --font-display:Georgia,'Times New Roman',serif;
+  --font-body:'Segoe UI',Helvetica,Arial,sans-serif;
+  --font-mono:Consolas,'Courier New',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--deep);color:var(--fg);font:15px/1.55 var(--font-body);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+
+/* board chrome (specification board, not product UI) */
+.board-head{padding:40px 24px 24px;max-width:1100px;margin:0 auto}
+.board-head h1{font-size:clamp(26px,3.4vw,34px);line-height:1.15}
+.board-head p{margin-top:10px;color:var(--muted);max-width:72ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;font-size:13px;color:var(--muted)}
+.legend .bind{color:var(--fg)}
+.selection{margin-top:18px;display:inline-flex;flex-wrap:wrap;gap:6px 14px;padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:var(--surface);font-size:13px}
+.selection b{font-weight:600}
+.toc{position:sticky;top:0;z-index:5;background:color-mix(in oklch,var(--deep) 90%,transparent);backdrop-filter:blur(8px);border-block:1px solid var(--border)}
+.toc ol{display:flex;gap:4px;overflow-x:auto;margin:0 auto;max-width:1100px;padding:6px 16px;list-style:none;scrollbar-width:thin}
+.toc a{display:inline-flex;align-items:center;min-height:40px;padding:0 10px;border-radius:6px;white-space:nowrap;font-size:12.5px;color:var(--fg);text-decoration:none}
+.toc a:hover{background:var(--surface-2)}
+.frames{max-width:1100px;margin:0 auto;padding:24px 16px 96px;display:grid;gap:56px}
+.frame-label{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:baseline;margin-bottom:12px}
+.frame-label h2{font-size:21px}
+.frame-label code{font:12px var(--font-mono);color:var(--violet-light)}
+.frame-label p{grid-column:1/-1;font-size:13px;color:var(--muted);max-width:90ch}
+.bind{border-bottom:1px dotted var(--violet-light)}
+
+/* dialog geometry mirrors the approved paywall: art 0.9fr | content 1.1fr, 24px radius */
+.dialog{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);width:min(100%,980px);margin:0 auto;min-height:560px;border:1px solid var(--border);border-radius:24px;overflow:hidden;background:var(--surface);box-shadow:0 28px 90px oklch(0.06 0.02 294 / .55)}
+.art{position:relative;overflow:hidden;background:oklch(0.15 0.025 300)}
+.art img{width:100%;height:100%;object-fit:cover;object-position:52% center;display:block}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 68%,var(--surface)),linear-gradient(0deg,oklch(0.14 0.03 300 / .45),transparent 38%);pointer-events:none}
+.art.dim img{filter:saturate(.75) brightness(.7)}
+.brand{position:absolute;z-index:1;left:24px;top:24px;display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:24px;text-shadow:0 2px 18px #000}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:inset 0 0 0 3px oklch(0.14 0.03 300 / .72)}
+.content{min-width:0;padding:52px 52px 36px 44px;display:flex;flex-direction:column}
+.close{position:absolute;z-index:2;top:14px;right:14px;width:44px;height:44px;border:0;border-radius:50%;display:grid;place-items:center;color:var(--muted);background:transparent;cursor:pointer}
+.close:hover{color:var(--fg);background:var(--surface-2)}
+.eyebrow{margin:0 0 12px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;padding:4px 10px;border:1px solid var(--border);border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--violet-light)}
+.pill.ok{color:var(--success);border-color:color-mix(in oklch,var(--success) 45%,var(--border))}.pill.ok::before{background:var(--success)}
+.pill.bad{color:var(--error);border-color:color-mix(in oklch,var(--error) 45%,var(--border))}.pill.bad::before{background:var(--error)}
+@media (prefers-reduced-motion:no-preference){.pill.live::before{animation:breathe 1.8s ease-in-out infinite}@keyframes breathe{50%{opacity:.35}}}
+.title{font-size:clamp(32px,3.6vw,44px);line-height:1.04;letter-spacing:-.02em;max-width:15ch}
+.title em{font-style:italic}
+.body{margin:16px 0 22px;max-width:46ch;color:var(--muted);font-size:15px;line-height:1.65;text-wrap:pretty}
+.includes{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+.includes li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:13.5px;line-height:1.45}
+.includes li::before{content:"\2713";color:var(--accent);font-weight:700}
+.sel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;align-items:baseline;padding:12px 14px;margin-bottom:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface-2)}
+.sel .n{font-family:var(--font-display);font-size:18px}
+.sel .p{font-weight:600;font-size:14px}
+.sel .s{grid-column:1/-1;font-size:12px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:22px}
+.fact{padding:12px 14px;border:1px solid var(--border);border-radius:12px}
+.fact b{display:block;font-family:var(--font-display);font-weight:400;font-size:30px;line-height:1.1}
+.fact span{font-size:12px;color:var(--muted)}
+.steps{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px;font-size:14px}
+.steps li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:center}
+.steps .d{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border)}
+.steps .done .d{border-color:var(--success);background:var(--success)}
+.steps .now .d{border-color:var(--violet-light);box-shadow:0 0 0 4px oklch(0.79 0.105 309 / .18)}
+.steps .wait{color:var(--muted)}
+.spacer{flex:1}
+.primary{width:100%;min-height:48px;border:1px solid var(--accent);border-radius:12px;background:var(--accent);color:var(--accent-ink);font:700 14px/1 var(--font-body);letter-spacing:.02em;cursor:pointer}
+.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.primary:disabled{border-color:var(--border);background:var(--surface-2);color:oklch(0.74 0.025 294 / .6);cursor:not-allowed}
+.secondary{width:100%;min-height:48px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--fg);font:600 14px/1 var(--font-body);cursor:pointer}
+.secondary:hover{background:var(--surface-2);border-color:var(--violet-light)}
+.google{display:flex;align-items:center;justify-content:center;gap:12px}
+.google svg{width:18px;height:18px}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 16px;margin-top:10px}
+.text-action{min-height:44px;border:0;padding:0 6px;background:transparent;color:var(--muted);font:600 12px var(--font-body);cursor:pointer}
+.text-action:hover{color:var(--fg)}
+.fine{margin-top:6px;max-width:44ch;align-self:center;text-align:center;font-size:11px;line-height:1.55;color:oklch(0.74 0.025 294 / .8)}
+.ref{margin-top:4px;text-align:center;font:11px var(--font-mono);color:var(--muted)}
+.status{min-height:21px;margin:12px 0;font-size:12px;color:var(--muted)}
+.status.error{color:var(--error)}
+.choice{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.choice span:first-child{font-family:var(--font-display);font-size:20px}
+.choice span:last-child{font-weight:700;font-size:13px}
+.methods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.method{min-height:68px;padding:10px;border:1px solid var(--border);border-radius:12px;text-align:left;background:oklch(1 0 0 / .02);color:var(--muted);font:inherit;cursor:pointer}
+.method:hover:not(:disabled){border-color:oklch(0.81 0.105 80 / .6);color:var(--fg)}
+.method[aria-pressed="true"]{border-color:var(--accent);background:oklch(0.81 0.105 80 / .08);color:var(--fg)}
+.method:disabled{opacity:.5;cursor:not-allowed}
+.method b{display:block;font-size:12px;line-height:1.3}
+.method small{display:block;margin-top:5px;font-size:10px}
+.checkout-sheet{margin:0 0 22px;padding:18px;border:1px dashed var(--border);border-radius:12px;font-size:13px;color:var(--muted)}
+.checkout-sheet b{color:var(--fg);font-weight:600}
+.spinner{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);border-top-color:var(--violet-light);margin-bottom:12px}
+@media (prefers-reduced-motion:no-preference){.spinner{animation:spin 1.1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}}
+
+@media (max-width:720px){
+  .dialog{display:block;min-height:0;border-radius:18px}
+  .art{height:220px}
+  .art::after{background:linear-gradient(0deg,var(--surface),transparent 55%)}
+  .art img{object-position:50% 43%}
+  .brand{left:20px;top:18px;font-size:22px}
+  .close{color:var(--fg);background:oklch(0.14 0.03 300 / .72)}
+  .content{padding:4px 20px 24px}
+  .title{font-size:36px;max-width:none}
+  .methods{grid-template-columns:minmax(0,1fr)}
+  .method{min-height:52px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px}
+  .method small{margin:0;text-align:right}
+  .facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .frame-label{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="board-head" data-od-id="board-head">
+  <h1>Purchase presentations</h1>
+  <p>Every state Natally shows between a purchase button and her first paid answer. Each frame uses the approved paywall's dialog geometry and artwork, so the purchase feels like one continuous surface. Frames marked <b>paywall</b> are the original paywall driven by its own API; frames marked <b>host panel</b> replace the paywall iframe inside the same dialog.</p>
+  <div class="legend"><span><span class="bind">Dotted values</span> are runtime bindings, shown with tester policy v3 sample values.</span><span>Design artifact only: no payment, grant or purchase has occurred.</span></div>
+  <div class="selection" data-od-id="selection-readout" aria-live="polite">Carried selection: <b data-bind="productName">First reading · tester</b> from <b data-bind="sourceLabel">the opening section</b> <code style="font:12px var(--font-mono);color:var(--violet-light)" data-bind="intentCode">product=reading · source=usp-hero</code></div>
+</header>
+
+<nav class="toc" aria-label="States">
+  <ol>
+    <li><a href="#auth-handoff">1 Sign-in handoff</a></li><li><a href="#paywall-loading">2 Quote loading</a></li><li><a href="#paywall-quoted">3 Paywall · quoted</a></li><li><a href="#paywall-unavailable">4 Paywall · unavailable</a></li><li><a href="#checkout-open">5 Checkout open</a></li><li><a href="#payment-pending">6 Pending</a></li><li><a href="#provisioning">7 Preparing</a></li><li><a href="#ready-preloaded">8 Ready</a></li><li><a href="#cancelled">9 Cancelled</a></li><li><a href="#failed">10 Failed</a></li><li><a href="#restore-checking">11 Restore</a></li><li><a href="#restore-none">12 Nothing found</a></li><li><a href="#reconciliation-required">13 Reconciling</a></li><li><a href="#account-changed">14 Account changed</a></li><li><a href="#exhausted">15 Turns used</a></li><li><a href="#capacity-unavailable">16 Can't answer now</a></li>
+  </ol>
+</nav>
+
+<main class="frames">
+
+<!-- 1 -->
+<article id="auth-handoff" data-od-id="state-auth-handoff">
+  <div class="frame-label"><h2>1 · Sign-in handoff</h2><code>host panel · access=signed_out</code><p>Shown only when the Google popup is blocked or redirect sign-in is in progress. The CTA click already opened Google sign-in; this panel keeps the product visible and never asks the user to choose it again.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <p class="eyebrow">One step before checkout</p>
+      <h3 class="title">Sign in to keep your purchase yours</h3>
+      <p class="body">Your purchase belongs to your Natally account, so it's there on every device. We'll go straight to payment after this.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p bind" data-bind="price">USD 0.99</span><span class="s">Selected on <span data-bind="sourceLabel">the opening section</span>. You won't be asked again.</span></div>
+      <div class="spacer"></div>
+      <button class="primary google" type="button" data-action="auth.google"><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="currentColor" d="M17.6 9.2c0-.6-.1-1.2-.2-1.7H9v3.3h4.8a4.1 4.1 0 0 1-1.8 2.7v2.2h2.9c1.7-1.6 2.7-3.9 2.7-6.5z"/><path fill="currentColor" opacity=".8" d="M9 18c2.4 0 4.5-.8 6-2.2l-2.9-2.2c-.8.5-1.8.9-3.1.9-2.4 0-4.4-1.6-5.1-3.8H.9v2.3A9 9 0 0 0 9 18z"/><path fill="currentColor" opacity=".6" d="M3.9 10.7a5.4 5.4 0 0 1 0-3.4V5H.9a9 9 0 0 0 0 8z"/><path fill="currentColor" opacity=".9" d="M9 3.6c1.3 0 2.5.5 3.4 1.3l2.6-2.6A9 9 0 0 0 .9 5l3 2.3C4.6 5.2 6.6 3.6 9 3.6z"/></svg>Continue with Google</button>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to where I was</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 2 -->
+<article id="paywall-loading" data-od-id="state-paywall-loading">
+  <div class="frame-label"><h2>2 · Quote loading</h2><code>paywall · setState('loading')</code><p>The original paywall with the selected product's text applied. Methods are disabled while the owner-bound quote is requested. Status text is the paywall's own default.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close paywall"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <p class="eyebrow" data-bind="offerEyebrow">A one-time tester purchase</p>
+      <h3 class="title" data-bind="offerTitle">Your first reading</h3>
+      <p class="body" data-bind="offerDescription">Natally reads your calculated chart aloud, with turns for your questions.</p>
+      <ul class="includes" data-bind="benefits"><li>Ten completed conversation turns</li><li>Downloads of your selected reading</li><li>One promotional $ROCHE credit</li></ul>
+      <div class="choice"><span>Choose how to pay</span><span></span></div>
+      <div class="methods"><button class="method" disabled aria-pressed="false"><b>Card</b><small>RevenueCat · Unavailable</small></button><button class="method" disabled aria-pressed="false"><b>Crypto</b><small>x402 · Unavailable</small></button><button class="method" disabled aria-pressed="false"><b>Bitcoin Lightning</b><small>Unavailable</small></button></div>
+      <p class="status" role="status">Confirming availability…</p>
+      <button class="primary" type="button" disabled>Continue</button>
+      <div class="actions"><button class="text-action" type="button">Back to Natally</button><button class="text-action" type="button">Check existing access</button></div>
+      <p class="fine">One-time purchase. Availability and price are confirmed by your payment provider.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 3 -->
+<article id="paywall-quoted" data-od-id="state-paywall-quoted">
+  <div class="frame-label"><h2>3 · Paywall · quoted, card chosen</h2><code>paywall · setVerifiedPrice(quote) · setMethods · setState('ready')</code><p>Price comes only from the verified quote. No method starts selected; this frame shows the state after the user taps Card. Continue opens the RevenueCat checkout for exactly the quoted package.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close paywall"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <p class="eyebrow" data-bind="offerEyebrow">A one-time tester purchase</p>
+      <h3 class="title" data-bind="offerTitle">Your first reading</h3>
+      <p class="body" data-bind="offerDescription">Natally reads your calculated chart aloud, with turns for your questions.</p>
+      <ul class="includes" data-bind="benefits"><li>Ten completed conversation turns</li><li>Downloads of your selected reading</li><li>One promotional $ROCHE credit</li></ul>
+      <div class="choice"><span>Choose how to pay</span><span class="bind" data-bind="price">USD 0.99</span></div>
+      <div class="methods"><button class="method" aria-pressed="true"><b>Card</b><small>RevenueCat · Available</small></button><button class="method" disabled aria-pressed="false"><b>Crypto</b><small>x402 · Unavailable</small></button><button class="method" disabled aria-pressed="false"><b>Bitcoin Lightning</b><small>Unavailable</small></button></div>
+      <p class="status" role="status">Choose a payment method to continue</p>
+      <button class="primary" type="button" data-action="paywall.continue">Continue</button>
+      <div class="actions"><button class="text-action" type="button">Back to Natally</button><button class="text-action" type="button">Check existing access</button></div>
+      <p class="fine">One-time purchase. Availability and price are confirmed by your payment provider.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 4 -->
+<article id="paywall-unavailable" data-od-id="state-paywall-unavailable">
+  <div class="frame-label"><h2>4 · Paywall · purchasing unavailable</h2><code>paywall · setState('unavailable', message)</code><p>Required until the quote coordinator is connected, and whenever no payable quote can be issued. The selected product stays on screen; nothing pretends to be checkout.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close paywall"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <p class="eyebrow" data-bind="offerEyebrow">A one-time tester purchase</p>
+      <h3 class="title" data-bind="offerTitle">Your first reading</h3>
+      <p class="body" data-bind="offerDescription">Natally reads your calculated chart aloud, with turns for your questions.</p>
+      <ul class="includes" data-bind="benefits"><li>Ten completed conversation turns</li><li>Downloads of your selected reading</li><li>One promotional $ROCHE credit</li></ul>
+      <div class="choice"><span>Choose how to pay</span><span></span></div>
+      <div class="methods"><button class="method" disabled aria-pressed="false"><b>Card</b><small>RevenueCat · Unavailable</small></button><button class="method" disabled aria-pressed="false"><b>Crypto</b><small>x402 · Unavailable</small></button><button class="method" disabled aria-pressed="false"><b>Bitcoin Lightning</b><small>Unavailable</small></button></div>
+      <p class="status" role="status">Purchasing isn't available right now. Your choice is kept; nothing has been charged.</p>
+      <button class="primary" type="button" disabled>Continue</button>
+      <div class="actions"><button class="text-action" type="button">Back to Natally</button><button class="text-action" type="button">Check existing access</button></div>
+      <p class="fine">One-time purchase. Availability and price are confirmed by your payment provider.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 5 -->
+<article id="checkout-open" data-od-id="state-checkout-open">
+  <div class="frame-label"><h2>5 · Checkout open</h2><code>host panel · purchase=checkout_open</code><p>Behind RevenueCat's own Web Billing checkout (Stripe card form). The provider sheet is not redesigned. If the user dismisses it, show frame 9.</p></div>
+  <div class="dialog">
+    <div class="art dim" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill live">Checkout open</span>
+      <h3 class="title">Finish paying in the secure checkout</h3>
+      <p class="body">Card details go to the checkout run by RevenueCat and paid through Stripe. Natally never sees them. Keep this window open until it closes.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p bind" data-bind="price">USD 0.99</span><span class="s">Quoted for this account until <span class="bind" title="quote.expiresAt">5 minutes after quoting</span></span></div>
+      <div class="spacer"></div>
+      <div class="actions"><button class="text-action" type="button" data-action="checkout.cancel">Cancel this purchase</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 6 -->
+<article id="payment-pending" data-od-id="state-payment-pending">
+  <div class="frame-label"><h2>6 · Payment pending</h2><code>host panel · access=payment_pending · purchase=pending</code><p>The checkout returned but settlement is not yet verified. The receipt reference is kept for this account. The UI must never ask for a second payment here.</p></div>
+  <div class="dialog">
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill live">Confirming payment</span>
+      <h3 class="title">We're confirming your payment</h3>
+      <p class="body">The checkout has closed and your receipt is saved to your account. Please don't pay again. You can leave and come back; we'll pick up exactly here.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p bind" data-bind="price">USD 0.99</span><span class="s">Your question, if you asked one, is saved and will be answered once your turns are ready.</span></div>
+      <div class="spacer"></div>
+      <button class="secondary" type="button" data-action="purchase.reconcile">Check again</button>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+      <p class="ref">Purchase reference <span class="bind" title="quote.quoteId (non-secret)">quoteId</span></p>
+    </div>
+  </div>
+</article>
+
+<!-- 7 -->
+<article id="provisioning" data-od-id="state-provisioning">
+  <div class="frame-label"><h2>7 · Preparing your turns</h2><code>host panel · access=provisioning · purchase=settled</code><p>Settlement verified; the allowance and server credential are being prepared. Steps reflect real transitions only. No percentage is shown because none is known.</p></div>
+  <div class="dialog">
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill live">Preparing</span>
+      <h3 class="title">Payment confirmed. Preparing your turns.</h3>
+      <p class="body">Natally is adding your purchase to your account. This usually completes on its own; you don't need to do anything.</p>
+      <ol class="steps"><li class="done"><span class="d"></span>Payment confirmed</li><li class="now"><span class="d"></span>Adding your turns to your account</li><li class="wait"><span class="d"></span>Ready to answer</li></ol>
+      <div class="spacer"></div>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 8 -->
+<article id="ready-preloaded" data-od-id="state-ready-preloaded">
+  <div class="frame-label"><h2>8 · Ready · allowance preloaded</h2><code>host panel · access=ready</code><p>Only after the server reports <code>state: "ready"</code> with fresh allowance. Values come from the AccessSnapshot, never from the client. If a request was saved, it resumes once, automatically, when this panel closes.</p></div>
+  <div class="dialog">
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill ok">Ready</span>
+      <h3 class="title" data-bind="readyTitle">Your reading is ready to begin</h3>
+      <p class="body" data-bind="readyBody">Your turns are already on your account. Natally will answer your saved question as soon as you return.</p>
+      <div class="facts"><div class="fact"><b class="bind" title="AccessSnapshot.remainingTurns">10</b><span>turns available</span></div><div class="fact"><b class="bind" title="AccessSnapshot.rocheUnits">1</b><span>$ROCHE credit</span></div></div>
+      <div class="spacer"></div>
+      <button class="primary" type="button" data-action="ready.return">Return to Natally</button>
+      <p class="fine" data-bind="readyFine">Downloads of your selected reading are included with this purchase.</p>
+    </div>
+  </div>
+</article>
+
+<!-- 9 -->
+<article id="cancelled" data-od-id="state-cancelled">
+  <div class="frame-label"><h2>9 · Cancelled</h2><code>host panel · purchase=cancelled</code><p>The user closed or cancelled the provider checkout. Nothing is granted. The primary action returns to the originating section with its content intact (CTA05); the selection is kept for a retry without re-choosing.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill">No purchase made</span>
+      <h3 class="title">Checkout closed. Nothing was bought.</h3>
+      <p class="body">No purchase was completed and no access was granted. Your choice is kept if you'd like to try again.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p bind" data-bind="price">USD 0.99</span><span class="s">Selected on <span data-bind="sourceLabel">the opening section</span></span></div>
+      <div class="spacer"></div>
+      <a class="primary" style="display:grid;place-items:center;text-decoration:none" data-action="return.origin" data-href="return-cancelled" href="marketing-landing.html?purchase=cancelled">Return to where I was</a>
+      <div class="actions"><button class="text-action" type="button" data-action="checkout.retry">Try checkout again</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 10 -->
+<article id="failed" data-od-id="state-failed">
+  <div class="frame-label"><h2>10 · Payment failed</h2><code>host panel · purchase=failed</code><p>Confirmed decline or provider error. The provider's reason is shown as plain text when supplied. Retry reuses the same unexpired quote, or requests a fresh one for the same product.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill bad">Payment didn't go through</span>
+      <h3 class="title">The payment wasn't completed</h3>
+      <p class="body">The checkout reported: <span class="bind" title="provider message, text only">Your card was declined.</span> No access was granted. You can try again with the same choice.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p bind" data-bind="price">USD 0.99</span><span class="s">Selected on <span data-bind="sourceLabel">the opening section</span></span></div>
+      <div class="spacer"></div>
+      <button class="primary" type="button" data-action="checkout.retry">Try again</button>
+      <div class="actions"><a class="text-action" style="display:inline-flex;align-items:center" data-action="return.origin" data-href="return-failed" href="marketing-landing.html?purchase=failed">Back to where I was</a></div>
+    </div>
+  </div>
+</article>
+
+<!-- 11 -->
+<article id="restore-checking" data-od-id="state-restore-checking">
+  <div class="frame-label"><h2>11 · Check existing access</h2><code>host panel · access=checking</code><p>From the paywall's "Check existing access", the landing page link, or reload with an unresolved receipt. Retries the saved receipt, then reconciles. Outcomes: frame 8 (ready), 6 (pending), 12 (nothing found), 13 (reconciling).</p></div>
+  <div class="dialog">
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <div class="spinner" aria-hidden="true"></div>
+      <h3 class="title">Checking your account</h3>
+      <p class="body">Looking for purchases made with <span class="bind" title="Firebase user email">your Google account</span>, including any payment that was still being confirmed.</p>
+      <div class="spacer"></div>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 12 -->
+<article id="restore-none" data-od-id="state-restore-none">
+  <div class="frame-label"><h2>12 · Nothing found</h2><code>host panel · access=purchase_required (after restore)</code><p>No purchase on this account. If a product was carried in, its buy action is offered directly; otherwise the default is First reading.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill">No purchases on this account</span>
+      <h3 class="title">Nothing to restore here</h3>
+      <p class="body">We didn't find a purchase for <span class="bind" title="Firebase user email">this Google account</span>. If you paid with a different account, sign in with that one.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p bind" data-bind="price">USD 0.99</span><span class="s" data-bind="productBenefitsShort">Ten turns, downloads of your selected reading, one promotional $ROCHE</span></div>
+      <div class="spacer"></div>
+      <button class="primary" type="button" data-action="paywall.open" data-bind="buyLabel">Buy first reading</button>
+      <div class="actions"><button class="text-action" type="button" data-action="auth.switch">Use a different account</button><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 13 -->
+<article id="reconciliation-required" data-od-id="state-reconciliation-required">
+  <div class="frame-label"><h2>13 · Reconciling</h2><code>host panel · access=reconciliation_required</code><p>Unknown or ambiguous provider status. Never shown as ready, never offers a new payment. Check again repeats reconciliation for the same purchase.</p></div>
+  <div class="dialog">
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill">Still matching your purchase</span>
+      <h3 class="title">We can't confirm this purchase yet</h3>
+      <p class="body">Your payment record is safe on your account. Please don't pay again: once the payment provider confirms it, your turns appear without another purchase.</p>
+      <div class="spacer"></div>
+      <button class="secondary" type="button" data-action="purchase.reconcile">Check again</button>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+      <p class="ref">Purchase reference <span class="bind" title="quote.quoteId (non-secret)">quoteId</span></p>
+    </div>
+  </div>
+</article>
+
+<!-- 14 -->
+<article id="account-changed" data-od-id="state-account-changed">
+  <div class="frame-label"><h2>14 · Account changed</h2><code>host panel · loginGeneration changed</code><p>Sign-out or account switch during a quote or checkout. The old quote and any late reply are discarded. The product choice (not the quote) carries over, and a fresh quote is requested for the new account.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill">Signed in as someone else</span>
+      <h3 class="title">That price belonged to another sign-in</h3>
+      <p class="body">You're now signed in as <span class="bind" title="Firebase user email">a different Google account</span>, so the earlier quote was set aside. Nothing from the other account is shown here.</p>
+      <div class="sel"><span class="n" data-bind="productName">First reading · tester</span><span class="p">New quote</span><span class="s">Same product, priced for this account</span></div>
+      <div class="spacer"></div>
+      <button class="primary" type="button" data-action="paywall.open">Continue with this account</button>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 15 -->
+<article id="exhausted" data-od-id="state-exhausted">
+  <div class="frame-label"><h2>15 · Turns used (in-app USP)</h2><code>host panel · access=exhausted · intent=conversation · source=app-exhausted</code><p>In-app offer section. Its one button carries the conversation product straight to the paywall. The user's unsent message stays in the composer.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill">0 turns left</span>
+      <h3 class="title">You've used all your turns</h3>
+      <p class="body">Your chart and the room stay open to explore. To keep talking with Natally, add ten more turns. Your unsent message is kept.</p>
+      <div class="sel"><span class="n">More conversation · tester</span><span class="p bind" title="quote.formatted">USD 0.99</span><span class="s">Ten further completed turns and one promotional $ROCHE, added to your account</span></div>
+      <div class="spacer"></div>
+      <button class="primary" type="button" data-action="cta.buy" data-intent="conversation" data-source="app-exhausted">Add ten more turns</button>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Keep exploring</button></div>
+    </div>
+  </div>
+</article>
+
+<!-- 16 -->
+<article id="capacity-unavailable" data-od-id="state-capacity-unavailable">
+  <div class="frame-label"><h2>16 · Can't answer right now</h2><code>host panel · access=unavailable</code><p>Provider capacity or service unavailable. Truthful, with no spend and no turn consumed; a reserved request is released only on confirmed failure.</p></div>
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    <div class="art dim" aria-hidden="true"><img src="assets/natally-paywall-original.webp" width="1586" height="992" alt=""><div class="brand"><i></i>Natally</div></div>
+    <div class="content">
+      <span class="pill bad">Not answering yet</span>
+      <h3 class="title">Natally can't answer at the moment</h3>
+      <p class="body">Her reading service isn't available right now. Your turns are untouched and your question is saved. Try again in a little while.</p>
+      <div class="facts"><div class="fact"><b class="bind" title="AccessSnapshot.remainingTurns">10</b><span>turns still available</span></div><div class="fact"><b class="bind" title="AccessSnapshot.rocheUnits">1</b><span>$ROCHE credit</span></div></div>
+      <div class="spacer"></div>
+      <button class="secondary" type="button" data-action="inference.retry">Try again</button>
+      <div class="actions"><button class="text-action" type="button" data-action="return.origin">Back to Natally</button></div>
+    </div>
+  </div>
+</article>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+  // Display copy per closed PurchaseIntent. Prices/benefits shown at runtime come from the verified quote.
+  var OFFERS = {
+    reading: {
+      productName: 'First reading · tester',
+      offerEyebrow: 'A one-time tester purchase',
+      offerTitle: 'Your first reading',
+      offerDescription: 'Natally reads your calculated chart aloud, with turns for your questions.',
+      benefits: ['Ten completed conversation turns', 'Downloads of your selected reading', 'One promotional $ROCHE credit'],
+      productBenefitsShort: 'Ten turns, downloads of your selected reading, one promotional $ROCHE',
+      buyLabel: 'Buy first reading',
+      readyTitle: 'Your reading is ready to begin',
+      readyBody: 'Your turns are already on your account. Natally will answer your saved question as soon as you return.',
+      readyFine: 'Downloads of your selected reading are included with this purchase.'
+    },
+    conversation: {
+      productName: 'More conversation · tester',
+      offerEyebrow: 'A one-time tester purchase',
+      offerTitle: 'Ten more turns',
+      offerDescription: 'Keep talking with Natally about your chart and today’s sky.',
+      benefits: ['Ten further completed conversation turns', 'One promotional $ROCHE credit'],
+      productBenefitsShort: 'Ten further turns and one promotional $ROCHE',
+      buyLabel: 'Buy ten more turns',
+      readyTitle: 'Your new turns are ready',
+      readyBody: 'They’ve been added to what you already had. Natally will answer your saved question as soon as you return.',
+      readyFine: 'Remaining turns and credit come from your account, not this screen.'
+    }
+  };
+  var SOURCES = {
+    'usp-hero': 'the opening section', 'usp-precision': '“Calculated, not guessed”',
+    'usp-attention': '“She shows you what she means”', 'usp-conversation': '“Keep asking”',
+    'offer-scope': 'the price list', 'app-exhausted': 'the turns-used notice'
+  };
+  var q = new URLSearchParams(location.search);
+  var product = OFFERS[q.get('product')] ? q.get('product') : 'reading';
+  var source = SOURCES[q.get('source')] ? q.get('source') : (product === 'conversation' ? 'usp-conversation' : 'usp-hero');
+  var o = OFFERS[product];
+
+  document.querySelectorAll('[data-bind]').forEach(function(el){
+    var k = el.getAttribute('data-bind');
+    if (k === 'benefits') {
+      el.textContent = '';
+      o.benefits.forEach(function(t){ var li = document.createElement('li'); li.textContent = t; el.appendChild(li); });
+    } else if (k === 'sourceLabel') { el.textContent = SOURCES[source]; }
+    else if (k === 'intentCode') { el.textContent = 'product=' + product + ' · source=' + source; }
+    else if (o[k] != null) { el.textContent = o[k]; }
+  });
+  document.querySelectorAll('[data-href^="return-"]').forEach(function(a){
+    var outcome = a.getAttribute('data-href') === 'return-failed' ? 'failed' : 'cancelled';
+    a.href = 'marketing-landing.html?purchase=' + outcome + '&source=' + encodeURIComponent(source) + '&product=' + product + '#' + source;
+  });
+})();
+</script>
+</body>
+</html>

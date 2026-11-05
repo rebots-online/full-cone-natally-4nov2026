@@ -1,0 +1,208 @@
+@startuml
+title src/App.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "App.tsx\nfile L1-1108\nfile:src/App.tsx" as N0
+rectangle "react\nimport L1-1\nimport:2d7b51c441fa7886e203f2c200a19c43" as N1
+rectangle "lucide-react\nimport L2-9\nimport:bc0d574f94dec359e0dbc6bdc8798c00" as N2
+rectangle "./components/Astrolabe3D\nimport L10-10\nimport:b80f57bb1697d468528a8cb3a8f2fec3" as N3
+rectangle "./services/chartTargets\nimport L11-11\nimport:5b9891d069ce4f930016e16a92f83f47" as N4
+rectangle "./services/authoredChartExplanations\nimport L12-12\nimport:ae297118dcc4fed4757dd5dc998efaa8" as N5
+rectangle "./services/billingAccess\nimport L13-13\nimport:158be4e650a1447a3659d0b6c32164e7" as N6
+rectangle "./services/transits\nimport L14-14\nimport:a7ec7d3f013043ae9c1d0c4fdeaba76b" as N7
+rectangle "./services/presentation\nimport L15-15\nimport:ef28799e1ccc6911a0244f49939c6c19" as N8
+rectangle "./components/ReadingStage\nimport L16-16\nimport:80e036ea6b0d819fcf69193500c4abb7" as N9
+rectangle "./components/ChartSelectionDetails\nimport L17-17\nimport:98a95cced78841ca52aa991c0f986687" as N10
+rectangle "./components/AboutDialog\nimport L18-18\nimport:d1dbb97eb0512f1ef784b381a58dd9a6" as N11
+rectangle "./services/historyLifecycle\nimport L19-19\nimport:87b7f78b11ba3ed3ddfcc6b6aac3c69f" as N12
+rectangle "./services/natallyHistory\nimport L20-20\nimport:f57bb80846e3b375b64d485e1d50579e" as N13
+rectangle "./services/natallyChat\nimport L21-21\nimport:dc420b7c7affbe5ffa6752179729f481" as N14
+rectangle "./components/DraggableCard\nimport L22-22\nimport:b13d513b6a48316031eb454c5ac55af5" as N15
+rectangle "./components/onboarding/FirstLight\nimport L23-23\nimport:e80d5f77fc3b2aa1e0a74e905ab7c363" as N16
+rectangle "./components/NatalInputForm\nimport L24-24\nimport:20a09c42b095a4e7f939a86a2f665681" as N17
+rectangle "./components/ThemesAndWisdomBox\nimport L25-25\nimport:8b7fcdbe8b22d5e322cec5b97196351c" as N18
+rectangle "./components/NatallyChatbot\nimport L26-26\nimport:2534116a2e75e304bb782dac575c47d3" as N19
+rectangle "./components/NatallySprite\nimport L27-27\nimport:a780768d706c0a8bda2d8968dee95a10" as N20
+rectangle "./components/NatallyIcon\nimport L28-28\nimport:613d19faf56dee937ae1acc25888a9f1" as N21
+rectangle "./components/SelectedComponentsBar\nimport L29-29\nimport:935c21847ee074ad954c6a5f987c57d0" as N22
+rectangle "./services/readings\nimport L30-30\nimport:fd20cfd34873b788b29b7642cd85e1dd" as N23
+rectangle "./services/atelierTheme\nimport L31-31\nimport:3681b996dd94c21fe06d8165c531ec55" as N24
+rectangle "./components/atelier/AtelierThemeSelector\nimport L32-32\nimport:bbc3834ec53c044b1dc3c09cc0dbca46" as N25
+rectangle "./services/readingStyle\nimport L33-33\nimport:a575289a1ad6e1a597da94f9292b09e4" as N26
+rectangle "./components/LearnAndPayments\nimport L34-34\nimport:5375b2daa8330b9f906e074012d064dd" as N27
+rectangle "./components/ExportModal\nimport L35-35\nimport:ed5291a337e47690acacd1c4ea267a7d" as N28
+rectangle "./components/SouvenirViewer\nimport L36-36\nimport:f34af7b6ce63a96ebf48495c3ac963f8" as N29
+rectangle "./components/AuthModal\nimport L37-37\nimport:ab6b55a0573c345de564b3968e7620e0" as N30
+rectangle "./components/ReadingsModal\nimport L38-38\nimport:f341cd20c6cff99aebdef1b3c95c863a" as N31
+rectangle "./services/ephemeris\nimport L39-44\nimport:f7557b0b5b52f5c0d57d2b22852a22d0" as N32
+rectangle "./services/astrowisdom\nimport L45-45\nimport:0c36a16526584d84be81b5aa9438fa53" as N33
+rectangle "./services/voiceService\nimport L46-51\nimport:91b2f85086cff250f9e7c8e1f96499da" as N34
+rectangle "./services/accountStorage\nimport L52-52\nimport:db22f5bd3dee8c16902a5b4d01f12aa0" as N35
+rectangle "./services/revenueCatCheckout\nimport L53-53\nimport:ff8ade6d4dab6506f0b3ecd5526fbf8e" as N36
+rectangle "./services/firebase\nimport L54-54\nimport:d5d35491598e2231e9a28ff96188b56d" as N37
+rectangle "firebase/auth\nimport L55-55\nimport:87bdc51fe287cf4ce50c8a9a9a7639f0" as N38
+rectangle "./services/gazetteer\nimport L56-56\nimport:64b213f800e1b908fb7de7f51f823ac7" as N39
+rectangle "./services/sessionProfile\nimport L57-57\nimport:20c96f74d3bc175008cc0d048447cb1a" as N40
+rectangle "./services/onboarding\nimport L58-63\nimport:6718316c754db0c5addb42e2bb0a7709" as N41
+rectangle "./services/onboarding\nimport L64-69\nimport:4d2f2e205af1a54551b6eb0b69e27557" as N42
+rectangle "LORE_STORAGE_KEY\nconstant L71-71\nconstant:ba9d3d9909873fc4134ac5bf51efc07c" as N43
+rectangle "OFFER_JOURNEY_SEEN_KEY\nconstant L72-72\nconstant:f5ee8b80cfc776c7dd47cfdd8388b17c" as N44
+rectangle "App\nfunction L74-1107\nfunction:037928363f179a571a1a0998c17b04cb" as N45
+rectangle "setSelectedComponents\nfunction L101-101\nfunction:a9492dcd4c6724827a7fb8d37cdfca92" as N46
+rectangle "handleReadingChart\nfunction L107-113\nfunction:4375d13c42b0a0e7938afdb1eec0df80" as N47
+rectangle "handlePresentationAction\nfunction L114-117\nfunction:1ec6ee59e428f5167c9c79b2880ed68f" as N48
+rectangle "handleChartFocus\nfunction L118-121\nfunction:f2f45b27108948eb206553a3370c2386" as N49
+rectangle "setManualView\nfunction L122-122\nfunction:963b3865bf0d671de1dcebd4f9c89385" as N50
+rectangle "showTargets\nfunction L123-129\nfunction:4ff22697fe8fb65fd519a804e8afd609" as N51
+rectangle "maybeAutoShowOfferJourney\nfunction L189-210\nfunction:bce36689811ccd12fe9c9f88b48d6434" as N52
+rectangle "isCurrentSession\nfunction L217-218\nfunction:cb9de19c71d110e64558adc39a70d42b" as N53
+rectangle "changed\nfunction L221-244\nfunction:0aefb76c397cef5bdeacdb8eb1830629" as N54
+rectangle "onAnyKey\nfunction L255-264\nfunction:47ddb5072c9ac831f266b00a0688601b" as N55
+rectangle "runCalculation\nfunction L333-385\nfunction:f9b24494b9b5740cf5fff6573882a238" as N56
+rectangle "refreshCurrentSky\nfunction L387-416\nfunction:e6fdc098163fc6394d2c402e96d7db05" as N57
+rectangle "handleDiscussWithNatally\nfunction L418-426\nfunction:92e5fe7e42b36b779e81a77e8e7cca53" as N58
+rectangle "handleToggleNatalParams\nfunction L428-437\nfunction:a85c22bb48565b2aab50a8277449e86d" as N59
+rectangle "handleOnboarded\nfunction L441-477\nfunction:acf48cd0fd980c19980ddaee5809bb23" as N60
+rectangle "handleToggleComponent\nfunction L489-500\nfunction:ae5f98a16f26371cb2ff49d589f80030" as N61
+rectangle "handleClearSelection\nfunction L502-505\nfunction:32553c0e9e8fc3838d3c25e9b4032556" as N62
+rectangle "handleRemoveComponent\nfunction L507-509\nfunction:3b5da8be84ea46cac5253d2572476bce" as N63
+rectangle "handleBeginIntuitiveReading\nfunction L512-520\nfunction:143722643e4f518f667527453614192f" as N64
+rectangle "handleInstaNow\nfunction L522-545\nfunction:d334ed16347a110346af79ad773b7073" as N65
+rectangle "current\nfunction L527-527\nfunction:a6b4623ac25998ae6011073fe80ae651" as N66
+rectangle "handleOpenReading\nfunction L547-554\nfunction:d656ccfeac233cadde734232da1e7917" as N67
+rectangle "handleAddUserLore\nfunction L556-559\nfunction:3788953cb46ce97a7d8923778d7c5c43" as N68
+rectangle "handleSpeechStateChange\nfunction L561-570\nfunction:602a286e90c88a2c587d6db6a969c27c" as N69
+N0 --> N1 : contains E447
+N0 --> N2 : contains E448
+N0 --> N3 : contains E449
+N0 --> N4 : contains E450
+N0 --> N5 : contains E451
+N0 --> N6 : contains E452
+N0 --> N7 : contains E453
+N0 --> N8 : contains E454
+N0 --> N9 : contains E455
+N0 --> N10 : contains E456
+N0 --> N11 : contains E457
+N0 --> N12 : contains E458
+N0 --> N13 : contains E459
+N0 --> N14 : contains E460
+N0 --> N15 : contains E461
+N0 --> N16 : contains E462
+N0 --> N17 : contains E463
+N0 --> N18 : contains E464
+N0 --> N19 : contains E465
+N0 --> N20 : contains E466
+N0 --> N21 : contains E467
+N0 --> N22 : contains E468
+N0 --> N23 : contains E469
+N0 --> N24 : contains E470
+N0 --> N25 : contains E471
+N0 --> N26 : contains E472
+N0 --> N27 : contains E473
+N0 --> N28 : contains E474
+N0 --> N29 : contains E475
+N0 --> N30 : contains E476
+N0 --> N31 : contains E477
+N0 --> N32 : contains E478
+N0 --> N33 : contains E479
+N0 --> N34 : contains E480
+N0 --> N35 : contains E481
+N0 --> N36 : contains E482
+N0 --> N37 : contains E483
+N0 --> N38 : contains E484
+N0 --> N39 : contains E485
+N0 --> N40 : contains E486
+N0 --> N41 : contains E487
+N0 --> N42 : contains E488
+N0 --> N43 : contains E489
+N0 --> N44 : contains E490
+N0 --> N45 : contains E491
+N45 --> N46 : contains E492
+N45 --> N47 : contains E493
+N45 --> N48 : contains E494
+N45 --> N49 : contains E495
+N45 --> N50 : contains E496
+N45 --> N51 : contains E497
+N45 --> N52 : contains E498
+N45 --> N53 : contains E499
+N45 --> N54 : contains E500
+N45 --> N55 : contains E501
+N45 --> N56 : contains E502
+N45 --> N57 : contains E503
+N45 --> N58 : contains E504
+N45 --> N59 : contains E505
+N45 --> N60 : contains E506
+N45 --> N61 : contains E507
+N45 --> N62 : contains E508
+N45 --> N63 : contains E509
+N45 --> N64 : contains E510
+N45 --> N65 : contains E511
+N65 --> N66 : contains E512
+N45 --> N67 : contains E513
+N45 --> N68 : contains E514
+N45 --> N69 : contains E515
+N45 --> N43 : references E516
+N45 --> N44 : references E517
+N52 --> N44 : references E518
+N54 --> N43 : references E519
+N54 --> N46 : calls E4109
+N45 --> N53 : calls E4112
+N45 --> N46 : calls E4122
+N56 --> N46 : calls E4133
+N57 --> N53 : calls E4135
+N60 --> N56 : calls E4145
+N60 --> N52 : calls E4147
+N45 --> N56 : calls E4148
+N62 --> N46 : calls E4151
+N63 --> N46 : calls E4152
+N64 --> N53 : calls E4153
+N65 --> N53 : calls E4156
+N65 --> N66 : calls E4158
+N65 --> N66 : calls E4161
+N65 --> N66 : calls E4162
+N65 --> N66 : calls E4163
+N68 --> N53 : calls E4164
+N69 --> N53 : calls E4165
+N45 --> N60 : calls E4168
+N45 --> N67 : calls E4169
+N45 --> N67 : calls E4170
+N45 --> N67 : calls E4171
+N45 --> N67 : calls E4172
+N45 --> N67 : calls E4173
+N45 --> N51 : calls E4174
+N45 --> N57 : calls E4177
+N45 --> N65 : calls E4178
+N45 --> N65 : calls E4179
+N45 --> N61 : calls E4180
+N45 --> N61 : calls E4182
+N45 --> N59 : calls E4183
+N45 --> N59 : calls E4184
+N45 --> N59 : calls E4185
+N45 --> N53 : calls E4186
+N45 --> N56 : calls E4187
+N45 --> N59 : calls E4188
+N45 --> N61 : calls E4189
+N45 --> N61 : calls E4190
+N45 --> N53 : calls E4192
+N45 --> N53 : calls E4193
+N45 --> N54 : references E4194
+N45 --> N55 : references E4195
+N45 --> N56 : references E4196
+N45 --> N52 : references E4197
+N65 --> N66 : references E4198
+N45 --> N63 : references E4199
+N45 --> N62 : references E4200
+N45 --> N64 : references E4201
+N45 --> N50 : references E4202
+N45 --> N61 : references E4203
+N45 --> N48 : references E4205
+N45 --> N47 : references E4206
+N45 --> N51 : references E4207
+N45 --> N53 : references E4208
+N45 --> N68 : references E4209
+N45 --> N69 : references E4210
+N45 --> N49 : references E4211
+N45 --> N67 : references E4212
+N45 --> N58 : references E4213
+@enduml
