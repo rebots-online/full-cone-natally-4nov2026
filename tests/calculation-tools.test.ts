@@ -5,6 +5,10 @@ import { createCalculationSession } from '../src/services/calculationTools';
 import { completeHosted } from '../src/services/hostedInference';
 import { validToolMessages } from '../netlify/lib/astrology-tools.mjs';
 
+// Provider-boundary fixtures; local ephemeris calculations below execute unchanged.
+const toolResponse = (tool_calls: unknown[]) => Response.json({ model: 'test/model:free', choices: [{ message: { tool_calls }, finish_reason: 'tool_calls' }] });
+const answerResponse = (content: string) => Response.json({ model: 'test/model:free', choices: [{ message: { content }, finish_reason: 'stop' }] });
+
 const makeChart = () => calculateNatalChart({ name: 'Synthetic A', birthDate: '2000-01-01', birthTime: '00:00',
   placeName: 'Greenwich', latitude: 51.48, longitude: 0, timezoneOffset: 0, houseSystem: 'W' });
 
@@ -43,15 +47,17 @@ test('hosted loop executes a tool and sends its matching result before displayin
   let executed = 0;
   globalThis.fetch = async (_url, init) => {
     const body = JSON.parse(init?.body as string);
-    assert.equal(body.enableCalculations, true);
+    assert.equal(body.tools[0].function.name, 'calculate_astrology');
+    assert.equal(body.parallel_tool_calls, false);
+    assert.equal(body.stream, true);
     requests++;
-    if (requests === 1) return Response.json({ source: 'hosted', model: 'test', toolCalls: [{ id: 'call_1', type: 'function', function: { name: 'calculate_astrology', arguments: '{"operation":"transits","chartId":"primary","at":"now"}' } }] });
-    assert.equal(validToolMessages(body.toolMessages), true);
-    assert.equal(body.toolMessages[1].content, '{"ok":true,"facts":"calculated"}');
-    return Response.json({ source: 'hosted', model: 'test', text: 'Interpretation of calculated facts.' });
+    if (requests === 1) return toolResponse([{ id: 'call_1', type: 'function', function: { name: 'calculate_astrology', arguments: '{"operation":"transits","chartId":"primary","at":"now"}' } }]);
+    assert.equal(validToolMessages(body.messages.slice(2)), true);
+    assert.equal(body.messages.slice(2)[1].content, '{"ok":true,"facts":"calculated"}');
+    return answerResponse('Interpretation of calculated facts.');
   };
   try {
-    const result = await completeHosted({ prompt: 'Today?', systemInstruction: 'Use tools.' }, 'session', 'https://example.test', async (name) => {
+    const result = await completeHosted({ prompt: 'Today?', systemInstruction: 'Use tools.' }, 'session', 'https://openrouter.ai/api/v1/chat/completions', async (name) => {
       assert.equal(name, 'calculate_astrology'); executed++; return '{"ok":true,"facts":"calculated"}';
     });
     assert.equal(executed, 1);
@@ -72,16 +78,16 @@ test('provider batches execute sequentially with a matching result for every ID'
   let requests = 0;
   const executed: string[] = [];
   globalThis.fetch = async (_url, init) => {
-    if (++requests === 1) return Response.json({ source: 'hosted', model: 'test', toolCalls: ['first', 'second'].map(id => ({
+    if (++requests === 1) return toolResponse(['first', 'second'].map(id => ({
       id, type: 'function', function: { name: 'calculate_astrology', arguments: JSON.stringify({ operation: id }) },
-    })) });
+    })));
     const body = JSON.parse(init?.body as string);
-    assert.equal(validToolMessages(body.toolMessages), true);
-    assert.deepEqual(body.toolMessages.slice(1).map((message: any) => message.tool_call_id), ['first', 'second']);
-    return Response.json({ source: 'hosted', model: 'test', text: 'Both calculations consumed.' });
+    assert.equal(validToolMessages(body.messages.slice(2)), true);
+    assert.deepEqual(body.messages.slice(3).map((message: any) => message.tool_call_id), ['first', 'second']);
+    return answerResponse('Both calculations consumed.');
   };
   try {
-    await completeHosted({ prompt: 'Compare and date.', systemInstruction: 'Use tools.' }, 'session', 'https://example.test', async (_name, args) => {
+    await completeHosted({ prompt: 'Compare and date.', systemInstruction: 'Use tools.' }, 'session', 'https://openrouter.ai/api/v1/chat/completions', async (_name, args) => {
       executed.push(JSON.parse(args).operation); return '{}';
     });
     assert.deepEqual(executed, ['first', 'second']);
@@ -92,11 +98,11 @@ test('hosted loop refuses a seventh calculation rather than spending unbounded c
   const original = globalThis.fetch;
   let requests = 0;
   let executions = 0;
-  globalThis.fetch = async () => Response.json({ source: 'hosted', model: 'test', toolCalls: [{
+  globalThis.fetch = async () => toolResponse([{
     id: 'call_' + (++requests), type: 'function', function: { name: 'calculate_astrology', arguments: '{}' },
-  }] });
+  }]);
   try {
-    await assert.rejects(completeHosted({ prompt: 'Test bounds', systemInstruction: 'Use tools.' }, 'session', 'https://example.test', async () => { executions++; return '{}'; }), /limit reached/);
+    await assert.rejects(completeHosted({ prompt: 'Test bounds', systemInstruction: 'Use tools.' }, 'session', 'https://openrouter.ai/api/v1/chat/completions', async () => { executions++; return '{}'; }), /limit reached/);
     assert.equal(requests, 7);
     assert.equal(executions, 6);
   } finally { globalThis.fetch = original; }

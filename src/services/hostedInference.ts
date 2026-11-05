@@ -82,6 +82,7 @@ async function readOpenRouterStream(response: Response, progress: (text: string,
     while (!done) {
       if (!current()) throw new HostedAuthenticationError('Your account changed. Your question is kept here.');
       const read = await reader.read();
+      if (!current()) throw new HostedAuthenticationError('Your account changed. Your question is kept here.');
       if (read.done) { feed(decoder.decode() + '\n\n'); break; }
       feed(decoder.decode(read.value, { stream: true }));
     }

@@ -1,15 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { runInNewContext } from 'node:vm';
-import configure from '../vite.config';
+import { onnxProgressPlugin } from '../scripts/onnx-progress-plugin';
 
 async function instrument(source: string) {
   source += '\nfunction unusedReadLandmark() { return {status: "download",\n    name: path_or_repo_id,\n    file: filename}; return {status: "done",\n    name: path_or_repo_id,\n    file: filename}; }';
-  const config = configure({ command: 'build', mode: 'production' });
-  const plugins = (config.worker?.plugins?.() ?? config.plugins ?? []) as any[];
-  const plugin = plugins.find(value => value.name === 'natally-onnx-progress');
-  if (!plugin) return source;
-  const result = await plugin.transform(source, '/node_modules/@huggingface/transformers/dist/transformers.web.js');
+  // Exercise instrumentation without entering the guarded release build coordinator.
+  const plugin = onnxProgressPlugin();
+  const transform = plugin.transform;
+  assert.equal(typeof transform, 'function');
+  const result = await (transform as Function).call({}, source, '/node_modules/@huggingface/transformers/dist/transformers.web.js');
   return result.code;
 }
 

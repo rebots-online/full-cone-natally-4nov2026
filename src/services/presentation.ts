@@ -61,15 +61,36 @@ export function presentationViewAt(cues: PresentationCue[], offset: number): Pre
   return view;
 }
 
+/** Keep generated playback within the saved-message validator's safety limit.
+ * On overflow, stop choreography at the first omitted action instead of retaining
+ * a stale highlight for the remaining narration. Displayed text is never cut.
+ */
+function boundGeneratedPresentation(cues: PresentationCue[]): PresentationCue[] {
+  if (cues.length <= 512) return cues;
+  const offset = cues[510].offset;
+  return [
+    ...cues.slice(0, 510),
+    { offset, action: { type: 'clear' } },
+    { offset, action: { type: 'view', view: 'atelier' } },
+  ];
+}
+
 /** Camera follows narrated references, including when a model omits return cues. */
 export function withReadingCamera(text: string, cues: PresentationCue[], references: Array<{start:number;end:number}>, reading = false): PresentationCue[] {
+  // A full bounded plan ends with a paired clear/atelier stop. Preserve that
+  // terminal safety state across saved-plan replay and both camera modes rather
+  // than stripping its view cue or adding references beyond the overflow cutoff.
+  const stop = cues[510], returnToRoom = cues[511];
+  if (cues.length === 512 && stop.action.type === 'clear' &&
+      returnToRoom.action.type === 'view' && returnToRoom.action.view === 'atelier' &&
+      stop.offset === returnToRoom.offset) return cues;
   // A reading takes the chart from its first audible word, before any named
   // placement. Clearing a subject must not send the whole reading back to the room.
-  if (reading) return [
+  if (reading) return boundGeneratedPresentation([
     {offset:0,action:{type:'view',view:'chart'}},
     ...cues.filter(cue=>cue.action.type!=='view'),
     {offset:text.length,action:{type:'view',view:'atelier'}},
-  ];
+  ]);
   const ranges = [
     ...references.map(ref => ({start:ref.start,end:ref.end+240})),
     ...cues.filter(cue=>cue.action.type==='focus').map(cue=>({start:cue.offset,end:cue.offset+240})),
@@ -88,7 +109,7 @@ export function withReadingCamera(text: string, cues: PresentationCue[], referen
     camera.push({offset:range.end,action:{type:'view',view:'atelier'}});
   }
   camera.push({offset:text.length,action:{type:'view',view:'atelier'}});
-  return [...cues.filter(cue=>cue.action.type!=='view'),...camera].sort((a,b)=>a.offset-b.offset);
+  return boundGeneratedPresentation([...cues.filter(cue=>cue.action.type!=='view'),...camera].sort((a,b)=>a.offset-b.offset));
 }
 export function buildPresentationContext(state: PresentationState | undefined, chart: NatalChartResult): string {
   if (!state || !chartFocusKeyMatches(state.chartKey, chart)) return 'PRESENTATION: No current manual selection. Answer the user question.';

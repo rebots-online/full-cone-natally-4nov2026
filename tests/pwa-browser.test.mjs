@@ -8,7 +8,7 @@ import { chromium } from 'playwright';
 import { generatePwa } from '../scripts/pwa-build.mjs';
 
 // Integration fixture, never a production bundle or a deployment substitute.
-test('Chrome activates the generated worker and reloads its shell offline', { timeout: 45000 }, async () => {
+test('Chromium activates the generated worker and reloads its shell offline', { timeout: 45000, skip: process.env.NATALLY_BROWSER_TESTS !== '1' ? 'Run npm run test:browser with the installed Playwright Chromium.' : false }, async () => {
   const folder = mkdtempSync(path.join(tmpdir(), 'natally-pwa-browser-'));
   let browser;
   const server = createServer((request, response) => {
@@ -23,15 +23,17 @@ test('Chrome activates the generated worker and reloads its shell offline', { ti
   try {
     mkdirSync(path.join(folder, 'branding'));
     mkdirSync(path.join(folder, 'assets'));
-    const head = '<meta name="natally-release-id" content="browser-fixture"><script defer src="/pwa.js"></script>';
+    const head = '<meta name="application-name" content="Natally"><meta name="natally-release-id" content="browser-fixture"><script defer src="/pwa.js"></script>';
     writeFileSync(path.join(folder, 'index.html'), head + '<h1>Offline shell fixture</h1><script src="/assets/check.js"></script>');
     writeFileSync(path.join(folder, 'marketing.html'), head + '<header class="site-head"><nav class="head-nav"></nav></header><h1>Marketing fixture</h1>');
+    copyFileSync(path.join(folder, 'index.html'), path.join(folder, 'app.html'));
+    copyFileSync(path.join(folder, 'marketing.html'), path.join(folder, 'landing.html'));
     writeFileSync(path.join(folder, 'assets/check.js'), 'window.shellScriptLoaded = true;');
     for (const name of ['pwa.js', 'manifest.webmanifest', 'branding/192x192.png', 'branding/512x512.png']) copyFileSync(new URL('../public/' + name, import.meta.url), path.join(folder, name));
     generatePwa(folder, { version: '1.2.00003', invocationId: 'browser-fixture' });
     await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
     const origin = `http://127.0.0.1:${server.address().port}`;
-    browser = await chromium.launch({ channel: 'chrome', headless: true });
+    browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto(origin + '/marketing.html');
@@ -51,8 +53,12 @@ test('Chrome activates the generated worker and reloads its shell offline', { ti
     assert.ok(page.url().includes('souvenir=retained'));
     await page.reload();
     assert.equal(await page.evaluate(() => window.shellScriptLoaded), true);
-    await page.goto(origin + '/marketing.html');
-    assert.equal(await page.locator('h1').textContent(), 'Marketing fixture');
+    for (const route of ['/landing', '/landing.html', '/marketing.html']) {
+      await page.goto(origin + route);
+      assert.equal(await page.locator('h1').textContent(), 'Marketing fixture');
+    }
+    await page.goto(origin + '/app.html?app=1');
+    assert.equal(await page.locator('h1').textContent(), 'Offline shell fixture');
   } finally {
     await browser?.close();
     await new Promise(resolve => server.close(resolve));

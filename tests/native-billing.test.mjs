@@ -55,6 +55,7 @@ function nativeFixture() {
 }
 
 const env = {
+  VITE_REVENUECAT_DEFAULT_CREDIT_TIER: '5',
   VITE_REVENUECAT_ANDROID_PUBLIC_KEY: 'goog_fixture',
   VITE_REVENUECAT_OFFERING_ID: 'fixture-offering',
   VITE_REVENUECAT_CONVERSATION_PACKAGE_ID: 'fixture-package',
@@ -207,6 +208,7 @@ test('web projection preserves purchased products and actual recurring product t
   };
   f.Purchases = { isConfigured: () => true, getSharedInstance: () => sdk };
   const api = await service('src/services/revenueCatCheckout.ts', f, {
+    VITE_REVENUECAT_DEFAULT_CREDIT_TIER: '5',
     VITE_REVENUECAT_PUBLIC_KEY: 'rcb_fixture', VITE_REVENUECAT_OFFERING_ID: 'catalog',
     VITE_REVENUECAT_CONVERSATION_PACKAGE_ID: 'monthly', VITE_REVENUECAT_CONVERSATION_PRODUCT_ID: 'monthly-sku',
     VITE_REVENUECAT_CONVERSATION_PACKS_JSON: JSON.stringify([{ cadence: 'monthly', tier: '5', packageIdentifier: 'monthly', webProductIdentifier: 'monthly-sku' }]),

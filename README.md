@@ -292,3 +292,17 @@ publication and the preauthored actual-observation rubric remain separate delive
 outcomes in CHECKLIST.md. Further operator corrections to restore behavior,
 compact actions and complete service offers remain open and are not certified by
 this source attestation.
+
+### Regression checks
+
+Run `npm test` for source, account-isolation, checkout, voice, PWA-generation and
+release-boundary regression tests. The Node harness reads only committed public
+configuration defaults and the real `?raw` source files. Provider/IPC boundaries
+are controlled in unit tests; passing them does not establish a live payment or
+paid reading.
+
+Run `npx playwright install chromium` and `npm run test:browser` for the actual
+Chromium offline PWA check. The CI workflow runs both suites before its compiled
+landing and sign-in checks. Tests requiring historical release binaries or an
+unavailable PowerShell executable report explicit skips; they are not release
+verification or a reason to bypass production guards.

@@ -55,9 +55,9 @@ test('late hosted result is rejected after account switch', async () => {
   let release!: (response: Response) => void;
   globalThis.fetch = () => new Promise(resolve => { release = resolve; });
   try {
-    const pending = completeHosted({ prompt: 'A private', systemInstruction: '' }, 'A-token', 'https://test.invalid', undefined, () => active);
+    const pending = completeHosted({ prompt: 'A private', systemInstruction: '' }, 'A-token', 'https://openrouter.ai/api/v1/chat/completions', undefined, () => active);
     active = false;
-    release(new Response(JSON.stringify({ source: 'hosted', model: 'test', text: 'A answer' })));
+    release(new Response(JSON.stringify({ model: 'test:free', choices: [{ message: { content: 'A answer' }, finish_reason: 'stop' }] })));
     await assert.rejects(pending, HostedAuthenticationError);
   } finally { globalThis.fetch = original; }
 });
@@ -68,12 +68,12 @@ test('account switch during calculation prevents a subsequent hosted tool round'
   let requests = 0;
   globalThis.fetch = async () => {
     requests++;
-    return new Response(JSON.stringify({ source: 'hosted', model: 'test', toolCalls: [{
+    return new Response(JSON.stringify({ model: 'test:free', choices: [{ message: { tool_calls: [{
       id: 'call-1', type: 'function', function: { name: 'calculate_astrology', arguments: '{"operation":"lookup_place","query":"London"}' },
-    }] }));
+    }] }, finish_reason: 'tool_calls' }] }));
   };
   try {
-    await assert.rejects(completeHosted({ prompt: 'private', systemInstruction: '' }, 'A-token', 'https://test.invalid',
+    await assert.rejects(completeHosted({ prompt: 'private', systemInstruction: '' }, 'A-token', 'https://openrouter.ai/api/v1/chat/completions',
       async () => { active = false; return 'calculated'; }, () => active), HostedAuthenticationError);
     assert.equal(requests, 1);
   } finally { globalThis.fetch = original; }
