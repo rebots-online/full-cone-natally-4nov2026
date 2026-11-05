@@ -1,0 +1,14 @@
+{
+  "model": "onnx-community/Supertonic-TTS-ONNX",
+  "revision": "cff123c84b0655d9d647641f1b532c3cbb8f7faa",
+  "voice": "F4",
+  "speed": 0.9,
+  "steps": 5,
+  "generatedAt": "2026-10-22T20:22:50.336Z",
+  "phrases": {
+    "look": "Let me look into that.",
+    "moment": "Give me a moment with this.",
+    "closer": "Let me take a closer look.",
+    "thread": "Let me follow that thread."
+  }
+}
