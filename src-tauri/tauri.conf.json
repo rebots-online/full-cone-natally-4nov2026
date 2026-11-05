@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Natally Tauri Test",
+  "version": "0.3.73753",
+  "identifier": "online.rebots.natally.aistudio.test",
+  "build": {
+    "frontendDist": "../dist-web",
+    "devUrl": "http://localhost:49418"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Natally — Tauri test v0.3.73753",
+        "width": 1280,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug",
+      "versionCode": 3
+    },
+    "windows": {
+      "wix": {
+        "version": "0.0.3.8217",
+        "upgradeCode": "3e5cab2c-d121-4e0a-a428-9a81141827f9"
+      }
+    },
+    "shortDescription": "Natally Tauri 2 test build",
+    "category": "Education"
+  }
+}

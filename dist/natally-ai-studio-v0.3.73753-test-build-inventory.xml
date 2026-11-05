@@ -1,0 +1,12 @@
+<test-build version="0.3.73753" complete="false">
+  <artifact target="windows-exe" state="verified" sha256="2fed0077dec8d2593e1fd3a257154e3e10e3a52c70b36e1f0d8f334abb4ab252"/>
+  <artifact target="nsis" state="verified" sha256="300180c4e1bde57e8367b3ffd7839a49a71e6cc965cfaab1444dc9a5dac39e3a"/>
+  <artifact target="msi" state="verified" sha256="88d3dd2790a3a2964372243aa4f82b0b005ff3f2ad3feb10f2f2e176553cc27d"/>
+  <artifact target="appimage" state="failed" sha256=""/>
+  <artifact target="deb" state="failed" sha256=""/>
+  <artifact target="apk" state="verified" sha256="3b586555266773fcc4d2b9df129bae30559b369604f81e28ab1bdbcba5ff5c6c"/>
+  <artifact target="aab" state="verified" sha256="8e316daf7f21470bfabdaea60111259644fae23e25db9907b94ffd5573939a5d"/>
+  <artifact target="android-symbols" state="verified" sha256="7e9bea74ccc5b52dcf86a37d1468c75be2225f97ca4afb175c4086541a29588c"/>
+  <artifact target="web" state="verified" sha256="826559fe285b5ce2bc5175c68c8c1ee3c8e47240dc531cf3ede3b3e1fd4a98f5"/>
+  <artifact target="web-installer" state="verified" sha256="f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce"/>
+</test-build>
