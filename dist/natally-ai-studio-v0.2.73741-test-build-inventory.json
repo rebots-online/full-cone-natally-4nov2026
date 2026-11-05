@@ -1,0 +1,105 @@
+{
+  "major": 0,
+  "minor": 2,
+  "build": 73741,
+  "version": "0.2.73741",
+  "versionCode": 2,
+  "stampedAt": "2026-10-19T15:41:43.639Z",
+  "msiVersion": "0.0.2.8205",
+  "prefix": "natally-ai-studio-v0.2.73741",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "a4d4892715c9aed33add2bc32c0d840fde5240f3",
+  "phase": "frozen",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-win11-x64-standalone.exe",
+      "bytes": 18351616,
+      "sha256": "7a5b791f86a7900a2159c1f34956d550623a621e5d7984343df1bebb3d27dea0",
+      "evidence": "PE ProductVersion=0.2.73741; unsigned Tauri test, WebView2 required",
+      "verifiedAt": "2026-10-19T15:44:35.630Z"
+    },
+    "nsis": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-win11-x64-nsis.exe",
+      "bytes": 11546965,
+      "sha256": "19c5b645e3ed972edf84e3681279432a1e391fb9963447aba4f7496b67d44bd4",
+      "evidence": "Tauri package version 0.2.73741; MSI numeric mapping 0.0.2.8205; unsigned test installer",
+      "verifiedAt": "2026-10-19T15:44:35.898Z"
+    },
+    "msi": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-win11-x64-msi.msi",
+      "bytes": 12468224,
+      "sha256": "7366ab42fb302497110df9b822412bbe49d61621cc4915f3f4f014f1f3947a65",
+      "evidence": "Tauri package version 0.2.73741; MSI numeric mapping 0.0.2.8205; unsigned test installer",
+      "verifiedAt": "2026-10-19T15:44:36.215Z"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+    },
+    "apk": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-android-arm64-test.apk",
+      "bytes": 79024879,
+      "sha256": "f55430ec146725be6658035844d7926a460bf666f0e4b91591c543677072a31f",
+      "evidence": "Release profile; local Android test certificate; apksigner and 16 KiB zipalign pass; versionCode=2",
+      "verifiedAt": "2026-10-19T15:49:37.973Z"
+    },
+    "aab": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-android-arm64-test.aab",
+      "bytes": 27942934,
+      "sha256": "7bbfef04c75f434e5f8ff5142c58c702e311f7fb45ec5b1daca676e0bf514ab3",
+      "evidence": "Release profile, local Android test certificate; jarsigner verifies; versionCode=2",
+      "verifiedAt": "2026-10-19T15:49:40.220Z"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "Gradle did not produce the required native debug-symbols ZIP"
+    },
+    "web": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-webapp.zip",
+      "bytes": 11853082,
+      "sha256": "66982f9ff5cc75bdf1c20ba94a5837157579b3734f0dd2e261a31ea0c48b4e77",
+      "evidence": "Web production bundle and visible v0.2.73741; archive includes site, version and installer",
+      "verifiedAt": "2026-10-19T15:42:25.941Z"
+    },
+    "web-installer": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.2.73741-install-web.sh",
+      "bytes": 2978,
+      "sha256": "f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce",
+      "evidence": "nginx/Apache installer; syntax and both previews pass under Bash on native Windows (MSYS2); target-server installation not exercised",
+      "verifiedAt": "2026-10-19T15:42:26.539Z"
+    }
+  },
+  "sourceFingerprint": "d5fa3fe5c3b68ff28e019808dd6d0f383d9cc24e94d16bef741009d2315b999d",
+  "sourceInputsMatch": true,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "appimage",
+    "deb",
+    "android-symbols"
+  ],
+  "completedAt": "2026-10-19T15:49:40.913Z"
+}

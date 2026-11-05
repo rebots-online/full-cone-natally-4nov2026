@@ -1,0 +1,94 @@
+{
+  "schema": "natally.assets/v1",
+  "source": "LIBS/UI/OPENDESIGN/atelier-conversation-20261017/index-v2.html",
+  "normalization": "Original exported scene and pixels; fixed idle state, motion disabled, no conversation, chart fixture, overlays or rehearsal controls. Reference canvas 1600x1000.",
+  "files": [
+    {
+      "path": "atelier/assets/natally-mascot.webp",
+      "sha256": "a40780bad977525afdd6c7f92ed47a4b0ba090b1453921a0ad4248208301f873",
+      "bytes": 1777004
+    },
+    {
+      "path": "atelier/assets/natally-still.webp",
+      "sha256": "05f7b2fc0f4fb160d85a8bd7a8cf4e27eedb48e3c70fac5607eab1cbed42f5db",
+      "bytes": 31106
+    },
+    {
+      "path": "atelier/baseline-1600x1000.png",
+      "sha256": "d392131ed3fc652df35e9450a184d862a503ae646aeec5add4b80998df21c14a",
+      "bytes": 882063
+    },
+    {
+      "path": "atelier/baseline-mobile.png",
+      "sha256": "2b6da0e0d4294ee2a81c9300e1be3446f4d511f2b3130051c497b1791414a0ba",
+      "bytes": 253526
+    },
+    {
+      "path": "atelier/baseline.html",
+      "sha256": "c5eb12691ff8f0485b2048c99eb7ebf34ce75c9bd9f8fb88e3087f37ef196527",
+      "bytes": 25625
+    },
+    {
+      "path": "atelier/companion-preferences-mobile.png",
+      "sha256": "c4f422f19a5645b928aa95f57b5c34d4246a4f1a123359b2c7296b32bf5c67bc",
+      "bytes": 61558
+    },
+    {
+      "path": "atelier/DESIGN.md",
+      "sha256": "0305a07c5dec9429cdb48fd99ff726a580ce7c77d0b5dc572107c57bc92e21c4",
+      "bytes": 8325
+    },
+    {
+      "path": "atelier/MOTION-CONTRACT.md",
+      "sha256": "26de0a8d9f09fa3fe94abc645e787d3b956bf495be7fd47fcc0f50f33d4ec816",
+      "bytes": 17985
+    },
+    {
+      "path": "atelier/rehearsal.html",
+      "sha256": "192be7fe00827a97758217cb21865e295afc348da5a49a02471d9f378990bdac",
+      "bytes": 52681
+    },
+    {
+      "path": "brand.json",
+      "sha256": "5eb819eb6b00da1d7c86019eae9c159c70a29973e69cf978768aed45c750db1c",
+      "bytes": 1131
+    },
+    {
+      "path": "README.md",
+      "sha256": "2faae6478be9525219cde9e4d97bbe551feb5cd5e555391a05859ab3cab214ab",
+      "bytes": 8816
+    },
+    {
+      "path": "verification.json",
+      "sha256": "ef2ff0cfa753b8e364e78c40fa928583fb9d1cb10f7aa7cebcfb319bfe690bd9",
+      "bytes": 465
+    }
+  ],
+  "sourceCopies": [
+    {
+      "source": "LIBS/UI/OPENDESIGN/atelier-conversation-20261017/index-v2.html",
+      "copy": "atelier/rehearsal.html",
+      "byteExact": true
+    },
+    {
+      "source": "LIBS/UI/OPENDESIGN/atelier-conversation-20261017/DESIGN-v2.md",
+      "copy": "atelier/DESIGN.md",
+      "byteExact": true
+    },
+    {
+      "source": "LIBS/UI/OPENDESIGN/atelier-conversation-20261017/MOTION-CONTRACT-v2.md",
+      "copy": "atelier/MOTION-CONTRACT.md",
+      "byteExact": true
+    },
+    {
+      "source": "LIBS/UI/OPENDESIGN/atelier-conversation-20261017/assets/natally-mascot.webp",
+      "copy": "atelier/assets/natally-mascot.webp",
+      "byteExact": true
+    },
+    {
+      "source": "LIBS/UI/OPENDESIGN/atelier-conversation-20261017/assets/natally-still.webp",
+      "copy": "atelier/assets/natally-still.webp",
+      "byteExact": true
+    }
+  ]
+}

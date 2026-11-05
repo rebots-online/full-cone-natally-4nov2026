@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#c9aa60">
+<script defer src="/pwa.js"></script>
+<title>Natally — your birth chart, read aloud</title>
+<meta name="description" content="Natally calculates your natal chart with Swiss Ephemeris, reads it aloud and shows each placement on the wheel as she speaks.">
+<style>
+:root{
+  --bg:oklch(0.17 0.022 294);
+  --surface:oklch(0.205 0.027 294);
+  --surface-2:oklch(0.235 0.03 294);
+  --fg:oklch(0.94 0.014 79);
+  --muted:oklch(0.74 0.025 294);
+  --border:oklch(0.35 0.035 294);
+  --accent:oklch(0.81 0.105 80);
+  --accent-hover:oklch(0.89 0.09 82);
+  --accent-ink:oklch(0.17 0.022 294);
+  --violet:oklch(0.65 0.16 309);
+  --violet-light:oklch(0.79 0.105 309);
+  --deep:oklch(0.12 0.023 294);
+  --success:oklch(0.8 0.065 158);
+  --error:oklch(0.83 0.10 30);
+  --font-display:Georgia,'Times New Roman',serif;
+  --font-body:'Segoe UI',Helvetica,Arial,sans-serif;
+  --r:8px; --r-lg:16px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--font-body);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(100% - 48px,1160px);margin-inline:auto}
+.eyebrow{margin:0 0 14px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--violet-light)}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+.lede{color:var(--muted);max-width:56ch;text-wrap:pretty}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:20;background:color-mix(in oklch,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in oklch,var(--border) 60%,transparent)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--font-display);font-size:22px;letter-spacing:.01em;min-height:44px}
+.brand img{width:34px;height:34px;border-radius:50%;border:1px solid var(--border)}
+.head-nav{display:flex;align-items:center;gap:4px}
+.head-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:var(--r);text-decoration:none;color:var(--fg);font-size:14px}
+.head-nav a:hover{background:var(--surface-2)}
+.head-nav .signin{border:1px solid var(--border)}
+
+/* hero */
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,4.4vw,54px);line-height:1.06;letter-spacing:-.02em;max-width:13ch}
+.hero .lede{margin:20px 0 28px;font-size:16px}
+.art-frame{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);background:var(--deep);box-shadow:0 30px 80px oklch(0.08 0.02 294 / .6)}
+.art-frame img{width:100%;height:auto;aspect-ratio:1586/992}
+.art-caption{margin-top:10px;font-size:11px;color:var(--muted)}
+
+/* offer plate (the per-section purchase action) */
+.plate{border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface);padding:18px 18px 16px;max-width:460px}
+.plate-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.plate-name{font-family:var(--font-display);font-size:19px}
+.plate-price{font-weight:600;font-size:15px;white-space:nowrap}
+.plate-benefits{list-style:none;margin:10px 0 14px;padding:0;display:grid;gap:6px;font-size:13.5px;color:var(--fg)}
+.plate-benefits li{display:grid;grid-template-columns:14px 1fr;gap:8px}
+.plate-benefits li::before{content:"";width:6px;height:6px;margin-top:7px;border-radius:50%;background:var(--violet-light)}
+.buy{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;padding:0 20px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--accent-ink);font:600 15px/1 var(--font-body);letter-spacing:.02em;cursor:pointer;text-decoration:none}
+.buy:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.buy:active{transform:translateY(1px)}
+.buy.alt{background:transparent;color:var(--fg);border-color:var(--violet-light)}
+.buy.alt:hover{background:var(--surface-2)}
+.plate-fine{margin-top:10px;font-size:11.5px;color:var(--muted);text-wrap:pretty}
+.free-link{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-size:14px;color:var(--fg);text-underline-offset:4px}
+.free-link:hover{color:var(--accent-hover)}
+
+/* USP sections */
+.usp{padding:88px 0;border-top:1px solid color-mix(in oklch,var(--border) 55%,transparent)}
+.usp .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.usp.flip .visual{order:-1}
+.usp h2{font-size:clamp(28px,3.2vw,38px);line-height:1.12;letter-spacing:-.015em;max-width:18ch}
+.usp .lede{margin:16px 0 22px}
+.facts{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:12px;max-width:56ch}
+.facts li{padding-left:16px;border-left:1px solid var(--border);color:var(--fg)}
+.facts strong{font-weight:600}
+.facts span{display:block;color:var(--muted);font-size:13.5px}
+.visual{display:grid;place-items:center}
+.visual figcaption{margin-top:10px;font-size:11px;color:var(--muted);text-align:center}
+.wheel{width:min(100%,420px);height:auto}
+.wheel .halo{filter:drop-shadow(0 0 10px oklch(0.81 0.105 80 / .7))}
+@media (prefers-reduced-motion:no-preference){
+  .wheel .pulse{animation:pulse 2.8s ease-in-out 2;transform-origin:210px 210px}
+  @keyframes pulse{50%{opacity:.55}}
+}
+.style-pair{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
+.chip{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border:1px solid var(--border);border-radius:999px;font-size:13px;color:var(--fg)}
+.attention{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:20px;align-items:center;width:min(100%,520px)}
+.attention img{width:100%;height:auto;aspect-ratio:1/1;border-radius:50%;border:1px solid var(--border)}
+
+/* scope table */
+.scope{padding:88px 0;border-top:1px solid color-mix(in oklch,var(--border) 55%,transparent)}
+.scope-head{max-width:640px;margin-bottom:36px}
+.scope h2{font-size:clamp(28px,3.2vw,38px);line-height:1.12}
+.scope-head .lede{margin-top:14px}
+.tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:820px}
+.tier{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface);padding:22px}
+.tier h3{font-size:21px;line-height:1.2}
+.tier .tag{align-self:flex-start;margin-bottom:12px;padding:3px 10px;border-radius:999px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--border);color:var(--muted)}
+.tier .tag.on{color:var(--success);border-color:color-mix(in oklch,var(--success) 45%,var(--border))}
+.tier .price{margin:10px 0 14px;font-size:15px;font-weight:600}
+.tier ul{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px;font-size:13.5px;flex:1}
+.tier li{display:grid;grid-template-columns:14px 1fr;gap:8px}
+.tier li::before{content:"";width:6px;height:6px;margin-top:7px;border-radius:50%;background:var(--violet-light)}
+.scope-note{margin-top:22px;font-size:12.5px;color:var(--muted);max-width:64ch}
+
+/* how */
+.how{padding:88px 0;border-top:1px solid color-mix(in oklch,var(--border) 55%,transparent)}
+.how h2{font-size:clamp(26px,3vw,34px);margin-bottom:28px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:16px;border-top:1px solid var(--border)}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--font-display);font-size:22px;color:var(--violet-light);margin-bottom:8px}
+.steps strong{display:block;font-weight:600;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:13.5px}
+.restore{margin-top:28px;font-size:14px;color:var(--muted)}
+.restore a{display:inline-flex;align-items:center;min-height:44px;color:var(--fg);text-underline-offset:4px}
+
+footer{padding:36px 0 calc(48px + env(safe-area-inset-bottom));border-top:1px solid color-mix(in oklch,var(--border) 55%,transparent);font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:0 8px}
+footer nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;text-underline-offset:4px;color:var(--fg)}
+.version-badge{position:fixed;right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));z-index:30;padding:3px 8px;border:1px solid var(--border);border-radius:6px;background:var(--deep);color:var(--accent);font:11px/1.4 Consolas,'Courier New',monospace;pointer-events:none}
+
+@media (max-width:1100px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+  .tiers{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .wrap{width:min(100% - 40px,1160px)}
+  .head-nav .hide-sm{display:none}
+  .hero{padding:24px 0 56px}
+  .hero .wrap,.usp .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
+  .hero .art{order:-1}
+  .hero h1{font-size:34px;max-width:none}
+  .usp,.scope,.how{padding:60px 0}
+  .usp .visual{order:0}
+  .usp.flip .visual{order:0}
+  .plate{max-width:none}
+  .tiers{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .attention{grid-template-columns:120px minmax(0,1fr)}
+}
+@media (max-width:380px){.hero h1{font-size:30px}.brand{font-size:20px}}
+</style>
+</head>
+<body>
+<header class="site-head" data-od-id="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" data-od-id="brand-home"><img src="/marketing-assets/natally-still.webp" width="400" height="400" alt="">Natally</a>
+    <nav class="head-nav" aria-label="Primary" data-od-id="primary-nav">
+      <a class="hide-sm" href="#usp-precision">How she reads</a>
+      <a class="hide-sm" href="#offer-scope">Prices</a>
+      <a class="signin" href="/?app=1" data-entry="sign-in" data-od-id="nav-sign-in">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- USP 1 · hero · intent=reading -->
+  <section class="hero" id="usp-hero" data-usp="usp-hero" data-od-id="usp-hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="copy">
+        <p class="eyebrow">Natal astrology, read aloud</p>
+        <h1 id="hero-title" data-od-id="hero-title">Your birth chart, read aloud by Natally.</h1>
+        <p class="lede">She calculates your chart, speaks your reading and lights up each placement on the wheel as she talks about it. Exploring the room and your chart is free. Spoken readings are prepaid.</p>
+        <div class="plate" data-product="reading" data-od-id="plate-hero-reading">
+          <div class="plate-top"><span class="plate-name">Souvenir reading</span><span class="plate-price" data-bind="price">USD 0.99</span></div>
+          <ul class="plate-benefits">
+            <li>Your assembled natal chart and personal reading</li>
+            <li>Encyclopedia-style PDF with a chapter for each planet in your chart</li>
+            <li>Ten supporting exploration questions of your choice</li>
+            <li>Your own interactive astrology encyclopedia—a personal web app preserving your chart, reading, and exploration with Natally, frozen in time and hosted for at least one year</li>
+          </ul>
+          <a class="buy" href="/?app=1&amp;offer=reading" data-buy="reading" data-source="usp-hero" data-od-id="cta-hero-reading">Start my souvenir reading</a>
+          <p class="plate-fine">One-time purchase. Your quote confirms the price before you pay.</p>
+        </div>
+        <a class="free-link" href="/?app=1" data-entry="explore-free" data-od-id="link-explore-free">Explore the room free first</a>
+      </div>
+      <figure class="art" style="margin:0" data-od-id="hero-art">
+        <div class="art-frame"><img src="/marketing-assets/natally-paywall-original.webp" width="1586" height="992" alt="Natally, a small silver robot in a violet star-patterned turban and cloak, rests her hands on a glowing crystal ball in a candlelit reading room."></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- USP 2 · precision · intent=reading -->
+  <section class="usp" id="usp-precision" data-usp="usp-precision" data-od-id="usp-precision" aria-labelledby="precision-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Calculated, not guessed</p>
+        <h2 id="precision-title">Every placement comes from the ephemeris.</h2>
+        <p class="lede">Natally's reading starts from your actual birth date, place and time, calculated with Swiss Ephemeris. She talks about what is in your chart, and says plainly what isn't known.</p>
+        <ul class="facts">
+          <li><strong>Placidus houses when your birth time is known</strong><span>Ascendant at nine o'clock, with MC, DSC and IC marked.</span></li>
+          <li><strong>Honest about an unknown birth time</strong><span>Houses and angles are left out and the chart is labelled Whole Sign, rather than invented.</span></li>
+          <li><strong>Same numbers everywhere</strong><span>Degrees and minutes match between the wheel, tables and her reading.</span></li>
+        </ul>
+        <div class="plate" data-product="reading" data-od-id="plate-precision-reading">
+          <div class="plate-top"><span class="plate-name">Souvenir reading</span><span class="plate-price" data-bind="price">USD 0.99</span></div>
+          <a class="buy" href="/?app=1&amp;offer=reading" data-buy="reading" data-source="usp-precision" data-od-id="cta-precision-reading" style="margin-top:12px">Get my calculated reading</a>
+          <p class="plate-fine">Full souvenir package: chart, reading, encyclopedia PDF and your interactive astrology encyclopedia web app, frozen in time.</p>
+        </div>
+      </div>
+      <figure class="visual" style="margin:0" data-od-id="precision-wheel">
+        <style>
+#natal-chart-root{width:100%}
+.natal-chart__stage > #threejs-container-ANIMATION_71{position:absolute;inset:0;width:100%;height:100%;background:transparent;pointer-events:auto}
+</style>
+<div id="natal-chart-root" aria-label="Your natal chart"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- USP 3 · attention · intent=reading -->
+  <section class="usp flip" id="usp-attention" data-usp="usp-attention" data-od-id="usp-attention" aria-labelledby="attention-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">She shows you what she means</p>
+        <h2 id="attention-title">As she speaks, the wheel follows her.</h2>
+        <p class="lede">When Natally mentions a placement, it lights up on your chart and the rest dims, so you never have to hunt for it. Mute her voice and you can step through the same passages yourself.</p>
+        <p class="eyebrow" style="margin-bottom:8px">Choose how she talks</p>
+        <div class="style-pair"><span class="chip">Plain English</span><span class="chip">Full Merlin</span></div>
+        <div class="plate" data-product="reading" data-od-id="plate-attention-reading">
+          <div class="plate-top"><span class="plate-name">Souvenir reading</span><span class="plate-price" data-bind="price">USD 0.99</span></div>
+          <a class="buy" href="/?app=1&amp;offer=reading" data-buy="reading" data-source="usp-attention" data-od-id="cta-attention-reading" style="margin-top:12px">Hear my reading</a>
+          <p class="plate-fine">Full souvenir package: chart, reading, encyclopedia PDF and your interactive astrology encyclopedia web app, frozen in time.</p>
+        </div>
+      </div>
+      <figure class="visual" style="margin:0" data-od-id="attention-visual">
+        <div class="attention">
+          <img src="/marketing-assets/natally-still.webp" width="400" height="400" alt="Natally's face, silver with large amber eyes, under her violet turban.">
+          <svg viewBox="0 0 240 240" role="img" aria-label="Illustration: one chart sector highlighted while others are dimmed">
+            <circle cx="120" cy="120" r="112" fill="oklch(0.12 0.023 294)" stroke="oklch(0.35 0.035 294)"/>
+            <g stroke="oklch(0.35 0.035 294)"><line x1="8" y1="120" x2="232" y2="120"/><line x1="120" y1="8" x2="120" y2="232"/><line x1="23" y1="64" x2="217" y2="176"/><line x1="23" y1="176" x2="217" y2="64"/></g>
+            <path class="halo" d="M120 120 L217 64 A112 112 0 0 0 176 23 Z" fill="oklch(0.81 0.105 80 / .2)" stroke="oklch(0.81 0.105 80)" stroke-width="1.5"/>
+            <circle cx="186" cy="56" r="6" fill="oklch(0.81 0.105 80)"/>
+            <g fill="oklch(0.79 0.105 309 / .35)"><circle cx="60" cy="90" r="4"/><circle cx="80" cy="190" r="4"/><circle cx="170" cy="180" r="4"/></g>
+          </svg>
+        </div>
+        <figcaption>Illustration of chart attention. No real reading shown.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- USP 4 · conversation · intent=conversation -->
+  <section class="usp" id="usp-conversation" data-usp="usp-conversation" data-od-id="usp-conversation" aria-labelledby="conversation-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Keep asking</p>
+        <h2 id="conversation-title">Ten more questions, whenever you want them.</h2>
+        <p class="lede">Ask about a placement, an aspect or today's sky against your chart. A turn is one completed exchange: retries, replays and her voice don't use extra turns.</p>
+        <div class="plate" data-product="conversation" data-od-id="plate-conversation">
+          <div class="plate-top"><span class="plate-name">Exploration credits</span><span class="plate-price" data-bind="price">USD 0.99</span></div>
+          <ul class="plate-benefits">
+            <li>Ten further completed exploration turns</li>
+          </ul>
+          <a class="buy" href="/?app=1&amp;offer=conversation" data-buy="conversation" data-source="usp-conversation" data-od-id="cta-conversation">Add ten more turns</a>
+          <p class="plate-fine">Added to any turns you already have. Nothing is reset or replaced. Credits can also go toward upcoming daily horoscope and synastry features, and you can add the souvenir reading any time.</p>
+        </div>
+      </div>
+      <figure class="visual" style="margin:0" data-od-id="conversation-visual">
+        <div class="art-frame" style="width:min(100%,520px)"><img src="/marketing-assets/natally-paywall-original.webp" width="1586" height="992" alt="" style="opacity:.92"></div>
+        <figcaption>Natally's reading room, where the conversation happens.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Offer scope: the two products side by side -->
+  <section class="scope" id="offer-scope" data-usp="offer-scope" data-od-id="offer-scope" aria-labelledby="scope-title">
+    <div class="wrap">
+      <div class="scope-head">
+        <p class="eyebrow">What you can buy today</p>
+        <h2 id="scope-title">Two purchases, one experience.</h2>
+        <p class="lede">Both products unlock the same interactive Natally experience. The souvenir reading adds an encyclopedia-style PDF with a chapter for each planet in your chart, plus a personal reading and your own interactive astrology encyclopedia—a personal web app preserving your chart, reading, and exploration with Natally, frozen in time.</p>
+      </div>
+      <div class="tiers">
+        <article class="tier" data-product="reading" data-od-id="tier-reading">
+          <span class="tag on">Available</span>
+          <h3>Souvenir reading</h3>
+          <p class="price" data-bind="price">USD 0.99</p>
+          <ul><li>The same interactive Natally experience as credits</li><li>Your assembled natal chart and personal reading</li><li>Encyclopedia-style PDF with a chapter for each planet</li><li>Your own interactive astrology encyclopedia—a personal web app preserving your chart, reading, and exploration with Natally, frozen in time and hosted for at least one year</li></ul>
+          <a class="buy" href="/?app=1&amp;offer=reading" data-buy="reading" data-source="offer-scope" data-od-id="cta-scope-reading">Buy souvenir reading</a>
+        </article>
+        <article class="tier" data-product="conversation" data-od-id="tier-conversation">
+          <span class="tag on">Available</span>
+          <h3>Exploration credits</h3>
+          <p class="price" data-bind="price">USD 0.99</p>
+          <ul><li>The same interactive Natally experience as the souvenir reading</li><li>Ten further completed exploration turns</li><li>Usable for upcoming daily horoscope and synastry features</li><li>Add the one-off souvenir reading any time</li></ul>
+          <a class="buy alt" href="/?app=1&amp;offer=conversation" data-buy="conversation" data-source="offer-scope" data-od-id="cta-scope-conversation">Buy ten more turns</a>
+        </article>
+      </div>
+      <p class="scope-note">Each purchase is a one-time charge at USD 0.99. Checkout confirms your actual amount.</p>
+    </div>
+  </section>
+
+  <section class="how" id="how-it-works" data-od-id="how-it-works" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 id="how-title">From this page to her first answer</h2>
+      <ol class="steps">
+        <li><strong>Pick on any section</strong><span>The button you press decides the product. You won't be asked to choose again.</span></li>
+        <li><strong>Sign in with Google</strong><span>Your purchase belongs to your Natally account on every device.</span></li>
+        <li><strong>Pay by card</strong><span>Checkout is run by RevenueCat and paid through Stripe. Natally never sees your card.</span></li>
+        <li><strong>Turns ready first</strong><span>Your allowance is added before your first question is sent.</span></li>
+      </ol>
+      <p class="restore">Already paid? <a href="/?app=1&amp;restore=1" data-entry="restore" data-od-id="link-restore">Restore your existing access</a></p>
+    </div>
+  </section>
+</main>
+
+<footer data-od-id="site-footer">
+  <div class="wrap">
+    <span>Natally · natal astrology companion</span>
+    <nav aria-label="Legal and contact">
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="mailto:support@rochemediaservices.com">Contact Roche Media Services</a>
+    </nav>
+  </div>
+</footer>
+<div class="version-badge" data-natally-version-badge aria-label="Build version" hidden></div>
+
+<script type="module" src="/src/marketing.tsx"></script>
+<script>
+(function(){
+  'use strict';
+  var meta = document.querySelector('meta[name="natally-version"]');
+  var badge = document.querySelector('[data-natally-version-badge]');
+  if (meta && badge && meta.getAttribute('content')) {
+    badge.textContent = meta.getAttribute('content');
+    badge.hidden = false;
+  }
+
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest('[data-buy]');
+    if (!b) return;
+    ev.preventDefault();
+    var product = b.getAttribute('data-buy');
+    if (product !== 'reading' && product !== 'conversation') return;
+    var params = new URLSearchParams(window.location.search);
+    params.delete('app');
+    params.delete('offer');
+    params.delete('restore');
+    var qs = params.toString();
+    window.location.href = '/?app=1&offer=' + encodeURIComponent(product) + (qs ? '&' + qs : '');
+  });
+})();
+</script>
+</body>
+</html>

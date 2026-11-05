@@ -1,0 +1,18 @@
+{
+  "sourceUrl": "https://www.figma.com/make/qaDnpIyfhFmqa7E5fRDIwY/Untitled",
+  "retrievedAt": "2026-10-27T10:48:29.289950+00:00",
+  "method": "Authenticated Figma Make browser: Files > File actions > Download code",
+  "archiveSha256": "5ef56968ca09aaa64a741f4d892833f1794c04cf911516a3aff95838645c830e",
+  "files": {
+    "index.html": "768eac67e6271681de61c23f1c94a6bf688607bbad2d0bccafd8f4bfe789a079",
+    "package.json": "2e6f3ba99dbd8a4d567d2f058699451326aa73e3d95fb6a9e555654a99d4f7f2",
+    "tsconfig.json": "9a1e96d63eaccd5416b2f78ecaccf2b3a27ca71e213fa5859cf5349c66123bf9",
+    "vite.config.ts": "72b05502c161485e0fcb9dd3e3f9b750feb7d3809674b95e415a9ffe2d3f153b",
+    "public/favicon.svg": "84856b1fa530b1ef445f1ea2c8eba3fe6518f6f90f8ef21f15177644ddeaeac5",
+    "public/paywall.html": "8eeef0816113398704c4d815daf3442578ac28dd6b07941a2e2828954d86c11a",
+    "src/App.tsx": "7243b28ce8d6e06c4a6b500c072405d3e20b45a0f2a2e532f8ea5faf7ab950b6",
+    "src/index.css": "6050059c1d45ea626aa511e76332750368e2ac27bb676a1ee66d0c10071b8cca",
+    "src/main.tsx": "5f49dce6e6cc4b5d678cf529ef892af0ab7dfa6afb300b11ad559224019b8b05",
+    "src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+  }
+}

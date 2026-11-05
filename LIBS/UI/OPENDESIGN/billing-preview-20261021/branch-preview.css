@@ -1,0 +1,6 @@
+/* Review chrome and source accessibility corrections only. */
+.branch-status{position:sticky;top:0;z-index:40;background:#242127;color:#f5f2e9;border-bottom:1px solid #514953;padding:12px 24px;font:1rem/1.5 "Nunito Sans",sans-serif}
+button:disabled{opacity:.5;cursor:not-allowed}
+button,a,input,textarea{scroll-margin-top:90px}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #c9aa60;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}
