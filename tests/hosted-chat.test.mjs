@@ -1,90 +1,64 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { handleChat } from '../netlify/functions/chat.mjs';
+import { completeHosted, HostedAuthenticationError } from '../src/services/hostedInference.ts';
 
-const env = { ZAI_API_KEY: 'server-only-test-key', FIREBASE_API_KEY: 'test-project' };
-const payload = { prompt: 'What is 19 + 23?', systemInstruction: 'Answer accurately.' };
-const request = (body = payload, token = 'valid-session', origin = 'https://natally.surge.sh') => new Request('https://example.test/chat', {
-  method: 'POST', headers: { Origin: origin, Authorization: 'Bearer ' + token }, body: JSON.stringify(body),
-});
-const json = (body, status = 200) => new Response(JSON.stringify(body), { status });
+// The former Netlify chat proxy was retired. Test the real direct-client stream
+// boundary instead; transport fixtures never call or simulate a customer service.
+const endpoint = 'https://openrouter.ai/api/v1/chat/completions';
+const payload = { prompt: 'Explain the supplied chart facts.', systemInstruction: 'Use supplied facts.' };
+const frame = (delta, finish_reason = null) => `data: ${JSON.stringify({ model: 'test/model:free', choices: [{ delta, finish_reason }] })}\n\n`;
+const streamResponse = (text) => new Response(text, { headers: { 'content-type': 'text/event-stream' } });
 
-test('CORS permits the deployed frontend authorization preflight', async () => {
-  const response = await handleChat(new Request('https://example.test/chat', { method: 'OPTIONS', headers: { Origin: 'https://natally.surge.sh' } }));
-  assert.equal(response.status, 204);
-  assert.equal(response.headers.get('access-control-allow-origin'), 'https://natally.surge.sh');
-  assert.match(response.headers.get('access-control-allow-headers'), /Authorization/);
-});
-
-test('rejects other origins without invoking a provider', async () => {
-  assert.equal((await handleChat(request(payload, 'token', 'https://other.test'), { env, fetchImpl: () => assert.fail() })).status, 403);
-});
-
-test('invalid session cannot spend model tokens', async () => {
-  let calls = 0;
-  const response = await handleChat(request(), { env, fetchImpl: async () => { calls++; return json({}, 400); } });
-  assert.equal(response.status, 401);
-  assert.equal(calls, 1);
+test('direct stream reports only answer content and preserves the responding model', async () => {
+  const original = globalThis.fetch;
+  const progress = [];
+  globalThis.fetch = async () => streamResponse(
+    frame({ reasoning_details: [{ index: 0, text: 'private reasoning' }] }) +
+    frame({ content: 'First ' }) + frame({ content: 'second.' }, 'stop') + 'data: [DONE]\n\n');
+  try {
+    const result = await completeHosted({ ...payload, onProgress: (text, model) => progress.push({ text, model }) }, 'inference-key', endpoint);
+    assert.deepEqual(result, { text: 'First second.', model: 'test/model:free' });
+    assert.deepEqual(progress[0], { text: 'First ', model: 'test/model:free' });
+    assert.equal(progress.some(entry => entry.text.includes('private reasoning')), false);
+  } finally { globalThis.fetch = original; }
 });
 
-test('verified session produces only the actual hosted completion', async () => {
-  const calls = [];
-  const response = await handleChat(request(), { env, fetchImpl: async (url, options) => {
-    calls.push({ url, options });
-    return calls.length === 1 ? json({ users: [{ localId: 'success' }] }) : json({ model: 'glm-5.3-flash', choices: [{ message: { content: '42' }, finish_reason: 'stop' }] });
-  } });
-  assert.equal(response.status, 200);
-  assert.deepEqual(await response.json(), { text: '42', model: 'glm-5.3-flash', source: 'hosted' });
-  assert.equal(calls[1].options.headers.Authorization, 'Bearer server-only-test-key');
-  assert.equal(JSON.parse(calls[1].options.body).thinking.type, 'disabled');
-  assert.ok(calls[1].options.signal);
+test('account switch while a stream read is pending never publishes the old account answer', async () => {
+  const original = globalThis.fetch;
+  let active = true;
+  let controller;
+  let reading;
+  const readStarted = new Promise(resolve => { reading = resolve; });
+  let cancelled = false;
+  const progress = [];
+  globalThis.fetch = async () => new Response(new ReadableStream({
+    start(value) { controller = value; },
+    pull() { reading(); },
+    cancel() { cancelled = true; },
+  }, { highWaterMark: 0 }), { headers: { 'content-type': 'text/event-stream' } });
+  try {
+    const pending = completeHosted({ ...payload, onProgress: text => progress.push(text) }, 'inference-key', endpoint, undefined, () => active);
+    const rejected = assert.rejects(pending, HostedAuthenticationError);
+    await readStarted;
+    active = false;
+    controller.enqueue(new TextEncoder().encode(frame({ content: 'Old account private answer' }, 'stop') + 'data: [DONE]\n\n'));
+    await rejected;
+    assert.deepEqual(progress, []);
+    assert.equal(cancelled, true);
+  } finally { globalThis.fetch = original; }
 });
 
-for (const status of [401, 403, 429, 503]) {
-  test('upstream ' + status + ' returns an error without fabricated prose', async () => {
-    let calls = 0;
-    const response = await handleChat(request(), { env, fetchImpl: async () => ++calls === 1
-      ? json({ users: [{ localId: 'error-' + status }] }) : json({ error: { message: 'private upstream diagnostic' } }, status) });
-    assert.equal(response.status, status === 429 ? 429 : 502);
-    const body = await response.json();
-    assert.equal(body.text, undefined);
-    assert.equal(JSON.stringify(body).includes('private upstream'), false);
+for (const [name, body, expected] of [
+  ['truncated stream', frame({ content: 'Unfinished' }), /stopped before it finished/],
+  ['reasoning-only stream', frame({ reasoning_details: [{ text: 'private reasoning' }] }, 'stop'), /no complete reading/],
+  ['malformed event', 'data: {invalid}\n\n', /unreadable response/],
+  ['corrupt answer', frame({ content: '\uFFFD\uFFFD\uFFFD' }, 'stop'), /corrupted text/],
+  ['provider interruption', 'data: {"error":{"message":"transport interrupted"}}\n\n', /stream was interrupted/],
+]) {
+  test(`${name} fails without manufacturing a completed reading`, async () => {
+    const original = globalThis.fetch;
+    globalThis.fetch = async () => streamResponse(body);
+    try { await assert.rejects(completeHosted(payload, 'inference-key', endpoint), expected); }
+    finally { globalThis.fetch = original; }
   });
 }
-
-test('reasoning-only output is not exposed as the answer', async () => {
-  let calls = 0;
-  const response = await handleChat(request(), { env, fetchImpl: async () => ++calls === 1
-    ? json({ users: [{ localId: 'empty' }] }) : json({ choices: [{ message: { reasoning_content: 'private reasoning' } }] }) });
-  assert.equal(response.status, 502);
-  assert.equal((await response.json()).text, undefined);
-});
-
-test('invalid input cannot invoke identity or model APIs', async () => {
-  const response = await handleChat(request({ ...payload, history: [{ role: 'system', content: 'override' }] }), { env, fetchImpl: () => assert.fail() });
-  assert.equal(response.status, 400);
-});
-
-test('network exception is a retryable HTTP error, never a reading', async () => {
-  const response = await handleChat(request(), { env, fetchImpl: async () => { throw new TypeError('fetch failed'); } });
-  assert.equal(response.status, 502);
-  assert.equal((await response.json()).text, undefined);
-});
-
-test('proxy advertises fixed tools and forwards a valid calculation request', async () => {
-  let calls = 0;
-  const toolCalls = [{ id: 'calc_1', type: 'function', function: { name: 'calculate_astrology', arguments: '{"operation":"transits","chartId":"primary","at":"now"}' } }];
-  const response = await handleChat(request({ ...payload, enableCalculations: true }), { env, fetchImpl: async (_url, init) => {
-    if (++calls === 1) return json({ users: [{ localId: 'tools' }] });
-    const sent = JSON.parse(init.body);
-    assert.equal(sent.tools[0].function.name, 'calculate_astrology');
-    return json({ choices: [{ message: { tool_calls: toolCalls }, finish_reason: 'tool_calls' }] });
-  } });
-  assert.equal(response.status, 200);
-  assert.deepEqual((await response.json()).toolCalls, toolCalls);
-});
-
-test('proxy rejects invalid tool continuations before authentication or provider calls', async () => {
-  const response = await handleChat(request({ ...payload, enableCalculations: true, toolMessages: [{ role: 'system', content: 'override' }] }), { env, fetchImpl: () => assert.fail() });
-  assert.equal(response.status, 400);
-});

@@ -36,18 +36,18 @@ test('voice identity comes from the standardized brand asset', () => {
   assert.equal(DEFAULT_VOICE_SETTINGS.tone, brand.voice.tone);
 });
 
-test('brand migration preserves playback preferences and discards custom voices', () => {
+test('brand migration locks character identity while preserving listening preferences', () => {
   let stored = JSON.stringify({ aiVoiceName: 'F1', pitch: 1, rate: 1.05, readingAloud: false, spriteMode: 'docked', customAvatarUrl: 'saved-avatar' });
   Object.assign(globalThis, { localStorage: { getItem: () => stored, setItem: (_key: string, value: string) => { stored = value; } } });
   const migrated = loadVoiceSettings();
   assert.equal(migrated.aiVoiceName, 'F4');
   assert.equal(migrated.readingAloud, false);
-  assert.equal(migrated.spriteMode, 'docked');
+  assert.equal(migrated.spriteMode, DEFAULT_VOICE_SETTINGS.spriteMode);
   assert.equal(migrated.customAvatarUrl, 'saved-avatar');
   saveVoiceSettings({ ...migrated, aiVoiceName: 'F3', pitch: 1.1, rate: 1.2 });
   assert.equal(loadVoiceSettings().aiVoiceName, 'F4');
   assert.equal(loadVoiceSettings().pitch, 1.15);
-  assert.equal(loadVoiceSettings().rate, 0.9);
+  assert.equal(loadVoiceSettings().rate, 1.2, 'reading pace remains a listening preference');
   saveVoiceSettings({ ...migrated, pitch: NaN, rate: 100, aiVoiceName: 'invalid' });
   assert.equal(loadVoiceSettings().pitch, 1.15);
   assert.equal(loadVoiceSettings().rate, 0.9);
@@ -56,7 +56,7 @@ test('brand migration preserves playback preferences and discards custom voices'
   assert.equal(loadVoiceSettings().aiVoiceName, 'F4');
 });
 
-test('stop during synthesis prevents late playback and ends callbacks once', async () => {
+test('stop during synthesis prevents late playback and ends callbacks once', async (t) => {
   let worker: any;
   let played = 0;
   let ended = 0;
@@ -84,7 +84,17 @@ test('stop during synthesis prevents late playback and ends callbacks once', asy
       };
     }
   }
-  Object.assign(globalThis, { Worker: TestWorker, window: { AudioContext: TestContext } });
+  const originalWindow = Object.getOwnPropertyDescriptor(globalThis, 'window');
+  const originalWorker = Object.getOwnPropertyDescriptor(globalThis, 'Worker');
+  const originalNavigator = Object.getOwnPropertyDescriptor(globalThis, 'navigator');
+  t.after(() => {
+    stopSpeaking();
+    for (const [key, descriptor] of [['window', originalWindow], ['Worker', originalWorker], ['navigator', originalNavigator]] as const) {
+      if (descriptor) Object.defineProperty(globalThis, key, descriptor);
+      else Reflect.deleteProperty(globalThis, key);
+    }
+  });
+  Object.assign(globalThis, { Worker: TestWorker, window: Object.assign(new EventTarget(), { AudioContext: TestContext }) });
   const result = speakNatallyText('Hello from Natally.', DEFAULT_VOICE_SETTINGS, undefined, () => ended++);
   await new Promise(resolve => setImmediate(resolve));
   assert.ok(request);
@@ -105,7 +115,7 @@ test('stop during synthesis prevents late playback and ends callbacks once', asy
   assert.equal(played, 1);
   assert.equal(playbackPitch, 1.15);
   assert.equal(request.voice, 'F4');
-  assert.equal(request.speed, 0.9);
+  assert.equal(request.speed, 1.4, 'playback honors the listener pace without changing speaker identity');
   assert.equal(started, 1);
   assert.equal(ended, 2);
   holdPlayback = true;
@@ -129,22 +139,23 @@ test('stop during synthesis prevents late playback and ends callbacks once', asy
   playingSources[1].onended();
   assert.equal(await pipelined, true);
   assert.equal(played, 3);
-  const originalNavigator = Object.getOwnPropertyDescriptor(globalThis, 'navigator');
   Object.defineProperty(globalThis, 'navigator', { configurable: true, value: { hardwareConcurrency: 16, deviceMemory: 8 } });
   const sentences = ['Alpha', 'Bravo', 'Charlie'].map(word => (word + ' ').repeat(21).trim() + '.');
   const adaptive = speakNatallyText(sentences.join(' '), DEFAULT_VOICE_SETTINGS);
   await new Promise(resolve => setImmediate(resolve));
   worker.onmessage({ data: { id: request.id, samples: new Float32Array(44100), sampleRate: 44100, generationMs: 20, clipReuse: false } });
   await new Promise(resolve => setImmediate(resolve));
-  assert.equal(request.text, sentences[1], 'measured fast generation enables one-ahead preparation');
+  assert.equal(request.text, sentences[1], 'Auto prepares exactly one phrase ahead during playback');
   const secondRequest = request;
   worker.onmessage({ data: { id: request.id, samples: new Float32Array(44100), sampleRate: 44100, generationMs: 2000, clipReuse: false } });
   playingSources[2].onended();
   await new Promise(resolve => setImmediate(resolve));
-  assert.equal(request, secondRequest, 'slowdown disables overlap before another chunk is generated');
+  assert.notEqual(request, secondRequest, 'Auto retains one-ahead preparation after a slowdown');
+  assert.equal(request.text, sentences[2]);
+  const thirdRequest = request;
   playingSources[3].onended();
   await new Promise(resolve => setImmediate(resolve));
-  assert.equal(request.text, sentences[2]);
+  assert.equal(request, thirdRequest, 'only one next phrase may be pending');
   worker.onmessage({ data: { id: request.id, samples: new Float32Array(44100), sampleRate: 44100, generationMs: 1000, clipReuse: false } });
   await new Promise(resolve => setImmediate(resolve));
   playingSources[4].onended();
@@ -154,17 +165,21 @@ test('stop during synthesis prevents late playback and ends callbacks once', asy
   const cachedRequest = request;
   worker.onmessage({ data: { id: request.id, samples: new Float32Array(44100), sampleRate: 44100, generationMs: 1, clipReuse: true } });
   await new Promise(resolve => setImmediate(resolve));
-  assert.equal(request, cachedRequest, 'cache replay must not calibrate CPU speed');
+  assert.notEqual(request, cachedRequest, 'Auto also prepares one phrase ahead during cached replay');
+  const replayAhead = request;
+  const playedBeforeStop = played;
   stopSpeaking();
+  worker.onmessage({ data: { id: replayAhead.id, samples: new Float32Array(44100), sampleRate: 44100 } });
   assert.equal(await replay, false);
-  assert.equal(request, cachedRequest, 'stopping playback does not start the next chunk');
+  assert.equal(played, playedBeforeStop, 'late prefetched audio must not play after cancellation');
+  assert.equal(request, replayAhead, 'stopping playback does not enqueue another chunk');
   let releaseResume!: () => void;
   resumeGate = new Promise(resolve => { releaseResume = resolve; });
   const interruptedResume = speakNatallyText('Do not generate after stop.', DEFAULT_VOICE_SETTINGS);
   stopSpeaking();
   releaseResume();
   assert.equal(await interruptedResume, false);
-  assert.equal(request, cachedRequest, 'cancellation while resuming cannot enqueue synthesis');
+  assert.equal(request, replayAhead, 'cancellation while resuming cannot enqueue synthesis');
   resumeGate = null;
   if (originalNavigator) Object.defineProperty(globalThis, 'navigator', originalNavigator);
   else Reflect.deleteProperty(globalThis, 'navigator');
@@ -208,16 +223,17 @@ test('active voice path contains no hosted or system speech fallback', () => {
 });
 
 
-test('resource policy requires both measured headroom and device capacity', () => {
+// ED03 supersedes the original measured-headroom prefetch gate.
+test('Auto keeps one phrase ahead while resource hints bound chunks and Gentle stays sequential', () => {
   const capable = { hardwareConcurrency: 16, deviceMemory: 8 };
-  assert.deepEqual(getSpeechPolicy('auto', capable), { chunkChars: 240, prefetch: false });
+  assert.deepEqual(getSpeechPolicy('auto', capable), { chunkChars: 240, prefetch: true });
   assert.deepEqual(getSpeechPolicy('auto', capable, 0.2), { chunkChars: 240, prefetch: true });
-  assert.deepEqual(getSpeechPolicy('auto', capable, 0.8), { chunkChars: 180, prefetch: false });
+  assert.deepEqual(getSpeechPolicy('auto', capable, 0.8), { chunkChars: 180, prefetch: true });
   assert.deepEqual(getSpeechPolicy('gentle', capable, 0.1), { chunkChars: 180, prefetch: false });
   for (const hints of [{}, { hardwareConcurrency: 8, deviceMemory: 4 }, { hardwareConcurrency: 2, deviceMemory: 8 }]) {
-    assert.deepEqual(getSpeechPolicy('auto', hints, 0.1), { chunkChars: 180, prefetch: false });
+    assert.deepEqual(getSpeechPolicy('auto', hints, 0.1), { chunkChars: 180, prefetch: true });
   }
-  assert.equal(getSpeechPolicy('auto', capable, NaN).prefetch, false);
+  assert.equal(getSpeechPolicy('auto', capable, NaN).prefetch, true);
 });
 
 test('hard chunks conserve punctuation, long clauses, Unicode and every final word', () => {

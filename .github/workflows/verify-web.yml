@@ -1,7 +1,7 @@
 name: Verify web without deployment
 on:
   push:
-    branches: [repair/full-cone-web-verification]
+    branches: [master]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -32,13 +32,15 @@ jobs:
           fs.writeFileSync('.env', defaults);
           NODE
       - run: npm run lint
-      - name: Verify release boundaries
-        run: node --import tsx --test tests/release-state.test.mjs tests/web-verification.test.ts
+      - name: Run source and release-boundary regressions
+        run: npm test
       - name: Compile the current web application without publishing
         run: bash build_all.sh --verify-web
       # GitHub's Ubuntu image already supplies Chromium's shared libraries.
       # Download the pinned browser without an unrelated apt upgrade/install.
       - run: npx playwright install chromium
+      - name: Verify offline PWA entry routes
+        run: npm run test:browser
       - name: Inspect desktop and mobile runtime
         run: node tests/landing-smoke.mjs
       - uses: actions/upload-artifact@v4

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync, rmSync, statSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync, copyFileSync, existsSync, readdirSync, rmSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -16,6 +16,19 @@ const runTag = new Date().toISOString().replace(/[:.]/g, '-');
 const hex64 = bytes => createHash('sha256').update(bytes).digest('hex');
 const UUID = '0f1e2d3c-4b5a-6978-8796-a5b4c3d2e1f0';
 const VERSION = '9.90.00001';
+const historicalInventory = 'dist/natally-ai-studio-v1.13.86779-test-build-inventory.json';
+function missingHistoricalArtifacts() {
+  if (!existsSync(path.join(repo, historicalInventory))) return 'Historical release inventory is not retained in this checkout.';
+  const inventory = JSON.parse(readFileSync(path.join(repo, historicalInventory), 'utf8'));
+  const missing = Object.values(inventory.artifacts).filter(artifact => !existsSync(path.join(repo, artifact.path)));
+  return missing.length ? `Historical release requires ${missing.length} untracked retained artifacts; not available in a clean checkout.` : false;
+}
+const powershell = 'powershell.exe';
+const powershellUnavailable = process.platform !== 'win32'
+  ? 'The production coordinator requires a native Windows host.'
+  : spawnSync(powershell, ['-NoProfile', '-Command', '$PSVersionTable.PSVersion.ToString()'], { encoding: 'utf8' }).error?.code === 'ENOENT'
+    ? 'PowerShell is not installed on this host.' : false;
+
 const PREFIX = `natally-ai-studio-v${VERSION}`;
 
 function makeCentralDir(entries) {
@@ -82,7 +95,7 @@ function makeFixture(name, packageOptions = {}) {
   return { dir, inventoryPath, inventory, zipPath };
 }
 
-test('verifyCompletedInventory accepts the real completed historical inventory', () => {
+test('verifyCompletedInventory accepts the real completed historical inventory', { skip: missingHistoricalArtifacts() }, () => {
   const result = verifyCompletedInventory('dist/natally-ai-studio-v1.13.86779-test-build-inventory.json', repo);
   assert.equal(result.inventory.version, '1.13.86779');
   assert.equal(result.selected.inventorySha256, hex64(readFileSync(path.join(repo, 'dist/natally-ai-studio-v1.13.86779-test-build-inventory.json'))));
@@ -240,34 +253,39 @@ function deployEnv() {
   return env;
 }
 
-test('Node deploy CLI VerifyOnly (coordinator env) publishes nothing and writes no version/state/artifact bytes', async () => {
-  const inventoryPath = 'dist/natally-ai-studio-v1.13.86779-test-build-inventory.json';
-  const before = {
-    version: readFileSync(path.join(repo, 'version.json')),
-    state: existsSync(path.join(repo, 'build/release-state.json')) ? readFileSync(path.join(repo, 'build/release-state.json')) : null,
-    inventory: readFileSync(path.join(repo, inventoryPath)),
-  };
-  const child = spawnSync(process.execPath, ['scripts/deploy-existing.mjs', '--inventory', inventoryPath, '--domains', 'natally.surge.sh,natally.robin.mba', '--verify-only'], { cwd: repo, env: deployEnv(), encoding: 'utf8' });
+test('Node deploy CLI VerifyOnly publishes nothing and preserves supplied version/state/artifact bytes', () => {
+  const f = makeFixture('cli-verify-only');
+  mkdirSync(path.join(f.dir, 'scripts'));
+  for (const file of ['deploy-existing.mjs', 'release-state.mjs', 'app-identity.mjs']) {
+    copyFileSync(path.join(repo, 'scripts', file), path.join(f.dir, 'scripts', file));
+  }
+  writeFileSync(path.join(f.dir, 'version.json'), JSON.stringify({ version: VERSION }));
+  mkdirSync(path.join(f.dir, 'build'));
+  writeFileSync(path.join(f.dir, 'build/release-state.json'), '{"unchanged":true}');
+  const protectedFiles = ['version.json', 'build/release-state.json', path.relative(f.dir, f.inventoryPath),
+    ...Object.values(f.inventory.artifacts).map(artifact => artifact.path)];
+  const before = protectedFiles.map(file => readFileSync(path.join(f.dir, file)));
+  const child = spawnSync(process.execPath, ['scripts/deploy-existing.mjs', '--inventory', f.inventoryPath, '--domains', 'natally.surge.sh,natally.robin.mba', '--verify-only'], { cwd: f.dir, env: deployEnv(), encoding: 'utf8' });
   assert.equal(child.status, 0, child.stderr);
-  const stagingParent = readdirSync(path.join(repo, 'build')).filter(name => name.startsWith('deploy-1.13.86779-')).map(name => path.join(repo, 'build', name))[0];
-  const runDir = readdirSync(stagingParent).sort((a, b) => statSync(path.join(stagingParent, b)).mtimeMs - statSync(path.join(stagingParent, a)).mtimeMs)[0];
+  const stagingParent = deploy.stagingRootFor(f.inventory, f.dir);
+  const runDir = readdirSync(stagingParent)[0];
   const report = JSON.parse(readFileSync(path.join(stagingParent, runDir, 'deployment-report.json'), 'utf8'));
   assert.equal(report.state, 'verify-only-not-published');
+  assert.equal(report.published, false);
+  assert.equal(report.http, null);
   assert.match(report.note, /Not published/);
   assert.ok(/no Surge auth was required|no remote validation/.test(report.note));
-  assert.equal(readFileSync(path.join(repo, 'version.json')).equals(before.version), true);
-  assert.equal((existsSync(path.join(repo, 'build/release-state.json')) ? readFileSync(path.join(repo, 'build/release-state.json')) : null)?.equals(before.state), true);
-  assert.equal(readFileSync(path.join(repo, inventoryPath)).equals(before.inventory), true);
+  protectedFiles.forEach((file, index) => assert.equal(readFileSync(path.join(f.dir, file)).equals(before[index]), true, file));
 });
 
-test('real PowerShell coordinator VerifyOnly succeeds on the preserved v1.13 inventory and catches a missing Checked function', () => {
+test('real PowerShell coordinator VerifyOnly succeeds on the preserved v1.13 inventory and catches a missing Checked function', { skip: powershellUnavailable || missingHistoricalArtifacts() }, () => {
   const inventoryPath = 'dist/natally-ai-studio-v1.13.86779-test-build-inventory.json';
   const before = {
     version: readFileSync(path.join(repo, 'version.json')),
     state: existsSync(path.join(repo, 'build/release-state.json')) ? readFileSync(path.join(repo, 'build/release-state.json')) : null,
     inventory: readFileSync(path.join(repo, inventoryPath)),
   };
-  const child = spawnSync('powershell.exe', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'scripts/build-all-platforms.ps1', '-DeployExisting', inventoryPath, '-DeployDomains', 'natally.surge.sh,natally.robin.mba', '-VerifyOnly'], { cwd: repo, encoding: 'utf8' });
+  const child = spawnSync(powershell, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'scripts/build-all-platforms.ps1', '-DeployExisting', inventoryPath, '-DeployDomains', 'natally.surge.sh,natally.robin.mba', '-VerifyOnly'], { cwd: repo, encoding: 'utf8' });
   const output = `${child.stdout ?? ''}\n${child.stderr ?? ''}`;
   assert.equal(child.status, 0, output);
   assert.doesNotMatch(output, /is not recognized/);
@@ -290,10 +308,13 @@ test('CLI routing rejects bad flag combinations and missing arguments before any
   const badDomains = run(['--inventory', f.inventoryPath, '--domains', 'natally.surge.sh']);
   assert.notEqual(badDomains.status, 0);
   assert.match(badDomains.stderr, /two existing hosts/);
-  const outside = spawnSync('powershell.exe', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'scripts/build-all-platforms.ps1', '-VerifyOnly'], { cwd: repo, encoding: 'utf8' });
+});
+
+test('PowerShell rejects incompatible flags before deployment', { skip: powershellUnavailable }, () => {
+  const outside = spawnSync(powershell, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'scripts/build-all-platforms.ps1', '-VerifyOnly'], { cwd: repo, encoding: 'utf8' });
   assert.notEqual(outside.status, 0);
   assert.match(outside.stderr ?? outside.stdout, /-VerifyOnly requires -DeployExisting/);
-  const combined = spawnSync('powershell.exe', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'scripts/build-all-platforms.ps1', '-DeployExisting', 'x', '-Major', '2'], { cwd: repo, encoding: 'utf8' });
+  const combined = spawnSync(powershell, ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', 'scripts/build-all-platforms.ps1', '-DeployExisting', 'x', '-Major', '2'], { cwd: repo, encoding: 'utf8' });
   assert.notEqual(combined.status, 0);
   assert.match(combined.stderr ?? combined.stdout, /cannot be combined with -Continue or -Major/);
 });

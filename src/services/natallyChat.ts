@@ -190,7 +190,7 @@ export function parseNatallyResponse(rawText: string, chart?: NatalChartResult, 
   let cues = presentationCues.map(cue => ({ ...cue, offset: Math.max(0, cue.offset - leading) }))
     .filter(cue => cue.offset <= visibleBody.length)
     .map(cue => ({ ...cue, offset: Math.min(cue.offset, visibleBody.trimEnd().length) }));
-  if(chart && recover)cues=recoverHistoricalFocus(visibleBody,chart,chartFocusKey(chart),cues,undefined,!!chart.currentSky).cues;
+  if(chart && recover)cues=recoverHistoricalFocus(visibleBody.trimEnd(),chart,chartFocusKey(chart),cues,undefined,!!chart.currentSky).cues;
   const metadata = { soulDevelopments:soul.developments, presentationVersion: 1 as const, presentationCues: cues,
     chartCues: cues.flatMap(cue => cue.action.type === 'focus' ? [{ offset: cue.offset, targets: cue.action.targets }] : cue.action.type === 'clear' ? [{ offset: cue.offset, targets: [] }] : []),
     chartFocusKey: chart ? chartFocusKey(chart) : undefined };

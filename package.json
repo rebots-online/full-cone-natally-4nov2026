@@ -11,7 +11,9 @@
     "preview": "vite preview",
     "lint": "tsc --noEmit",
     "build:all": "bash build_all.sh",
-    "build:web": "bash build_all.sh"
+    "build:web": "bash build_all.sh",
+    "test": "node scripts/run-tests.mjs",
+    "test:browser": "node scripts/run-tests.mjs --browser"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

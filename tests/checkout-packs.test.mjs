@@ -13,6 +13,7 @@ const packs = ['monthly', 'one_time'].flatMap(cadence => ['5', '10', '25'].map(t
   webProductIdentifier: `web-${cadence}-${tier}`, androidProductIdentifier: `play-${cadence}-${tier}`,
 })));
 const packEnv = {
+  VITE_REVENUECAT_DEFAULT_CREDIT_TIER: '5',
   VITE_REVENUECAT_CONVERSATION_PACKS_JSON: JSON.stringify([...packs].reverse()),
   VITE_REVENUECAT_ANDROID_PUBLIC_KEY: 'goog_fixture', VITE_REVENUECAT_PUBLIC_KEY: 'rcb_fixture',
   VITE_REVENUECAT_OFFERING_ID: 'fixture-offering', VITE_REVENUECAT_TERMS_URL: 'https://fixture.invalid/terms',
@@ -64,6 +65,32 @@ test('catalog orders all six configured slots monthly-first and retains exact pl
   assert.deepEqual(entries.map(e => e.productIdentifier), packs.map(p => p.androidProductIdentifier));
   assert.equal(api.checkoutEntry('web', 'conversation', 'one_time-25').productIdentifier, 'web-one_time-25');
   assert.equal(api.checkoutEntry('android', 'conversation').offerId, 'monthly-5');
+});
+
+test('configured default tier is independent of catalog order and explicit selection', async () => {
+  const api = await load('src/services/checkoutCatalog.ts', {}, { ...packEnv, VITE_REVENUECAT_DEFAULT_CREDIT_TIER: '25' });
+  assert.equal(api.checkoutEntries('android', 'conversation')[0].offerId, 'monthly-5');
+  assert.equal(api.checkoutEntry('android', 'conversation').offerId, 'monthly-25');
+  assert.equal(api.checkoutEntry('android', 'conversation', 'one_time-10').offerId, 'one_time-10');
+});
+test('unavailable default falls back only to the same tier one-off, never a lower tier', async () => {
+  for (const includeDefault of [true, false]) {
+    const configured = packs.filter(p => p.tier !== '25' || (includeDefault && p.cadence === 'one_time'));
+    const api = await load('src/services/checkoutCatalog.ts', {}, {
+      ...packEnv, VITE_REVENUECAT_DEFAULT_CREDIT_TIER: '25',
+      VITE_REVENUECAT_CONVERSATION_PACKS_JSON: JSON.stringify(configured),
+    });
+    if (includeDefault) assert.equal(api.checkoutEntry('android', 'conversation').offerId, 'one_time-25');
+    else assert.throws(() => api.checkoutEntry('android', 'conversation'), /no configured pack/i);
+    assert.equal(api.checkoutEntry('android', 'conversation', 'monthly-5').offerId, 'monthly-5');
+  }
+});
+test('missing or invalid default rejects implicit checkout but leaves explicit products usable', async () => {
+  for (const tier of [undefined, '', '2']) {
+    const api = await load('src/services/checkoutCatalog.ts', {}, { ...packEnv, VITE_REVENUECAT_DEFAULT_CREDIT_TIER: tier });
+    assert.throws(() => api.checkoutEntry('android', 'conversation'), /DEFAULT_CREDIT_TIER/);
+    assert.equal(api.checkoutEntry('android', 'conversation', 'one_time-10').offerId, 'one_time-10');
+  }
 });
 
 test('retired conversation mapping is history only and cannot create an active offer', async () => {
@@ -131,6 +158,9 @@ test('web purchase revalidates the selected non-default package instead of the d
   assert.equal(f.calls.length, 0);
 });
 
+// Execute the real selector with explicit test configuration, not a copy of its rules.
+const catalog = await load('src/services/checkoutCatalog.ts');
+
 // Adapted from the independently exercised payment-recovery controller harness.
 const compiled = transformSync(readFileSync(path.join(root, 'src/components/PurchaseAccess.tsx'), 'utf8'), { loader: 'tsx', format: 'cjs', target: 'es2022' }).code;
 const tick = () => new Promise(resolve => setImmediate(resolve));
@@ -148,13 +178,16 @@ function controller(outcome = 'pending', available = packs) {
   const billing = { reconcileBillingAccess: async () => { counts.reconcile++; return { state: 'unavailable', connected: false }; },
     restoreBillingPurchases: async () => { counts.restore++; return { state: 'unavailable', connected: false, message: 'Unrelated purchase history.' }; } };
   const win = { location: { href: 'https://fixture.invalid/' }, history: { replaceState() {} }, setTimeout: () => 1, clearTimeout() {}, addEventListener() {}, removeEventListener() {}, dispatchEvent() {} };
-  const context = { module: { exports: {} }, exports: {}, URL, Date, console, window: win, document: { body: {} }, CustomEvent: class {}, require(name) {
+  // Recovery timers remain pending; these tests explicitly invoke restore without real waits.
+  const context = { module: { exports: {} }, exports: {}, URL, Date, console, setTimeout: () => 1, window: win, document: { body: {} }, CustomEvent: class {}, require(name) {
     if (name === 'react') return react; if (name === 'react-dom') return { createPortal: x => x };
     if (name === 'firebase/auth') return { onAuthStateChanged: (a, fn) => { authListener = fn; fn(a.currentUser); return () => {}; } };
     if (name.endsWith('/firebase')) return { auth }; if (name.endsWith('/appIdentity')) return { APP_NAME: 'Fixture' };
     if (name.endsWith('/downloadAccess')) return { checkDownloadAccess: async () => ({ state: 'unavailable', message: 'No download entitlement' }) };
     if (name.endsWith('/revenueCatCheckout')) return checkout; if (name.endsWith('/billingAccess')) return billing;
     if (name.endsWith('/purchaseIntent')) return { purchaseIntent: (kind, sourceSection, offerId) => ({ kind, sourceSection, offerId }) };
+    if (name.endsWith('/checkoutCatalog')) return catalog;
+    if (name === './CreditActions') return { CreditActions: 'credit-actions' };
     if (name === './FigmaPaywall') return { FigmaPaywall: 'paywall' }; if (name.endsWith('.css')) return {}; throw Error(name);
   } };
   vm.runInNewContext(compiled, context);
@@ -162,42 +195,52 @@ function controller(outcome = 'pending', available = packs) {
   const find = (node, type) => { if (!node || typeof node !== 'object') return null; if (node.type === type) return node;
     for (const child of (node.props?.children ?? []).flat()) { const found = find(child, type); if (found) return found; } return null; };
   const view = () => { render(); return find(tree, 'paywall')?.props; };
+  const credits = () => { render(); return find(tree, 'credit-actions')?.props; };
+  const openOffers = async () => { render().props.value.showOffers(); await tick(); render(); await tick(); return view(); };
   const open = async offerId => { render().props.value.showOffer('conversation', { kind: 'conversation', sourceSection: 'fixture', offerId }); await tick(); render(); await tick(); return view(); };
   const openReading = async () => { render().props.value.showOffer('reading', { kind: 'reading', sourceSection: 'fixture' }); await tick(); render(); await tick(); return view(); };
-  render(); return { counts, purchased, open, openReading, view, changeAccount(uid) { auth.currentUser = { uid }; authListener(auth.currentUser); render(); } };
+  render(); return { counts, purchased, open, openReading, openOffers, view, credits, changeAccount(uid) { auth.currentUser = { uid }; authListener(auth.currentUser); render(); } };
 }
-test('kind-only conversation opens monthly-first choices and purchases the exact chosen one-off', async () => {
-  const f = controller('cancelled'); let view = await f.open();
-  assert.equal(f.counts.purchase, 0); assert.equal(view.selectedOfferId, 'monthly-5'); assert.equal(view.options.length, 6);
-  view.onSelect('one_time-25'); view = f.view(); assert.equal(view.selectedOfferId, 'one_time-25');
-  view.onPurchase('conversation', 'monthly-5'); await tick(); assert.equal(f.counts.purchase, 0);
-  view.onPurchase('conversation', 'one_time-25'); await tick(); view = f.view(); await tick();
-  assert.deepEqual(f.purchased, ['one_time-25']); assert.equal(view.selectedOfferId, 'one_time-25');
+test('conversation intents open account credit actions without launching legacy pack purchases', async () => {
+  for (const offerId of [undefined, 'monthly-10', 'one_time-25', 'monthly-1']) {
+    const f = controller('cancelled'); await f.open(offerId);
+    assert.equal(f.view(), undefined);
+    assert.equal(f.credits().uid, 'account-a');
+    assert.deepEqual(f.purchased, []);
+    assert.equal(f.counts.reconcile, 0);
+  }
 });
-test('explicit selected pack launches once, cancellation refresh never launches again', async () => {
-  const f = controller('cancelled'); await f.open('monthly-10'); await tick(); f.view(); await tick();
-  assert.deepEqual(f.purchased, ['monthly-10']); assert.equal(f.counts.reconcile, 0);
+test('offer selection retains exact one-off choice but conversation purchase routes to credit actions', async () => {
+  const f = controller('cancelled'); let view = await f.openOffers();
+  assert.equal(view.selectedOfferId, 'monthly-5'); assert.equal(view.options.length, 6);
+  view.onSelect('one_time-25'); view = f.view();
+  assert.equal(view.selectedOfferId, 'one_time-25');
+  view.onPurchase('conversation', 'one_time-25'); await tick();
+  assert.equal(f.view(), undefined); assert.equal(f.credits().uid, 'account-a');
+  assert.deepEqual(f.purchased, []);
 });
-test('missing explicit pack cannot silently buy the default monthly pack', async () => {
-  const f = controller(); await f.open('monthly-1'); await tick();
+test('one-off default remains selectable when monthly products are unavailable', async () => {
+  const f = controller('cancelled', packs.filter(p => p.cadence === 'one_time'));
+  const view = await f.openOffers(); assert.equal(view.selectedOfferId, 'one_time-5');
   assert.equal(f.counts.purchase, 0);
 });
-test('one-off choices remain selectable when monthly products are unavailable', async () => {
-  const f = controller('cancelled', packs.filter(p => p.cadence === 'one_time'));
-  const view = await f.open(); assert.equal(view.selectedOfferId, 'one_time-5');
-  assert.equal(f.counts.purchase, 0); view.onPurchase('conversation', 'one_time-5'); await tick();
-  assert.deepEqual(f.purchased, ['one_time-5']);
+test('reading cancellation refresh does not automatically launch checkout again', async () => {
+  const f = controller('cancelled'); await f.openReading(); await tick(); f.view(); await tick();
+  assert.deepEqual(f.purchased, ['reading']); assert.equal(f.counts.reconcile, 0);
 });
-test('pending pack prevents repeat purchase of another pack across reopen and restore', async () => {
-  const f = controller(); await f.open('monthly-10'); await tick(); let view = f.view();
-  view.onClose(); view = await f.open(); view.onSelect('one_time-25'); view = f.view();
-  view.onPurchase('conversation', 'one_time-25'); await tick(); view = f.view(); view.onRestore(); await tick();
-  view = f.view(); view.onPurchase('conversation', 'one_time-25'); await tick();
-  assert.deepEqual(f.purchased, ['monthly-10']); assert.equal(f.counts.reconcile, 0); assert.equal(f.counts.restore, 1);
+test('pending reading prevents repeat purchase across reopen and unrelated restore', async () => {
+  const f = controller(); await f.openReading(); await tick(); let view = f.view();
+  assert.match(view.message, /pending/i);
+  view.onClose(); view = await f.openReading();
+  view.onPurchase('reading'); await tick(); view = f.view(); view.onRestore(); await tick();
+  view = f.view(); view.onPurchase('reading'); await tick();
+  assert.deepEqual(f.purchased, ['reading']); assert.equal(f.counts.reconcile, 0); assert.equal(f.counts.restore, 1);
 });
-test('account change invalidates a previously rendered selected pack action', async () => {
-  const f = controller(); const view = await f.open(); f.changeAccount('account-b');
-  view.onPurchase('conversation', 'monthly-5'); await tick(); assert.equal(f.counts.purchase, 0); assert.equal(f.view(), undefined);
+test('account change invalidates a previously rendered reading payment action and credit panel', async () => {
+  const f = controller(); const view = await f.openOffers(); f.changeAccount('account-b');
+  view.onPurchase('reading'); await tick(); assert.equal(f.counts.purchase, 0); assert.equal(f.view(), undefined);
+  await f.open(); assert.equal(f.credits().uid, 'account-b');
+  f.changeAccount('account-c'); assert.equal(f.credits(), undefined);
 });
 test('existing reading CTA still launches once and confirmed payment remains in recovery', async () => {
   const f = controller('purchased'); await f.openReading(); await tick(); const view = f.view();
