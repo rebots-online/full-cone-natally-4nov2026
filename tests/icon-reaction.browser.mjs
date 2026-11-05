@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import { mkdirSync, copyFileSync, readFileSync } from 'node:fs';
+process.env.PLAYWRIGHT_BROWSERS_PATH ??= 'E:\\BuildCache\\natally-ai-studio\\playwright';
+const { chromium } = await import('playwright');
+const { version } = JSON.parse(readFileSync('version.json','utf8'));
+const browser = await chromium.launch({channel:'chrome',headless:true});
+const context = await browser.newContext({viewport:{width:680,height:520},recordVideo:{dir:'build/icon-video',size:{width:680,height:520}}});
+let recording;
+try {
+  const page = await context.newPage();
+  recording = page.video();
+  await page.goto(process.env.NATALLY_ICON_TEST_URL || 'http://127.0.0.1:49418/tests/browser/icon-reaction.html');
+  const icon = page.getByRole('button',{name:'Watch Natally point to her natal chart'});
+  await icon.click();
+  await page.waitForFunction(()=>document.querySelector('.natally-brand-icon')?.classList.contains('is-guiding'));
+  assert.equal(await page.locator('.natally-brand-icon__guide').evaluate(e=>e.complete && e.naturalWidth>0),true);
+  assert.equal(await icon.evaluate(e=>e.classList.contains('is-guiding')),true);
+  assert.equal(await page.locator('.natally-brand-icon__guide').evaluate(e=>getComputedStyle(e).animationName),'natally-guide');
+  await page.waitForTimeout(500);
+  mkdirSync('dist',{recursive:true});
+  await page.screenshot({path:'dist/natally-icon-guiding-20261026.png'});
+  await page.waitForTimeout(1300);
+  assert.equal(await icon.evaluate(e=>e.classList.contains('is-guiding')),false);
+  await icon.focus(); await page.keyboard.press('Space');
+  await page.waitForFunction(()=>document.querySelector('.natally-brand-icon')?.classList.contains('is-guiding'));
+  assert.equal(await icon.evaluate(e=>e.classList.contains('is-guiding')),true);
+  await page.waitForTimeout(1000); await page.keyboard.press('Enter');
+  await page.waitForTimeout(900);
+  assert.equal(await icon.evaluate(e=>e.classList.contains('is-guiding')),true,'repeat activation restarts the timer');
+  await page.waitForTimeout(900);
+  assert.equal(await icon.evaluate(e=>e.classList.contains('is-guiding')),false);
+  await page.emulateMedia({reducedMotion:'reduce'}); await icon.click();
+  assert.equal(await page.locator('.natally-brand-icon__guide').evaluate(e=>getComputedStyle(e).animationName),'none');
+  assert.equal(await page.locator('.natally-brand-icon__focus').evaluate(e=>getComputedStyle(e).animationName),'none');
+  console.log('PASS: pointer, Space, Enter, repeat activation, reset and reduced motion');
+} finally {
+  await context.close();
+  if (recording) copyFileSync(await recording.path(),`dist/natally-ai-studio-v${version}-icon-guiding.webm`);
+  await browser.close();
+}

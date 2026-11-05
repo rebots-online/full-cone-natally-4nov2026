@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Natally — Your reading, to keep</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --canvas: #120c1c;
+        --surface: #1c1428;
+        --cream: #f1e8d8;
+        --muted: #c4b9ce;
+        --brass: #d4af37;
+        --line: rgba(196, 185, 206, 0.18);
+        --surface-raised: #251a33;
+        --danger: #e7a5a5;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { min-height: 100%; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(100, 70, 130, 0.16), transparent 38rem),
+          var(--canvas);
+        color: var(--cream);
+        font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      button { font: inherit; }
+      button:focus-visible {
+        outline: 2px solid var(--brass);
+        outline-offset: 3px;
+      }
+
+      .viewport {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+      }
+      .paywall {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(430px, 1.1fr);
+        width: min(100%, 980px);
+        max-height: min(760px, calc(100svh - 64px));
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: var(--surface);
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.46);
+      }
+      .art {
+        position: relative;
+        min-height: 620px;
+        overflow: hidden;
+        background: #181020;
+      }
+      .art img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: 52% center;
+      }
+      .art::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, transparent 68%, var(--surface)),
+          linear-gradient(0deg, rgba(18, 12, 28, 0.45), transparent 38%);
+        pointer-events: none;
+      }
+      .brand {
+        position: absolute;
+        z-index: 1;
+        left: 24px;
+        top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 24px;
+        letter-spacing: 0.01em;
+        text-shadow: 0 2px 18px #000;
+      }
+      .brand-mark {
+        width: 12px;
+        height: 12px;
+        border: 1px solid var(--brass);
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px rgba(18, 12, 28, 0.72);
+        background: var(--brass);
+      }
+      .content {
+        min-width: 0;
+        overflow-y: auto;
+        padding: 52px 52px 38px 44px;
+        scrollbar-color: rgba(196, 185, 206, 0.3) transparent;
+      }
+      .close {
+        position: absolute;
+        z-index: 2;
+        top: 14px;
+        right: 14px;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        background: transparent;
+        cursor: pointer;
+      }
+      .close:hover { color: var(--cream); background: rgba(196, 185, 206, 0.08); }
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--brass);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        max-width: 440px;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(44px, 5vw, 62px);
+        font-weight: 400;
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+      }
+      .intro {
+        margin: 18px 0 26px;
+        max-width: 470px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.65;
+      }
+      .includes {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 28px;
+        padding: 0;
+        list-style: none;
+      }
+      .includes li {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        gap: 10px;
+        color: var(--cream);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .check { color: var(--brass); font-weight: 700; }
+      .choice-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      .choice-label span:first-child {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 20px;
+      }
+      #paywall-price {
+        min-height: 20px;
+        color: var(--cream);
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .method {
+        position: relative;
+        min-height: 68px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px;
+        color: var(--muted);
+        text-align: left;
+        background: rgba(255, 255, 255, 0.018);
+        cursor: pointer;
+        transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+      }
+      .method:hover:not(:disabled) {
+        border-color: rgba(212, 175, 55, 0.55);
+        color: var(--cream);
+      }
+      .method[aria-pressed="true"] {
+        border-color: var(--brass);
+        color: var(--cream);
+        background: rgba(212, 175, 55, 0.08);
+      }
+      .method:disabled { cursor: not-allowed; opacity: 0.5; }
+      .method-name { display: block; font-size: 12px; font-weight: 700; line-height: 1.3; }
+      .method-detail { display: block; margin-top: 5px; font-size: 9px; line-height: 1.25; }
+      .status {
+        min-height: 21px;
+        margin: 12px 0;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.5;
+      }
+      .status[data-state="error"] { color: var(--danger); }
+      .continue {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid var(--brass);
+        border-radius: 12px;
+        color: var(--canvas);
+        background: var(--brass);
+        font-size: 13px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .continue:disabled {
+        border-color: var(--line);
+        color: rgba(196, 185, 206, 0.55);
+        background: var(--surface-raised);
+        cursor: not-allowed;
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin-top: 10px;
+      }
+      .text-action {
+        min-height: 44px;
+        border: 0;
+        padding: 0 4px;
+        color: var(--muted);
+        background: transparent;
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .text-action:hover { color: var(--cream); }
+      .fine-print {
+        margin: 5px auto 0;
+        max-width: 390px;
+        color: rgba(196, 185, 206, 0.65);
+        font-size: 9px;
+        line-height: 1.55;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .viewport { display: block; padding: 0; }
+        .paywall {
+          display: block;
+          width: 100%;
+          min-height: 100svh;
+          max-height: none;
+          border: 0;
+          border-radius: 0;
+          overflow: visible;
+        }
+        .art { height: 33svh; min-height: 230px; max-height: 310px; }
+        .art::after {
+          background:
+            linear-gradient(0deg, var(--surface), transparent 52%),
+            linear-gradient(90deg, rgba(18, 12, 28, 0.15), transparent);
+        }
+        .art img { object-position: 50% 43%; }
+        .brand { left: 20px; top: 18px; font-size: 22px; }
+        .close {
+          position: fixed;
+          top: max(8px, env(safe-area-inset-top));
+          right: 8px;
+          color: var(--cream);
+          background: rgba(18, 12, 28, 0.72);
+          backdrop-filter: blur(8px);
+        }
+        .content { overflow: visible; padding: 4px 20px max(24px, env(safe-area-inset-bottom)); }
+        h1 { font-size: 45px; }
+        .intro { margin: 13px 0 20px; font-size: 14px; }
+        .includes { gap: 9px; margin-bottom: 22px; }
+        .methods { grid-template-columns: 1fr; }
+        .method {
+          min-height: 52px;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          align-items: center;
+          column-gap: 12px;
+          padding: 10px 12px;
+        }
+        .method-detail { margin: 0; text-align: right; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="viewport">
+      <section id="natally-paywall" class="paywall" aria-labelledby="paywall-title">
+        <button id="paywall-close" class="close" type="button" aria-label="Close paywall">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+            <path d="M3.5 3.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div class="art" aria-hidden="true">
+          <img
+            src="https://assets.pawwalls.com/1198641_1792866549_356dc103.webp"
+            alt=""
+          />
+          <div class="brand"><span class="brand-mark"></span>Natally</div>
+        </div>
+
+        <div class="content">
+          <p class="eyebrow">A one-time keepsake</p>
+          <h1 id="paywall-title">Your reading, <em>to keep</em></h1>
+          <p class="intro">A full natal reading to revisit, with room for your questions.</p>
+
+          <ul class="includes" aria-label="Bundle contents">
+            <li><span class="check">✓</span><span>A beautifully composed keepsake PDF</span></li>
+            <li><span class="check">✓</span><span>Your interactive atelier, saved for one year</span></li>
+            <li><span class="check">✓</span><span>Ten conversational turns about your chart</span></li>
+          </ul>
+
+          <div class="choice-label">
+            <span>Choose how to pay</span>
+            <span id="paywall-price" aria-live="polite"></span>
+          </div>
+
+          <div id="paywall-methods" class="methods" role="group" aria-label="Payment method">
+            <button id="paywall-method-card" class="method" type="button" data-method="card" aria-pressed="false" disabled>
+              <span class="method-name">Card</span>
+              <span class="method-detail">RevenueCat · Unavailable</span>
+            </button>
+            <button id="paywall-method-crypto" class="method" type="button" data-method="crypto" aria-pressed="false" disabled>
+              <span class="method-name">Crypto</span>
+              <span class="method-detail">x402 · Unavailable</span>
+            </button>
+            <button id="paywall-method-lightning" class="method" type="button" data-method="lightning" aria-pressed="false" disabled>
+              <span class="method-name">Bitcoin Lightning</span>
+              <span class="method-detail">Unavailable</span>
+            </button>
+          </div>
+
+          <p id="paywall-status" class="status" data-state="unavailable" role="status" aria-live="polite">
+            Purchasing is not available yet
+          </p>
+          <button id="paywall-continue" class="continue" type="button" disabled>Continue</button>
+
+          <div class="actions">
+            <button id="paywall-back" class="text-action" type="button">Back to Natally</button>
+            <button id="paywall-restore" class="text-action" type="button">Check existing access</button>
+          </div>
+          <p class="fine-print">One-time purchase. Availability and price are confirmed by your payment provider.</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const methods = ["card", "crypto", "lightning"];
+        const providerLabels = { card: "RevenueCat", crypto: "x402", lightning: "" };
+        const methodAvailability = { card: false, crypto: false, lightning: false };
+        const status = document.getElementById("paywall-status");
+        const price = document.getElementById("paywall-price");
+        const continueButton = document.getElementById("paywall-continue");
+        let selectedMethod = null;
+        let verifiedQuote = null;
+        let currentState = "unavailable";
+
+        function emit(name, detail = {}) {
+          const eventName = `natally:paywall:${name}`;
+          document.dispatchEvent(new CustomEvent(eventName, { detail, bubbles: true }));
+          if (window.parent !== window) {
+            window.parent.dispatchEvent(new CustomEvent(eventName, { detail }));
+          }
+        }
+
+        function render() {
+          methods.forEach((method) => {
+            const button = document.getElementById(`paywall-method-${method}`);
+            const available = methodAvailability[method];
+            button.disabled = !available || currentState === "loading";
+            button.setAttribute("aria-pressed", String(selectedMethod === method));
+            const provider = providerLabels[method];
+            button.querySelector(".method-detail").textContent =
+              `${provider ? `${provider} · ` : ""}${available ? "Available" : "Unavailable"}`;
+          });
+          continueButton.disabled =
+            !selectedMethod ||
+            !verifiedQuote ||
+            currentState === "loading" ||
+            currentState === "unavailable" ||
+            currentState === "error";
+        }
+
+        function setState(state, message) {
+          const allowed = ["ready", "loading", "unavailable", "error"];
+          if (!allowed.includes(state)) return;
+          currentState = state;
+          status.dataset.state = state;
+          status.textContent = message || {
+            ready: "Choose a payment method to continue",
+            loading: "Confirming availability…",
+            unavailable: "Purchasing is not available yet",
+            error: "Purchasing could not be loaded. Please try again later.",
+          }[state];
+          render();
+        }
+
+        function setVerifiedPrice(quote) {
+          const valid =
+            quote &&
+            typeof quote.formatted === "string" &&
+            quote.formatted.trim() &&
+            typeof quote.quoteId === "string" &&
+            quote.quoteId.trim();
+          verifiedQuote = valid ? { formatted: quote.formatted.trim(), quoteId: quote.quoteId } : null;
+          price.textContent = verifiedQuote ? verifiedQuote.formatted : "";
+          render();
+        }
+
+        function setMethods(next) {
+          methods.forEach((method) => {
+            methodAvailability[method] = next && next[method] === true;
+          });
+          if (selectedMethod && !methodAvailability[selectedMethod]) selectedMethod = null;
+          render();
+        }
+
+        methods.forEach((method) => {
+          document.getElementById(`paywall-method-${method}`).addEventListener("click", () => {
+            if (!methodAvailability[method]) return;
+            selectedMethod = method;
+            render();
+            emit("choice", { method });
+          });
+        });
+
+        continueButton.addEventListener("click", () => {
+          if (continueButton.disabled) return;
+          emit("checkout", { method: selectedMethod, quoteId: verifiedQuote.quoteId });
+        });
+        document.getElementById("paywall-restore").addEventListener("click", () => emit("restore"));
+        document.getElementById("paywall-close").addEventListener("click", () => emit("close", { reason: "close" }));
+        document.getElementById("paywall-back").addEventListener("click", () => emit("close", { reason: "back" }));
+
+        window.NatallyPaywall = { setState, setVerifiedPrice, setMethods };
+        window.addEventListener("natally:paywall:set-state", (event) => setState(event.detail?.state, event.detail?.message));
+        window.addEventListener("natally:paywall:set-price", (event) => setVerifiedPrice(event.detail));
+        window.addEventListener("natally:paywall:set-methods", (event) => setMethods(event.detail));
+
+        render();
+        emit("ready", { apiVersion: 1 });
+      })();
+    </script>
+  </body>
+</html>
