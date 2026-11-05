@@ -9,17 +9,18 @@ import { releaseBuildInfo } from './scripts/release-state.mjs';
 import { loadAppIdentity, projectAppHtml, projectAppManifest } from './scripts/app-identity.mjs';
 
 export default defineConfig(({ command }) => {
+  const verification = command === 'build' && process.env.NATALLY_VERIFY_COORDINATOR === '1';
   const appIdentity = loadAppIdentity();
   const appManifest = () => JSON.stringify(projectAppManifest(
     JSON.parse(readFileSync('public/manifest.webmanifest', 'utf8')), appIdentity,
   ), null, 2) + '\n';
   const publicIdentityPages = ['terms.html', 'privacy.html'];
-  const release = command === 'build' ? releaseBuildInfo() : null;
+  const release = command === 'build' && !verification ? releaseBuildInfo() : null;
   const git = (...args: string[]) => {
     try { return execFileSync('git', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); }
     catch { return ''; }
   };
-  const stamp = release ?? (existsSync('version.json') ? JSON.parse(readFileSync('version.json', 'utf8')) : null);
+  const stamp = verification ? null : release ?? (existsSync('version.json') ? JSON.parse(readFileSync('version.json', 'utf8')) : null);
   const revision = release?.gitCommit || git('rev-parse', 'HEAD') || null;
   const identity = stamp ? {
     version: stamp.version, stampedAt: stamp.stampedAt,
@@ -63,7 +64,7 @@ export default defineConfig(({ command }) => {
     worker: { plugins: () => [onnxProgressPlugin()] },
     optimizeDeps: { exclude: ['@huggingface/transformers'] },
     build: {
-      outDir: 'dist-web',
+      outDir: verification ? 'build/verify-web/site' : 'dist-web',
       emptyOutDir: true,
       rollupOptions: {
         input: {

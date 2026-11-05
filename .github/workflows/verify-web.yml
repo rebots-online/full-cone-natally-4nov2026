@@ -1,0 +1,44 @@
+name: Verify web without deployment
+on:
+  push:
+    branches: [repair/full-cone-web-verification]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GOMAXPROCS: '2'
+      RAYON_NUM_THREADS: '2'
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Use the checked-in public application identity
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const identity = JSON.parse(fs.readFileSync('src-tauri/tauri.conf.json', 'utf8'));
+          fs.writeFileSync('.env', `APP_NAME=${identity.productName}\nAPP_IDENTIFIER=${identity.identifier}\n`);
+          NODE
+      - run: npm run lint
+      - name: Verify release boundaries
+        run: node --import tsx --test tests/release-state.test.mjs tests/web-verification.test.ts
+      - name: Compile the current web application without publishing
+        run: bash build_all.sh --verify-web
+      - run: npx playwright install --with-deps chromium
+      - name: Inspect desktop and mobile runtime
+        run: node tests/landing-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: web-verification
+          path: build/verify-web
+          if-no-files-found: ignore

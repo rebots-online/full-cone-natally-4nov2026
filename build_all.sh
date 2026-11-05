@@ -52,17 +52,18 @@ cd "$ROOT"
 
 usage() {
   sed -n '2,/^# ═══*$/p' "$0" | sed -n '2,$p' | sed 's/^# \{0,1\}//' | head -n -1
-  echo 'Flags: --major N | --deploy-web | --domains LIST | --deploy-existing INVENTORY [--verify-only] | --continue (Windows only)'
+  echo 'Flags: --major N | --deploy-web | --no-deploy-web | --domains LIST | --deploy-existing INVENTORY [--verify-only] | --continue (Windows only) | --verify-web'
 }
 
 # ── Arguments (one spelling for both hosts; translated for the ps1) ─────────
 # Web deploys first on every run (Robin 2026-11-03).
-MAJOR=''; DEPLOY_WEB=1; DOMAINS=''; DEPLOY_EXISTING=''; VERIFY_ONLY=0; CONTINUE=0
+MAJOR=''; DEPLOY_WEB=1; DOMAINS=''; DEPLOY_EXISTING=''; VERIFY_ONLY=0; CONTINUE=0; VERIFY_WEB=0; EXPLICIT_DEPLOY=0
 while [ $# -gt 0 ]; do
   case "$1" in
     --major|-Major)                [ $# -ge 2 ] || { echo "$1 needs a number" >&2; exit 2; }; MAJOR="$2"; shift 2 ;;
-    --deploy-web|-DeployWebDuringBuild) DEPLOY_WEB=1; shift ;;
+    --deploy-web|-DeployWebDuringBuild) DEPLOY_WEB=1; EXPLICIT_DEPLOY=1; shift ;;
     --no-deploy-web)               DEPLOY_WEB=0; shift ;;
+    --verify-web)                  VERIFY_WEB=1; shift ;;
     --domains|-DeployDomains)      [ $# -ge 2 ] || { echo "$1 needs a list" >&2; exit 2; }; DOMAINS="$2"; shift 2 ;;
     --deploy-existing|-DeployExisting) [ $# -ge 2 ] || { echo "$1 needs an inventory path" >&2; exit 2; }; DEPLOY_EXISTING="$2"; shift 2 ;;
     --verify-only|-VerifyOnly)     VERIFY_ONLY=1; shift ;;
@@ -71,6 +72,15 @@ while [ $# -gt 0 ]; do
     *) echo "Unknown argument: $1 (see --help)" >&2; exit 2 ;;
   esac
 done
+
+# Compile the actual web application for local inspection without release side
+# effects. Exit before host setup, credential resolution, stamping or Git writes.
+if [ "$VERIFY_WEB" = 1 ]; then
+  if [ -n "$MAJOR$DOMAINS$DEPLOY_EXISTING" ] || [ "$VERIFY_ONLY$CONTINUE$EXPLICIT_DEPLOY" != 000 ]; then
+    echo '--verify-web cannot be combined with release or deployment flags.' >&2; exit 2
+  fi
+  NATALLY_VERIFY_COORDINATOR=1 exec node scripts/verify-web.mjs
+fi
 
 # ── Host sensing: Windows hands the whole matrix to the ps1 half ────────────
 HOST=linux
