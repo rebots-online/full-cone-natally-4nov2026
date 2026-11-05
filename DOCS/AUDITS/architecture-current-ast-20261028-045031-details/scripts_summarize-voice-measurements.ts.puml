@@ -1,0 +1,18 @@
+@startuml
+title scripts/summarize-voice-measurements.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "summarize-voice-measurements.ts\nfile L1-31\nfile:scripts/summarize-voice-measurements.ts" as N0
+rectangle "node:fs\nimport L1-1\nimport:056006c1f8eddb9160520296565cafcf" as N1
+rectangle "node:path\nimport L2-2\nimport:856cb27f4c8cc81644075afb734cf305" as N2
+rectangle "node:url\nimport L3-3\nimport:274d850aec4956a76cb0d77405f7e245" as N3
+rectangle "../src/services/voiceMeasurements\nimport L4-4\nimport:ee3e020933ab4196df4bf9cfcc3602a1" as N4
+rectangle "aggregateVoiceReports\nfunction L7-29\nfunction:bee65926f7190da0eeb2fb51163e4b5a" as N5
+N0 --> N1 : contains E310
+N0 --> N2 : contains E311
+N0 --> N3 : contains E312
+N0 --> N4 : contains E313
+N0 --> N5 : contains E314
+N0 --> N5 : calls E4043
+@enduml

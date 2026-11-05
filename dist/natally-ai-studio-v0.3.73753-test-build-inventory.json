@@ -1,0 +1,108 @@
+{
+  "major": 0,
+  "minor": 3,
+  "build": 73753,
+  "version": "0.3.73753",
+  "versionCode": 3,
+  "stampedAt": "2026-10-19T15:53:00.133Z",
+  "msiVersion": "0.0.3.8217",
+  "prefix": "natally-ai-studio-v0.3.73753",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "e89872413c2021246b869c3dbe8e139d799218de",
+  "phase": "frozen",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-win11-x64-standalone.exe",
+      "bytes": 18352128,
+      "sha256": "2fed0077dec8d2593e1fd3a257154e3e10e3a52c70b36e1f0d8f334abb4ab252",
+      "evidence": "PE ProductVersion=0.3.73753; unsigned Tauri test, WebView2 required",
+      "verifiedAt": "2026-10-19T15:55:51.984Z"
+    },
+    "nsis": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-win11-x64-nsis.exe",
+      "bytes": 11543827,
+      "sha256": "300180c4e1bde57e8367b3ffd7839a49a71e6cc965cfaab1444dc9a5dac39e3a",
+      "evidence": "Tauri package version 0.3.73753; MSI numeric mapping 0.0.3.8217; unsigned test installer",
+      "verifiedAt": "2026-10-19T15:55:52.261Z"
+    },
+    "msi": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-win11-x64-msi.msi",
+      "bytes": 12468224,
+      "sha256": "88d3dd2790a3a2964372243aa4f82b0b005ff3f2ad3feb10f2f2e176553cc27d",
+      "evidence": "Tauri package version 0.3.73753; MSI numeric mapping 0.0.3.8217; unsigned test installer",
+      "verifiedAt": "2026-10-19T15:55:52.630Z"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+    },
+    "apk": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-android-arm64-test.apk",
+      "bytes": 79003619,
+      "sha256": "3b586555266773fcc4d2b9df129bae30559b369604f81e28ab1bdbcba5ff5c6c",
+      "evidence": "Release profile; local Android test certificate; apksigner and 16 KiB zipalign pass; versionCode=3",
+      "verifiedAt": "2026-10-19T16:00:32.143Z"
+    },
+    "aab": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-android-arm64-test.aab",
+      "bytes": 27939700,
+      "sha256": "8e316daf7f21470bfabdaea60111259644fae23e25db9907b94ffd5573939a5d",
+      "evidence": "Release profile, local Android test certificate; jarsigner verifies; versionCode=3",
+      "verifiedAt": "2026-10-19T16:00:34.307Z"
+    },
+    "android-symbols": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-android-arm64-native-debug-symbols.zip",
+      "bytes": 12474572,
+      "sha256": "7e9bea74ccc5b52dcf86a37d1468c75be2225f97ca4afb175c4086541a29588c",
+      "evidence": "Native ELF build IDs match the AAB libraries and canonical AAB versionName",
+      "verifiedAt": "2026-10-19T16:00:43.857Z"
+    },
+    "web": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-webapp.zip",
+      "bytes": 11853085,
+      "sha256": "826559fe285b5ce2bc5175c68c8c1ee3c8e47240dc531cf3ede3b3e1fd4a98f5",
+      "evidence": "Web production bundle and visible v0.3.73753; archive includes site, version and installer",
+      "verifiedAt": "2026-10-19T15:53:41.556Z"
+    },
+    "web-installer": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.3.73753-install-web.sh",
+      "bytes": 2978,
+      "sha256": "f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce",
+      "evidence": "nginx/Apache installer; syntax and both previews pass under Bash on native Windows (MSYS2); target-server installation not exercised",
+      "verifiedAt": "2026-10-19T15:53:42.107Z"
+    }
+  },
+  "sourceFingerprint": "0f8e8b163ed570faa191b764ebfaba5ebca044d2e580a473a3f951b25f529dc4",
+  "sourceInputsMatch": true,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "appimage",
+    "deb"
+  ],
+  "completedAt": "2026-10-21T19:55:34.618Z"
+}

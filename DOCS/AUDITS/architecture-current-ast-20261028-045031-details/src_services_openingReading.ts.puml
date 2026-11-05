@@ -1,0 +1,17 @@
+@startuml
+title src/services/openingReading.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "openingReading.ts\nfile L1-14\nfile:src/services/openingReading.ts" as N0
+rectangle "OpeningStage\ntype_alias L1-1\ntype_alias:92e36089003624421bb831abc8d1dd3e" as N1
+rectangle "openingPrompt\nfunction L4-9\nfunction:f863922403db9904127a82dd45a2ce99" as N2
+rectangle "LEGACY_OPENING_PROMPT\nconstant L12-12\nconstant:84c64a5cc17a926e909509c5bf643099" as N3
+rectangle "isLegacyOpeningPrompt\nfunction L13-13\nfunction:04c0d67dfafe7933199219711804ef5f" as N4
+N0 --> N1 : contains E1882
+N0 --> N2 : contains E1883
+N0 --> N3 : contains E1884
+N0 --> N4 : contains E1885
+N4 --> N3 : references E1886
+N2 --> N1 : references E5849
+@enduml

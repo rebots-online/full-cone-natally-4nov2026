@@ -1,0 +1,62 @@
+@startuml
+title src/components/FigmaPaywall.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "FigmaPaywall.tsx\nfile L1-83\nfile:src/components/FigmaPaywall.tsx" as N0
+rectangle "react\nimport L1-1\nimport:d0143fa3e134eaa3f9266d881ca1f051" as N1
+rectangle "../../LIBS/UI/FIGMA/three-screen-offers-20261027/adapted/paywall-three-screen.html?raw\nimport L2-2\nimport:af7fa40f82c908f066f11c37c9912b1e" as N2
+rectangle "../services/purchaseIntent\nimport L3-3\nimport:b9c9c8ec5fae1d5f2d313c99c8b74a64" as N3
+rectangle "conversation\nproperty L5-5\nproperty:1d00fc5756181537200d95f055dcd582" as N4
+rectangle "reading\nproperty L5-5\nproperty:74a2fbe83416e8fd7031c6e0336fc2ca" as N5
+rectangle "OfferPrices\ntype_alias L5-5\ntype_alias:3a64e47fc0b19ff4bf7ab06a186d8dc1" as N6
+rectangle "Props\ntype_alias L6-16\ntype_alias:9f189d647ad23473fc10f21e94f02a8b" as N7
+rectangle "ownerUid\nproperty L7-7\nproperty:3facac49b80f298c3ce97b433705a613" as N8
+rectangle "isCurrent\nmethod L8-8\nmethod:06dc194d9450ef00cbb18d9b16daddda" as N9
+rectangle "prices\nproperty L9-9\nproperty:45b1dd384917fae3387cb2642bfda134" as N10
+rectangle "busy\nproperty L10-10\nproperty:43c4efc746dd0c5607137d83e7962d53" as N11
+rectangle "message\nproperty L11-11\nproperty:8dc0eb666ba2a998486c871965474a7a" as N12
+rectangle "initialScreen\nproperty L12-12\nproperty:adad8be179a0f3ebf3a23e1dc5b450af" as N13
+rectangle "onPurchase\nmethod L13-13\nmethod:eb3eacacebe645fc7bebce436a7dc562" as N14
+rectangle "onRestore\nmethod L14-14\nmethod:3186cf8eda992ba4885194fca132cf1a" as N15
+rectangle "onClose\nmethod L15-15\nmethod:77121c3ed6ab7376294d6ccb2aebd26b" as N16
+rectangle "source\nconstant L18-21\nconstant:fb2ffe895a17fa5a96c9dad7627f24c1" as N17
+rectangle "isKind\nfunction L22-23\nfunction:0205d74801650db8b30dbdfebbf86c97" as N18
+rectangle "FigmaPaywall\nfunction L26-82\nfunction:f3df91ba08ddddf1a4ae88da218c47ba" as N19
+rectangle "purchase\nfunction L37-43\nfunction:f4a89aa319f72b23c6049e16ceff8dc3" as N20
+rectangle "restore\nfunction L44-47\nfunction:401adaaf483206fb0839ab677dfc9f80" as N21
+rectangle "close\nfunction L48-48\nfunction:aff9d4a07e3a4ef0c811bc86c6eb7b14" as N22
+N0 --> N1 : contains E796
+N0 --> N2 : contains E797
+N0 --> N3 : contains E798
+N0 --> N6 : contains E799
+N6 --> N5 : contains E800
+N6 --> N4 : contains E801
+N0 --> N7 : contains E802
+N7 --> N8 : contains E803
+N7 --> N9 : contains E804
+N7 --> N10 : contains E805
+N7 --> N11 : contains E806
+N7 --> N12 : contains E807
+N7 --> N13 : contains E808
+N7 --> N14 : contains E809
+N7 --> N15 : contains E810
+N7 --> N16 : contains E811
+N0 --> N17 : contains E812
+N0 --> N18 : contains E813
+N0 --> N19 : contains E814
+N19 --> N20 : contains E815
+N19 --> N21 : contains E816
+N19 --> N22 : contains E817
+N0 --> N2 : imports E3106
+N7 --> N6 : references E4565
+N19 --> N7 : references E4570
+N20 --> N18 : calls E4571
+N20 --> N9 : calls E4572
+N20 --> N14 : calls E4573
+N21 --> N9 : calls E4574
+N21 --> N15 : calls E4575
+N19 --> N20 : references E4576
+N19 --> N21 : references E4577
+N19 --> N22 : references E4578
+@enduml

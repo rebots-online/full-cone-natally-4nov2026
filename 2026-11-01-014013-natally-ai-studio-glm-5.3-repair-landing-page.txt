@@ -1,0 +1,2082 @@
+ ▐▛███▛█   Claude Code v2.1.316
+▝▜██████▀  glm-5.3 · API Usage Billing
+ ▝▝   ▝▝   ~/Desktop/DevProjects/natally-ai-studio
+
+
+❯ /clear                                                                        
+
+❯ The main index.html has a regression error wherein the inset natal chart has  
+  disappeared--the persistent hero, an interactive reproduction of Natally's    
+  atelier on the right hand side--should be a working replica of the same main  
+  atelier interactive room where the user mainly interacts with Natally once    
+  registered--which comprises a main view and a smaller inset view which        
+  Natally or the user can toggle between natal chart view or atelier view --the 
+  only difference with the landing page vs the main web app in operation is     
+  that the natal chart portrayed will clearly be only using sample data,        
+  whereas once logged in, the natal chart will be the user's own, using the     
+  data collected during the initial onboarding.  The whole inset card is        
+  missing, though, [Image #1] aas you can see in the attached screenshot[Image  
+  #2] see attached image 2 screenshot for the logged in atelier, which view and 
+  same interactivity should be reproduced atthe 'sticky hero' in index.html     
+  ... architect in @DOCS/ARCHITECTURE.md the new codebase including the         
+  restored intersactive reproduction of the atelier and inset natal chart       
+  (which is toggled to swap main focus area with atelier in two ways--the user  
+  clicks on the inset natal chart card not on an element or relation in the     
+  chart--or if an actual object on the chart is clicked, then the zoomed        
+  animated toggle first occurs, then the educational full explanation           
+  (non-inferenced, pre-fabricated canned generation from Natally, specific to   
+  the object or relation clicked on, but not personalized such as an actual     
+  reading would be...) callouts when mouseover hovers over anb obhect on the    
+  inset natal chart must not obscure the natal chart, so they would render as   
+  callouts extending out into the main atelier area... natally should highlight 
+  tghe objects being discussed by a) dimming with transparency the other        
+  objects on the slowly-rotating toroidal natal chart, but notably keep the     
+  natal chart toroid itself clear; and b) dynamically changing focus to the     
+  chart, placing herslef in the atelier view in the inset card, and back, after 
+  cmopleting the explanation                                                    
+  ⎿  [Image #1]
+  ⎿  [Image #2]
+  ⎿  Read DOCS/ARCHITECTURE.md (438 lines)
+
+  Thought for 19s (ctrl+o to expand)
+
+● I'll start by orienting myself: check the checklist, CodeGraph status, and
+  then explore the regression area in parallel.
+
+  Thought for 7s, read 1 file, ran 1 shell command (ctrl+o to expand)
+
+● CodeGraph is initialized. Now let me view the two screenshots and launch
+  parallel exploration of the regression.
+
+  Read 2 files (ctrl+o to expand)
+
+● 3 background agents launched (↓ to manage)
+   ├ Explore landing page hero regression
+   ├ Explore app atelier inset chart
+   └ Explore prefab education content
+
+❯ ensure you are archietcting based on the latest commit, which should show     
+  v1.32 at the bottom right of the rendered views                               
+
+  Thought for 31s, ran 1 shell command (ctrl+o to expand)
+
+● Working tree is clean at e7732b6a with version 1.32.90532 — v1.32 confirmed as
+  the baseline. Now let me analyze both screenshots to ground the visual
+  regression.
+
+● 🌐 Z.ai Built-in Tool: analyze_image
+
+  Input:
+  {"imageSource":"https://glm-file.bigmodel.cn/ccproxy/file-input/25acd1170f0fd8
+  7c70829136abe0e3dd-378468?x-oss-date=20261101T045909Z&x-oss-expires=14400&x-os
+  s-signature-version=OSS4-HMAC-SHA256&x-oss-credential=LTAI5t8DUbn1sCxHej5djX4k
+  %2F20261101%2Fcn-beijing%2Foss%2Faliyun_v4_request&x-oss-signature=62d04e708e4
+  d94dfac63d96248bcf1c725332646ba4e5e9aa9f757d1ea38507b","prompt":"This is a 
+  screenshot of a landing/marketing web page for \"Natally\", an astrology app. 
+  Describe in detail: 1) the overall layout (hero section, text, buttons), 2) 
+  the right-hand side area — is there a 3D room/atelier scene? Is there a 
+  smaller inset card (e.g., a natal chart in a rounded card) anywhere, or is 
+  there an empty/blank gap where one should be? 3) any version number text at 
+  the bottom right of the page, 4) any console/devtools messages visible if the 
+  browser devtools are open, 5) the URL in the address bar if visible."}
+  Executing on server...
+
+● 🌐 Z.ai Built-in Tool: analyze_image
+
+  Input:
+  {"imageSource":"https://glm-file.bigmodel.cn/ccproxy/file-input/2f0da869f2aeb7
+  3c59ff0bff81e69d6b-437196?x-oss-date=20261101T045909Z&x-oss-expires=14400&x-os
+  s-signature-version=OSS4-HMAC-SHA256&x-oss-credential=LTAI5t8DUbn1sCxHej5djX4k
+  %2F20261101%2Fcn-beijing%2Foss%2Faliyun_v4_request&x-oss-signature=8c2e093b0ce
+  0322915bc2713e7606b3416cc8aa57d2be4f68bba552bd32dd642","prompt":"This is a 
+  screenshot of the logged-in main app view of \"Natally\", an astrology app 
+  with a 3D atelier room. Describe in detail: 1) the main view — what is shown 
+  large (a 3D room scene with a character? a toroidal natal chart?), 2) the 
+  smaller inset card — where is it positioned, what does it show (natal chart 
+  toroid? atelier room?), does it have a border/frame and any toggle affordance,
+  3) any character figure (Natally) — where is she placed, 4) any version 
+  number at bottom right, 5) colors and materials of the toroidal chart if 
+  visible (planets, zodiac ring, aspect lines)."}
+  Executing on server...
+
+● Output:
+  analyze_image_result_summary: [{"text": ""Based on the screenshot, here's a
+  detailed description:\n\n1) Main view — 3D atelier room scene\n\nThe large
+  central area (left/center of the screen) shows a 3D atelier room scene, not a
+  chart. It depicts a cozy fortune-teller's study: warm candlelight, wooden
+  shelves lined ...
+
+● Output:
+  analyze_image_result_summary: [{"text": ""Here's a detailed breakdown of
+  what's visible in the screenshot:\n\n1) Overall layout\n\n- Header/nav bar:
+  Dark theme with a \"Natally\" logo (circular mascot avatar) on the left, and
+  nav links: Your chart, Your chart, explained aloud, Personal readings, Prices,
+  ...
+
+  Thought for 7s (ctrl+o to expand)
+
+● Both screenshots confirmed. Key facts: landing page
+  (natally.robin.mba/#your-chart, v1.32.90532) renders the atelier scene but the
+  inset "Move chart" card is entirely absent; the logged-in app (same
+  v1.32.90532, latest commit e7732b6a) shows it as a draggable rounded card
+  top-left with the toroidal natal chart. While the explore agents work, let me
+  read the governing Admin-Manual spec conventions for the ARCHITECT phase.
+
+  Thought for 10s, read 4 files (ctrl+o to expand)
+
+● Spec conventions absorbed. While the explorers run, let me check the latest
+  handoff state and the Word task list referenced in recent commits.
+
+  Thought for 6s, read 1 file, listed 1 directory (ctrl+o to expand)
+
+● The handoff confirms: product work was stopped on quota, and this instruction
+  resumes it. LC-02 in CHECKLIST ("visible, scroll-aware inset and clearly
+  identified anonymous example") is directly this task. Let me read the archived
+  recipe for it while the explorers work.
+
+  Thought for 19s, searched for 2 patterns, ran 1 shell command (ctrl+o to expand)
+
+● The archived recipes show the landing inset was working and accepted on
+  2026-10-30, then regressed — likely in the R11 callouts round. Let me check
+  the marketing design docs while the explorers finish.
+
+  Thought for 35s, searched for 1 pattern, read 1 file, listed 1 directory (ctrl+o to expand)
+
+● LP08/LP13 confirm: clearly-labeled example chart is permitted (never passed
+  off as personal), and explanations must be prewritten with no free LLM
+  inference. Now I'll wait for the three exploration reports.
+
+  Thought for 1m 6s, searched for 2 patterns, read 1 file, listed 2 directories, ran 4 shell commands (ctrl+o to expand)
+
+● Agent "Explore app atelier inset chart" finished · 4m 52s
+
+  Thought for 57s (ctrl+o to expand)
+
+● Agent 2's map is complete and precise. Key findings so far:
+
+  - The swap machinery exists and is shared: ReadingStage.tsx (app) and
+    marketing.tsx:502-533 (landing) both implement main+inset panes with an
+    animated CSS scale swap, draggable inset, and the R11 outside-inset hover
+    callouts.
+  - The landing regression root cause is visible: marketing.tsx:512 hides the
+    entire chart pane when there is no owned chart (hidden={!ownedChart}) — so
+    signed-out visitors get no inset card at all. The app screenshot works
+    because it's signed in.
+  - Canned education exists fully: authoredChartExplanations.ts covers
+    planets/signs/houses/aspects, no LLM.
+  - Focus dimming exists (CHART_FOCUS.dim=0.19) but currently dims the toroid
+    frame too — the user wants the toroid kept clear.
+  - Gaps: click-object-in-inset → zoom-swap → explanation sequence doesn't exist
+    (inset click short-circuits at Astrolabe3D.tsx:549); explanation-driven
+    auto-swap-back doesn't exist on the landing.
+
+  Let me draft the plan file while the other two explorers finish.
+
+● Updated plan  ⎿  /plan to preview
+
+● Agent "Explore prefab education content" finished · 4m 48s
+
+  Thought for 1m 33s (ctrl+o to expand)
+
+● Agent 3 confirms the canned education system is complete in coverage (14
+  bodies, 12 signs, 12 houses, 5 aspect types, general fallback — no LLM,
+  voice-gated behind explicit user gesture). While the last explorer finishes,
+  the three design decisions below genuinely shape the architecture — let me put
+  them to you.
+
+● User answered Claude's questions:
+  ⎿  · How far should this round go, once the plan is approved? → you must 
+     always and only follow the strict central architect->checklist->coder 
+     subagents in parallel->semantic evaluation of coder's returned  generation 
+     cf. the specific 4-state task assigned and send it back if insufficient; 
+     never mix architecting and coding phases; once checklist is producedd, 
+     architecture is frozen so  no further questiooning is permitted. no 
+     entitities, variables, functions, etc. may be used if they are not 
+     contained in a tabulated enumeration in @DOCS/ARCHITECTURE.md and frozen 
+     before creating the checklist. So I suggest first only creating the amended
+     snapshot of the new complete codebase target in @DOCS/ARCHITECTURE.md then
+     hold for operator presentation and signoff; then produce the fully 
+     parallelizable subagent coder 4-state tasklist, @CHECKLIST.md then hold for
+     operator signoff again, etc.
+     · The two-path inset click (click empty card = swap only; click a chart 
+     object = animated swap → then canned explanation) changes the shared 
+     Astrolabe3D click pipeline. Should the logged-in app get the same behavior,
+     or landing only? → no, they are identical in operation but they are not 
+     the same pipeline, because the explanations only occur when no credits 
+     available to do an actual inferenced reading and then it is generated bythe
+     hsoted api and then rendereed  dynamically by supertonic tts. it only uses
+     the prefab for the unpaid or credit depleted users
+     · For the "zoomed animated toggle" when a chart object is clicked — what 
+     should the zoom be? → in index.html: swap-zoom then canned educational 
+     prefab explanation of the meaning and evolution of ethe element and how 
+     different asstrologty  regimes regard it and how it came to evolve that 
+     meaning over the ages; in logged in, sufficient credits available, it does 
+     the same, but also extends to interpret that specific object/objects (if 
+     more than oen selected), in context of currrent sky's ephemeris and natal 
+     ephemeris of tghe user in specific to generate the personalized reading 
+     basd on the selected component(s)
+
+❯ tthe highlighting was never implemented properly (as I had described, above,  
+  should be the proper rendeiring, butv it rendered the toroid structure        
+  transpaently instead ofjust the elements ,etc                                 
+
+● Agent "Explore landing page hero regression" finished · 6m 43s
+
+  Thought for 9m 44s (ctrl+o to expand)
+
+● All three explorations are complete, and your answers + mid-turn correction
+  are clear. Let me consolidate the design decisions:
+
+  1. Process: This turn produces only the R12 amended architecture snapshot in
+     DOCS/ARCHITECTURE.md (complete, entity-tabulated, stub-free), commit+push,
+     then hold for your signoff. Checklist comes only after signoff, then holds
+     again before parallel coder dispatch. No phase mixing.
+  2. Explanation pipeline: identical two-path click interaction everywhere, but
+     content branches — landing/unpaid/credit-depleted → prefab canned education
+     only; logged-in with credits → same swap-zoom + prefab base education,
+     extended by a hosted-API personalized interpretation of the selected
+     component(s) against current-sky + natal ephemeris, rendered dynamically
+     via Supertonic TTS with normal inference accounting.
+  3. Highlight correction: the focus dimming must affect only the
+     representational elements — the toroid structure itself (bezel rings,
+     floor, guide rings) rendered the transparency wrongly and must stay clear
+     at full opacity.
+
+  Before writing the final plan, let me spot-verify the exact line numbers the
+  entity table will freeze (coders will cite these verbatim, so they must be
+  accurate).
+
+  Thought for 14s, read 4 files (ctrl+o to expand)
+
+● Line numbers verified — including the exact defect comment at
+  Astrolabe3D.tsx:1313: "Dim every non-subject material, including the metal 
+  frame" — which is precisely the improper highlighting you described. Let me
+  pin the remaining inference/voice entities for the paid-branch rows.
+
+  Thought for 42s, listed 1 directory (ctrl+o to expand)
+
+● All entities pinned. Now I'll write the final plan — the complete R12
+  architecture design that will be written into DOCS/ARCHITECTURE.md after
+  approval, followed by the mandatory hold for your signoff.
+
+❯ yes, the error is that the plum-and-metal highlights frame should remain as   
+  vivid and visuallyr i mpressive--only the otehr elements are dimmened         
+
+  Thought for 3s (ctrl+o to expand)
+
+● Confirmed — the plum-and-metal toroid frame stays vivid at full opacity; only
+  the other representational elements dim. That detail is now frozen into the
+  R12 design. Writing the final plan.
+
+● Updated plan
+  ⎿  /plan to preview
+
+  Thought for 2s (ctrl+o to expand)
+  ⎿  User rejected Claude's plan:
+     ╭─────────────────────────────────────────────────────────────────────────╮
+     │ Plan — R12 architecture: landing hero atelier/inset replica + branched  │
+     │ chart education                                                         │
+     │                                                                         │
+     │ Context                                                                 │
+     │                                                                         │
+     │ The landing page (marketing.html, live entry for anonymous visitors) is │
+     │ missing the entire inset                                                │
+     │ natal-chart card from its sticky hero. The hero should be a working     │
+     │ replica of the logged-in app                                            │
+     │ atelier: a main view + smaller inset card that swap focus between the   │
+     │ atelier room view and the                                               │
+     │ natal chart view — identical in operation to the app, differing only in │
+     │ that the landing chart uses                                             │
+     │ a clearly labeled anonymous example chart (real chart engine, invented  │
+     │ birth details — LC-02)                                                  │
+     │ until the visitor's own onboarding chart is available.                  │
+     │                                                                         │
+     │ Root cause (verified): src/marketing.tsx hard-gates the chart pane,     │
+     │ inset handle and placement                                              │
+     │ selector on ownedChart (lines 95, 101, 512, 514, 520, 536) — a          │
+     │ sample/guest chart never existed in                                     │
+     │ any committed revision. Signed-out visitors (the entire landing         │
+     │ audience) get room-only + a sign-in                                     │
+     │ caption. This is a requirement change (older MFRAME contracts said "no  │
+     │ example chart"; current                                                 │
+     │ LC-02 and today's operator instruction require it).                     │
+     │                                                                         │
+     │ Also reported: the chart focus highlight dims the toroid structure      │
+     │ (comment at                                                             │
+     │ src/components/Astrolabe3D.tsx:1313: "Dim every non-subject material,   │
+     │ including the metal                                                     │
+     │ frame"). Operator correction: the plum-and-metal frame must remain      │
+     │ vivid and visually                                                      │
+     │ impressive; only the other elements are dimmed.                         │
+     │                                                                         │
+     │ Baseline: master @ e7732b6a, clean tree, version.json 1.32.90532 (v1.32 │
+     │ badge confirmed                                                         │
+     │ bottom-right on both operator screenshots — latest commit, as           │
+     │ instructed).                                                            │
+     │                                                                         │
+     │ Operator process ruling (binding, from AskUserQuestion answers)         │
+     │                                                                         │
+     │ Strict staged pipeline, no phase mixing:                                │
+     │ 1. This turn: write the amended snapshot of the new complete codebase   │
+     │    target as R12 in                                                     │
+     │    DOCS/ARCHITECTURE.md (complete, stub-free, with a tabulated entity   │
+     │    enumeration — no entity/                                             │
+     │    variable/function may be used by coders unless tabulated there).     │
+     │    Commit + push. HOLD for                                              │
+     │    operator presentation and signoff.                                   │
+     │ 2. After signoff (later instruction): produce the fully parallelizable  │
+     │    4-state subagent coder                                               │
+     │    tasklist in CHECKLIST.md → hold for operator signoff again.          │
+     │ 3. Then: parallel coder subagents → semantic evaluation of each         │
+     │    returned generation against its                                      │
+     │    specific 4-state task → send back to the same coder if insufficient. │
+     │                                                                         │
+     │ Operator design rulings (binding)                                       │
+     │                                                                         │
+     │ - Explanation pipeline: the two-path inset click is identical in        │
+     │   operation everywhere, but the                                         │
+     │   content pipeline branches:                                            │
+     │   - index.html / marketing (always) and logged-in unpaid or             │
+     │     credit-depleted users: swap-zoom,                                   │
+     │     then the prefab canned educational explanation — the meaning of the │
+     │     element, how different                                              │
+     │     astrology regimes regard it, and how its meaning evolved over the   │
+     │     ages. No inference.                                                 │
+     │   - Logged-in with sufficient credits: does the same, but also extends  │
+     │     to a personalized                                                   │
+     │     inferenced reading of the selected component(s) in context of the   │
+     │     current sky's ephemeris and                                         │
+     │     the user's natal ephemeris, generated by the hosted API and         │
+     │     rendered dynamically by                                             │
+     │     Supertonic TTS, with normal inference accounting.                   │
+     │ - Zoom: the swap-zoom (existing 240ms inset→main pane scale animation)  │
+     │   is the zoomed animated                                                │
+     │   toggle. No camera fly-to.                                             │
+     │ - Highlight: dim only the other representational elements; the          │
+     │   plum-and-metal toroid frame stays                                     │
+     │   vivid at full opacity.                                                │
+     │                                                                         │
+     │ R12 architecture content (to be written after approval)                 │
+     │                                                                         │
+     │ New section ## R12 — Landing atelier/inset replica and branched chart   │
+     │ education in                                                            │
+     │ DOCS/ARCHITECTURE.md, following the R11 amendment pattern, with four    │
+     │ independent, parallelizable                                             │
+     │ assignments (disjoint file ownership) and a complete entity table.      │
+     │ Outline:                                                                │
+     │                                                                         │
+     │ R12-A MARKETING-REPLICA — src/marketing.tsx, src/marketing.css          │
+     │                                                                         │
+     │ - New frozen entity EXAMPLE_CHART_INPUT: NatalChartInput (invented      │
+     │   example birth details — e.g.                                          │
+     │   name "Aurelia (example)", 1997-11-08 19:05, Toronto 43.6532/-79.3832, │
+     │   tz −5, houseSystem 'W') and                                           │
+     │   loadExampleChart() using the existing local calculateNatalChart       │
+     │   (vendored Swiss Ephemeris                                             │
+     │   WASM, no network/auth). Frozen values in the entity table; coders do  │
+     │   not invent.                                                           │
+     │ - displayedChart = ownedChart ?? exampleChart replaces every ownedChart │
+     │   hard gate (pane                                                       │
+     │   hidden, Astrolabe3D mount, inset handle, placement select, view       │
+     │   derivation at :101) so the                                            │
+     │   inset pair, drag/persist/shelf-avoidance and scroll-aware swap        │
+     │   (automaticView :96) operate for                                       │
+     │   guests. Owned chart replaces the example through the existing Phase   │
+     │   machinery; auth/intake change                                         │
+     │   clears lesson/selection (existing generation guards).                 │
+     │ - Clear labeling (LP08): the caption identifies the example as an       │
+     │   anonymous example, never as the                                       │
+     │   visitor's chart; restore a create-your-chart entry for signed-out     │
+     │   visitors.                                                             │
+     │ - Guest education: widen explain() (:441-458) / speak() gates so        │
+     │   authored lessons + Supertonic                                         │
+     │   voice work without a signed-in owner — AuthoredEducationSession keyed │
+     │   to the existing                                                       │
+     │   GUEST_ROOM namespace; explicit-gesture voice unlock (voiceAllowedRef  │
+     │   :85) preserved; no                                                    │
+     │   inference call ever fires on the landing.                             │
+     │ - Marketing-side lesson choreography: lesson start drives view →        │
+     │   'chart' (Natally's room with her                                      │
+     │   animated character becomes the inset card), auto-revert to atelier on │
+     │   completion/stop/failure;                                              │
+     │   the user's manual choice overrides and cancels auto-revert (existing  │
+     │   manualView semantics).                                                │
+     │                                                                         │
+     │ R12-B RENDERER-TWOPATH — src/components/Astrolabe3D.tsx (+              │
+     │ src/services/chartFocusVisuals.ts only if a constant must move)         │
+     │                                                                         │
+     │ - Two-path inset click in onClick (:531-584): while the chart is inset, │
+     │   raycast before the                                                    │
+     │   activateRef short-circuit (:549). Object hit → onActivate() first     │
+     │   (swap-zoom), then                                                     │
+     │   onToggleComponent(componentId, isMulti) deferred until the pane       │
+     │   transition ends (existing                                             │
+     │   transitionend/layoutKey redraw; immediate under reduced motion).      │
+     │   Empty-space hit → onActivate()                                        │
+     │   only (today's behavior). Foreground behavior unchanged.               │
+     │ - Toroid-clear focus dimming: tag the static structural meshes at       │
+     │   creation (:252-320 — torus                                            │
+     │   bezels, floor disc, guide rings) with a frozen userData structure     │
+     │   flag and exempt them in the                                           │
+     │   dim traverse (:1313-1328) and hover variant (:1330-1353) so the       │
+     │   plum-and-metal frame stays vivid;                                     │
+     │   only representational elements (planet beads/glyphs, sign             │
+     │   baubles/ticks, house spokes/badges/                                   │
+     │   sector fills, aspect lines/tubes, NOW bodies) dim. Correct the        │
+     │   misleading comment at :1313.                                          │
+     │                                                                         │
+     │ R12-C APP-EDUCATION — src/App.tsx, src/components/NatallyChatbot.tsx (+ │
+     │ src/components/ReadingStage.tsx only if the view seam requires)         │
+     │                                                                         │
+     │ - App-side two-path choreography: an inset object click's               │
+     │   educationalRequest (existing                                          │
+     │   handleToggleComponent :459-470 → setEducationalRequest :469) swaps    │
+     │   presentation.view to                                                  │
+     │   'chart' (respecting existing follow/manual-override semantics) and    │
+     │   auto-reverts to 'atelier' on                                          │
+     │   lesson completion/stop/failure/dismiss. Natally remains               │
+     │   visible/animated in the room inset (no new                            │
+     │   sprite machinery — the room pane with AtelierCharacter is the inset   │
+     │   while chart is focused).                                              │
+     │ - Branched pipeline: prefab authored lesson always; then, if            │
+     │   readPaidConversationAccess                                            │
+     │   (src/services/billingAccess.ts, consumed at NatallyChatbot.tsx:842)   │
+     │   grants, extend with a                                                 │
+     │   personalized inferenced interpretation of the selected component(s)   │
+     │   via the existing hosted                                               │
+     │   inference services (src/services/hostedInference.ts,                  │
+     │   inferenceTurn.ts) against the user's                                  │
+     │   natal + current-sky ephemeris, rendered as a chat message +           │
+     │   Supertonic streaming speech with                                      │
+     │   normal inference accounting (R3); unpaid/depleted → prefab only.      │
+     │   Rapid-reselection cancellation,                                       │
+     │   busy/owner/stale guards preserved.                                    │
+     │                                                                         │
+     │ R12-D PREFAB-CONTENT — src/services/authoredChartExplanations.ts        │
+     │                                                                         │
+     │ - Extend LessonCore (:21) with required regimes and evolution fields    │
+     │   and complete every                                                    │
+     │   entry (BODIES 14, SIGN_CORES 12, HOUSE_CORES 12, ASPECT_CORES 5) with │
+     │   real authored content: the                                            │
+     │   element's meaning, how different astrological regimes/traditions      │
+     │   regard it, and how its meaning                                        │
+     │   evolved over the ages. Factual register preserved; Gen Z lingo        │
+     │   restoration stays the separate                                        │
+     │   PREFAB-GENZ task. No placeholder content (project rule).              │
+     │                                                                         │
+     │ Entity table + preservation + attestation                               │
+     │                                                                         │
+     │ - Tabulated enumeration of every existing and new entity with exact     │
+     │   name, file:line, role,                                                │
+     │   signature (verified this session: e.g. marketing.tsx:94-101 gates,    │
+     │   Astrolabe3D.tsx:549                                                   │
+     │   short-circuit, :1313-1328 dim traverse,                               │
+     │   authoredChartExplanations.ts:21 LessonCore,                           │
+     │   chartFocusVisuals.ts:2 CHART_FOCUS, ephemeris.ts:223                  │
+     │   calculateNatalChart, NatallyChatbot.tsx:1038-1075                     │
+     │   educational pipeline, presentation.ts view rules). New entities get   │
+     │   frozen names/signatures.                                              │
+     │ - Preservation: R11 outside-inset callouts unchanged;                   │
+     │   drag/zoom/rotation/selection/inert-pane                               │
+     │   accessibility; reduced motion; no autostart audio; no LLM on landing; │
+     │   inference only through                                                │
+     │   existing paid access and accounting; no new providers/config;         │
+     │   purchase/billing flows untouched;                                     │
+     │   souvenir ReadingStage inherits renderer changes without regression.   │
+     │ - R12 attestation paragraph (certifies the target specification, not    │
+     │   implementation) + the staged                                          │
+     │   operator signoff process recorded as the delivery gate.               │
+     │                                                                         │
+     │ Execution steps after plan approval (this round only)                   │
+     │                                                                         │
+     │ 1. cp DOCS/ARCHITECTURE.md DOCS/ARCHITECTURE.md.bak.<YYYYmmdd_HHMMSS>   │
+     │    (house rule — backup beside                                          │
+     │    original, edit original in place).                                   │
+     │ 2. Pin remaining file:line details for the inference entities           │
+     │    (hostedInference.ts,                                                 │
+     │    inferenceTurn.ts, billingAccess.ts) via CodeGraph/grep while         │
+     │    writing.                                                             │
+     │ 3. Write the R12 section into DOCS/ARCHITECTURE.md (stub-free, closed   │
+     │    sets, entity table complete).                                        │
+     │ 4. Record the attempt in the Postgres task_ledger per                   │
+     │    DOCS/TOOLING_CONVENTIONS/task-ledger-postgres.md.                    │
+     │ 5. Commit + push to origin (verify remote readback — standing           │
+     │    instruction). No coding, no                                          │
+     │    CHECKLIST.md changes.                                                │
+     │ 6. HOLD: present R12 summary to the operator for signoff. CHECKLIST     │
+     │    production and coder                                                 │
+     │    dispatch happen only in later instructions, each behind its own      │
+     │    signoff gate.                                                        │
+     │                                                                         │
+     │ Verification                                                            │
+     │                                                                         │
+     │ - grep -c "TBD\|future work\|open issue" DOCS/ARCHITECTURE.md → 0       │
+     │   (stub-free gate).                                                     │
+     │ - Every entity named in R12's prose appears in R12's table; every table │
+     │   file:line resolves                                                    │
+     │   (spot-read during writing; the architecture attestation states this   │
+     │   was checked).                                                         │
+     │ - git status clean after commit; git log origin/master shows the pushed │
+     │   commit hash.                                                          │
+     │ - Operator signoff is the round's terminal gate — recorded, not         │
+     │   presumed.                                                             │
+     ╰─────────────────────────────────────────────────────────────────────────╯
+
+  Thought for 24s (ctrl+o to expand)
+
+● Understood — adding the post-prefab upsell close to the architecture design:
+  after every prefab canned response Natally attempts an assertive,
+  slightly-cheesy-self-aware close; and when she just completed a consumed paid
+  reading turn while credits remain, the close targets the PDF + persisted
+  interactive "vignette frozen in time" re-experience atelier (the souvenir)
+  instead.
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+  Thought for 7s (ctrl+o to expand)
+
+● Updated plan
+  ⎿  /plan to preview
+  ⎿  User rejected Claude's plan:
+     ╭─────────────────────────────────────────────────────────────────────────╮
+     │ Plan — R12 architecture: landing hero atelier/inset replica + branched  │
+     │ chart education                                                         │
+     │                                                                         │
+     │ Context                                                                 │
+     │                                                                         │
+     │ The landing page (marketing.html, live entry for anonymous visitors) is │
+     │ missing the entire inset                                                │
+     │ natal-chart card from its sticky hero. The hero should be a working     │
+     │ replica of the logged-in app                                            │
+     │ atelier: a main view + smaller inset card that swap focus between the   │
+     │ atelier room view and the                                               │
+     │ natal chart view — identical in operation to the app, differing only in │
+     │ that the landing chart uses                                             │
+     │ a clearly labeled anonymous example chart (real chart engine, invented  │
+     │ birth details — LC-02)                                                  │
+     │ until the visitor's own onboarding chart is available.                  │
+     │                                                                         │
+     │ Root cause (verified): src/marketing.tsx hard-gates the chart pane,     │
+     │ inset handle and placement                                              │
+     │ selector on ownedChart (lines 95, 101, 512, 514, 520, 536) — a          │
+     │ sample/guest chart never existed in                                     │
+     │ any committed revision. Signed-out visitors (the entire landing         │
+     │ audience) get room-only + a sign-in                                     │
+     │ caption. This is a requirement change (older MFRAME contracts said "no  │
+     │ example chart"; current                                                 │
+     │ LC-02 and today's operator instruction require it).                     │
+     │                                                                         │
+     │ Also reported: the chart focus highlight dims the toroid structure      │
+     │ (comment at                                                             │
+     │ src/components/Astrolabe3D.tsx:1313: "Dim every non-subject material,   │
+     │ including the metal                                                     │
+     │ frame"). Operator correction: the plum-and-metal frame must remain      │
+     │ vivid and visually                                                      │
+     │ impressive; only the other elements are dimmed.                         │
+     │                                                                         │
+     │ Baseline: master @ e7732b6a, clean tree, version.json 1.32.90532 (v1.32 │
+     │ badge confirmed                                                         │
+     │ bottom-right on both operator screenshots — latest commit, as           │
+     │ instructed).                                                            │
+     │                                                                         │
+     │ Operator process ruling (binding, from AskUserQuestion answers)         │
+     │                                                                         │
+     │ Strict staged pipeline, no phase mixing:                                │
+     │ 1. This turn: write the amended snapshot of the new complete codebase   │
+     │    target as R12 in                                                     │
+     │    DOCS/ARCHITECTURE.md (complete, stub-free, with a tabulated entity   │
+     │    enumeration — no entity/                                             │
+     │    variable/function may be used by coders unless tabulated there).     │
+     │    Commit + push. HOLD for                                              │
+     │    operator presentation and signoff.                                   │
+     │ 2. After signoff (later instruction): produce the fully parallelizable  │
+     │    4-state subagent coder                                               │
+     │    tasklist in CHECKLIST.md → hold for operator signoff again.          │
+     │ 3. Then: parallel coder subagents → semantic evaluation of each         │
+     │    returned generation against its                                      │
+     │    specific 4-state task → send back to the same coder if insufficient. │
+     │                                                                         │
+     │ Operator design rulings (binding)                                       │
+     │                                                                         │
+     │ - Explanation pipeline: the two-path inset click is identical in        │
+     │   operation everywhere, but the                                         │
+     │   content pipeline branches:                                            │
+     │   - index.html / marketing (always) and logged-in unpaid or             │
+     │     credit-depleted users: swap-zoom,                                   │
+     │     then the prefab canned educational explanation — the meaning of the │
+     │     element, how different                                              │
+     │     astrology regimes regard it, and how its meaning evolved over the   │
+     │     ages. No inference.                                                 │
+     │   - Logged-in with sufficient credits: does the same, but also extends  │
+     │     to a personalized                                                   │
+     │     inferenced reading of the selected component(s) in context of the   │
+     │     current sky's ephemeris and                                         │
+     │     the user's natal ephemeris, generated by the hosted API and         │
+     │     rendered dynamically by                                             │
+     │     Supertonic TTS, with normal inference accounting.                   │
+     │ - Zoom: the swap-zoom (existing 240ms inset→main pane scale animation)  │
+     │   is the zoomed animated                                                │
+     │   toggle. No camera fly-to.                                             │
+     │ - Highlight: dim only the other representational elements; the          │
+     │   plum-and-metal toroid frame stays                                     │
+     │   vivid at full opacity.                                                │
+     │ - Post-prefab upsell close: after every prefab canned response, Natally │
+     │   attempts an upsell                                                    │
+     │   close in perfect-sales-technique assertiveness with a slight          │
+     │   cheesiness of self-awareness (not                                     │
+     │   self-consciousness). Two variants:                                    │
+     │   - Default (landing, and logged-in unpaid/credit-depleted): upsell to  │
+     │     paid readings/credits                                               │
+     │     (extends the existing getAuthoredConversationClose /                │
+     │     education-session invitation pattern).                              │
+     │   - Just consumed a paid reading turn with credits remaining (logged-in │
+     │     only): upsell to the                                                │
+     │     PDF + persisted interactive "vignette frozen in time" re-experience │
+     │     atelier (the existing                                               │
+     │     souvenir/keepsake product — no new offer, payment or delivery       │
+     │     machinery).                                                         │
+     │                                                                         │
+     │ R12 architecture content (to be written after approval)                 │
+     │                                                                         │
+     │ New section ## R12 — Landing atelier/inset replica and branched chart   │
+     │ education in                                                            │
+     │ DOCS/ARCHITECTURE.md, following the R11 amendment pattern, with four    │
+     │ independent, parallelizable                                             │
+     │ assignments (disjoint file ownership) and a complete entity table.      │
+     │ Outline:                                                                │
+     │                                                                         │
+     │ R12-A MARKETING-REPLICA — src/marketing.tsx, src/marketing.css          │
+     │                                                                         │
+     │ - New frozen entity EXAMPLE_CHART_INPUT: NatalChartInput (invented      │
+     │   example birth details — e.g.                                          │
+     │   name "Aurelia (example)", 1997-11-08 19:05, Toronto 43.6532/-79.3832, │
+     │   tz −5, houseSystem 'W') and                                           │
+     │   loadExampleChart() using the existing local calculateNatalChart       │
+     │   (vendored Swiss Ephemeris                                             │
+     │   WASM, no network/auth). Frozen values in the entity table; coders do  │
+     │   not invent.                                                           │
+     │ - displayedChart = ownedChart ?? exampleChart replaces every ownedChart │
+     │   hard gate (pane                                                       │
+     │   hidden, Astrolabe3D mount, inset handle, placement select, view       │
+     │   derivation at :101) so the                                            │
+     │   inset pair, drag/persist/shelf-avoidance and scroll-aware swap        │
+     │   (automaticView :96) operate for                                       │
+     │   guests. Owned chart replaces the example through the existing Phase   │
+     │   machinery; auth/intake change                                         │
+     │   clears lesson/selection (existing generation guards).                 │
+     │ - Clear labeling (LP08): the caption identifies the example as an       │
+     │   anonymous example, never as the                                       │
+     │   visitor's chart; restore a create-your-chart entry for signed-out     │
+     │   visitors.                                                             │
+     │ - Guest education: widen explain() (:441-458) / speak() gates so        │
+     │   authored lessons + Supertonic                                         │
+     │   voice work without a signed-in owner — AuthoredEducationSession keyed │
+     │   to the existing                                                       │
+     │   GUEST_ROOM namespace; explicit-gesture voice unlock (voiceAllowedRef  │
+     │   :85) preserved; no                                                    │
+     │   inference call ever fires on the landing.                             │
+     │ - Marketing-side lesson choreography: lesson start drives view →        │
+     │   'chart' (Natally's room with her                                      │
+     │   animated character becomes the inset card), auto-revert to atelier on │
+     │   completion/stop/failure;                                              │
+     │   the user's manual choice overrides and cancels auto-revert (existing  │
+     │   manualView semantics).                                                │
+     │ - After every prefab lesson on the landing, append the default upsell   │
+     │   close (see R12-D content);                                            │
+     │   delivered as the same authored text/voice flow, never an inference    │
+     │   call.                                                                 │
+     │                                                                         │
+     │ R12-B RENDERER-TWOPATH — src/components/Astrolabe3D.tsx (+              │
+     │ src/services/chartFocusVisuals.ts only if a constant must move)         │
+     │                                                                         │
+     │ - Two-path inset click in onClick (:531-584): while the chart is inset, │
+     │   raycast before the                                                    │
+     │   activateRef short-circuit (:549). Object hit → onActivate() first     │
+     │   (swap-zoom), then                                                     │
+     │   onToggleComponent(componentId, isMulti) deferred until the pane       │
+     │   transition ends (existing                                             │
+     │   transitionend/layoutKey redraw; immediate under reduced motion).      │
+     │   Empty-space hit → onActivate()                                        │
+     │   only (today's behavior). Foreground behavior unchanged.               │
+     │ - Toroid-clear focus dimming: tag the static structural meshes at       │
+     │   creation (:252-320 — torus                                            │
+     │   bezels, floor disc, guide rings) with a frozen userData structure     │
+     │   flag and exempt them in the                                           │
+     │   dim traverse (:1313-1328) and hover variant (:1330-1353) so the       │
+     │   plum-and-metal frame stays vivid;                                     │
+     │   only representational elements (planet beads/glyphs, sign             │
+     │   baubles/ticks, house spokes/badges/                                   │
+     │   sector fills, aspect lines/tubes, NOW bodies) dim. Correct the        │
+     │   misleading comment at :1313.                                          │
+     │                                                                         │
+     │ R12-C APP-EDUCATION — src/App.tsx, src/components/NatallyChatbot.tsx (+ │
+     │ src/components/ReadingStage.tsx only if the view seam requires)         │
+     │                                                                         │
+     │ - App-side two-path choreography: an inset object click's               │
+     │   educationalRequest (existing                                          │
+     │   handleToggleComponent :459-470 → setEducationalRequest :469) swaps    │
+     │   presentation.view to                                                  │
+     │   'chart' (respecting existing follow/manual-override semantics) and    │
+     │   auto-reverts to 'atelier' on                                          │
+     │   lesson completion/stop/failure/dismiss. Natally remains               │
+     │   visible/animated in the room inset (no new                            │
+     │   sprite machinery — the room pane with AtelierCharacter is the inset   │
+     │   while chart is focused).                                              │
+     │ - Branched pipeline: prefab authored lesson always; then, if            │
+     │   readPaidConversationAccess                                            │
+     │   (src/services/billingAccess.ts, consumed at NatallyChatbot.tsx:842)   │
+     │   grants, extend with a                                                 │
+     │   personalized inferenced interpretation of the selected component(s)   │
+     │   via the existing hosted                                               │
+     │   inference services (src/services/hostedInference.ts,                  │
+     │   inferenceTurn.ts) against the user's                                  │
+     │   natal + current-sky ephemeris, rendered as a chat message +           │
+     │   Supertonic streaming speech with                                      │
+     │   normal inference accounting (R3); unpaid/depleted → prefab only.      │
+     │   Rapid-reselection cancellation,                                       │
+     │   busy/owner/stale guards preserved.                                    │
+     │ - Upsell-close branch: after a prefab response in the app, Natally      │
+     │   attempts the upsell close —                                           │
+     │   default reading/credits close, or, when the immediately preceding     │
+     │   completed turn was a paid                                             │
+     │   inferenced turn with remaining credit balance > 0 (detected from      │
+     │   existing message metadata and                                         │
+     │   paid-access balance), the souvenir close (PDF + persisted interactive │
+     │   "vignette frozen in time"                                             │
+     │   re-experience atelier). Exact detection entities frozen in the R12    │
+     │   entity table.                                                         │
+     │                                                                         │
+     │ R12-D PREFAB-CONTENT — src/services/authoredChartExplanations.ts (+     │
+     │ src/services/authoredEducationSession.ts close phrases)                 │
+     │                                                                         │
+     │ - Extend LessonCore (:21) with required regimes and evolution fields    │
+     │   and complete every                                                    │
+     │   entry (BODIES 14, SIGN_CORES 12, HOUSE_CORES 12, ASPECT_CORES 5) with │
+     │   real authored content: the                                            │
+     │   element's meaning, how different astrological regimes/traditions      │
+     │   regard it, and how its meaning                                        │
+     │   evolved over the ages. Factual register preserved; Gen Z lingo        │
+     │   restoration stays the separate                                        │
+     │   PREFAB-GENZ task. No placeholder content (project rule).              │
+     │ - Author the post-prefab upsell close passages (extending               │
+     │   getAuthoredConversationClose :294-303                                 │
+     │   and the education-session invitation pattern): default                │
+     │   reading/credits close and the souvenir                                │
+     │   close (PDF + persisted interactive "vignette frozen in time"          │
+     │   re-experience atelier). Frozen tone                                   │
+     │   spec: perfect-sales-technique assertiveness, slight cheesiness of     │
+     │   self-awareness, never                                                 │
+     │   self-consciousness; authored text only, no LLM.                       │
+     │                                                                         │
+     │ Entity table + preservation + attestation                               │
+     │                                                                         │
+     │ - Tabulated enumeration of every existing and new entity with exact     │
+     │   name, file:line, role,                                                │
+     │   signature (verified this session: e.g. marketing.tsx:94-101 gates,    │
+     │   Astrolabe3D.tsx:549                                                   │
+     │   short-circuit, :1313-1328 dim traverse,                               │
+     │   authoredChartExplanations.ts:21 LessonCore and                        │
+     │   :294-303 getAuthoredConversationClose,                                │
+     │   authoredEducationSession.ts:13-18 INVITATIONS,                        │
+     │   chartFocusVisuals.ts:2 CHART_FOCUS, ephemeris.ts:223                  │
+     │   calculateNatalChart, NatallyChatbot.tsx:1038-1075                     │
+     │   educational pipeline, presentation.ts view rules, souvenir product    │
+     │   entities in                                                           │
+     │   src/services/souvenir.ts for the frozen "vignette frozen in time"     │
+     │   naming). New entities get                                             │
+     │   frozen names/signatures.                                              │
+     │ - Preservation: R11 outside-inset callouts unchanged;                   │
+     │   drag/zoom/rotation/selection/inert-pane                               │
+     │   accessibility; reduced motion; no autostart audio; no LLM on landing; │
+     │   inference only through                                                │
+     │   existing paid access and accounting; no new providers/config;         │
+     │   purchase/billing flows untouched;                                     │
+     │   souvenir ReadingStage inherits renderer changes without regression.   │
+     │ - R12 attestation paragraph (certifies the target specification, not    │
+     │   implementation) + the staged                                          │
+     │   operator signoff process recorded as the delivery gate.               │
+     │                                                                         │
+     │ Execution steps after plan approval (this round only)                   │
+     │                                                                         │
+     │ 1. cp DOCS/ARCHITECTURE.md DOCS/ARCHITECTURE.md.bak.<YYYYmmdd_HHMMSS>   │
+     │    (house rule — backup beside                                          │
+     │    original, edit original in place).                                   │
+     │ 2. Pin remaining file:line details for the inference entities           │
+     │    (hostedInference.ts,                                                 │
+     │    inferenceTurn.ts, billingAccess.ts) via CodeGraph/grep while         │
+     │    writing.                                                             │
+     │ 3. Write the R12 section into DOCS/ARCHITECTURE.md (stub-free, closed   │
+     │    sets, entity table complete).                                        │
+     │ 4. Record the attempt in the Postgres task_ledger per                   │
+     │    DOCS/TOOLING_CONVENTIONS/task-ledger-postgres.md.                    │
+     │ 5. Commit + push to origin (verify remote readback — standing           │
+     │    instruction). No coding, no                                          │
+     │    CHECKLIST.md changes.                                                │
+     │ 6. HOLD: present R12 summary to the operator for signoff. CHECKLIST     │
+     │    production and coder                                                 │
+     │    dispatch happen only in later instructions, each behind its own      │
+     │    signoff gate.                                                        │
+     │                                                                         │
+     │ Verification                                                            │
+     │                                                                         │
+     │ - grep -c "TBD\|future work\|open issue" DOCS/ARCHITECTURE.md → 0       │
+     │   (stub-free gate).                                                     │
+     │ - Every entity named in R12's prose appears in R12's table; every table │
+     │   file:line resolves                                                    │
+     │   (spot-read during writing; the architecture attestation states this   │
+     │   was checked).                                                         │
+     │ - git status clean after commit; git log origin/master shows the pushed │
+     │   commit hash.                                                          │
+     │ - Operator signoff is the round's terminal gate — recorded, not         │
+     │   presumed.                                                             │
+     ╰─────────────────────────────────────────────────────────────────────────╯
+
+  Thought for 11s (ctrl+o to expand)
+
+● Good question — let me verify the exact current routing in code before
+  answering.
+
+  Thought for 13s, searched for 1 pattern, read 1 file (ctrl+o to expand)
+● Verified — here is the exact routing as deployed at v1.32:
+
+  marketing.html is not loaded into index.html — it's a separate document, and 
+  anonymous visitors are redirected to it. Two mechanisms enforce your earlier
+  instruction (landing page = default for visitors):
+
+  1. At build/deploy time (scripts/stage-marketing-overlay.mjs:33-49): the
+     staged index.html gets a redirect script injected into its <head> — anyone
+     hitting / or /index.html is sent to /marketing.html, unless the URL carries
+     ?app=1 or ?offer=reading|conversation (app entry links).
+  2. At runtime (src/main.tsx:10-13): the app shell itself redirects any non-app
+     document (/, /index.html) to /marketing.html for browser visitors (Tauri
+     native and /app.html are exempt).
+
+  So the two files are: index.html = the logged-in app shell (mounts App.tsx —
+  the atelier from your screenshot 2, served at /app.html), and marketing.html =
+  the landing page (mounts MarketingExperience in src/marketing.tsx — the
+  sticky hero from screenshot 1). Your instruction is already in effect: every
+  anonymous visitor at the root sees the landing page. In your original message,
+  "index.html" functionally means this landing page — marketing.html — and that
+  is exactly where the R12 restoration targets the hero replica. Let me record
+  this clarification in the plan so the R12 document states it explicitly.
+
+● Updated plan
+  ⎿  /plan to preview
+  ⎿  User rejected Claude's plan:
+     ╭─────────────────────────────────────────────────────────────────────────╮
+     │ Plan — R12 architecture: landing hero atelier/inset replica + branched  │
+     │ chart education                                                         │
+     │                                                                         │
+     │ Routing clarification (operator question, verified in source)           │
+     │                                                                         │
+     │ marketing.html is a separate document, not content loaded into          │
+     │ index.html. Anonymous visitors                                          │
+     │ are redirected to it by two existing mechanisms: the staged index.html  │
+     │ head script                                                             │
+     │ (scripts/stage-marketing-overlay.mjs:33-49) and the app-shell runtime   │
+     │ redirect                                                                │
+     │ (src/main.tsx:10-13), both exempting ?app=1 / ?offer=… / Tauri /        │
+     │ /app.html. So the landing                                               │
+     │ page (marketing.html → src/marketing.tsx MarketingExperience) is        │
+     │ already the default                                                     │
+     │ not-logged-in page — R12 restores the hero inset pair there. R12        │
+     │ records these routing entities                                          │
+     │ in its table; no routing change is in scope.                            │
+     │                                                                         │
+     │ Context                                                                 │
+     │                                                                         │
+     │ The landing page (marketing.html, live entry for anonymous visitors) is │
+     │ missing the entire inset                                                │
+     │ natal-chart card from its sticky hero. The hero should be a working     │
+     │ replica of the logged-in app                                            │
+     │ atelier: a main view + smaller inset card that swap focus between the   │
+     │ atelier room view and the                                               │
+     │ natal chart view — identical in operation to the app, differing only in │
+     │ that the landing chart uses                                             │
+     │ a clearly labeled anonymous example chart (real chart engine, invented  │
+     │ birth details — LC-02)                                                  │
+     │ until the visitor's own onboarding chart is available.                  │
+     │                                                                         │
+     │ Root cause (verified): src/marketing.tsx hard-gates the chart pane,     │
+     │ inset handle and placement                                              │
+     │ selector on ownedChart (lines 95, 101, 512, 514, 520, 536) — a          │
+     │ sample/guest chart never existed in                                     │
+     │ any committed revision. Signed-out visitors (the entire landing         │
+     │ audience) get room-only + a sign-in                                     │
+     │ caption. This is a requirement change (older MFRAME contracts said "no  │
+     │ example chart"; current                                                 │
+     │ LC-02 and today's operator instruction require it).                     │
+     │                                                                         │
+     │ Also reported: the chart focus highlight dims the toroid structure      │
+     │ (comment at                                                             │
+     │ src/components/Astrolabe3D.tsx:1313: "Dim every non-subject material,   │
+     │ including the metal                                                     │
+     │ frame"). Operator correction: the plum-and-metal frame must remain      │
+     │ vivid and visually                                                      │
+     │ impressive; only the other elements are dimmed.                         │
+     │                                                                         │
+     │ Baseline: master @ e7732b6a, clean tree, version.json 1.32.90532 (v1.32 │
+     │ badge confirmed                                                         │
+     │ bottom-right on both operator screenshots — latest commit, as           │
+     │ instructed).                                                            │
+     │                                                                         │
+     │ Operator process ruling (binding, from AskUserQuestion answers)         │
+     │                                                                         │
+     │ Strict staged pipeline, no phase mixing:                                │
+     │ 1. This turn: write the amended snapshot of the new complete codebase   │
+     │    target as R12 in                                                     │
+     │    DOCS/ARCHITECTURE.md (complete, stub-free, with a tabulated entity   │
+     │    enumeration — no entity/                                             │
+     │    variable/function may be used by coders unless tabulated there).     │
+     │    Commit + push. HOLD for                                              │
+     │    operator presentation and signoff.                                   │
+     │ 2. After signoff (later instruction): produce the fully parallelizable  │
+     │    4-state subagent coder                                               │
+     │    tasklist in CHECKLIST.md → hold for operator signoff again.          │
+     │ 3. Then: parallel coder subagents → semantic evaluation of each         │
+     │    returned generation against its                                      │
+     │    specific 4-state task → send back to the same coder if insufficient. │
+     │                                                                         │
+     │ Operator design rulings (binding)                                       │
+     │                                                                         │
+     │ - Explanation pipeline: the two-path inset click is identical in        │
+     │   operation everywhere, but the                                         │
+     │   content pipeline branches:                                            │
+     │   - index.html / marketing (always) and logged-in unpaid or             │
+     │     credit-depleted users: swap-zoom,                                   │
+     │     then the prefab canned educational explanation — the meaning of the │
+     │     element, how different                                              │
+     │     astrology regimes regard it, and how its meaning evolved over the   │
+     │     ages. No inference.                                                 │
+     │   - Logged-in with sufficient credits: does the same, but also extends  │
+     │     to a personalized                                                   │
+     │     inferenced reading of the selected component(s) in context of the   │
+     │     current sky's ephemeris and                                         │
+     │     the user's natal ephemeris, generated by the hosted API and         │
+     │     rendered dynamically by                                             │
+     │     Supertonic TTS, with normal inference accounting.                   │
+     │ - Zoom: the swap-zoom (existing 240ms inset→main pane scale animation)  │
+     │   is the zoomed animated                                                │
+     │   toggle. No camera fly-to.                                             │
+     │ - Highlight: dim only the other representational elements; the          │
+     │   plum-and-metal toroid frame stays                                     │
+     │   vivid at full opacity.                                                │
+     │ - Post-prefab upsell close: after every prefab canned response, Natally │
+     │   attempts an upsell                                                    │
+     │   close in perfect-sales-technique assertiveness with a slight          │
+     │   cheesiness of self-awareness (not                                     │
+     │   self-consciousness). Two variants:                                    │
+     │   - Default (landing, and logged-in unpaid/credit-depleted): upsell to  │
+     │     paid readings/credits                                               │
+     │     (extends the existing getAuthoredConversationClose /                │
+     │     education-session invitation pattern).                              │
+     │   - Just consumed a paid reading turn with credits remaining (logged-in │
+     │     only): upsell to the                                                │
+     │     PDF + persisted interactive "vignette frozen in time" re-experience │
+     │     atelier (the existing                                               │
+     │     souvenir/keepsake product — no new offer, payment or delivery       │
+     │     machinery).                                                         │
+     │                                                                         │
+     │ R12 architecture content (to be written after approval)                 │
+     │                                                                         │
+     │ New section ## R12 — Landing atelier/inset replica and branched chart   │
+     │ education in                                                            │
+     │ DOCS/ARCHITECTURE.md, following the R11 amendment pattern, with four    │
+     │ independent, parallelizable                                             │
+     │ assignments (disjoint file ownership) and a complete entity table.      │
+     │ Outline:                                                                │
+     │                                                                         │
+     │ R12-A MARKETING-REPLICA — src/marketing.tsx, src/marketing.css          │
+     │                                                                         │
+     │ - New frozen entity EXAMPLE_CHART_INPUT: NatalChartInput (invented      │
+     │   example birth details — e.g.                                          │
+     │   name "Aurelia (example)", 1997-11-08 19:05, Toronto 43.6532/-79.3832, │
+     │   tz −5, houseSystem 'W') and                                           │
+     │   loadExampleChart() using the existing local calculateNatalChart       │
+     │   (vendored Swiss Ephemeris                                             │
+     │   WASM, no network/auth). Frozen values in the entity table; coders do  │
+     │   not invent.                                                           │
+     │ - displayedChart = ownedChart ?? exampleChart replaces every ownedChart │
+     │   hard gate (pane                                                       │
+     │   hidden, Astrolabe3D mount, inset handle, placement select, view       │
+     │   derivation at :101) so the                                            │
+     │   inset pair, drag/persist/shelf-avoidance and scroll-aware swap        │
+     │   (automaticView :96) operate for                                       │
+     │   guests. Owned chart replaces the example through the existing Phase   │
+     │   machinery; auth/intake change                                         │
+     │   clears lesson/selection (existing generation guards).                 │
+     │ - Clear labeling (LP08): the caption identifies the example as an       │
+     │   anonymous example, never as the                                       │
+     │   visitor's chart; restore a create-your-chart entry for signed-out     │
+     │   visitors.                                                             │
+     │ - Guest education: widen explain() (:441-458) / speak() gates so        │
+     │   authored lessons + Supertonic                                         │
+     │   voice work without a signed-in owner — AuthoredEducationSession keyed │
+     │   to the existing                                                       │
+     │   GUEST_ROOM namespace; explicit-gesture voice unlock (voiceAllowedRef  │
+     │   :85) preserved; no                                                    │
+     │   inference call ever fires on the landing.                             │
+     │ - Marketing-side lesson choreography: lesson start drives view →        │
+     │   'chart' (Natally's room with her                                      │
+     │   animated character becomes the inset card), auto-revert to atelier on │
+     │   completion/stop/failure;                                              │
+     │   the user's manual choice overrides and cancels auto-revert (existing  │
+     │   manualView semantics).                                                │
+     │ - After every prefab lesson on the landing, append the default upsell   │
+     │   close (see R12-D content);                                            │
+     │   delivered as the same authored text/voice flow, never an inference    │
+     │   call.                                                                 │
+     │                                                                         │
+     │ R12-B RENDERER-TWOPATH — src/components/Astrolabe3D.tsx (+              │
+     │ src/services/chartFocusVisuals.ts only if a constant must move)         │
+     │                                                                         │
+     │ - Two-path inset click in onClick (:531-584): while the chart is inset, │
+     │   raycast before the                                                    │
+     │   activateRef short-circuit (:549). Object hit → onActivate() first     │
+     │   (swap-zoom), then                                                     │
+     │   onToggleComponent(componentId, isMulti) deferred until the pane       │
+     │   transition ends (existing                                             │
+     │   transitionend/layoutKey redraw; immediate under reduced motion).      │
+     │   Empty-space hit → onActivate()                                        │
+     │   only (today's behavior). Foreground behavior unchanged.               │
+     │ - Toroid-clear focus dimming: tag the static structural meshes at       │
+     │   creation (:252-320 — torus                                            │
+     │   bezels, floor disc, guide rings) with a frozen userData structure     │
+     │   flag and exempt them in the                                           │
+     │   dim traverse (:1313-1328) and hover variant (:1330-1353) so the       │
+     │   plum-and-metal frame stays vivid;                                     │
+     │   only representational elements (planet beads/glyphs, sign             │
+     │   baubles/ticks, house spokes/badges/                                   │
+     │   sector fills, aspect lines/tubes, NOW bodies) dim. Correct the        │
+     │   misleading comment at :1313.                                          │
+     │                                                                         │
+     │ R12-C APP-EDUCATION — src/App.tsx, src/components/NatallyChatbot.tsx (+ │
+     │ src/components/ReadingStage.tsx only if the view seam requires)         │
+     │                                                                         │
+     │ - App-side two-path choreography: an inset object click's               │
+     │   educationalRequest (existing                                          │
+     │   handleToggleComponent :459-470 → setEducationalRequest :469) swaps    │
+     │   presentation.view to                                                  │
+     │   'chart' (respecting existing follow/manual-override semantics) and    │
+     │   auto-reverts to 'atelier' on                                          │
+     │   lesson completion/stop/failure/dismiss. Natally remains               │
+     │   visible/animated in the room inset (no new                            │
+     │   sprite machinery — the room pane with AtelierCharacter is the inset   │
+     │   while chart is focused).                                              │
+     │ - Branched pipeline: prefab authored lesson always; then, if            │
+     │   readPaidConversationAccess                                            │
+     │   (src/services/billingAccess.ts, consumed at NatallyChatbot.tsx:842)   │
+     │   grants, extend with a                                                 │
+     │   personalized inferenced interpretation of the selected component(s)   │
+     │   via the existing hosted                                               │
+     │   inference services (src/services/hostedInference.ts,                  │
+     │   inferenceTurn.ts) against the user's                                  │
+     │   natal + current-sky ephemeris, rendered as a chat message +           │
+     │   Supertonic streaming speech with                                      │
+     │   normal inference accounting (R3); unpaid/depleted → prefab only.      │
+     │   Rapid-reselection cancellation,                                       │
+     │   busy/owner/stale guards preserved.                                    │
+     │ - Upsell-close branch: after a prefab response in the app, Natally      │
+     │   attempts the upsell close —                                           │
+     │   default reading/credits close, or, when the immediately preceding     │
+     │   completed turn was a paid                                             │
+     │   inferenced turn with remaining credit balance > 0 (detected from      │
+     │   existing message metadata and                                         │
+     │   paid-access balance), the souvenir close (PDF + persisted interactive │
+     │   "vignette frozen in time"                                             │
+     │   re-experience atelier). Exact detection entities frozen in the R12    │
+     │   entity table.                                                         │
+     │                                                                         │
+     │ R12-D PREFAB-CONTENT — src/services/authoredChartExplanations.ts (+     │
+     │ src/services/authoredEducationSession.ts close phrases)                 │
+     │                                                                         │
+     │ - Extend LessonCore (:21) with required regimes and evolution fields    │
+     │   and complete every                                                    │
+     │   entry (BODIES 14, SIGN_CORES 12, HOUSE_CORES 12, ASPECT_CORES 5) with │
+     │   real authored content: the                                            │
+     │   element's meaning, how different astrological regimes/traditions      │
+     │   regard it, and how its meaning                                        │
+     │   evolved over the ages. Factual register preserved; Gen Z lingo        │
+     │   restoration stays the separate                                        │
+     │   PREFAB-GENZ task. No placeholder content (project rule).              │
+     │ - Author the post-prefab upsell close passages (extending               │
+     │   getAuthoredConversationClose :294-303                                 │
+     │   and the education-session invitation pattern): default                │
+     │   reading/credits close and the souvenir                                │
+     │   close (PDF + persisted interactive "vignette frozen in time"          │
+     │   re-experience atelier). Frozen tone                                   │
+     │   spec: perfect-sales-technique assertiveness, slight cheesiness of     │
+     │   self-awareness, never                                                 │
+     │   self-consciousness; authored text only, no LLM.                       │
+     │                                                                         │
+     │ Entity table + preservation + attestation                               │
+     │                                                                         │
+     │ - Tabulated enumeration of every existing and new entity with exact     │
+     │   name, file:line, role,                                                │
+     │   signature (verified this session: e.g. marketing.tsx:94-101 gates,    │
+     │   Astrolabe3D.tsx:549                                                   │
+     │   short-circuit, :1313-1328 dim traverse,                               │
+     │   authoredChartExplanations.ts:21 LessonCore and                        │
+     │   :294-303 getAuthoredConversationClose,                                │
+     │   authoredEducationSession.ts:13-18 INVITATIONS,                        │
+     │   chartFocusVisuals.ts:2 CHART_FOCUS, ephemeris.ts:223                  │
+     │   calculateNatalChart, NatallyChatbot.tsx:1038-1075                     │
+     │   educational pipeline, presentation.ts view rules, souvenir product    │
+     │   entities in                                                           │
+     │   src/services/souvenir.ts for the frozen "vignette frozen in time"     │
+     │   naming). New entities get                                             │
+     │   frozen names/signatures.                                              │
+     │ - Preservation: R11 outside-inset callouts unchanged;                   │
+     │   drag/zoom/rotation/selection/inert-pane                               │
+     │   accessibility; reduced motion; no autostart audio; no LLM on landing; │
+     │   inference only through                                                │
+     │   existing paid access and accounting; no new providers/config;         │
+     │   purchase/billing flows untouched;                                     │
+     │   souvenir ReadingStage inherits renderer changes without regression.   │
+     │ - R12 attestation paragraph (certifies the target specification, not    │
+     │   implementation) + the staged                                          │
+     │   operator signoff process recorded as the delivery gate.               │
+     │                                                                         │
+     │ Execution steps after plan approval (this round only)                   │
+     │                                                                         │
+     │ 1. cp DOCS/ARCHITECTURE.md DOCS/ARCHITECTURE.md.bak.<YYYYmmdd_HHMMSS>   │
+     │    (house rule — backup beside                                          │
+     │    original, edit original in place).                                   │
+     │ 2. Pin remaining file:line details for the inference entities           │
+     │    (hostedInference.ts,                                                 │
+     │    inferenceTurn.ts, billingAccess.ts) via CodeGraph/grep while         │
+     │    writing.                                                             │
+     │ 3. Write the R12 section into DOCS/ARCHITECTURE.md (stub-free, closed   │
+     │    sets, entity table complete).                                        │
+     │ 4. Record the attempt in the Postgres task_ledger per                   │
+     │    DOCS/TOOLING_CONVENTIONS/task-ledger-postgres.md.                    │
+     │ 5. Commit + push to origin (verify remote readback — standing           │
+     │    instruction). No coding, no                                          │
+     │    CHECKLIST.md changes.                                                │
+     │ 6. HOLD: present R12 summary to the operator for signoff. CHECKLIST     │
+     │    production and coder                                                 │
+     │    dispatch happen only in later instructions, each behind its own      │
+     │    signoff gate.                                                        │
+     │                                                                         │
+     │ Verification                                                            │
+     │                                                                         │
+     │ - grep -c "TBD\|future work\|open issue" DOCS/ARCHITECTURE.md → 0       │
+     │   (stub-free gate).                                                     │
+     │ - Every entity named in R12's prose appears in R12's table; every table │
+     │   file:line resolves                                                    │
+     │   (spot-read during writing; the architecture attestation states this   │
+     │   was checked).                                                         │
+     │ - git status clean after commit; git log origin/master shows the pushed │
+     │   commit hash.                                                          │
+     │ - Operator signoff is the round's terminal gate — recorded, not         │
+     │   presumed.                                                             │
+     ╰─────────────────────────────────────────────────────────────────────────╯
+
+  Thought for 52s (ctrl+o to expand)
+
+● That intent changes the scope meaningfully — the landing function gets
+  subsumed into index.html and marketing.html is deprecated. Let me verify how
+  app.html is produced in the deploy pipeline before finalizing, since the app
+  must keep a stable home.
+
+  Thought for 45s, searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● Now I have the full picture — and your intent maps cleanly onto what the build
+  already does. scripts/build-web.mjs:13-14 already copies the app document to
+  /app.html and the landing document over /index.html; the only remaining
+  divergence is that stage-marketing-overlay.mjs then injects a / →
+  /marketing.html redirect, keeping /marketing.html canonical. Deprecating
+  marketing.html means: the landing document is / (no redirect), /app.html stays
+  the app, and /marketing.html becomes a legacy redirect to /. Native/Tauri
+  keeps booting the app unchanged. Updating the plan with this as a fifth
+  assignment.
+
+● Updated plan
+  ⎿  /plan to preview
+
+❯ note that what i mean is, like now, the bare domain goes to this content we   
+  are dicsussing, like in the screenshots                                       
+
+  Thought for 18s (ctrl+o to expand)
+
+● Exactly — the bare domain serves this content directly, just as in your
+  screenshots; the deprecation only removes the /marketing.html middleman URL so
+  the landing lives canonically at the bare domain. Adding the fifth assignment
+  to the plan.
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+  Thought for 8s (ctrl+o to expand)
+
+● One ordering fix — the assignments should read A→E in sequence.
+
+● Updated plan
+  ⎿  /plan to preview
+
+  Thought for 6s (ctrl+o to expand)
+
+● The plan is complete. It captures everything established this session: the
+  regression root cause, your process ruling (architecture → signoff → checklist
+  → signoff → parallel coders), the branched education pipeline, the highlight
+  correction with the vivid plum-and-metal frame, the upsell close with its two
+  variants, and the marketing.html deprecation with the bare domain serving the
+  landing directly.
+  ⎿  User rejected Claude's plan:
+     ╭─────────────────────────────────────────────────────────────────────────╮
+     │ Plan — R12 architecture: landing hero atelier/inset replica + branched  │
+     │ chart education                                                         │
+     │                                                                         │
+     │ Routing clarification + operator deprecation intent (verified in        │
+     │ source)                                                                 │
+     │                                                                         │
+     │ Today marketing.html is a separate document, and anonymous visitors at  │
+     │ / are redirected to it                                                  │
+     │ (scripts/stage-marketing-overlay.mjs:33-49 head script;                 │
+     │ src/main.tsx:10-13 runtime redirect,                                    │
+     │ both exempting ?app=1 / ?offer=… / Tauri / /app.html). The web build    │
+     │ already copies the app                                                  │
+     │ document to /app.html and the landing document over /index.html         │
+     │ (scripts/build-web.mjs:13-14).                                          │
+     │                                                                         │
+     │ Operator intent (this round): deprecate marketing.html — its function   │
+     │ is subsumed into                                                        │
+     │ index.html. Target end-state: the landing document is served directly   │
+     │ at / and /index.html                                                    │
+     │ (no redirect; canonical landing URL /); /app.html remains the app;      │
+     │ /marketing.html becomes a                                               │
+     │ permanent redirect to / preserving query and hash (legacy inbound       │
+     │ links; the planned TOPUP-LANDING                                        │
+     │ route targets / sections). Repo sources keep index.html as the app      │
+     │ document (Tauri native and                                              │
+     │ dev semantics unchanged via the existing isNative/isAppDocument         │
+     │ guards); only web deploy naming                                         │
+     │ changes, in the coordinator-owned scripts. Signed-in visitors at / see  │
+     │ the landing with their own                                              │
+     │ chart (LC-02 replace rule); the app remains one explicit entry away.    │
+     │                                                                         │
+     │ Context                                                                 │
+     │                                                                         │
+     │ The landing page (marketing.html, live entry for anonymous visitors) is │
+     │ missing the entire inset                                                │
+     │ natal-chart card from its sticky hero. The hero should be a working     │
+     │ replica of the logged-in app                                            │
+     │ atelier: a main view + smaller inset card that swap focus between the   │
+     │ atelier room view and the                                               │
+     │ natal chart view — identical in operation to the app, differing only in │
+     │ that the landing chart uses                                             │
+     │ a clearly labeled anonymous example chart (real chart engine, invented  │
+     │ birth details — LC-02)                                                  │
+     │ until the visitor's own onboarding chart is available.                  │
+     │                                                                         │
+     │ Root cause (verified): src/marketing.tsx hard-gates the chart pane,     │
+     │ inset handle and placement                                              │
+     │ selector on ownedChart (lines 95, 101, 512, 514, 520, 536) — a          │
+     │ sample/guest chart never existed in                                     │
+     │ any committed revision. Signed-out visitors (the entire landing         │
+     │ audience) get room-only + a sign-in                                     │
+     │ caption. This is a requirement change (older MFRAME contracts said "no  │
+     │ example chart"; current                                                 │
+     │ LC-02 and today's operator instruction require it).                     │
+     │                                                                         │
+     │ Also reported: the chart focus highlight dims the toroid structure      │
+     │ (comment at                                                             │
+     │ src/components/Astrolabe3D.tsx:1313: "Dim every non-subject material,   │
+     │ including the metal                                                     │
+     │ frame"). Operator correction: the plum-and-metal frame must remain      │
+     │ vivid and visually                                                      │
+     │ impressive; only the other elements are dimmed.                         │
+     │                                                                         │
+     │ Baseline: master @ e7732b6a, clean tree, version.json 1.32.90532 (v1.32 │
+     │ badge confirmed                                                         │
+     │ bottom-right on both operator screenshots — latest commit, as           │
+     │ instructed).                                                            │
+     │                                                                         │
+     │ Operator process ruling (binding, from AskUserQuestion answers)         │
+     │                                                                         │
+     │ Strict staged pipeline, no phase mixing:                                │
+     │ 1. This turn: write the amended snapshot of the new complete codebase   │
+     │    target as R12 in                                                     │
+     │    DOCS/ARCHITECTURE.md (complete, stub-free, with a tabulated entity   │
+     │    enumeration — no entity/                                             │
+     │    variable/function may be used by coders unless tabulated there).     │
+     │    Commit + push. HOLD for                                              │
+     │    operator presentation and signoff.                                   │
+     │ 2. After signoff (later instruction): produce the fully parallelizable  │
+     │    4-state subagent coder                                               │
+     │    tasklist in CHECKLIST.md → hold for operator signoff again.          │
+     │ 3. Then: parallel coder subagents → semantic evaluation of each         │
+     │    returned generation against its                                      │
+     │    specific 4-state task → send back to the same coder if insufficient. │
+     │                                                                         │
+     │ Operator design rulings (binding)                                       │
+     │                                                                         │
+     │ - Explanation pipeline: the two-path inset click is identical in        │
+     │   operation everywhere, but the                                         │
+     │   content pipeline branches:                                            │
+     │   - index.html / marketing (always) and logged-in unpaid or             │
+     │     credit-depleted users: swap-zoom,                                   │
+     │     then the prefab canned educational explanation — the meaning of the │
+     │     element, how different                                              │
+     │     astrology regimes regard it, and how its meaning evolved over the   │
+     │     ages. No inference.                                                 │
+     │   - Logged-in with sufficient credits: does the same, but also extends  │
+     │     to a personalized                                                   │
+     │     inferenced reading of the selected component(s) in context of the   │
+     │     current sky's ephemeris and                                         │
+     │     the user's natal ephemeris, generated by the hosted API and         │
+     │     rendered dynamically by                                             │
+     │     Supertonic TTS, with normal inference accounting.                   │
+     │ - Zoom: the swap-zoom (existing 240ms inset→main pane scale animation)  │
+     │   is the zoomed animated                                                │
+     │   toggle. No camera fly-to.                                             │
+     │ - Highlight: dim only the other representational elements; the          │
+     │   plum-and-metal toroid frame stays                                     │
+     │   vivid at full opacity.                                                │
+     │ - Post-prefab upsell close: after every prefab canned response, Natally │
+     │   attempts an upsell                                                    │
+     │   close in perfect-sales-technique assertiveness with a slight          │
+     │   cheesiness of self-awareness (not                                     │
+     │   self-consciousness). Two variants:                                    │
+     │   - Default (landing, and logged-in unpaid/credit-depleted): upsell to  │
+     │     paid readings/credits                                               │
+     │     (extends the existing getAuthoredConversationClose /                │
+     │     education-session invitation pattern).                              │
+     │   - Just consumed a paid reading turn with credits remaining (logged-in │
+     │     only): upsell to the                                                │
+     │     PDF + persisted interactive "vignette frozen in time" re-experience │
+     │     atelier (the existing                                               │
+     │     souvenir/keepsake product — no new offer, payment or delivery       │
+     │     machinery).                                                         │
+     │                                                                         │
+     │ R12 architecture content (to be written after approval)                 │
+     │                                                                         │
+     │ New section ## R12 — Landing atelier/inset replica and branched chart   │
+     │ education in                                                            │
+     │ DOCS/ARCHITECTURE.md, following the R11 amendment pattern, with five    │
+     │ independent, parallelizable                                             │
+     │ assignments (disjoint file ownership) and a complete entity table.      │
+     │ Outline:                                                                │
+     │                                                                         │
+     │ R12-A MARKETING-REPLICA — src/marketing.tsx, src/marketing.css          │
+     │                                                                         │
+     │ - New frozen entity EXAMPLE_CHART_INPUT: NatalChartInput (invented      │
+     │   example birth details — e.g.                                          │
+     │   name "Aurelia (example)", 1997-11-08 19:05, Toronto 43.6532/-79.3832, │
+     │   tz −5, houseSystem 'W') and                                           │
+     │   loadExampleChart() using the existing local calculateNatalChart       │
+     │   (vendored Swiss Ephemeris                                             │
+     │   WASM, no network/auth). Frozen values in the entity table; coders do  │
+     │   not invent.                                                           │
+     │ - displayedChart = ownedChart ?? exampleChart replaces every ownedChart │
+     │   hard gate (pane                                                       │
+     │   hidden, Astrolabe3D mount, inset handle, placement select, view       │
+     │   derivation at :101) so the                                            │
+     │   inset pair, drag/persist/shelf-avoidance and scroll-aware swap        │
+     │   (automaticView :96) operate for                                       │
+     │   guests. Owned chart replaces the example through the existing Phase   │
+     │   machinery; auth/intake change                                         │
+     │   clears lesson/selection (existing generation guards).                 │
+     │ - Clear labeling (LP08): the caption identifies the example as an       │
+     │   anonymous example, never as the                                       │
+     │   visitor's chart; restore a create-your-chart entry for signed-out     │
+     │   visitors.                                                             │
+     │ - Guest education: widen explain() (:441-458) / speak() gates so        │
+     │   authored lessons + Supertonic                                         │
+     │   voice work without a signed-in owner — AuthoredEducationSession keyed │
+     │   to the existing                                                       │
+     │   GUEST_ROOM namespace; explicit-gesture voice unlock (voiceAllowedRef  │
+     │   :85) preserved; no                                                    │
+     │   inference call ever fires on the landing.                             │
+     │ - Marketing-side lesson choreography: lesson start drives view →        │
+     │   'chart' (Natally's room with her                                      │
+     │   animated character becomes the inset card), auto-revert to atelier on │
+     │   completion/stop/failure;                                              │
+     │   the user's manual choice overrides and cancels auto-revert (existing  │
+     │   manualView semantics).                                                │
+     │ - After every prefab lesson on the landing, append the default upsell   │
+     │   close (see R12-D content);                                            │
+     │   delivered as the same authored text/voice flow, never an inference    │
+     │   call.                                                                 │
+     │                                                                         │
+     │ R12-B RENDERER-TWOPATH — src/components/Astrolabe3D.tsx (+              │
+     │ src/services/chartFocusVisuals.ts only if a constant must move)         │
+     │                                                                         │
+     │ - Two-path inset click in onClick (:531-584): while the chart is inset, │
+     │   raycast before the                                                    │
+     │   activateRef short-circuit (:549). Object hit → onActivate() first     │
+     │   (swap-zoom), then                                                     │
+     │   onToggleComponent(componentId, isMulti) deferred until the pane       │
+     │   transition ends (existing                                             │
+     │   transitionend/layoutKey redraw; immediate under reduced motion).      │
+     │   Empty-space hit → onActivate()                                        │
+     │   only (today's behavior). Foreground behavior unchanged.               │
+     │ - Toroid-clear focus dimming: tag the static structural meshes at       │
+     │   creation (:252-320 — torus                                            │
+     │   bezels, floor disc, guide rings) with a frozen userData structure     │
+     │   flag and exempt them in the                                           │
+     │   dim traverse (:1313-1328) and hover variant (:1330-1353) so the       │
+     │   plum-and-metal frame stays vivid;                                     │
+     │   only representational elements (planet beads/glyphs, sign             │
+     │   baubles/ticks, house spokes/badges/                                   │
+     │   sector fills, aspect lines/tubes, NOW bodies) dim. Correct the        │
+     │   misleading comment at :1313.                                          │
+     │                                                                         │
+     │ R12-C APP-EDUCATION — src/App.tsx, src/components/NatallyChatbot.tsx (+ │
+     │ src/components/ReadingStage.tsx only if the view seam requires)         │
+     │                                                                         │
+     │ - App-side two-path choreography: an inset object click's               │
+     │   educationalRequest (existing                                          │
+     │   handleToggleComponent :459-470 → setEducationalRequest :469) swaps    │
+     │   presentation.view to                                                  │
+     │   'chart' (respecting existing follow/manual-override semantics) and    │
+     │   auto-reverts to 'atelier' on                                          │
+     │   lesson completion/stop/failure/dismiss. Natally remains               │
+     │   visible/animated in the room inset (no new                            │
+     │   sprite machinery — the room pane with AtelierCharacter is the inset   │
+     │   while chart is focused).                                              │
+     │ - Branched pipeline: prefab authored lesson always; then, if            │
+     │   readPaidConversationAccess                                            │
+     │   (src/services/billingAccess.ts, consumed at NatallyChatbot.tsx:842)   │
+     │   grants, extend with a                                                 │
+     │   personalized inferenced interpretation of the selected component(s)   │
+     │   via the existing hosted                                               │
+     │   inference services (src/services/hostedInference.ts,                  │
+     │   inferenceTurn.ts) against the user's                                  │
+     │   natal + current-sky ephemeris, rendered as a chat message +           │
+     │   Supertonic streaming speech with                                      │
+     │   normal inference accounting (R3); unpaid/depleted → prefab only.      │
+     │   Rapid-reselection cancellation,                                       │
+     │   busy/owner/stale guards preserved.                                    │
+     │ - Upsell-close branch: after a prefab response in the app, Natally      │
+     │   attempts the upsell close —                                           │
+     │   default reading/credits close, or, when the immediately preceding     │
+     │   completed turn was a paid                                             │
+     │   inferenced turn with remaining credit balance > 0 (detected from      │
+     │   existing message metadata and                                         │
+     │   paid-access balance), the souvenir close (PDF + persisted interactive │
+     │   "vignette frozen in time"                                             │
+     │   re-experience atelier). Exact detection entities frozen in the R12    │
+     │   entity table.                                                         │
+     │                                                                         │
+     │ R12-D PREFAB-CONTENT — src/services/authoredChartExplanations.ts (+     │
+     │ src/services/authoredEducationSession.ts close phrases)                 │
+     │                                                                         │
+     │ - Extend LessonCore (:21) with required regimes and evolution fields    │
+     │   and complete every                                                    │
+     │   entry (BODIES 14, SIGN_CORES 12, HOUSE_CORES 12, ASPECT_CORES 5) with │
+     │   real authored content: the                                            │
+     │   element's meaning, how different astrological regimes/traditions      │
+     │   regard it, and how its meaning                                        │
+     │   evolved over the ages. Factual register preserved; Gen Z lingo        │
+     │   restoration stays the separate                                        │
+     │   PREFAB-GENZ task. No placeholder content (project rule).              │
+     │ - Author the post-prefab upsell close passages (extending               │
+     │   getAuthoredConversationClose :294-303                                 │
+     │   and the education-session invitation pattern): default                │
+     │   reading/credits close and the souvenir                                │
+     │   close (PDF + persisted interactive "vignette frozen in time"          │
+     │   re-experience atelier). Frozen tone                                   │
+     │   spec: perfect-sales-technique assertiveness, slight cheesiness of     │
+     │   self-awareness, never                                                 │
+     │   self-consciousness; authored text only, no LLM.                       │
+     │                                                                         │
+     │ R12-E ENTRY-UNIFY — scripts/build-web.mjs,                              │
+     │ scripts/stage-marketing-overlay.mjs, scripts/pwa-build.mjs              │
+     │                                                                         │
+     │ - Serve the landing document directly at / and /index.html (no          │
+     │   redirect): the existing                                               │
+     │   build-web.mjs:13-14 copy (app → /app.html, landing → /index.html) is  │
+     │   preserved; the                                                        │
+     │   staged-index head redirect (stage-marketing-overlay.mjs:33-49) is     │
+     │   removed; instead a permanent                                          │
+     │   redirect document is emitted at /marketing.html → / preserving query  │
+     │   and hash (legacy links).                                              │
+     │ - Bare-domain behavior for visitors is unchanged in substance — the     │
+     │   content under discussion, as in                                       │
+     │   the operator screenshots, served at / (now the canonical landing URL, │
+     │   keeping the                                                           │
+     │   natally-version badge and PWA shell routes consistent in              │
+     │   pwa-build.mjs:4,47).                                                  │
+     │ - Repo sources unchanged in role: index.html stays the app document for │
+     │   Tauri native and dev                                                  │
+     │   (isNative / isAppDocument guards in src/main.tsx:3-13); only web      │
+     │   deploy naming changes.                                                │
+     │                                                                         │
+     │ Entity table + preservation + attestation                               │
+     │                                                                         │
+     │ - Tabulated enumeration of every existing and new entity with exact     │
+     │   name, file:line, role,                                                │
+     │   signature (verified this session: e.g. marketing.tsx:94-101 gates,    │
+     │   Astrolabe3D.tsx:549                                                   │
+     │   short-circuit, :1313-1328 dim traverse,                               │
+     │   authoredChartExplanations.ts:21 LessonCore and                        │
+     │   :294-303 getAuthoredConversationClose,                                │
+     │   authoredEducationSession.ts:13-18 INVITATIONS,                        │
+     │   chartFocusVisuals.ts:2 CHART_FOCUS, ephemeris.ts:223                  │
+     │   calculateNatalChart, NatallyChatbot.tsx:1038-1075                     │
+     │   educational pipeline, presentation.ts view rules, souvenir product    │
+     │   entities in                                                           │
+     │   src/services/souvenir.ts for the frozen "vignette frozen in time"     │
+     │   naming, and the entry-routing                                         │
+     │   entities scripts/build-web.mjs:8-15,                                  │
+     │   scripts/stage-marketing-overlay.mjs:33-49,                            │
+     │   scripts/pwa-build.mjs:4,47, src/main.tsx:3-13). New entities get      │
+     │   frozen names/signatures.                                              │
+     │ - Preservation: R11 outside-inset callouts unchanged;                   │
+     │   drag/zoom/rotation/selection/inert-pane                               │
+     │   accessibility; reduced motion; no autostart audio; no LLM on landing; │
+     │   inference only through                                                │
+     │   existing paid access and accounting; no new providers/config;         │
+     │   purchase/billing flows untouched;                                     │
+     │   souvenir ReadingStage inherits renderer changes without regression.   │
+     │ - R12 attestation paragraph (certifies the target specification, not    │
+     │   implementation) + the staged                                          │
+     │   operator signoff process recorded as the delivery gate.               │
+     │                                                                         │
+     │ Execution steps after plan approval (this round only)                   │
+     │                                                                         │
+     │ 1. cp DOCS/ARCHITECTURE.md DOCS/ARCHITECTURE.md.bak.<YYYYmmdd_HHMMSS>   │
+     │    (house rule — backup beside                                          │
+     │    original, edit original in place).                                   │
+     │ 2. Pin remaining file:line details for the inference entities           │
+     │    (hostedInference.ts,                                                 │
+     │    inferenceTurn.ts, billingAccess.ts) via CodeGraph/grep while         │
+     │    writing.                                                             │
+     │ 3. Write the R12 section into DOCS/ARCHITECTURE.md (stub-free, closed   │
+     │    sets, entity table complete).                                        │
+     │ 4. Record the attempt in the Postgres task_ledger per                   │
+     │    DOCS/TOOLING_CONVENTIONS/task-ledger-postgres.md.                    │
+     │ 5. Commit + push to origin (verify remote readback — standing           │
+     │    instruction). No coding, no                                          │
+     │    CHECKLIST.md changes.                                                │
+     │ 6. HOLD: present R12 summary to the operator for signoff. CHECKLIST     │
+     │    production and coder                                                 │
+     │    dispatch happen only in later instructions, each behind its own      │
+     │    signoff gate.                                                        │
+     │                                                                         │
+     │ Verification                                                            │
+     │                                                                         │
+     │ - grep -c "TBD\|future work\|open issue" DOCS/ARCHITECTURE.md → 0       │
+     │   (stub-free gate).                                                     │
+     │ - Every entity named in R12's prose appears in R12's table; every table │
+     │   file:line resolves                                                    │
+     │   (spot-read during writing; the architecture attestation states this   │
+     │   was checked).                                                         │
+     │ - git status clean after commit; git log origin/master shows the pushed │
+     │   commit hash.                                                          │
+     │ - Operator signoff is the round's terminal gate — recorded, not         │
+     │   presumed.                                                             │
+     ╰─────────────────────────────────────────────────────────────────────────╯
+
+✻ Sautéed for 7m 4s · done 1:30 AM
+
+❯ actually, there should be an explicit landing page url, becausde a            
+  logged-in-by-cookie user will not see the lsanding pasge and certwain         
+  situations want to force a logged in user to the labding paged                
+
+  Thought for 37s (ctrl+o to expand)
+
+● Understood — that settles the final routing contract: the bare domain
+  dispatches by auth state (anonymous → landing content, as in your screenshots;
+  logged-in-by-cookie → the app), while an explicit landing URL remains
+  permanently available to force even authenticated users onto the landing page
+  (Top Up routing, marketing links). /marketing.html survives as exactly that
+  forced-landing URL rather than being deleted. Updating the plan.
+
+● Updated plan
+  ⎿  /plan to preview
+
+❯ but that should bt https://natally.robin.mba/landing                          
+
+  Thought for 46s (ctrl+o to expand)
+
+● /landing it is — the explicit forced-landing URL becomes
+  https://natally.robin.mba/landing, with legacy /marketing.html redirecting
+  there. Updating the contract.
+
+● Updated plan
+  ⎿  /plan to preview
+
+❯ which should be aliased also at https://natally.robin.mba/landing.html noite  
+  that ALL of these config matters must be dynamically confgigured per build in 
+  .env                                                                          
+  Thought for 12s (ctrl+o to expand)
+
+● Two additions locked in: /landing.html aliases /landing, and all entry-routing
+  config becomes per-build .env configuration (no hardcoded path literals) —
+  following the existing annotated-env pattern from R8/R9. Updating the plan's
+  routing section and R12-E with the frozen env keys.
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+  Thought for 8s (ctrl+o to expand)
+
+● The plan now incorporates every ruling from this session. Presenting it for
+  approval.
+  ⎿  User rejected Claude's plan:
+     ╭─────────────────────────────────────────────────────────────────────────╮
+     │ Plan — R12 architecture: landing hero atelier/inset replica + branched  │
+     │ chart education                                                         │
+     │                                                                         │
+     │ Routing clarification + operator entry contract (verified in source,    │
+     │ refined by operator)                                                    │
+     │                                                                         │
+     │ Today marketing.html is a separate document, and anonymous visitors at  │
+     │ / are redirected to it                                                  │
+     │ (scripts/stage-marketing-overlay.mjs:33-49 head script;                 │
+     │ src/main.tsx:10-13 runtime redirect,                                    │
+     │ both exempting ?app=1 / ?offer=… / Tauri / /app.html). The web build    │
+     │ already copies the app                                                  │
+     │ document to /app.html and the landing document over /index.html         │
+     │ (scripts/build-web.mjs:13-14).                                          │
+     │                                                                         │
+     │ Operator intent (final): the landing function is subsumed into          │
+     │ index.html so the bare                                                  │
+     │ domain serves this content for visitors — but an explicit landing URL   │
+     │ must remain at                                                          │
+     │ https://natally.robin.mba/landing, because a logged-in-by-cookie user   │
+     │ is not shown the                                                        │
+     │ landing at the bare domain and certain situations (Top Up routing,      │
+     │ marketing links) must be able to                                        │
+     │ force a signed-in user onto the landing page. Target entry contract:    │
+     │                                                                         │
+     │ URL: / , /index.html                                                    │
+     │ Anonymous visitor: landing (example-chart hero)                         │
+     │ Authenticated (cookie/session): app (atelier)                           │
+     │ ────────────────────────────────────────                                │
+     │ URL: /landing and alias /landing.html                                   │
+     │ Anonymous visitor: always landing — explicit forced-landing URL (own    │
+     │ chart per                                                               │
+     │ LC-02, explanations for TOPUP-LANDING)                                  │
+     │ Authenticated (cookie/session): same                                    │
+     │ ────────────────────────────────────────                                │
+     │ URL: /app.html, ?app=1, ?offer=reading|conversation, Tauri native       │
+     │ Anonymous visitor: always app                                           │
+     │ Authenticated (cookie/session): always app                              │
+     │ ────────────────────────────────────────                                │
+     │ URL: /marketing.html (legacy)                                           │
+     │ Anonymous visitor: permanent redirect to /landing (query + hash         │
+     │ preserved)                                                              │
+     │ Authenticated (cookie/session): same                                    │
+     │                                                                         │
+     │ All entry-routing configuration is per-build .env configuration, never  │
+     │ hardcoded literals.                                                     │
+     │ Frozen annotated keys (schema + defaults added to .env.example;         │
+     │ effective .env gains only the                                           │
+     │ new keys, existing values untouched): VITE_LANDING_PATH=/landing,       │
+     │ VITE_LANDING_PATH_ALIAS=/landing.html, VITE_APP_PATH=/app.html,         │
+     │ VITE_LEGACY_PATH_REDIRECTS=/marketing.html:/landing. The unified        │
+     │ dispatcher, the web build/deploy                                        │
+     │ scripts and the PWA shell routes all consume these settings per build.  │
+     │                                                                         │
+     │ One unified document with a pathname + auth-state dispatcher replaces   │
+     │ the copy-and-redirect dance;                                            │
+     │ sign-in at the bare domain transitions into the app, sign-in at         │
+     │ /landing stays on the landing.                                          │
+     │ Native/Tauri boots the app unchanged. /landing is served as             │
+     │ landing.html with host clean-URL                                        │
+     │ mapping (surge clean URLs; Netlify redirect for the temporary host),    │
+     │ plus the PWA shell route.                                               │
+     │                                                                         │
+     │ Context                                                                 │
+     │                                                                         │
+     │ The landing page (marketing.html, live entry for anonymous visitors) is │
+     │ missing the entire inset                                                │
+     │ natal-chart card from its sticky hero. The hero should be a working     │
+     │ replica of the logged-in app                                            │
+     │ atelier: a main view + smaller inset card that swap focus between the   │
+     │ atelier room view and the                                               │
+     │ natal chart view — identical in operation to the app, differing only in │
+     │ that the landing chart uses                                             │
+     │ a clearly labeled anonymous example chart (real chart engine, invented  │
+     │ birth details — LC-02)                                                  │
+     │ until the visitor's own onboarding chart is available.                  │
+     │                                                                         │
+     │ Root cause (verified): src/marketing.tsx hard-gates the chart pane,     │
+     │ inset handle and placement                                              │
+     │ selector on ownedChart (lines 95, 101, 512, 514, 520, 536) — a          │
+     │ sample/guest chart never existed in                                     │
+     │ any committed revision. Signed-out visitors (the entire landing         │
+     │ audience) get room-only + a sign-in                                     │
+     │ caption. This is a requirement change (older MFRAME contracts said "no  │
+     │ example chart"; current                                                 │
+     │ LC-02 and today's operator instruction require it).                     │
+     │                                                                         │
+     │ Also reported: the chart focus highlight dims the toroid structure      │
+     │ (comment at                                                             │
+     │ src/components/Astrolabe3D.tsx:1313: "Dim every non-subject material,   │
+     │ including the metal                                                     │
+     │ frame"). Operator correction: the plum-and-metal frame must remain      │
+     │ vivid and visually                                                      │
+     │ impressive; only the other elements are dimmed.                         │
+     │                                                                         │
+     │ Baseline: master @ e7732b6a, clean tree, version.json 1.32.90532 (v1.32 │
+     │ badge confirmed                                                         │
+     │ bottom-right on both operator screenshots — latest commit, as           │
+     │ instructed).                                                            │
+     │                                                                         │
+     │ Operator process ruling (binding, from AskUserQuestion answers)         │
+     │                                                                         │
+     │ Strict staged pipeline, no phase mixing:                                │
+     │ 1. This turn: write the amended snapshot of the new complete codebase   │
+     │    target as R12 in                                                     │
+     │    DOCS/ARCHITECTURE.md (complete, stub-free, with a tabulated entity   │
+     │    enumeration — no entity/                                             │
+     │    variable/function may be used by coders unless tabulated there).     │
+     │    Commit + push. HOLD for                                              │
+     │    operator presentation and signoff.                                   │
+     │ 2. After signoff (later instruction): produce the fully parallelizable  │
+     │    4-state subagent coder                                               │
+     │    tasklist in CHECKLIST.md → hold for operator signoff again.          │
+     │ 3. Then: parallel coder subagents → semantic evaluation of each         │
+     │    returned generation against its                                      │
+     │    specific 4-state task → send back to the same coder if insufficient. │
+     │                                                                         │
+     │ Operator design rulings (binding)                                       │
+     │                                                                         │
+     │ - Explanation pipeline: the two-path inset click is identical in        │
+     │   operation everywhere, but the                                         │
+     │   content pipeline branches:                                            │
+     │   - index.html / marketing (always) and logged-in unpaid or             │
+     │     credit-depleted users: swap-zoom,                                   │
+     │     then the prefab canned educational explanation — the meaning of the │
+     │     element, how different                                              │
+     │     astrology regimes regard it, and how its meaning evolved over the   │
+     │     ages. No inference.                                                 │
+     │   - Logged-in with sufficient credits: does the same, but also extends  │
+     │     to a personalized                                                   │
+     │     inferenced reading of the selected component(s) in context of the   │
+     │     current sky's ephemeris and                                         │
+     │     the user's natal ephemeris, generated by the hosted API and         │
+     │     rendered dynamically by                                             │
+     │     Supertonic TTS, with normal inference accounting.                   │
+     │ - Zoom: the swap-zoom (existing 240ms inset→main pane scale animation)  │
+     │   is the zoomed animated                                                │
+     │   toggle. No camera fly-to.                                             │
+     │ - Highlight: dim only the other representational elements; the          │
+     │   plum-and-metal toroid frame stays                                     │
+     │   vivid at full opacity.                                                │
+     │ - Post-prefab upsell close: after every prefab canned response, Natally │
+     │   attempts an upsell                                                    │
+     │   close in perfect-sales-technique assertiveness with a slight          │
+     │   cheesiness of self-awareness (not                                     │
+     │   self-consciousness). Two variants:                                    │
+     │   - Default (landing, and logged-in unpaid/credit-depleted): upsell to  │
+     │     paid readings/credits                                               │
+     │     (extends the existing getAuthoredConversationClose /                │
+     │     education-session invitation pattern).                              │
+     │   - Just consumed a paid reading turn with credits remaining (logged-in │
+     │     only): upsell to the                                                │
+     │     PDF + persisted interactive "vignette frozen in time" re-experience │
+     │     atelier (the existing                                               │
+     │     souvenir/keepsake product — no new offer, payment or delivery       │
+     │     machinery).                                                         │
+     │                                                                         │
+     │ R12 architecture content (to be written after approval)                 │
+     │                                                                         │
+     │ New section ## R12 — Landing atelier/inset replica and branched chart   │
+     │ education in                                                            │
+     │ DOCS/ARCHITECTURE.md, following the R11 amendment pattern, with five    │
+     │ independent, parallelizable                                             │
+     │ assignments (disjoint file ownership) and a complete entity table.      │
+     │ Outline:                                                                │
+     │                                                                         │
+     │ R12-A MARKETING-REPLICA — src/marketing.tsx, src/marketing.css          │
+     │                                                                         │
+     │ - New frozen entity EXAMPLE_CHART_INPUT: NatalChartInput (invented      │
+     │   example birth details — e.g.                                          │
+     │   name "Aurelia (example)", 1997-11-08 19:05, Toronto 43.6532/-79.3832, │
+     │   tz −5, houseSystem 'W') and                                           │
+     │   loadExampleChart() using the existing local calculateNatalChart       │
+     │   (vendored Swiss Ephemeris                                             │
+     │   WASM, no network/auth). Frozen values in the entity table; coders do  │
+     │   not invent.                                                           │
+     │ - displayedChart = ownedChart ?? exampleChart replaces every ownedChart │
+     │   hard gate (pane                                                       │
+     │   hidden, Astrolabe3D mount, inset handle, placement select, view       │
+     │   derivation at :101) so the                                            │
+     │   inset pair, drag/persist/shelf-avoidance and scroll-aware swap        │
+     │   (automaticView :96) operate for                                       │
+     │   guests. Owned chart replaces the example through the existing Phase   │
+     │   machinery; auth/intake change                                         │
+     │   clears lesson/selection (existing generation guards).                 │
+     │ - Clear labeling (LP08): the caption identifies the example as an       │
+     │   anonymous example, never as the                                       │
+     │   visitor's chart; restore a create-your-chart entry for signed-out     │
+     │   visitors.                                                             │
+     │ - Guest education: widen explain() (:441-458) / speak() gates so        │
+     │   authored lessons + Supertonic                                         │
+     │   voice work without a signed-in owner — AuthoredEducationSession keyed │
+     │   to the existing                                                       │
+     │   GUEST_ROOM namespace; explicit-gesture voice unlock (voiceAllowedRef  │
+     │   :85) preserved; no                                                    │
+     │   inference call ever fires on the landing.                             │
+     │ - Marketing-side lesson choreography: lesson start drives view →        │
+     │   'chart' (Natally's room with her                                      │
+     │   animated character becomes the inset card), auto-revert to atelier on │
+     │   completion/stop/failure;                                              │
+     │   the user's manual choice overrides and cancels auto-revert (existing  │
+     │   manualView semantics).                                                │
+     │ - After every prefab lesson on the landing, append the default upsell   │
+     │   close (see R12-D content);                                            │
+     │   delivered as the same authored text/voice flow, never an inference    │
+     │   call.                                                                 │
+     │                                                                         │
+     │ R12-B RENDERER-TWOPATH — src/components/Astrolabe3D.tsx (+              │
+     │ src/services/chartFocusVisuals.ts only if a constant must move)         │
+     │                                                                         │
+     │ - Two-path inset click in onClick (:531-584): while the chart is inset, │
+     │   raycast before the                                                    │
+     │   activateRef short-circuit (:549). Object hit → onActivate() first     │
+     │   (swap-zoom), then                                                     │
+     │   onToggleComponent(componentId, isMulti) deferred until the pane       │
+     │   transition ends (existing                                             │
+     │   transitionend/layoutKey redraw; immediate under reduced motion).      │
+     │   Empty-space hit → onActivate()                                        │
+     │   only (today's behavior). Foreground behavior unchanged.               │
+     │ - Toroid-clear focus dimming: tag the static structural meshes at       │
+     │   creation (:252-320 — torus                                            │
+     │   bezels, floor disc, guide rings) with a frozen userData structure     │
+     │   flag and exempt them in the                                           │
+     │   dim traverse (:1313-1328) and hover variant (:1330-1353) so the       │
+     │   plum-and-metal frame stays vivid;                                     │
+     │   only representational elements (planet beads/glyphs, sign             │
+     │   baubles/ticks, house spokes/badges/                                   │
+     │   sector fills, aspect lines/tubes, NOW bodies) dim. Correct the        │
+     │   misleading comment at :1313.                                          │
+     │                                                                         │
+     │ R12-C APP-EDUCATION — src/App.tsx, src/components/NatallyChatbot.tsx (+ │
+     │ src/components/ReadingStage.tsx only if the view seam requires)         │
+     │                                                                         │
+     │ - App-side two-path choreography: an inset object click's               │
+     │   educationalRequest (existing                                          │
+     │   handleToggleComponent :459-470 → setEducationalRequest :469) swaps    │
+     │   presentation.view to                                                  │
+     │   'chart' (respecting existing follow/manual-override semantics) and    │
+     │   auto-reverts to 'atelier' on                                          │
+     │   lesson completion/stop/failure/dismiss. Natally remains               │
+     │   visible/animated in the room inset (no new                            │
+     │   sprite machinery — the room pane with AtelierCharacter is the inset   │
+     │   while chart is focused).                                              │
+     │ - Branched pipeline: prefab authored lesson always; then, if            │
+     │   readPaidConversationAccess                                            │
+     │   (src/services/billingAccess.ts, consumed at NatallyChatbot.tsx:842)   │
+     │   grants, extend with a                                                 │
+     │   personalized inferenced interpretation of the selected component(s)   │
+     │   via the existing hosted                                               │
+     │   inference services (src/services/hostedInference.ts,                  │
+     │   inferenceTurn.ts) against the user's                                  │
+     │   natal + current-sky ephemeris, rendered as a chat message +           │
+     │   Supertonic streaming speech with                                      │
+     │   normal inference accounting (R3); unpaid/depleted → prefab only.      │
+     │   Rapid-reselection cancellation,                                       │
+     │   busy/owner/stale guards preserved.                                    │
+     │ - Upsell-close branch: after a prefab response in the app, Natally      │
+     │   attempts the upsell close —                                           │
+     │   default reading/credits close, or, when the immediately preceding     │
+     │   completed turn was a paid                                             │
+     │   inferenced turn with remaining credit balance > 0 (detected from      │
+     │   existing message metadata and                                         │
+     │   paid-access balance), the souvenir close (PDF + persisted interactive │
+     │   "vignette frozen in time"                                             │
+     │   re-experience atelier). Exact detection entities frozen in the R12    │
+     │   entity table.                                                         │
+     │                                                                         │
+     │ R12-D PREFAB-CONTENT — src/services/authoredChartExplanations.ts (+     │
+     │ src/services/authoredEducationSession.ts close phrases)                 │
+     │                                                                         │
+     │ - Extend LessonCore (:21) with required regimes and evolution fields    │
+     │   and complete every                                                    │
+     │   entry (BODIES 14, SIGN_CORES 12, HOUSE_CORES 12, ASPECT_CORES 5) with │
+     │   real authored content: the                                            │
+     │   element's meaning, how different astrological regimes/traditions      │
+     │   regard it, and how its meaning                                        │
+     │   evolved over the ages. Factual register preserved; Gen Z lingo        │
+     │   restoration stays the separate                                        │
+     │   PREFAB-GENZ task. No placeholder content (project rule).              │
+     │ - Author the post-prefab upsell close passages (extending               │
+     │   getAuthoredConversationClose :294-303                                 │
+     │   and the education-session invitation pattern): default                │
+     │   reading/credits close and the souvenir                                │
+     │   close (PDF + persisted interactive "vignette frozen in time"          │
+     │   re-experience atelier). Frozen tone                                   │
+     │   spec: perfect-sales-technique assertiveness, slight cheesiness of     │
+     │   self-awareness, never                                                 │
+     │   self-consciousness; authored text only, no LLM.                       │
+     │                                                                         │
+     │ R12-E ENTRY-UNIFY — unified entry document + env-driven routing —       │
+     │ src/main.tsx (or new                                                    │
+     │                                                                         │
+     │ src/entry.tsx, name frozen in the entity table), scripts/build-web.mjs, │
+     │ scripts/stage-marketing-overlay.mjs, scripts/pwa-build.mjs,             │
+     │ .env.example                                                            │
+     │ - One unified document dispatches by pathname + auth state per the      │
+     │   entry contract table above:                                           │
+     │   Tauri native / /app.html / ?app=1 / ?offer=… → app immediately;       │
+     │   /landing (+ alias) →                                                  │
+     │   always landing; / → landing while auth resolves, then app for         │
+     │   authenticated sessions,                                               │
+     │   landing for anonymous. Landing/app mounts via dynamic import (bundle  │
+     │   split preserved).                                                     │
+     │ - All paths/aliases/redirects come from the frozen annotated env keys   │
+     │   (VITE_LANDING_PATH, VITE_LANDING_PATH_ALIAS, VITE_APP_PATH,           │
+     │   VITE_LEGACY_PATH_REDIRECTS)                                           │
+     │   consumed by the dispatcher, build/deploy scripts and PWA shell routes │
+     │   — no hardcoded routing                                                │
+     │   literals; .env.example gains schema/defaults, effective .env gains    │
+     │   only the new keys.                                                    │
+     │ - Web deploy: unified document emitted as index.html, app.html,         │
+     │   landing.html; legacy                                                  │
+     │   /marketing.html becomes a generated permanent redirect to /landing    │
+     │   (query + hash preserved);                                             │
+     │   the staged-index head redirect (stage-marketing-overlay.mjs:33-49) is │
+     │   removed;                                                              │
+     │   build-web.mjs:8-15 mount/hash checks updated to the unified document; │
+     │   pwa-build.mjs:4,47                                                    │
+     │   shell routes gain /landing. Tauri native and dev boot the app through │
+     │   the existing                                                          │
+     │   isNative/isAppDocument guards (src/main.tsx:3-13).                    │
+     │                                                                         │
+     │ Entity table + preservation + attestation                               │
+     │                                                                         │
+     │ - Tabulated enumeration of every existing and new entity with exact     │
+     │   name, file:line, role,                                                │
+     │   signature (verified this session: e.g. marketing.tsx:94-101 gates,    │
+     │   Astrolabe3D.tsx:549                                                   │
+     │   short-circuit, :1313-1328 dim traverse,                               │
+     │   authoredChartExplanations.ts:21 LessonCore and                        │
+     │   :294-303 getAuthoredConversationClose,                                │
+     │   authoredEducationSession.ts:13-18 INVITATIONS,                        │
+     │   chartFocusVisuals.ts:2 CHART_FOCUS, ephemeris.ts:223                  │
+     │   calculateNatalChart, NatallyChatbot.tsx:1038-1075                     │
+     │   educational pipeline, presentation.ts view rules, souvenir product    │
+     │   entities in                                                           │
+     │   src/services/souvenir.ts for the frozen "vignette frozen in time"     │
+     │   naming, and the entry-routing                                         │
+     │   entities scripts/build-web.mjs:8-15,                                  │
+     │   scripts/stage-marketing-overlay.mjs:33-49,                            │
+     │   scripts/pwa-build.mjs:4,47, src/main.tsx:3-13). New entities get      │
+     │   frozen names/signatures.                                              │
+     │ - Preservation: R11 outside-inset callouts unchanged;                   │
+     │   drag/zoom/rotation/selection/inert-pane                               │
+     │   accessibility; reduced motion; no autostart audio; no LLM on landing; │
+     │   inference only through                                                │
+     │   existing paid access and accounting; no new providers/config;         │
+     │   purchase/billing flows untouched;                                     │
+     │   souvenir ReadingStage inherits renderer changes without regression.   │
+     │ - R12 attestation paragraph (certifies the target specification, not    │
+     │   implementation) + the staged                                          │
+     │   operator signoff process recorded as the delivery gate.               │
+     │                                                                         │
+     │ Execution steps after plan approval (this round only)                   │
+     │                                                                         │
+     │ 1. cp DOCS/ARCHITECTURE.md DOCS/ARCHITECTURE.md.bak.<YYYYmmdd_HHMMSS>   │
+     │    (house rule — backup beside                                          │
+     │    original, edit original in place).                                   │
+     │ 2. Pin remaining file:line details for the inference entities           │
+     │    (hostedInference.ts,                                                 │
+     │    inferenceTurn.ts, billingAccess.ts) via CodeGraph/grep while         │
+     │    writing.                                                             │
+     │ 3. Write the R12 section into DOCS/ARCHITECTURE.md (stub-free, closed   │
+     │    sets, entity table complete).                                        │
+     │ 4. Record the attempt in the Postgres task_ledger per                   │
+     │    DOCS/TOOLING_CONVENTIONS/task-ledger-postgres.md.                    │
+     │ 5. Commit + push to origin (verify remote readback — standing           │
+     │    instruction). No coding, no                                          │
+     │    CHECKLIST.md changes.                                                │
+     │ 6. HOLD: present R12 summary to the operator for signoff. CHECKLIST     │
+     │    production and coder                                                 │
+     │    dispatch happen only in later instructions, each behind its own      │
+     │    signoff gate.                                                        │
+     │                                                                         │
+     │ Verification                                                            │
+     │                                                                         │
+     │ - grep -c "TBD\|future work\|open issue" DOCS/ARCHITECTURE.md → 0       │
+     │   (stub-free gate).                                                     │
+     │ - Every entity named in R12's prose appears in R12's table; every table │
+     │   file:line resolves                                                    │
+     │   (spot-read during writing; the architecture attestation states this   │
+     │   was checked).                                                         │
+     │ - git status clean after commit; git log origin/master shows the pushed │
+     │   commit hash.                                                          │
+     │ - Operator signoff is the round's terminal gate — recorded, not         │
+     │   presumed.                                                             │
+     ╰─────────────────────────────────────────────────────────────────────────╯
+
+✻ Cogitated for 1m 44s · done 1:32 AM
+
+❯ since we're forcedd by swisseph agpl to be open sourced ,een the namespace    
+  and the app name muset be .env configurable becazuse we want to make iteasier 
+  to not be accidentallyimpersonated by an open source builder/implemnenter.    
+  Also, let ME specify when you're reasdy eto proceed, nedver ask me becauae    
+  you dont know when oyu're ready and invariably you ask in the middlee of my   
+  giving you more information                                                   
+
+  Thought for 24s (ctrl+o to expand)
+
+● Both recorded. The plan now gains: AGPL anti-impersonation identity config
+  (app name + namespace as per-build env settings, Natally defaults preserved
+  canonically), and the process rule that I never ask when ready — you signal
+  when to proceed.
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+● Updated plan
+  ⎿  /plan to preview
+
+  Thought for 7s (ctrl+o to expand)
+
+● Incorporated into the plan:
+
+  1. /landing.html alias — both /landing and /landing.html serve the
+     forced-landing page for all users, authenticated or not.
+  2. All entry config is per-build .env — frozen keys VITE_LANDING_PATH,
+     VITE_LANDING_PATH_ALIAS, VITE_APP_PATH, VITE_LEGACY_PATH_REDIRECTS consumed
+     by the dispatcher, deploy scripts and PWA shell routes; no hardcoded
+     routing literals.
+  3. AGPL anti-impersonation identity — VITE_APP_NAME (titles, header brand, PWA
+     manifest) and VITE_APP_NAMESPACE (storage-key prefixes, room namespace,
+     PWA cache namespace) are env-configured per build, with canonical defaults
+     that keep this build's behavior byte-identical; open-source implementers
+     must consciously set their own identity.
+  4. Process rule recorded — I never ask whether I'm ready to proceed and never
+     request approval mid-stream; you will state when to proceed.
+
+  The plan file at
+  /home/robin/.zclaude/plans/the-main-index-html-has-recursive-rabin.md now
+  holds the complete R12 design: the hero replica with example chart (R12-A),
+  the two-path inset click and vivid plum-and-metal focus dimming (R12-B), the
+  app education branch with paid personalized extension and the two-variant
+  upsell close (R12-C), the prefab content completion including
+  regimes/evolution passages and the upsell-close lines (R12-D), and the unified
+  env-driven entry contract (R12-E) — followed by commit/push and a hold for
+  your presentation and signoff.
+
+  Standing by for further input or your explicit go-ahead.
+
+✻ Sautéed for 59s · done 1:34 AM

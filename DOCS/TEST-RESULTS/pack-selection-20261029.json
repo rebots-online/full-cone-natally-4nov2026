@@ -1,0 +1,113 @@
+{
+  "observedAtUtc": "2026-10-29T16:31:37.0726617Z",
+  "scope": "UX-PLAY-1 monthly-first configured pack selection through the existing RevenueCat native/Web routes",
+  "status": "IN_PROGRESS",
+  "sourceImplementation": "COMPLETE",
+  "architectureCommit": "9d2cfdb7567e996255099b3c9a3ef618aa508751",
+  "files": [
+    {
+      "sha256": "da4eb72dade26d97d07c74e39de741c654899f02e423dd4e94c988bea93a4d58",
+      "path": "src/services/purchaseIntent.ts"
+    },
+    {
+      "sha256": "60f63ca7f637eb2e217e285f1032d1af84f9e4678237587059cccdd98b72ebfd",
+      "path": "src/services/checkoutCatalog.ts"
+    },
+    {
+      "sha256": "af663815e7b1b4c62ecc864fe0aafaa63eab9752adef9e98e033be4f4258fbcd",
+      "path": "src/services/revenueCatCheckout.ts"
+    },
+    {
+      "sha256": "29dfe23f5f041f1c57fc7ab9fe49f6dba84222f40a7292b3aff309380e7d2490",
+      "path": "src/components/PurchaseAccess.tsx"
+    },
+    {
+      "sha256": "3c2f0d8a5fb1cb77615f76789edba98efbe5fd25176e4135b7f9611b7985a6da",
+      "path": "src/components/FigmaPaywall.tsx"
+    },
+    {
+      "sha256": "a04d72692a223d4700f3fdac2f308afdf6d623e571ad6f50d0d13d2733cbc89b",
+      "path": "LIBS/UI/FIGMA/three-screen-offers-20261027/adapted/paywall-three-screen.html"
+    },
+    {
+      "sha256": "e41cf4ebfd02d326b406c4daffd5b1d36b708a4c5ba0772bfa4e9ae00d220de0",
+      "path": "tests/native-billing.test.mjs"
+    },
+    {
+      "sha256": "a6a12eccf0fddedf58918707d609b661b81d3eff9bebd1ca63cec1ff88bafdeb",
+      "path": "tests/checkout-packs.test.mjs"
+    },
+    {
+      "sha256": "74bb25e9ce2982fa7304ab8101b4da86821804349467a465e5ca77963b5eeb76",
+      "path": "tests/pack-selection.browser.mjs"
+    }
+  ],
+  "mechanicalImplementation": {
+    "session": "d74950e1-d6c4-4dde-bdd6-19e6a41082d5",
+    "configuredThinking": false,
+    "requestedModel": "zai/glm-4.7",
+    "runtime": "Crush",
+    "providerExtraBodyThinking": "disabled",
+    "exitCodes": [
+      0,
+      0
+    ],
+    "terminalRuns": 2,
+    "effectiveRemoteModelIndependentlyAttested": false
+  },
+  "checks": [
+    {
+      "detail": "Live full-project TypeScript noEmit check.",
+      "result": "PASS",
+      "command": "npm run lint"
+    },
+    {
+      "tests": 25,
+      "detail": "14 pack/catalog/controller checks plus11 retained native ownership, quote, recovery and projection checks. Controlled auth/provider/IPC boundaries.",
+      "result": "PASS",
+      "command": "node --test tests/checkout-packs.test.mjs tests/native-billing.test.mjs",
+      "failed": 0
+    },
+    {
+      "detail": "Actual adapted Figma document in installed headless Chrome: six choices, Monthly/One-off groups, provider price/cadence, exact selected purchase on dedicated/comparison screens, shared selection, busy/empty states. Synthetic provider state; not a real purchase.",
+      "result": "PASS",
+      "command": "node tests/pack-selection.browser.mjs"
+    }
+  ],
+  "configuration": {
+    "exampleOwnership": "Publisher reusable-environment task owns .env.example and has received the blank binding/schema.",
+    "liveEnvEdited": false,
+    "cadences": [
+      "monthly",
+      "one_time"
+    ],
+    "fields": [
+      "cadence",
+      "tier",
+      "packageIdentifier",
+      "webProductIdentifier?",
+      "androidProductIdentifier?"
+    ],
+    "key": "VITE_REVENUECAT_CONVERSATION_PACKS_JSON",
+    "tiers": [
+      "5",
+      "10",
+      "25"
+    ]
+  },
+  "behavior": [
+    "Kind-only conversation CTA opens monthly-first choices without auto-purchase.",
+    "An explicit selected pack launches that exact current quote once.",
+    "No active legacy conversation mapping or $1 slot. Prior product IDs remain passive history only.",
+    "Actual SDK localized price/title/cadence; no local price, quantity, ROCHE grant or success.",
+    "Monthly slot requires subscription/P1M; one-off slot requires one_time/null.",
+    "Native route never silently becomes Web checkout.",
+    "Pending/confirmed recovery, cancellation retry, owner/generation checks and reading souvenir CTA preserved."
+  ],
+  "outstanding": [
+    "Actual configured RevenueCat/Google Play products and package IDs per platform.",
+    "Parent-owned authoritative numeric ROCHE grants and monthly rate policy.",
+    "Next prescribed full matrix, release/deployment and real store purchase/renewal/pending/Restore acceptance."
+  ],
+  "baseline": "v1.13.86779 compiled the original native bridge; it predates this pack-selection extension."
+}

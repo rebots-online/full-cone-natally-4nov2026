@@ -1,0 +1,21 @@
+@startuml
+title tests/icon-reaction.browser.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "icon-reaction.browser.mjs\nfile L1-41\nfile:tests/icon-reaction.browser.mjs" as N0
+rectangle "node:assert/strict\nimport L1-1\nimport:3b9ae0843e68e5db01d3ba09a2f95315" as N1
+rectangle "node:fs\nimport L2-2\nimport:7bc3a5f1140dd3578d676b68a5f8af5e" as N2
+rectangle "browser\nconstant L6-6\nconstant:8e1bc48af0cbfbc78c4e2a45720e2737" as N3
+rectangle "context\nconstant L7-7\nconstant:7a2ac241952b25ff55ebc0c3490ed24a" as N4
+rectangle "recording\nvariable L8-8\nvariable:d519110c83ea5fa084b49a573c6df697" as N5
+rectangle "page\nconstant L10-10\nconstant:51f83282fea00a0b8bf1a44e2978d8e0" as N6
+rectangle "icon\nconstant L13-13\nconstant:4b9777bd7fbd5ff293687e0fe8cebdf5" as N7
+N0 --> N1 : contains E2686
+N0 --> N2 : contains E2687
+N0 --> N3 : contains E2688
+N0 --> N4 : contains E2689
+N0 --> N5 : contains E2690
+N0 --> N6 : contains E2691
+N0 --> N7 : contains E2692
+@enduml

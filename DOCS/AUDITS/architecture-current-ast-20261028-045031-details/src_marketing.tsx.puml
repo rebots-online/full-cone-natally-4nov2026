@@ -1,0 +1,59 @@
+@startuml
+title src/marketing.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "marketing.tsx\nfile L1-215\nfile:src/marketing.tsx" as N0
+rectangle "react\nimport L1-1\nimport:09ccac7bd1a3cbf3f4deb99bc0154b73" as N1
+rectangle "react-dom/client\nimport L2-2\nimport:27b74cbbf6059b797652ff86ea87bd81" as N2
+rectangle "firebase/auth\nimport L3-3\nimport:112305cb854d934f1091d3344d1e4fc1" as N3
+rectangle "./components/Astrolabe3D\nimport L4-4\nimport:3013290373f8ab74fb5d4181e47ae20f" as N4
+rectangle "./services/firebase\nimport L5-5\nimport:367c1bd75b9c5b2bd0e3310b192d902f" as N5
+rectangle "./services/onboarding\nimport L6-6\nimport:aeb1b41b7864002bd055fe6f922be26b" as N6
+rectangle "./services/natallyHistory\nimport L7-7\nimport:3db00e6e1104b17c2af6908ce7d01f40" as N7
+rectangle "./services/ephemeris\nimport L8-8\nimport:51b5e02e356fdded10ae586f8e20dc63" as N8
+rectangle "Phase\ntype_alias L10-16\ntype_alias:c23303fbbc69f06200fec62c78f945ce" as N9
+rectangle "CREATE_CHART_HREF\nconstant L18-18\nconstant:cc3b6a964b430f99175811ed82eab4ed" as N10
+rectangle "isFreshOnboarding\nfunction L20-26\nfunction:7c6ae50c0ed4d627f4fbd62b8ff7dd61" as N11
+rectangle "MarketingNatalChart\nfunction L28-209\nfunction:ed36062d591884ba83f55e1c00dd70e7" as N12
+rectangle "onChange\nfunction L50-50\nfunction:d761890ef2f75280fdbaae0957a24cf1" as N13
+rectangle "load\nfunction L66-112\nfunction:1351d5f857772aa20d7baa3e6d94c8d1" as N14
+rectangle "stale\nfunction L68-68\nfunction:9bde85c85d1f61f25669321a83c4cc92" as N15
+rectangle "isCurrent\nfunction L74-74\nfunction:393bb03d2ec8f43af976a7e8aa28f270" as N16
+rectangle "onToggleComponent\nfunction L128-134\nfunction:e2d7f97e547f60c561fd9c49b472d4de" as N17
+rectangle "onSelectPlanet\nfunction L135-135\nfunction:1460a4427bc45a3c60eb9a7b812fd8d1" as N18
+rectangle "mount\nconstant L211-211\nconstant:2fd0fe744011adf005bf4a17a53d604c" as N19
+N0 --> N1 : contains E1292
+N0 --> N2 : contains E1293
+N0 --> N3 : contains E1294
+N0 --> N4 : contains E1295
+N0 --> N5 : contains E1296
+N0 --> N6 : contains E1297
+N0 --> N7 : contains E1298
+N0 --> N8 : contains E1299
+N0 --> N9 : contains E1300
+N0 --> N10 : contains E1301
+N0 --> N11 : contains E1302
+N0 --> N12 : contains E1303
+N12 --> N13 : contains E1304
+N12 --> N14 : contains E1305
+N14 --> N15 : contains E1306
+N14 --> N16 : contains E1307
+N12 --> N17 : contains E1308
+N12 --> N18 : contains E1309
+N0 --> N19 : contains E1310
+N12 --> N10 : references E1311
+N14 --> N11 : calls E5359
+N16 --> N15 : calls E5360
+N14 --> N16 : calls E5363
+N14 --> N16 : calls E5364
+N14 --> N16 : calls E5366
+N14 --> N16 : calls E5368
+N14 --> N16 : calls E5369
+N12 --> N14 : calls E5370
+N12 --> N14 : calls E5371
+N12 --> N13 : references E5372
+N12 --> N14 : references E5373
+N12 --> N17 : references E5374
+N12 --> N18 : references E5375
+@enduml

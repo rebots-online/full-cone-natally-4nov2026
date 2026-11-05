@@ -1,0 +1,55 @@
+@startuml
+title billing/openrouter.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "openrouter.mjs\nfile L1-192\nfile:billing/openrouter.mjs" as N0
+rectangle "BASE_URL\nconstant L16-16\nconstant:7e93b7cd8480a54116756aaa9c0ace04" as N1
+rectangle "TIMEOUT_MS\nconstant L17-17\nconstant:00f33a67720dd0e64db09e824aaec057" as N2
+rectangle "assertNonEmptyString\nfunction L19-23\nfunction:189c84b455615e3cb5ad304fa6c0a01a" as N3
+rectangle "assertOptions\nfunction L25-33\nfunction:ac568e82d93f5dcf9a5595e609f9fb44" as N4
+rectangle "assertObjectData\nfunction L35-39\nfunction:8ee4d88295ac002015f607341925a1d5" as N5
+rectangle "assertFiniteLimit\nfunction L41-46\nfunction:c6e4fbf8ebd8903e68b1dc54125986da" as N6
+rectangle "redactError\nfunction L48-51\nfunction:f98c4bc001548697e7f15424ec468e04" as N7
+rectangle "request\nfunction L53-87\nfunction:cbb242a7f5c45f082abc8352632eccdb" as N8
+rectangle "createManagedKey\nfunction L89-121\nfunction:a1e97d157931791076da44b9852903de" as N9
+rectangle "readManagedKey\nfunction L123-137\nfunction:46f861b1ba8557001c9010788c1cb111" as N10
+rectangle "setManagedKeyLimit\nfunction L139-155\nfunction:b18fa2728a34762f3e46f36894bf9bdb" as N11
+rectangle "disableManagedKey\nfunction L157-172\nfunction:3fbc31b9a56cec8fbbb7df860873e994" as N12
+rectangle "reconcileManagedKey\nfunction L174-191\nfunction:686eaa5a556d752d87c67d83e190bf31" as N13
+N0 --> N1 : contains E1
+N0 --> N2 : contains E2
+N0 --> N3 : contains E3
+N0 --> N4 : contains E4
+N0 --> N5 : contains E5
+N0 --> N6 : contains E6
+N0 --> N7 : contains E7
+N0 --> N8 : contains E8
+N0 --> N9 : contains E9
+N0 --> N10 : contains E10
+N0 --> N11 : contains E11
+N0 --> N12 : contains E12
+N0 --> N13 : contains E13
+N8 --> N1 : references E14
+N8 --> N2 : references E15
+N4 --> N3 : calls E3748
+N8 --> N7 : calls E3749
+N9 --> N3 : calls E3750
+N9 --> N4 : calls E3751
+N9 --> N8 : calls E3752
+N10 --> N3 : calls E3753
+N10 --> N4 : calls E3754
+N10 --> N8 : calls E3755
+N10 --> N5 : calls E3756
+N11 --> N3 : calls E3757
+N11 --> N6 : calls E3758
+N11 --> N4 : calls E3759
+N11 --> N8 : calls E3760
+N11 --> N5 : calls E3761
+N12 --> N3 : calls E3762
+N12 --> N4 : calls E3763
+N12 --> N8 : calls E3764
+N12 --> N5 : calls E3765
+N13 --> N10 : calls E3766
+N13 --> N9 : calls E3767
+@enduml

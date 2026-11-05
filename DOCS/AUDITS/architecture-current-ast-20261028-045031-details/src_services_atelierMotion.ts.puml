@@ -1,0 +1,9 @@
+@startuml
+title src/services/atelierMotion.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "atelierMotion.ts\nfile L1-5\nfile:src/services/atelierMotion.ts" as N0
+rectangle "canAnimateAtelier\nfunction L2-4\nfunction:2655979c8bff16505daa7e41b2e407cb" as N1
+N0 --> N1 : contains E1373
+@enduml

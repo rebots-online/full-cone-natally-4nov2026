@@ -1,0 +1,61 @@
+@startuml
+title src/components/NatalInputForm.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "NatalInputForm.tsx\nfile L1-844\nfile:src/components/NatalInputForm.tsx" as N0
+rectangle "react\nimport L1-1\nimport:3e78bbf09ed88e9a6af68e111c102654" as N1
+rectangle "lucide-react\nimport L2-14\nimport:281e23d373b8b75b605e14129ef844c4" as N2
+rectangle "../services/ephemeris\nimport L15-15\nimport:59f3915454e0ad32e1c39df167f71b8d" as N3
+rectangle "../services/locations\nimport L16-22\nimport:647f00f14ff5881f740249f9fbfd0e33" as N4
+rectangle "NatalInputFormProps\ninterface L24-30\ninterface:aabb2dd1748fd437501b605e812ceedd" as N5
+rectangle "accountUid\nproperty L25-25\nproperty:78d6564df5e85b5b01b2a88199fd7873" as N6
+rectangle "currentInput\nproperty L26-26\nproperty:c7235784c2dcc29b077383644189dee7" as N7
+rectangle "onCalculate\nproperty L27-27\nproperty:ccc0fd235627ef258b86b72f34a6384e" as N8
+rectangle "isCalculating\nproperty L28-28\nproperty:c23070bef5a7ebeb630b1620eb47b3f9" as N9
+rectangle "embedded\nproperty L29-29\nproperty:df592fbd31f82d0b66c82f33ee46ec6b" as N10
+rectangle "NatalInputForm\nfunction L32-843\nfunction:95fc42b55b47efb11cad05d70f8655b5" as N11
+rectangle "handleDateChange\nfunction L91-113\nfunction:84edb3ac477186b8f2746a23ab54d1fa" as N12
+rectangle "handleDateKeyDown\nfunction L115-129\nfunction:3f400a7dba026ae8043042207e780bc4" as N13
+rectangle "getReadableDateTime\nfunction L132-159\nfunction:569166733fffa2b39dd3ca5617fecc93" as N14
+rectangle "handleClickOutside\nfunction L176-183\nfunction:c6b661a18a9150bcb75089bcc4e8c1bf" as N15
+rectangle "handlePlaceInput\nfunction L188-219\nfunction:9c9877175dd03316a8b9913e126af4e4" as N16
+rectangle "handleCurrentPlaceInput\nfunction L221-250\nfunction:39737b8d1f8d14b325be21a57107a82f" as N17
+rectangle "selectCity\nfunction L252-284\nfunction:f583db4c24a8eb89b53c157b6081b3b4" as N18
+rectangle "selectCurrentCity\nfunction L286-295\nfunction:646e5a18b2691737fe59c8a8c5c692f2" as N19
+rectangle "handleSubmit\nfunction L297-332\nfunction:fa43fc288161431909100985c11f669b" as N20
+N0 --> N1 : contains E838
+N0 --> N2 : contains E839
+N0 --> N3 : contains E840
+N0 --> N4 : contains E841
+N0 --> N5 : contains E842
+N5 --> N6 : contains E843
+N5 --> N7 : contains E844
+N5 --> N8 : contains E845
+N5 --> N9 : contains E846
+N5 --> N10 : contains E847
+N0 --> N11 : contains E848
+N11 --> N12 : contains E849
+N11 --> N13 : contains E850
+N11 --> N14 : contains E851
+N11 --> N15 : contains E852
+N11 --> N16 : contains E853
+N11 --> N17 : contains E854
+N11 --> N18 : contains E855
+N11 --> N19 : contains E856
+N11 --> N20 : contains E857
+N11 --> N14 : calls E4595
+N11 --> N12 : calls E4605
+N11 --> N16 : calls E4607
+N11 --> N18 : calls E4608
+N11 --> N18 : calls E4609
+N11 --> N18 : calls E4610
+N11 --> N18 : calls E4611
+N11 --> N18 : calls E4612
+N11 --> N17 : calls E4614
+N11 --> N19 : calls E4615
+N11 --> N19 : calls E4616
+N11 --> N15 : references E4617
+N11 --> N20 : references E4618
+N11 --> N13 : references E4619
+@enduml

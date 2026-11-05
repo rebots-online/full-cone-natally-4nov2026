@@ -1,0 +1,57 @@
+@startuml
+title scripts/prepare-icons.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "prepare-icons.mjs\nfile L1-47\nfile:scripts/prepare-icons.mjs" as N0
+rectangle "node:fs\nimport L3-3\nimport:7c0bf498cf0677c181c32541bc393f4c" as N1
+rectangle "node:crypto\nimport L4-4\nimport:885bd92616b86d34294147049a3ce2ea" as N2
+rectangle "node:child_process\nimport L5-5\nimport:e8f08c6b0b1087268e60ad37d3e512ce" as N3
+rectangle "node:path\nimport L6-6\nimport:db7dcb02d0503f7de0407fc16fb3e360" as N4
+rectangle "master\nconstant L7-7\nconstant:dd17ab432a91a1bf981ec19cf08ed1b4" as N5
+rectangle "guideMaster\nconstant L8-8\nconstant:d971690204e519dd4f9fc74780dbb828" as N6
+rectangle "digest\nfunction L9-9\nfunction:14bed5f57fe972da2539eba739f4c61f" as N7
+rectangle "promote\nfunction L10-13\nfunction:5fa6b957db9f1cef16dc8726d8dd6a8a" as N8
+rectangle "tree\nfunction L14-19\nfunction:6698f071d599c06b59cfc4894df175b3" as N9
+rectangle "scratch\nconstant L21-21\nconstant:f938b6bd0370d703baf3c5705fc9652b" as N10
+rectangle "web\nconstant L22-22\nconstant:2014298bb2b05ab42e6fb47ca8ccdd0c" as N11
+rectangle "native\nconstant L22-22\nconstant:7bf36f16541119b7061bfb67e9dec454" as N12
+rectangle "guide\nconstant L22-22\nconstant:e1a5125dfd94d504a6562caddb1f8734" as N13
+rectangle "resources\nconstant L35-35\nconstant:f6112648ceb1c4baf7fcb9d2f9491ce5" as N14
+rectangle "background\nconstant L37-37\nconstant:36feaca77827d28b2c4c0842844e8796" as N15
+rectangle "backgroundXml\nconstant L38-38\nconstant:64fbd5831c707a9275163ca49286bba3" as N16
+rectangle "provenance\nconstant L41-41\nconstant:8be67a27946416e73b0c695458376233" as N17
+rectangle "provenanceBytes\nconstant L45-45\nconstant:262bd31889774c9b65394f7ddd2f41f2" as N18
+N0 --> N1 : contains E210
+N0 --> N2 : contains E211
+N0 --> N3 : contains E212
+N0 --> N4 : contains E213
+N0 --> N5 : contains E214
+N0 --> N6 : contains E215
+N0 --> N7 : contains E216
+N0 --> N8 : contains E217
+N0 --> N9 : contains E218
+N0 --> N10 : contains E219
+N0 --> N12 : contains E220
+N0 --> N11 : contains E221
+N0 --> N13 : contains E222
+N0 --> N14 : contains E223
+N0 --> N15 : contains E224
+N0 --> N16 : contains E225
+N0 --> N17 : contains E226
+N0 --> N18 : contains E227
+N8 --> N7 : calls E3970
+N8 --> N7 : calls E3971
+N9 --> N9 : calls E3972
+N9 --> N8 : calls E3973
+N0 --> N9 : calls E3974
+N0 --> N8 : calls E3975
+N0 --> N9 : calls E3976
+N0 --> N8 : calls E3977
+N0 --> N8 : calls E3978
+N0 --> N8 : calls E3979
+N0 --> N9 : calls E3980
+N0 --> N8 : calls E3981
+N0 --> N7 : calls E3982
+N0 --> N7 : calls E3983
+@enduml

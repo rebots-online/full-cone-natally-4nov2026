@@ -1,0 +1,407 @@
+@startuml
+title src/components/NatallyChatbot.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "NatallyChatbot.tsx\nfile L1-1854\nfile:src/components/NatallyChatbot.tsx" as N0
+rectangle "../services/openingReading\nimport L1-1\nimport:1d58dcfca92b0e0c5c190e0278c57308" as N1
+rectangle "react\nimport L2-2\nimport:6f2b274f5efc4d7a984164f7fabfcba7" as N2
+rectangle "lucide-react\nimport L3-29\nimport:05b907616cc919c1b9358c235cad9499" as N3
+rectangle "../services/accountStorage\nimport L30-30\nimport:19cd40ef60cb4bef4dde016d68f612ac" as N4
+rectangle "../services/historyLifecycle\nimport L31-31\nimport:af1865c31e4a039a4e545ce6f45fb51a" as N5
+rectangle "../services/ephemeris\nimport L32-32\nimport:7bcfc3879189966ea94ce9f76f10faee" as N6
+rectangle "../services/natallyChat\nimport L33-33\nimport:a5a1df3bbb60217cca794bd7517f15ac" as N7
+rectangle "../services/streamingSpeech\nimport L34-34\nimport:80877c8e7e060ae3bfa25de7cae63b4d" as N8
+rectangle "../services/calculationTools\nimport L35-35\nimport:7b2b00518cb97c2a7af2c6104b0d9a5b" as N9
+rectangle "../services/karaokeScroll\nimport L36-36\nimport:bcb112607b5d1bdc7524f48fc5f69197" as N10
+rectangle "../services/chatViewport\nimport L37-37\nimport:984fb2ad04b40afcc568443c3669d24f" as N11
+rectangle "../hooks/useVisualViewport\nimport L38-38\nimport:f1edaf9f043e9b47b4fee41fd6df89dc" as N12
+rectangle "../services/chartTargets\nimport L39-39\nimport:02cf70759dfa68210ebb4923f84baffa" as N13
+rectangle "../services/authoredChartExplanations\nimport L40-40\nimport:d118f2035078ee032ed57af3c901f315" as N14
+rectangle "../services/billingAccess\nimport L41-41\nimport:d09345f862f58ffc98f00bdddfa3a96d" as N15
+rectangle "../services/purchaseIntent\nimport L42-42\nimport:b2a36727d905b2dbc61fe4b287b8b9c8" as N16
+rectangle "../services/presentation\nimport L43-43\nimport:ce1c43369d5a975814a9829325eb3b21" as N17
+rectangle "../services/soul\nimport L44-44\nimport:2f849cb6b6c0526ff091770436dcc08e" as N18
+rectangle "../services/readingAudio\nimport L45-45\nimport:1e4222eef1cf5c4cc6aed7b14cfb5f33" as N19
+rectangle "../services/historicalPresentation\nimport L46-46\nimport:54acc4735feb17c65761ca8d3d41198f" as N20
+rectangle "./RetainedReadingAudio\nimport L47-47\nimport:85b667f4c6ced9265bf0d59c7931b618" as N21
+rectangle "./RichText\nimport L48-48\nimport:1dbfeb369b0f49592fa0cad86d433142" as N22
+rectangle "../services/voiceService\nimport L49-57\nimport:8ff53d828477566feb27fdf74265c81d" as N23
+rectangle "./PurchaseAccess\nimport L58-58\nimport:a60dab2003d843e6d5c574b2f29c23cd" as N24
+rectangle "./NatallyConfigModal\nimport L59-59\nimport:4ffba096e53554cd4857e8bed1f6e6f8" as N25
+rectangle "./NatallyIcon\nimport L60-60\nimport:d2cd908d9a07522c12b15ed7eb18a7f0" as N26
+rectangle "PersistentChatMessage\ninterface L62-72\ninterface:f34cc849e575f0eb9318b318b73d994f" as N27
+rectangle "streamState\nproperty L63-63\nproperty:1e636c6d61cc38b5b17bb3fa703ebeaf" as N28
+rectangle "openingStage\nproperty L64-64\nproperty:ea1a08a10bcd3becc95c74b37d4b0daa" as N29
+rectangle "createdAt\nproperty L65-65\nproperty:1720d6a591c82523389f5a3bc932ead3" as N30
+rectangle "observationSnapshot\nproperty L66-66\nproperty:32bd3ee4c069410630b149fa66a1fd40" as N31
+rectangle "topic\nproperty L67-67\nproperty:b7fe4329bb19fe76fca0743bbb1575e1" as N32
+rectangle "category\nproperty L68-68\nproperty:0f5a3a4f621e6de8dba255208e31e941" as N33
+rectangle "authoredEducation\nproperty L69-69\nproperty:a325cb61e12380f329aea1aeae56afae" as N34
+rectangle "mediaUrl\nproperty L70-70\nproperty:a2fc4d587172796de8d5bba5d3854085" as N35
+rectangle "mediaName\nproperty L71-71\nproperty:905c5174f869b6ee77cea1e2fff8e7b6" as N36
+rectangle "NatallyChatbotProps\ninterface L74-127\ninterface:4c4d841b4145061757956d8e7524fd5c" as N37
+rectangle "focusReadingRequest\nproperty L75-75\nproperty:d5041a40abf48046e57175175fda962f" as N38
+rectangle "externalReadingProgress\nproperty L76-76\nproperty:993b6d8d5f95529743f2f9cea20853d5" as N39
+rectangle "embedded\nproperty L77-77\nproperty:bd0fa729223224e976207a0e81814d24" as N40
+rectangle "presentation\nproperty L78-78\nproperty:e66d44e57573cba9455442f472fd5958" as N41
+rectangle "onPresentationAction\nproperty L79-79\nproperty:53122799ea56832d2260cea8fc430179" as N42
+rectangle "onShowTargets\nproperty L80-80\nproperty:0a4d7e17964ab02176628965a1adcdc4" as N43
+rectangle "onReadingChart\nproperty L81-81\nproperty:515a131a73681ad209397921507bc828" as N44
+rectangle "onReadingStart\nproperty L82-82\nproperty:7407728adb409c97ba884db612283b4c" as N45
+rectangle "onPhaseChange\nproperty L83-83\nproperty:b6196a7c25712edd0c60135e306492c0" as N46
+rectangle "onBusyChange\nproperty L84-84\nproperty:c4b37f979453f6c124fe6cfc850fd2ab" as N47
+rectangle "selectionRequest\nproperty L85-85\nproperty:b2cca7976f4b04a3b93e8fba7e3cce26" as N48
+rectangle "onSelectionRequestConsumed\nproperty L86-86\nproperty:34a07a30def8433375af0ca3d3fd71ae" as N49
+rectangle "educationalRequest\nproperty L87-87\nproperty:fac1658f8bdc85e6a86b27f3132e3ba1" as N50
+rectangle "onEducationalRequestConsumed\nproperty L88-88\nproperty:034a8c5cc5c8638226040df5e5472e74" as N51
+rectangle "accountUid\nproperty L89-89\nproperty:0788ce9f9f52864d97d4263bef671881" as N52
+rectangle "isCurrentSession\nproperty L90-90\nproperty:91a0085a4cc9e34d045dca576b398287" as N53
+rectangle "chart\nproperty L91-91\nproperty:653b70c090483a412b069a2902184dd1" as N54
+rectangle "partnerChart\nproperty L92-92\nproperty:366e5b34ac57afc9852b7296ab89ddc0" as N55
+rectangle "userLore\nproperty L93-93\nproperty:3aa6ca0a69cd554f8f56f7056d1d23e0" as N56
+rectangle "isOpen\nproperty L94-94\nproperty:d958ea6f616e5566be4368a58127807b" as N57
+rectangle "onClose\nproperty L95-95\nproperty:a174d7e5c9176f1500909a640354227f" as N58
+rectangle "onOpen\nproperty L96-96\nproperty:339a8c8f1c007f19896f30c721e7a112" as N59
+rectangle "onSignIn\nproperty L97-97\nproperty:0d01b032f5c842109acfcdb598cc6962" as N60
+rectangle "isSignedIn\nproperty L98-98\nproperty:a7b818d0cce90bef83eddbb23f959c99" as N61
+rectangle "onAddUserLore\nproperty L99-99\nproperty:2afd634a0cd47ef538044b00bbb81b41" as N62
+rectangle "voiceSettings\nproperty L100-100\nproperty:a4d160f09465d0ab424c4ca0ac61259a" as N63
+rectangle "onUpdateVoiceSettings\nproperty L101-101\nproperty:f44cb0349251f009c69509ced389de54" as N64
+rectangle "onSpeechStateChange\nproperty L102-102\nproperty:f48f09cb5110537ef66393acfc3d46ad" as N65
+rectangle "onSelectPlanet\nproperty L103-103\nproperty:13844aa4f828385cbaf6020fc276da50" as N66
+rectangle "onChartFocus\nproperty L104-104\nproperty:9ee5a535813525dac0162b9803438a0e" as N67
+rectangle "externalReadingToInject\nproperty L105-118\nproperty:7362a045ac76c2ae7b3f5492cf912c76" as N68
+rectangle "onClearExternalReading\nproperty L119-119\nproperty:0197064d5d8ed781f08fabda6ca8ba87" as N69
+rectangle "quickMessage\nproperty L122-122\nproperty:b4a2dee1fb63de65f20401aedfa8cd2d" as N70
+rectangle "onClearQuickMessage\nproperty L123-123\nproperty:97ebde9d6939ba462f5b4ee181996104" as N71
+rectangle "initialMessages\nproperty L125-125\nproperty:d86f0173b7aebecfee6762c539c6875e" as N72
+rectangle "readOnly\nproperty L126-126\nproperty:4ca6c3649a6fa6014dc886ee6679d55b" as N73
+rectangle "CHAT_STORAGE_KEY\nconstant L129-129\nconstant:68da7c1b56b1ce157bf19179ad498124" as N74
+rectangle "NatallyChatbot\nfunction L131-1853\nfunction:542e50bd159c2b191f16405f65dcce4b" as N75
+rectangle "reconcilePlaybackFocus\nfunction L346-355\nfunction:add5b7ce6407fc951f007bbef28fdd73" as N76
+rectangle "sessionIsActive\nfunction L370-370\nfunction:05324a4428e17f79b1a9ca1832d4bf22" as N77
+rectangle "erasing\nfunction L372-378\nfunction:a09082a1770bfbda2076cdb315223c06" as N78
+rectangle "planFor\nfunction L420-420\nfunction:99218f86f9b85bd739c30ff08f1abf85" as N79
+rectangle "sourceChartFor\nfunction L421-421\nfunction:6591f6855690f75ae57be06224b0daff" as N80
+rectangle "cuesFor\nfunction L422-424\nfunction:d4961a2761c8238d838d3be0e03fc1db" as N81
+rectangle "showReadingChart\nfunction L425-425\nfunction:b34b58648272990dd043b8089c7cb2e8" as N82
+rectangle "goToPassage\nfunction L426-442\nfunction:dcd1f91a118c2e6f359d9d4aaf232041" as N83
+rectangle "beginRetainedReplay\nfunction L443-452\nfunction:780fdfba929e859a5f66a38c4fe40a2b" as N84
+rectangle "retainedReplayActive\nfunction L453-456\nfunction:51fe33d5972f5a6103f6155707026706" as N85
+rectangle "presentRetainedPosition\nfunction L457-474\nfunction:389a8d203caf8d6a9f93b9ea64cd0f99" as N86
+rectangle "presentRetainedState\nfunction L475-481\nfunction:b5241cdf9201907597c8e75fa0d4af05" as N87
+rectangle "beginStreamingReply\nfunction L483-561\nfunction:b23f454294c7cd254a7c6f1bc9fc1134" as N88
+rectangle "active\nfunction L488-488\nfunction:6776fc167fe371061882aed1575c38be" as N89
+rectangle "currentStream\nfunction L489-489\nfunction:462d24a8cfc58be6bfb39f52bd0cc2bd" as N90
+rectangle "advance\nfunction L493-500\nfunction:54c5ab063af00529d5c9d613010ea30d" as N91
+rectangle "releaseWelcome\nfunction L506-506\nfunction:ceccd67ee855f1195562e1cd0fdbeae7" as N92
+rectangle "presentMessage\nfunction L563-606\nfunction:ba692605a3a7983bd3c48018296ee177" as N93
+rectangle "active\nfunction L569-569\nfunction:a924e04d04f00f6c969fe629a60e9e02" as N94
+rectangle "advance\nfunction L577-585\nfunction:8551463a7bd503721fbc61d4a93875fb" as N95
+rectangle "extractAstrologicalEntity\nfunction L613-637\nfunction:d139f6a4122c146cd773d73940d6774b" as N96
+rectangle "handleSendMessage\nfunction L639-804\nfunction:a9ff3099c0242eda47a97eb2759d9060" as N97
+rectangle "requestActive\nfunction L648-648\nfunction:8aa031a25406717858159f030a62d9bb" as N98
+rectangle "runOpening\nfunction L806-816\nfunction:8dc36d852db88c15b8f6879eff4f571f" as N99
+rectangle "active\nfunction L809-809\nfunction:fac964db6002ba9fe16277065440e694" as N100
+rectangle "toggleVoiceListen\nfunction L993-1006\nfunction:d4bf7ba87e3a791baf9bb21603cf356d" as N101
+rectangle "handleCardPointerDown\nfunction L1009-1029\nfunction:194d14a2ffc6c84decb2ec6b66046c96" as N102
+rectangle "handleHeaderPointerMove\nfunction L1031-1040\nfunction:5d3afdaeb5dca557d2b9e016e1665725" as N103
+rectangle "handleHeaderPointerUp\nfunction L1042-1049\nfunction:8729402f95c616daa7975ec04de15839" as N104
+rectangle "handleResizePointerDown\nfunction L1052-1078\nfunction:6498be3033603143f002622cbc7bfe23" as N105
+rectangle "handlePointerMove\nfunction L1062-1070\nfunction:41818b6cb3ddf148669089ea24953e2a" as N106
+rectangle "handlePointerUp\nfunction L1071-1075\nfunction:6bd8ebac4d278a126629b607d77c0c4e" as N107
+rectangle "handleMediaUpload\nfunction L1081-1093\nfunction:18fd12875efca04c41914e3b7ccc3ee2" as N108
+rectangle "stopCurrentVoice\nfunction L1096-1102\nfunction:ff746ead0cdcd62a0fb9cfc5734feab9" as N109
+rectangle "handleReplayTurn\nfunction L1104-1113\nfunction:005e60a6d326ce9d62f475c97331e0c3" as N110
+rectangle "scrollToMessage\nfunction L1116-1123\nfunction:6585dd9fb061a9f33eadcd1c366de493" as N111
+rectangle "handleDownloadTranscript\nfunction L1179-1199\nfunction:479b24724c58a4a300c18ff3fee80734" as N112
+rectangle "handleClearHistory\nfunction L1201-1218\nfunction:4b581c04db49535f1686f2b8672b3ddf" as N113
+rectangle "toggleReadingAloud\nfunction L1220-1230\nfunction:0e8c648363596d3f5e7d9d3102b55553" as N114
+N0 --> N1 : contains E866
+N0 --> N2 : contains E867
+N0 --> N3 : contains E868
+N0 --> N4 : contains E869
+N0 --> N5 : contains E870
+N0 --> N6 : contains E871
+N0 --> N7 : contains E872
+N0 --> N8 : contains E873
+N0 --> N9 : contains E874
+N0 --> N10 : contains E875
+N0 --> N11 : contains E876
+N0 --> N12 : contains E877
+N0 --> N13 : contains E878
+N0 --> N14 : contains E879
+N0 --> N15 : contains E880
+N0 --> N16 : contains E881
+N0 --> N17 : contains E882
+N0 --> N18 : contains E883
+N0 --> N19 : contains E884
+N0 --> N20 : contains E885
+N0 --> N21 : contains E886
+N0 --> N22 : contains E887
+N0 --> N23 : contains E888
+N0 --> N24 : contains E889
+N0 --> N25 : contains E890
+N0 --> N26 : contains E891
+N0 --> N27 : contains E892
+N27 --> N28 : contains E893
+N27 --> N29 : contains E894
+N27 --> N30 : contains E895
+N27 --> N31 : contains E896
+N27 --> N32 : contains E897
+N27 --> N33 : contains E898
+N27 --> N34 : contains E899
+N27 --> N35 : contains E900
+N27 --> N36 : contains E901
+N0 --> N37 : contains E902
+N37 --> N38 : contains E903
+N37 --> N39 : contains E904
+N37 --> N40 : contains E905
+N37 --> N41 : contains E906
+N37 --> N42 : contains E907
+N37 --> N43 : contains E908
+N37 --> N44 : contains E909
+N37 --> N45 : contains E910
+N37 --> N46 : contains E911
+N37 --> N47 : contains E912
+N37 --> N48 : contains E913
+N37 --> N49 : contains E914
+N37 --> N50 : contains E915
+N37 --> N51 : contains E916
+N37 --> N52 : contains E917
+N37 --> N53 : contains E918
+N37 --> N54 : contains E919
+N37 --> N55 : contains E920
+N37 --> N56 : contains E921
+N37 --> N57 : contains E922
+N37 --> N58 : contains E923
+N37 --> N59 : contains E924
+N37 --> N60 : contains E925
+N37 --> N61 : contains E926
+N37 --> N62 : contains E927
+N37 --> N63 : contains E928
+N37 --> N64 : contains E929
+N37 --> N65 : contains E930
+N37 --> N66 : contains E931
+N37 --> N67 : contains E932
+N37 --> N68 : contains E933
+N37 --> N69 : contains E934
+N37 --> N70 : contains E935
+N37 --> N71 : contains E936
+N37 --> N72 : contains E937
+N37 --> N73 : contains E938
+N0 --> N74 : contains E939
+N0 --> N75 : contains E940
+N75 --> N76 : contains E941
+N75 --> N77 : contains E942
+N75 --> N78 : contains E943
+N75 --> N79 : contains E944
+N75 --> N80 : contains E945
+N75 --> N81 : contains E946
+N75 --> N82 : contains E947
+N75 --> N83 : contains E948
+N75 --> N84 : contains E949
+N75 --> N85 : contains E950
+N75 --> N86 : contains E951
+N75 --> N87 : contains E952
+N75 --> N88 : contains E953
+N88 --> N89 : contains E954
+N88 --> N90 : contains E955
+N88 --> N91 : contains E956
+N88 --> N92 : contains E957
+N75 --> N93 : contains E958
+N93 --> N94 : contains E959
+N93 --> N95 : contains E960
+N75 --> N96 : contains E961
+N75 --> N97 : contains E962
+N97 --> N98 : contains E963
+N75 --> N99 : contains E964
+N99 --> N100 : contains E965
+N75 --> N101 : contains E966
+N75 --> N102 : contains E967
+N75 --> N103 : contains E968
+N75 --> N104 : contains E969
+N75 --> N105 : contains E970
+N105 --> N106 : contains E971
+N105 --> N107 : contains E972
+N75 --> N108 : contains E973
+N75 --> N109 : contains E974
+N75 --> N110 : contains E975
+N75 --> N111 : contains E976
+N75 --> N112 : contains E977
+N75 --> N113 : contains E978
+N75 --> N114 : contains E979
+N75 --> N74 : references E980
+N72 --> N27 : references E4639
+N75 --> N81 : calls E4650
+N75 --> N81 : calls E4651
+N76 --> N77 : calls E4652
+N76 --> N42 : calls E4654
+N76 --> N42 : calls E4656
+N75 --> N76 : calls E4657
+N79 --> N27 : references E4667
+N80 --> N27 : references E4668
+N80 --> N79 : calls E4669
+N81 --> N27 : references E4670
+N81 --> N79 : calls E4674
+N81 --> N80 : calls E4676
+N81 --> N80 : calls E4678
+N82 --> N27 : references E4679
+N82 --> N80 : calls E4680
+N82 --> N79 : calls E4681
+N83 --> N27 : references E4682
+N83 --> N77 : calls E4683
+N83 --> N82 : calls E4685
+N83 --> N80 : calls E4686
+N83 --> N81 : calls E4687
+N83 --> N42 : calls E4689
+N84 --> N27 : references E4690
+N84 --> N77 : calls E4691
+N84 --> N82 : calls E4692
+N85 --> N27 : references E4693
+N85 --> N77 : calls E4694
+N86 --> N27 : references E4695
+N86 --> N85 : calls E4696
+N86 --> N81 : calls E4697
+N86 --> N80 : calls E4698
+N86 --> N42 : calls E4700
+N86 --> N76 : calls E4701
+N87 --> N27 : references E4702
+N87 --> N85 : calls E4703
+N87 --> N45 : calls E4704
+N88 --> N27 : references E4706
+N89 --> N77 : calls E4708
+N90 --> N77 : calls E4709
+N88 --> N27 : references E4710
+N91 --> N89 : calls E4712
+N91 --> N81 : calls E4713
+N91 --> N42 : calls E4715
+N91 --> N76 : calls E4716
+N88 --> N89 : calls E4717
+N88 --> N89 : calls E4720
+N88 --> N91 : calls E4721
+N88 --> N89 : calls E4722
+N88 --> N89 : calls E4723
+N88 --> N91 : calls E4724
+N88 --> N89 : calls E4725
+N88 --> N90 : calls E4726
+N88 --> N82 : calls E4728
+N88 --> N89 : calls E4729
+N88 --> N90 : calls E4730
+N88 --> N89 : calls E4731
+N88 --> N91 : calls E4732
+N88 --> N89 : calls E4734
+N88 --> N92 : calls E4735
+N88 --> N89 : calls E4736
+N88 --> N89 : calls E4737
+N88 --> N89 : calls E4738
+N93 --> N27 : references E4739
+N94 --> N77 : calls E4741
+N93 --> N82 : calls E4742
+N93 --> N80 : calls E4743
+N93 --> N81 : calls E4744
+N95 --> N94 : calls E4745
+N95 --> N42 : calls E4747
+N95 --> N76 : calls E4748
+N93 --> N95 : calls E4749
+N93 --> N94 : calls E4751
+N93 --> N94 : calls E4753
+N93 --> N45 : calls E4754
+N93 --> N95 : calls E4755
+N93 --> N94 : calls E4756
+N93 --> N94 : calls E4757
+N93 --> N95 : calls E4758
+N93 --> N94 : calls E4759
+N93 --> N94 : calls E4760
+N93 --> N95 : calls E4761
+N93 --> N94 : calls E4762
+N75 --> N77 : calls E4763
+N97 --> N77 : calls E4767
+N98 --> N77 : calls E4768
+N97 --> N77 : calls E4772
+N97 --> N27 : references E4776
+N97 --> N42 : calls E4778
+N97 --> N93 : calls E4779
+N97 --> N42 : calls E4781
+N97 --> N27 : references E4782
+N97 --> N88 : calls E4783
+N97 --> N98 : calls E4790
+N97 --> N98 : calls E4791
+N97 --> N96 : calls E4793
+N97 --> N27 : references E4794
+N97 --> N98 : calls E4795
+N97 --> N98 : calls E4796
+N100 --> N77 : calls E4798
+N99 --> N100 : calls E4799
+N99 --> N97 : calls E4800
+N75 --> N97 : calls E4802
+N75 --> N77 : calls E4803
+N75 --> N88 : calls E4804
+N75 --> N97 : calls E4805
+N75 --> N77 : calls E4806
+N75 --> N27 : references E4812
+N75 --> N67 : calls E4814
+N75 --> N93 : calls E4815
+N75 --> N77 : calls E4817
+N75 --> N99 : calls E4818
+N75 --> N97 : calls E4819
+N75 --> N27 : references E4821
+N75 --> N93 : calls E4822
+N75 --> N77 : calls E4823
+N75 --> N99 : calls E4824
+N75 --> N77 : calls E4825
+N75 --> N93 : calls E4826
+N75 --> N77 : calls E4827
+N108 --> N77 : calls E4829
+N110 --> N27 : references E4831
+N110 --> N77 : calls E4832
+N110 --> N109 : calls E4833
+N110 --> N109 : calls E4834
+N110 --> N93 : calls E4835
+N112 --> N77 : calls E4836
+N113 --> N77 : calls E4837
+N75 --> N83 : calls E4842
+N75 --> N83 : calls E4843
+N75 --> N99 : calls E4844
+N75 --> N111 : calls E4845
+N75 --> N82 : calls E4846
+N75 --> N79 : calls E4847
+N75 --> N79 : calls E4848
+N75 --> N80 : calls E4850
+N75 --> N80 : calls E4853
+N75 --> N82 : calls E4854
+N75 --> N79 : calls E4855
+N75 --> N79 : calls E4856
+N75 --> N81 : calls E4857
+N75 --> N83 : calls E4858
+N75 --> N81 : calls E4859
+N75 --> N83 : calls E4860
+N75 --> N84 : calls E4861
+N75 --> N86 : calls E4862
+N75 --> N87 : calls E4863
+N75 --> N110 : calls E4866
+N75 --> N97 : calls E4867
+N75 --> N99 : calls E4868
+N75 --> N97 : calls E4869
+N75 --> N97 : calls E4870
+N75 --> N78 : references E4871
+N88 --> N89 : references E4872
+N88 --> N92 : references E4873
+N93 --> N94 : references E4874
+N97 --> N98 : references E4875
+N107 --> N106 : references E4876
+N105 --> N106 : references E4877
+N105 --> N107 : references E4878
+N75 --> N102 : references E4879
+N75 --> N103 : references E4880
+N75 --> N104 : references E4881
+N75 --> N114 : references E4882
+N75 --> N112 : references E4883
+N75 --> N77 : references E4884
+N75 --> N113 : references E4885
+N75 --> N108 : references E4887
+N75 --> N101 : references E4888
+N75 --> N109 : references E4889
+N75 --> N105 : references E4890
+@enduml

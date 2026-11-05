@@ -1,0 +1,35 @@
+@startuml
+title tests/session-profile.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "session-profile.test.ts\nfile L1-93\nfile:tests/session-profile.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:8801e28dcec81453ef538c36c4c99b0b" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:1eb204ca0b5c29da74e5aebe7e8bc74e" as N2
+rectangle "../src/services/sessionProfile\nimport L3-3\nimport:84137fe812cdf3fc0ace3860b3716cd3" as N3
+rectangle "ready\nfunction L5-5\nfunction:76c21121814433891872749c3564b217" as N4
+rectangle "deferred\nfunction L6-11\nfunction:7482735d1da50c1345b26467e3cb4a1d" as N5
+N0 --> N1 : contains E2751
+N0 --> N2 : contains E2752
+N0 --> N3 : contains E2753
+N0 --> N4 : contains E2754
+N0 --> N5 : contains E2755
+N0 --> N4 : calls E6702
+N0 --> N4 : calls E6704
+N0 --> N4 : calls E6706
+N0 --> N4 : calls E6708
+N0 --> N4 : calls E6710
+N0 --> N4 : calls E6712
+N0 --> N4 : calls E6714
+N0 --> N4 : calls E6716
+N0 --> N5 : calls E6717
+N0 --> N4 : calls E6720
+N0 --> N4 : calls E6722
+N0 --> N5 : calls E6723
+N0 --> N5 : calls E6724
+N0 --> N4 : calls E6727
+N0 --> N5 : calls E6728
+N0 --> N4 : calls E6731
+N0 --> N4 : calls E6734
+N0 --> N5 : calls E6735
+@enduml

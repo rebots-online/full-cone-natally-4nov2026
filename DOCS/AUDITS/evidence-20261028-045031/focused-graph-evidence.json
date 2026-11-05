@@ -1,0 +1,1445 @@
+[
+  {
+    "id": "function:f1726a30ba9767151a2ebbe94215aafa",
+    "name": "purchaseCheckoutOffer",
+    "kind": "function",
+    "file_path": "src/services/revenueCatCheckout.ts",
+    "start_line": 252,
+    "end_line": 327,
+    "incoming": [
+      {
+        "id": 5005,
+        "kind": "calls",
+        "name": "startPurchase",
+        "file_path": "src/components/PurchaseAccess.tsx",
+        "line": 143,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"purchaseCheckoutOffer\"}"
+      },
+      {
+        "id": 3255,
+        "kind": "imports",
+        "name": "PurchaseAccess.tsx",
+        "file_path": "src/components/PurchaseAccess.tsx",
+        "line": 6,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"purchaseCheckoutOffer\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 6027,
+        "kind": "calls",
+        "name": "serialize",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 262,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"serialize\"}"
+      },
+      {
+        "id": 6028,
+        "kind": "calls",
+        "name": "cachedOffer",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 266,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"cachedOffer\"}"
+      },
+      {
+        "id": 6031,
+        "kind": "calls",
+        "name": "auth",
+        "file_path": "src/services/firebase.ts",
+        "line": 273,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"auth.authStateReady\"}"
+      },
+      {
+        "id": 6032,
+        "kind": "calls",
+        "name": "assertGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 274,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"assertGeneration\"}"
+      },
+      {
+        "id": 6033,
+        "kind": "calls",
+        "name": "currentUid",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 275,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"currentUid\"}"
+      },
+      {
+        "id": 6035,
+        "kind": "calls",
+        "name": "ensureSdkForOwner",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 279,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"ensureSdkForOwner\"}"
+      },
+      {
+        "id": 6036,
+        "kind": "calls",
+        "name": "assertGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 280,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"assertGeneration\"}"
+      },
+      {
+        "id": 6039,
+        "kind": "calls",
+        "name": "isUserCancelled",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 309,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"isUserCancelled\"}"
+      },
+      {
+        "id": 6041,
+        "kind": "calls",
+        "name": "assertGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 314,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"assertGeneration\"}"
+      },
+      {
+        "id": 6026,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 258,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6029,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 267,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6030,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 271,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6034,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 277,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6037,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 282,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6038,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 289,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6040,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 312,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6042,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 317,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 2115,
+        "kind": "references",
+        "name": "purchaseInFlight",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 2116,
+        "kind": "references",
+        "name": "TERMS_URL",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 2117,
+        "kind": "references",
+        "name": "MAPPING",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 2118,
+        "kind": "references",
+        "name": "authGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 2119,
+        "kind": "references",
+        "name": "quoteCache",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 6023,
+        "kind": "references",
+        "name": "CheckoutOffer",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 253,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutOffer\"}"
+      },
+      {
+        "id": 6024,
+        "kind": "references",
+        "name": "CheckoutPurchaseOutcome",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 255,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutPurchaseOutcome\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:9fd531f2382390961dc4b63e3c5273d1",
+    "name": "signInNative",
+    "kind": "function",
+    "file_path": "src/services/nativeAuth.ts",
+    "start_line": 8,
+    "end_line": 18,
+    "incoming": [
+      {
+        "id": 4490,
+        "kind": "calls",
+        "name": "handleGoogleSignIn",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 74,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"signInNative\"}"
+      },
+      {
+        "id": 4492,
+        "kind": "calls",
+        "name": "handleNativePhone",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 93,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"signInNative\"}"
+      },
+      {
+        "id": 3078,
+        "kind": "imports",
+        "name": "AuthModal.tsx",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 17,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"signInNative\"}"
+      }
+    ],
+    "outgoing": []
+  },
+  {
+    "id": "function:13c3bc76c54351f06e95d026e7ab09f0",
+    "name": "handleGoogleSignIn",
+    "kind": "function",
+    "file_path": "src/components/AuthModal.tsx",
+    "start_line": 67,
+    "end_line": 85,
+    "incoming": [
+      {
+        "id": 4508,
+        "kind": "references",
+        "name": "AuthModal",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 250,
+        "metadata": "{\"confidence\":0.95,\"resolvedBy\":\"function-ref\",\"refName\":\"handleGoogleSignIn\",\"refKind\":\"function_ref\",\"fnRef\":true}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 4490,
+        "kind": "calls",
+        "name": "signInNative",
+        "file_path": "src/services/nativeAuth.ts",
+        "line": 74,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"signInNative\"}"
+      },
+      {
+        "id": 4491,
+        "kind": "calls",
+        "name": "onClose",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 76,
+        "metadata": "{\"confidence\":0.7,\"resolvedBy\":\"exact-match\",\"refName\":\"onClose\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:11fae033001a244943c10ac7407c1e99",
+    "name": "handleNativePhone",
+    "kind": "function",
+    "file_path": "src/components/AuthModal.tsx",
+    "start_line": 87,
+    "end_line": 103,
+    "incoming": [
+      {
+        "id": 4510,
+        "kind": "references",
+        "name": "AuthModal",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 367,
+        "metadata": "{\"confidence\":0.95,\"resolvedBy\":\"function-ref\",\"refName\":\"handleNativePhone\",\"refKind\":\"function_ref\",\"fnRef\":true}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 4492,
+        "kind": "calls",
+        "name": "signInNative",
+        "file_path": "src/services/nativeAuth.ts",
+        "line": 93,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"signInNative\"}"
+      },
+      {
+        "id": 4493,
+        "kind": "calls",
+        "name": "onClose",
+        "file_path": "src/components/AuthModal.tsx",
+        "line": 94,
+        "metadata": "{\"confidence\":0.7,\"resolvedBy\":\"exact-match\",\"refName\":\"onClose\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:bc2887d7f330fe9772f8b2fc7840b866",
+    "name": "createSouvenir",
+    "kind": "function",
+    "file_path": "src/services/souvenir.ts",
+    "start_line": 330,
+    "end_line": 390,
+    "incoming": [
+      {
+        "id": 4549,
+        "kind": "calls",
+        "name": "handleExportPDF",
+        "file_path": "src/components/ExportModal.tsx",
+        "line": 89,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"createSouvenir\"}"
+      },
+      {
+        "id": 3102,
+        "kind": "imports",
+        "name": "ExportModal.tsx",
+        "file_path": "src/components/ExportModal.tsx",
+        "line": 7,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"createSouvenir\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 6170,
+        "kind": "calls",
+        "name": "auth",
+        "file_path": "src/services/firebase.ts",
+        "line": 331,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"auth.authStateReady\"}"
+      },
+      {
+        "id": 6171,
+        "kind": "calls",
+        "name": "restoreCheckoutCustomer",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 337,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"restoreCheckoutCustomer\"}"
+      },
+      {
+        "id": 6172,
+        "kind": "calls",
+        "name": "hasActiveEntitlements",
+        "file_path": "src/services/souvenir.ts",
+        "line": 338,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"hasActiveEntitlements\"}"
+      },
+      {
+        "id": 6173,
+        "kind": "calls",
+        "name": "buildSouvenirContent",
+        "file_path": "src/services/souvenir.ts",
+        "line": 342,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildSouvenirContent\"}"
+      },
+      {
+        "id": 6174,
+        "kind": "calls",
+        "name": "hashContent",
+        "file_path": "src/services/souvenir.ts",
+        "line": 348,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"hashContent\"}"
+      },
+      {
+        "id": 6175,
+        "kind": "calls",
+        "name": "current",
+        "file_path": "src/services/souvenir.ts",
+        "line": 352,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"current\"}"
+      },
+      {
+        "id": 6176,
+        "kind": "calls",
+        "name": "current",
+        "file_path": "src/services/souvenir.ts",
+        "line": 354,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"current\"}"
+      },
+      {
+        "id": 6177,
+        "kind": "calls",
+        "name": "souvenirDoc",
+        "file_path": "src/services/souvenir.ts",
+        "line": 355,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"souvenirDoc\"}"
+      },
+      {
+        "id": 6178,
+        "kind": "calls",
+        "name": "validateSnapshotShape",
+        "file_path": "src/services/souvenir.ts",
+        "line": 362,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"validateSnapshotShape\"}"
+      },
+      {
+        "id": 6180,
+        "kind": "calls",
+        "name": "validateSnapshotShape",
+        "file_path": "src/services/souvenir.ts",
+        "line": 377,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"validateSnapshotShape\"}"
+      },
+      {
+        "id": 6181,
+        "kind": "calls",
+        "name": "current",
+        "file_path": "src/services/souvenir.ts",
+        "line": 386,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"current\"}"
+      },
+      {
+        "id": 6182,
+        "kind": "calls",
+        "name": "saveAccountValue",
+        "file_path": "src/services/accountStorage.ts",
+        "line": 388,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"saveAccountValue\"}"
+      },
+      {
+        "id": 2269,
+        "kind": "references",
+        "name": "MAX_PAYLOAD_BYTES",
+        "file_path": "src/services/souvenir.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 2270,
+        "kind": "references",
+        "name": "MIN_RETENTION_DAYS",
+        "file_path": "src/services/souvenir.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 6167,
+        "kind": "references",
+        "name": "NatalChartResult",
+        "file_path": "src/services/ephemeris.ts",
+        "line": 330,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"NatalChartResult\"}"
+      },
+      {
+        "id": 6168,
+        "kind": "references",
+        "name": "SouvenirSnapshot",
+        "file_path": "src/services/souvenir.ts",
+        "line": 330,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"SouvenirSnapshot\"}"
+      },
+      {
+        "id": 6179,
+        "kind": "references",
+        "name": "SouvenirSnapshot",
+        "file_path": "src/services/souvenir.ts",
+        "line": 366,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"SouvenirSnapshot\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:bb137d7ce8e2797437bbdb06dd3f37d1",
+    "name": "loadSouvenir",
+    "kind": "function",
+    "file_path": "src/services/souvenir.ts",
+    "start_line": 393,
+    "end_line": 421,
+    "incoming": [
+      {
+        "id": 5268,
+        "kind": "calls",
+        "name": "loadSnapshot",
+        "file_path": "src/components/SouvenirViewer.tsx",
+        "line": 80,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"loadSouvenir\"}"
+      },
+      {
+        "id": 3354,
+        "kind": "imports",
+        "name": "SouvenirViewer.tsx",
+        "file_path": "src/components/SouvenirViewer.tsx",
+        "line": 14,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"loadSouvenir\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 6185,
+        "kind": "calls",
+        "name": "auth",
+        "file_path": "src/services/firebase.ts",
+        "line": 394,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"auth.authStateReady\"}"
+      },
+      {
+        "id": 6187,
+        "kind": "calls",
+        "name": "souvenirDoc",
+        "file_path": "src/services/souvenir.ts",
+        "line": 401,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"souvenirDoc\"}"
+      },
+      {
+        "id": 6188,
+        "kind": "calls",
+        "name": "validateSnapshotShape",
+        "file_path": "src/services/souvenir.ts",
+        "line": 409,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"validateSnapshotShape\"}"
+      },
+      {
+        "id": 6189,
+        "kind": "calls",
+        "name": "loadAccountValue",
+        "file_path": "src/services/accountStorage.ts",
+        "line": 414,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"loadAccountValue\"}"
+      },
+      {
+        "id": 6190,
+        "kind": "calls",
+        "name": "validateSnapshotShape",
+        "file_path": "src/services/souvenir.ts",
+        "line": 416,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"validateSnapshotShape\"}"
+      },
+      {
+        "id": 6191,
+        "kind": "calls",
+        "name": "saveAccountValue",
+        "file_path": "src/services/accountStorage.ts",
+        "line": 419,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"saveAccountValue\"}"
+      },
+      {
+        "id": 2271,
+        "kind": "references",
+        "name": "ID_PATTERN",
+        "file_path": "src/services/souvenir.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 6183,
+        "kind": "references",
+        "name": "SouvenirSnapshot",
+        "file_path": "src/services/souvenir.ts",
+        "line": 393,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"SouvenirSnapshot\"}"
+      },
+      {
+        "id": 6186,
+        "kind": "references",
+        "name": "SouvenirSnapshot",
+        "file_path": "src/services/souvenir.ts",
+        "line": 399,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"SouvenirSnapshot\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:9dd9b0d1be13e4bcf1aea67ab2c92dcb",
+    "name": "getAuthoredChartExplanation",
+    "kind": "function",
+    "file_path": "src/services/authoredChartExplanations.ts",
+    "start_line": 242,
+    "end_line": 292,
+    "incoming": [
+      {
+        "id": 4774,
+        "kind": "calls",
+        "name": "handleSendMessage",
+        "file_path": "src/components/NatallyChatbot.tsx",
+        "line": 666,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 4811,
+        "kind": "calls",
+        "name": "NatallyChatbot",
+        "file_path": "src/components/NatallyChatbot.tsx",
+        "line": 850,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 6140,
+        "kind": "calls",
+        "name": "buildChapters",
+        "file_path": "src/services/souvenir.ts",
+        "line": 129,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 6141,
+        "kind": "calls",
+        "name": "buildChapters",
+        "file_path": "src/services/souvenir.ts",
+        "line": 148,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 6142,
+        "kind": "calls",
+        "name": "buildChapters",
+        "file_path": "src/services/souvenir.ts",
+        "line": 152,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 6143,
+        "kind": "calls",
+        "name": "buildChapters",
+        "file_path": "src/services/souvenir.ts",
+        "line": 157,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 3166,
+        "kind": "imports",
+        "name": "NatallyChatbot.tsx",
+        "file_path": "src/components/NatallyChatbot.tsx",
+        "line": 40,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      },
+      {
+        "id": 3568,
+        "kind": "imports",
+        "name": "souvenir.ts",
+        "file_path": "src/services/souvenir.ts",
+        "line": 3,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getAuthoredChartExplanation\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 5523,
+        "kind": "calls",
+        "name": "sanitizeName",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 243,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"sanitizeName\"}"
+      },
+      {
+        "id": 5524,
+        "kind": "calls",
+        "name": "resolveChartTarget",
+        "file_path": "src/services/chartTargets.ts",
+        "line": 245,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"resolveChartTarget\"}"
+      },
+      {
+        "id": 5525,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 247,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5526,
+        "kind": "calls",
+        "name": "chartTargetLabel",
+        "file_path": "src/services/chartTargets.ts",
+        "line": 249,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"chartTargetLabel\"}"
+      },
+      {
+        "id": 5527,
+        "kind": "calls",
+        "name": "resolveDatedTarget",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 251,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"resolveDatedTarget\"}"
+      },
+      {
+        "id": 5528,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 254,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5529,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 261,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5530,
+        "kind": "calls",
+        "name": "bodyFacts",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 261,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"bodyFacts\"}"
+      },
+      {
+        "id": 5531,
+        "kind": "calls",
+        "name": "ZODIAC_SIGNS",
+        "file_path": "src/services/ephemeris.ts",
+        "line": 265,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"ZODIAC_SIGNS.find\"}"
+      },
+      {
+        "id": 5532,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 268,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5533,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 277,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5534,
+        "kind": "calls",
+        "name": "ordinal",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 277,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"ordinal\"}"
+      },
+      {
+        "id": 5535,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 287,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5536,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 290,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 5537,
+        "kind": "calls",
+        "name": "buildLesson",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 291,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"buildLesson\"}"
+      },
+      {
+        "id": 1457,
+        "kind": "references",
+        "name": "GENERAL_LESSON",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1458,
+        "kind": "references",
+        "name": "GENERAL_TITLE",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1459,
+        "kind": "references",
+        "name": "ASPECT_CORES",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1460,
+        "kind": "references",
+        "name": "HOUSE_SYSTEMS_CONTEXT",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1461,
+        "kind": "references",
+        "name": "HOUSE_CORES",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1462,
+        "kind": "references",
+        "name": "HOUSE_TOPICS",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1463,
+        "kind": "references",
+        "name": "SIGN_CORES",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 1464,
+        "kind": "references",
+        "name": "BODIES",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 5520,
+        "kind": "references",
+        "name": "NatalChartResult",
+        "file_path": "src/services/ephemeris.ts",
+        "line": 242,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"NatalChartResult\"}"
+      },
+      {
+        "id": 5521,
+        "kind": "references",
+        "name": "AuthoredExplanation",
+        "file_path": "src/services/authoredChartExplanations.ts",
+        "line": 242,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"AuthoredExplanation\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:b7449c876a247cce9652439fc4d79ce1",
+    "name": "reconcileBillingAccess",
+    "kind": "function",
+    "file_path": "src/services/billingAccess.ts",
+    "start_line": 167,
+    "end_line": 169,
+    "incoming": [
+      {
+        "id": 4583,
+        "kind": "calls",
+        "name": "refreshBilling",
+        "file_path": "src/components/InferenceAccessSettings.tsx",
+        "line": 70,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"reconcileBillingAccess\"}"
+      },
+      {
+        "id": 5009,
+        "kind": "calls",
+        "name": "startPurchase",
+        "file_path": "src/components/PurchaseAccess.tsx",
+        "line": 156,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"reconcileBillingAccess\"}"
+      },
+      {
+        "id": 5026,
+        "kind": "calls",
+        "name": "restore",
+        "file_path": "src/components/PurchaseAccess.tsx",
+        "line": 193,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"reconcileBillingAccess\"}"
+      },
+      {
+        "id": 3116,
+        "kind": "imports",
+        "name": "InferenceAccessSettings.tsx",
+        "file_path": "src/components/InferenceAccessSettings.tsx",
+        "line": 5,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"reconcileBillingAccess\"}"
+      },
+      {
+        "id": 3259,
+        "kind": "imports",
+        "name": "PurchaseAccess.tsx",
+        "file_path": "src/components/PurchaseAccess.tsx",
+        "line": 7,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"reconcileBillingAccess\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 5587,
+        "kind": "calls",
+        "name": "requestBillingAccess",
+        "file_path": "src/services/billingAccess.ts",
+        "line": 168,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"requestBillingAccess\"}"
+      },
+      {
+        "id": 5585,
+        "kind": "references",
+        "name": "BillingAccess",
+        "file_path": "src/services/billingAccess.ts",
+        "line": 167,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"BillingAccess\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:42133b7d0eb6a935ffe006f8d30c33b6",
+    "name": "getRocheBalance",
+    "kind": "function",
+    "file_path": "src/services/revenueCatCheckout.ts",
+    "start_line": 361,
+    "end_line": 390,
+    "incoming": [
+      {
+        "id": 4580,
+        "kind": "calls",
+        "name": "refreshBalance",
+        "file_path": "src/components/InferenceAccessSettings.tsx",
+        "line": 32,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getRocheBalance\"}"
+      },
+      {
+        "id": 5548,
+        "kind": "calls",
+        "name": "requireRoche",
+        "file_path": "src/services/billingAccess.ts",
+        "line": 73,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getRocheBalance\"}"
+      },
+      {
+        "id": 3112,
+        "kind": "imports",
+        "name": "InferenceAccessSettings.tsx",
+        "file_path": "src/components/InferenceAccessSettings.tsx",
+        "line": 3,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getRocheBalance\"}"
+      },
+      {
+        "id": 3406,
+        "kind": "imports",
+        "name": "billingAccess.ts",
+        "file_path": "src/services/billingAccess.ts",
+        "line": 3,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"getRocheBalance\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 6056,
+        "kind": "calls",
+        "name": "serialize",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 367,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"serialize\"}"
+      },
+      {
+        "id": 6057,
+        "kind": "calls",
+        "name": "auth",
+        "file_path": "src/services/firebase.ts",
+        "line": 369,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"auth.authStateReady\"}"
+      },
+      {
+        "id": 6058,
+        "kind": "calls",
+        "name": "assertGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 370,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"assertGeneration\"}"
+      },
+      {
+        "id": 6059,
+        "kind": "calls",
+        "name": "currentUid",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 371,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"currentUid\"}"
+      },
+      {
+        "id": 6060,
+        "kind": "calls",
+        "name": "ensureSdkForOwner",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 372,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"ensureSdkForOwner\"}"
+      },
+      {
+        "id": 6061,
+        "kind": "calls",
+        "name": "assertGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 373,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"assertGeneration\"}"
+      },
+      {
+        "id": 6063,
+        "kind": "calls",
+        "name": "assertGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 379,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"assertGeneration\"}"
+      },
+      {
+        "id": 6055,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 364,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6062,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 375,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6064,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 381,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 6065,
+        "kind": "instantiates",
+        "name": "CheckoutError",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 386,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CheckoutError\"}"
+      },
+      {
+        "id": 2122,
+        "kind": "references",
+        "name": "authGeneration",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 2123,
+        "kind": "references",
+        "name": "purchaseInFlight",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 6053,
+        "kind": "references",
+        "name": "RocheBalance",
+        "file_path": "src/services/revenueCatCheckout.ts",
+        "line": 361,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"RocheBalance\"}"
+      }
+    ]
+  },
+  {
+    "id": "function:edc498a14f72bec86fa7f5969e7e1ce1",
+    "name": "completeHosted",
+    "kind": "function",
+    "file_path": "src/services/hostedInference.ts",
+    "start_line": 96,
+    "end_line": 210,
+    "incoming": [
+      {
+        "id": 4050,
+        "kind": "calls",
+        "name": "verify-calculation-api.mjs",
+        "file_path": "scripts/verify-calculation-api.mjs",
+        "line": 35,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 5741,
+        "kind": "calls",
+        "name": "requestHostedInference",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 227,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6474,
+        "kind": "calls",
+        "name": "account-isolation.test.ts",
+        "file_path": "tests/account-isolation.test.ts",
+        "line": 58,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6475,
+        "kind": "calls",
+        "name": "account-isolation.test.ts",
+        "file_path": "tests/account-isolation.test.ts",
+        "line": 76,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6514,
+        "kind": "calls",
+        "name": "calculation-tools.test.ts",
+        "file_path": "tests/calculation-tools.test.ts",
+        "line": 54,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6519,
+        "kind": "calls",
+        "name": "calculation-tools.test.ts",
+        "file_path": "tests/calculation-tools.test.ts",
+        "line": 84,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6520,
+        "kind": "calls",
+        "name": "calculation-tools.test.ts",
+        "file_path": "tests/calculation-tools.test.ts",
+        "line": 99,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6647,
+        "kind": "calls",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 15,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6648,
+        "kind": "calls",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 23,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6649,
+        "kind": "calls",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 28,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6650,
+        "kind": "calls",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 36,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6651,
+        "kind": "calls",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 46,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 6652,
+        "kind": "calls",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 55,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 2887,
+        "kind": "imports",
+        "name": "verify-calculation-api.mjs",
+        "file_path": "scripts/verify-calculation-api.mjs",
+        "line": 6,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 3631,
+        "kind": "imports",
+        "name": "account-isolation.test.ts",
+        "file_path": "tests/account-isolation.test.ts",
+        "line": 5,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 3657,
+        "kind": "imports",
+        "name": "calculation-tools.test.ts",
+        "file_path": "tests/calculation-tools.test.ts",
+        "line": 5,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      },
+      {
+        "id": 3682,
+        "kind": "imports",
+        "name": "natally-regression-suite.ts",
+        "file_path": "tests/natally-regression-suite.ts",
+        "line": 3,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"completeHosted\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 5725,
+        "kind": "calls",
+        "name": "createReadingDeadline",
+        "file_path": "src/services/readingDeadline.ts",
+        "line": 117,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"createReadingDeadline\"}"
+      },
+      {
+        "id": 5728,
+        "kind": "calls",
+        "name": "readOpenRouterStream",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 145,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"readOpenRouterStream\"}"
+      },
+      {
+        "id": 5731,
+        "kind": "calls",
+        "name": "hasCorruptReadingText",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 173,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"hasCorruptReadingText\"}"
+      },
+      {
+        "id": 5724,
+        "kind": "instantiates",
+        "name": "HostedAuthenticationError",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 97,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedAuthenticationError\"}"
+      },
+      {
+        "id": 5726,
+        "kind": "instantiates",
+        "name": "HostedAuthenticationError",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 121,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedAuthenticationError\"}"
+      },
+      {
+        "id": 5727,
+        "kind": "instantiates",
+        "name": "HostedAuthenticationError",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 138,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedAuthenticationError\"}"
+      },
+      {
+        "id": 5729,
+        "kind": "instantiates",
+        "name": "HostedAuthenticationError",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 148,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedAuthenticationError\"}"
+      },
+      {
+        "id": 5730,
+        "kind": "instantiates",
+        "name": "HostedAuthenticationError",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 154,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedAuthenticationError\"}"
+      },
+      {
+        "id": 5732,
+        "kind": "instantiates",
+        "name": "HostedAuthenticationError",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 195,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedAuthenticationError\"}"
+      },
+      {
+        "id": 5722,
+        "kind": "references",
+        "name": "HostedPayload",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 96,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"HostedPayload\"}"
+      },
+      {
+        "id": 5723,
+        "kind": "references",
+        "name": "CalculationExecutor",
+        "file_path": "src/services/hostedInference.ts",
+        "line": 96,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"CalculationExecutor\"}"
+      },
+      {
+        "id": 5742,
+        "kind": "references",
+        "name": "validToolCall",
+        "file_path": "netlify/lib/astrology-tools.mjs",
+        "line": 191,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"validToolCall\",\"refKind\":\"function_ref\",\"fnRef\":true}"
+      }
+    ]
+  },
+  {
+    "id": "function:17c73cfb302a969125c0ed7646ace6bb",
+    "name": "generatePwa",
+    "kind": "function",
+    "file_path": "scripts/pwa-build.mjs",
+    "start_line": 18,
+    "end_line": 82,
+    "incoming": [
+      {
+        "id": 3967,
+        "kind": "calls",
+        "name": "build-web.mjs",
+        "file_path": "scripts/build-web.mjs",
+        "line": 13,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 6653,
+        "kind": "calls",
+        "name": "pwa-browser.test.mjs",
+        "file_path": "tests/pwa-browser.test.mjs",
+        "line": 31,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 6655,
+        "kind": "calls",
+        "name": "pwa-build.test.mjs",
+        "file_path": "tests/pwa-build.test.mjs",
+        "line": 17,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 6656,
+        "kind": "calls",
+        "name": "pwa-build.test.mjs",
+        "file_path": "tests/pwa-build.test.mjs",
+        "line": 18,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 6657,
+        "kind": "calls",
+        "name": "pwa-build.test.mjs",
+        "file_path": "tests/pwa-build.test.mjs",
+        "line": 51,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 2875,
+        "kind": "imports",
+        "name": "build-web.mjs",
+        "file_path": "scripts/build-web.mjs",
+        "line": 5,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 3685,
+        "kind": "imports",
+        "name": "pwa-browser.test.mjs",
+        "file_path": "tests/pwa-browser.test.mjs",
+        "line": 8,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      },
+      {
+        "id": 3687,
+        "kind": "imports",
+        "name": "pwa-build.test.mjs",
+        "file_path": "tests/pwa-build.test.mjs",
+        "line": 7,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"import\",\"refName\":\"generatePwa\"}"
+      }
+    ],
+    "outgoing": [
+      {
+        "id": 3986,
+        "kind": "calls",
+        "name": "walk",
+        "file_path": "scripts/pwa-build.mjs",
+        "line": 27,
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"walk\"}"
+      },
+      {
+        "id": 250,
+        "kind": "references",
+        "name": "BRANDING_ICONS",
+        "file_path": "scripts/pwa-build.mjs",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 251,
+        "kind": "references",
+        "name": "SHELL_FILES",
+        "file_path": "scripts/pwa-build.mjs",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      },
+      {
+        "id": 252,
+        "kind": "references",
+        "name": "ASSET_EXTS",
+        "file_path": "scripts/pwa-build.mjs",
+        "line": null,
+        "metadata": "{\"valueRef\":true}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "through": "e94f8d22e8450035595b362652cadccee865fb1c",
+  "commits": 31,
+  "records": 5252,
+  "added": 5091,
+  "removed": 153,
+  "binary": 8,
+  "sha256": "d71c23b77c5218786bb1e2aa17871e82206b6ed487f3d5c64260aedef29b4388",
+  "exclusion": "DOCS/SESSION-CHANGES-2026-10-27.jsonl"
+}

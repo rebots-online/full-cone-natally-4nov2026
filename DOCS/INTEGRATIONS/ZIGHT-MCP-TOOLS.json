@@ -1,0 +1,358 @@
+{
+  "name": "zight",
+  "runtimeStatus": null,
+  "pluginId": null,
+  "httpOrigin": "https://mcp.zight.com",
+  "serverInfo": {
+    "name": "zight-mcp",
+    "title": null,
+    "version": "1.0.0",
+    "description": null,
+    "icons": null,
+    "websiteUrl": null
+  },
+  "serverCapabilities": {
+    "logging": {},
+    "prompts": {
+      "listChanged": true
+    },
+    "resources": {
+      "listChanged": true
+    },
+    "tools": {
+      "listChanged": true
+    }
+  },
+  "tools": {
+    "get_transcript": {
+      "name": "get_transcript",
+      "description": "Retrieve the transcript for a Zight video or recording by its item ID or share URL slug (e.g. from https://share.zight.com/abc123, use 'abc123')",
+      "inputSchema": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Zight item ID or slug from a share URL"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      }
+    },
+    "get_data_logs": {
+      "name": "get_data_logs",
+      "description": "Get the data logs (Insights) download URL for a Zight item by its ID or share URL slug (e.g. from https://share.zight.com/abc123, use 'abc123'). Returns the URL to download the insights zip file.",
+      "inputSchema": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Zight item ID or slug from a share URL"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      }
+    },
+    "report_agent_run": {
+      "name": "report_agent_run",
+      "title": "Report the outcome of a Zight agent run",
+      "description": "Record the outcome of running a Zight agent you got from get_agent, so the run appears in the agent's run history in Zight. Call it once, when the run finishes or stops.\n\nstatus is completed when every step succeeded, failed when a step failed, or cancelled when the user stopped the run. List each step you attempted with its sequence number and whether it succeeded; set manual when the user performed the step.",
+      "inputSchema": {
+        "properties": {
+          "agent_id": {
+            "type": "string",
+            "description": "The agent's ID, as returned by get_agent"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "steps": {
+            "type": "array",
+            "maxItems": 200,
+            "items": {
+              "type": "object",
+              "properties": {
+                "sequence": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "manual": {
+                  "type": "boolean",
+                  "description": "True when the user performed this step"
+                },
+                "error": {
+                  "type": "string",
+                  "description": "Why the step failed, if it did"
+                }
+              },
+              "required": [
+                "sequence",
+                "success"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "agent_id",
+          "status",
+          "steps"
+        ],
+        "additionalProperties": false,
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    "get_agent": {
+      "name": "get_agent",
+      "title": "Get a Zight agent's steps",
+      "description": "Get the steps of a Zight agent so you can run them in the user's browser. Agents are generated from Zight screen recordings: each one replays the workflow shown in the recording.\n\nPass agent_id, or the recording's share link or item ID to use the agent generated from it. Optionally pass parameter values to fill into the steps.\n\nReturns a runbook: how_to_run rules, the parameters, and the ordered steps with best-first locators and a check for each. You need a browser automation tool to carry out the steps; follow how_to_run exactly.",
+      "inputSchema": {
+        "properties": {
+          "agent_id": {
+            "type": "string",
+            "description": "The agent's ID"
+          },
+          "recording": {
+            "type": "string",
+            "description": "Share link, item ID or slug of the recording the agent was generated from"
+          },
+          "parameters": {
+            "type": "object",
+            "description": "Values for the agent's parameters, keyed by parameter key",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    "download_item": {
+      "name": "download_item",
+      "description": "Download a Zight item by its ID or share URL slug. For images, returns the image data directly. For other types, returns the download URL.",
+      "inputSchema": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Zight item ID or slug from a share URL"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      }
+    },
+    "get_ocr": {
+      "name": "get_ocr",
+      "description": "Extract OCR text from a Zight image by its item ID or share URL slug (e.g. from https://share.zight.com/abc123, use 'abc123'). Returns the full extracted text and line-by-line data with bounding boxes.",
+      "inputSchema": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Zight item ID or slug from a share URL"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      }
+    },
+    "get_item": {
+      "name": "get_item",
+      "description": "Retrieve full metadata for a Zight item by its ID or share URL slug (e.g. from https://share.zight.com/abc123, use 'abc123')",
+      "inputSchema": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Zight item ID or slug from a share URL"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "type": "object"
+      }
+    },
+    "complete_request_reply": {
+      "name": "complete_request_reply",
+      "title": "Complete a reply to a request link",
+      "description": "Finish a reply started with start_request_reply, after its reply_command has run successfully. This sends the uploaded file to the requester. Call it once per reply_id.",
+      "inputSchema": {
+        "properties": {
+          "reply_id": {
+            "type": "string",
+            "description": "The reply_id returned by start_request_reply"
+          }
+        },
+        "required": [
+          "reply_id"
+        ],
+        "additionalProperties": false,
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    "create_request_link": {
+      "name": "create_request_link",
+      "title": "Create request link",
+      "description": "Create a Zight request link in the user's current Zight workspace. Anyone with the link can reply by recording a video, uploading a screenshot, or uploading a file, depending on content_type.\n\ncontent_type: infer from the user's wording (\"screenshot\"/\"image\" -> image, \"file\"/\"document\"/\"attachment\" -> file, \"video\"/\"recording\" -> video). If the wording is ambiguous, confirm with the user before calling. Defaults to video.\n\ntitle and description default to the workspace's request settings for that content type when omitted.\n\ncustom_id links the request to an external record (e.g. a Zendesk ticket or Salesforce case ID) and requires integration_name. It is ignored when the workspace has no premium integrations.\n\ncollect_logs (video only) asks the replier to share browser logs; it requires the workspace's log collection feature.\n\nAfter creating the link, share request_link with the user on its own in a code block so they can copy it.\n\nCreation is never retried automatically. If the result is uncertain, check the user's Zight requests before calling again to avoid duplicates.",
+      "inputSchema": {
+        "properties": {
+          "content_type": {
+            "type": "string",
+            "enum": [
+              "video",
+              "image",
+              "file"
+            ],
+            "description": "What the replier submits: video (default), image (screenshot), or file"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "description": "Request title shown to the replier"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 700,
+            "description": "Instructions shown to the replier"
+          },
+          "expires_at": {
+            "type": "string",
+            "description": "Optional ISO 8601 expiry with timezone offset, e.g. 2026-10-31T17:00:00-07:00. Must be in the future"
+          },
+          "collect_logs": {
+            "type": "boolean",
+            "description": "Video only. Collect browser logs with the reply"
+          },
+          "custom_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 24,
+            "description": "External record ID, e.g. a Zendesk ticket or Salesforce case ID"
+          },
+          "integration_name": {
+            "type": "string",
+            "enum": [
+              "zendesk",
+              "salesforce",
+              "intercom"
+            ],
+            "description": "Integration that owns custom_id. Required when custom_id is set"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    "search_items": {
+      "name": "search_items",
+      "description": "Search for Zight items by name, type, or other filters. Returns items with their IDs/slugs that can be used with other tools.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Filter by item name"
+          },
+          "type": {
+            "type": "string",
+            "description": "Filter by type (image, video, gif, document)"
+          },
+          "page": {
+            "type": "integer",
+            "description": "Page number"
+          },
+          "per_page": {
+            "type": "integer",
+            "description": "Items per page"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "start_request_reply": {
+      "name": "start_request_reply",
+      "title": "Start a reply to a request link",
+      "description": "Start replying to a Zight request link (https://share.zight.com/re/... or a custom-domain equivalent) with a screenshot or file that is saved on this machine. Use when the user shares a request link and asks you to reply to it, submit evidence, or send a file or screenshot to the requester.\n\nScreenshot requests accept PNG, JPEG, GIF, or WebP images. File requests accept any file. Video requests cannot be answered by an agent: tell the user to open the link and record the video themselves.\n\nThe reply is sent anonymously, as if submitted from the link's reply page, and is stored in the requester's workspace.\n\nReturns reply_command, a shell command that sends the file for this reply only. Replace FILE_PATH with the local path, run it, then call complete_request_reply with the returned reply_id.",
+      "inputSchema": {
+        "properties": {
+          "request_link": {
+            "type": "string",
+            "description": "The Zight request link the user shared"
+          },
+          "file_name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "description": "Name of the file to send, e.g. login-error.png"
+          },
+          "mime_type": {
+            "type": "string",
+            "description": "MIME type of the file, e.g. image/png"
+          },
+          "file_size": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Size of the file in bytes"
+          }
+        },
+        "required": [
+          "request_link",
+          "file_name",
+          "mime_type",
+          "file_size"
+        ],
+        "additionalProperties": false,
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    }
+  },
+  "toolsError": null,
+  "resources": [],
+  "resourceTemplates": [],
+  "authStatus": "oAuth"
+}

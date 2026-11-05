@@ -1,0 +1,71 @@
+@startuml
+title tests/mobile-layout.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "mobile-layout.test.ts\nfile L1-193\nfile:tests/mobile-layout.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:b36abaf5e7f48f697d9a9662c262dd23" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:34df65fa47c0a10c5ae9add9c2ad1c4f" as N2
+rectangle "../src/services/chatViewport\nimport L3-3\nimport:60a338e5a6e0111729bd5c1ecff802d5" as N3
+rectangle "../src/services/torusGestures\nimport L4-4\nimport:80ca389241e81a7afc007e298c8a4628" as N4
+rectangle "phone\nconstant L6-6\nconstant:cb5fe835a60163615bc060fb793f08f2" as N5
+rectangle "savedPosition\nconstant L7-7\nconstant:085232a39674be76505f7e54e0f8e304" as N6
+rectangle "savedSize\nconstant L8-8\nconstant:3ba3b77885dba578aae06435af70b535" as N7
+rectangle "touchEvent\nfunction L53-60\nfunction:9d4b83be3eac8a77b23843f35258d0d3" as N8
+rectangle "fixture\nfunction L62-76\nfunction:7c477a2b8193ab89f816c55bd340d354" as N9
+N0 --> N1 : contains E2708
+N0 --> N2 : contains E2709
+N0 --> N3 : contains E2710
+N0 --> N4 : contains E2711
+N0 --> N5 : contains E2712
+N0 --> N6 : contains E2713
+N0 --> N7 : contains E2714
+N0 --> N8 : contains E2715
+N0 --> N9 : contains E2716
+N0 --> N9 : calls E6595
+N0 --> N8 : calls E6596
+N0 --> N8 : calls E6597
+N0 --> N8 : calls E6598
+N0 --> N8 : calls E6599
+N0 --> N9 : calls E6600
+N0 --> N8 : calls E6601
+N0 --> N8 : calls E6602
+N0 --> N8 : calls E6603
+N0 --> N8 : calls E6604
+N0 --> N8 : calls E6605
+N0 --> N8 : calls E6606
+N0 --> N8 : calls E6607
+N0 --> N8 : calls E6608
+N0 --> N9 : calls E6609
+N0 --> N8 : calls E6610
+N0 --> N8 : calls E6611
+N0 --> N8 : calls E6612
+N0 --> N8 : calls E6613
+N0 --> N8 : calls E6614
+N0 --> N8 : calls E6615
+N0 --> N8 : calls E6616
+N0 --> N8 : calls E6617
+N0 --> N9 : calls E6618
+N0 --> N8 : calls E6619
+N0 --> N8 : calls E6620
+N0 --> N8 : calls E6621
+N0 --> N8 : calls E6622
+N0 --> N8 : calls E6629
+N0 --> N8 : calls E6630
+N0 --> N8 : calls E6631
+N0 --> N8 : calls E6632
+N0 --> N8 : calls E6633
+N0 --> N8 : calls E6634
+N0 --> N8 : calls E6635
+N0 --> N8 : calls E6636
+N0 --> N8 : calls E6637
+N0 --> N8 : calls E6638
+N0 --> N8 : calls E6639
+N0 --> N8 : calls E6640
+N0 --> N9 : calls E6641
+N0 --> N8 : calls E6642
+N0 --> N8 : calls E6643
+N0 --> N8 : calls E6644
+N0 --> N8 : calls E6645
+N0 --> N8 : calls E6646
+@enduml

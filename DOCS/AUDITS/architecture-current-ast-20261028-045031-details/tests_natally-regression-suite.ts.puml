@@ -1,0 +1,15 @@
+@startuml
+title tests/natally-regression-suite.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "natally-regression-suite.ts\nfile L1-58\nfile:tests/natally-regression-suite.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:3449e00b1a1a0a73250a655b6be04e16" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:9d3c9ecaa0001918dd4e307d33527c59" as N2
+rectangle "../src/services/hostedInference.ts\nimport L3-3\nimport:3728bfd3b2af92b5a079200df8b19c82" as N3
+rectangle "payload\nconstant L5-5\nconstant:9ff93a2229d2697738b12dbaa84ccadc" as N4
+N0 --> N1 : contains E2717
+N0 --> N2 : contains E2718
+N0 --> N3 : contains E2719
+N0 --> N4 : contains E2720
+@enduml

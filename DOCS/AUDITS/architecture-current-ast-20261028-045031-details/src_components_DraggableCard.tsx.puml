@@ -1,0 +1,101 @@
+@startuml
+title src/components/DraggableCard.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "DraggableCard.tsx\nfile L1-365\nfile:src/components/DraggableCard.tsx" as N0
+rectangle "react\nimport L1-1\nimport:cbf4cd83e788654cd2dcad86a6e1531f" as N1
+rectangle "lucide-react\nimport L2-2\nimport:84a33156d16c8dace069248b2403a66d" as N2
+rectangle "DraggableCardProps\ninterface L4-21\ninterface:2944f4500f174d1a2df2799462e10e41" as N3
+rectangle "id\nproperty L5-5\nproperty:08fe356d0a3f8aed61b613962925069f" as N4
+rectangle "title\nproperty L6-6\nproperty:90532782784fdabf722e91b4a6007a64" as N5
+rectangle "icon\nproperty L7-7\nproperty:bf90c0ffe4d6901fd281e07a0b9f8eff" as N6
+rectangle "children\nproperty L8-8\nproperty:bc71f261f8461fc1713a1f369ceb11cf" as N7
+rectangle "defaultPosition\nproperty L9-9\nproperty:5e1bb3c27e11987c2023cf63d61779c3" as N8
+rectangle "defaultWidth\nproperty L10-10\nproperty:e6c906a02c411d82e0ef30f8182294f0" as N9
+rectangle "minWidth\nproperty L11-11\nproperty:e93263c3c3fdbf1c860b46acdf89ffad" as N10
+rectangle "minHeight\nproperty L12-12\nproperty:73550e07626df55acc1b5a40f23bfa34" as N11
+rectangle "maxHeight\nproperty L13-13\nproperty:a2001f7a708d045584fbcf28a6531ae4" as N12
+rectangle "className\nproperty L14-14\nproperty:f113f7a4a876d0e48c8ed1d4200797ed" as N13
+rectangle "extraHeaderControls\nproperty L15-15\nproperty:b9f81e771c5d61258fee6e64fdeefb8c" as N14
+rectangle "allowCollapse\nproperty L16-16\nproperty:fc6899649a8bac766ee32da0a6fb5353" as N15
+rectangle "defaultZIndex\nproperty L17-17\nproperty:940007707900f7a3edbe1c8ea54c281a" as N16
+rectangle "isCollapsed\nproperty L18-18\nproperty:f86b04821bdc90f069651b1e4f7950ef" as N17
+rectangle "onToggleCollapse\nproperty L19-19\nproperty:fe8e80aebf9d01a64cade504618a4637" as N18
+rectangle "resetTrigger\nproperty L20-20\nproperty:756eb8f835c6a800876f4ea80452b6fc" as N19
+rectangle "globalHighestZIndex\nvariable L24-24\nvariable:d181ec530f77aceea44fc1ede439eae6" as N20
+rectangle "getNextCardZIndex\nfunction L25-28\nfunction:ce6df678625d908c48766d2568cd8cd0" as N21
+rectangle "DraggableCard\nfunction L30-364\nfunction:5b5d02236d1c8a73230c194fa43db69c" as N22
+rectangle "toggleCollapse\nfunction L67-74\nfunction:811ed35ef3b8e4bcefe7675f32d99d45" as N23
+rectangle "bringToFront\nfunction L117-119\nfunction:ff346ff6644404b87d642597bb2c50b5" as N24
+rectangle "clampPos\nfunction L122-129\nfunction:3a1217681f1859920afe5dd32cb4cc8b" as N25
+rectangle "handleDragMouseDown\nfunction L132-176\nfunction:d68f9805adc57b8fab14a763979649f4" as N26
+rectangle "handleMouseMove\nfunction L159-166\nfunction:04600c82473c86f984e9c0487607375f" as N27
+rectangle "handleMouseUp\nfunction L168-172\nfunction:4b270d7b32b5793012949ed7f0847790" as N28
+rectangle "handleTouchStart\nfunction L179-217\nfunction:2dd093664a41542b3b06dd3e32e3c92b" as N29
+rectangle "handleTouchMove\nfunction L200-207\nfunction:02cd3db8603836eb3491acc38f297289" as N30
+rectangle "handleTouchEnd\nfunction L209-213\nfunction:4d4553b5d4e316f26817d7b2082cf2c9" as N31
+rectangle "handleResizeMouseDown\nfunction L220-256\nfunction:fc90e646607281d59edd3f2493a4e57f" as N32
+rectangle "handleMouseMove\nfunction L234-246\nfunction:97ee6f20aabc930a2ab4ae483d423728" as N33
+rectangle "handleMouseUp\nfunction L248-252\nfunction:3df9993f4a67a330c28fa655727ee3be" as N34
+rectangle "handleResetPosition\nfunction L258-262\nfunction:32f70196d4d2c7a4d590176d63afa849" as N35
+N0 --> N1 : contains E735
+N0 --> N2 : contains E736
+N0 --> N3 : contains E737
+N3 --> N4 : contains E738
+N3 --> N5 : contains E739
+N3 --> N6 : contains E740
+N3 --> N7 : contains E741
+N3 --> N8 : contains E742
+N3 --> N9 : contains E743
+N3 --> N10 : contains E744
+N3 --> N11 : contains E745
+N3 --> N12 : contains E746
+N3 --> N13 : contains E747
+N3 --> N14 : contains E748
+N3 --> N15 : contains E749
+N3 --> N16 : contains E750
+N3 --> N17 : contains E751
+N3 --> N18 : contains E752
+N3 --> N19 : contains E753
+N0 --> N20 : contains E754
+N0 --> N21 : contains E755
+N0 --> N22 : contains E756
+N22 --> N23 : contains E757
+N22 --> N24 : contains E758
+N22 --> N25 : contains E759
+N22 --> N26 : contains E760
+N26 --> N27 : contains E761
+N26 --> N28 : contains E762
+N22 --> N29 : contains E763
+N29 --> N30 : contains E764
+N29 --> N31 : contains E765
+N22 --> N32 : contains E766
+N32 --> N33 : contains E767
+N32 --> N34 : contains E768
+N22 --> N35 : contains E769
+N21 --> N20 : references E770
+N24 --> N21 : calls E4520
+N26 --> N24 : calls E4521
+N26 --> N24 : calls E4522
+N27 --> N25 : calls E4523
+N29 --> N24 : calls E4524
+N29 --> N24 : calls E4525
+N30 --> N25 : calls E4526
+N32 --> N24 : calls E4527
+N22 --> N23 : calls E4528
+N28 --> N27 : references E4529
+N26 --> N27 : references E4530
+N26 --> N28 : references E4531
+N31 --> N30 : references E4532
+N29 --> N30 : references E4533
+N29 --> N31 : references E4534
+N34 --> N33 : references E4535
+N32 --> N33 : references E4536
+N32 --> N34 : references E4537
+N22 --> N26 : references E4538
+N22 --> N29 : references E4539
+N22 --> N35 : references E4540
+N22 --> N23 : references E4541
+N22 --> N32 : references E4542
+@enduml

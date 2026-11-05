@@ -1,0 +1,79 @@
+@startuml
+title src/auth/nativeBridge.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "nativeBridge.ts\nfile L1-95\nfile:src/auth/nativeBridge.ts" as N0
+rectangle "firebase/app\nimport L1-1\nimport:5f8b57423ace2cf5b7479ca4e5a745fd" as N1
+rectangle "firebase/auth\nimport L2-2\nimport:cebc199221ceaf5a9734e7a41cdd1fec" as N2
+rectangle "../../firebase-applet-config.json\nimport L3-3\nimport:632e5f676666bf8dfb97fc559b99ea4c" as N3
+rectangle "element\nfunction L5-5\nfunction:3e68cb7b32a3bf6ebcf013e4afc28603" as N4
+rectangle "status\nconstant L6-6\nconstant:c7240ef0411a274f62757f15ae562532" as N5
+rectangle "google\nconstant L7-7\nconstant:1ab66195d0e6a66e49a3b1bed6b9eead" as N6
+rectangle "phone\nconstant L8-8\nconstant:bc622c79bbb8275e3c7f3be53dbdad3d" as N7
+rectangle "verify\nconstant L9-9\nconstant:a1d755fde9a9456a15da1ea68f4c9ab0" as N8
+rectangle "back\nconstant L10-10\nconstant:9feeff8509704fafb62141ec502f31d5" as N9
+rectangle "params\nconstant L11-11\nconstant:26e984a6fa9474fb576c0cbf41eb0100" as N10
+rectangle "port\nconstant L12-12\nconstant:57627e3eaa613e75055fc9a85dfd93db" as N11
+rectangle "state\nconstant L13-13\nconstant:b75555faa3834f6dba767e20fbde433e" as N12
+rectangle "provider\nconstant L14-14\nconstant:52af801885e44f83109a8bfe9eb6b1e8" as N13
+rectangle "verifier\nvariable L17-17\nvariable:9c885be4f5fe25fab5812c8230897d28" as N14
+rectangle "confirmation\nvariable L18-18\nvariable:1044b04463febe5b387013c2687a9565" as N15
+rectangle "credential\nvariable L19-19\nvariable:47dd780fc027f0be4b693cdd442f08ec" as N16
+rectangle "busy\nvariable L20-20\nvariable:25341be5351007c0fbb163b9aff6a7e0" as N17
+rectangle "message\nfunction L22-24\nfunction:bba8cdbc6ad103be9ec1e2a380eb523b" as N18
+rectangle "clearVerifier\nfunction L25-25\nfunction:d52efa55954cfccd3aa99fd5c81ccfae" as N19
+rectangle "setBusy\nfunction L26-29\nfunction:ff62b5c6c04e614fc4b523aea3043604" as N20
+rectangle "returnToApp\nfunction L30-38\nfunction:662c98a2ee6a875f26fb0dfcf2008a45" as N21
+rectangle "app\nconstant L43-43\nconstant:6ba7934619464df265f88e50cff71fcb" as N22
+rectangle "auth\nconstant L44-44\nconstant:e9d5ac0c6df201ec17b961af4518c5f9" as N23
+N0 --> N1 : contains E520
+N0 --> N2 : contains E521
+N0 --> N3 : contains E522
+N0 --> N4 : contains E523
+N0 --> N5 : contains E524
+N0 --> N6 : contains E525
+N0 --> N7 : contains E526
+N0 --> N8 : contains E527
+N0 --> N9 : contains E528
+N0 --> N10 : contains E529
+N0 --> N11 : contains E530
+N0 --> N12 : contains E531
+N0 --> N13 : contains E532
+N0 --> N14 : contains E533
+N0 --> N15 : contains E534
+N0 --> N16 : contains E535
+N0 --> N17 : contains E536
+N0 --> N18 : contains E537
+N0 --> N19 : contains E538
+N0 --> N20 : contains E539
+N0 --> N21 : contains E540
+N0 --> N22 : contains E541
+N0 --> N23 : contains E542
+N0 --> N3 : imports E3000
+N5 --> N4 : calls E4214
+N6 --> N4 : calls E4215
+N7 --> N4 : calls E4216
+N8 --> N4 : calls E4217
+N9 --> N4 : calls E4218
+N0 --> N20 : calls E4219
+N0 --> N18 : calls E4220
+N0 --> N20 : calls E4221
+N0 --> N20 : calls E4222
+N0 --> N21 : calls E4223
+N0 --> N4 : calls E4224
+N0 --> N20 : calls E4225
+N0 --> N19 : calls E4226
+N0 --> N18 : calls E4227
+N0 --> N19 : calls E4228
+N0 --> N20 : calls E4229
+N0 --> N4 : calls E4230
+N0 --> N20 : calls E4231
+N0 --> N21 : calls E4232
+N0 --> N4 : calls E4233
+N0 --> N19 : calls E4234
+N0 --> N4 : calls E4235
+N0 --> N19 : calls E4236
+N0 --> N20 : calls E4237
+N0 --> N19 : references E4238
+@enduml

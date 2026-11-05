@@ -1,0 +1,29 @@
+@startuml
+title tests/calculation-tools.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "calculation-tools.test.ts\nfile L1-104\nfile:tests/calculation-tools.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:a2c762d9306fbf2917d80c513f0c314c" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:eefe3ca487bec9bd78acca4cf297d560" as N2
+rectangle "../src/services/ephemeris\nimport L3-3\nimport:7a0a0e0bd35b64ed32cd37370ee38d61" as N3
+rectangle "../src/services/calculationTools\nimport L4-4\nimport:368bd9aad3cac4ab8d21eb23d9e8940c" as N4
+rectangle "../src/services/hostedInference\nimport L5-5\nimport:2f537074d3b5cb2e80c0cfeb6205f419" as N5
+rectangle "../netlify/lib/astrology-tools.mjs\nimport L6-6\nimport:6b4186caa56230cc283b0ba96f047184" as N6
+rectangle "makeChart\nfunction L8-9\nfunction:71cecbb6771519de63eab6fa12d99a44" as N7
+rectangle "run\nfunction L13-13\nfunction:0bdaf0c5ca31001320050972a6de39ac" as N8
+N0 --> N1 : contains E2648
+N0 --> N2 : contains E2649
+N0 --> N3 : contains E2650
+N0 --> N4 : contains E2651
+N0 --> N5 : contains E2652
+N0 --> N6 : contains E2653
+N0 --> N7 : contains E2654
+N0 --> N8 : contains E2655
+N0 --> N7 : calls E6506
+N0 --> N8 : calls E6507
+N0 --> N8 : calls E6508
+N0 --> N8 : calls E6509
+N0 --> N8 : calls E6510
+N0 --> N7 : calls E6512
+@enduml

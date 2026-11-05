@@ -1,0 +1,132 @@
+@startuml
+title src/services/natallyChat.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "natallyChat.ts\nfile L1-267\nfile:src/services/natallyChat.ts" as N0
+rectangle "./hostedInference\nimport L1-1\nimport:6a2d06346a1a511633ec79fe9c9df9b4" as N1
+rectangle "../../SOUL.md?raw\nimport L2-2\nimport:d59d755bf4a3697f51547b255b8d46bb" as N2
+rectangle "./historicalPresentation\nimport L3-3\nimport:d0c64f7dc3c08399c38122d6c3c365b7" as N3
+rectangle "./readingStyle\nimport L4-4\nimport:08f5406bf061c2c4a101efefca41c713" as N4
+rectangle "./ephemeris\nimport L5-5\nimport:802bb87ac784c41be7f16d9450e22066" as N5
+rectangle "./transits\nimport L6-6\nimport:0f8d4a66d2555f5f3a05bcb28c01fe20" as N6
+rectangle "./calculationTools\nimport L7-7\nimport:5f8d04ca0cf7275c46b8309dda23078a" as N7
+rectangle "./inferenceTurn\nimport L8-8\nimport:d87d4de0555dfab3dc08a286255adb87" as N8
+rectangle "./soul\nimport L9-9\nimport:a221d861234128564ce4a5e9ae98b521" as N9
+rectangle "./chartTargets\nimport L10-10\nimport:de0ba640f976702f2512ffa956774e07" as N10
+rectangle "./presentation\nimport L11-11\nimport:eb550da5c9b9ef3eccd3ff73ed04048b" as N11
+rectangle "ChartCue\ninterface L13-13\ninterface:feabd7d46646ecf3d3febb2666d2d0ab" as N12
+rectangle "offset\nproperty L13-13\nproperty:0a5cf43deaf129ecd2883aa71f692de7" as N13
+rectangle "targets\nproperty L13-13\nproperty:f032c75c2fbc88ff2c4221292d6fb0d3" as N14
+rectangle "ChatMessage\ninterface L15-32\ninterface:a548db20adfca7d62ce099afd743015b" as N15
+rectangle "id\nproperty L16-16\nproperty:617c2f943c2362e593cf57fd414619e0" as N16
+rectangle "sender\nproperty L17-17\nproperty:d2ae123faa3a3a7ca191ed30f385e73e" as N17
+rectangle "text\nproperty L18-18\nproperty:4a3bc649c39f7c37b5279ad3f3b0ad76" as N18
+rectangle "timestamp\nproperty L19-19\nproperty:295cb7a89368dc94c87d09b057f0c860" as N19
+rectangle "model\nproperty L20-20\nproperty:69af5b849a1204b4017e1510fbda89b8" as N20
+rectangle "evidence\nproperty L21-26\nproperty:fa0849403d3f1be2af0324f64007f242" as N21
+rectangle "isOfflineMode\nproperty L27-27\nproperty:4e4eebef187688d0fe5acbf16efa68cb" as N22
+rectangle "chartCues\nproperty L28-28\nproperty:9b0c48cb32abbbe4c71a9b35b79edb73" as N23
+rectangle "presentationVersion\nproperty L29-29\nproperty:585c721372a99eabf59e5f3aaadce109" as N24
+rectangle "presentationCues\nproperty L30-30\nproperty:921bffab875b78f42ebbe29e0531af91" as N25
+rectangle "chartFocusKey\nproperty L31-31\nproperty:f725f6f3c1226b0081805119f6d1cb7b" as N26
+rectangle "NatallyChatResult\ninterface L34-49\ninterface:5d1af88e66c35d9e4050d7ab87cd78ae" as N27
+rectangle "soulDevelopments\nproperty L35-35\nproperty:75dfecf45f75684ef61c8c46b5512824" as N28
+rectangle "text\nproperty L36-36\nproperty:237a548189ba12c402b0b1fc2b28dae1" as N29
+rectangle "chartCues\nproperty L37-37\nproperty:1f7d0783897d4907794084f306839fd7" as N30
+rectangle "presentationVersion\nproperty L38-38\nproperty:56481454c7389ef0f2437794b839eef7" as N31
+rectangle "presentationCues\nproperty L39-39\nproperty:b34e00d858a072652d4c57817f27d3b8" as N32
+rectangle "chartFocusKey\nproperty L40-40\nproperty:c59674391bc77c48445d027b4c22a08d" as N33
+rectangle "evidence\nproperty L41-46\nproperty:37213db275e14874d9256de857368782" as N34
+rectangle "source\nproperty L47-47\nproperty:1a7bbd607b81387518dc068df62e6c94" as N35
+rectangle "model\nproperty L48-48\nproperty:6891d42937dfcd9c728ee377c8fc3e07" as N36
+rectangle "InferenceErrorDetails\ninterface L51-56\ninterface:97a76663161bba2b37406f85c8e30c39" as N37
+rectangle "message\nproperty L52-52\nproperty:e482cef065a49402c23628cdf000ab59" as N38
+rectangle "status\nproperty L53-53\nproperty:39115415feb2adc37ae15402d5363688" as N39
+rectangle "errorType\nproperty L54-54\nproperty:05d5c70c6cdb555aff92c7c247b75a05" as N40
+rectangle "canRetry\nproperty L55-55\nproperty:33ed4a442c6b237b15d69a13f3522094" as N41
+rectangle "InferenceError\nclass L58-65\nclass:bec27c24ee4cff8791b4360051ab55e2" as N42
+rectangle "details\nproperty L59-59\nproperty:3d1dea41573306ab545a971689a1b3fe" as N43
+rectangle "constructor\nmethod L60-64\nmethod:7b805cea3229e793ba3e29cf2663aa32" as N44
+rectangle "NATALLY_SYSTEM_PROMPT\nconstant L67-87\nconstant:276b04a30a820c41c5bc0b7f2449c007" as N45
+rectangle "buildStructuredNatalContext\nfunction L92-118\nfunction:1156fd3cd0ccd5d38a9e50882f64f132" as N46
+rectangle "buildSynastryContext\nfunction L120-133\nfunction:449fc356954d53323bd81acd667ebc94" as N47
+rectangle "buildChartPresentationPrompt\nfunction L135-145\nfunction:3940ad5bf3c1c9f205b00871d91b7b62" as N48
+rectangle "validateChartCues\nfunction L147-159\nfunction:bcbcec581d6b46e58240d84afb20e186" as N49
+rectangle "chartFocusAt\nfunction L161-165\nfunction:f7d454a76d5ba877ca8b6d6054748cc3" as N50
+rectangle "parseNatallyResponse\nfunction L167-227\nfunction:a42a21ddc6fad6541436a9c76a1f95b2" as N51
+rectangle "askNatally\nfunction L229-253\nfunction:e7b33daf26aa486e02f51774ab70f62d" as N52
+rectangle "parseNatallyStream\nfunction L256-266\nfunction:57b40c24fcdb82645e1b77ddb847a63e" as N53
+N0 --> N1 : contains E1785
+N0 --> N2 : contains E1786
+N0 --> N3 : contains E1787
+N0 --> N4 : contains E1788
+N0 --> N5 : contains E1789
+N0 --> N6 : contains E1790
+N0 --> N7 : contains E1791
+N0 --> N8 : contains E1792
+N0 --> N9 : contains E1793
+N0 --> N10 : contains E1794
+N0 --> N11 : contains E1795
+N0 --> N12 : contains E1796
+N12 --> N13 : contains E1797
+N12 --> N14 : contains E1798
+N0 --> N15 : contains E1799
+N15 --> N16 : contains E1800
+N15 --> N17 : contains E1801
+N15 --> N18 : contains E1802
+N15 --> N19 : contains E1803
+N15 --> N20 : contains E1804
+N15 --> N21 : contains E1805
+N15 --> N22 : contains E1806
+N15 --> N23 : contains E1807
+N15 --> N24 : contains E1808
+N15 --> N25 : contains E1809
+N15 --> N26 : contains E1810
+N0 --> N27 : contains E1811
+N27 --> N28 : contains E1812
+N27 --> N29 : contains E1813
+N27 --> N30 : contains E1814
+N27 --> N31 : contains E1815
+N27 --> N32 : contains E1816
+N27 --> N33 : contains E1817
+N27 --> N34 : contains E1818
+N27 --> N35 : contains E1819
+N27 --> N36 : contains E1820
+N0 --> N37 : contains E1821
+N37 --> N38 : contains E1822
+N37 --> N39 : contains E1823
+N37 --> N40 : contains E1824
+N37 --> N41 : contains E1825
+N0 --> N42 : contains E1826
+N42 --> N43 : contains E1827
+N42 --> N44 : contains E1828
+N0 --> N45 : contains E1829
+N0 --> N46 : contains E1830
+N0 --> N47 : contains E1831
+N0 --> N48 : contains E1832
+N0 --> N49 : contains E1833
+N0 --> N50 : contains E1834
+N0 --> N51 : contains E1835
+N0 --> N52 : contains E1836
+N0 --> N53 : contains E1837
+N52 --> N45 : references E1838
+N0 --> N2 : imports E3462
+N23 --> N12 : references E5767
+N30 --> N12 : references E5769
+N43 --> N37 : references E5771
+N44 --> N37 : references E5772
+N47 --> N46 : calls E5777
+N47 --> N46 : calls E5778
+N49 --> N12 : references E5783
+N49 --> N12 : references E5787
+N50 --> N12 : references E5788
+N51 --> N27 : references E5790
+N52 --> N15 : references E5798
+N52 --> N27 : references E5802
+N52 --> N46 : calls E5808
+N52 --> N48 : calls E5809
+N52 --> N51 : calls E5813
+N53 --> N27 : references E5815
+N53 --> N51 : calls E5817
+@enduml

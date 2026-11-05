@@ -1,0 +1,71 @@
+@startuml
+title Natally | Proposed atelier-first journey\n28 October 2026 - for discussion and sign-off
+skinparam backgroundColor #FAF8F2
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 15
+skinparam shadowing false
+skinparam roundcorner 14
+skinparam activityBackgroundColor #EEE8F6
+skinparam activityBorderColor #695779
+skinparam ArrowColor #695779
+skinparam activityDiamondBackgroundColor #FFF0CC
+
+start
+:Marketing: the real animated atelier;
+:Create account or sign in;
+if (Existing intake?) then (yes)
+  :Restore actual chart and history;
+else (no)
+  :Onboard; calculate actual natal chart;
+endif
+:Enter expanded atelier directly\nNo compulsory paywall;
+:Click chart / interact with room / ask a question;
+if (Paid conversation requested\nand ROCHE available?) then (yes)
+  :Synchronize one-hour key with current ROCHE;
+  :Real reading: chart, horoscope, synastry, etc.\nSpeak through the existing voice engine;
+  :Animate usage; settle debit in RevenueCat\nRefresh confirmed LED balance;
+  :Every two completed answers:\nNatally offers a keepsake edition;
+else (no)
+  :Prewritten education + actual chart + first name\nNatally-isms; voice rendered on demand;
+  :End each answer with a real-reading invitation;
+endif
+if (User accepts an invitation\nor selects a purchase sign/button?) then (yes)
+  if (Chosen offer?) then (ROCHE)
+    :Finite monthly credit pack default\nOne-time top-up available;
+  else (keepsake)
+    :One-time $9.99 + applicable tax\nPDF + interactive hosted atelier edition;
+  endif
+  :Show actual price, grant/deliverables, cadence\nHave a code? / Terms / Privacy;
+  :User presses the priced purchase button;
+  if (Android Play distribution?) then (yes)
+    :RevenueCat Android SDK\nGoogle Play confirmation sheet;
+  else (desktop / web)
+    :RevenueCat Billing\nStripe card default;
+  endif
+  if (Payment outcome?) then (confirmed)
+    :Payment confirmed\nWait for RevenueCat grant / edition access;
+    if (Access ready?) then (yes)
+      if (Credit purchase?) then (yes)
+        :Refresh ROCHE and key allowance\nRestore conversation draft;
+      else (keepsake)
+        :Create local PDF + interactive SPA\nPublish via existing Zight contract;
+        :Retain customer-linked artifact references\nReplay prior answers and charts;
+      endif
+    else (delayed)
+      :Show activating / delivery pending\nRetry fulfillment without repurchase;
+    endif
+  else (cancel / pending / failure)
+    :Show actual outcome\nKeep chart, history and draft;
+  endif
+else (no)
+  :Keep exploring\nQuiet keepsake button remains;
+endif
+:Return to the same atelier and conversation\nLater sessions restore prior history;
+stop
+
+legend bottom
+  Renewal grants, cancellation, refund, restore and one-hour key events are defined in PLAN.md.
+  RevenueCat owns balances and purchases; Firebase owns operational history; Zight holds artifacts.
+  Prices, exact token quantities and Play cross-app currency scope require explicit sign-off.
+endlegend
+@enduml

@@ -1,0 +1,71 @@
+{
+  "recordedAt": "2026-10-29T18:03:54.979Z",
+  "scope": "Annotated environment restoration and portable example; no build or deployment",
+  "original": {
+    "exactCheckpoint": "CREDENTIALS/Natally/env-before-annotated-sync-29oct2026.env",
+    "revision": 1,
+    "sha256": "a6a7e81b9877d87be8d2dfeb52b8a94e3cd1bdb62580e4c8dbd378ab2043ef59",
+    "assignments": 13,
+    "effectiveBindings": 13,
+    "countCorrection": "Earlier report of 14 was incorrect; exact checkpoint has 13."
+  },
+  "live": {
+    "bytes": 11708,
+    "bindings": 68,
+    "sha256": "9bf5fac8267be2487bf7e6fd35fc77c73e36b61737553a00b41f1639df13b8db",
+    "preservedOriginalEffectiveValues": 13,
+    "credentialPointers": 6,
+    "check": true,
+    "unchangedByPortableTemplate": true
+  },
+  "canonicalCredentials": [
+    {
+      "path": "CREDENTIALS/GoogleAI/credentials.env",
+      "revision": 1
+    },
+    {
+      "path": "CREDENTIALS/OpenRouter/credentials.env",
+      "revision": 2,
+      "existingAdminUnchanged": true
+    },
+    {
+      "path": "CREDENTIALS/RevenueCat/Natally/credentials.env",
+      "revision": 1
+    }
+  ],
+  "migrationVerification": {
+    "repeatMigrationByteIdentical": true,
+    "repeatCanonicalRevisionsIdentical": true,
+    "currentTemplatePureSyncIdempotent": true,
+    "openRouterManagementHttpStatus": 200,
+    "publicViteBindings": 24,
+    "privateViteBindings": 0
+  },
+  "example": {
+    "portable": true,
+    "bindings": 68,
+    "internalReferences": 0,
+    "sha256": "9b4e4c0ad379e19a15565355fc220ae261246880764ca39a0b2db933659b9a7d",
+    "backupSha256": "e420eedeecec90d8eee9abd89cc6200a37d5c6603bc0ba76568372b48dc55948",
+    "backupPreservedExactly": true
+  },
+  "coordinatorVerification": {
+    "powershellVersion": "5.1.26100.7019",
+    "parserErrors": 0,
+    "onlyImportFunctionsExecuted": true,
+    "actualWslPublicBindingsCompared": 24,
+    "actualWslEquality": true,
+    "priorWslenvPreserved": true,
+    "privateNamesAddedToWslenv": 0,
+    "fullCoordinatorInvoked": false
+  },
+  "focusedChecks": {
+    "passed": 49,
+    "failed": 0
+  },
+  "sourceHashes": {
+    "scripts/environment.mjs": "73e8696805136ea7a5f9ad2cf51aff3d919a8b2e47d83abd04c1c782f81b65be",
+    "scripts/build-all-platforms.ps1": "c615c873fc0207f00c06c2e323800d0f287c9ec94ccda8f0042e4e18f0c38ee2",
+    "tests/environment.test.mjs": "6e6fb1356dd16453d24626d6baddf62665d43ef9d826d3373824941fbed0c7ee"
+  }
+}

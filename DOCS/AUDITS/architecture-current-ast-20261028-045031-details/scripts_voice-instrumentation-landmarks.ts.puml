@@ -1,0 +1,27 @@
+@startuml
+title scripts/voice-instrumentation-landmarks.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voice-instrumentation-landmarks.ts\nfile L1-17\nfile:scripts/voice-instrumentation-landmarks.ts" as N0
+rectangle "node:module\nimport L1-1\nimport:d32aff5d6ec7d20f04ad77e45ce5326b" as N1
+rectangle "node:fs\nimport L2-2\nimport:b1c5681b6496575875de6844255be26f" as N2
+rectangle "node:path\nimport L3-3\nimport:50122e99209775fd9e2c10813c9e4ecb" as N3
+rectangle "node:crypto\nimport L4-4\nimport:033e9125ee241991cc602b78c0d52772" as N4
+rectangle "./onnx-progress-plugin\nimport L5-5\nimport:50cffdccf5d428baafd1ea0764613533" as N5
+rectangle "require\nconstant L7-7\nconstant:f8ba3478d1fa0df3666b95b8e9615f7a" as N6
+rectangle "dist\nconstant L8-8\nconstant:ee982a77e9c873dae37ad49f2b45c96f" as N7
+rectangle "file\nconstant L9-9\nconstant:aac434ec5dbca8887d56f0942b41200d" as N8
+rectangle "source\nconstant L10-10\nconstant:1ec129fc42a598473c1f56074683bf92" as N9
+rectangle "anchors\nconstant L12-12\nconstant:cfce7a358e577a7945484774d5c745a3" as N10
+N0 --> N1 : contains E404
+N0 --> N2 : contains E405
+N0 --> N3 : contains E406
+N0 --> N4 : contains E407
+N0 --> N5 : contains E408
+N0 --> N6 : contains E409
+N0 --> N7 : contains E410
+N0 --> N8 : contains E411
+N0 --> N9 : contains E412
+N0 --> N10 : contains E413
+@enduml

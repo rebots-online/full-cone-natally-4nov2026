@@ -1,0 +1,100 @@
+@startuml
+title src/components/SouvenirViewer.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "SouvenirViewer.tsx\nfile L1-315\nfile:src/components/SouvenirViewer.tsx" as N0
+rectangle "react\nimport L1-1\nimport:5fe7db4235537d1e6a9e2d8f6cc5e33c" as N1
+rectangle "../services/firebase\nimport L2-2\nimport:c607054fef0caf53efe060af8d2f57e4" as N2
+rectangle "firebase/auth\nimport L3-3\nimport:b88f2c4f268d7cf938ad4d59ed86415f" as N3
+rectangle "./AuthModal\nimport L4-4\nimport:1486ad898d0d478f7dcb6e4f38811e2c" as N4
+rectangle "./ReadingStage\nimport L5-5\nimport:19918cffee813b32f12aefe76d7532c8" as N5
+rectangle "./Astrolabe3D\nimport L6-6\nimport:114627e4c1337d195088aca9098273e3" as N6
+rectangle "./NatallyChatbot\nimport L7-7\nimport:0636134afd053a3e1014972eb0459d3b" as N7
+rectangle "./RichText\nimport L8-8\nimport:aa7914c681fea2319341c036a3a7fe75" as N8
+rectangle "../services/presentation\nimport L9-9\nimport:af8b9ac3eb6b733b0515c4e8e8704f69" as N9
+rectangle "./atelier/AtelierScene\nimport L10-10\nimport:6e11462d8139f759b15fed4a9c9b089a" as N10
+rectangle "../services/chartTargets\nimport L11-11\nimport:77417e1a43ab5a1fd53436e00befd0e8" as N11
+rectangle "../services/voiceService\nimport L12-12\nimport:bb1f1b2e19011b7990f2620b73e847bf" as N12
+rectangle "../services/ephemeris\nimport L13-13\nimport:738e7700723e2dec899f76c76ddd1f03" as N13
+rectangle "../services/souvenir\nimport L14-14\nimport:122ffbe749d352e11205d7823a08f4b5" as N14
+rectangle "../services/souvenirPdf\nimport L15-15\nimport:99a2fc16cbf508f861b1e31c607558bd" as N15
+rectangle "SouvenirMessages\ntype_alias L17-17\ntype_alias:015a06d17b046d9c364f500fc97dd016" as N16
+rectangle "SouvenirViewer\nfunction L19-312\nfunction:8e5a29882978760abd3f3b9ec00bd8e4" as N17
+rectangle "isCurrentSession\nfunction L44-45\nfunction:9804647d9198607d02a34cd760ae05b3" as N18
+rectangle "loadSnapshot\nfunction L74-93\nfunction:fe8c44b92f8ace123c7491d7d19f0d5d" as N19
+rectangle "findChapterForTarget\nfunction L111-112\nfunction:886460b6bb98e3dff344f777161a15d8" as N20
+rectangle "speakChapter\nfunction L115-140\nfunction:ece90c61d9a3c5e3e93632c81897d154" as N21
+rectangle "alive\nfunction L121-121\nfunction:0d92d9fae8c0e00a6351d0357b9f7a3b" as N22
+rectangle "selectTarget\nfunction L142-155\nfunction:be105d22d693b634d887712ca09c4ea8" as N23
+rectangle "handlePresentationAction\nfunction L157-160\nfunction:88f7c1b3a9782ecc4583004a48303f79" as N24
+rectangle "handleChartFocus\nfunction L162-165\nfunction:ad248fe89de78008e8a93b1d5c476ea9" as N25
+rectangle "handleShowTargets\nfunction L167-173\nfunction:b371784f5e25c6793abc870ac8c15576" as N26
+rectangle "handleReadingChart\nfunction L175-182\nfunction:3dd4f9c135c5a7d85a0280dd90a1894b" as N27
+rectangle "setManualView\nfunction L184-184\nfunction:5248c23148b70c480244b4c7b6d507eb" as N28
+rectangle "handleSpeechStateChange\nfunction L186-189\nfunction:0da814d323275947a53cedaa7278f225" as N29
+rectangle "handleDownloadPdf\nfunction L191-204\nfunction:60a78164b0bae2b9d256bba6cca9fd64" as N30
+N0 --> N1 : contains E1233
+N0 --> N2 : contains E1234
+N0 --> N3 : contains E1235
+N0 --> N4 : contains E1236
+N0 --> N5 : contains E1237
+N0 --> N6 : contains E1238
+N0 --> N7 : contains E1239
+N0 --> N8 : contains E1240
+N0 --> N9 : contains E1241
+N0 --> N10 : contains E1242
+N0 --> N11 : contains E1243
+N0 --> N12 : contains E1244
+N0 --> N13 : contains E1245
+N0 --> N14 : contains E1246
+N0 --> N15 : contains E1247
+N0 --> N16 : contains E1248
+N0 --> N17 : contains E1249
+N17 --> N18 : contains E1250
+N17 --> N19 : contains E1251
+N17 --> N20 : contains E1252
+N17 --> N21 : contains E1253
+N21 --> N22 : contains E1254
+N17 --> N23 : contains E1255
+N17 --> N24 : contains E1256
+N17 --> N25 : contains E1257
+N17 --> N26 : contains E1258
+N17 --> N27 : contains E1259
+N17 --> N28 : contains E1260
+N17 --> N29 : contains E1261
+N17 --> N30 : contains E1262
+N17 --> N19 : calls E5271
+N21 --> N18 : calls E5277
+N22 --> N18 : calls E5278
+N21 --> N22 : calls E5281
+N21 --> N22 : calls E5282
+N21 --> N22 : calls E5283
+N21 --> N22 : calls E5284
+N21 --> N22 : calls E5285
+N23 --> N18 : calls E5286
+N23 --> N20 : calls E5288
+N23 --> N21 : calls E5289
+N26 --> N18 : calls E5299
+N29 --> N18 : calls E5306
+N30 --> N18 : calls E5307
+N30 --> N18 : calls E5309
+N30 --> N18 : calls E5310
+N17 --> N19 : calls E5311
+N17 --> N30 : calls E5312
+N17 --> N21 : calls E5313
+N17 --> N21 : calls E5314
+N17 --> N26 : calls E5315
+N17 --> N23 : calls E5316
+N17 --> N23 : calls E5317
+N17 --> N19 : references E5318
+N17 --> N18 : references E5319
+N17 --> N21 : references E5320
+N17 --> N28 : references E5322
+N17 --> N23 : references E5323
+N17 --> N24 : references E5324
+N17 --> N27 : references E5325
+N17 --> N26 : references E5326
+N17 --> N29 : references E5327
+N17 --> N25 : references E5328
+@enduml

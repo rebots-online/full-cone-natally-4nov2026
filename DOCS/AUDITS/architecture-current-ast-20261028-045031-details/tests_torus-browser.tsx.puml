@@ -1,0 +1,23 @@
+@startuml
+title tests/torus-browser.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "torus-browser.tsx\nfile L1-26\nfile:tests/torus-browser.tsx" as N0
+rectangle "react\nimport L1-1\nimport:8b9d0958f08f28b148493a2e64b5679c" as N1
+rectangle "react-dom/client\nimport L2-2\nimport:f158cc8a776fd384699534032793cac9" as N2
+rectangle "three\nimport L3-3\nimport:c3a451d4efb8dbe4401f800ef86dbd92" as N3
+rectangle "../src/components/Astrolabe3D\nimport L4-4\nimport:4837d39f6a0b4cdb8522f5836e027257" as N4
+rectangle "../src/services/ephemeris\nimport L5-5\nimport:3713f43dda375df48b32e33f14d3a0e3" as N5
+rectangle "probe\nconstant L9-9\nconstant:34c8cb650e998875babd7f7f8c440ef0" as N6
+rectangle "updateMatrixWorld\nconstant L11-11\nconstant:ab33613faec5a03fde95dfde26131824" as N7
+rectangle "chart\nconstant L20-21\nconstant:7ff74ced31f772f497f8d0da603762eb" as N8
+N0 --> N1 : contains E2796
+N0 --> N2 : contains E2797
+N0 --> N3 : contains E2798
+N0 --> N4 : contains E2799
+N0 --> N5 : contains E2800
+N0 --> N6 : contains E2801
+N0 --> N7 : contains E2802
+N0 --> N8 : contains E2803
+@enduml

@@ -1,0 +1,82 @@
+@startuml
+title src/services/supertonic.worker.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "supertonic.worker.ts\nfile L1-175\nfile:src/services/supertonic.worker.ts" as N0
+rectangle "@huggingface/transformers\nimport L1-1\nimport:c81000b03a2666419b98d7e48c84d44e" as N1
+rectangle "./supertonicDownload\nimport L2-2\nimport:9bd960d172e02b6ba56fe3ab830b432c" as N2
+rectangle "./supertonicTts\nimport L3-3\nimport:f98376780e10b0e179d7d19e8c448c23" as N3
+rectangle "./voiceMeasurements\nimport L4-4\nimport:96abfe41a5ebfa5e681b93cb95f7d1ab" as N4
+rectangle "MODEL_ID\nconstant L5-5\nconstant:4c2ff884c7e7d9cd02d059824fbfcb59" as N5
+rectangle "REVISION\nconstant L6-6\nconstant:208bc1eab02ec5e359ec9361eb4c1bb2" as N6
+rectangle "engine\nvariable L13-13\nvariable:15be3a7d602c8b7552a4aa3fa7970e9d" as N7
+rectangle "backend\nvariable L14-14\nvariable:61a14f3f832f52aefabeda63c406fdb7" as N8
+rectangle "queue\nvariable L15-15\nvariable:d6dd958589ca4ba8969dda5f09d369ef" as N9
+rectangle "voices\nconstant L16-16\nconstant:70820d5392cbf19eeb8df9e26963eba5" as N10
+rectangle "clips\nconstant L17-17\nconstant:8ffa8a9120150040365ea7eae7adab13" as N11
+rectangle "clipBytes\nvariable L18-18\nvariable:3b75828bd0cac167a85cd2dc9e22803c" as N12
+rectangle "current\nvariable L19-19\nvariable:e6aa9f5991152a662e11459c1fe578f7" as N13
+rectangle "requestContext\nvariable L20-20\nvariable:cfe4839ae09f1e2c81330f610d4f49e6" as N14
+rectangle "graphs\nconstant L21-21\nconstant:161e450d953e34afc3e7d55ff7d694e8" as N15
+rectangle "measure\nfunction L22-26\nfunction:216e9d77a9ce0380e97aa2d5a2ebe1a7" as N16
+rectangle "status\nfunction L27-30\nfunction:f16fe8410d3b4446abb94257a7d157e8" as N17
+rectangle "loadEngine\nfunction L44-97\nfunction:a1d818c8db1608c7ae8115e04c736e6a" as N18
+rectangle "progress_callback\nfunction L60-76\nfunction:1d89ba90d52ff21455359a1def1c3719" as N19
+rectangle "synthesize\nfunction L98-173\nfunction:9705c345334d8644cfd83d43f43217f7" as N20
+N0 --> N1 : contains E2295
+N0 --> N2 : contains E2296
+N0 --> N3 : contains E2297
+N0 --> N4 : contains E2298
+N0 --> N5 : contains E2299
+N0 --> N6 : contains E2300
+N0 --> N7 : contains E2301
+N0 --> N8 : contains E2302
+N0 --> N9 : contains E2303
+N0 --> N10 : contains E2304
+N0 --> N11 : contains E2305
+N0 --> N12 : contains E2306
+N0 --> N13 : contains E2307
+N0 --> N14 : contains E2308
+N0 --> N15 : contains E2309
+N0 --> N16 : contains E2310
+N0 --> N17 : contains E2311
+N0 --> N18 : contains E2312
+N18 --> N19 : contains E2313
+N0 --> N20 : contains E2314
+N16 --> N14 : references E2315
+N16 --> N6 : references E2316
+N18 --> N6 : references E2317
+N18 --> N5 : references E2318
+N20 --> N14 : references E2319
+N20 --> N12 : references E2320
+N20 --> N6 : references E2321
+N20 --> N5 : references E2322
+N0 --> N16 : calls E6275
+N0 --> N17 : calls E6276
+N18 --> N16 : calls E6277
+N18 --> N17 : calls E6279
+N18 --> N17 : calls E6280
+N19 --> N16 : calls E6284
+N19 --> N16 : calls E6285
+N19 --> N17 : calls E6288
+N18 --> N17 : calls E6290
+N18 --> N16 : calls E6292
+N18 --> N16 : calls E6294
+N20 --> N16 : calls E6295
+N20 --> N18 : calls E6296
+N20 --> N17 : calls E6297
+N20 --> N16 : calls E6298
+N20 --> N18 : calls E6299
+N20 --> N16 : calls E6300
+N20 --> N17 : calls E6301
+N20 --> N17 : calls E6302
+N20 --> N16 : calls E6303
+N20 --> N17 : calls E6304
+N20 --> N17 : calls E6305
+N20 --> N16 : calls E6306
+N20 --> N17 : calls E6307
+N20 --> N16 : calls E6308
+N0 --> N20 : calls E6309
+N18 --> N19 : references E6310
+@enduml

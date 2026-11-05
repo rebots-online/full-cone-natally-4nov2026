@@ -1,0 +1,29 @@
+@startuml
+title tests/browser/opening-recovery.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "opening-recovery.tsx\nfile L1-14\nfile:tests/browser/opening-recovery.tsx" as N0
+rectangle "react\nimport L1-1\nimport:4818d0049e2d5790ac1e00f34e4a85d6" as N1
+rectangle "react-dom/client\nimport L2-2\nimport:821fed10168fa98c8766c2792b28a577" as N2
+rectangle "../../src/components/NatallyChatbot\nimport L3-3\nimport:7d7a7d9a3d4bec8914da145a853f3cd9" as N3
+rectangle "../../src/services/presentation\nimport L4-4\nimport:3bf2bbcd61aa2f25a79776ad1ee3f916" as N4
+rectangle "../../src/services/chartTargets\nimport L5-5\nimport:cd0c2de5fc4a63aa801979350d2464f2" as N5
+rectangle "../../src/services/voiceService\nimport L6-6\nimport:467fcd659580a5cec406f93af08738ee" as N6
+rectangle "chart\nconstant L7-7\nconstant:8c23bbe763893d55d69eff4cc74f83c3" as N7
+rectangle "returning\nconstant L8-8\nconstant:3251cba5a68098acbee7c032af6a641f" as N8
+rectangle "uid\nconstant L9-9\nconstant:46496b57549de4108ea1f5b13219e5cb" as N9
+rectangle "historyKey\nconstant L10-10\nconstant:a237a74f7422d7d6ba7d2ee5514a60f8" as N10
+rectangle "Harness\nfunction L12-12\nfunction:3e69a70360f825a2d291ad84b061ce3e" as N11
+N0 --> N1 : contains E2630
+N0 --> N2 : contains E2631
+N0 --> N3 : contains E2632
+N0 --> N4 : contains E2633
+N0 --> N5 : contains E2634
+N0 --> N6 : contains E2635
+N0 --> N7 : contains E2636
+N0 --> N8 : contains E2637
+N0 --> N9 : contains E2638
+N0 --> N10 : contains E2639
+N0 --> N11 : contains E2640
+@enduml

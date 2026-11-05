@@ -1,0 +1,41 @@
+@startuml
+title src/components/NatallyConfigModal.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "NatallyConfigModal.tsx\nfile L1-89\nfile:src/components/NatallyConfigModal.tsx" as N0
+rectangle "react\nimport L1-1\nimport:cb82b6bb6b5b49aeb656a4cfa5647e9e" as N1
+rectangle "react-dom\nimport L2-2\nimport:bba5b9544877f4830e72e22b6fbe1be0" as N2
+rectangle "lucide-react\nimport L3-3\nimport:f0649b357b14c5f55febbdf2b907edda" as N3
+rectangle "../services/voiceService\nimport L4-7\nimport:e82cfda227c693e6dc4df563c9c89d1d" as N4
+rectangle "../services/supertonicTts\nimport L8-8\nimport:b352ccbb72447463511abf11547e0dfa" as N5
+rectangle "./VoiceMeasurementPanel\nimport L9-9\nimport:713ee5deccfc192d1ffe3f15a4e0bb4a" as N6
+rectangle "NatallyConfigModalProps\ninterface L11-15\ninterface:57c5eb247d8cb9299df0bfee9b99dc41" as N7
+rectangle "settings\nproperty L12-12\nproperty:05b4ee0d39a910448b7b750cc63bca5d" as N8
+rectangle "onUpdateSettings\nproperty L13-13\nproperty:1fc4f3fb7789caee327b7ca8b2406616" as N9
+rectangle "onClose\nproperty L14-14\nproperty:a91c63a5b4de069308841a88c26ccdda" as N10
+rectangle "NatallyConfigModal\nfunction L17-88\nfunction:d8d06965a8b49361934e96a91df317d3" as N11
+rectangle "closeOnEscape\nfunction L24-24\nfunction:86ada395c7f5c1002659a6ace40e908f" as N12
+rectangle "update\nfunction L28-31\nfunction:64473468e74ae23c63b4e3dae4591842" as N13
+rectangle "preview\nfunction L32-38\nfunction:6975454c2d861e8fe8ca8a4be92d7e50" as N14
+N0 --> N1 : contains E981
+N0 --> N2 : contains E982
+N0 --> N3 : contains E983
+N0 --> N4 : contains E984
+N0 --> N5 : contains E985
+N0 --> N6 : contains E986
+N0 --> N7 : contains E987
+N7 --> N8 : contains E988
+N7 --> N9 : contains E989
+N7 --> N10 : contains E990
+N0 --> N11 : contains E991
+N11 --> N12 : contains E992
+N11 --> N13 : contains E993
+N11 --> N14 : contains E994
+N11 --> N13 : calls E4901
+N11 --> N13 : calls E4902
+N11 --> N14 : calls E4903
+N11 --> N13 : calls E4905
+N11 --> N13 : calls E4907
+N11 --> N12 : references E4908
+@enduml

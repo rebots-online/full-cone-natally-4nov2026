@@ -1,0 +1,40 @@
+@startuml
+title tests/voice-recovery.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voice-recovery.test.ts\nfile L1-66\nfile:tests/voice-recovery.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:2c0650cdbc8d0b661cdc83351f9b7873" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:2b130a365209f51582f9ba56eede54cc" as N2
+rectangle "../src/services/supertonicTts\nimport L3-3\nimport:487ebdcb47091510e49d5593757d7b5b" as N3
+rectangle "TestWorker\nclass L7-16\nclass:5391afe71d4a83ed6c66e851ba26fc22" as N4
+rectangle "onmessage\nproperty L8-8\nproperty:10273c63757a86a1cd6102f7490d9c60" as N5
+rectangle "onerror\nproperty L9-9\nproperty:ca91be6b4b02d3effc0348cdc04e01bf" as N6
+rectangle "terminated\nproperty L10-10\nproperty:3519fe440f7d4d357b2fea9ce70be018" as N7
+rectangle "requests\nproperty L11-11\nproperty:6d1397ffabec76c4f1830e06f660fd99" as N8
+rectangle "constructor\nmethod L12-12\nmethod:b237119e77c86c0c67aa0c597a667e23" as N9
+rectangle "postMessage\nmethod L13-13\nmethod:da9b635a654b5af9a1a83e35669d8204" as N10
+rectangle "terminate\nmethod L14-14\nmethod:b3df985dfb9d8768bbb6a3b790671b3a" as N11
+rectangle "reply\nmethod L15-15\nmethod:94f4890dae34f4b3b65bc2f5213de04b" as N12
+N0 --> N1 : contains E2834
+N0 --> N2 : contains E2835
+N0 --> N3 : contains E2836
+N0 --> N4 : contains E2837
+N4 --> N5 : contains E2838
+N4 --> N6 : contains E2839
+N4 --> N7 : contains E2840
+N4 --> N8 : contains E2841
+N4 --> N9 : contains E2842
+N4 --> N10 : contains E2843
+N4 --> N11 : contains E2844
+N4 --> N12 : contains E2845
+N0 --> N4 : references E6878
+N12 --> N5 : calls E6879
+N0 --> N12 : calls E6882
+N0 --> N12 : calls E6885
+N0 --> N12 : calls E6886
+N0 --> N12 : calls E6888
+N0 --> N12 : calls E6890
+N0 --> N12 : calls E6892
+N0 --> N12 : calls E6894
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+title src/services/transits.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "transits.ts\nfile L1-112\nfile:src/services/transits.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:ce6f85efb5ec32107541e03665a46f60" as N1
+rectangle "CurrentLocation\ninterface L3-8\ninterface:3b5e9f28cc85807fa0dd031191511488" as N2
+rectangle "name\nproperty L4-4\nproperty:48b2d3224c18ee8e7f0203cc27d5ae72" as N3
+rectangle "latitude\nproperty L5-5\nproperty:aaf27001ead2c4049ae315ca86849d36" as N4
+rectangle "longitude\nproperty L6-6\nproperty:63e59138a3ad27488c8773a63fd82598" as N5
+rectangle "timeZone\nproperty L7-7\nproperty:cbb1e4ba3648e5bca0de693ce6671e8f" as N6
+rectangle "requestCurrentLocation\nfunction L10-21\nfunction:92f3939db264c0ff7bf2bb3ca6fa0435" as N7
+rectangle "calculateTransitAspects\nfunction L23-42\nfunction:ed7f97fe4f52afa57b3457e77fca22dd" as N8
+rectangle "resolveObservationMoment\nfunction L44-53\nfunction:c93b02450390286952975275fd8846ae" as N9
+rectangle "calculateCurrentSkySnapshot\nfunction L55-89\nfunction:ccab34438e75b7153d821e85c0099ec2" as N10
+rectangle "buildCurrentSkyContext\nfunction L91-111\nfunction:2b87c8280d4e3c15541843ea5b811e43" as N11
+N0 --> N1 : contains E2389
+N0 --> N2 : contains E2390
+N2 --> N3 : contains E2391
+N2 --> N4 : contains E2392
+N2 --> N5 : contains E2393
+N2 --> N6 : contains E2394
+N0 --> N7 : contains E2395
+N0 --> N8 : contains E2396
+N0 --> N9 : contains E2397
+N0 --> N10 : contains E2398
+N0 --> N11 : contains E2399
+N7 --> N2 : references E6344
+N10 --> N8 : calls E6353
+N11 --> N10 : calls E6355
+N11 --> N10 : calls E6356
+@enduml

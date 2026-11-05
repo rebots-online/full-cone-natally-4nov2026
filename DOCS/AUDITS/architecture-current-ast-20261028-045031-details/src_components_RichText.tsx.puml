@@ -1,0 +1,55 @@
+@startuml
+title src/components/RichText.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "RichText.tsx\nfile L1-200\nfile:src/components/RichText.tsx" as N0
+rectangle "react\nimport L1-1\nimport:efc80f92d9cc5c91a108b13d24d3eb81" as N1
+rectangle "RichTextProps\ninterface L3-12\ninterface:3ca60c42e9a741a839604a54a08a9c59" as N2
+rectangle "content\nproperty L4-4\nproperty:88826a962032f8c4f85562b1ab13baf9" as N3
+rectangle "resolveTarget\nproperty L5-5\nproperty:a8527bdc5dbf28311729b3b43aaed127" as N4
+rectangle "targetNames\nproperty L6-6\nproperty:986218e1699fbe099e00ed74e1975cbb" as N5
+rectangle "references\nproperty L7-7\nproperty:826a51c2996b19967358527133655db0" as N6
+rectangle "onTagClick\nproperty L8-8\nproperty:4fe866ec384e55d1cba993a31ff8dbee" as N7
+rectangle "className\nproperty L9-9\nproperty:30f1b79e2fb04b6816f5e2410b373f48" as N8
+rectangle "highlightCharIndex\nproperty L10-10\nproperty:795e91b3f72455c40f3b4d11cc667f31" as N9
+rectangle "isCurrentlySpeaking\nproperty L11-11\nproperty:06ffbd0b6059bf5a5bb7b79ac1c3f306" as N10
+rectangle "RichText\nfunction L14-199\nfunction:576da79cf4dc814183816119845c69b6" as N11
+rectangle "renderInteractive\nfunction L31-59\nfunction:45955409631c17b0dd5f42cac0968f21" as N12
+rectangle "renderInlineFormatted\nfunction L60-68\nfunction:83542db100d30e2a10f72d19d763bd80" as N13
+rectangle "renderKaraokeWords\nfunction L71-98\nfunction:615496c1e158069f5277308fdfb9832a" as N14
+rectangle "flushList\nfunction L104-114\nfunction:cb8dae06a136ef6524d07b49b7d506cd" as N15
+N0 --> N1 : contains E1208
+N0 --> N2 : contains E1209
+N2 --> N3 : contains E1210
+N2 --> N4 : contains E1211
+N2 --> N5 : contains E1212
+N2 --> N6 : contains E1213
+N2 --> N7 : contains E1214
+N2 --> N8 : contains E1215
+N2 --> N9 : contains E1216
+N2 --> N10 : contains E1217
+N0 --> N11 : contains E1218
+N11 --> N12 : contains E1219
+N11 --> N13 : contains E1220
+N11 --> N14 : contains E1221
+N11 --> N15 : contains E1222
+N12 --> N14 : calls E5244
+N12 --> N14 : calls E5245
+N12 --> N14 : calls E5246
+N12 --> N14 : calls E5247
+N13 --> N12 : calls E5248
+N13 --> N12 : calls E5249
+N13 --> N12 : calls E5250
+N11 --> N15 : calls E5251
+N11 --> N15 : calls E5252
+N11 --> N13 : calls E5253
+N11 --> N15 : calls E5254
+N11 --> N13 : calls E5255
+N11 --> N13 : calls E5256
+N11 --> N15 : calls E5257
+N11 --> N13 : calls E5258
+N11 --> N15 : calls E5259
+N11 --> N13 : calls E5260
+N11 --> N15 : calls E5261
+@enduml

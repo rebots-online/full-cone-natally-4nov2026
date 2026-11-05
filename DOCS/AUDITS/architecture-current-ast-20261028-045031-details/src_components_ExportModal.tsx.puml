@@ -1,0 +1,54 @@
+@startuml
+title src/components/ExportModal.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ExportModal.tsx\nfile L1-284\nfile:src/components/ExportModal.tsx" as N0
+rectangle "react\nimport L1-1\nimport:2782cfe43c6818b2708dd36c7dfbf906" as N1
+rectangle "lucide-react\nimport L2-2\nimport:dbcb2b3689eeb708ea59e058f4a32ca5" as N2
+rectangle "./PurchaseAccess\nimport L3-3\nimport:b23c5d0b49575d20abcaf19803257404" as N3
+rectangle "../services/chartTargets\nimport L4-4\nimport:7e48734460d04cb38feea1e0699c6e69" as N4
+rectangle "../services/ephemeris\nimport L5-5\nimport:fcee8839c98399c3c7cd0474f050f1ac" as N5
+rectangle "../services/comprehensiveReading\nimport L6-6\nimport:9ac1fa0ec25dec2dac00bbabf4381b89" as N6
+rectangle "../services/souvenir\nimport L7-7\nimport:0449e3a8f29d47e7923daf9a3cfdb22b" as N7
+rectangle "../services/souvenirPdf\nimport L8-8\nimport:779b23f2cd18c58380c0c5f8c1ee22fd" as N8
+rectangle "ExportModalProps\ninterface L10-13\ninterface:db4f61659528fd2cd2e3d3481825b708" as N9
+rectangle "chart\nproperty L11-11\nproperty:13bcd34219a1db12f157d4c83666949b" as N10
+rectangle "onClose\nproperty L12-12\nproperty:495e47eef0a8ee96c040c0b2587ecb98" as N11
+rectangle "ExportModal\nfunction L15-282\nfunction:0f2cad5bf256bcff841a4100aec50b14" as N12
+rectangle "handleCopyLink\nfunction L27-31\nfunction:22fe4eb1be823fab4b0af8e2c90750e2" as N13
+rectangle "handleCopyText\nfunction L33-37\nfunction:13cbd986cb42b1c0dea4f8ba9cda0a63" as N14
+rectangle "handleDownloadMarkdown\nfunction L39-48\nfunction:77fb7da20e05f3b49c0482acace27dbc" as N15
+rectangle "handleExportPNG\nfunction L50-65\nfunction:3f15953989e54f79df77b7a9d60b1802" as N16
+rectangle "handleExportJPG\nfunction L67-82\nfunction:c03deee56136e1f46ec812e88f916d34" as N17
+rectangle "handleExportPDF\nfunction L84-97\nfunction:f809602f1a488ba0e1cfc4e05af23e30" as N18
+rectangle "handleNativeShare\nfunction L99-137\nfunction:ea2369694d20aa3eb0f70e0eb2a22d31" as N19
+N0 --> N1 : contains E777
+N0 --> N2 : contains E778
+N0 --> N3 : contains E779
+N0 --> N4 : contains E780
+N0 --> N5 : contains E781
+N0 --> N6 : contains E782
+N0 --> N7 : contains E783
+N0 --> N8 : contains E784
+N0 --> N9 : contains E785
+N9 --> N10 : contains E786
+N9 --> N11 : contains E787
+N0 --> N12 : contains E788
+N12 --> N13 : contains E789
+N12 --> N14 : contains E790
+N12 --> N15 : contains E791
+N12 --> N16 : contains E792
+N12 --> N17 : contains E793
+N12 --> N18 : contains E794
+N12 --> N19 : contains E795
+N19 --> N13 : calls E4552
+N12 --> N19 : calls E4557
+N12 --> N19 : calls E4558
+N12 --> N18 : references E4559
+N12 --> N15 : references E4560
+N12 --> N16 : references E4561
+N12 --> N17 : references E4562
+N12 --> N13 : references E4563
+N12 --> N14 : references E4564
+@enduml

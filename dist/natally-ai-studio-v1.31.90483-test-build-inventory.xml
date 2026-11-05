@@ -1,0 +1,14 @@
+<test-build version="1.31.90483" complete="false">
+  <artifact target="windows-exe" state="pending" sha256=""/>
+  <artifact target="nsis" state="pending" sha256=""/>
+  <artifact target="msi" state="pending" sha256=""/>
+  <artifact target="appimage" state="pending" sha256=""/>
+  <artifact target="deb" state="pending" sha256=""/>
+  <artifact target="rpm" state="pending" sha256=""/>
+  <artifact target="apk" state="pending" sha256=""/>
+  <artifact target="aab" state="pending" sha256=""/>
+  <artifact target="android-symbols" state="pending" sha256=""/>
+  <artifact target="web" state="verified" sha256="5778a5807a9ef8ba9449fa3e10071701648cad01cb57561105a911188bd11098"/>
+  <artifact target="web-installer" state="verified" sha256="f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce"/>
+  <artifact target="pwa" state="verified" sha256="42eac062777b3ce6397cbd5af9ddba94097c1b5a52fe7d308a19cb559f171dd3"/>
+</test-build>

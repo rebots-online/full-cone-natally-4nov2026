@@ -1,0 +1,17 @@
+@startuml
+title public/pwa.js — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "pwa.js\nfile L1-57\nfile:public/pwa.js" as N0
+rectangle "isTauri\nfunction L4-6\nfunction:3a13aa62a0c407ef93c62bb5afa6bbf4" as N1
+rectangle "removeButton\nfunction L21-24\nfunction:a847cc75a346b84dd29c367b12088d0c" as N2
+rectangle "showButton\nfunction L26-44\nfunction:95f52cdab1088795f64ba7ee139ea606" as N3
+N0 --> N1 : contains E157
+N0 --> N2 : contains E158
+N0 --> N3 : contains E159
+N0 --> N1 : calls E3961
+N3 --> N2 : calls E3962
+N0 --> N3 : calls E3963
+N0 --> N2 : calls E3964
+@enduml

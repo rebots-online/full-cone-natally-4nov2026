@@ -1,0 +1,126 @@
+@startuml
+title src/services/atelierMemories.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "atelierMemories.ts\nfile L1-80\nfile:src/services/atelierMemories.ts" as N0
+rectangle "./historyLifecycle\nimport L1-1\nimport:faf7cf72e59705a5aca4921f0541ad71" as N1
+rectangle "ATELIER_ITEMS\nconstant L2-2\nconstant:d37533245c09fdd5d4b8115443db4e5d" as N2
+rectangle "TrinketId\ntype_alias L3-3\ntype_alias:a45fa5a820b666f420a3d2fc655afd19" as N3
+rectangle "y\nproperty L4-4\nproperty:35d219a7b1069da7456ba138dc01c636" as N4
+rectangle "x\nproperty L4-4\nproperty:98aea8acef97c27b0cb3d65565a5fd09" as N5
+rectangle "AtelierPosition\ntype_alias L4-4\ntype_alias:15233ec0043e7eb87b4ab5d749080a60" as N6
+rectangle "persistenceAvailable\nproperty L5-5\nproperty:2bbccd1de939318ee41552870cb30008" as N7
+rectangle "placements\nproperty L5-5\nproperty:35e6a4ef02b28b21d3abcf43b83d794d" as N8
+rectangle "taped\nproperty L5-5\nproperty:55627787a73e9d8600bcfdfd3871364a" as N9
+rectangle "broken\nproperty L5-5\nproperty:b3d50c4803dd956c81521950b3917688" as N10
+rectangle "AtelierMemory\ntype_alias L5-5\ntype_alias:c1c05c15392ca21d3932e5dd76c823fc" as N11
+rectangle "sessions\nconstant L6-6\nconstant:1edff07b9aa1a9a2d6e198f62665f110" as N12
+rectangle "rehearsals\nconstant L7-7\nconstant:acf5ecc53f4e500cb40c0fc87df509ba" as N13
+rectangle "realIdentity\nfunction L8-8\nfunction:8aac5755f84a403169554fd13452cf41" as N14
+rectangle "identity\nfunction L9-9\nfunction:ae7c27c019e7b49f6956be6e94efcd75" as N15
+rectangle "isAtelierRehearsal\nfunction L10-10\nfunction:618a77e257c84072a224c5c21022ba64" as N16
+rectangle "setAtelierRehearsal\nfunction L11-15\nfunction:d3243948ff1c9c022a6fb809373066a8" as N17
+rectangle "resetAtelierRehearsal\nfunction L16-19\nfunction:327282c2216ab4c51a09c1b17a076afa" as N18
+rectangle "nextRehearsalAppointment\nfunction L20-25\nfunction:76ce5e202581373f5be5c4f9496201ce" as N19
+rectangle "storageKey\nfunction L26-26\nfunction:730467a024ec0d20718d7a6d08926820" as N20
+rectangle "valid\nfunction L27-27\nfunction:5bbba9673a9decaa56960e3fa4aba22e" as N21
+rectangle "getAtelierMemory\nfunction L28-50\nfunction:56e837b3129ea5f99857f41a491b9459" as N22
+rectangle "validatedPositions\nfunction L51-54\nfunction:f0655917b69256319eb843a3a626a974" as N23
+rectangle "save\nfunction L55-55\nfunction:17c4d35f02ab3242cb57ca9898805a25" as N24
+rectangle "placeAtelierObjects\nfunction L56-59\nfunction:137873943fc4f8feb0c29c5ee45e5588" as N25
+rectangle "publish\nfunction L60-60\nfunction:1ac330a9904839d7af2a5736be508447" as N26
+rectangle "breakAtelierObject\nfunction L61-67\nfunction:55e84193a28758f57dfd7898d0175233" as N27
+rectangle "eraseAtelierHistory\nfunction L68-74\nfunction:35009c54155bf7e1c9d7bd8cd917b490" as N28
+rectangle "buildAtelierMemoryPrompt\nfunction L75-79\nfunction:70e0016d8e7546c044f2a4f8ddff9d6a" as N29
+N0 --> N1 : contains E1343
+N0 --> N2 : contains E1344
+N0 --> N3 : contains E1345
+N0 --> N6 : contains E1346
+N6 --> N5 : contains E1347
+N6 --> N4 : contains E1348
+N0 --> N11 : contains E1349
+N11 --> N8 : contains E1350
+N11 --> N10 : contains E1351
+N11 --> N9 : contains E1352
+N11 --> N7 : contains E1353
+N0 --> N12 : contains E1354
+N0 --> N13 : contains E1355
+N0 --> N14 : contains E1356
+N0 --> N15 : contains E1357
+N0 --> N16 : contains E1358
+N0 --> N17 : contains E1359
+N0 --> N18 : contains E1360
+N0 --> N19 : contains E1361
+N0 --> N20 : contains E1362
+N0 --> N21 : contains E1363
+N0 --> N22 : contains E1364
+N0 --> N23 : contains E1365
+N0 --> N24 : contains E1366
+N0 --> N25 : contains E1367
+N0 --> N26 : contains E1368
+N0 --> N27 : contains E1369
+N0 --> N28 : contains E1370
+N0 --> N29 : contains E1371
+N21 --> N2 : references E1372
+N11 --> N3 : references E5391
+N11 --> N6 : references E5392
+N11 --> N3 : references E5393
+N11 --> N3 : references E5394
+N15 --> N14 : calls E5399
+N15 --> N14 : calls E5400
+N16 --> N14 : calls E5401
+N17 --> N14 : calls E5402
+N17 --> N18 : calls E5403
+N17 --> N15 : calls E5404
+N17 --> N14 : calls E5405
+N17 --> N26 : calls E5406
+N18 --> N16 : calls E5407
+N18 --> N15 : calls E5408
+N18 --> N26 : calls E5409
+N19 --> N16 : calls E5410
+N19 --> N22 : calls E5411
+N19 --> N15 : calls E5412
+N19 --> N26 : calls E5413
+N21 --> N3 : references E5414
+N22 --> N11 : references E5415
+N22 --> N15 : calls E5417
+N22 --> N3 : references E5418
+N22 --> N11 : references E5419
+N22 --> N20 : calls E5420
+N22 --> N23 : calls E5421
+N22 --> N24 : calls E5422
+N23 --> N11 : references E5423
+N23 --> N11 : references E5425
+N23 --> N21 : calls E5426
+N24 --> N11 : references E5427
+N24 --> N20 : calls E5428
+N25 --> N11 : references E5429
+N25 --> N11 : references E5430
+N25 --> N22 : calls E5433
+N25 --> N22 : calls E5434
+N25 --> N23 : calls E5435
+N25 --> N24 : calls E5436
+N25 --> N15 : calls E5437
+N25 --> N15 : calls E5438
+N25 --> N26 : calls E5439
+N27 --> N3 : references E5440
+N27 --> N11 : references E5441
+N27 --> N22 : calls E5444
+N27 --> N22 : calls E5445
+N27 --> N24 : calls E5446
+N27 --> N15 : calls E5447
+N27 --> N15 : calls E5448
+N27 --> N26 : calls E5449
+N28 --> N11 : references E5450
+N28 --> N16 : calls E5452
+N28 --> N15 : calls E5453
+N28 --> N14 : calls E5454
+N28 --> N11 : references E5455
+N28 --> N20 : calls E5456
+N28 --> N15 : calls E5457
+N28 --> N15 : calls E5458
+N28 --> N26 : calls E5459
+N29 --> N22 : calls E5460
+N22 --> N21 : references E5461
+@enduml

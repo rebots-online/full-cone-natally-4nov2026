@@ -1,0 +1,115 @@
+{
+  "observedAt": "2026-10-28T15:36:36.546Z",
+  "scope": "Identity-only function calls and source inspection; no build, stamp, compilation, native initialization, deployment or runtime sign-in",
+  "identity": {
+    "name": "Natally",
+    "identifier": "mba.robin.natally"
+  },
+  "version": "1.11.86659",
+  "versionHash": "790b543a935e3822e5701da87dbb6a18d002ac07cb548ed55f1a10d03097e3ce",
+  "nativeIdempotent": true,
+  "kotlin": [
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/MainActivity.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "632d6bf4eac098222da65ca6b3890776c32146ce0c4c333aa0c0d8522b4ff29d"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/Ipc.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "47b59f2bce60d440dafd493f53853d973da30cf5e40a7fc29a12a788e37d09eb"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/Logger.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "407e4feaff3410857bffe2b07c153ce44a200c59823dd5dd97c48c80e432a791"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/PermissionHelper.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "67ed954ae2e4d9511cb9c5a2114142dd05b57a6ad020d5632a38061206dec040"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/proguard-wry.pro",
+      "nonidentityBytesPreserved": true,
+      "sha256": "23e8d10defea3c225754d03cf2b6b91a82a2eaad0a11322c2947bfd14e8c69df"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/Rust.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "d77ed6cd1ac9ed750553d358871d6a6289dae491b59717ad0b6b9737b14abb55"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/RustWebChromeClient.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "d5f6cb7ac17cc98111b225865394a98c4d22258f95884bb7f2ae81d5811308ad"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/RustWebView.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "40345591fad3d0c9fc05d30a50756fe83fa06e8ed015ed124ad00c869295b820"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/RustWebViewClient.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "35ca3ae2dfdf1d83e7feb1fb43acb1daf1ff79b7069fe1784de53e31b2a18b4b"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/TauriActivity.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "f4e479b429eab66c1f1be83ca12a801e1ce939eadbc4d300f2744f440f20d942"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/java/mba/robin/natally/generated/WryActivity.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "20009f03222a1062aee5592e082c9506f37afd0428f905bd5e8f1780b33b5bf0"
+    },
+    {
+      "path": "src-tauri/gen/android/buildSrc/src/main/java/mba/robin/natally/kotlin/BuildTask.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "6c4d2ecced2d0cc8579cbf1db333dc3ea86d63c8669390343d51945d8aa1841b"
+    },
+    {
+      "path": "src-tauri/gen/android/buildSrc/src/main/java/mba/robin/natally/kotlin/RustPlugin.kt",
+      "nonidentityBytesPreserved": true,
+      "sha256": "b5d694cbc4bfce214002db6e547dc442468ec8f83f4b6b3968209e9555e76814"
+    }
+  ],
+  "fork": {
+    "identity": {
+      "name": "Aurora Reader",
+      "identifier": "org.aurora.reader"
+    },
+    "idempotent": true,
+    "htmlTitles": {
+      "index.html": "Aurora Reader",
+      "marketing.html": "Aurora Reader \u00e2\u20ac\u201d your birth chart, read aloud",
+      "auth/native.html": "Sign in to Aurora Reader \u00e2\u20ac\u201d Roche Media Services",
+      "public/terms.html": "Terms of Service \u00c2\u00b7 Aurora Reader",
+      "public/privacy.html": "Privacy Policy \u00c2\u00b7 Aurora Reader"
+    },
+    "manifest": {
+      "name": "Aurora Reader",
+      "short_name": "Aurora Reader",
+      "id": "org.aurora.reader"
+    }
+  },
+  "rejected": [
+    "missing name",
+    "missing ID",
+    "example ID",
+    "test ID",
+    "placeholder ID"
+  ],
+  "missingIdentityBeforeStamp": "loadAppIdentity is the first stamp statement, before nextStamp and any version writes; stamp was not invoked",
+  "unrelatedEnvExposed": false,
+  "publication": {
+    "identitySourceHead": "8356c2163665a0dc1479f97deda5a8a9aa6572e8",
+    "sourceLineCommits": 248,
+    "unchangedPathRelocations": 3,
+    "allRemoteReadbacksMatched": true,
+    "committedTreeMatchesVerifiedSnapshot": true,
+    "laterCoordinatorVersion": "1.12.86707",
+    "laterCoordinatorOnlyIdentityFileChange": "src-tauri/tauri.conf.json version mirrors"
+  }
+}

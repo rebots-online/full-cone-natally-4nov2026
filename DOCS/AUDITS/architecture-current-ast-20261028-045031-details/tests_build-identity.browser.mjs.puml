@@ -1,0 +1,21 @@
+@startuml
+title tests/build-identity.browser.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "build-identity.browser.mjs\nfile L1-25\nfile:tests/build-identity.browser.mjs" as N0
+rectangle "playwright\nimport L1-1\nimport:58eb8dc275229e73c22cf105f2f2c39a" as N1
+rectangle "node:fs\nimport L2-2\nimport:baf7c8ec338c615ec9e48e2373516162" as N2
+rectangle "node:assert/strict\nimport L3-3\nimport:194684328ac2c3fba2e9ccf21de915f8" as N3
+rectangle "browser\nconstant L5-5\nconstant:249ab3a78c3ae6627a477b387f6b7669" as N4
+rectangle "page\nconstant L7-7\nconstant:8477b766739b60966986293fe1c0f834" as N5
+rectangle "icon\nconstant L9-9\nconstant:65765b96e2dfd48c7d9fee113cb66706" as N6
+rectangle "alpha\nconstant L12-17\nconstant:ed3344282695876085b3b0571dbe40c8" as N7
+N0 --> N1 : contains E2641
+N0 --> N2 : contains E2642
+N0 --> N3 : contains E2643
+N0 --> N4 : contains E2644
+N0 --> N5 : contains E2645
+N0 --> N6 : contains E2646
+N0 --> N7 : contains E2647
+@enduml

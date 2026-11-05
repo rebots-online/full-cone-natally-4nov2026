@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-22T13:53:52.628Z",
+  "scope": {
+    "browser": "native Windows Chrome, headless SwiftShader WebGL",
+    "hostedInference": "controlled",
+    "speech": "controlled",
+    "liveProvider": false,
+    "physicalDevice": false,
+    "productionCodeModified": false
+  },
+  "fixture": "Greenwich 2000-01-01 00:00 Whole Sign",
+  "reading": [
+    {
+      "clicked": "Saturn",
+      "manual": [
+        "Saturn"
+      ],
+      "lit": [
+        "Saturn"
+      ]
+    },
+    {
+      "clicked": "Neptune",
+      "manual": [
+        "Neptune"
+      ],
+      "lit": [
+        "Neptune"
+      ]
+    },
+    {
+      "clicked": "saturn",
+      "manual": [
+        "saturn"
+      ],
+      "lit": []
+    },
+    {
+      "clicked": "neptune",
+      "manual": [
+        "neptune"
+      ],
+      "lit": []
+    }
+  ],
+  "chart": [
+    {
+      "clicked": "Saturn",
+      "point": {
+        "x": 850.5385680016768,
+        "y": 285.32937260783825
+      },
+      "element": "<canvas data-engine=\"three.js r174\" width=\"1280\" height=\"900\" style=\"display: block; width: 1280px; height: 900px; touch-action: none; cursor: default;\"></canvas>",
+      "under": [
+        {
+          "id": "Saturn",
+          "distance": 7.712020680748665
+        }
+      ],
+      "manual": [
+        "Saturn"
+      ],
+      "lit": [
+        "Saturn"
+      ]
+    },
+    {
+      "clicked": "Neptune",
+      "point": {
+        "x": 764.9314908300177,
+        "y": 647.569134027533
+      },
+      "element": "<canvas data-engine=\"three.js r174\" width=\"1280\" height=\"900\" style=\"display: block; width: 1280px; height: 900px; touch-action: none; cursor: pointer;\"></canvas>",
+      "under": [
+        {
+          "id": "Neptune",
+          "distance": 6.928968160090204
+        },
+        {
+          "id": "House 5",
+          "distance": 7.2556576675078075
+        }
+      ],
+      "manual": [
+        "Neptune"
+      ],
+      "lit": [
+        "Neptune"
+      ]
+    }
+  ],
+  "errors": [],
+  "formatted": {
+    "boldSaturnButtons": 0,
+    "italicNeptuneButtons": 0
+  }
+}

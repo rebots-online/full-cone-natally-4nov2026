@@ -1,0 +1,36 @@
+@startuml
+title src/components/LearnAndPayments.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "LearnAndPayments.tsx\nfile L1-90\nfile:src/components/LearnAndPayments.tsx" as N0
+rectangle "react\nimport L1-1\nimport:e95199e9c475921fa9cc6266f27811a5" as N1
+rectangle "react-dom\nimport L2-2\nimport:ce42307caf05e75d597d61abb1d99f21" as N2
+rectangle "./learn-and-payments.css\nimport L3-3\nimport:b084e954bb47a8dff662f79f53eb9f79" as N3
+rectangle "./PurchaseAccess\nimport L4-4\nimport:530c4a69a44ca108ccc643b43a1810b8" as N4
+rectangle "LearnAndPaymentsProps\ninterface L6-6\ninterface:aaea5785c0c1c6d34d56510e595df3d1" as N5
+rectangle "open\nproperty L6-6\nproperty:7918183adc4f43f532d2dfc39c6b4695" as N6
+rectangle "onClose\nproperty L6-6\nproperty:dce1a24c124e96960e91f2d4aa9fa1e9" as N7
+rectangle "Section\ntype_alias L7-7\ntype_alias:7b604f9e24d3ed84dc9b2436bcb5ffad" as N8
+rectangle "sections\nconstant L8-10\nconstant:c2d88282581e48e23b4914da76da3307" as N9
+rectangle "Source\nfunction L11-11\nfunction:4000ab6d8f89697a0026e8317c03df8d" as N10
+rectangle "lessons\nconstant L13-34\nconstant:37e6e16a52268315215a5e7f12db7735" as N11
+rectangle "LearnAndPayments\nfunction L36-89\nfunction:13bbbe095a6417330348c4875b595c65" as N12
+N0 --> N1 : contains E826
+N0 --> N2 : contains E827
+N0 --> N3 : contains E828
+N0 --> N4 : contains E829
+N0 --> N5 : contains E830
+N5 --> N6 : contains E831
+N5 --> N7 : contains E832
+N0 --> N8 : contains E833
+N0 --> N9 : contains E834
+N0 --> N10 : contains E835
+N0 --> N11 : contains E836
+N0 --> N12 : contains E837
+N0 --> N3 : imports E3117
+N9 --> N8 : references E4587
+N12 --> N5 : references E4588
+N12 --> N7 : calls E4589
+N12 --> N10 : calls E6925
+@enduml

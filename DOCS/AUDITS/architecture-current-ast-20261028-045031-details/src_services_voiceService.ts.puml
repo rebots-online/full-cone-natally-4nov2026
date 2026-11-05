@@ -1,0 +1,250 @@
+@startuml
+title src/services/voiceService.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voiceService.ts\nfile L1-449\nfile:src/services/voiceService.ts" as N0
+rectangle "./supertonicTts\nimport L1-1\nimport:0b64e7091b8aa318b50532f13d8341ad" as N1
+rectangle "NATALLY_VOICE_SAMPLE\nconstant L3-3\nconstant:3c1dca0ecfeffde7a2a066adb05f06d6" as N2
+rectangle "VoiceSettings\ninterface L5-19\ninterface:162b8351d085b8d17645ad2ba74e43be" as N3
+rectangle "resourceMode\nproperty L6-6\nproperty:48feaac34b3cdf4cbea13e6cde8d7221" as N4
+rectangle "tone\nproperty L7-7\nproperty:eb27994534455a9ddc84facaef2ea4da" as N5
+rectangle "readingAloud\nproperty L8-8\nproperty:70f3011f838856a121b6b0d49392a6d8" as N6
+rectangle "language\nproperty L9-9\nproperty:d7a08a2e9b5d68185dd9d619b9b942f8" as N7
+rectangle "accentMode\nproperty L10-10\nproperty:7c79ed56597a89516daf6d1e2a467f61" as N8
+rectangle "rate\nproperty L11-11\nproperty:f15c8b6bcc56fd26bededa3ce1fa8cd2" as N9
+rectangle "pitch\nproperty L12-12\nproperty:23c81186ff81088569867702f33c4f2a" as N10
+rectangle "ttsModel\nproperty L13-13\nproperty:474261c251d6477f9d1672bdc4437b2b" as N11
+rectangle "aiVoiceName\nproperty L14-14\nproperty:c4e4a4f661bf653ef48a4c8c01a8be11" as N12
+rectangle "kawaiiMode\nproperty L15-15\nproperty:383b56cb90e980a7a8af14ef5d08e711" as N13
+rectangle "kawaiiIntensity\nproperty L16-16\nproperty:1c472e953e0c7700dba6c1715277f285" as N14
+rectangle "spriteMode\nproperty L17-17\nproperty:c324fbcc09860ee2b41e7778a24ace17" as N15
+rectangle "customAvatarUrl\nproperty L18-18\nproperty:1b707708e304b6746d010fb20c3de3ef" as N16
+rectangle "STORAGE_KEY\nconstant L21-21\nconstant:66f563800b94039572c590754f4243bc" as N17
+rectangle "SUPPORTED_VOICES\nconstant L22-22\nconstant:57577790cae411b2fb5dbddb19a067b0" as N18
+rectangle "getVoicePreset\nfunction L24-32\nfunction:32ffab4bbf1f1364011e6184b5dcfe94" as N19
+rectangle "voicePreset\nconstant L34-34\nconstant:0c220e5e2564753db3dda84512a1fd69" as N20
+rectangle "voicePresetVersion\nconstant L35-35\nconstant:25bc068799bb9a9e79148596818d02eb" as N21
+rectangle "configuredChunkSize\nconstant L36-36\nconstant:4b7676ec08a1a12f88fc2bf33e32fad6" as N22
+rectangle "speechChunkSize\nconstant L37-37\nconstant:4de21964c9394ba9703e181fe0ec3475" as N23
+rectangle "getSpeechPolicy\nfunction L40-52\nfunction:ae9271f0d2a40dad1be73e282c80748c" as N24
+rectangle "DEFAULT_VOICE_SETTINGS\nconstant L54-66\nconstant:c01af8ccc7925872890c22ebbce6774a" as N25
+rectangle "withNatallyVoice\nfunction L69-77\nfunction:3a5db4b9806eec4610058f2ab05adf74" as N26
+rectangle "loadVoiceSettings\nfunction L79-101\nfunction:c52391756115689d7f8d6602733493b3" as N27
+rectangle "saveVoiceSettings\nfunction L103-109\nfunction:0a2e8dd6d772d4adf129e96f956ac13d" as N28
+rectangle "prepareSpeechText\nfunction L112-114\nfunction:9111805812cdb2edee4bad41c14b939b" as N29
+rectangle "prepareSpeechWithOffsets\nfunction L116-151\nfunction:097595b2f659c931fbbbe2b86508926d" as N30
+rectangle "sharedAudioContext\nvariable L153-153\nvariable:6e83609d3d781be244cd5dd1cea8415c" as N31
+rectangle "currentBufferSource\nvariable L154-154\nvariable:e2ec16350f28ac557b80dbe5dbf9dce9" as N32
+rectangle "generation\nvariable L155-155\nvariable:c170cceab117a580ebd0a3ae6ea62dbd" as N33
+rectangle "finishPlayback\nvariable L156-156\nvariable:7c9664a97b6c0fc995bd5426adc43cc0" as N34
+rectangle "finishUtterance\nvariable L157-157\nvariable:7acb56ff2dcbdf0daeae381ef2af01b2" as N35
+rectangle "isSpeechBusy\nfunction L158-158\nfunction:416e41664808285737486d9ca0ba79c4" as N36
+rectangle "getSharedAudioContext\nfunction L160-167\nfunction:5f642a4a4e5657b8c1d5fd1b0c414434" as N37
+rectangle "unlockAudio\nfunction L168-171\nfunction:1f3297470bd1be2a27df17e0b5e0c5d7" as N38
+rectangle "performingSource\nvariable L178-178\nvariable:720ee1e650dc679ce570eb6a17ecfedc" as N39
+rectangle "performanceCharIndex\nvariable L179-179\nvariable:892790632dd9415208dc4cd79702320a" as N40
+rectangle "mishapTimer\nvariable L180-180\nvariable:7ef92cce83e37f12b1ad6c79a4f95964" as N41
+rectangle "mishapOwner\nvariable L181-181\nvariable:509d03592c3bc1c2db8bd9eeb7704152" as N42
+rectangle "durationMs\nproperty L182-182\nproperty:02b85ea66f7972e294279ff064d87338" as N43
+rectangle "charIndex\nproperty L182-182\nproperty:6071ea006c94ebc2cfb94fde07945dd0" as N44
+rectangle "state\nproperty L182-182\nproperty:b546a8df294cced45075c126b27c83dc" as N45
+rectangle "text\nproperty L182-182\nproperty:b893f47702707cfd5a9ffedfdb759bfb" as N46
+rectangle "NatallyVoicePerformance\ntype_alias L182-182\ntype_alias:00af0da83b698ffc34b66d9a1e6babae" as N47
+rectangle "dispatchNatallyVoicePerformance\nfunction L183-186\nfunction:82d122304b71eb1bdc229a16c6fdde7e" as N48
+rectangle "NatallyAudioSegment\ninterface L220-220\ninterface:9f3e98f1183f6890c46da07b63b928f4" as N49
+rectangle "samples\nproperty L220-220\nproperty:037d49eb8c7a0318caf57ee221c9de8d" as N50
+rectangle "sampleRate\nproperty L220-220\nproperty:8e23eff7450ce4a06653ddf35a2a2ef8" as N51
+rectangle "sourceEnd\nproperty L220-220\nproperty:eb3706316b13a3b916877d30dfa68c2c" as N52
+rectangle "pitch\nproperty L220-220\nproperty:eeae56a02ac426a6096f3ea5148db68c" as N53
+rectangle "sourceOffset\nproperty L220-220\nproperty:ef105c713bbd48a093306b0d3ece3e53" as N54
+rectangle "NatallySpeechOptions\ninterface L221-225\ninterface:11463c3d4114d631eb02ab4629d825df" as N55
+rectangle "onAudioSegment\nproperty L222-222\nproperty:dcb6c07c76937e206aa71583d886b975" as N56
+rectangle "onPreparing\nproperty L223-223\nproperty:83a327023134ca40756bea131a2a20d3" as N57
+rectangle "preparedAudio\nproperty L224-224\nproperty:91b64dd93cc4f7c49ea09bc128ce0fbe" as N58
+rectangle "externalPlaybackStop\nvariable L226-226\nvariable:3c9d199fd861471ee9f79e69f01f244e" as N59
+rectangle "registerExternalPlaybackStop\nfunction L227-231\nfunction:16aed25849542c015d805ea702ec0d61" as N60
+rectangle "WAITING_PHRASES\nconstant L232-236\nconstant:51fcdb49aa68707fa2dd3947d3417430" as N61
+rectangle "waitingIndex\nvariable L237-237\nvariable:5fb4102ca4316ec5b64251d8c11a8444" as N62
+rectangle "waitingBuffers\nconstant L238-238\nconstant:17ad122a03098b4d50d00a4241764035" as N63
+rectangle "loadWaitingBuffer\nfunction L239-252\nfunction:71f0d9ae5c10c6cf83b17ec2b0af10b6" as N64
+rectangle "prepareWaitingVoice\nfunction L254-259\nfunction:03d4a45f24bef607812c9daf1ae0dba8" as N65
+rectangle "startWaitingUtterance\nfunction L260-298\nfunction:19f077bba59b15eaff4efc360d28c6b8" as N66
+rectangle "unregister\nfunction L267-267\nfunction:2085036d4dbd30b803240207726378d9" as N67
+rectangle "cancel\nfunction L268-275\nfunction:22a58b2ab36c95c4c6448b20d325debb" as N68
+rectangle "emit\nfunction L292-292\nfunction:fe391ec945f82eaa5545e16133597b1c" as N69
+rectangle "stopSpeaking\nfunction L300-313\nfunction:7ed8fd23a767578278f429a6d9a4c940" as N70
+rectangle "speakNatallyText\nfunction L314-448\nfunction:d0ea76147bd0bcdc528ec70a64873328" as N71
+rectangle "end\nfunction L330-336\nfunction:0d312d46f09ed41aa872981b64fd2086" as N72
+rectangle "synthesize\nfunction L350-351\nfunction:230ddd4d9668a7eb85799bb7e4973f16" as N73
+rectangle "emitWord\nfunction L402-412\nfunction:250678e67341c63df9777ffaeeb468fd" as N74
+rectangle "finish\nfunction L414-426\nfunction:05fe5d9512f65bba2a3fd61faee7ec9e" as N75
+N0 --> N1 : contains E2439
+N0 --> N2 : contains E2440
+N0 --> N3 : contains E2441
+N3 --> N4 : contains E2442
+N3 --> N5 : contains E2443
+N3 --> N6 : contains E2444
+N3 --> N7 : contains E2445
+N3 --> N8 : contains E2446
+N3 --> N9 : contains E2447
+N3 --> N10 : contains E2448
+N3 --> N11 : contains E2449
+N3 --> N12 : contains E2450
+N3 --> N13 : contains E2451
+N3 --> N14 : contains E2452
+N3 --> N15 : contains E2453
+N3 --> N16 : contains E2454
+N0 --> N17 : contains E2455
+N0 --> N18 : contains E2456
+N0 --> N19 : contains E2457
+N0 --> N20 : contains E2458
+N0 --> N21 : contains E2459
+N0 --> N22 : contains E2460
+N0 --> N23 : contains E2461
+N0 --> N24 : contains E2462
+N0 --> N25 : contains E2463
+N0 --> N26 : contains E2464
+N0 --> N27 : contains E2465
+N0 --> N28 : contains E2466
+N0 --> N29 : contains E2467
+N0 --> N30 : contains E2468
+N0 --> N31 : contains E2469
+N0 --> N32 : contains E2470
+N0 --> N33 : contains E2471
+N0 --> N34 : contains E2472
+N0 --> N35 : contains E2473
+N0 --> N36 : contains E2474
+N0 --> N37 : contains E2475
+N0 --> N38 : contains E2476
+N0 --> N39 : contains E2477
+N0 --> N40 : contains E2478
+N0 --> N41 : contains E2479
+N0 --> N42 : contains E2480
+N0 --> N47 : contains E2481
+N47 --> N45 : contains E2482
+N47 --> N44 : contains E2483
+N47 --> N46 : contains E2484
+N47 --> N43 : contains E2485
+N0 --> N48 : contains E2486
+N0 --> N49 : contains E2487
+N49 --> N50 : contains E2488
+N49 --> N51 : contains E2489
+N49 --> N54 : contains E2490
+N49 --> N52 : contains E2491
+N49 --> N53 : contains E2492
+N0 --> N55 : contains E2493
+N55 --> N56 : contains E2494
+N55 --> N57 : contains E2495
+N55 --> N58 : contains E2496
+N0 --> N59 : contains E2497
+N0 --> N60 : contains E2498
+N0 --> N61 : contains E2499
+N0 --> N62 : contains E2500
+N0 --> N63 : contains E2501
+N0 --> N64 : contains E2502
+N0 --> N65 : contains E2503
+N0 --> N66 : contains E2504
+N66 --> N67 : contains E2505
+N66 --> N68 : contains E2506
+N66 --> N69 : contains E2507
+N0 --> N70 : contains E2508
+N0 --> N71 : contains E2509
+N71 --> N72 : contains E2510
+N71 --> N73 : contains E2511
+N71 --> N74 : contains E2512
+N71 --> N75 : contains E2513
+N19 --> N18 : references E2514
+N21 --> N20 : references E2515
+N23 --> N22 : references E2516
+N24 --> N23 : references E2517
+N25 --> N20 : references E2518
+N26 --> N25 : references E2519
+N27 --> N25 : references E2520
+N27 --> N20 : references E2521
+N27 --> N18 : references E2522
+N27 --> N21 : references E2523
+N27 --> N17 : references E2524
+N28 --> N17 : references E2525
+N36 --> N35 : references E2526
+N37 --> N31 : references E2527
+N38 --> N42 : references E2528
+N48 --> N40 : references E2529
+N60 --> N59 : references E2530
+N64 --> N63 : references E2531
+N65 --> N61 : references E2532
+N66 --> N39 : references E2533
+N66 --> N61 : references E2534
+N66 --> N62 : references E2535
+N68 --> N39 : references E2536
+N70 --> N35 : references E2537
+N70 --> N34 : references E2538
+N70 --> N32 : references E2539
+N70 --> N59 : references E2540
+N70 --> N42 : references E2541
+N70 --> N41 : references E2542
+N71 --> N39 : references E2543
+N71 --> N34 : references E2544
+N71 --> N32 : references E2545
+N71 --> N35 : references E2546
+N72 --> N35 : references E2547
+N75 --> N39 : references E2548
+N75 --> N34 : references E2549
+N75 --> N32 : references E2550
+N20 --> N19 : calls E6367
+N24 --> N3 : references E6368
+N25 --> N3 : references E6369
+N26 --> N3 : references E6370
+N26 --> N3 : references E6371
+N27 --> N3 : references E6373
+N27 --> N26 : calls E6375
+N28 --> N3 : references E6376
+N28 --> N26 : calls E6377
+N29 --> N30 : calls E6378
+N38 --> N37 : calls E6379
+N48 --> N47 : references E6380
+N0 --> N48 : calls E6381
+N0 --> N48 : calls E6382
+N56 --> N49 : references E6383
+N60 --> N59 : calls E6384
+N64 --> N37 : calls E6385
+N65 --> N3 : references E6386
+N65 --> N26 : calls E6387
+N65 --> N64 : calls E6389
+N66 --> N3 : references E6390
+N66 --> N26 : calls E6391
+N68 --> N48 : calls E6392
+N68 --> N67 : calls E6393
+N66 --> N60 : calls E6394
+N66 --> N64 : calls E6395
+N66 --> N37 : calls E6396
+N66 --> N48 : calls E6397
+N69 --> N48 : calls E6398
+N66 --> N69 : calls E6399
+N66 --> N68 : calls E6400
+N70 --> N34 : calls E6401
+N70 --> N35 : calls E6402
+N71 --> N3 : references E6403
+N71 --> N55 : references E6404
+N71 --> N26 : calls E6405
+N71 --> N70 : calls E6406
+N71 --> N30 : calls E6407
+N71 --> N37 : calls E6408
+N71 --> N24 : calls E6409
+N71 --> N73 : calls E6412
+N71 --> N24 : calls E6413
+N71 --> N73 : calls E6415
+N74 --> N48 : calls E6416
+N75 --> N48 : calls E6417
+N71 --> N75 : calls E6418
+N71 --> N48 : calls E6419
+N71 --> N74 : calls E6420
+N71 --> N73 : calls E6421
+N71 --> N72 : calls E6423
+N0 --> N38 : references E6424
+N66 --> N68 : references E6425
+N66 --> N69 : references E6426
+N71 --> N72 : references E6427
+N71 --> N74 : references E6428
+N71 --> N75 : references E6429
+@enduml

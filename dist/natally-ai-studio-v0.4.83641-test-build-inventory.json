@@ -1,0 +1,86 @@
+{
+  "major": 0,
+  "minor": 4,
+  "build": 83641,
+  "version": "0.4.83641",
+  "semverVersion": "0.4.83641",
+  "versionCode": 4,
+  "stampedAt": "2026-10-26T12:41:01.773Z",
+  "msiVersion": "0.0.4.18105",
+  "prefix": "natally-ai-studio-v0.4.83641",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "9d33808e631f875ac4c832dbbf3e22ea95540cd9",
+  "invocationId": "491c98b9-249d-48a9-b715-2eca8ab2ebd5",
+  "phase": "preparing",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "nsis": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "msi": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "apk": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "aab": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "web": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    },
+    "web-installer": {
+      "state": "failed",
+      "error": "Preparation stopped by a Windows mapped icon file; no artifacts built"
+    }
+  },
+  "inputError": "Release inputs changed or are not frozen. Start a new full matrix invocation; do not reuse this stamp.",
+  "sourceInputsMatch": false,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "completedAt": "2026-10-26T12:48:37.395Z"
+}

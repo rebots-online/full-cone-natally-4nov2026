@@ -1,0 +1,27 @@
+@startuml
+title src/services/firebase.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "firebase.ts\nfile L1-44\nfile:src/services/firebase.ts" as N0
+rectangle "firebase/app\nimport L1-1\nimport:7313f71cc0a38d7d9b310d91ee52061e" as N1
+rectangle "firebase/auth\nimport L2-12\nimport:0e6717492d5b39f81e4d0653716bd071" as N2
+rectangle "firebase/firestore\nimport L13-13\nimport:508d4d0910fed3209dac129932dc8528" as N3
+rectangle "../../firebase-applet-config.json\nimport L14-14\nimport:b116ee898461a2e9c1f34cce525f2143" as N4
+rectangle "app\nconstant L16-16\nconstant:ded14dbd6737005e38d4c3e9f8ebb8d1" as N5
+rectangle "auth\nconstant L18-18\nconstant:41f2eedcd96c915204af963abb2b2560" as N6
+rectangle "db\nconstant L19-19\nconstant:c0d661c13e04f0163b0c8d7922e8cbc3" as N7
+rectangle "googleProvider\nconstant L21-21\nconstant:7edbe3e499a90765355c631d7c819c5d" as N8
+rectangle "testConnection\nfunction L23-31\nfunction:11ecc5d0d30877f7326050968111699a" as N9
+N0 --> N1 : contains E1670
+N0 --> N2 : contains E1671
+N0 --> N3 : contains E1672
+N0 --> N4 : contains E1673
+N0 --> N5 : contains E1674
+N0 --> N6 : contains E1675
+N0 --> N7 : contains E1676
+N0 --> N8 : contains E1677
+N0 --> N9 : contains E1678
+N0 --> N4 : imports E3437
+N0 --> N9 : calls E5685
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+title src/components/EraseNatallyHistoryDialog.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "EraseNatallyHistoryDialog.tsx\nfile L1-51\nfile:src/components/EraseNatallyHistoryDialog.tsx" as N0
+rectangle "react\nimport L1-1\nimport:58bc819b26bb10e1d32c2c1cfd562991" as N1
+rectangle "react-dom\nimport L2-2\nimport:fef0331052fb2e0fb332848f42c949c8" as N2
+rectangle "../services/firebase\nimport L3-3\nimport:7fd882259f1a8ac1601214df83d0f4d5" as N3
+rectangle "../services/natallyHistory\nimport L4-4\nimport:a48b18cc71fcb3d85fbbc513b746d520" as N4
+rectangle "EraseNatallyHistoryDialog\nfunction L6-50\nfunction:7a323f3fcd216551a08215ad857e9cd7" as N5
+rectangle "erase\nfunction L21-31\nfunction:024240b7130f4c0c5a075085fb578119" as N6
+N0 --> N1 : contains E771
+N0 --> N2 : contains E772
+N0 --> N3 : contains E773
+N0 --> N4 : contains E774
+N0 --> N5 : contains E775
+N5 --> N6 : contains E776
+N5 --> N6 : calls E4545
+@enduml

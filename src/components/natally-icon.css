@@ -1,0 +1,14 @@
+.natally-brand-icon { position:relative; display:block; flex-shrink:0; padding:0; border:0; border-radius:24%; background:transparent; cursor:pointer; touch-action:manipulation; isolation:isolate; }
+.natally-brand-icon:focus-visible { outline:2px solid #f2ca50; outline-offset:4px; }
+.natally-brand-icon__still { display:block; width:100%; height:100%; transition:opacity 140ms ease; }
+.natally-brand-icon__gesture { position:absolute; inset:0; overflow:hidden; border:1px solid #d4af37; border-radius:24%; background:#120c1c; opacity:0; pointer-events:none; }
+.natally-brand-icon__chart { position:absolute; inset:0; width:100%; height:100%; }
+.natally-brand-icon__guide { position:absolute; width:80%; max-width:none; left:-5%; top:10%; transform-origin:40% 85%; }
+.natally-brand-icon.is-guiding .natally-brand-icon__still { opacity:0; }
+.natally-brand-icon.is-guiding .natally-brand-icon__gesture { opacity:1; }
+.natally-brand-icon.is-guiding .natally-brand-icon__guide { animation:natally-guide 1700ms ease-in-out both; }
+.natally-brand-icon.is-guiding .natally-brand-icon__focus { animation:natally-guide-point 1700ms ease-in-out both; transform-origin:73px 39px; }
+.natally-brand-icon__speaking { position:absolute; right:-2px; top:-2px; width:10px; height:10px; background:#f2ca50; border:2px solid #120c1c; border-radius:50%; }
+@keyframes natally-guide { 0% { opacity:0; transform:translateX(8%) rotate(-5deg); } 24%,76% { opacity:1; transform:translateX(0) rotate(0); } 100% { opacity:0; transform:translateX(3%) rotate(-2deg); } }
+@keyframes natally-guide-point { 0%,24%,100% { opacity:.3; filter:none; } 38%,64% { opacity:1; filter:drop-shadow(0 0 3px #ffd86b); transform:scale(1.35); } }
+@media (prefers-reduced-motion:reduce) { .natally-brand-icon__still { transition:none; } .natally-brand-icon.is-guiding .natally-brand-icon__guide, .natally-brand-icon.is-guiding .natally-brand-icon__focus { animation:none; } }

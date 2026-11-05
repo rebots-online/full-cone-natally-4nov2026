@@ -1,0 +1,21 @@
+@startuml
+title tests/mascot.test.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "mascot.test.tsx\nfile L1-40\nfile:tests/mascot.test.tsx" as N0
+rectangle "react\nimport L1-1\nimport:981b854ab0cce1a6d50de6c9bb64297a" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:4a7e8e1fdf3e2c360d22220180747675" as N2
+rectangle "node:test\nimport L3-3\nimport:4e735da7dc46067f8e327a772f7a6891" as N3
+rectangle "node:fs\nimport L4-4\nimport:f03fc4d6182bd6e95f29c464af1c12ac" as N4
+rectangle "react-dom/server\nimport L5-5\nimport:fb1dd5b70e2683293486e5468e225056" as N5
+rectangle "../src/components/NatallyAvatar\nimport L6-6\nimport:5c4ae32916070a3db01ed9df3b67aa81" as N6
+rectangle "../src/components/NatallyIcon\nimport L7-7\nimport:07bbf9d0d28cf2b7a1f048bac199a131" as N7
+N0 --> N1 : contains E2701
+N0 --> N2 : contains E2702
+N0 --> N3 : contains E2703
+N0 --> N4 : contains E2704
+N0 --> N5 : contains E2705
+N0 --> N6 : contains E2706
+N0 --> N7 : contains E2707
+@enduml

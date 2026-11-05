@@ -1,0 +1,87 @@
+{
+  "observedAtUtc": "2026-10-28T17:00:36.264390+00:00",
+  "scope": "UX-PAY-1 purchase recovery, pending preservation, actual terms and removal of obsolete hosted-chat deploy prerequisite",
+  "status": "source verified; publication in progress; next coordinator started separately",
+  "sourceFiles": [
+    {
+      "path": "src/services/billingAccess.ts",
+      "sha256": "a2c13d069edfa7464997f01f48a4329ee52b0203c53224938487dff21a0c3e21"
+    },
+    {
+      "path": "src/components/InferenceAccessSettings.tsx",
+      "sha256": "661540a584eda36f45a29b4f27492720a8a0a0f88f6173d878da2445c4b86211"
+    },
+    {
+      "path": "src/components/LearnAndPayments.tsx",
+      "sha256": "8da0c806e613bc096f380edb321a71fbd11484b9fdc9eec5e26af2df752306d9"
+    },
+    {
+      "path": "src/components/PurchaseAccess.tsx",
+      "sha256": "4ef9fb3bf2d04a36617b73ee94268600428f658a9eaa45305e3ba98f15a9c59a"
+    },
+    {
+      "path": "src/components/FigmaPaywall.tsx",
+      "sha256": "665e24b872127fa3710274d2ce2c3b9fbcb643be65c821c5b94de14944c0e4ec"
+    },
+    {
+      "path": "LIBS/UI/FIGMA/three-screen-offers-20261027/adapted/paywall-three-screen.html",
+      "sha256": "dd4d631c1dee3ba08e0cb03dec7281a955c74de674d86757c0a14372edf7d01f"
+    },
+    {
+      "path": "scripts/deploy-surge.sh",
+      "sha256": "1bee94e50941694ffac95b33096d48717be7922cc48f2d693fd031f0017d54c4"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node --test .tmp/payment-recovery/verify-service.cjs .tmp/payment-recovery/verify-purchase.cjs",
+      "result": "PASS",
+      "tests": 27,
+      "serviceCases": 19,
+      "actualPurchaseHandlerCases": 8,
+      "detail": "Controlled auth/RevenueCat/key boundaries exercise source closures. Unknown balance remains unknown; currency/owner validated; disabled/new/existing/personal keys checked; adapter failures retain commercial facts; passive read differs from explicit restore; zero-credit souvenir remains open; pending/cancelled never fulfill; confirmed failure stays visible; selected CTA one-shot retained and generic browse never auto-launches."
+    },
+    {
+      "command": "node .tmp/payment-recovery/verify-terms.cjs",
+      "result": "PASS",
+      "tests": 5,
+      "detail": "Actual adapted paywall in local headless Chrome; synthetic fixture amounts; external network blocked. Unloaded blank/disabled, monthly, oneoff, missing subscription period disabled and mixed comparison."
+    },
+    {
+      "command": "npm run lint",
+      "result": "PASS",
+      "detail": "Full TypeScript check after native DTO integration and selected-CTA correction."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": ".tmp/payment-recovery/verify-service.cjs",
+      "sha256": "873bc4b92c1354f0dddd9a1024a34160db4dfe6e65108220b0e19a74ae429de6"
+    },
+    {
+      "path": ".tmp/payment-recovery/verify-purchase.cjs",
+      "sha256": "c9e8663f26e399e10390be6acd2c22dc229ca98fa8d86b280fe64e880a99d00f"
+    },
+    {
+      "path": ".tmp/payment-recovery/verify-terms.cjs",
+      "sha256": "d327e895dc43d74acd9a90743788db98e272ef1905e8e3434287847619888546"
+    }
+  ],
+  "implementation": {
+    "runtime": "Crush",
+    "model": "zai/glm-4.7",
+    "passes": 4,
+    "integratorReview": "Applied reviewed staged guide cleanup after immutable display snapshot publication; removed unverified conversion-rate display claim."
+  },
+  "limitations": [
+    "These checks do not prove live purchase, restore, login or inference provisioning.",
+    "VITE_BILLING_API_URL remains absent; automatic account-key provisioning is unfinished.",
+    "Android production product bindings are absent; native Play offer loading cannot succeed without actual configured store products.",
+    "Next full matrix compilation and deployed customer acceptance remain separate."
+  ],
+  "publication": {
+    "displayLineCheckpoints": 68,
+    "displayHead": "1e5c2285cadd5de79e9e4b68ea82fee349843a8b",
+    "remaining": "Recovery source and native bridge line publication continue without changing frozen working bytes."
+  }
+}

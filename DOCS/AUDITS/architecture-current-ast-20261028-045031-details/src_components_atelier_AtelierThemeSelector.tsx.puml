@@ -1,0 +1,13 @@
+@startuml
+title src/components/atelier/AtelierThemeSelector.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AtelierThemeSelector.tsx\nfile L1-7\nfile:src/components/atelier/AtelierThemeSelector.tsx" as N0
+rectangle "react\nimport L1-1\nimport:9c2ad50b308e1bcd3aaaf501d15618f8" as N1
+rectangle "../../services/atelierTheme\nimport L2-2\nimport:bf9bf116aa37c1a65eb8cdbec2c846d3" as N2
+rectangle "AtelierThemeSelector\nfunction L3-6\nfunction:7a9a1880a38a958e18e6b6c17b59004a" as N3
+N0 --> N1 : contains E657
+N0 --> N2 : contains E658
+N0 --> N3 : contains E659
+@enduml

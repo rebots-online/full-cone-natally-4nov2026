@@ -1,0 +1,27 @@
+@startuml
+title src/components/SelectedComponentsBar.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "SelectedComponentsBar.tsx\nfile L1-82\nfile:src/components/SelectedComponentsBar.tsx" as N0
+rectangle "react\nimport L1-1\nimport:c7390416e7332de33eff13bfc1f27d6d" as N1
+rectangle "../services/chartTargets\nimport L2-2\nimport:cb282b9f97751f6b2c3938a8feca6fdc" as N2
+rectangle "lucide-react\nimport L3-3\nimport:bf5acef63a9f97dae7db2cfdf9c9186e" as N3
+rectangle "SelectedComponentsBarProps\ninterface L5-11\ninterface:d1db7eb1cd5b3c7ecc986272557c05ce" as N4
+rectangle "selectedComponents\nproperty L6-6\nproperty:f0475973251c8b37c011f6769989d0e2" as N5
+rectangle "onRemoveComponent\nproperty L7-7\nproperty:ca5c6eeb54ef6cac95e63b8b12fa4ee0" as N6
+rectangle "onClearAll\nproperty L8-8\nproperty:1689b9b92299082d487512fea37436c1" as N7
+rectangle "onBeginIntuitiveReading\nproperty L9-9\nproperty:d4bcf65c346b822d3c54cfc70f1bac93" as N8
+rectangle "isGeneratingReading\nproperty L10-10\nproperty:8d6657f971765bfdf57c04f62293a649" as N9
+rectangle "SelectedComponentsBar\nfunction L13-81\nfunction:674dcb197268f8a5e479f84840878dfc" as N10
+N0 --> N1 : contains E1223
+N0 --> N2 : contains E1224
+N0 --> N3 : contains E1225
+N0 --> N4 : contains E1226
+N4 --> N5 : contains E1227
+N4 --> N6 : contains E1228
+N4 --> N7 : contains E1229
+N4 --> N8 : contains E1230
+N4 --> N9 : contains E1231
+N0 --> N10 : contains E1232
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+title src/services/karaokeScroll.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "karaokeScroll.ts\nfile L1-15\nfile:src/services/karaokeScroll.ts" as N0
+rectangle "keepKaraokeVisible\nfunction L1-14\nfunction:5f5842ba3459a6456a408cba6a6c1a97" as N1
+N0 --> N1 : contains E1764
+@enduml

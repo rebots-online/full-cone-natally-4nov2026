@@ -1,0 +1,56 @@
+@startuml
+title tests/chart-presentation-browser.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "chart-presentation-browser.mjs\nfile L1-156\nfile:tests/chart-presentation-browser.mjs" as N0
+rectangle "node:assert/strict\nimport L1-1\nimport:dd8b027625448dda48e296ece644903f" as N1
+rectangle "vite\nimport L2-2\nimport:4f6a29879f061e0c639fa7806159e033" as N2
+rectangle "playwright\nimport L3-3\nimport:5b53b3b94116811a93a729cc7a4960da" as N3
+rectangle "@tailwindcss/vite\nimport L4-4\nimport:42ec2e28dc5a2abf83d0306533dcd747" as N4
+rectangle "node:fs/promises\nimport L5-5\nimport:254a6935ae9ebd81e86de79afcfb107b" as N5
+rectangle "fixture\nconstant L9-53\nconstant:6bc0ffa3d33b483eae6949ff8acc9943" as N6
+rectangle "server\nconstant L54-76\nconstant:0d373555fade9b6dba2affd746f35788" as N7
+rectangle "browser\nvariable L77-77\nvariable:54ac6aeb8a4b3255ae230214e5d0e08c" as N8
+rectangle "page\nconstant L81-81\nconstant:8ee0ff5b31067f539e94dd2bfe87673a" as N9
+rectangle "errors\nconstant L82-82\nconstant:d8f07112be03f4a22325c78b8e5daf5b" as N10
+rectangle "send\nfunction L86-86\nfunction:6699f50ca50918002eb7cba6929ec9f8" as N11
+rectangle "reply\nfunction L87-87\nfunction:6c1debb22794455c4640e2e05ae69bc0" as N12
+rectangle "payload\nconstant L89-89\nconstant:7b44d30822718beaf6007c91ac8145f1" as N13
+rectangle "occupants\nconstant L98-98\nconstant:16c31751036d71b0f364e6fcdaa3e5f0" as N14
+rectangle "aspect\nconstant L104-104\nconstant:19d55dbd49067f55f3f34fe90631e2ce" as N15
+rectangle "extras\nconstant L110-110\nconstant:70897f03df00917169e8c2bb6122ab8e" as N16
+rectangle "contentOffset\nconstant L130-130\nconstant:d133afd747960c175b81426c791baf83" as N17
+rectangle "report\nconstant L151-152\nconstant:753be2e683efa3120b07f62196305566" as N18
+N0 --> N1 : contains E2656
+N0 --> N2 : contains E2657
+N0 --> N3 : contains E2658
+N0 --> N4 : contains E2659
+N0 --> N5 : contains E2660
+N0 --> N6 : contains E2661
+N0 --> N7 : contains E2662
+N0 --> N8 : contains E2663
+N0 --> N9 : contains E2664
+N0 --> N10 : contains E2665
+N0 --> N11 : contains E2666
+N0 --> N12 : contains E2667
+N0 --> N13 : contains E2668
+N0 --> N14 : contains E2669
+N0 --> N15 : contains E2670
+N0 --> N16 : contains E2671
+N0 --> N17 : contains E2672
+N0 --> N18 : contains E2673
+N0 --> N11 : calls E6521
+N0 --> N12 : calls E6522
+N0 --> N11 : calls E6523
+N0 --> N12 : calls E6524
+N0 --> N11 : calls E6525
+N0 --> N12 : calls E6526
+N0 --> N12 : calls E6528
+N0 --> N11 : calls E6530
+N0 --> N12 : calls E6531
+N0 --> N11 : calls E6532
+N0 --> N12 : calls E6533
+N0 --> N11 : calls E6534
+N0 --> N12 : calls E6535
+@enduml

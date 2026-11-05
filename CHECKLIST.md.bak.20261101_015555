@@ -1,0 +1,59 @@
+# Outstanding work
+
+Product work is stopped on operator instruction; resume only when instructed.
+Post this open list every turn. Remove an item when its outcome is complete.
+Four states: 🟨 NOT_STARTED, 🟦 IN_PROGRESS, 🟥 BLOCKED, 🟩 COMPLETE (then remove).
+Yellow refers to remaining work; existing partial implementation is retained.
+Only named current assignments are marked in progress. The canonical build script
+alone owns versions, build numbers and platform artifacts.
+
+| State | Task | Remaining outcome |
+| --- | --- | --- |
+| 🟨 NOT_STARTED | REDEMPTION-OUTCOME | Highest priority: actual successful redemption against the corrected deployed backend, with the configured available allowance and usable key idempotently. |
+| 🟨 NOT_STARTED | PURCHASE-OUTCOME | Actual purchase supplies the correct balance, usable allowance, confirmation, official invoice and history. |
+| 🟨 NOT_STARTED | MINIMAL-BILLING | Reuse Google name/email and existing actual billing facts; request only missing transaction-required information. Remove the mandatory full-address form for every top-up. |
+| 🟨 NOT_STARTED | ZERO-BALANCE | Hide verified zero balance rather than displaying 0 Cr. Preserve a useful top-up action and truthful unknown/error states. |
+| 🟨 NOT_STARTED | TOPUP-LANDING | Top Up opens the landing-page explanations before asking the customer to choose an amount. |
+| 🟨 NOT_STARTED | INAPP-OFFER-CONTENT | After the landing handoff works, import the explanatory content into the app and restore native Google Play billing. |
+| 🟨 NOT_STARTED | RESTORE-VALUE | Recover verified paid purchases idempotently; give an accurate result when value could not be recovered. |
+| 🟨 NOT_STARTED | SERVICE-OFFERS | Complete the approved full-workup and guided-exploration offers, comparison and matching purchase/delivery paths. Lead with customer benefit. |
+| 🟨 NOT_STARTED | ACCOUNT-ACTIONS | Put related retry and restore actions together on one compact row. |
+| 🟨 NOT_STARTED | LC-02 | Complete the visible, scroll-aware inset and clearly identified anonymous example calculated by the real chart engine. |
+| 🟨 NOT_STARTED | LC-04/05 | Complete the above-fold primary action and compelling plain-language opening. |
+| 🟨 NOT_STARTED | LC-06 | Complete platform-aware installation entry. |
+| 🟨 NOT_STARTED | AUTH | Complete remaining sign-in and branding integration. |
+| 🟨 NOT_STARTED | PLAY | Complete Google Play purchase, subscription and restoration integration. |
+| 🟨 NOT_STARTED | READING-FLOW | Finish Horoscope, comprehensive Synastry, personal reading/education flow and genuine-session entry (3-7,29,38-39). |
+| 🟨 NOT_STARTED | NAVIGATION | Finish remaining header/top-up integration, matched actions, navigation and account-preserving updates (8-9,19-21,43). |
+| 🟨 NOT_STARTED | ATELIER | Finish remaining scene, sticky window, swapping, interactive objects, chart controls and signage (10-14,35). |
+| 🟨 NOT_STARTED | VOICE-STORIES | Finish remaining professional voice, authored vignettes/stories, phrase variation and repetition avoidance (15-18,31,34). |
+| 🟨 NOT_STARTED | PREFAB-GENZ | Restore Natally's specified Gen Z lingo in the prefab free content. Correct the authored text paths as well as any persona instructions; preserve free availability, factual content and speech/lore safeguards. |
+| 🟨 NOT_STARTED | LORE | Finish relevant customer-lore retrieval each turn (30). |
+| 🟨 NOT_STARTED | SOUVENIR | Finish the distinct interactive souvenir, retained reading, add-on handoff and PDF flipbook (4-7,22,27). |
+| 🟨 NOT_STARTED | SOUVENIR-OFFERS | Finish the airplane-towed offer, cookie marquee and coordinated spoken invitation (28,33,42). |
+| 🟨 NOT_STARTED | SEASONAL | Finish configured seasonal availability (36). |
+| 🟨 NOT_STARTED | LOCATION | Finish current-location/observation-timezone integration (37). |
+| 🟨 NOT_STARTED | COST-STATS | Measure actual completed questions and costs, distinguish transfer pricing, and derive questions remaining. |
+| 🟨 NOT_STARTED | ANALYTICS | Finish commercial measurements and the brAInstormer product/GA map with two-way UI instrumentation (32). |
+| 🟥 BLOCKED | PLATFORM-RELEASE | Run the canonical automatic platform build/publication after web purchasing works. |
+| 🟨 NOT_STARTED | DELIVERY-EVIDENCE | Finish continuous actual customer-journey recording and release evidence, including remaining landing/control observations. |
+
+## Coder contracts
+
+Frozen architecture: DOCS/ARCHITECTURE.md R11. The independent INSET-CALLOUTS and
+ACCOUNT-VALUE recipes, exact copy, preauthored demonstration rubric and recipe
+attestation are retained verbatim in
+DOCS/ARCHIVE/checklist-before-open-only-20261031.md under Restored customer
+explanations. Those contracts remain in force. Completed phases stay in that
+record rather than cluttering this open list.
+
+On resumption, select the highest-priority ready outcome from this list. Record
+its architecture, independent recipe/rubric, assigned coder, source comparison,
+publication and real outcome evidence. The additional billing simplification,
+zero balance, Top Up route, compact actions and paid-value restoration need their
+architecture before coding. Latest authoritative state is in
+DOCS/HANDOFF-20261031.md; use it rather than repeating completed phases.
+
+Original landing and carried-forward recipes remain in
+DOCS/ARCHIVE/checklist-before-v1.30.md. No completed feature is reimplemented merely
+because its recording obligation remains open.

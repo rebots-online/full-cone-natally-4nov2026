@@ -1,0 +1,72 @@
+@startuml
+title src/components/ReadingStage.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ReadingStage.tsx\nfile L1-90\nfile:src/components/ReadingStage.tsx" as N0
+rectangle "./atelier/AtelierAmbience\nimport L1-1\nimport:bc07292ffd6055b1d71446a691cd033b" as N1
+rectangle "react\nimport L2-2\nimport:222579350662faf0149d19353004bcb0" as N2
+rectangle "../services/chartTargets\nimport L3-3\nimport:230e15e631d3e344ab80eacd3e7dbd79" as N3
+rectangle "../services/presentation\nimport L4-4\nimport:41a83e6ad1a18831ed97eb8a1c088db0" as N4
+rectangle "./atelier/AtelierScene\nimport L5-5\nimport:901d1f9f3219751cf4ea89b11cb4e3a2" as N5
+rectangle "./ReadingStage.css\nimport L6-6\nimport:9122c9eeaeabca09571264fc837614d4" as N6
+rectangle "ReadingStageProps\ninterface L8-19\ninterface:e31bbaf1e418e2f82b453b946a62d3a8" as N7
+rectangle "accountUid\nproperty L9-9\nproperty:bac144a98a16fe94a821ebe08f7db24a" as N8
+rectangle "extraControls\nproperty L10-10\nproperty:830a8cdb3fe002badc6bb8f0f56396ea" as N9
+rectangle "chartTools\nproperty L11-11\nproperty:7f31849d26bdf92d0bf70f99d65e777f" as N10
+rectangle "presentation\nproperty L12-12\nproperty:39400f131a5cd8578ee4de8143765197" as N11
+rectangle "phase\nproperty L13-13\nproperty:bde67e8bfe5ab43a4f523493afa18817" as N12
+rectangle "paused\nproperty L14-14\nproperty:62e685ff489dbfea4b799fa818fe2fc7" as N13
+rectangle "onPause\nproperty L15-15\nproperty:d54b2a4c9273a2b461b3ec90bfdd6721" as N14
+rectangle "onView\nproperty L16-16\nproperty:77c8471855cf9871dc9d47413fab65c7" as N15
+rectangle "chart\nproperty L17-17\nproperty:3270c0f5a803892e3218a6f08a312236" as N16
+rectangle "conversation\nproperty L18-18\nproperty:7ed87f142c059eaa7956741b969d48f1" as N17
+rectangle "ReadingStage\nfunction L21-89\nfunction:6d8b6cc900fff36ada03beb348329cf1" as N18
+rectangle "clamp\nfunction L27-27\nfunction:0e0ad1133bb46e46a927bae9cd7e482f" as N19
+rectangle "place\nfunction L28-31\nfunction:5bcffb2d165e756754b8e84b5fb99ec7" as N20
+rectangle "move\nfunction L33-37\nfunction:9a733d2205fccb130e40a16ff5e09a5b" as N21
+rectangle "endDrag\nfunction L38-43\nfunction:c6ebefa77aef8398f8800631731e3ae4" as N22
+rectangle "snap\nfunction L41-41\nfunction:567f9c67370392a5c70afe664b4b0833" as N23
+rectangle "update\nfunction L50-50\nfunction:cf89e1c269257af8743d01822c6c0fb0" as N24
+N0 --> N1 : contains E1163
+N0 --> N2 : contains E1164
+N0 --> N3 : contains E1165
+N0 --> N4 : contains E1166
+N0 --> N5 : contains E1167
+N0 --> N6 : contains E1168
+N0 --> N7 : contains E1169
+N7 --> N8 : contains E1170
+N7 --> N9 : contains E1171
+N7 --> N10 : contains E1172
+N7 --> N11 : contains E1173
+N7 --> N12 : contains E1174
+N7 --> N13 : contains E1175
+N7 --> N14 : contains E1176
+N7 --> N15 : contains E1177
+N7 --> N16 : contains E1178
+N7 --> N17 : contains E1179
+N0 --> N18 : contains E1180
+N18 --> N19 : contains E1181
+N18 --> N20 : contains E1182
+N18 --> N21 : contains E1183
+N18 --> N22 : contains E1184
+N22 --> N23 : contains E1185
+N18 --> N24 : contains E1186
+N0 --> N6 : imports E3303
+N18 --> N7 : references E5170
+N20 --> N19 : calls E5171
+N20 --> N19 : calls E5172
+N18 --> N20 : calls E5173
+N18 --> N20 : calls E5174
+N21 --> N20 : calls E5175
+N22 --> N20 : calls E5176
+N22 --> N23 : calls E5177
+N22 --> N23 : calls E5178
+N18 --> N24 : calls E5179
+N18 --> N20 : calls E5180
+N18 --> N20 : calls E5181
+N18 --> N20 : calls E5182
+N18 --> N21 : references E5183
+N18 --> N24 : references E5184
+N18 --> N22 : references E5186
+@enduml

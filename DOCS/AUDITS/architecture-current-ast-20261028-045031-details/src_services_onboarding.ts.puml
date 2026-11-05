@@ -1,0 +1,70 @@
+@startuml
+title src/services/onboarding.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "onboarding.ts\nfile L1-132\nfile:src/services/onboarding.ts" as N0
+rectangle "./readingStyle\nimport L1-1\nimport:9894cfb303c209d4f798b4a079a650b5" as N1
+rectangle "firebase/firestore\nimport L2-2\nimport:45e8ff3997ffa59577616656682d84cf" as N2
+rectangle "./firebase\nimport L3-3\nimport:6a8b5cc24c02816cc912a55cc43ffcf5" as N3
+rectangle "./ephemeris\nimport L4-4\nimport:34a3ffee4c908a67b2669437f1d709ec" as N4
+rectangle "./transits\nimport L5-5\nimport:34be73618afd132e009b2a1282891e76" as N5
+rectangle "./gazetteer\nimport L6-6\nimport:b975ba19f1b1343d418fe4bd275f33ba" as N6
+rectangle "IntakeDraft\ninterface L14-22\ninterface:555031fb483929800f448b49976c73ec" as N7
+rectangle "readingStyle\nproperty L15-15\nproperty:9c9de3b3c8c5a6d5a88638c447a183e4" as N8
+rectangle "name\nproperty L16-16\nproperty:ec57f47ac9b173949aebbd5b590ea128" as N9
+rectangle "date\nproperty L17-17\nproperty:a843f9b85a14d058a677d33e95f9dbf5" as N10
+rectangle "time\nproperty L18-18\nproperty:ba40cd1e77a666672c88509460e15e6c" as N11
+rectangle "unknownTime\nproperty L19-19\nproperty:25fd7b7d019bbe1e3c1b81fd29ff9869" as N12
+rectangle "placeId\nproperty L20-20\nproperty:025fba9aaccb6efd779644356136569b" as N13
+rectangle "currentLocation\nproperty L21-21\nproperty:3727a2423faea2ceec3d6607d2e9d716" as N14
+rectangle "NATAL_INTAKE_STORAGE_KEY\nconstant L24-24\nconstant:7ab200905ce642baa9647180a974c5d7" as N15
+rectangle "intakeToChartInput\nfunction L26-50\nfunction:aa65eb070f01b35148a30653e9ba21ac" as N16
+rectangle "loadNatalIntake\nfunction L52-72\nfunction:329856f500c300939cb6edd5c40ec884" as N17
+rectangle "saveNatalIntake\nfunction L74-80\nfunction:0290ddb007f86fdc9fb3b05e48e46873" as N18
+rectangle "clearNatalIntake\nfunction L82-86\nfunction:643771f8c32c6195509d35d44d76130d" as N19
+rectangle "IntakeStorageBillingError\nclass L91-96\nclass:2258adce20665493755acb6727280027" as N20
+rectangle "constructor\nmethod L92-95\nmethod:322655d34a6720df98ad77c0c309f951" as N21
+rectangle "BILLING_CODES\nconstant L98-102\nconstant:608adc099b2e1d78776a2a7796898e3c" as N22
+rectangle "isBillingClass\nfunction L104-109\nfunction:3bdcf3063314ffa31ec22ef679af8fd7" as N23
+rectangle "intakeDoc\nfunction L111-111\nfunction:6896861399e42cfbc554eb270441571e" as N24
+rectangle "fetchUserIntake\nfunction L113-122\nfunction:c723c9478fed47768abb42fe3bdcb711" as N25
+rectangle "uploadUserIntake\nfunction L124-131\nfunction:83b7b938720d7a23196f0a9698855917" as N26
+N0 --> N1 : contains E1852
+N0 --> N2 : contains E1853
+N0 --> N3 : contains E1854
+N0 --> N4 : contains E1855
+N0 --> N5 : contains E1856
+N0 --> N6 : contains E1857
+N0 --> N7 : contains E1858
+N7 --> N8 : contains E1859
+N7 --> N9 : contains E1860
+N7 --> N10 : contains E1861
+N7 --> N11 : contains E1862
+N7 --> N12 : contains E1863
+N7 --> N13 : contains E1864
+N7 --> N14 : contains E1865
+N0 --> N15 : contains E1866
+N0 --> N16 : contains E1867
+N0 --> N17 : contains E1868
+N0 --> N18 : contains E1869
+N0 --> N19 : contains E1870
+N0 --> N20 : contains E1871
+N20 --> N21 : contains E1872
+N0 --> N22 : contains E1873
+N0 --> N23 : contains E1874
+N0 --> N24 : contains E1875
+N0 --> N25 : contains E1876
+N0 --> N26 : contains E1877
+N17 --> N15 : references E1878
+N18 --> N15 : references E1879
+N19 --> N15 : references E1880
+N23 --> N22 : references E1881
+N16 --> N7 : references E5831
+N25 --> N24 : calls E5842
+N25 --> N23 : calls E5843
+N25 --> N20 : instantiates E5844
+N26 --> N24 : calls E5846
+N26 --> N23 : calls E5847
+N26 --> N20 : instantiates E5848
+@enduml

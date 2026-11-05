@@ -1,0 +1,98 @@
+{
+  "major": 1,
+  "minor": 44,
+  "build": 96449,
+  "version": "1.44.96449",
+  "semverVersion": "1.44.96449",
+  "versionCode": 100044,
+  "stampedAt": "2026-11-04T10:09:11.784Z",
+  "msiVersion": "1.0.44.30913",
+  "prefix": "natally-ai-studio-v1.44.96449",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "33ba7994e7a4fb6176e4aa2ee883386a53bf385a",
+  "invocationId": "c4b12a61-5700-451a-84c7-aef8695fff53",
+  "phase": "preparing",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "rpm",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer",
+    "pwa"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "nsis": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "msi": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "rpm": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "apk": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "aab": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "web": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "web-installer": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    },
+    "pwa": {
+      "state": "failed",
+      "error": "Preparation failed before freeze"
+    }
+  },
+  "inputError": "Release inputs changed or are not frozen. Start a new full matrix invocation; do not reuse this stamp.",
+  "sourceInputsMatch": false,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "rpm",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer",
+    "pwa"
+  ],
+  "completedAt": "2026-11-04T10:09:56.929Z"
+}

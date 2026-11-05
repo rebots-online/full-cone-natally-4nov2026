@@ -1,0 +1,68 @@
+{
+  "major": 1,
+  "minor": 43,
+  "build": 96436,
+  "version": "1.43.96436",
+  "semverVersion": "1.43.96436",
+  "versionCode": 100043,
+  "stampedAt": "2026-11-04T09:56:46.423Z",
+  "msiVersion": "1.0.43.30900",
+  "prefix": "natally-ai-studio-v1.43.96436",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "57ea43c9d6fdb0ac2036d3ad6ce6e7eb3cbb5ba4",
+  "invocationId": "feb0c977-85ac-4cab-9723-b34ef0542fa4",
+  "phase": "preparing",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "rpm",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer",
+    "pwa"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "pending"
+    },
+    "nsis": {
+      "state": "pending"
+    },
+    "msi": {
+      "state": "pending"
+    },
+    "appimage": {
+      "state": "pending"
+    },
+    "deb": {
+      "state": "pending"
+    },
+    "rpm": {
+      "state": "pending"
+    },
+    "apk": {
+      "state": "pending"
+    },
+    "aab": {
+      "state": "pending"
+    },
+    "android-symbols": {
+      "state": "pending"
+    },
+    "web": {
+      "state": "pending"
+    },
+    "web-installer": {
+      "state": "pending"
+    },
+    "pwa": {
+      "state": "pending"
+    }
+  }
+}
