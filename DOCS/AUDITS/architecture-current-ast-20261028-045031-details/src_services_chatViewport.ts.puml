@@ -1,0 +1,22 @@
+@startuml
+title src/services/chatViewport.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "chatViewport.ts\nfile L1-33\nfile:src/services/chatViewport.ts" as N0
+rectangle "ViewportBounds\ninterface L1-7\ninterface:353e2c709bebe8773b5644858b4414d2" as N1
+rectangle "width\nproperty L2-2\nproperty:cb2a23cb9a8bfd2a16be512204f8e14e" as N2
+rectangle "height\nproperty L3-3\nproperty:36781d815b11ab912ec28883c19d5227" as N3
+rectangle "left\nproperty L4-4\nproperty:20afe9187833940071497ace8178aa83" as N4
+rectangle "top\nproperty L5-5\nproperty:9c91d3f972829a5f5d7417858cd31253" as N5
+rectangle "layoutWidth\nproperty L6-6\nproperty:3ac79ef237bc2568241d73008b9941b5" as N6
+rectangle "getChatViewportLayout\nfunction L9-32\nfunction:de013d4624dc385306c225b99ab31e10" as N7
+N0 --> N1 : contains E1529
+N1 --> N2 : contains E1530
+N1 --> N3 : contains E1531
+N1 --> N4 : contains E1532
+N1 --> N5 : contains E1533
+N1 --> N6 : contains E1534
+N0 --> N7 : contains E1535
+N7 --> N1 : references E5644
+@enduml

@@ -1,0 +1,189 @@
+@startuml
+title src/components/PurchaseAccess.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "PurchaseAccess.tsx\nfile L1-325\nfile:src/components/PurchaseAccess.tsx" as N0
+rectangle "react\nimport L1-1\nimport:a32cb2198a8a911c3a4bd671adc51606" as N1
+rectangle "react-dom\nimport L2-2\nimport:8a48b1f27f869cab6cfbf1e2071b2ad8" as N2
+rectangle "../services/firebase\nimport L3-3\nimport:b50ad2935d229547f12bd530d023e18a" as N3
+rectangle "firebase/auth\nimport L4-4\nimport:8a78fc70e68565c725e510c6ba143498" as N4
+rectangle "../services/downloadAccess\nimport L5-5\nimport:38b14dd80c764198c01f5634635a10f0" as N5
+rectangle "../services/revenueCatCheckout\nimport L6-6\nimport:bcd65249269bdcea4defceb6ee18395f" as N6
+rectangle "../services/billingAccess\nimport L7-7\nimport:32e900ae2b9d2e2b3d5ecd8017ef7a81" as N7
+rectangle "./PurchaseAccess.css\nimport L8-8\nimport:44d925a4b42b420722d1b2ef846c1919" as N8
+rectangle "./FigmaPaywall\nimport L9-9\nimport:63839c8af9bb16683097aac97c0acce6" as N9
+rectangle "../services/purchaseIntent\nimport L10-10\nimport:40ab63c6057819458b9e4a6e11f2b899" as N10
+rectangle "Intent\ntype_alias L12-16\ntype_alias:f52288bc628398f4e137e3accad96d5f" as N11
+rectangle "gen\nproperty L13-13\nproperty:01f756256d9247f04a1b37764f601063" as N12
+rectangle "kind\nproperty L13-13\nproperty:3a16caf96341e074b565cd8bb1c9daff" as N13
+rectangle "seq\nproperty L13-13\nproperty:a0afd09253daf79cccca5c6e693d4082" as N14
+rectangle "current\nmethod L14-14\nmethod:4ccad2060ff85dd9d232aa0e0b2f6d02" as N15
+rectangle "run\nmethod L14-14\nmethod:7b6c4621f2601f6ea0e7ad17d0a3baa3" as N16
+rectangle "request\nproperty L14-14\nproperty:d65b2c3d999cd5797c487aa49b42d514" as N17
+rectangle "explicitPurchase\nproperty L15-15\nproperty:18cd440a45e87b11b3c0ff26e40501dc" as N18
+rectangle "owner\nproperty L15-15\nproperty:7cadc53f0310e25440f98f3a376d027f" as N19
+rectangle "AccessContext\ntype_alias L17-21\ntype_alias:7c47098fe5c150124265260c73103076" as N20
+rectangle "requestDownload\nmethod L18-18\nmethod:b81a53a42fafabc5f338aaf49152a5dc" as N21
+rectangle "showOffer\nmethod L19-19\nmethod:17fe412de02cf30d4c406e34d9ac1b63" as N22
+rectangle "showOffers\nmethod L20-20\nmethod:3fba61040014d1f6bd2d7fef8e8bfa4a" as N23
+rectangle "Access\nconstant L22-22\nconstant:270134f41cbc47b9d56e4b5cfb01032a" as N24
+rectangle "usePurchaseAccess\nfunction L23-23\nfunction:c27396227f45b1ec5f7bf4fca53cdb6f" as N25
+rectangle "PurchaseAccessProvider\nfunction L25-317\nfunction:17b61b1bd5bdbc15647324662640e94a" as N26
+rectangle "applyIntent\nfunction L46-46\nfunction:ec8c20fb22f651c76509aefe10ad65df" as N27
+rectangle "setBusyState\nfunction L47-47\nfunction:9da0a83e1d49de0bd1211efd92279ae5" as N28
+rectangle "valid\nfunction L48-48\nfunction:e80b4b95274a31defbaeb6eb3475e6b5" as N29
+rectangle "sessionCurrent\nfunction L49-49\nfunction:bcd9939642986807000a230bc557c3d7" as N30
+rectangle "clearQuotes\nfunction L50-50\nfunction:c478ac5460e2b7b72d0ed8d8b2674253" as N31
+rectangle "close\nfunction L51-58\nfunction:63f4b1b7b473dce7d02ea9810f9a1e92" as N32
+rectangle "scheduleExpiry\nfunction L59-77\nfunction:4170835b5e39006a4c4e9f303d4559ff" as N33
+rectangle "loadQuotes\nfunction L78-114\nfunction:59980724de09754788adf3748f3630c6" as N34
+rectangle "finishAfterAccess\nfunction L115-126\nfunction:0d7db0c141f22a82fc6946defcbe1d71" as N35
+rectangle "startPurchase\nfunction L127-184\nfunction:23e4c9bcead670abb7f3ff44fbe2582f" as N36
+rectangle "restore\nfunction L185-209\nfunction:145c31abb1b56578fd7c1ec1e4387358" as N37
+rectangle "resumeDownload\nfunction L210-223\nfunction:71467fda09ed2c18d93ef722ecbe11b6" as N38
+rectangle "requestDownload\nfunction L224-233\nfunction:dcad5aec949fc9d894caf30e34688dfa" as N39
+rectangle "showOffer\nfunction L234-243\nfunction:1ab5f1d9997351843eb071a1433139b8" as N40
+rectangle "showOffers\nfunction L244-253\nfunction:f8594801bf0969eed2eb89593c67fb0b" as N41
+rectangle "onShowOffers\nfunction L294-294\nfunction:f0d879005cdd5fbad27aabda9585cf73" as N42
+rectangle "PurchaseCTA\nfunction L319-323\nfunction:701ab59ee4943067cbdbc97243e9315a" as N43
+rectangle "ReadingPurchaseNotice\nfunction L324-324\nfunction:0a5a50a37f907327d5fa29f1f2dc9d13" as N44
+N0 --> N1 : contains E1080
+N0 --> N2 : contains E1081
+N0 --> N3 : contains E1082
+N0 --> N4 : contains E1083
+N0 --> N5 : contains E1084
+N0 --> N6 : contains E1085
+N0 --> N7 : contains E1086
+N0 --> N8 : contains E1087
+N0 --> N9 : contains E1088
+N0 --> N10 : contains E1089
+N0 --> N11 : contains E1090
+N11 --> N14 : contains E1091
+N11 --> N12 : contains E1092
+N11 --> N13 : contains E1093
+N11 --> N17 : contains E1094
+N11 --> N16 : contains E1095
+N11 --> N15 : contains E1096
+N11 --> N19 : contains E1097
+N11 --> N18 : contains E1098
+N0 --> N20 : contains E1099
+N20 --> N21 : contains E1100
+N20 --> N22 : contains E1101
+N20 --> N23 : contains E1102
+N0 --> N24 : contains E1103
+N0 --> N25 : contains E1104
+N0 --> N26 : contains E1105
+N26 --> N27 : contains E1106
+N26 --> N28 : contains E1107
+N26 --> N29 : contains E1108
+N26 --> N30 : contains E1109
+N26 --> N31 : contains E1110
+N26 --> N32 : contains E1111
+N26 --> N33 : contains E1112
+N26 --> N34 : contains E1113
+N26 --> N35 : contains E1114
+N26 --> N36 : contains E1115
+N26 --> N37 : contains E1116
+N26 --> N38 : contains E1117
+N26 --> N39 : contains E1118
+N26 --> N40 : contains E1119
+N26 --> N41 : contains E1120
+N26 --> N42 : contains E1121
+N0 --> N43 : contains E1122
+N0 --> N44 : contains E1123
+N25 --> N24 : references E1124
+N26 --> N24 : references E1125
+N0 --> N8 : imports E3260
+N27 --> N11 : references E4971
+N29 --> N11 : references E4972
+N29 --> N11 : references E4973
+N29 --> N15 : calls E4974
+N32 --> N27 : calls E4975
+N32 --> N31 : calls E4976
+N32 --> N28 : calls E4977
+N33 --> N30 : calls E4978
+N33 --> N34 : calls E4980
+N34 --> N11 : references E4981
+N34 --> N29 : calls E4984
+N34 --> N33 : calls E4986
+N34 --> N36 : calls E4987
+N34 --> N29 : calls E4988
+N34 --> N31 : calls E4989
+N35 --> N11 : references E4990
+N35 --> N29 : calls E4992
+N35 --> N30 : calls E4993
+N35 --> N29 : calls E4994
+N35 --> N32 : calls E4995
+N35 --> N16 : calls E4996
+N35 --> N29 : calls E4997
+N35 --> N29 : calls E4998
+N35 --> N32 : calls E4999
+N36 --> N11 : references E5000
+N36 --> N29 : calls E5002
+N36 --> N34 : calls E5003
+N36 --> N28 : calls E5004
+N36 --> N30 : calls E5006
+N36 --> N29 : calls E5007
+N36 --> N29 : calls E5008
+N36 --> N30 : calls E5010
+N36 --> N30 : calls E5011
+N36 --> N29 : calls E5012
+N36 --> N35 : calls E5013
+N36 --> N29 : calls E5014
+N36 --> N30 : calls E5015
+N36 --> N29 : calls E5016
+N36 --> N29 : calls E5017
+N36 --> N28 : calls E5018
+N36 --> N29 : calls E5019
+N36 --> N34 : calls E5020
+N37 --> N11 : references E5021
+N37 --> N29 : calls E5022
+N37 --> N28 : calls E5023
+N37 --> N30 : calls E5025
+N37 --> N30 : calls E5027
+N37 --> N30 : calls E5028
+N37 --> N29 : calls E5029
+N37 --> N35 : calls E5030
+N37 --> N29 : calls E5031
+N37 --> N29 : calls E5032
+N37 --> N28 : calls E5033
+N38 --> N11 : references E5034
+N38 --> N28 : calls E5035
+N38 --> N29 : calls E5037
+N38 --> N32 : calls E5038
+N38 --> N16 : calls E5039
+N38 --> N34 : calls E5040
+N38 --> N29 : calls E5041
+N39 --> N11 : references E5043
+N39 --> N31 : calls E5044
+N39 --> N27 : calls E5045
+N39 --> N38 : calls E5046
+N40 --> N11 : references E5047
+N40 --> N31 : calls E5048
+N40 --> N27 : calls E5049
+N40 --> N34 : calls E5050
+N41 --> N11 : references E5051
+N41 --> N31 : calls E5052
+N41 --> N27 : calls E5053
+N41 --> N34 : calls E5054
+N26 --> N40 : calls E5055
+N26 --> N41 : calls E5057
+N26 --> N11 : references E5058
+N26 --> N27 : calls E5059
+N26 --> N38 : calls E5060
+N26 --> N34 : calls E5061
+N26 --> N32 : calls E5062
+N42 --> N41 : calls E5063
+N26 --> N32 : calls E5064
+N26 --> N29 : calls E5065
+N26 --> N36 : calls E5066
+N26 --> N37 : calls E5067
+N43 --> N25 : calls E5069
+N26 --> N42 : references E5072
+N26 --> N39 : references E5073
+N26 --> N40 : references E5074
+N26 --> N41 : references E5075
+N26 --> N32 : references E5076
+N44 --> N43 : calls E6933
+@enduml

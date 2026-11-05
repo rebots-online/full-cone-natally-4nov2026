@@ -1,0 +1,67 @@
+@startuml
+title tests/torus-browser.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "torus-browser.mjs\nfile L1-73\nfile:tests/torus-browser.mjs" as N0
+rectangle "node:assert/strict\nimport L1-1\nimport:1c90f863ea3e97eaf87d71458f7c64d0" as N1
+rectangle "playwright\nimport L2-2\nimport:7587237bd3fec3f73294d17a4b721c20" as N2
+rectangle "base\nconstant L5-5\nconstant:e822175b024b93b038e1f55c2e22702f" as N3
+rectangle "browser\nconstant L6-6\nconstant:b87923c35737ede86a16480fa54452de" as N4
+rectangle "evidence\nconstant L7-7\nconstant:c2f69429136d972bae4b1752fd112534" as N5
+rectangle "page\nconstant L9-9\nconstant:6cbba1d16fc73a12f948b2dd001d6412" as N6
+rectangle "errors\nconstant L10-10\nconstant:bbcedc41823a9c640f58bbc7ee2dcead" as N7
+rectangle "sample\nfunction L14-14\nfunction:931fb55f5e7e176b5c64ff43fc3032d8" as N8
+rectangle "frames\nfunction L15-19\nfunction:539c6e82e0e420ee65c1d30b2cfbf0d6" as N9
+rectangle "cdp\nconstant L20-20\nconstant:e5ff29e30267d4feffd3df3d8ab18e24" as N10
+rectangle "touch\nfunction L21-23\nfunction:a4ab537a6f4c04989a4fe649dc42b23a" as N11
+rectangle "dragging\nconstant L29-29\nconstant:17c4a4356471349ce37cfd444a779273" as N12
+rectangle "released\nconstant L31-31\nconstant:3d8411ef6d94d305065e8ae47870a89a" as N13
+rectangle "coasting\nconstant L32-32\nconstant:276ff18fdf7031bd553c22ae4c09a31b" as N14
+rectangle "pinching\nconstant L39-39\nconstant:258db57b013691b16b55bdb6f1911d42" as N15
+rectangle "zoomed\nconstant L41-41\nconstant:a7425b8e316e0fd10657ac1d9dc981aa" as N16
+rectangle "afterPinch\nconstant L44-44\nconstant:166c9f9804c89fb1848e9c062d2e28fd" as N17
+rectangle "stopped\nconstant L45-45\nconstant:e18c853d4887d70b64adf230ea8efeba" as N18
+rectangle "desktop\nconstant L52-52\nconstant:b3ff105e09e9632c2a9d14e5aca8db16" as N19
+rectangle "frame\nconstant L58-58\nconstant:5e55d6a69cd4d66f61d19880df72217b" as N20
+rectangle "first\nconstant L63-63\nconstant:2d3d1769c03aa46ec043ecbe11eba296" as N21
+rectangle "second\nconstant L65-65\nconstant:c8016c9bb77c95f269bdd5c20589f115" as N22
+N0 --> N1 : contains E2774
+N0 --> N2 : contains E2775
+N0 --> N3 : contains E2776
+N0 --> N4 : contains E2777
+N0 --> N5 : contains E2778
+N0 --> N6 : contains E2779
+N0 --> N7 : contains E2780
+N0 --> N8 : contains E2781
+N0 --> N9 : contains E2782
+N0 --> N10 : contains E2783
+N0 --> N11 : contains E2784
+N0 --> N12 : contains E2785
+N0 --> N13 : contains E2786
+N0 --> N14 : contains E2787
+N0 --> N15 : contains E2788
+N0 --> N16 : contains E2789
+N0 --> N17 : contains E2790
+N0 --> N18 : contains E2791
+N0 --> N19 : contains E2792
+N0 --> N20 : contains E2793
+N0 --> N21 : contains E2794
+N0 --> N22 : contains E2795
+N9 --> N8 : calls E6796
+N9 --> N8 : calls E6797
+N0 --> N11 : calls E6798
+N0 --> N9 : calls E6799
+N0 --> N11 : calls E6800
+N12 --> N8 : calls E6801
+N0 --> N11 : calls E6802
+N13 --> N9 : calls E6803
+N14 --> N9 : calls E6804
+N0 --> N11 : calls E6805
+N15 --> N9 : calls E6806
+N0 --> N11 : calls E6807
+N16 --> N9 : calls E6808
+N0 --> N11 : calls E6809
+N17 --> N9 : calls E6810
+N18 --> N9 : calls E6811
+@enduml

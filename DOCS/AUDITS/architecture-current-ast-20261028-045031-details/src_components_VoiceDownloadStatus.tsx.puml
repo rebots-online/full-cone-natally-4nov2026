@@ -1,0 +1,22 @@
+@startuml
+title src/components/VoiceDownloadStatus.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "VoiceDownloadStatus.tsx\nfile L1-53\nfile:src/components/VoiceDownloadStatus.tsx" as N0
+rectangle "react\nimport L1-1\nimport:354ffa70e680393681ba0a992fc3ac3c" as N1
+rectangle "../services/supertonicTts\nimport L2-2\nimport:bd5ccd2164d2026a8234fed185b2d0b8" as N2
+rectangle "VoiceDownloadStatus\nfunction L4-8\nfunction:b47ee7fda4a86fcd842f7f9c085e07dc" as N3
+rectangle "VoiceProgress\nfunction L10-52\nfunction:2a3cbe55893b987c3d2665c37c4d5f88" as N4
+rectangle "format\nfunction L20-20\nfunction:876f9e548484bb23c38df80c091480d0" as N5
+N0 --> N1 : contains E1272
+N0 --> N2 : contains E1273
+N0 --> N3 : contains E1274
+N0 --> N4 : contains E1275
+N4 --> N5 : contains E1276
+N4 --> N5 : calls E5332
+N4 --> N5 : calls E5333
+N4 --> N5 : calls E5334
+N4 --> N5 : calls E5335
+N3 --> N4 : calls E6942
+@enduml

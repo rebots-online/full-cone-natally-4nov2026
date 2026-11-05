@@ -1,0 +1,67 @@
+@startuml
+title src-tauri/src/native_auth.rs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "native_auth.rs\nfile L1-182\nfile:src-tauri/src/native_auth.rs" as N0
+rectangle "std\nimport L1-1\nimport:8f9f578129331c96312c6991380aed52" as N1
+rectangle "serde\nimport L2-2\nimport:94117adef9194f109d48bbcc53c38362" as N2
+rectangle "ORIGIN\nvariable L4-4\nvariable:db9356c44f6a10b9ab4bab3178a9fe06" as N3
+rectangle "LIMIT\nvariable L5-5\nvariable:7c9892e00e0f209e7822537b3cfec798" as N4
+rectangle "ACTIVE\nvariable L6-6\nvariable:c370a9f7555f97c3d4f65a7f03537b08" as N5
+rectangle "CANCELLED\nvariable L7-7\nvariable:f5a2f9238b2369bae538e2ac273da7dd" as N6
+rectangle "Credentials\nstruct L11-19\nstruct:3a3412a58dc0175b293043b43926c236" as N7
+rectangle "validate\nfunction L21-34\nfunction:407302a7deed892b0b32fee8dba01ca9" as N8
+rectangle "receive\nfunction L36-74\nfunction:10e9da3717e5bbd040570f3f26b72589" as N9
+rectangle "respond\nfunction L76-83\nfunction:0f1390e8f594c09c8481dc7a89fe100c" as N10
+rectangle "flow\nfunction L85-99\nfunction:a959f3541640fb82c8a09322f3519da2" as N11
+rectangle "wait_for_callback\nfunction L101-117\nfunction:f97df4daeef15d919246caa6e74686ac" as N12
+rectangle "native_sign_in\nfunction L121-127\nfunction:7b8a08d9fe0d1e43e58dd3c6ef17b2fa" as N13
+rectangle "cancel_native_sign_in\nfunction L131-131\nfunction:6f1485b3b23e45fc7566b132f9216815" as N14
+rectangle "credentials_bind_state_and_provider\nfunction L137-144\nfunction:ff13838a19428603ac15734bfb119a67" as N15
+rectangle "rejects_credentials_for_unknown_provider\nfunction L146-146\nfunction:1ad74ace6881cda0bd8788df94816d53" as N16
+rectangle "request\nfunction L148-158\nfunction:1775a5cab909cb03bfefa6d431b1a8b0" as N17
+rectangle "trusted_loopback_post_is_accepted\nfunction L160-160\nfunction:11dafef59ff26e29c450bab00053a698" as N18
+rectangle "rejects_cross_origin_null_origin_dns_rebinding_and_wrong_path\nfunction L162-168\nfunction:be01693c26398657f1949813d5608261" as N19
+rectangle "timeout_and_cancellation_close_listener\nfunction L170-180\nfunction:68c28c37543627a787d73d657931c513" as N20
+N0 --> N1 : contains E2571
+N0 --> N2 : contains E2572
+N0 --> N3 : contains E2573
+N0 --> N4 : contains E2574
+N0 --> N5 : contains E2575
+N0 --> N6 : contains E2576
+N0 --> N7 : contains E2577
+N0 --> N8 : contains E2578
+N0 --> N9 : contains E2579
+N0 --> N10 : contains E2580
+N0 --> N11 : contains E2581
+N0 --> N12 : contains E2582
+N0 --> N13 : contains E2583
+N0 --> N14 : contains E2584
+N0 --> N15 : contains E2585
+N0 --> N16 : contains E2586
+N0 --> N17 : contains E2587
+N0 --> N18 : contains E2588
+N0 --> N19 : contains E2589
+N0 --> N20 : contains E2590
+N9 --> N4 : references E2591
+N9 --> N3 : references E2592
+N11 --> N6 : references E2593
+N13 --> N5 : references E2594
+N13 --> N6 : references E2595
+N14 --> N6 : references E2596
+N18 --> N3 : references E2597
+N19 --> N3 : references E2598
+N8 --> N7 : references E6436
+N9 --> N7 : references E6437
+N9 --> N8 : calls E6438
+N11 --> N7 : references E6439
+N11 --> N12 : calls E6440
+N12 --> N7 : references E6441
+N12 --> N9 : calls E6442
+N12 --> N10 : calls E6443
+N13 --> N7 : references E6444
+N13 --> N11 : calls E6445
+N17 --> N9 : calls E6446
+N20 --> N12 : calls E6447
+@enduml

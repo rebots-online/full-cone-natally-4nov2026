@@ -1,0 +1,117 @@
+@startuml
+title src/services/supertonicTts.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "supertonicTts.ts\nfile L1-154\nfile:src/services/supertonicTts.ts" as N0
+rectangle "./voiceMeasurements\nimport L1-1\nimport:6d738c4e5c01a34064809df9618e564f" as N1
+rectangle "LocalSpeech\ninterface L2-2\ninterface:6675423ef259f3be70a65bdad5adf3a4" as N2
+rectangle "clipReuse\nproperty L2-2\nproperty:0918a7c885468dcd58e73db2124a6c60" as N3
+rectangle "sampleRate\nproperty L2-2\nproperty:1e4108801f7d6524b8479e7d3614c46d" as N4
+rectangle "samples\nproperty L2-2\nproperty:6e4add320d2442f1f248a9d2bd5cb0aa" as N5
+rectangle "generationMs\nproperty L2-2\nproperty:d44e385c1873582fc776ae1ebd36782e" as N6
+rectangle "backend\nproperty L2-2\nproperty:eef5735f56144aa1fb9bda045d43ba6d" as N7
+rectangle "VoiceGraphProgress\ninterface L3-3\ninterface:111ee1e876e125f7612bed361ab6069d" as N8
+rectangle "durationMs\nproperty L3-3\nproperty:2f8c5ad91bdb21f874879730f9cf33a5" as N9
+rectangle "expected\nproperty L3-3\nproperty:38bb840a7eafafbfa2cd26fb9b1b827b" as N10
+rectangle "state\nproperty L3-3\nproperty:70897538d96236a09689b6aa24d23555" as N11
+rectangle "backend\nproperty L3-3\nproperty:79d607d488b4a42879980390f0a4b4ab" as N12
+rectangle "startedAt\nproperty L3-3\nproperty:a076d506554d3ea307982de80a668601" as N13
+rectangle "operation\nproperty L3-3\nproperty:db2f7ef11909ea88c75c5d28f1baa01f" as N14
+rectangle "file\nproperty L3-3\nproperty:dffef300e7fa4f4ed31d7ca249dfaa9a" as N15
+rectangle "completed\nproperty L3-3\nproperty:efad673e62205a761b73933f38aa57ff" as N16
+rectangle "VoiceStatus\ninterface L4-16\ninterface:8cee35a966fa22f4abaad01266f059ee" as N17
+rectangle "phase\nproperty L5-5\nproperty:c4c9ed5d0e020df64a1c1dac6faf8594" as N18
+rectangle "message\nproperty L6-6\nproperty:3123db17e2b2ced6a7c805b73d3a1f35" as N19
+rectangle "loadedBytes\nproperty L7-7\nproperty:7a49f97bc261a4868fc904f059e5ec41" as N20
+rectangle "totalBytes\nproperty L8-8\nproperty:890a1aacb8d33e1c9dee9182a1ce4e2e" as N21
+rectangle "file\nproperty L9-9\nproperty:f21e0d5dd5067ed47426f3c5b5e8d7ec" as N22
+rectangle "files\nproperty L10-10\nproperty:db9e9439f28cc587e1ecdd352be36452" as N23
+rectangle "graphs\nproperty L11-11\nproperty:dba8305c1be160db2c70f3d51bc6d401" as N24
+rectangle "startedAt\nproperty L12-12\nproperty:636797ed3c1c96c73a3f2e2f8db904a8" as N25
+rectangle "confirmedAt\nproperty L13-13\nproperty:72b0f0caa06862b2ee374047c7f6f050" as N26
+rectangle "runtimeEvent\nproperty L14-14\nproperty:62a679d1af0b973b1ce605bc8733c9df" as N27
+rectangle "heartbeatAt\nproperty L15-15\nproperty:6b3f5eb2932067390f5cf0237afbdff7" as N28
+rectangle "status\nvariable L17-17\nvariable:8d3078a337452521d350e2010b148190" as N29
+rectangle "listeners\nconstant L18-18\nconstant:20bb421f2218d7b9ed4271ef1c605d22" as N30
+rectangle "worker\nvariable L19-19\nvariable:0136daf661251f351cbccc3fff7b7fc2" as N31
+rectangle "nextId\nvariable L20-20\nvariable:780cd54a94047e886376e9f3a159ad74" as N32
+rectangle "pending\nconstant L21-21\nconstant:06d716d291dfa87eff2fd7cce5d210f1" as N33
+rectangle "preload\nvariable L22-22\nvariable:9e1ac8bc523f34ba355b40426738bd9d" as N34
+rectangle "forceWasm\nvariable L25-25\nvariable:4e4d0e6f052c7e6a4a088496e3ab80fc" as N35
+rectangle "reportVoiceStatus\nfunction L27-30\nfunction:5297e6321694e3e8e963dfae1fd160ff" as N36
+rectangle "subscribeVoiceStatus\nfunction L31-35\nfunction:83ad09b08f6dac7f16b7a7c46c31389b" as N37
+rectangle "resetWorker\nfunction L36-47\nfunction:ab88e346cc47e110211194446b1994c5" as N38
+rectangle "splitSpeechText\nfunction L48-73\nfunction:e4554d5f38f5c87dc5bb4ac23c0ceb24" as N39
+rectangle "requestWorker\nfunction L74-124\nfunction:b2fe9fbe484ae3b10986b0a733bf7ac4" as N40
+rectangle "initSupertonic\nfunction L126-132\nfunction:f34246a4722f72f85672c5869339a3fc" as N41
+rectangle "scheduleSupertonicPreload\nfunction L134-145\nfunction:69294cc6cc9275e251ab0c36262569f6" as N42
+rectangle "start\nfunction L138-138\nfunction:a8972a627a57f0ee034cb848f3c8f841" as N43
+rectangle "supertonicSpeak\nfunction L147-153\nfunction:102e493fcf5bc8d11542e6d6331c2569" as N44
+N0 --> N1 : contains E2335
+N0 --> N2 : contains E2336
+N2 --> N5 : contains E2337
+N2 --> N4 : contains E2338
+N2 --> N6 : contains E2339
+N2 --> N7 : contains E2340
+N2 --> N3 : contains E2341
+N0 --> N8 : contains E2342
+N8 --> N15 : contains E2343
+N8 --> N12 : contains E2344
+N8 --> N14 : contains E2345
+N8 --> N11 : contains E2346
+N8 --> N16 : contains E2347
+N8 --> N10 : contains E2348
+N8 --> N13 : contains E2349
+N8 --> N9 : contains E2350
+N0 --> N17 : contains E2351
+N17 --> N18 : contains E2352
+N17 --> N19 : contains E2353
+N17 --> N20 : contains E2354
+N17 --> N21 : contains E2355
+N17 --> N22 : contains E2356
+N17 --> N23 : contains E2357
+N17 --> N24 : contains E2358
+N17 --> N25 : contains E2359
+N17 --> N26 : contains E2360
+N17 --> N27 : contains E2361
+N17 --> N28 : contains E2362
+N0 --> N29 : contains E2363
+N0 --> N30 : contains E2364
+N0 --> N31 : contains E2365
+N0 --> N32 : contains E2366
+N0 --> N33 : contains E2367
+N0 --> N34 : contains E2368
+N0 --> N35 : contains E2369
+N0 --> N36 : contains E2370
+N0 --> N37 : contains E2371
+N0 --> N38 : contains E2372
+N0 --> N39 : contains E2373
+N0 --> N40 : contains E2374
+N0 --> N41 : contains E2375
+N0 --> N42 : contains E2376
+N42 --> N43 : contains E2377
+N0 --> N44 : contains E2378
+N38 --> N32 : references E2379
+N40 --> N32 : references E2380
+N40 --> N35 : references E2381
+N24 --> N8 : references E6312
+N29 --> N17 : references E6313
+N36 --> N17 : references E6314
+N37 --> N17 : references E6315
+N38 --> N36 : calls E6317
+N40 --> N2 : references E6318
+N40 --> N36 : calls E6320
+N40 --> N36 : calls E6322
+N40 --> N36 : calls E6323
+N40 --> N38 : calls E6324
+N40 --> N38 : calls E6325
+N40 --> N38 : calls E6326
+N40 --> N38 : calls E6327
+N40 --> N38 : calls E6328
+N41 --> N40 : calls E6329
+N43 --> N41 : calls E6330
+N44 --> N2 : references E6331
+N44 --> N40 : calls E6333
+N42 --> N43 : references E6334
+@enduml

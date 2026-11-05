@@ -1,0 +1,16 @@
+@startuml
+title netlify/lib/astrology-tools.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ASTROLOGY_TOOLS\nconstant L1-21\nconstant:7711219b65c701163c8fbdc89e1ff2b3" as N0
+rectangle "astrology-tools.mjs\nfile L1-46\nfile:netlify/lib/astrology-tools.mjs" as N1
+rectangle "validToolCall\nfunction L23-26\nfunction:92930538682a0974761d1df9eadc4e57" as N2
+rectangle "validToolMessages\nfunction L28-43\nfunction:6e55d748836870ed4c9fd501d801564c" as N3
+rectangle "toolCallCount\nfunction L45-45\nfunction:45085584616d95ab0924d91bd21c21a4" as N4
+N1 --> N0 : contains E57
+N1 --> N2 : contains E58
+N1 --> N3 : contains E59
+N1 --> N4 : contains E60
+N3 --> N2 : calls E3837
+@enduml

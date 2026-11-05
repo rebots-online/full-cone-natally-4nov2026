@@ -1,0 +1,25 @@
+@startuml
+title tests/release-state.test.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "release-state.test.mjs\nfile L1-91\nfile:tests/release-state.test.mjs" as N0
+rectangle "node:test\nimport L1-1\nimport:27ad2ce65983e7153020cf1a0b72f068" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:081224276d95e21536f0b592bd990afd" as N2
+rectangle "../scripts/release-state.mjs\nimport L3-3\nimport:53fa1c075c538424239880da4fb6d58e" as N3
+rectangle "../scripts/release-state.mjs\nimport L4-4\nimport:98f8ef0b1af2355b96c67bc05e7b9269" as N4
+rectangle "node:fs\nimport L5-5\nimport:e0232fd471508254a0f4c0dfcba517d1" as N5
+rectangle "node:os\nimport L6-6\nimport:d74a956eb81909afad5f572dcbd70b44" as N6
+rectangle "node:path\nimport L7-7\nimport:dd4f17fb319c977efa7d9061a3949655" as N7
+rectangle "node:crypto\nimport L8-8\nimport:5dbf4588c6884cb6e6a5f39d855708a8" as N8
+rectangle "node:child_process\nimport L9-9\nimport:90b49e0668e6f8ad8644f101b374454e" as N9
+N0 --> N1 : contains E2742
+N0 --> N2 : contains E2743
+N0 --> N3 : contains E2744
+N0 --> N4 : contains E2745
+N0 --> N5 : contains E2746
+N0 --> N6 : contains E2747
+N0 --> N7 : contains E2748
+N0 --> N8 : contains E2749
+N0 --> N9 : contains E2750
+@enduml

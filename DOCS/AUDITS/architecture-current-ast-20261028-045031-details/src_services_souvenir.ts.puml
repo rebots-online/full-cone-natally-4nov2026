@@ -1,0 +1,230 @@
+@startuml
+title src/services/souvenir.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "souvenir.ts\nfile L1-427\nfile:src/services/souvenir.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:a4757848bedf6c290de8b11df59167b8" as N1
+rectangle "./chartTargets\nimport L2-2\nimport:17a2b81780c75291975ce7e0ceb1134a" as N2
+rectangle "./authoredChartExplanations\nimport L3-3\nimport:456bb4df155e85b1b4b3731ac31984f9" as N3
+rectangle "./accountStorage\nimport L4-4\nimport:76719df1813103a051a2a9a3831ff007" as N4
+rectangle "./voiceService\nimport L5-5\nimport:4d0f9f074e8e8a9a627e8d6fd21bcbb5" as N5
+rectangle "./firebase\nimport L6-6\nimport:937d2662acf1e2345d917e7c7c5ffbbe" as N6
+rectangle "firebase/firestore\nimport L7-7\nimport:532d0d04ea39129ec98692be4c56f2b9" as N7
+rectangle "./revenueCatCheckout\nimport L8-8\nimport:f2fcd23cebf2a5525091fe71697fd118" as N8
+rectangle "./voiceService\nimport L9-9\nimport:284276a53c96f737dbcab44e42cb850e" as N9
+rectangle "./natallyChat\nimport L10-10\nimport:f55754e8b7b858bbf280941ae55bf79e" as N10
+rectangle "./presentation\nimport L11-11\nimport:d396c6619c128364bd0007b81253c5bb" as N11
+rectangle "AUTHORED_OFFER_SENTENCE\nconstant L14-14\nconstant:19e135223b4c0b3362e37b6c6785c94e" as N12
+rectangle "HISTORY_KEY\nconstant L16-16\nconstant:cf6b24358e4ba2f9b1b354b8e214c900" as N13
+rectangle "MIN_RETENTION_DAYS\nconstant L17-17\nconstant:99af92435f730b02a8cf3bd05b449c0e" as N14
+rectangle "MAX_MESSAGES\nconstant L18-18\nconstant:1a5e1677d3a414ad39a3e89a3fecd501" as N15
+rectangle "MAX_MESSAGE_CHARS\nconstant L19-19\nconstant:758f790c84501668dfa6cad21db4d698" as N16
+rectangle "MAX_CHAPTERS\nconstant L20-20\nconstant:4f7e0a91a28bd17c1ff7f1f9e0ba178d" as N17
+rectangle "MAX_CHAPTER_CHARS\nconstant L21-21\nconstant:00a7e246c8d420c505a95e6c43809ed5" as N18
+rectangle "MAX_PAYLOAD_BYTES\nconstant L22-22\nconstant:abfb79869435cf13938fb7aa0bbd2d64" as N19
+rectangle "READING_PRODUCT_ID\nconstant L23-23\nconstant:539f9b4ce38ab067767e288a345e1831" as N20
+rectangle "SouvenirMessage\ntype_alias L26-39\ntype_alias:a8ac4125437dce688c5e0fc8326f88e5" as N21
+rectangle "id\nproperty L27-27\nproperty:7404e3595dcceca61993a2ee4d662f8f" as N22
+rectangle "sender\nproperty L28-28\nproperty:da7c9994152b8460532c5442ccd32733" as N23
+rectangle "text\nproperty L29-29\nproperty:d870170cc670685707e56bc3ac05bd57" as N24
+rectangle "timestamp\nproperty L30-30\nproperty:e8b3c171da5314976d3c9fe0dc50e615" as N25
+rectangle "createdAt\nproperty L31-31\nproperty:e17aa0f7a9dcdb3b2c9987ec60d8db4d" as N26
+rectangle "category\nproperty L32-32\nproperty:3816fcbe50ac1bc9a541ce6036b3095a" as N27
+rectangle "model\nproperty L33-33\nproperty:950b3db8b96b8a9870bc5abf84ea36bd" as N28
+rectangle "chartCues\nproperty L34-34\nproperty:ca1ea82026ecc0384140cb2df1efb6b8" as N29
+rectangle "presentationCues\nproperty L35-35\nproperty:a51b9e4e56284b359ea84682665d08b8" as N30
+rectangle "presentationVersion\nproperty L36-36\nproperty:2190abe6b49b9908de9313b19fc293c8" as N31
+rectangle "chartFocusKey\nproperty L37-37\nproperty:de35688a7f0b8f0c80bbeda09cc03f45" as N32
+rectangle "observationSnapshot\nproperty L38-38\nproperty:bd2c6f89c8f7f92257eb6f69d4c23bdf" as N33
+rectangle "title\nproperty L41-41\nproperty:2e800e9abd97b425f5f89f47b37a452f" as N34
+rectangle "targets\nproperty L41-41\nproperty:32dfbad74de360e32d873ad2ac077e84" as N35
+rectangle "text\nproperty L41-41\nproperty:4665b032312b8d8addab05ee148723cd" as N36
+rectangle "SouvenirChapter\ntype_alias L41-41\ntype_alias:b968318023c8ee3c3800a59e8f512543" as N37
+rectangle "SouvenirSnapshot\ntype_alias L43-53\ntype_alias:01185eaadbba0788e9a33b49937b1097" as N38
+rectangle "schemaVersion\nproperty L44-44\nproperty:3034c7f803a7e3c89dd3bdc80883e0c7" as N39
+rectangle "id\nproperty L45-45\nproperty:eb502aa23ffe49caa1c85925cb3f4012" as N40
+rectangle "accountUid\nproperty L46-46\nproperty:1735e7b02b74db5bafe84597d405841e" as N41
+rectangle "createdAt\nproperty L47-47\nproperty:241fdabe638b9910d4b32827d8317a63" as N42
+rectangle "retainUntil\nproperty L48-48\nproperty:893e7ec6779238459b0beca12a436e5a" as N43
+rectangle "chart\nproperty L49-49\nproperty:79ded022b0181118bbb72fce48651458" as N44
+rectangle "messages\nproperty L50-50\nproperty:c1c7a12eac6302aec2a66a2e60b05420" as N45
+rectangle "voiceSettings\nproperty L51-51\nproperty:bec0b52eb6e3acb3a965c3cb2e2d3bbb" as N46
+rectangle "chapters\nproperty L52-52\nproperty:98d5806778d6566441f2b6a60e24bf53" as N47
+rectangle "stripOffer\nfunction L55-61\nfunction:687aea4e6e2f12f4d5cc61a436d3f161" as N48
+rectangle "isCompletedRealMessage\nfunction L63-71\nfunction:564d021f73dee279649f576855c1b18b" as N49
+rectangle "PersistentLike\ntype_alias L73-88\ntype_alias:5caa82c40d27ba7f99e70d54b67f2f2e" as N50
+rectangle "id\nproperty L74-74\nproperty:c6b94db467ac0c5b7892c94ffb762719" as N51
+rectangle "sender\nproperty L75-75\nproperty:54b4e01d83eeeebff03a8b9cd94a0eaf" as N52
+rectangle "text\nproperty L76-76\nproperty:4811a51c1c4f09d4eb9867c7f6a658f0" as N53
+rectangle "timestamp\nproperty L77-77\nproperty:6760f880512e77f6ac7850319b3b1173" as N54
+rectangle "createdAt\nproperty L78-78\nproperty:f80300d52f263b4976fc3588a319ee3f" as N55
+rectangle "category\nproperty L79-79\nproperty:0fa9290b9b62916d4985c0cdeb46a7b4" as N56
+rectangle "model\nproperty L80-80\nproperty:514e667c048885e3db61a00cd92a2987" as N57
+rectangle "chartCues\nproperty L81-81\nproperty:80e7f40645a1eade2c5ff7d58340f6ef" as N58
+rectangle "presentationCues\nproperty L82-82\nproperty:79167d9894f0066f4ddb5567f751eb04" as N59
+rectangle "presentationVersion\nproperty L83-83\nproperty:2604dacbc48117b76096f974ef7e7359" as N60
+rectangle "chartFocusKey\nproperty L84-84\nproperty:de10baf8130206b341965a14f0dc00b3" as N61
+rectangle "observationSnapshot\nproperty L85-85\nproperty:6638fc3d343bc317fa993cb41650ffc7" as N62
+rectangle "streamState\nproperty L86-86\nproperty:df68cf62b304c79e37b1f1781b3464cb" as N63
+rectangle "authoredEducation\nproperty L87-87\nproperty:e12a7553318e46bce70e9055263ae2be" as N64
+rectangle "toSouvenirMessage\nfunction L90-105\nfunction:e984f36261fedeea565c803a0922f6cd" as N65
+rectangle "matchesChart\nfunction L107-110\nfunction:84bb19c535e9fafeb6e0e5e7db1313ef" as N66
+rectangle "buildChapters\nfunction L112-165\nfunction:1403bbb6f2ec6616f97d1a68428308bc" as N67
+rectangle "push\nfunction L118-126\nfunction:57b13db3109002e5cb6098d9afe6c3b5" as N68
+rectangle "buildSouvenirContent\nfunction L172-212\nfunction:4dab13070fc481b2cbd84827a4897b0f" as N69
+rectangle "ID_PATTERN\nconstant L214-214\nconstant:6cc2946fe19d9127ac02ef7f6db93bb9" as N70
+rectangle "isFiniteNumber\nfunction L216-218\nfunction:a94ad56697b481fca3ba928a6c0bf75b" as N71
+rectangle "validateChartShape\nfunction L220-263\nfunction:49df8ca44f0b0b066b31599fb56ebf26" as N72
+rectangle "validateVoiceSettings\nfunction L265-272\nfunction:0fe594f79ea4e19c78bc251a002d96c5" as N73
+rectangle "validateSnapshotShape\nfunction L274-308\nfunction:ed02a4c39756073f2326b92a1e703da3" as N74
+rectangle "souvenirDoc\nfunction L310-312\nfunction:6eac4247356186620dc277a66897c9eb" as N75
+rectangle "hashContent\nfunction L314-318\nfunction:eaa8d9a5e75fbca76f5e2c218c1a2f5b" as N76
+rectangle "hasActiveEntitlements\nfunction L320-327\nfunction:fa9338c4e512f5193115e258f065bd66" as N77
+rectangle "createSouvenir\nfunction L330-390\nfunction:bc2887d7f330fe9772f8b2fc7840b866" as N78
+rectangle "current\nfunction L335-335\nfunction:6d4954df99a3b1ea123c085321ed0945" as N79
+rectangle "loadSouvenir\nfunction L393-421\nfunction:bb137d7ce8e2797437bbdb06dd3f37d1" as N80
+rectangle "souvenirUrl\nfunction L424-426\nfunction:f8b7385b68947b26c6d5d53184676fdc" as N81
+N0 --> N1 : contains E2175
+N0 --> N2 : contains E2176
+N0 --> N3 : contains E2177
+N0 --> N4 : contains E2178
+N0 --> N5 : contains E2179
+N0 --> N6 : contains E2180
+N0 --> N7 : contains E2181
+N0 --> N8 : contains E2182
+N0 --> N9 : contains E2183
+N0 --> N10 : contains E2184
+N0 --> N11 : contains E2185
+N0 --> N12 : contains E2186
+N0 --> N13 : contains E2187
+N0 --> N14 : contains E2188
+N0 --> N15 : contains E2189
+N0 --> N16 : contains E2190
+N0 --> N17 : contains E2191
+N0 --> N18 : contains E2192
+N0 --> N19 : contains E2193
+N0 --> N20 : contains E2194
+N0 --> N21 : contains E2195
+N21 --> N22 : contains E2196
+N21 --> N23 : contains E2197
+N21 --> N24 : contains E2198
+N21 --> N25 : contains E2199
+N21 --> N26 : contains E2200
+N21 --> N27 : contains E2201
+N21 --> N28 : contains E2202
+N21 --> N29 : contains E2203
+N21 --> N30 : contains E2204
+N21 --> N31 : contains E2205
+N21 --> N32 : contains E2206
+N21 --> N33 : contains E2207
+N0 --> N37 : contains E2208
+N37 --> N34 : contains E2209
+N37 --> N36 : contains E2210
+N37 --> N35 : contains E2211
+N0 --> N38 : contains E2212
+N38 --> N39 : contains E2213
+N38 --> N40 : contains E2214
+N38 --> N41 : contains E2215
+N38 --> N42 : contains E2216
+N38 --> N43 : contains E2217
+N38 --> N44 : contains E2218
+N38 --> N45 : contains E2219
+N38 --> N46 : contains E2220
+N38 --> N47 : contains E2221
+N0 --> N48 : contains E2222
+N0 --> N49 : contains E2223
+N0 --> N50 : contains E2224
+N50 --> N51 : contains E2225
+N50 --> N52 : contains E2226
+N50 --> N53 : contains E2227
+N50 --> N54 : contains E2228
+N50 --> N55 : contains E2229
+N50 --> N56 : contains E2230
+N50 --> N57 : contains E2231
+N50 --> N58 : contains E2232
+N50 --> N59 : contains E2233
+N50 --> N60 : contains E2234
+N50 --> N61 : contains E2235
+N50 --> N62 : contains E2236
+N50 --> N63 : contains E2237
+N50 --> N64 : contains E2238
+N0 --> N65 : contains E2239
+N0 --> N66 : contains E2240
+N0 --> N67 : contains E2241
+N67 --> N68 : contains E2242
+N0 --> N69 : contains E2243
+N0 --> N70 : contains E2244
+N0 --> N71 : contains E2245
+N0 --> N72 : contains E2246
+N0 --> N73 : contains E2247
+N0 --> N74 : contains E2248
+N0 --> N75 : contains E2249
+N0 --> N76 : contains E2250
+N0 --> N77 : contains E2251
+N0 --> N78 : contains E2252
+N78 --> N79 : contains E2253
+N0 --> N80 : contains E2254
+N0 --> N81 : contains E2255
+N48 --> N12 : references E2256
+N67 --> N17 : references E2257
+N68 --> N17 : references E2258
+N69 --> N16 : references E2259
+N69 --> N15 : references E2260
+N69 --> N13 : references E2261
+N74 --> N18 : references E2262
+N74 --> N16 : references E2263
+N74 --> N14 : references E2264
+N74 --> N17 : references E2265
+N74 --> N15 : references E2266
+N74 --> N70 : references E2267
+N77 --> N20 : references E2268
+N78 --> N19 : references E2269
+N78 --> N14 : references E2270
+N80 --> N70 : references E2271
+N38 --> N21 : references E6113
+N38 --> N37 : references E6115
+N49 --> N50 : references E6120
+N50 --> N21 : references E6121
+N65 --> N50 : references E6129
+N65 --> N21 : references E6130
+N66 --> N50 : references E6132
+N67 --> N37 : references E6136
+N67 --> N37 : references E6138
+N68 --> N48 : calls E6139
+N67 --> N68 : calls E6144
+N69 --> N66 : calls E6147
+N69 --> N66 : calls E6148
+N69 --> N73 : calls E6150
+N69 --> N67 : calls E6151
+N72 --> N71 : calls E6153
+N72 --> N71 : calls E6154
+N72 --> N71 : calls E6155
+N72 --> N71 : calls E6156
+N72 --> N71 : calls E6157
+N72 --> N71 : calls E6158
+N72 --> N71 : calls E6159
+N73 --> N71 : calls E6161
+N73 --> N71 : calls E6162
+N74 --> N38 : references E6163
+N74 --> N72 : calls E6165
+N74 --> N73 : calls E6166
+N78 --> N38 : references E6168
+N78 --> N77 : calls E6172
+N78 --> N69 : calls E6173
+N78 --> N76 : calls E6174
+N78 --> N79 : calls E6175
+N78 --> N79 : calls E6176
+N78 --> N75 : calls E6177
+N78 --> N74 : calls E6178
+N78 --> N38 : references E6179
+N78 --> N74 : calls E6180
+N78 --> N79 : calls E6181
+N80 --> N38 : references E6183
+N80 --> N38 : references E6186
+N80 --> N75 : calls E6187
+N80 --> N74 : calls E6188
+N80 --> N74 : calls E6190
+N69 --> N49 : references E6192
+N69 --> N65 : references E6193
+@enduml

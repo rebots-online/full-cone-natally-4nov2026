@@ -1,0 +1,19 @@
+@startuml
+title tests/voice-runtime-progress.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "voice-runtime-progress.test.ts\nfile L1-63\nfile:tests/voice-runtime-progress.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:1fd86383e396645b15f1ebd60c4bea34" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:4bfde66b3f7ccb06da40f0f317bf299d" as N2
+rectangle "node:vm\nimport L3-3\nimport:5e6bbcf9b63ed15f38ee375c84cf9999" as N3
+rectangle "../vite.config\nimport L4-4\nimport:488db9d5a97c2670f5e44506576a87c8" as N4
+rectangle "instrument\nfunction L6-14\nfunction:54e70542896d4bed975ff753f6b8efb8" as N5
+N0 --> N1 : contains E2846
+N0 --> N2 : contains E2847
+N0 --> N3 : contains E2848
+N0 --> N4 : contains E2849
+N0 --> N5 : contains E2850
+N0 --> N5 : calls E6896
+N0 --> N5 : calls E6897
+@enduml

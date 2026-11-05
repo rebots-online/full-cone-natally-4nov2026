@@ -1,0 +1,50 @@
+@startuml
+title src/services/locations.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "locations.ts\nfile L1-410\nfile:src/services/locations.ts" as N0
+rectangle "./accountStorage\nimport L1-1\nimport:683ce051fb80259f858367ec5a083086" as N1
+rectangle "CityLocation\ninterface L3-11\ninterface:04ba66c72a2bdc3a12f018e1391e2b92" as N2
+rectangle "name\nproperty L4-4\nproperty:311cd155f0ec815a08086af06938f497" as N3
+rectangle "country\nproperty L5-5\nproperty:0dfb916651b71d5b5d93e38bf1e412fa" as N4
+rectangle "adminRegion\nproperty L6-6\nproperty:0103bc34b91277969dbe58d32ed5abca" as N5
+rectangle "latitude\nproperty L7-7\nproperty:c4b7a22259dada2bc16ec32b9b0064d4" as N6
+rectangle "longitude\nproperty L8-8\nproperty:349b21626c8643e1a43f9ad0dedd317a" as N7
+rectangle "timezoneOffset\nproperty L9-9\nproperty:aa37a68d31ef459038d4a75b10414e43" as N8
+rectangle "label\nproperty L10-10\nproperty:594d82ab67732157d1d1ecd63b47fd53" as N9
+rectangle "PRESET_CITIES\nconstant L13-224\nconstant:6b0389ed3bf1edc986308162b4cdd4c7" as N10
+rectangle "estimateTimezoneFromLon\nfunction L226-228\nfunction:74d5f1a4acd583e991866cb132223db4" as N11
+rectangle "searchCache\nconstant L231-231\nconstant:a219917c30b8fb8079a3b7bca84f8380" as N12
+rectangle "searchPlaceOnline\nfunction L233-362\nfunction:b50e9e3885473d919e287913459b3d7e" as N13
+rectangle "VANTAGE_LOCATION_STORAGE_KEY\nconstant L364-364\nconstant:bf8ac39122ef767facaed9c432887f30" as N14
+rectangle "getPersistedVantageLocation\nfunction L366-392\nfunction:5a4ea77444a1946a6971fff98211d7e8" as N15
+rectangle "savePersistedVantageLocation\nfunction L394-408\nfunction:0b4cff4312ec7b853175dc12222052b6" as N16
+N0 --> N1 : contains E1765
+N0 --> N2 : contains E1766
+N2 --> N3 : contains E1767
+N2 --> N4 : contains E1768
+N2 --> N5 : contains E1769
+N2 --> N6 : contains E1770
+N2 --> N7 : contains E1771
+N2 --> N8 : contains E1772
+N2 --> N9 : contains E1773
+N0 --> N10 : contains E1774
+N0 --> N11 : contains E1775
+N0 --> N12 : contains E1776
+N0 --> N13 : contains E1777
+N0 --> N14 : contains E1778
+N0 --> N15 : contains E1779
+N0 --> N16 : contains E1780
+N13 --> N12 : references E1781
+N13 --> N10 : references E1782
+N15 --> N14 : references E1783
+N16 --> N14 : references E1784
+N10 --> N2 : references E5756
+N13 --> N2 : references E5757
+N13 --> N2 : references E5759
+N13 --> N11 : calls E5760
+N13 --> N11 : calls E5761
+N15 --> N2 : references E5762
+N16 --> N2 : references E5765
+@enduml

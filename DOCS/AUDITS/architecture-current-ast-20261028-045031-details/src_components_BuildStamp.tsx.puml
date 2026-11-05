@@ -1,0 +1,22 @@
+@startuml
+title src/components/BuildStamp.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "BuildStamp.tsx\nfile L1-35\nfile:src/components/BuildStamp.tsx" as N0
+rectangle "react\nimport L1-1\nimport:2508a27f90f093991c83bcdd542dedb2" as N1
+rectangle "react-dom\nimport L2-2\nimport:4faca2fb7aee78588f09314fa5d6b6c3" as N2
+rectangle "../services/buildIdentity\nimport L3-3\nimport:21d1592537efdc236e6c6c2198c2fc96" as N3
+rectangle "./BuildStamp.css\nimport L4-4\nimport:a3df94bc5891da51b3ea293ba2fd5cfc" as N4
+rectangle "BuildStamp\nfunction L6-34\nfunction:25c5002168ce06dbf52db1815eb4e77f" as N5
+rectangle "showAboveDialog\nfunction L11-15\nfunction:b6affea0922413c1c578907a14c45e20" as N6
+N0 --> N1 : contains E725
+N0 --> N2 : contains E726
+N0 --> N3 : contains E727
+N0 --> N4 : contains E728
+N0 --> N5 : contains E729
+N5 --> N6 : contains E730
+N0 --> N4 : imports E3083
+N5 --> N6 : calls E4515
+N5 --> N6 : calls E4516
+@enduml

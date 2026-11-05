@@ -1,0 +1,65 @@
+@startuml
+title src/components/NatallySprite.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "NatallySprite.tsx\nfile L1-327\nfile:src/components/NatallySprite.tsx" as N0
+rectangle "react\nimport L1-1\nimport:03fa8e21b28017dd026c35044f20cfa3" as N1
+rectangle "lucide-react\nimport L2-2\nimport:6f8eff381545272fe172dec4b7756436" as N2
+rectangle "../services/ephemeris\nimport L3-3\nimport:85de6a2d67979b9c50f5b3c111ab516e" as N3
+rectangle "../services/voiceService\nimport L4-4\nimport:a75b8e537531ea5d31ebf149bf77c666" as N4
+rectangle "./NatallyAvatar\nimport L5-5\nimport:fab76240413ffc761d09a236ec934a67" as N5
+rectangle "NatallySpriteProps\ninterface L7-16\ninterface:b840e84dcfe2bc4a76a0ee3bda294e4c" as N6
+rectangle "chart\nproperty L8-8\nproperty:9d823666aaa0dbd1f4b56db5f6927367" as N7
+rectangle "settings\nproperty L9-9\nproperty:c9c4d3e9cf93ac51fda931972e796b27" as N8
+rectangle "isSpeaking\nproperty L10-10\nproperty:08cbedf5a18c0e04fc495069c83c9176" as N9
+rectangle "activeTargetEntity\nproperty L11-11\nproperty:2de197a7361f6956c64de50b91e7a176" as N10
+rectangle "latestSpeechSnippet\nproperty L12-12\nproperty:aa723142b9722bb1bd43fca4d3e8564d" as N11
+rectangle "isOpen\nproperty L13-13\nproperty:e0689fc8668262fade3cbca7a46c3c2c" as N12
+rectangle "onOpenChat\nproperty L14-14\nproperty:c335085ee298a974981e413d4334fe54" as N13
+rectangle "onSelectPlanet\nproperty L15-15\nproperty:fa750a1d6e0f37fadeca949b2dc9bdd2" as N14
+rectangle "KAWAII_GREETINGS\nconstant L18-25\nconstant:60693839bf644d0de0a6371867a6b0f9" as N15
+rectangle "ENNUI_IDLE_THOUGHTS\nconstant L27-35\nconstant:a6b595ab0845ea6393bafddf0a48299f" as N16
+rectangle "idleDeck\nvariable L39-39\nvariable:4f50bf75a9df299c447214881dbe20cb" as N17
+rectangle "drawIdleThought\nfunction L40-50\nfunction:653ff524af625ddedd2e09f6a7ffcc21" as N18
+rectangle "NatallySprite\nfunction L52-326\nfunction:af21a4dc435ac9c9af82db149c6b0257" as N19
+rectangle "triggerGreeting\nfunction L75-92\nfunction:d9c9e43330a8be514b7ae5c744fcf5a4" as N20
+rectangle "handleUserActivity\nfunction L96-104\nfunction:acdd978be36bcf7271d436ae95ac0f70" as N21
+rectangle "handleMouseMove\nfunction L149-172\nfunction:19c6f7bcbb7dd982df7f92a2a6bd9094" as N22
+rectangle "handleClickMascot\nfunction L180-194\nfunction:46dd8d793d35c103fa24b5c477e390a6" as N23
+N0 --> N1 : contains E1002
+N0 --> N2 : contains E1003
+N0 --> N3 : contains E1004
+N0 --> N4 : contains E1005
+N0 --> N5 : contains E1006
+N0 --> N6 : contains E1007
+N6 --> N7 : contains E1008
+N6 --> N8 : contains E1009
+N6 --> N9 : contains E1010
+N6 --> N10 : contains E1011
+N6 --> N11 : contains E1012
+N6 --> N12 : contains E1013
+N6 --> N13 : contains E1014
+N6 --> N14 : contains E1015
+N0 --> N15 : contains E1016
+N0 --> N16 : contains E1017
+N0 --> N17 : contains E1018
+N0 --> N18 : contains E1019
+N0 --> N19 : contains E1020
+N19 --> N20 : contains E1021
+N19 --> N21 : contains E1022
+N19 --> N22 : contains E1023
+N19 --> N23 : contains E1024
+N18 --> N16 : references E1025
+N18 --> N17 : references E1026
+N19 --> N15 : references E1027
+N20 --> N15 : references E1028
+N21 --> N20 : calls E4912
+N19 --> N18 : calls E4914
+N22 --> N20 : calls E4917
+N23 --> N20 : calls E4918
+N19 --> N21 : references E4921
+N19 --> N20 : references E4922
+N19 --> N22 : references E4923
+N19 --> N23 : references E4924
+@enduml

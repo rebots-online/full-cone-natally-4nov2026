@@ -1,0 +1,23 @@
+.natally-learn { width: min(900px, calc(100vw - 24px)); max-height: min(90dvh, 960px); padding: 0; overflow: auto; border: 1px solid #a88745; border-radius: 20px; color: #f1e9de; background: #171020; box-shadow: 0 24px 100px #000b; font: 400 15px/1.65 system-ui, sans-serif; }
+.natally-learn::backdrop { background: #09050dcc; backdrop-filter: blur(4px); }
+.natally-learn__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 24px 28px 14px; }
+.natally-learn__header h2 { margin: 0; font: 500 clamp(24px, 4vw, 34px)/1.2 Georgia, serif; color: #ffe6a3; }
+.natally-learn__eyebrow { margin: 0 0 8px; color: #c9b690; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.natally-learn button { min-height: 44px; padding: 9px 14px; border: 1px solid #806946; border-radius: 8px; background: #2c2034; color: #ffe6a3; cursor: pointer; font: inherit; }
+.natally-learn button:hover { background: #49334c; }
+.natally-learn :is(button, a, summary):focus-visible { outline: 3px solid #f4d281; outline-offset: 4px; }
+.natally-learn__nav { position: sticky; top: 0; z-index: 1; display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 28px; border-block: 1px solid #55402f; background: #171020; }
+.natally-learn__nav button[aria-pressed="true"] { background: #e5c379; color: #211723; border-color: #ffe6a3; }
+.natally-learn__body { padding: 16px 28px 28px; }
+.natally-learn h3 { color: #ffe6a3; font: 500 25px/1.35 Georgia, serif; margin: 10px 0 14px; }
+.natally-learn p { margin: 12px 0; }
+.natally-learn a { color: #a5dfe8; text-decoration: underline; text-underline-offset: 3px; }
+.natally-learn ol { padding-left: 24px; }
+.natally-learn li { margin: 14px 0; padding-left: 4px; }
+.natally-learn__notice { padding: 16px 18px; border: 1px solid #8a704a; border-radius: 12px; background: #2a2030; margin: 20px 0; }
+.natally-learn__notice p:last-child { margin-bottom: 0; }
+.natally-learn details { border: 1px solid #574363; border-radius: 12px; margin: 14px 0; padding: 0 16px; background: #20162b; }
+.natally-learn summary { padding: 15px 0; cursor: pointer; color: #ffe6a3; font-weight: 600; }
+.natally-learn details[open] { padding-bottom: 10px; }
+.natally-learn__sources { font-size: 13px; color: #cdbed3; }
+@media (max-width: 540px) { .natally-learn__header { padding: 20px 16px 14px; gap: 10px; } .natally-learn__body { padding: 12px 16px 22px; } .natally-learn__nav { padding: 10px 16px; } .natally-learn__header button { flex-shrink: 0; } }

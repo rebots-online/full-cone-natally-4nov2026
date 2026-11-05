@@ -1,0 +1,141 @@
+@startuml
+title src/components/ReadingsModal.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "ReadingsModal.tsx\nfile L1-1105\nfile:src/components/ReadingsModal.tsx" as N0
+rectangle "react\nimport L1-1\nimport:a27012bcd522c40fc388d6604d9b428b" as N1
+rectangle "lucide-react\nimport L2-16\nimport:4ded12144221b59ff60a05f8f111275a" as N2
+rectangle "../services/ephemeris\nimport L17-17\nimport:95e7550bf6fe0f0008e39c1002a0765e" as N3
+rectangle "../services/readings\nimport L18-18\nimport:1beac0f0334f93cfea710c380ad2b52b" as N4
+rectangle "../services/locations\nimport L19-25\nimport:9f1e93ed9ee5b5e22ffb7e91686bfc1d" as N5
+rectangle "../services/presentation\nimport L26-26\nimport:8e323dcc509f6f62afc4611f502e14b7" as N6
+rectangle "./RichText\nimport L27-27\nimport:4a6107fa6c760e45a7b2152d11498b56" as N7
+rectangle "../services/natallyChat\nimport L28-28\nimport:9a0a3f33be8d3ea21c14ee8777446a10" as N8
+rectangle "../services/streamingSpeech\nimport L29-29\nimport:1028b2f3ece3c75807d1f2b741c903a1" as N9
+rectangle "../services/voiceService\nimport L30-30\nimport:85d1e1d8ce1689ef496e21ff793a2197" as N10
+rectangle "ReadingsModalProps\ninterface L32-44\ninterface:b458d99ce71ab70df46f08a153afee47" as N11
+rectangle "presentation\nproperty L33-33\nproperty:38e5dce10e88d6d19b93b396cbabd952" as N12
+rectangle "accountUid\nproperty L34-34\nproperty:ff6aa5646c70c558e6896bcbbeaef23b" as N13
+rectangle "isCurrentSession\nproperty L35-35\nproperty:6b977ec6e29385237a7c2737f643980e" as N14
+rectangle "onPartnerChart\nproperty L36-36\nproperty:03152eb46e728ce7b598198cd4019e15" as N15
+rectangle "onSignIn\nproperty L37-37\nproperty:d0db518fdcd73e60bc37acd0fe548ce0" as N16
+rectangle "isSignedIn\nproperty L38-38\nproperty:16e8f583be494c2b2d878adf9611023e" as N17
+rectangle "chart\nproperty L39-39\nproperty:987b9ef2383a47198243a5a9f5824650" as N18
+rectangle "onClose\nproperty L40-40\nproperty:0de3002fa6e9523d64eac8aff7140271" as N19
+rectangle "initialType\nproperty L41-41\nproperty:cb0360da8eaeb882660df584649dc36f" as N20
+rectangle "initialTargetKey\nproperty L42-42\nproperty:869353e2526f57435a919594011d2123" as N21
+rectangle "onSendToNatally\nproperty L43-43\nproperty:4be99f6964389ac4462f4cf7d77b5f70" as N22
+rectangle "ReadingsModal\nfunction L46-1104\nfunction:87efb53edeaa7175812e6ed5c2b75e4c" as N23
+rectangle "stopPreviewVoice\nfunction L141-141\nfunction:8824801e601bf65832f0f632861533e3" as N24
+rectangle "startPreviewVoice\nfunction L142-151\nfunction:ef392ac7cfe905ea2900e7ed46160acf" as N25
+rectangle "active\nfunction L145-145\nfunction:be8449129d4a0e73aad44025200df4c6" as N26
+rectangle "previewProgress\nfunction L152-156\nfunction:7316e3a31b837fdf6e616fef5fb024ec" as N27
+rectangle "requestActive\nfunction L161-161\nfunction:5c47567413f6e6207eef58516f6d142d" as N28
+rectangle "handleClickOutside\nfunction L165-178\nfunction:c52386127429790819f7eb9a5e6d2f2a" as N29
+rectangle "handleTransitPlaceInput\nfunction L184-215\nfunction:923f8633f3931c495b8ffac18ec9ece6" as N30
+rectangle "selectTransitCity\nfunction L217-225\nfunction:3230b143fb9dbb43242c60d0f9c483de" as N31
+rectangle "resetToBirthplace\nfunction L227-237\nfunction:9862f494a8248036d11847d4427e5252" as N32
+rectangle "handlePartnerPlaceInput\nfunction L240-271\nfunction:bc5195ed169abe233e0a07ebf859c1c1" as N33
+rectangle "selectPartnerCity\nfunction L273-279\nfunction:d51c542a8b0b4b8fb4ae2a71bae6ce8e" as N34
+rectangle "handleGenerateHoroscope\nfunction L281-318\nfunction:efa0ed1129c1a5e1703a4e697e88f94a" as N35
+rectangle "handleGenerateSynastry\nfunction L320-363\nfunction:aab2df76cb2f7f2f30637bdbca502bfb" as N36
+rectangle "handleGenerateEntity\nfunction L365-391\nfunction:3b50a89012ff8cccc05eac082b6a3dd2" as N37
+N0 --> N1 : contains E1126
+N0 --> N2 : contains E1127
+N0 --> N3 : contains E1128
+N0 --> N4 : contains E1129
+N0 --> N5 : contains E1130
+N0 --> N6 : contains E1131
+N0 --> N7 : contains E1132
+N0 --> N8 : contains E1133
+N0 --> N9 : contains E1134
+N0 --> N10 : contains E1135
+N0 --> N11 : contains E1136
+N11 --> N12 : contains E1137
+N11 --> N13 : contains E1138
+N11 --> N14 : contains E1139
+N11 --> N15 : contains E1140
+N11 --> N16 : contains E1141
+N11 --> N17 : contains E1142
+N11 --> N18 : contains E1143
+N11 --> N19 : contains E1144
+N11 --> N20 : contains E1145
+N11 --> N21 : contains E1146
+N11 --> N22 : contains E1147
+N0 --> N23 : contains E1148
+N23 --> N24 : contains E1149
+N23 --> N25 : contains E1150
+N25 --> N26 : contains E1151
+N23 --> N27 : contains E1152
+N23 --> N28 : contains E1153
+N23 --> N29 : contains E1154
+N23 --> N30 : contains E1155
+N23 --> N31 : contains E1156
+N23 --> N32 : contains E1157
+N23 --> N33 : contains E1158
+N23 --> N34 : contains E1159
+N23 --> N35 : contains E1160
+N23 --> N36 : contains E1161
+N23 --> N37 : contains E1162
+N25 --> N24 : calls E5087
+N26 --> N28 : calls E5090
+N25 --> N26 : calls E5093
+N25 --> N26 : calls E5094
+N25 --> N26 : calls E5095
+N27 --> N28 : calls E5097
+N30 --> N28 : calls E5100
+N30 --> N28 : calls E5102
+N32 --> N31 : calls E5106
+N33 --> N28 : calls E5108
+N33 --> N28 : calls E5110
+N35 --> N28 : calls E5112
+N35 --> N25 : calls E5113
+N35 --> N28 : calls E5115
+N35 --> N28 : calls E5116
+N35 --> N24 : calls E5117
+N35 --> N28 : calls E5118
+N36 --> N28 : calls E5119
+N36 --> N25 : calls E5120
+N36 --> N28 : calls E5122
+N36 --> N28 : calls E5124
+N36 --> N28 : calls E5125
+N36 --> N24 : calls E5126
+N36 --> N28 : calls E5127
+N37 --> N28 : calls E5128
+N37 --> N25 : calls E5129
+N37 --> N28 : calls E5131
+N37 --> N28 : calls E5132
+N37 --> N24 : calls E5133
+N37 --> N28 : calls E5134
+N23 --> N35 : calls E5135
+N23 --> N30 : calls E5137
+N23 --> N31 : calls E5138
+N23 --> N31 : calls E5139
+N23 --> N31 : calls E5140
+N23 --> N31 : calls E5141
+N23 --> N31 : calls E5142
+N23 --> N31 : calls E5143
+N23 --> N35 : calls E5144
+N23 --> N28 : calls E5145
+N23 --> N24 : calls E5146
+N23 --> N34 : calls E5147
+N23 --> N33 : calls E5149
+N23 --> N34 : calls E5150
+N23 --> N37 : calls E5151
+N23 --> N37 : calls E5152
+N23 --> N37 : calls E5153
+N23 --> N28 : calls E5154
+N23 --> N24 : calls E5155
+N25 --> N26 : references E5156
+N23 --> N29 : references E5157
+N35 --> N27 : references E5158
+N35 --> N28 : references E5159
+N36 --> N27 : references E5160
+N36 --> N28 : references E5161
+N37 --> N27 : references E5162
+N37 --> N28 : references E5163
+N23 --> N32 : references E5164
+N23 --> N36 : references E5165
+N23 --> N24 : references E5166
+@enduml

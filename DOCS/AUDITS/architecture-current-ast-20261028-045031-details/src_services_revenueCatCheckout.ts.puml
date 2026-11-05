@@ -1,0 +1,222 @@
+@startuml
+title src/services/revenueCatCheckout.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "revenueCatCheckout.ts\nfile L1-393\nfile:src/services/revenueCatCheckout.ts" as N0
+rectangle "@revenuecat/purchases-js\nimport L1-1\nimport:b5f1f6a1dadd87ff58fd302b84c8e906" as N1
+rectangle "@revenuecat/purchases-js\nimport L2-2\nimport:6f5d8c41eda78b02fb8b408bb95e8928" as N2
+rectangle "./firebase\nimport L3-3\nimport:4f8b66cc4331b4221b9e0d3599b6b3ae" as N3
+rectangle "./purchaseIntent\nimport L4-4\nimport:64719069f5c786daeb685dad02881f35" as N4
+rectangle "DEFAULT_PUBLIC_KEY\nconstant L6-6\nconstant:404dd4536db37b175ced51655ed7f82d" as N5
+rectangle "TERMS_URL\nconstant L7-7\nconstant:aefe3fbe62f6a4577c52ef047e53d6fb" as N6
+rectangle "OFFERING_IDENTIFIER\nconstant L8-8\nconstant:55da59704dc28a43d58c0743e50f4505" as N7
+rectangle "QUOTE_TTL_MS\nconstant L9-9\nconstant:b6a889273b8a56ae377da553a61d25ef" as N8
+rectangle "MAPPING\nconstant L11-14\nconstant:19b9ec453a0142fc11bcf502a8d66c2f" as N9
+rectangle "resolvePublicKey\nfunction L16-23\nfunction:d404f7d8f535cda27acb6fd61c079d8d" as N10
+rectangle "CheckoutOffer\ntype_alias L25-35\ntype_alias:fb286da690d565f94aaffa0393cc249f" as N11
+rectangle "kind\nproperty L26-26\nproperty:cdb3512b4127ea8bb6ea6e4e184b02c8" as N12
+rectangle "ownerUid\nproperty L27-27\nproperty:39870a57dcbcb29e57bcdb092cf2f4b2" as N13
+rectangle "quoteId\nproperty L28-28\nproperty:9a10e685a2411ff4d37e2b483ab909be" as N14
+rectangle "packageIdentifier\nproperty L29-29\nproperty:bb426d45d81dc7c93ec55ecce303f400" as N15
+rectangle "productIdentifier\nproperty L30-30\nproperty:b0d0cd239d1fcd3d164f7e17d3899b79" as N16
+rectangle "formattedPrice\nproperty L31-31\nproperty:fd6bdafff311950786771d4cc6b342e9" as N17
+rectangle "amountMicros\nproperty L32-32\nproperty:611e1b0d579175ec90b994b564deab38" as N18
+rectangle "currency\nproperty L33-33\nproperty:835eafd041a95b9a6d5d97a7aa7d7419" as N19
+rectangle "expiresAt\nproperty L34-34\nproperty:2d6c806f7c978464cedc1fa48bdda352" as N20
+rectangle "CheckoutPurchaseOutcome\ntype_alias L37-39\ntype_alias:c10950a13137d8fe1a8a2e48ef0c52c4" as N21
+rectangle "CachedQuote\ntype_alias L41-53\ntype_alias:4e889df51adae2e362dfc9a79dfa2fa4" as N22
+rectangle "kind\nproperty L42-42\nproperty:7db920182c6ba910e4c2aa2fdb03208b" as N23
+rectangle "ownerUid\nproperty L43-43\nproperty:2db7842f2f46e345e798f689d0b67b10" as N24
+rectangle "quoteId\nproperty L44-44\nproperty:d0b2e5933f4994ddd298f772813dd620" as N25
+rectangle "packageIdentifier\nproperty L45-45\nproperty:e62f2160df4f491bf4abdffb06a22643" as N26
+rectangle "productIdentifier\nproperty L46-46\nproperty:436901c957ac02bec08fd2d1123025e9" as N27
+rectangle "formattedPrice\nproperty L47-47\nproperty:0ece1cf4e2be91ea87916427f66cbe35" as N28
+rectangle "amountMicros\nproperty L48-48\nproperty:cbd2091a6ec8430595ce7dc85c3a0686" as N29
+rectangle "currency\nproperty L49-49\nproperty:42dd018ea73a98c56a43e1f9f66535b2" as N30
+rectangle "expiresAt\nproperty L50-50\nproperty:3b701161e6045123a0786f7bc43ac3c3" as N31
+rectangle "rcPackage\nproperty L51-51\nproperty:f1b35ae3f9d9066daf2bc404a86023fe" as N32
+rectangle "offer\nproperty L52-52\nproperty:38a0c18c857108cc25c1fc64526c14d1" as N33
+rectangle "CheckoutError\nclass L55-63\nclass:0fc49abc07708b361bc963f833ad9bb3" as N34
+rectangle "constructor\nmethod L56-62\nmethod:37b02a90f47007f1c70733b3d45715ae" as N35
+rectangle "quoteCache\nconstant L65-65\nconstant:850a7b50639099e785958142a3b8cc3e" as N36
+rectangle "operationsTail\nvariable L67-67\nvariable:05d5276535ed711f06b00653e82b8e84" as N37
+rectangle "purchaseInFlight\nvariable L68-68\nvariable:a972187531382cbc64cb1ff5e6bc98d6" as N38
+rectangle "authGeneration\nvariable L69-69\nvariable:10437b748a22f047bffc0014fc69ad95" as N39
+rectangle "authListenerInstalled\nvariable L70-70\nvariable:3a9de85b269a2986ac46ad3bb507f751" as N40
+rectangle "lastSeenUid\nvariable L71-71\nvariable:39451006821f8adc89249652ed614798" as N41
+rectangle "lastSeenUidInitialized\nvariable L72-72\nvariable:68a7a0e472e2c934e91178f7c8a24505" as N42
+rectangle "installAuthListener\nfunction L74-93\nfunction:31d56f534ae3bcfaccb3a2861bf573f1" as N43
+rectangle "serialize\nfunction L95-102\nfunction:08e4bef5cdcb57e35587a54512ecd011" as N44
+rectangle "assertGeneration\nfunction L104-108\nfunction:9bce3419d28d7f135d565113de56237f" as N45
+rectangle "currentUid\nfunction L110-116\nfunction:04441fa80e94982fc7600599d499fbf6" as N46
+rectangle "validateKind\nfunction L118-123\nfunction:4b84aa30c64c4a77a62ba52e15fa0e2e" as N47
+rectangle "ensureSdkForOwner\nfunction L125-135\nfunction:55d66d041428937e774f52cf20f97508" as N48
+rectangle "findConfiguredPackage\nfunction L137-159\nfunction:9fc3c138cf82e7dad851b4fce6198783" as N49
+rectangle "validatedPrice\nfunction L161-184\nfunction:78544135a9e39c326ef0a30fcf1bdb9e" as N50
+rectangle "randomQuoteId\nfunction L186-193\nfunction:dcd2ca9031beed89e20f2473a9875f1a" as N51
+rectangle "cachedOffer\nfunction L195-197\nfunction:0f791e44a079e4c6f5f227094065eff0" as N52
+rectangle "getCheckoutOffer\nfunction L199-246\nfunction:0f7c7317281c06006b2149cb1b009959" as N53
+rectangle "isUserCancelled\nfunction L248-250\nfunction:45c2e40542f7b4ba33e5c0a66a3d1a34" as N54
+rectangle "purchaseCheckoutOffer\nfunction L252-327\nfunction:f1726a30ba9767151a2ebbe94215aafa" as N55
+rectangle "restoreCheckoutCustomer\nfunction L329-352\nfunction:f3fe9ccb85d8706db64d62fe8a4b2eec" as N56
+rectangle "RocheBalance\ntype_alias L354-359\ntype_alias:57936559bd265cfd87ffbd231f49cc9b" as N57
+rectangle "ownerUid\nproperty L355-355\nproperty:271cab772d105a2ac0a455c7f5b7f899" as N58
+rectangle "currency\nproperty L356-356\nproperty:ad535dcba25d6a4276dde7dc39c83742" as N59
+rectangle "balance\nproperty L357-357\nproperty:fd7843c9aebe7a89924a230fc7496928" as N60
+rectangle "fetchedAt\nproperty L358-358\nproperty:f683e8e367a13e2fbe91fd20ac6126b6" as N61
+rectangle "getRocheBalance\nfunction L361-390\nfunction:42133b7d0eb6a935ffe006f8d30c33b6" as N62
+N0 --> N1 : contains E2037
+N0 --> N2 : contains E2038
+N0 --> N3 : contains E2039
+N0 --> N4 : contains E2040
+N0 --> N5 : contains E2041
+N0 --> N6 : contains E2042
+N0 --> N7 : contains E2043
+N0 --> N8 : contains E2044
+N0 --> N9 : contains E2045
+N0 --> N10 : contains E2046
+N0 --> N11 : contains E2047
+N11 --> N12 : contains E2048
+N11 --> N13 : contains E2049
+N11 --> N14 : contains E2050
+N11 --> N15 : contains E2051
+N11 --> N16 : contains E2052
+N11 --> N17 : contains E2053
+N11 --> N18 : contains E2054
+N11 --> N19 : contains E2055
+N11 --> N20 : contains E2056
+N0 --> N21 : contains E2057
+N0 --> N22 : contains E2058
+N22 --> N23 : contains E2059
+N22 --> N24 : contains E2060
+N22 --> N25 : contains E2061
+N22 --> N26 : contains E2062
+N22 --> N27 : contains E2063
+N22 --> N28 : contains E2064
+N22 --> N29 : contains E2065
+N22 --> N30 : contains E2066
+N22 --> N31 : contains E2067
+N22 --> N32 : contains E2068
+N22 --> N33 : contains E2069
+N0 --> N34 : contains E2070
+N34 --> N35 : contains E2071
+N0 --> N36 : contains E2072
+N0 --> N37 : contains E2073
+N0 --> N38 : contains E2074
+N0 --> N39 : contains E2075
+N0 --> N40 : contains E2076
+N0 --> N41 : contains E2077
+N0 --> N42 : contains E2078
+N0 --> N43 : contains E2079
+N0 --> N44 : contains E2080
+N0 --> N45 : contains E2081
+N0 --> N46 : contains E2082
+N0 --> N47 : contains E2083
+N0 --> N48 : contains E2084
+N0 --> N49 : contains E2085
+N0 --> N50 : contains E2086
+N0 --> N51 : contains E2087
+N0 --> N52 : contains E2088
+N0 --> N53 : contains E2089
+N0 --> N54 : contains E2090
+N0 --> N55 : contains E2091
+N0 --> N56 : contains E2092
+N0 --> N57 : contains E2093
+N57 --> N58 : contains E2094
+N57 --> N59 : contains E2095
+N57 --> N60 : contains E2096
+N57 --> N61 : contains E2097
+N0 --> N62 : contains E2098
+N10 --> N5 : references E2099
+N43 --> N36 : references E2100
+N43 --> N39 : references E2101
+N43 --> N41 : references E2102
+N43 --> N42 : references E2103
+N43 --> N40 : references E2104
+N44 --> N37 : references E2105
+N45 --> N39 : references E2106
+N47 --> N9 : references E2107
+N48 --> N36 : references E2108
+N49 --> N7 : references E2109
+N53 --> N36 : references E2110
+N53 --> N8 : references E2111
+N53 --> N9 : references E2112
+N53 --> N39 : references E2113
+N53 --> N38 : references E2114
+N55 --> N38 : references E2115
+N55 --> N6 : references E2116
+N55 --> N9 : references E2117
+N55 --> N39 : references E2118
+N55 --> N36 : references E2119
+N56 --> N39 : references E2120
+N56 --> N38 : references E2121
+N62 --> N39 : references E2122
+N62 --> N38 : references E2123
+N22 --> N11 : references E5987
+N45 --> N34 : instantiates E5991
+N46 --> N34 : instantiates E5992
+N47 --> N34 : instantiates E5995
+N48 --> N10 : calls E5996
+N49 --> N34 : instantiates E5997
+N49 --> N34 : instantiates E5998
+N49 --> N34 : instantiates E5999
+N50 --> N34 : instantiates E6000
+N52 --> N22 : references E6001
+N52 --> N11 : references E6002
+N53 --> N11 : references E6005
+N53 --> N47 : calls E6007
+N53 --> N34 : instantiates E6008
+N53 --> N44 : calls E6009
+N53 --> N45 : calls E6011
+N53 --> N46 : calls E6012
+N53 --> N48 : calls E6013
+N53 --> N45 : calls E6014
+N53 --> N34 : instantiates E6015
+N53 --> N45 : calls E6016
+N53 --> N34 : instantiates E6017
+N53 --> N49 : calls E6018
+N53 --> N50 : calls E6019
+N53 --> N51 : calls E6020
+N53 --> N11 : references E6021
+N53 --> N22 : references E6022
+N55 --> N11 : references E6023
+N55 --> N21 : references E6024
+N55 --> N34 : instantiates E6026
+N55 --> N44 : calls E6027
+N55 --> N52 : calls E6028
+N55 --> N34 : instantiates E6029
+N55 --> N34 : instantiates E6030
+N55 --> N45 : calls E6032
+N55 --> N46 : calls E6033
+N55 --> N34 : instantiates E6034
+N55 --> N48 : calls E6035
+N55 --> N45 : calls E6036
+N55 --> N34 : instantiates E6037
+N55 --> N34 : instantiates E6038
+N55 --> N54 : calls E6039
+N55 --> N34 : instantiates E6040
+N55 --> N45 : calls E6041
+N55 --> N34 : instantiates E6042
+N56 --> N34 : instantiates E6043
+N56 --> N44 : calls E6044
+N56 --> N45 : calls E6046
+N56 --> N46 : calls E6047
+N56 --> N48 : calls E6048
+N56 --> N45 : calls E6049
+N56 --> N34 : instantiates E6050
+N56 --> N45 : calls E6051
+N56 --> N34 : instantiates E6052
+N62 --> N57 : references E6053
+N62 --> N34 : instantiates E6055
+N62 --> N44 : calls E6056
+N62 --> N45 : calls E6058
+N62 --> N46 : calls E6059
+N62 --> N48 : calls E6060
+N62 --> N45 : calls E6061
+N62 --> N34 : instantiates E6062
+N62 --> N45 : calls E6063
+N62 --> N34 : instantiates E6064
+N62 --> N34 : instantiates E6065
+N0 --> N43 : calls E6066
+@enduml

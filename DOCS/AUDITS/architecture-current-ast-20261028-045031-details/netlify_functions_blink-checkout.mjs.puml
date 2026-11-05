@@ -1,0 +1,120 @@
+@startuml
+title netlify/functions/blink-checkout.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "blink-checkout.mjs\nfile L1-371\nfile:netlify/functions/blink-checkout.mjs" as N0
+rectangle "node:crypto\nimport L19-19\nimport:935352deb663d5c9a52ff1d7a1bf6f6e" as N1
+rectangle "../lib/blink-lightning.mjs\nimport L20-20\nimport:3ec7d7a7386c4203d072ba122a1b399b" as N2
+rectangle "../lib/blink-revenuecat.mjs\nimport L21-21\nimport:668e01bf8138460a943d22a9097bbb4f" as N3
+rectangle "../lib/blink-store.mjs\nimport L22-22\nimport:8e501e63592742fe5db9b24036cf47a6" as N4
+rectangle "../../firebase-applet-config.json\nimport L23-23\nimport:872f461917398bcffe9ca288d53c67b9" as N5
+rectangle "MAX_BODY_BYTES\nconstant L25-25\nconstant:0c0e7f98bb311e36260a91da70da4454" as N6
+rectangle "MAX_AMOUNT_MINOR\nconstant L26-26\nconstant:8ba8daed2e455ad39b2547a6b63acba5" as N7
+rectangle "QUOTE_TTL_MINUTES\nconstant L27-27\nconstant:fe6ae50ff8f444e45e2a6f51170994af" as N8
+rectangle "REQUEST_ID_PATTERN\nconstant L28-28\nconstant:baf1072543752436269cba295e40d478" as N9
+rectangle "KINDS\nconstant L29-29\nconstant:289e4f1b091d98cee4e7b7e90002fcfe" as N10
+rectangle "INVOICE_PATH\nconstant L30-30\nconstant:6731c080979ccc8bf084ded1155e0333" as N11
+rectangle "STATUS_PATH\nconstant L31-31\nconstant:d4aa676375bbf6ce7058bf431cc7bdf0" as N12
+rectangle "SUBSCRIBERS_ENDPOINT\nconstant L32-32\nconstant:d58b58e96a4b06f4608dffa04b79645c" as N13
+rectangle "TIMEOUT_MS\nconstant L33-33\nconstant:12798e9b074294e923b11eadbd8124ff" as N14
+rectangle "fail\nfunction L35-39\nfunction:3346911ea60de0c71f41c8361f0cdcc6" as N15
+rectangle "response\nfunction L41-43\nfunction:62b50bc5f2a9cd9ea0e178ddf1392ebb" as N16
+rectangle "safeInvoiceResponse\nfunction L45-56\nfunction:e0d635f8da0aa30ed898e24ef19e19b2" as N17
+rectangle "readCatalog\nfunction L58-94\nfunction:96ac0803c34b66de605e571038824a6b" as N18
+rectangle "authenticate\nfunction L96-124\nfunction:6a8013c1d006b74716d2127aba5ce7e0" as N19
+rectangle "verifyRevenueCatReceipt\nfunction L126-156\nfunction:9f6f952a9c12dc5fedac79d2ffbf0109" as N20
+rectangle "getStore\nfunction L158-162\nfunction:4d83136cadef55a0e53817b5be7824ae" as N21
+rectangle "blinkCheckout\nfunction L164-368\nfunction:86842d3e396368d076cb4d2158cb9e65" as N22
+rectangle "env\nfunction L165-165\nfunction:af13c7a9c416aee5167b4072796ec173" as N23
+rectangle "reply\nfunction L187-187\nfunction:18eee185b9d830e06d80d878611d34ef" as N24
+rectangle "config\nconstant L370-370\nconstant:116de09f2b004a7c82bd558591677660" as N25
+N0 --> N1 : contains E16
+N0 --> N2 : contains E17
+N0 --> N3 : contains E18
+N0 --> N4 : contains E19
+N0 --> N5 : contains E20
+N0 --> N6 : contains E21
+N0 --> N7 : contains E22
+N0 --> N8 : contains E23
+N0 --> N9 : contains E24
+N0 --> N10 : contains E25
+N0 --> N11 : contains E26
+N0 --> N12 : contains E27
+N0 --> N13 : contains E28
+N0 --> N14 : contains E29
+N0 --> N15 : contains E30
+N0 --> N16 : contains E31
+N0 --> N17 : contains E32
+N0 --> N18 : contains E33
+N0 --> N19 : contains E34
+N0 --> N20 : contains E35
+N0 --> N21 : contains E36
+N0 --> N22 : contains E37
+N22 --> N23 : contains E38
+N22 --> N24 : contains E39
+N0 --> N25 : contains E40
+N18 --> N7 : references E41
+N20 --> N14 : references E42
+N20 --> N13 : references E43
+N22 --> N8 : references E44
+N22 --> N10 : references E45
+N22 --> N9 : references E46
+N22 --> N6 : references E47
+N22 --> N12 : references E48
+N22 --> N11 : references E49
+N25 --> N12 : references E50
+N25 --> N11 : references E51
+N0 --> N5 : imports E2869
+N18 --> N15 : calls E3768
+N18 --> N15 : calls E3769
+N18 --> N15 : calls E3770
+N18 --> N15 : calls E3771
+N18 --> N15 : calls E3772
+N18 --> N15 : calls E3773
+N18 --> N15 : calls E3774
+N22 --> N23 : calls E3776
+N24 --> N16 : calls E3777
+N22 --> N24 : calls E3778
+N22 --> N24 : calls E3779
+N22 --> N24 : calls E3780
+N22 --> N24 : calls E3781
+N22 --> N24 : calls E3782
+N22 --> N24 : calls E3783
+N22 --> N24 : calls E3784
+N22 --> N24 : calls E3785
+N22 --> N24 : calls E3786
+N22 --> N24 : calls E3787
+N22 --> N19 : calls E3788
+N22 --> N24 : calls E3789
+N22 --> N24 : calls E3790
+N22 --> N23 : calls E3792
+N22 --> N23 : calls E3793
+N22 --> N15 : calls E3794
+N22 --> N15 : calls E3795
+N22 --> N18 : calls E3796
+N22 --> N21 : calls E3797
+N22 --> N24 : calls E3798
+N22 --> N24 : calls E3800
+N22 --> N24 : calls E3801
+N22 --> N24 : calls E3802
+N22 --> N17 : calls E3803
+N22 --> N24 : calls E3804
+N22 --> N24 : calls E3805
+N22 --> N24 : calls E3806
+N22 --> N24 : calls E3807
+N22 --> N24 : calls E3808
+N22 --> N24 : calls E3809
+N22 --> N17 : calls E3810
+N22 --> N24 : calls E3811
+N22 --> N24 : calls E3812
+N22 --> N24 : calls E3813
+N22 --> N24 : calls E3816
+N22 --> N24 : calls E3817
+N22 --> N24 : calls E3819
+N22 --> N24 : calls E3820
+N22 --> N20 : calls E3821
+N22 --> N24 : calls E3822
+N22 --> N24 : calls E3823
+N22 --> N23 : references E3824
+@enduml

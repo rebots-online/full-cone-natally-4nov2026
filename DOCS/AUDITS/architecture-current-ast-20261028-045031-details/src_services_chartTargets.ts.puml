@@ -1,0 +1,46 @@
+@startuml
+title src/services/chartTargets.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "chartTargets.ts\nfile L1-75\nfile:src/services/chartTargets.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:463c65ea3716e3805dbc41346842ef63" as N1
+rectangle "chartTargets\nfunction L3-11\nfunction:cca377bea1909397a36163d8d24adff0" as N2
+rectangle "chartFocusKey\nfunction L12-14\nfunction:9d987848df91f5ec4deae10f0ccf8585" as N3
+rectangle "chartFocusKeyMatches\nfunction L16-31\nfunction:25a3522fe40088e75a85155f86431f8f" as N4
+rectangle "close\nfunction L22-22\nfunction:85e1a3caecbcb473064626258801741b" as N5
+rectangle "normalize\nfunction L32-32\nfunction:565a5f99920c9163224986e591b94c53" as N6
+rectangle "chartTargetLabel\nfunction L33-33\nfunction:45039c178a1498e28acbe0e3464e6d31" as N7
+rectangle "isDatedSkyTarget\nfunction L34-34\nfunction:5389484406df6565387e668cecf86094" as N8
+rectangle "resolveChartTarget\nfunction L35-59\nfunction:9714f84496631188d14add2f755ea40d" as N9
+rectangle "stripAngle\nfunction L46-46\nfunction:9c335c22218a2ff15bfc7c2546e338f9" as N10
+rectangle "chartReferenceNames\nfunction L62-74\nfunction:e901b096107f978bcd2c58473e0b6fdc" as N11
+N0 --> N1 : contains E1518
+N0 --> N2 : contains E1519
+N0 --> N3 : contains E1520
+N0 --> N4 : contains E1521
+N4 --> N5 : contains E1522
+N0 --> N6 : contains E1523
+N0 --> N7 : contains E1524
+N0 --> N8 : contains E1525
+N0 --> N9 : contains E1526
+N9 --> N10 : contains E1527
+N0 --> N11 : contains E1528
+N4 --> N5 : calls E5625
+N4 --> N5 : calls E5626
+N4 --> N5 : calls E5627
+N4 --> N5 : calls E5628
+N9 --> N6 : calls E5630
+N9 --> N2 : calls E5631
+N9 --> N6 : calls E5632
+N9 --> N6 : calls E5633
+N9 --> N6 : calls E5634
+N10 --> N6 : calls E5635
+N9 --> N10 : calls E5636
+N9 --> N10 : calls E5637
+N9 --> N7 : calls E5638
+N9 --> N10 : calls E5639
+N11 --> N2 : calls E5641
+N11 --> N2 : calls E5642
+N11 --> N7 : references E5643
+@enduml

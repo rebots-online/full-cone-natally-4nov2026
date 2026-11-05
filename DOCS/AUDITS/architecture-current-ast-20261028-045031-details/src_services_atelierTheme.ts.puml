@@ -1,0 +1,37 @@
+@startuml
+title src/services/atelierTheme.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "atelierTheme.ts\nfile L1-28\nfile:src/services/atelierTheme.ts" as N0
+rectangle "react\nimport L1-1\nimport:c1e0336dff15fb4a1a8b922ced05bb2e" as N1
+rectangle "ATELIER_THEMES\nconstant L4-8\nconstant:32a01d556263946b8c2626376d100265" as N2
+rectangle "AtelierTheme\ntype_alias L9-9\ntype_alias:a8142bb60ab368cd69b3d6594b47e8ff" as N3
+rectangle "key\nfunction L10-10\nfunction:b3c3e3db8534df004cdfe92929831e10" as N4
+rectangle "selected\nconstant L11-11\nconstant:97d4972746c8b98a7323ad674c339ea4" as N5
+rectangle "getAtelierTheme\nfunction L12-17\nfunction:fae1c53f15de7a1515b957e22bf37fe4" as N6
+rectangle "setAtelierTheme\nfunction L18-22\nfunction:5824030bd46c0cbde4ebb75e82eb8c2d" as N7
+rectangle "useAtelierTheme\nfunction L23-27\nfunction:c2807ff5524f2e302209a31cfc1ae71a" as N8
+rectangle "update\nfunction L25-25\nfunction:050b95a353ec064ae896ee04bf27c1c3" as N9
+N0 --> N1 : contains E1415
+N0 --> N2 : contains E1416
+N0 --> N3 : contains E1417
+N0 --> N4 : contains E1418
+N0 --> N5 : contains E1419
+N0 --> N6 : contains E1420
+N0 --> N7 : contains E1421
+N0 --> N8 : contains E1422
+N8 --> N9 : contains E1423
+N6 --> N2 : references E1424
+N6 --> N3 : references E5493
+N6 --> N4 : calls E5495
+N6 --> N3 : references E5496
+N7 --> N3 : references E5497
+N7 --> N4 : calls E5498
+N7 --> N4 : calls E5499
+N8 --> N3 : references E5500
+N8 --> N6 : calls E5502
+N8 --> N6 : calls E5503
+N9 --> N6 : calls E5504
+N8 --> N9 : references E5505
+@enduml

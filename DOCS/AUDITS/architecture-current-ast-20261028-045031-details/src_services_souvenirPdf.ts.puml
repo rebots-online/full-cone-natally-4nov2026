@@ -1,0 +1,88 @@
+@startuml
+title src/services/souvenirPdf.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "souvenirPdf.ts\nfile L1-273\nfile:src/services/souvenirPdf.ts" as N0
+rectangle "./souvenir\nimport L1-1\nimport:6209dc4cff9b5ff0d81271fcdb5b4a28" as N1
+rectangle "./souvenir\nimport L2-2\nimport:143cb6ec38ddf18a81732fc204adeec0" as N2
+rectangle "./firebase\nimport L3-3\nimport:570690f93d0636c326e5188f196a3627" as N3
+rectangle "HOUSE_SYSTEM_NAMES\nconstant L5-11\nconstant:03a6f2f672bfb081168418c70a7a984e" as N4
+rectangle "normalizeGlyphs\nfunction L13-28\nfunction:5696c4c5f72086d8030da6ba705e0319" as N5
+rectangle "safeFilename\nfunction L30-33\nfunction:63d5507fa6499496ea966e54fafc13f1" as N6
+rectangle "coordinateText\nfunction L35-37\nfunction:a2515aa77082a09d2b943049dd8c8d4c" as N7
+rectangle "formatDate\nfunction L39-42\nfunction:fba72ac80bbde90cd2838e58bf40bb18" as N8
+rectangle "downloadSouvenirPdf\nfunction L45-272\nfunction:670fdb4e7e880ac4490a3e21eb1e53c7" as N9
+rectangle "setupPage\nfunction L59-69\nfunction:f51ec58e3d2073e298fb9921b1b37100" as N10
+rectangle "newPage\nfunction L72-72\nfunction:e5d963a289cf5d09296005e93e191e21" as N11
+rectangle "ensureSpace\nfunction L73-73\nfunction:7f7ecf2dc7ba85c647eb570f677f0bc6" as N12
+rectangle "paragraph\nfunction L76-92\nfunction:678101d2369fd8803fe64763067a80c9" as N13
+rectangle "heading\nfunction L94-119\nfunction:d2e965283f9f9c5c7bddc722cdaa750a" as N14
+rectangle "xy\nfunction L161-164\nfunction:13f859c7a56e461353606c817dc14c5a" as N15
+N0 --> N1 : contains E2272
+N0 --> N2 : contains E2273
+N0 --> N3 : contains E2274
+N0 --> N4 : contains E2275
+N0 --> N5 : contains E2276
+N0 --> N6 : contains E2277
+N0 --> N7 : contains E2278
+N0 --> N8 : contains E2279
+N0 --> N9 : contains E2280
+N9 --> N10 : contains E2281
+N9 --> N11 : contains E2282
+N9 --> N12 : contains E2283
+N9 --> N13 : contains E2284
+N9 --> N14 : contains E2285
+N9 --> N15 : contains E2286
+N9 --> N4 : references E2287
+N10 --> N6 : calls E6196
+N11 --> N10 : calls E6197
+N12 --> N11 : calls E6198
+N13 --> N5 : calls E6199
+N13 --> N12 : calls E6200
+N14 --> N12 : calls E6201
+N14 --> N5 : calls E6202
+N14 --> N12 : calls E6203
+N14 --> N5 : calls E6204
+N14 --> N12 : calls E6205
+N9 --> N10 : calls E6206
+N9 --> N13 : calls E6207
+N9 --> N13 : calls E6208
+N9 --> N13 : calls E6209
+N9 --> N7 : calls E6210
+N9 --> N7 : calls E6211
+N9 --> N13 : calls E6212
+N9 --> N13 : calls E6213
+N9 --> N8 : calls E6214
+N9 --> N13 : calls E6215
+N9 --> N8 : calls E6216
+N9 --> N12 : calls E6217
+N9 --> N13 : calls E6218
+N9 --> N11 : calls E6219
+N9 --> N14 : calls E6220
+N9 --> N15 : calls E6221
+N9 --> N15 : calls E6222
+N9 --> N15 : calls E6223
+N9 --> N15 : calls E6224
+N9 --> N15 : calls E6225
+N9 --> N15 : calls E6226
+N9 --> N15 : calls E6227
+N9 --> N15 : calls E6228
+N9 --> N15 : calls E6229
+N9 --> N15 : calls E6230
+N9 --> N13 : calls E6231
+N9 --> N11 : calls E6232
+N9 --> N14 : calls E6233
+N9 --> N12 : calls E6234
+N9 --> N5 : calls E6235
+N9 --> N5 : calls E6236
+N9 --> N11 : calls E6237
+N9 --> N14 : calls E6238
+N9 --> N13 : calls E6239
+N9 --> N11 : calls E6240
+N9 --> N14 : calls E6241
+N9 --> N12 : calls E6242
+N9 --> N5 : calls E6243
+N9 --> N13 : calls E6244
+N9 --> N6 : calls E6245
+@enduml

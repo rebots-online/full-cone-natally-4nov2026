@@ -1,0 +1,43 @@
+@startuml
+title tests/supertonic.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "supertonic.test.ts\nfile L1-245\nfile:tests/supertonic.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:6d96fe27a2d9a31287a9172d48f61088" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:83cd52431b1e1e5a9b8c858f38148c5f" as N2
+rectangle "node:fs\nimport L3-3\nimport:283974b616d56d1c55e90446de2b85d5" as N3
+rectangle "../src/services/supertonicTts\nimport L4-4\nimport:92b90de8930d1db03c49d752b7194698" as N4
+rectangle "../src/services/supertonicDownload\nimport L5-5\nimport:be1d85891497f3aecfc117e181948fd4" as N5
+rectangle "../src/services/voiceService\nimport L6-6\nimport:09da0cd1e122ca74f4f46e2d95381ab4" as N6
+rectangle "TestWorker\nclass L68-73\nclass:bf74726425d96ef445daf8c050a73cb3" as N7
+rectangle "onmessage\nproperty L69-69\nproperty:8212060d0c1fa2e3a97b4b03c8314949" as N8
+rectangle "constructor\nmethod L70-70\nmethod:6faf591aa51b17bbb5860a54caf87d85" as N9
+rectangle "postMessage\nmethod L71-71\nmethod:2806ac65a5580cca603a9a6bc6e0631a" as N10
+rectangle "terminate\nmethod L72-72\nmethod:e43f667af30d76f01207c9f395ba196b" as N11
+rectangle "TestContext\nclass L74-86\nclass:fceb69b0dabe8d90a9f339678c2bde41" as N12
+rectangle "state\nproperty L75-75\nproperty:ebbed6001a4e6e9bfe2805442c4f3629" as N13
+rectangle "resume\nmethod L76-76\nmethod:0005dacb5b970a4a2a02fcbf54c5872c" as N14
+rectangle "createBuffer\nmethod L77-77\nmethod:1034a1c7879cd467feae3f336c8a2305" as N15
+rectangle "createGain\nmethod L78-78\nmethod:82d574712bec92aa01d73eb3db6e60c1" as N16
+rectangle "createBiquadFilter\nmethod L79-79\nmethod:fb5647f7f03766cf7201df2efb6a12b5" as N17
+rectangle "createBufferSource\nmethod L80-85\nmethod:3c88225d14c2decf489d0dc9964a0ffb" as N18
+N0 --> N1 : contains E2756
+N0 --> N2 : contains E2757
+N0 --> N3 : contains E2758
+N0 --> N4 : contains E2759
+N0 --> N5 : contains E2760
+N0 --> N6 : contains E2761
+N0 --> N7 : contains E2762
+N7 --> N8 : contains E2763
+N7 --> N9 : contains E2764
+N7 --> N10 : contains E2765
+N7 --> N11 : contains E2766
+N0 --> N12 : contains E2767
+N12 --> N13 : contains E2768
+N12 --> N14 : contains E2769
+N12 --> N15 : contains E2770
+N12 --> N16 : contains E2771
+N12 --> N17 : contains E2772
+N12 --> N18 : contains E2773
+@enduml

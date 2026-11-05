@@ -1,0 +1,15 @@
+@startuml
+title tests/transits.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "transits.test.ts\nfile L1-63\nfile:tests/transits.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:57e63b405176be1911e205b6b95aa289" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:673f178a6e4a0cf4e404409db9ccdba1" as N2
+rectangle "../src/services/transits\nimport L3-3\nimport:7ef9122fd73f90a3f2c10d078caf7d65" as N3
+rectangle "../src/services/ephemeris\nimport L4-4\nimport:3e03dad400c4bf00eece395df530b1f7" as N4
+N0 --> N1 : contains E2804
+N0 --> N2 : contains E2805
+N0 --> N3 : contains E2806
+N0 --> N4 : contains E2807
+@enduml

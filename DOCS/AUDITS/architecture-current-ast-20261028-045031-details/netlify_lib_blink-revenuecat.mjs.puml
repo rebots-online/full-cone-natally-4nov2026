@@ -1,0 +1,48 @@
+@startuml
+title netlify/lib/blink-revenuecat.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "blink-revenuecat.mjs\nfile L1-153\nfile:netlify/lib/blink-revenuecat.mjs" as N0
+rectangle "RECEIPTS_ENDPOINT\nconstant L21-21\nconstant:732d50254c7d6d8faadb647c8efc2235" as N1
+rectangle "TIMEOUT_MS\nconstant L22-22\nconstant:ee84b6c168775360965047b0d6c1ac6b" as N2
+rectangle "MAX_AMOUNT_MINOR\nconstant L23-23\nconstant:f466489ded421c834ca0d5e100dd643d" as N3
+rectangle "MAX_ACCOUNT_UID\nconstant L24-24\nconstant:327f6d91766a325bba08bab0eb42a323" as N4
+rectangle "MAX_PRODUCT_ID\nconstant L25-25\nconstant:1fbea319992a482af51765118b5dc2d3" as N5
+rectangle "CODE_UNCONFIGURED\nconstant L27-27\nconstant:6fc721d95b3a2fc4e58153dfbda96f19" as N6
+rectangle "sanitizeError\nfunction L29-33\nfunction:cccf562912f845c0a0fea7baae0fca23" as N7
+rectangle "fail\nfunction L35-37\nfunction:697d2b2806f95c50d40496bd866d9359" as N8
+rectangle "requireNonEmpty\nfunction L39-44\nfunction:d9532598b3cc6b3583feb1cda954c8fa" as N9
+rectangle "submitBlinkReceipt\nfunction L66-152\nfunction:61208a79169b9807cb9ae4ed03dec51b" as N10
+N0 --> N1 : contains E109
+N0 --> N2 : contains E110
+N0 --> N3 : contains E111
+N0 --> N4 : contains E112
+N0 --> N5 : contains E113
+N0 --> N6 : contains E114
+N0 --> N7 : contains E115
+N0 --> N8 : contains E116
+N0 --> N9 : contains E117
+N0 --> N10 : contains E118
+N10 --> N2 : references E119
+N10 --> N1 : references E120
+N10 --> N5 : references E121
+N10 --> N6 : references E122
+N10 --> N4 : references E123
+N10 --> N3 : references E124
+N8 --> N7 : calls E3905
+N9 --> N8 : calls E3906
+N10 --> N8 : calls E3907
+N10 --> N8 : calls E3908
+N10 --> N8 : calls E3909
+N10 --> N9 : calls E3910
+N10 --> N8 : calls E3911
+N10 --> N8 : calls E3912
+N10 --> N8 : calls E3913
+N10 --> N8 : calls E3914
+N10 --> N9 : calls E3915
+N10 --> N9 : calls E3916
+N10 --> N8 : calls E3917
+N10 --> N8 : calls E3918
+N10 --> N8 : calls E3919
+@enduml

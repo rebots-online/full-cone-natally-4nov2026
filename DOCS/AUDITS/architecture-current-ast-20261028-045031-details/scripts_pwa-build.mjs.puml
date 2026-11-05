@@ -1,0 +1,26 @@
+@startuml
+title scripts/pwa-build.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "pwa-build.mjs\nfile L1-83\nfile:scripts/pwa-build.mjs" as N0
+rectangle "node:fs\nimport L1-1\nimport:0f917a1495eb2582fa0381df67d3d615" as N1
+rectangle "node:path\nimport L2-2\nimport:ff5cf4de318c32d0537d68d5b96cb900" as N2
+rectangle "SHELL_FILES\nconstant L4-4\nconstant:60b4924f86b715d5f1e57709bae0a3bc" as N3
+rectangle "BRANDING_ICONS\nconstant L5-5\nconstant:f9996199e06da9aef98dda08b71c5426" as N4
+rectangle "ASSET_EXTS\nconstant L6-6\nconstant:eeba5e2804b7f9dfb4ca55e174596655" as N5
+rectangle "walk\nfunction L8-16\nfunction:d9ac22254016f9b083b3581a91e6690a" as N6
+rectangle "generatePwa\nfunction L18-82\nfunction:17c73cfb302a969125c0ed7646ace6bb" as N7
+N0 --> N1 : contains E243
+N0 --> N2 : contains E244
+N0 --> N3 : contains E245
+N0 --> N4 : contains E246
+N0 --> N5 : contains E247
+N0 --> N6 : contains E248
+N0 --> N7 : contains E249
+N7 --> N4 : references E250
+N7 --> N3 : references E251
+N7 --> N5 : references E252
+N6 --> N6 : calls E3985
+N7 --> N6 : calls E3986
+@enduml

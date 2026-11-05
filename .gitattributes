@@ -1,0 +1,7 @@
+# Preserve the byte-exact, hashed Natally asset package on every host.
+/STANDARDIZED-NATALLY-ASSETS/** -text
+/dist/*.AppImage -filter -diff -merge -text
+/scripts/*.sh text eol=lf
+/src-tauri/Cargo.toml text eol=lf
+/src-tauri/Cargo.lock text eol=lf
+/src-tauri/gen/android/**/*.kts text eol=lf

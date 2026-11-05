@@ -1,0 +1,45 @@
+@startuml
+title src/components/onboarding/CalendarPicker.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "CalendarPicker.tsx\nfile L1-146\nfile:src/components/onboarding/CalendarPicker.tsx" as N0
+rectangle "react\nimport L1-1\nimport:54d092d4e5e745fcae0ae09a04d1a765" as N1
+rectangle "MONTHS\nconstant L3-6\nconstant:a45fd3445bc142362e1aa91f2db51ca7" as N2
+rectangle "WEEKDAYS\nconstant L7-7\nconstant:2fa04d10bcd48184a195644c8e034590" as N3
+rectangle "CalendarPickerProps\ninterface L9-16\ninterface:e61eb13a9f01f1b3ade34769b42e4127" as N4
+rectangle "value\nproperty L11-11\nproperty:1a6b7da61a8651e589dbf25a76c572a9" as N5
+rectangle "min\nproperty L12-12\nproperty:28a2368b73f8350642093640e71517ea" as N6
+rectangle "max\nproperty L13-13\nproperty:2e21c0febbba07eb37cad5f4044ae8ae" as N7
+rectangle "onPick\nproperty L14-14\nproperty:2572426ad852ea2b568b20c2b6385ad5" as N8
+rectangle "onClose\nproperty L15-15\nproperty:fc1eaf9510dc69047d164c98fc391ded" as N9
+rectangle "maxYearDyn\nconstant L19-19\nconstant:b4f28992c568d9d1e9ae5a891ed775f2" as N10
+rectangle "toIso\nfunction L21-22\nfunction:5698be44197c228551b5d76cd0889fa5" as N11
+rectangle "CalendarPicker\nfunction L28-143\nfunction:716fb41c6f1a8851544971cf5a905435" as N12
+rectangle "stepByYears\nfunction L46-49\nfunction:eb491d95f2d83c3eb1e25ddca67378d2" as N13
+rectangle "step\nfunction L51-60\nfunction:f7064b26b9ffd2e1d7d575d1344daa43" as N14
+N0 --> N1 : contains E1034
+N0 --> N2 : contains E1035
+N0 --> N3 : contains E1036
+N0 --> N4 : contains E1037
+N4 --> N5 : contains E1038
+N4 --> N6 : contains E1039
+N4 --> N7 : contains E1040
+N4 --> N8 : contains E1041
+N4 --> N9 : contains E1042
+N0 --> N10 : contains E1043
+N0 --> N11 : contains E1044
+N0 --> N12 : contains E1045
+N12 --> N13 : contains E1046
+N12 --> N14 : contains E1047
+N12 --> N3 : references E1048
+N12 --> N10 : references E1049
+N12 --> N2 : references E1050
+N13 --> N10 : references E1051
+N12 --> N4 : references E4932
+N12 --> N11 : calls E4933
+N12 --> N13 : calls E4934
+N12 --> N14 : calls E4935
+N12 --> N14 : calls E4936
+N12 --> N13 : calls E4937
+@enduml

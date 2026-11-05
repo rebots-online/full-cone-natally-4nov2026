@@ -1,0 +1,21 @@
+@startuml
+title src/components/onboarding/BirthDateFields.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "BirthDateFields.tsx\nfile L1-100\nfile:src/components/onboarding/BirthDateFields.tsx" as N0
+rectangle "react\nimport L1-1\nimport:2ed60fdbcd1c8bbb386cb647d143455e" as N1
+rectangle "../../services/birthDate\nimport L2-2\nimport:b625a179d4d8c8fd3344aa6d84cef52e" as N2
+rectangle "BirthDateFields\nfunction L4-99\nfunction:337b52f7c78a40865ece1077a976c3b0" as N3
+rectangle "selectYear\nfunction L30-34\nfunction:7ec60742751a7571317ac12673f25492" as N4
+rectangle "moveMonth\nfunction L35-39\nfunction:ebfd4c185f7b9abe6cec8703274415a2" as N5
+N0 --> N1 : contains E1029
+N0 --> N2 : contains E1030
+N0 --> N3 : contains E1031
+N3 --> N4 : contains E1032
+N3 --> N5 : contains E1033
+N3 --> N5 : calls E4927
+N3 --> N5 : calls E4928
+N3 --> N4 : calls E4929
+N3 --> N4 : calls E4930
+@enduml

@@ -1,0 +1,42 @@
+@startuml
+title scripts/stage-marketing-overlay.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "stage-marketing-overlay.mjs\nfile L1-60\nfile:scripts/stage-marketing-overlay.mjs" as N0
+rectangle "node:crypto\nimport L1-1\nimport:ca56908b1baa2f0086b8a2ff450f5b74" as N1
+rectangle "node:fs\nimport L2-2\nimport:5b77a27140b2d216ba62235b83b941b7" as N2
+rectangle "node:path\nimport L3-3\nimport:08b8a66c11139cf6871f87bc5855672b" as N3
+rectangle "sha256\nfunction L11-11\nfunction:fa06d0ad36b72665f30869e660edf309" as N4
+rectangle "stageIndexPath\nconstant L13-13\nconstant:7410ae16d004ea643baf8e27bcb9b57d" as N5
+rectangle "stageIndexHash\nconstant L14-14\nconstant:de0c13da2b6bfddd9d4f9e908625d31e" as N6
+rectangle "marketingPath\nconstant L19-19\nconstant:b72985d45b5672c284d2886ef3cfecd4" as N7
+rectangle "marketing\nconstant L22-22\nconstant:e4bc3f27aa3f9f9ec79b73e578296def" as N8
+rectangle "src\nconstant L27-27\nconstant:ca3a23cad41a09df8f7a33d7f893513b" as N9
+rectangle "redirectScript\nconstant L33-45\nconstant:a68c3803c4424aad33a90b8f58c8b6f1" as N10
+rectangle "index\nvariable L47-47\nvariable:d4f411d9d372869a7f6c4de71a7fa25d" as N11
+rectangle "headAt\nconstant L48-48\nconstant:a4fc97ccfaad7bae41a4917d009027bc" as N12
+rectangle "insertAt\nconstant L50-50\nconstant:d1455e1dc533add9d80322c1ce0906d8" as N13
+rectangle "stagedMarketingPath\nconstant L54-54\nconstant:4365b2649edbaf63ea1c62ae3a0ca22a" as N14
+N0 --> N1 : contains E292
+N0 --> N2 : contains E293
+N0 --> N3 : contains E294
+N0 --> N4 : contains E295
+N0 --> N5 : contains E296
+N0 --> N6 : contains E297
+N0 --> N7 : contains E298
+N0 --> N8 : contains E299
+N0 --> N9 : contains E300
+N0 --> N10 : contains E301
+N0 --> N11 : contains E302
+N0 --> N12 : contains E303
+N0 --> N13 : contains E304
+N0 --> N14 : contains E305
+N6 --> N5 : references E306
+N8 --> N7 : references E307
+N11 --> N5 : references E308
+N13 --> N12 : references E309
+N6 --> N4 : calls E4039
+N0 --> N4 : calls E4040
+N0 --> N4 : calls E4041
+@enduml

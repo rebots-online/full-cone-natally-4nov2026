@@ -1,0 +1,12 @@
+@startuml
+title src/services/chartFocusVisuals.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "chartFocusVisuals.ts\nfile L1-9\nfile:src/services/chartFocusVisuals.ts" as N0
+rectangle "CHART_FOCUS\nconstant L2-2\nconstant:4bf342ed2cb27840d74f308a0156e5fe" as N1
+rectangle "chartHaloOpacity\nfunction L3-8\nfunction:8f00b39c31b3e704e96a34119085c9e7" as N2
+N0 --> N1 : contains E1515
+N0 --> N2 : contains E1516
+N2 --> N1 : references E1517
+@enduml

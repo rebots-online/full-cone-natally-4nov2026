@@ -1,0 +1,1649 @@
+{
+  "state": "published",
+  "selectedArtifact": {
+    "inventory": "F:\\DevProjects-2026\\forgejo\\natally-ai-studio\\dist\\natally-ai-studio-v1.13.86779-test-build-inventory.json",
+    "inventorySha256": "63403a9ad01271660182d0efba8a2be87c1b3d65ea57db08e6f37e241c3a022b",
+    "webZip": "dist/natally-ai-studio-v1.13.86779-webapp.zip",
+    "webZipSha256": "3db0a5abe66e4ea7b3fbf28459ca849993979a9387018dec94aa7adf5e015699",
+    "sourceFingerprint": "68a83f7bf369ab173e9602c013e55f08b4a6104098c5aecc7877c96d08c926b4",
+    "version": "1.13.86779",
+    "invocationId": "c19c2e74-fa33-43cc-91de-0b7654f83776"
+  },
+  "deployToolGitSha": "e7d1bb0fb9337dc9f33cc3da01eed60c50a28e93",
+  "domains": [
+    "natally.surge.sh",
+    "natally.robin.mba"
+  ],
+  "published": true,
+  "publish": [
+    {
+      "domain": "natally.surge.sh",
+      "status": "published",
+      "output": "\n   \u001b[90mRunning as \u001b[4mshannon-coinbase@robin.mba\u001b[24m\u001b[39m\u001b[90m (Free)\u001b[39m\n\n\u001b[90m        project:\u001b[39m F:\\DevProjects-2026\\forgejo\\natally-ai-studio\\build\\deploy-1.13.86779-c19c2e74-fa33-43cc-91de-0b7654f83776\\run-2026-10-28T18-10-46-150Z-27768\\package\\site\n\u001b[90m         domain:\u001b[39m natally.surge.sh\n\u001b[90m           size:\u001b[39m 88 files, 45.5 MB\n\n  \u001b[90m\u001b[90m┌──────────\u001b[39m\u001b[90m┬────────────────────────────────────────────────────────────────\u001b[39m\u001b[90m┬───────────────────────┐\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mCERT\u001b[39m   \u001b[90m│\u001b[39m   \u001b[90m*.surge.sh, surge.sh\u001b[39m                                         \u001b[90m│\u001b[39m   \u001b[32mauto-renew\u001b[39m          \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m├──────────\u001b[39m\u001b[90m┼────────────────────────────────────────────────────────────────\u001b[39m\u001b[90m┼───────────────────────┤\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mDNS\u001b[39m    \u001b[90m│\u001b[39m   \u001b[90musing Surge Name Servers\u001b[39m                                     \u001b[90m│\u001b[39m   \u001b[32mgeo-aware\u001b[39m           \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m└──────────\u001b[39m\u001b[90m┴────────────────────────────────────────────────────────────────\u001b[39m\u001b[90m┴───────────────────────┘\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m┌──────────\u001b[39m\u001b[90m┬──────────────────\u001b[39m\u001b[90m┬───────────────────────\u001b[39m\u001b[90m┬─────────────────────\u001b[39m\u001b[90m┬─────────────\u001b[39m\u001b[90m┬─────────┐\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   sfo.surge.sh   \u001b[90m│\u001b[39m   US, San Francisco   \u001b[90m│\u001b[39m   138.197.235.123   \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   lhr.surge.sh   \u001b[90m│\u001b[39m   GB, London          \u001b[90m│\u001b[39m   46.101.67.123     \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   yyz.surge.sh   \u001b[90m│\u001b[39m   CA, Toronto         \u001b[90m│\u001b[39m   159.203.50.177    \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   jfk.surge.sh   \u001b[90m│\u001b[39m   US, New York        \u001b[90m│\u001b[39m   159.203.159.100   \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   ams.surge.sh   \u001b[90m│\u001b[39m   NL, Amsterdam       \u001b[90m│\u001b[39m   188.166.132.94    \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   fra.surge.sh   \u001b[90m│\u001b[39m   DE, Frankfurt       \u001b[90m│\u001b[39m   138.68.112.220    \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   sgp.surge.sh   \u001b[90m│\u001b[39m   SG, Singapore       \u001b[90m│\u001b[39m   139.59.195.30     \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   blr.surge.sh   \u001b[90m│\u001b[39m   IN, Bangalore       \u001b[90m│\u001b[39m   139.59.50.135     \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   syd.surge.sh   \u001b[90m│\u001b[39m   AU, Sydney          \u001b[90m│\u001b[39m   45.76.126.95      \u001b[90m│\u001b[39m   Vultr     \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   nrt.surge.sh   \u001b[90m│\u001b[39m   JP, Tokyo           \u001b[90m│\u001b[39m   172.104.96.133    \u001b[90m│\u001b[39m   Linode    \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m└──────────\u001b[39m\u001b[90m┴──────────────────\u001b[39m\u001b[90m┴───────────────────────\u001b[39m\u001b[90m┴─────────────────────\u001b[39m\u001b[90m┴─────────────\u001b[39m\u001b[90m┴─────────┘\u001b[39m\u001b[39m\n   \u001b[90mLive preview ...................................................... \u001b[4m1793211033643--natally.surge.sh\u001b[24m\u001b[39m\n   \u001b[90mLatest ................................................................... \u001b[4mlatest--natally.surge.sh\u001b[24m\u001b[39m\n   \u001b[90mProduction ....................................................................... \u001b[4mnatally.surge.sh\u001b[24m\u001b[39m\n\n   \u001b[32mSuccess!\u001b[39m\u001b[90m - Published to \u001b[4mnatally.surge.sh\u001b[24m\u001b[39m\n\n   \u001b[90mdomain written to build\\deploy-1.13.86779-c19c2e74-fa33-43cc-91de-0b7654f83776\\run-2026-10-28T18-10-46-150Z-27768\\package\\site\\CNAME\u001b[39m\n\n\n\n\n\n"
+    },
+    {
+      "domain": "natally.robin.mba",
+      "status": "published",
+      "output": "\n   \u001b[90mRunning as \u001b[4mshannon-coinbase@robin.mba\u001b[24m\u001b[39m\u001b[90m (Free)\u001b[39m\n\n\u001b[90m        project:\u001b[39m F:\\DevProjects-2026\\forgejo\\natally-ai-studio\\build\\deploy-1.13.86779-c19c2e74-fa33-43cc-91de-0b7654f83776\\run-2026-10-28T18-10-46-150Z-27768\\package\\site\n\u001b[90m         domain:\u001b[39m natally.robin.mba\n\u001b[90m           size:\u001b[39m 89 files, 45.5 MB\n\n  \u001b[90m\u001b[90m┌──────────\u001b[39m\u001b[90m┬────────────────────────────────────────────────────────────────\u001b[39m\u001b[90m┬───────────────────────┐\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mCERT\u001b[39m   \u001b[90m│\u001b[39m   \u001b[90mnatally.robin.mba\u001b[39m                                            \u001b[90m│\u001b[39m   \u001b[32mauto-renew\u001b[39m          \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m├──────────\u001b[39m\u001b[90m┼────────────────────────────────────────────────────────────────\u001b[39m\u001b[90m┼───────────────────────┤\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mDNS\u001b[39m    \u001b[90m│\u001b[39m   \u001b[90musing Surge CNAME Record\u001b[39m                                     \u001b[90m│\u001b[39m   \u001b[32mgeo-aware\u001b[39m           \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m└──────────\u001b[39m\u001b[90m┴────────────────────────────────────────────────────────────────\u001b[39m\u001b[90m┴───────────────────────┘\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m┌──────────\u001b[39m\u001b[90m┬──────────────────\u001b[39m\u001b[90m┬───────────────────────\u001b[39m\u001b[90m┬─────────────────────\u001b[39m\u001b[90m┬─────────────\u001b[39m\u001b[90m┬─────────┐\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   sfo.surge.sh   \u001b[90m│\u001b[39m   US, San Francisco   \u001b[90m│\u001b[39m   138.197.235.123   \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   lhr.surge.sh   \u001b[90m│\u001b[39m   GB, London          \u001b[90m│\u001b[39m   46.101.67.123     \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   yyz.surge.sh   \u001b[90m│\u001b[39m   CA, Toronto         \u001b[90m│\u001b[39m   159.203.50.177    \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   jfk.surge.sh   \u001b[90m│\u001b[39m   US, New York        \u001b[90m│\u001b[39m   159.203.159.100   \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   ams.surge.sh   \u001b[90m│\u001b[39m   NL, Amsterdam       \u001b[90m│\u001b[39m   188.166.132.94    \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   fra.surge.sh   \u001b[90m│\u001b[39m   DE, Frankfurt       \u001b[90m│\u001b[39m   138.68.112.220    \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   sgp.surge.sh   \u001b[90m│\u001b[39m   SG, Singapore       \u001b[90m│\u001b[39m   139.59.195.30     \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   blr.surge.sh   \u001b[90m│\u001b[39m   IN, Bangalore       \u001b[90m│\u001b[39m   139.59.50.135     \u001b[90m│\u001b[39m   D.Ocean   \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   syd.surge.sh   \u001b[90m│\u001b[39m   AU, Sydney          \u001b[90m│\u001b[39m   45.76.126.95      \u001b[90m│\u001b[39m   Vultr     \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m│\u001b[39m   \u001b[90mHTTP\u001b[39m   \u001b[90m│\u001b[39m   nrt.surge.sh   \u001b[90m│\u001b[39m   JP, Tokyo           \u001b[90m│\u001b[39m   172.104.96.133    \u001b[90m│\u001b[39m   Linode    \u001b[90m│\u001b[39m   \u001b[32m✔\u001b[39m \u001b[32m◍\u001b[39m   \u001b[90m│\u001b[39m\u001b[39m\n  \u001b[90m\u001b[90m└──────────\u001b[39m\u001b[90m┴──────────────────\u001b[39m\u001b[90m┴───────────────────────\u001b[39m\u001b[90m┴─────────────────────\u001b[39m\u001b[90m┴─────────────\u001b[39m\u001b[90m┴─────────┘\u001b[39m\u001b[39m\n   \u001b[90mLive preview .......................................... \u001b[4m1793211042176--natally--robin--mba.surge.sh\u001b[24m\u001b[39m\n   \u001b[90mLatest ....................................................... \u001b[4mlatest--natally--robin--mba.surge.sh\u001b[24m\u001b[39m\n   \u001b[90mProduction ...................................................................... \u001b[4mnatally.robin.mba\u001b[24m\u001b[39m\n\n   \u001b[32mSuccess!\u001b[39m\u001b[90m - Published to \u001b[4mnatally.robin.mba\u001b[24m\u001b[39m\n\n\n\n\n\n"
+    }
+  ],
+  "http": [
+    {
+      "host": "natally.surge.sh",
+      "results": [
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/appIdentity-DWr3tYar.js",
+          "url": "https://natally.surge.sh/assets/appIdentity-DWr3tYar.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "186569460ef2c406c095e7be2e874bbdbb66c4df75b8e07c697092821d277e3e",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/App-tf-ZfiJN.css",
+          "url": "https://natally.surge.sh/assets/App-tf-ZfiJN.css?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "920d203366e598d7a875518eba41c1d95dca4e5256221db81e9b7ebcd427393c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/BuildStamp-CjVufAY1.css",
+          "url": "https://natally.surge.sh/assets/BuildStamp-CjVufAY1.css?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a901d9623bc342626f670a383271bae65555f71f7a03953cb34853672b15798a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/buildIdentity-Cqo2-Uxe.js",
+          "url": "https://natally.surge.sh/assets/buildIdentity-Cqo2-Uxe.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "9e8e6e26904c75ee4e89c4445edc492651d5d5ef7d4f6818a2e911fd6f5b0391",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/app-BzMW3kKY.js",
+          "url": "https://natally.surge.sh/assets/app-BzMW3kKY.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "22e6e013e900babdbe09dc4a8301c67fa0cdc2adf9f9ff894a40004308d9025b",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/firebase-applet-config-BumQkWRk.js",
+          "url": "https://natally.surge.sh/assets/firebase-applet-config-BumQkWRk.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "e163a233e86257167fe9e469fad45d35cdd877a2af0884059bc1b54bef8d7bcb",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/client-BJFRBXmV.js",
+          "url": "https://natally.surge.sh/assets/client-BJFRBXmV.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "d4959373275ed089ea63f50fefb765254f91c579f1ab2d2d48c19fc6a47d75d8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/accountStorage-B-NbRf2y.js",
+          "url": "https://natally.surge.sh/assets/accountStorage-B-NbRf2y.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "5e7635aa92c4f31190e77d38dd2644aa7597ac0eaf04a39f8097b3e72f65033a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/BuildStamp-DTVE95Z0.js",
+          "url": "https://natally.surge.sh/assets/BuildStamp-DTVE95Z0.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "4ee838b50c97be38d3f650a30f4e79fdb147703f6b1c52b09db4345347dc43d6",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/marketing-PXePjCjY.js",
+          "url": "https://natally.surge.sh/assets/marketing-PXePjCjY.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "1c832c290a92037fac2f16c94ec688a9c442b3f950de39a019a3824c64be41ca",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/modulepreload-polyfill-P2Xu9kJm.js",
+          "url": "https://natally.surge.sh/assets/modulepreload-polyfill-P2Xu9kJm.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/nativeAuth-CgR-qQFt.js",
+          "url": "https://natally.surge.sh/assets/nativeAuth-CgR-qQFt.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "2f0e664d29ff0ce5e9e340e3a2dda790ba279e725caceb16523e7f586e214da7",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/html2canvas-DQvxrKtW.js",
+          "url": "https://natally.surge.sh/assets/html2canvas-DQvxrKtW.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "67cb2d7c9f709139c498d1d179e2caca3836e1d8d8c47f7592c5e6bd5d23544e",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/index.es-DhiII7wY.js",
+          "url": "https://natally.surge.sh/assets/index.es-DhiII7wY.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "35145f6b7322bdf46d209fdc8d15e335ff3efa6b2bd1eb814358a9d4ca94e3d8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/preload-helper-6addhe8V.js",
+          "url": "https://natally.surge.sh/assets/preload-helper-6addhe8V.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "2f89338f88c497914adfe559923d0f1ac6d3316c4e03f63d6ad349464a294de4",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/PurchaseAccess-r1hji0ul.css",
+          "url": "https://natally.surge.sh/assets/PurchaseAccess-r1hji0ul.css?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "034a59545a1a4958f7ce54daf0227430e3ae2adb5d1e67a1d2008686dc9ca4e8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/jspdf.es.min-CLIVO-Ty.js",
+          "url": "https://natally.surge.sh/assets/jspdf.es.min-CLIVO-Ty.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "0dfa98606e8bd5d25dc77f038f3e9fae7428db6e202dab9689730c16ad436f08",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/purify.es-Dn3VvdGh.js",
+          "url": "https://natally.surge.sh/assets/purify.es-Dn3VvdGh.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "37ef4b20a8d7efc7def9bd5d68900773f834c9797cb67a81d3740752470f1030",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/react-dom-DEhZRoZz.js",
+          "url": "https://natally.surge.sh/assets/react-dom-DEhZRoZz.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "1fb1bbf6a1f6e6434afc1ce8492bf3d69a40c2d15cf5cc96b7280e237da81ca0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/react-DC_4KZfT.js",
+          "url": "https://natally.surge.sh/assets/react-DC_4KZfT.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "58971ce47356fdba22645820f9ff4dccb8c8b0e79d1df7913029019692100d7a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/natallyHistory-BVEZbjJO.js",
+          "url": "https://natally.surge.sh/assets/natallyHistory-BVEZbjJO.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "ac79407d2741fa79844a331e29634c91d23646be4f55d6865438d7264331c9b8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/src-CvEZt_rT.css",
+          "url": "https://natally.surge.sh/assets/src-CvEZt_rT.css?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "0cc214d2c93ae1755527fc214255c6b00bc1a333fdd02fa0d5b0e93802c7926a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/App-D6KGMiK5.js",
+          "url": "https://natally.surge.sh/assets/App-D6KGMiK5.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "b966fb50ab47f83ff8607d2d832253c7563a26c5740f887da3ec2b4e0e9db316",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/supertonicTts-C83AMqL_.js",
+          "url": "https://natally.surge.sh/assets/supertonicTts-C83AMqL_.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "5d3a5ca9c1d6a775c13052f3a6d70fc91433fe0dd4bb91ba5906edc8dc426c91",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/VoiceDownloadStatus-DcosK-DC.js",
+          "url": "https://natally.surge.sh/assets/VoiceDownloadStatus-DcosK-DC.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "017c28d00b82c90bbe43a64f469957af4613a9c5813aa24de362fb7ec3751f8d",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/__vite-browser-external-oYSjS54R.js",
+          "url": "https://natally.surge.sh/assets/__vite-browser-external-oYSjS54R.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "aab3d250267a697d94861380527798ac557f571747b93c15a7369c714e23e426",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/brass-clatter.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/brass-clatter.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a47ee03ab832c0fcbe71fc89f40bcec6d47d7ecb2a208acd692d8bc392b58b1a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/bowlingball.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/bowlingball.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "f7b4bbd6e71cf12c426b072888a40b1aa74bfa25b39bdae0b5a9ff25c1af49e6",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/supertonic.worker-BQarrr-O.js",
+          "url": "https://natally.surge.sh/assets/supertonic.worker-BQarrr-O.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "5316c1451a4eecf906c19583d221f01b66cf1303e89e05f9a66ec385765d39ee",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/cookie-bite-crunch-v2.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/cookie-bite-crunch-v2.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "d207c3c2fddff9ebe11eaaac5fec1fde4a15b144a43c3221a522dea97a5a7c30",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/cookie-bite-crunch.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/cookie-bite-crunch.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "8cdc9880248985236c7c948238a03b4eb590812309607af5edba929ed81ad014",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/crystal-break.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/crystal-break.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "4401c0aeb45c98fcdb943f27a5907cad811e753bb533a8a7d03361d84d7e26d1",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/glass-shatter.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/glass-shatter.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "09e7755fbb7418e48aad13ce0e784f1cb211dd38ed87d1a488fc5c410ee56cac",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/shelf-wobble.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/shelf-wobble.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "dd2765772b5e6cff7aa822f9d053892df71797cd95fc5c652853a8c1389265ae",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/manifest.json",
+          "url": "https://natally.surge.sh/atelier/manifest.json?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "e9290b9c5f0752b1614024fd956d978b32db9469416473db3f6888f037db2bf4",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/swisseph-BqKK9TOX.wasm",
+          "url": "https://natally.surge.sh/assets/swisseph-BqKK9TOX.wasm?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/poster.webp",
+          "url": "https://natally.surge.sh/atelier/poster.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "75a9c52d28b1a038021aff6cef74e2ef4631f10ef698464e3379df7631f6f75b",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/room.webp",
+          "url": "https://natally.surge.sh/atelier/room.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "dfedbddc9e098a1a5eff1ad2055978a4581fda235892e15c42b6ddf8e5265b5a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/puppet-cleanplate.webp",
+          "url": "https://natally.surge.sh/atelier/puppet-cleanplate.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "eae79357aefb93eceb20bac08938914b424b1f7bf8030fd4440699032a5b53db",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/180x180.png",
+          "url": "https://natally.surge.sh/branding/180x180.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "56d2e518e589d61253aa63aa4c914d9449ac617cc842540e2fd414089fda1b31",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/192x192.png",
+          "url": "https://natally.surge.sh/branding/192x192.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "affd59a5874070376856ef351f232e5988ad4b0369a00ec6c6f72a0921dd19d0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/chart-ambience.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/chart-ambience.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "705280737a74814e154bc9aeda676d5a428c75ea1f184479210997d1a6e08db3",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/PurchaseAccess-COiznUSw.js",
+          "url": "https://natally.surge.sh/assets/PurchaseAccess-COiznUSw.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "87b94c5a53a8715b41ed3e71af5848e9bb2d7acc3bd5a22f903815dc95be3c65",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/icon-provenance.json",
+          "url": "https://natally.surge.sh/branding/icon-provenance.json?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "6ac7960c37c669827f9587122036eabc387ec19c8af29e43365df4e7dbd0d3fc",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "atelier/audio/workshop-ambience.mp3",
+          "url": "https://natally.surge.sh/atelier/audio/workshop-ambience.mp3?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "6ad94345e844c447f6b603c0b51f3b2f77a1c638fb4facbc127280be7e0e1587",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/512x512.png",
+          "url": "https://natally.surge.sh/branding/512x512.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "d5a17305362ba7ad45febf2a0d0a70604c684217542868e7cd259535bea6d894",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "auth/native.html",
+          "url": "https://natally.surge.sh/auth/native.html?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "4eab64ab2fac1d607beb11ce0e3228f70ad7353e39d6d6b10028dcd40344a1c3",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "favicon-32.png",
+          "url": "https://natally.surge.sh/favicon-32.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "01676a4ce01c56a558d1af068e6af8845575e889ca6ad6797d7addd5832fe0f0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/natally-hero-google.jpg",
+          "url": "https://natally.surge.sh/branding/natally-hero-google.jpg?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "20f54411e49703ceff5d72daab612aa1bac96a1093e91ed3a2e39e7020431910",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "fonts/OFL-PlayfairDisplay.txt",
+          "url": "https://natally.surge.sh/fonts/OFL-PlayfairDisplay.txt?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a32c1e30554f8227178d1643d182f9328b6529d92c9b43d86a16fb528381d857",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "fonts/playfair-display-latin.woff2",
+          "url": "https://natally.surge.sh/fonts/playfair-display-latin.woff2?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "favicon.ico",
+          "url": "https://natally.surge.sh/favicon.ico?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "0deae80a89b80482cd7816056d97179eb8b4fb6ab81bfa1e52954c16ce990a56",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "googleec5be2e6c03b1d80.html",
+          "url": "https://natally.surge.sh/googleec5be2e6c03b1d80.html?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "ba9a0ffb103deaf79a035b4a01f09cbd99cae024a2a507867a9a7a0ad08807eb",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "legal.css",
+          "url": "https://natally.surge.sh/legal.css?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "d84cfeb8ab29c964869a868a0a3562db97a19759656b6008c9fcd9ba49737c18",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "manifest.webmanifest",
+          "url": "https://natally.surge.sh/manifest.webmanifest?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "400192324e8950bf78d59c6b3b2afa715bca4d0f764aa3f728da886fad163086",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/natally-guide-512.png",
+          "url": "https://natally.surge.sh/branding/natally-guide-512.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "ef4399c7a0fa94efaf9409200d169bbafece47bcc0466a5899ef56a9812164f6",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "marketing-assets/natally-paywall-original.webp",
+          "url": "https://natally.surge.sh/marketing-assets/natally-paywall-original.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "marketing-assets/natally-still.webp",
+          "url": "https://natally.surge.sh/marketing-assets/natally-still.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "05f7b2fc0f4fb160d85a8bd7a8cf4e27eedb48e3c70fac5607eab1cbed42f5db",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "index.html",
+          "url": "https://natally.surge.sh/index.html?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "045a869459914d36ce168162c7ce1cd2a751ece3b3095b77632acc5babcdc653",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "natally-mascot.webp",
+          "url": "https://natally.surge.sh/natally-mascot.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a40780bad977525afdd6c7f92ed47a4b0ba090b1453921a0ad4248208301f873",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "notices/AGPL-3.0.txt",
+          "url": "https://natally.surge.sh/notices/AGPL-3.0.txt?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "79735a75d0274d2a5dcc240d11a0f81e34cfc3533939b7fce8e84e35a150a238",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "notices/Swiss-Ephemeris-LICENSE.txt",
+          "url": "https://natally.surge.sh/notices/Swiss-Ephemeris-LICENSE.txt?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "ec1057c9e5cdf978c189094894fb08ca347270859b404ece94f525968f4ace02",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "notices/swisseph-wasm-LICENSE.txt",
+          "url": "https://natally.surge.sh/notices/swisseph-wasm-LICENSE.txt?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "3e8378f1553cea8fca9cacd49d186b058375793f5994a95a39677f979f71d8f9",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "notices/THIRD-PARTY-NOTICES.txt",
+          "url": "https://natally.surge.sh/notices/THIRD-PARTY-NOTICES.txt?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "77d1622ee0ae5da4e22d50ef62b8a9290697418d9d6e02ea9bdc7d185c16ea8b",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "marketing.html",
+          "url": "https://natally.surge.sh/marketing.html?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "e0e32d609630d77765258223b0d0f8ae5744c8797c45c96377a7fb9bea26a781",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "privacy.html",
+          "url": "https://natally.surge.sh/privacy.html?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "008e69dcc4dffcf93a79a6f50fce68f345ed6271970c8d722261ad2d2707de45",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "paywall/natally-original.webp",
+          "url": "https://natally.surge.sh/paywall/natally-original.webp?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "pwa.js",
+          "url": "https://natally.surge.sh/pwa.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "f9d2c75a0f766bfd92052716a88f0b58936f904faf41393b89297640a4befb26",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "terms.html",
+          "url": "https://natally.surge.sh/terms.html?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "54d59df4aa0f6356399c3e7e0b1c122c8413e1b2a68e63ffaf06509afa9b8aa5",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "pwa-build.json",
+          "url": "https://natally.surge.sh/pwa-build.json?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "81403589e8fdd0e3f0e01ebde22ef17ca645466faa9795061688ed93f1225574",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "sw.js",
+          "url": "https://natally.surge.sh/sw.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "8ca30c901e5d5ff99f6a61af094c5d910e41e4f0e4b4fedaca9d81f5923bce84",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "vendor/swisseph/swisseph.data",
+          "url": "https://natally.surge.sh/vendor/swisseph/swisseph.data?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "1aac44b2ea3dfe668a063ed29dada99a7a96d8fa22fdce626cdf9e270b084ed0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "vendor/swisseph/swisseph.js",
+          "url": "https://natally.surge.sh/vendor/swisseph/swisseph.js?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "451a518b26b446db5e0c9a834aad1e9428d0fff7411cbfc39fce523b43a79e32",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/natally-guide.png",
+          "url": "https://natally.surge.sh/branding/natally-guide.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a1a7238ab7b764975f4d2374347b997e1c55388c597ceade1626b147d8dd1af5",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/closer.wav",
+          "url": "https://natally.surge.sh/voice/waiting/closer.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a23ef29ff3ed14f99e7521aec7e1ed097283fdd8b1814f49d92ce0b196143c45",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/look-v3.wav",
+          "url": "https://natally.surge.sh/voice/waiting/look-v3.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "db80fba0bdcb1c66d3956c40f3bb6891bbb935eba49ba1902f458a0e91b921a1",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/look.wav",
+          "url": "https://natally.surge.sh/voice/waiting/look.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "948f8f13db09f4d89662f9a536df4b7ea80ea4be52caf8829766b0addd678a00",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/look-v2.wav",
+          "url": "https://natally.surge.sh/voice/waiting/look-v2.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a23ef29ff3ed14f99e7521aec7e1ed097283fdd8b1814f49d92ce0b196143c45",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/moment-v2.wav",
+          "url": "https://natally.surge.sh/voice/waiting/moment-v2.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a262a67f60297119855a0cebd11e72f39a481e30fb280e23440bb39f19664bf4",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/moment-v3.wav",
+          "url": "https://natally.surge.sh/voice/waiting/moment-v3.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "14a5261afa62547f89bbefb07e13d1e17fca7a530a74b3838289bbd0ac673862",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "vendor/swisseph/swisseph.wasm",
+          "url": "https://natally.surge.sh/vendor/swisseph/swisseph.wasm?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/provenance.json",
+          "url": "https://natally.surge.sh/voice/waiting/provenance.json?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "304d392d786372dc4efe7a20546d98ae0283121000223332a94ee16f625ee316",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/thread-v2.wav",
+          "url": "https://natally.surge.sh/voice/waiting/thread-v2.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "c554e7730b1561566d04aa197b5888dd3b1652524bb8111c7b4a265063bfd0b1",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/thread.wav",
+          "url": "https://natally.surge.sh/voice/waiting/thread.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "c557ec4b242c50a0d791ed6062ce7ac4ea210002271baf82adedfa640b1f200c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/moment.wav",
+          "url": "https://natally.surge.sh/voice/waiting/moment.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "3b378b65fd9477cb781ce52b41d1149d35d8fa7022b5008fd4873ffcddd89573",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "/",
+          "url": "https://natally.surge.sh/?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "045a869459914d36ce168162c7ce1cd2a751ece3b3095b77632acc5babcdc653",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "voice/waiting/thread-v3.wav",
+          "url": "https://natally.surge.sh/voice/waiting/thread-v3.wav?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "f6b234c3cb91bbb73b78a92d2a7e6a5d7090ba8a014f80a089dd75524d929a83",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "branding/natally-icon-master.png",
+          "url": "https://natally.surge.sh/branding/natally-icon-master.png?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "1fae657a3774070920efca5fe9d664dad1af48090cc31e909d122f5e530d377c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.surge.sh",
+          "path": "assets/ort-wasm-simd-threaded.asyncify-CxOG5pUO.wasm",
+          "url": "https://natally.surge.sh/assets/ort-wasm-simd-threaded.asyncify-CxOG5pUO.wasm?cachebust=mvsfk6pi",
+          "status": 200,
+          "sha256": "49871f5a4409519797e127440868a6d1923339d9185907f301a5b2a1d90af082",
+          "attempts": 1,
+          "match": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    },
+    {
+      "host": "natally.robin.mba",
+      "results": [
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/appIdentity-DWr3tYar.js",
+          "url": "https://natally.robin.mba/assets/appIdentity-DWr3tYar.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "186569460ef2c406c095e7be2e874bbdbb66c4df75b8e07c697092821d277e3e",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/App-tf-ZfiJN.css",
+          "url": "https://natally.robin.mba/assets/App-tf-ZfiJN.css?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "920d203366e598d7a875518eba41c1d95dca4e5256221db81e9b7ebcd427393c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/BuildStamp-CjVufAY1.css",
+          "url": "https://natally.robin.mba/assets/BuildStamp-CjVufAY1.css?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a901d9623bc342626f670a383271bae65555f71f7a03953cb34853672b15798a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/client-BJFRBXmV.js",
+          "url": "https://natally.robin.mba/assets/client-BJFRBXmV.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "d4959373275ed089ea63f50fefb765254f91c579f1ab2d2d48c19fc6a47d75d8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/firebase-applet-config-BumQkWRk.js",
+          "url": "https://natally.robin.mba/assets/firebase-applet-config-BumQkWRk.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "e163a233e86257167fe9e469fad45d35cdd877a2af0884059bc1b54bef8d7bcb",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/accountStorage-B-NbRf2y.js",
+          "url": "https://natally.robin.mba/assets/accountStorage-B-NbRf2y.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "5e7635aa92c4f31190e77d38dd2644aa7597ac0eaf04a39f8097b3e72f65033a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/html2canvas-DQvxrKtW.js",
+          "url": "https://natally.robin.mba/assets/html2canvas-DQvxrKtW.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "67cb2d7c9f709139c498d1d179e2caca3836e1d8d8c47f7592c5e6bd5d23544e",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/index.es-DhiII7wY.js",
+          "url": "https://natally.robin.mba/assets/index.es-DhiII7wY.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "35145f6b7322bdf46d209fdc8d15e335ff3efa6b2bd1eb814358a9d4ca94e3d8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/jspdf.es.min-CLIVO-Ty.js",
+          "url": "https://natally.robin.mba/assets/jspdf.es.min-CLIVO-Ty.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "0dfa98606e8bd5d25dc77f038f3e9fae7428db6e202dab9689730c16ad436f08",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/modulepreload-polyfill-P2Xu9kJm.js",
+          "url": "https://natally.robin.mba/assets/modulepreload-polyfill-P2Xu9kJm.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/buildIdentity-Cqo2-Uxe.js",
+          "url": "https://natally.robin.mba/assets/buildIdentity-Cqo2-Uxe.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "9e8e6e26904c75ee4e89c4445edc492651d5d5ef7d4f6818a2e911fd6f5b0391",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/BuildStamp-DTVE95Z0.js",
+          "url": "https://natally.robin.mba/assets/BuildStamp-DTVE95Z0.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "4ee838b50c97be38d3f650a30f4e79fdb147703f6b1c52b09db4345347dc43d6",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/app-BzMW3kKY.js",
+          "url": "https://natally.robin.mba/assets/app-BzMW3kKY.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "22e6e013e900babdbe09dc4a8301c67fa0cdc2adf9f9ff894a40004308d9025b",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/marketing-PXePjCjY.js",
+          "url": "https://natally.robin.mba/assets/marketing-PXePjCjY.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "1c832c290a92037fac2f16c94ec688a9c442b3f950de39a019a3824c64be41ca",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/nativeAuth-CgR-qQFt.js",
+          "url": "https://natally.robin.mba/assets/nativeAuth-CgR-qQFt.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "2f0e664d29ff0ce5e9e340e3a2dda790ba279e725caceb16523e7f586e214da7",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/preload-helper-6addhe8V.js",
+          "url": "https://natally.robin.mba/assets/preload-helper-6addhe8V.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "2f89338f88c497914adfe559923d0f1ac6d3316c4e03f63d6ad349464a294de4",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/PurchaseAccess-r1hji0ul.css",
+          "url": "https://natally.robin.mba/assets/PurchaseAccess-r1hji0ul.css?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "034a59545a1a4958f7ce54daf0227430e3ae2adb5d1e67a1d2008686dc9ca4e8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/react-DC_4KZfT.js",
+          "url": "https://natally.robin.mba/assets/react-DC_4KZfT.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "58971ce47356fdba22645820f9ff4dccb8c8b0e79d1df7913029019692100d7a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/purify.es-Dn3VvdGh.js",
+          "url": "https://natally.robin.mba/assets/purify.es-Dn3VvdGh.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "37ef4b20a8d7efc7def9bd5d68900773f834c9797cb67a81d3740752470f1030",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/react-dom-DEhZRoZz.js",
+          "url": "https://natally.robin.mba/assets/react-dom-DEhZRoZz.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "1fb1bbf6a1f6e6434afc1ce8492bf3d69a40c2d15cf5cc96b7280e237da81ca0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/src-CvEZt_rT.css",
+          "url": "https://natally.robin.mba/assets/src-CvEZt_rT.css?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "0cc214d2c93ae1755527fc214255c6b00bc1a333fdd02fa0d5b0e93802c7926a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/supertonicTts-C83AMqL_.js",
+          "url": "https://natally.robin.mba/assets/supertonicTts-C83AMqL_.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "5d3a5ca9c1d6a775c13052f3a6d70fc91433fe0dd4bb91ba5906edc8dc426c91",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/natallyHistory-BVEZbjJO.js",
+          "url": "https://natally.robin.mba/assets/natallyHistory-BVEZbjJO.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "ac79407d2741fa79844a331e29634c91d23646be4f55d6865438d7264331c9b8",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/VoiceDownloadStatus-DcosK-DC.js",
+          "url": "https://natally.robin.mba/assets/VoiceDownloadStatus-DcosK-DC.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "017c28d00b82c90bbe43a64f469957af4613a9c5813aa24de362fb7ec3751f8d",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/__vite-browser-external-oYSjS54R.js",
+          "url": "https://natally.robin.mba/assets/__vite-browser-external-oYSjS54R.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "aab3d250267a697d94861380527798ac557f571747b93c15a7369c714e23e426",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/bowlingball.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/bowlingball.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "f7b4bbd6e71cf12c426b072888a40b1aa74bfa25b39bdae0b5a9ff25c1af49e6",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/supertonic.worker-BQarrr-O.js",
+          "url": "https://natally.robin.mba/assets/supertonic.worker-BQarrr-O.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "5316c1451a4eecf906c19583d221f01b66cf1303e89e05f9a66ec385765d39ee",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/App-D6KGMiK5.js",
+          "url": "https://natally.robin.mba/assets/App-D6KGMiK5.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "b966fb50ab47f83ff8607d2d832253c7563a26c5740f887da3ec2b4e0e9db316",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/swisseph-BqKK9TOX.wasm",
+          "url": "https://natally.robin.mba/assets/swisseph-BqKK9TOX.wasm?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/brass-clatter.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/brass-clatter.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a47ee03ab832c0fcbe71fc89f40bcec6d47d7ecb2a208acd692d8bc392b58b1a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/cookie-bite-crunch-v2.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/cookie-bite-crunch-v2.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "d207c3c2fddff9ebe11eaaac5fec1fde4a15b144a43c3221a522dea97a5a7c30",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/chart-ambience.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/chart-ambience.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "705280737a74814e154bc9aeda676d5a428c75ea1f184479210997d1a6e08db3",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/cookie-bite-crunch.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/cookie-bite-crunch.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "8cdc9880248985236c7c948238a03b4eb590812309607af5edba929ed81ad014",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/crystal-break.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/crystal-break.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "4401c0aeb45c98fcdb943f27a5907cad811e753bb533a8a7d03361d84d7e26d1",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/shelf-wobble.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/shelf-wobble.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "dd2765772b5e6cff7aa822f9d053892df71797cd95fc5c652853a8c1389265ae",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/manifest.json",
+          "url": "https://natally.robin.mba/atelier/manifest.json?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "e9290b9c5f0752b1614024fd956d978b32db9469416473db3f6888f037db2bf4",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/glass-shatter.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/glass-shatter.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "09e7755fbb7418e48aad13ce0e784f1cb211dd38ed87d1a488fc5c410ee56cac",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/poster.webp",
+          "url": "https://natally.robin.mba/atelier/poster.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "75a9c52d28b1a038021aff6cef74e2ef4631f10ef698464e3379df7631f6f75b",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/room.webp",
+          "url": "https://natally.robin.mba/atelier/room.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "dfedbddc9e098a1a5eff1ad2055978a4581fda235892e15c42b6ddf8e5265b5a",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/180x180.png",
+          "url": "https://natally.robin.mba/branding/180x180.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "56d2e518e589d61253aa63aa4c914d9449ac617cc842540e2fd414089fda1b31",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/192x192.png",
+          "url": "https://natally.robin.mba/branding/192x192.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "affd59a5874070376856ef351f232e5988ad4b0369a00ec6c6f72a0921dd19d0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/512x512.png",
+          "url": "https://natally.robin.mba/branding/512x512.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "d5a17305362ba7ad45febf2a0d0a70604c684217542868e7cd259535bea6d894",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/puppet-cleanplate.webp",
+          "url": "https://natally.robin.mba/atelier/puppet-cleanplate.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "eae79357aefb93eceb20bac08938914b424b1f7bf8030fd4440699032a5b53db",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/icon-provenance.json",
+          "url": "https://natally.robin.mba/branding/icon-provenance.json?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "6ac7960c37c669827f9587122036eabc387ec19c8af29e43365df4e7dbd0d3fc",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/natally-guide-512.png",
+          "url": "https://natally.robin.mba/branding/natally-guide-512.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "ef4399c7a0fa94efaf9409200d169bbafece47bcc0466a5899ef56a9812164f6",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "atelier/audio/workshop-ambience.mp3",
+          "url": "https://natally.robin.mba/atelier/audio/workshop-ambience.mp3?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "6ad94345e844c447f6b603c0b51f3b2f77a1c638fb4facbc127280be7e0e1587",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "auth/native.html",
+          "url": "https://natally.robin.mba/auth/native.html?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "4eab64ab2fac1d607beb11ce0e3228f70ad7353e39d6d6b10028dcd40344a1c3",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/natally-hero-google.jpg",
+          "url": "https://natally.robin.mba/branding/natally-hero-google.jpg?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "20f54411e49703ceff5d72daab612aa1bac96a1093e91ed3a2e39e7020431910",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "favicon-32.png",
+          "url": "https://natally.robin.mba/favicon-32.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "01676a4ce01c56a558d1af068e6af8845575e889ca6ad6797d7addd5832fe0f0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/natally-icon-master.png",
+          "url": "https://natally.robin.mba/branding/natally-icon-master.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "1fae657a3774070920efca5fe9d664dad1af48090cc31e909d122f5e530d377c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/PurchaseAccess-COiznUSw.js",
+          "url": "https://natally.robin.mba/assets/PurchaseAccess-COiznUSw.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "87b94c5a53a8715b41ed3e71af5848e9bb2d7acc3bd5a22f903815dc95be3c65",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "fonts/OFL-PlayfairDisplay.txt",
+          "url": "https://natally.robin.mba/fonts/OFL-PlayfairDisplay.txt?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a32c1e30554f8227178d1643d182f9328b6529d92c9b43d86a16fb528381d857",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "fonts/playfair-display-latin.woff2",
+          "url": "https://natally.robin.mba/fonts/playfair-display-latin.woff2?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "e0c764a8e9e1cce92163c55bac4b2ad6cd4cf8c696ce2289ab5c41565e65b7e2",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "legal.css",
+          "url": "https://natally.robin.mba/legal.css?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "d84cfeb8ab29c964869a868a0a3562db97a19759656b6008c9fcd9ba49737c18",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "favicon.ico",
+          "url": "https://natally.robin.mba/favicon.ico?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "0deae80a89b80482cd7816056d97179eb8b4fb6ab81bfa1e52954c16ce990a56",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "googleec5be2e6c03b1d80.html",
+          "url": "https://natally.robin.mba/googleec5be2e6c03b1d80.html?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "ba9a0ffb103deaf79a035b4a01f09cbd99cae024a2a507867a9a7a0ad08807eb",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "manifest.webmanifest",
+          "url": "https://natally.robin.mba/manifest.webmanifest?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "400192324e8950bf78d59c6b3b2afa715bca4d0f764aa3f728da886fad163086",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "marketing-assets/natally-still.webp",
+          "url": "https://natally.robin.mba/marketing-assets/natally-still.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "05f7b2fc0f4fb160d85a8bd7a8cf4e27eedb48e3c70fac5607eab1cbed42f5db",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "marketing-assets/natally-paywall-original.webp",
+          "url": "https://natally.robin.mba/marketing-assets/natally-paywall-original.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "notices/AGPL-3.0.txt",
+          "url": "https://natally.robin.mba/notices/AGPL-3.0.txt?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "79735a75d0274d2a5dcc240d11a0f81e34cfc3533939b7fce8e84e35a150a238",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "notices/Swiss-Ephemeris-LICENSE.txt",
+          "url": "https://natally.robin.mba/notices/Swiss-Ephemeris-LICENSE.txt?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "ec1057c9e5cdf978c189094894fb08ca347270859b404ece94f525968f4ace02",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "notices/swisseph-wasm-LICENSE.txt",
+          "url": "https://natally.robin.mba/notices/swisseph-wasm-LICENSE.txt?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "3e8378f1553cea8fca9cacd49d186b058375793f5994a95a39677f979f71d8f9",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "notices/THIRD-PARTY-NOTICES.txt",
+          "url": "https://natally.robin.mba/notices/THIRD-PARTY-NOTICES.txt?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "77d1622ee0ae5da4e22d50ef62b8a9290697418d9d6e02ea9bdc7d185c16ea8b",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "index.html",
+          "url": "https://natally.robin.mba/index.html?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "045a869459914d36ce168162c7ce1cd2a751ece3b3095b77632acc5babcdc653",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "privacy.html",
+          "url": "https://natally.robin.mba/privacy.html?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "008e69dcc4dffcf93a79a6f50fce68f345ed6271970c8d722261ad2d2707de45",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "branding/natally-guide.png",
+          "url": "https://natally.robin.mba/branding/natally-guide.png?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a1a7238ab7b764975f4d2374347b997e1c55388c597ceade1626b147d8dd1af5",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "pwa.js",
+          "url": "https://natally.robin.mba/pwa.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "f9d2c75a0f766bfd92052716a88f0b58936f904faf41393b89297640a4befb26",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "paywall/natally-original.webp",
+          "url": "https://natally.robin.mba/paywall/natally-original.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "8766fb9ed3c23e4571c864e9b433366e643a066743e43418062e0b2f0dc6ae95",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "marketing.html",
+          "url": "https://natally.robin.mba/marketing.html?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "e0e32d609630d77765258223b0d0f8ae5744c8797c45c96377a7fb9bea26a781",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "terms.html",
+          "url": "https://natally.robin.mba/terms.html?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "54d59df4aa0f6356399c3e7e0b1c122c8413e1b2a68e63ffaf06509afa9b8aa5",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "vendor/swisseph/swisseph.js",
+          "url": "https://natally.robin.mba/vendor/swisseph/swisseph.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "451a518b26b446db5e0c9a834aad1e9428d0fff7411cbfc39fce523b43a79e32",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "natally-mascot.webp",
+          "url": "https://natally.robin.mba/natally-mascot.webp?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a40780bad977525afdd6c7f92ed47a4b0ba090b1453921a0ad4248208301f873",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/closer.wav",
+          "url": "https://natally.robin.mba/voice/waiting/closer.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a23ef29ff3ed14f99e7521aec7e1ed097283fdd8b1814f49d92ce0b196143c45",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/look-v2.wav",
+          "url": "https://natally.robin.mba/voice/waiting/look-v2.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a23ef29ff3ed14f99e7521aec7e1ed097283fdd8b1814f49d92ce0b196143c45",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "pwa-build.json",
+          "url": "https://natally.robin.mba/pwa-build.json?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "81403589e8fdd0e3f0e01ebde22ef17ca645466faa9795061688ed93f1225574",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/look-v3.wav",
+          "url": "https://natally.robin.mba/voice/waiting/look-v3.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "db80fba0bdcb1c66d3956c40f3bb6891bbb935eba49ba1902f458a0e91b921a1",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "vendor/swisseph/swisseph.wasm",
+          "url": "https://natally.robin.mba/vendor/swisseph/swisseph.wasm?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a6e5f53cc39bac07f44b4ce54e5f90f6bd1e25b6d20df2ea0bc4c1374d09842c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "sw.js",
+          "url": "https://natally.robin.mba/sw.js?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "8ca30c901e5d5ff99f6a61af094c5d910e41e4f0e4b4fedaca9d81f5923bce84",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/moment-v2.wav",
+          "url": "https://natally.robin.mba/voice/waiting/moment-v2.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "a262a67f60297119855a0cebd11e72f39a481e30fb280e23440bb39f19664bf4",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/provenance.json",
+          "url": "https://natally.robin.mba/voice/waiting/provenance.json?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "304d392d786372dc4efe7a20546d98ae0283121000223332a94ee16f625ee316",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/moment-v3.wav",
+          "url": "https://natally.robin.mba/voice/waiting/moment-v3.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "14a5261afa62547f89bbefb07e13d1e17fca7a530a74b3838289bbd0ac673862",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/look.wav",
+          "url": "https://natally.robin.mba/voice/waiting/look.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "948f8f13db09f4d89662f9a536df4b7ea80ea4be52caf8829766b0addd678a00",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/thread-v3.wav",
+          "url": "https://natally.robin.mba/voice/waiting/thread-v3.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "f6b234c3cb91bbb73b78a92d2a7e6a5d7090ba8a014f80a089dd75524d929a83",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/moment.wav",
+          "url": "https://natally.robin.mba/voice/waiting/moment.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "3b378b65fd9477cb781ce52b41d1149d35d8fa7022b5008fd4873ffcddd89573",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/thread-v2.wav",
+          "url": "https://natally.robin.mba/voice/waiting/thread-v2.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "c554e7730b1561566d04aa197b5888dd3b1652524bb8111c7b4a265063bfd0b1",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "voice/waiting/thread.wav",
+          "url": "https://natally.robin.mba/voice/waiting/thread.wav?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "c557ec4b242c50a0d791ed6062ce7ac4ea210002271baf82adedfa640b1f200c",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "/",
+          "url": "https://natally.robin.mba/?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "045a869459914d36ce168162c7ce1cd2a751ece3b3095b77632acc5babcdc653",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "vendor/swisseph/swisseph.data",
+          "url": "https://natally.robin.mba/vendor/swisseph/swisseph.data?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "1aac44b2ea3dfe668a063ed29dada99a7a96d8fa22fdce626cdf9e270b084ed0",
+          "attempts": 1,
+          "match": true
+        },
+        {
+          "host": "natally.robin.mba",
+          "path": "assets/ort-wasm-simd-threaded.asyncify-CxOG5pUO.wasm",
+          "url": "https://natally.robin.mba/assets/ort-wasm-simd-threaded.asyncify-CxOG5pUO.wasm?cachebust=mvsfkdrr",
+          "status": 200,
+          "sha256": "49871f5a4409519797e127440868a6d1923339d9185907f301a5b2a1d90af082",
+          "attempts": 1,
+          "match": true
+        }
+      ],
+      "ok": true,
+      "failures": []
+    }
+  ],
+  "errors": []
+}

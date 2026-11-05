@@ -1,0 +1,150 @@
+@startuml
+title src/components/Astrolabe3D.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "Astrolabe3D.tsx\nfile L1-1276\nfile:src/components/Astrolabe3D.tsx" as N0
+rectangle "react\nimport L1-1\nimport:40e0a3ada55beaab1a31938273f7525c" as N1
+rectangle "three\nimport L2-2\nimport:b7fdea977098af47a6903aced662419e" as N2
+rectangle "../services/chartFocusVisuals\nimport L3-3\nimport:6e9ea6f9535034952487ab4c84e91d7b" as N3
+rectangle "../services/torusGestures\nimport L4-4\nimport:003b507203551f525c01a49371dd4803" as N4
+rectangle "../services/ephemeris\nimport L5-5\nimport:bb089b779d431922740b76e3821c0a6a" as N5
+rectangle "Astrolabe3DProps\ninterface L7-21\ninterface:dcfda50312794ba78f875abcb47ffa8a" as N6
+rectangle "chart\nproperty L8-8\nproperty:e0b4445faa054f6ba2cab1ef456a1166" as N7
+rectangle "isSpinning\nproperty L9-9\nproperty:5f2af4aea7b412c7fc1c71d349b2fca2" as N8
+rectangle "resetTrigger\nproperty L10-10\nproperty:5a2cc78fc46f933a97a5b5de40bd1c39" as N9
+rectangle "selectedComponents\nproperty L11-11\nproperty:fb2157d40e17f088f97934a56c3b2281" as N10
+rectangle "highlightedComponents\nproperty L12-12\nproperty:f442c33f5606626d7cebf678b26fe3e6" as N11
+rectangle "focusSequence\nproperty L13-13\nproperty:73d69a3b266c297aad40243c3452ba85" as N12
+rectangle "reducedMotion\nproperty L14-14\nproperty:1ea674a8675cccce83841fb3a863d524" as N13
+rectangle "motionPaused\nproperty L15-15\nproperty:8ec6455dbfbece31f22af1912493c3ef" as N14
+rectangle "visible\nproperty L16-16\nproperty:3bd7f48ea2a4f94e74c28f79b7e3d71a" as N15
+rectangle "layoutKey\nproperty L17-17\nproperty:0a7f50b520883cd2d283502f0d5aec64" as N16
+rectangle "onToggleComponent\nproperty L18-18\nproperty:de802ef54b9fe906db30086c5b359a5e" as N17
+rectangle "selectedPlanetName\nproperty L19-19\nproperty:38e1de0c54feecd129a2226b7f20eb14" as N18
+rectangle "onSelectPlanet\nproperty L20-20\nproperty:7079ce6e06e35d5fa4cd4f30328a3599" as N19
+rectangle "Astrolabe3D\nfunction L23-1275\nfunction:71884c1c1bcb740dd03f315fcb36cd3d" as N20
+rectangle "redraw\nfunction L67-67\nfunction:33bf0ca4aadec9b6b31a41f60efe89b9" as N21
+rectangle "startDrag\nfunction L289-297\nfunction:fffb9175edee80a4177738fe5bd75bd6" as N22
+rectangle "updateDrag\nfunction L299-321\nfunction:97cff37f5c4cc79faee06c00ca548ac6" as N23
+rectangle "endDrag\nfunction L323-329\nfunction:3e8d39fd89ca42425bf3b8f7c8bbbb26" as N24
+rectangle "onMouseDown\nfunction L331-343\nfunction:5726f5d4df70a2808ac8f57e301af3fe" as N25
+rectangle "onMouseUp\nfunction L345-348\nfunction:662f53e3b0ab8198d5cfe3f3001e29af" as N26
+rectangle "pickChartTargets\nfunction L350-367\nfunction:0a7102a9b26ece87ab4eaccbaeae96c2" as N27
+rectangle "distance\nfunction L361-364\nfunction:a0e07a36290f59c3c1c55ca2970c59ec" as N28
+rectangle "onMouseMove\nfunction L369-439\nfunction:5c52b3762700c9987035f4b02361ff36" as N29
+rectangle "zoom\nfunction L441-445\nfunction:1d11bebf489359dd21572a728f2ed42a" as N30
+rectangle "onClick\nfunction L465-497\nfunction:dcd029a1e83baeeb16453e1bec965f7e" as N31
+rectangle "onWheel\nfunction L499-502\nfunction:9d4bfff9acbc38c6b360788c2fd168ac" as N32
+rectangle "onMouseLeave\nfunction L504-513\nfunction:87b84422b6de8faf348f819451f91b53" as N33
+rectangle "animate\nfunction L527-579\nfunction:3f50333b2f1aa4e3609e213f527f1e29" as N34
+rectangle "wake\nfunction L580-583\nfunction:16b163466feefa167292bc5a7c063664" as N35
+rectangle "handleResize\nfunction L589-604\nfunction:d255c9ca68595d78b8b8f00726568d71" as N36
+rectangle "onContextLost\nfunction L605-610\nfunction:03f372910a519999c0ee04797dcba4b5" as N37
+rectangle "onContextRestored\nfunction L611-615\nfunction:d68a52524c08421ea7734d3f48b85a74" as N38
+rectangle "lonToRad\nfunction L678-681\nfunction:26c9b39413f0668f5a70b4d66688f063" as N39
+rectangle "createGlyphSprite\nfunction L683-764\nfunction:3f8d8533bfb08104f4c9fb0cd9d4fa09" as N40
+rectangle "addEndpointLabel\nfunction L985-999\nfunction:d2748534ccd8519c116586a1a9ef06b2" as N41
+rectangle "addAspect\nfunction L1116-1182\nfunction:2caf115ba52f3b9396bd330715793558" as N42
+rectangle "tube\nfunction L1132-1135\nfunction:0cc2ae364e830d29c41878418b6be507" as N43
+rectangle "addHoverPath\nfunction L1169-1172\nfunction:b3952ac5b4b857d8fcca576ab7dda814" as N44
+rectangle "applyHover\nfunction L1209-1226\nfunction:60d9f1a374814a4a1457396ae9404bea" as N45
+N0 --> N1 : contains E555
+N0 --> N2 : contains E556
+N0 --> N3 : contains E557
+N0 --> N4 : contains E558
+N0 --> N5 : contains E559
+N0 --> N6 : contains E560
+N6 --> N7 : contains E561
+N6 --> N8 : contains E562
+N6 --> N9 : contains E563
+N6 --> N10 : contains E564
+N6 --> N11 : contains E565
+N6 --> N12 : contains E566
+N6 --> N13 : contains E567
+N6 --> N14 : contains E568
+N6 --> N15 : contains E569
+N6 --> N16 : contains E570
+N6 --> N17 : contains E571
+N6 --> N18 : contains E572
+N6 --> N19 : contains E573
+N0 --> N20 : contains E574
+N20 --> N21 : contains E575
+N20 --> N22 : contains E576
+N20 --> N23 : contains E577
+N20 --> N24 : contains E578
+N20 --> N25 : contains E579
+N20 --> N26 : contains E580
+N20 --> N27 : contains E581
+N27 --> N28 : contains E582
+N20 --> N29 : contains E583
+N20 --> N30 : contains E584
+N20 --> N31 : contains E585
+N20 --> N32 : contains E586
+N20 --> N33 : contains E587
+N20 --> N34 : contains E588
+N20 --> N35 : contains E589
+N20 --> N36 : contains E590
+N20 --> N37 : contains E591
+N20 --> N38 : contains E592
+N20 --> N39 : contains E593
+N20 --> N40 : contains E594
+N20 --> N41 : contains E595
+N20 --> N42 : contains E596
+N42 --> N43 : contains E597
+N42 --> N44 : contains E598
+N20 --> N45 : contains E599
+N25 --> N22 : calls E4249
+N26 --> N24 : calls E4250
+N27 --> N28 : calls E4251
+N27 --> N28 : calls E4252
+N29 --> N23 : calls E4253
+N29 --> N23 : calls E4255
+N29 --> N27 : calls E4256
+N20 --> N22 : calls E4262
+N20 --> N24 : calls E4263
+N31 --> N27 : calls E4264
+N32 --> N30 : calls E4267
+N35 --> N34 : calls E4270
+N20 --> N35 : calls E4272
+N36 --> N35 : calls E4273
+N38 --> N36 : calls E4274
+N20 --> N40 : calls E4275
+N20 --> N39 : calls E4277
+N20 --> N39 : calls E4278
+N20 --> N40 : calls E4279
+N20 --> N39 : calls E4280
+N20 --> N40 : calls E4281
+N20 --> N39 : calls E4282
+N20 --> N39 : calls E4283
+N20 --> N40 : calls E4284
+N20 --> N41 : calls E4285
+N20 --> N39 : calls E4286
+N20 --> N41 : calls E4287
+N42 --> N43 : calls E4288
+N42 --> N43 : calls E4289
+N42 --> N43 : calls E4290
+N42 --> N43 : calls E4291
+N42 --> N43 : calls E4292
+N42 --> N43 : calls E4293
+N42 --> N43 : calls E4294
+N42 --> N43 : calls E4295
+N42 --> N44 : calls E4296
+N42 --> N44 : calls E4297
+N20 --> N42 : calls E4298
+N20 --> N42 : calls E4299
+N20 --> N21 : references E4301
+N20 --> N30 : references E4302
+N20 --> N23 : references E4303
+N20 --> N25 : references E4304
+N20 --> N26 : references E4305
+N20 --> N29 : references E4306
+N20 --> N31 : references E4307
+N20 --> N32 : references E4308
+N20 --> N33 : references E4309
+N20 --> N35 : references E4310
+N20 --> N36 : references E4311
+N20 --> N37 : references E4312
+N20 --> N38 : references E4313
+N20 --> N45 : references E4314
+@enduml

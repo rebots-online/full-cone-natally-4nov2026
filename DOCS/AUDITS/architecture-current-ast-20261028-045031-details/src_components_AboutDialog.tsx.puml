@@ -1,0 +1,36 @@
+@startuml
+title src/components/AboutDialog.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AboutDialog.tsx\nfile L1-94\nfile:src/components/AboutDialog.tsx" as N0
+rectangle "react\nimport L1-1\nimport:e84fbd965f83dbb7d387b4d5af3e53b0" as N1
+rectangle "react-dom\nimport L2-2\nimport:43e0628b0739c54905e4a3c66338bba4" as N2
+rectangle "lucide-react\nimport L3-3\nimport:987e710482aa3a1a7e420db449734cd1" as N3
+rectangle "swisseph-wasm/package.json\nimport L4-4\nimport:1300e6fde9b70b317c1ab37c159e8271" as N4
+rectangle "./AboutDialog.css\nimport L5-5\nimport:f0064c18ef4c43ae7178427269e6782d" as N5
+rectangle "./EraseNatallyHistoryDialog\nimport L6-6\nimport:b6862566a49832de71d1c5e148be5918" as N6
+rectangle "../services/buildIdentity\nimport L7-7\nimport:92d0b53b564519c37a7bd68c85680848" as N7
+rectangle "source\nconstant L9-9\nconstant:fad76a9636e65f77013d1d1cb305f95b" as N8
+rectangle "AboutDialog\nfunction L11-61\nfunction:84a9498012963115704143d0d02bb644" as N9
+rectangle "ProfileAbout\nfunction L64-93\nfunction:e9ec92cd23f4c6de3db4da04869b13d2" as N10
+rectangle "outside\nfunction L73-73\nfunction:87f5ae9b6fa26b24a0b2d65775cf4c13" as N11
+rectangle "closeAbout\nfunction L77-77\nfunction:22c863efee794813dc0035f41591b792" as N12
+N0 --> N1 : contains E543
+N0 --> N2 : contains E544
+N0 --> N3 : contains E545
+N0 --> N4 : contains E546
+N0 --> N5 : contains E547
+N0 --> N6 : contains E548
+N0 --> N7 : contains E549
+N0 --> N8 : contains E550
+N0 --> N9 : contains E551
+N0 --> N10 : contains E552
+N10 --> N11 : contains E553
+N10 --> N12 : contains E554
+N0 --> N4 : imports E3001
+N0 --> N5 : imports E3002
+N10 --> N11 : references E4240
+N10 --> N12 : references E4241
+N10 --> N9 : calls E6920
+@enduml

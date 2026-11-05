@@ -1,0 +1,91 @@
+@startuml
+title src/services/voiceMeasurements.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "VOICE_REVISION\nconstant L1-1\nconstant:a042cdf214f822f60540b0eb47b0ee5e" as N0
+rectangle "voiceMeasurements.ts\nfile L1-95\nfile:src/services/voiceMeasurements.ts" as N1
+rectangle "VoiceMeasurement\ninterface L2-19\ninterface:af1508e63b4f85d594d678cd9456be9c" as N2
+rectangle "operation\nproperty L3-3\nproperty:b2504a83831342b3aa8df454c78fb202" as N3
+rectangle "state\nproperty L4-4\nproperty:1a4879b177873bb1a5a3cedbd376ee59" as N4
+rectangle "runId\nproperty L5-5\nproperty:8e0cf137caaa937432f7edd5e1e00533" as N5
+rectangle "atMs\nproperty L6-6\nproperty:6e8981041df8b671a5ec0dfd2d31d395" as N6
+rectangle "durationMs\nproperty L7-7\nproperty:2715ed3904f1d136a2dd44b5824180bd" as N7
+rectangle "file\nproperty L8-8\nproperty:7e4ac6e56c31ea287d8c9e9fbe2a8fde" as N8
+rectangle "backend\nproperty L9-9\nproperty:2d6275747ed2a982f3251dfa377d7c6c" as N9
+rectangle "source\nproperty L10-10\nproperty:39ae80e0b4655df8c4de75ac059a7f33" as N10
+rectangle "workload\nproperty L11-11\nproperty:458da383efeb7828fdb9abd4d561cf46" as N11
+rectangle "revision\nproperty L12-12\nproperty:7827fc1c85a86322a91564b0c571e4a3" as N12
+rectangle "memoryReuse\nproperty L13-13\nproperty:12a0f44bd4c2a2832e5b826f20e37eec" as N13
+rectangle "clipReuse\nproperty L14-14\nproperty:ccb6f6d2be8405e839ecb334fbb4eea7" as N14
+rectangle "speed\nproperty L15-15\nproperty:1f672165135ed02e5c1573a01d765c58" as N15
+rectangle "steps\nproperty L16-16\nproperty:9aecd1ccb758cb353a95b6b736eaf081" as N16
+rectangle "capturedStart\nproperty L17-17\nproperty:caab9d9eac66ba628257d54caa7b3563" as N17
+rectangle "bytes\nproperty L18-18\nproperty:f89eec281f63bc21305a08cdb2228303" as N18
+rectangle "SURVEY_OPTIONS\nconstant L20-28\nconstant:a21b16122f30ea254c5d7d739ef058d3" as N19
+rectangle "VoiceSurvey\ntype_alias L29-29\ntype_alias:037cadda9bb2dd4e8728f05a348ce01e" as N20
+rectangle "EMPTY_SURVEY\nconstant L30-30\nconstant:1b4ddd619fe9889293911028f27459be" as N21
+rectangle "summarizeMeasurements\nfunction L32-51\nfunction:c84a59219a3c0203570d0f8095de39a5" as N22
+rectangle "VoiceMeasurementStore\nclass L53-92\nclass:1d61eb9f529e96b95231c494d3a0fd29" as N23
+rectangle "enabled\nproperty L54-54\nproperty:af6a137364f34c5ed001758e15ef9a44" as N24
+rectangle "events\nproperty L55-55\nproperty:779f4408106210e9d485ac43b4fadb07" as N25
+rectangle "omittedEvents\nproperty L56-56\nproperty:55c783a33ccccd7b55a8ae7f810562f7" as N26
+rectangle "reportId\nproperty L57-57\nproperty:90838821ee54278f579de3fb8577588b" as N27
+rectangle "snapshotSequence\nproperty L58-58\nproperty:9fc2ba4bd8240b09eb7f9ee56b3a2bee" as N28
+rectangle "starts\nproperty L59-59\nproperty:5b5001df265ac6daa21ebdcda4bd4e6a" as N29
+rectangle "constructor\nmethod L60-60\nmethod:7c7c31ce88ce43eef770fdfe0e7e3fb8" as N30
+rectangle "setEnabled\nmethod L61-61\nmethod:3de702b95b4e531171f22142cf7f3623" as N31
+rectangle "record\nmethod L62-78\nmethod:2e531aeec95ab6dcedd78fd44f14261d" as N32
+rectangle "snapshot\nmethod L79-79\nmethod:a682385d75f72a68624f05edbf269a4a" as N33
+rectangle "clear\nmethod L80-80\nmethod:21ddf2f7531eea225338922b9c382716" as N34
+rectangle "export\nmethod L81-91\nmethod:05b4b8e28b37f94e09018253852aec22" as N35
+rectangle "voiceMeasurements\nconstant L94-94\nconstant:63583d550d659b0ff7497dd2f1c61e01" as N36
+N1 --> N0 : contains E2400
+N1 --> N2 : contains E2401
+N2 --> N3 : contains E2402
+N2 --> N4 : contains E2403
+N2 --> N5 : contains E2404
+N2 --> N6 : contains E2405
+N2 --> N7 : contains E2406
+N2 --> N8 : contains E2407
+N2 --> N9 : contains E2408
+N2 --> N10 : contains E2409
+N2 --> N11 : contains E2410
+N2 --> N12 : contains E2411
+N2 --> N13 : contains E2412
+N2 --> N14 : contains E2413
+N2 --> N15 : contains E2414
+N2 --> N16 : contains E2415
+N2 --> N17 : contains E2416
+N2 --> N18 : contains E2417
+N1 --> N19 : contains E2418
+N1 --> N20 : contains E2419
+N1 --> N21 : contains E2420
+N1 --> N22 : contains E2421
+N1 --> N23 : contains E2422
+N23 --> N24 : contains E2423
+N23 --> N25 : contains E2424
+N23 --> N26 : contains E2425
+N23 --> N27 : contains E2426
+N23 --> N28 : contains E2427
+N23 --> N29 : contains E2428
+N23 --> N30 : contains E2429
+N23 --> N31 : contains E2430
+N23 --> N32 : contains E2431
+N23 --> N33 : contains E2432
+N23 --> N34 : contains E2433
+N23 --> N35 : contains E2434
+N1 --> N36 : contains E2435
+N21 --> N19 : references E2436
+N35 --> N19 : references E2437
+N35 --> N21 : references E2438
+N21 --> N20 : references E6358
+N22 --> N2 : references E6359
+N25 --> N2 : references E6360
+N32 --> N2 : references E6361
+N32 --> N2 : references E6362
+N35 --> N20 : references E6363
+N35 --> N33 : calls E6364
+N35 --> N22 : calls E6365
+N36 --> N23 : instantiates E6366
+@enduml

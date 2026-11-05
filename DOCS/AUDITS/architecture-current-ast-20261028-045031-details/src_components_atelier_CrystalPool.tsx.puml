@@ -1,0 +1,17 @@
+@startuml
+title src/components/atelier/CrystalPool.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "CrystalPool.tsx\nfile L1-37\nfile:src/components/atelier/CrystalPool.tsx" as N0
+rectangle "react\nimport L1-1\nimport:8645dc9f6b346fcd699b8b49bff4906d" as N1
+rectangle "CrystalPool\nfunction L4-36\nfunction:657e3801f25ca8cd27e7a98910488e9b" as N2
+rectangle "stir\nfunction L11-19\nfunction:febb01f4c406e236fc1f46126ca07d49" as N3
+rectangle "pulse\nfunction L20-20\nfunction:92e41693d82f8efda944d71823ab1c34" as N4
+N0 --> N1 : contains E698
+N0 --> N2 : contains E699
+N2 --> N3 : contains E700
+N2 --> N4 : contains E701
+N2 --> N4 : calls E4484
+N2 --> N3 : references E4485
+@enduml

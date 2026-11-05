@@ -1,0 +1,23 @@
+@startuml
+title src/services/sessionProfile.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "sessionProfile.ts\nfile L1-46\nfile:src/services/sessionProfile.ts" as N0
+rectangle "SessionProfileState\ninterface L1-6\ninterface:119b16908dfaa3a732ea3691f48dcd88" as N1
+rectangle "uid\nproperty L2-2\nproperty:cd556aa4d8e311c500e67ddcb7844468" as N2
+rectangle "status\nproperty L3-3\nproperty:3e02d59a862cdb4f06436db0ffeb4d23" as N3
+rectangle "profile\nproperty L4-4\nproperty:7978d0cb2d7c2b9da589d1a0a693ef0c" as N4
+rectangle "error\nproperty L5-5\nproperty:8c35ec881a9b7385713a244ce271f259" as N5
+rectangle "createSessionProfileLoader\nfunction L8-32\nfunction:444b9affbfbba2cb7361c1553f789eda" as N6
+rectangle "getEntryStage\nfunction L34-45\nfunction:4e4c8f2ade065939f2c546718f095af2" as N7
+N0 --> N1 : contains E2124
+N1 --> N2 : contains E2125
+N1 --> N3 : contains E2126
+N1 --> N4 : contains E2127
+N1 --> N5 : contains E2128
+N0 --> N6 : contains E2129
+N0 --> N7 : contains E2130
+N6 --> N1 : references E6067
+N7 --> N1 : references E6068
+@enduml

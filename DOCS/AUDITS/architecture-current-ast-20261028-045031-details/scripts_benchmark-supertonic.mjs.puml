@@ -1,0 +1,46 @@
+@startuml
+title scripts/benchmark-supertonic.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "benchmark-supertonic.mjs\nfile L1-43\nfile:scripts/benchmark-supertonic.mjs" as N0
+rectangle "@huggingface/transformers\nimport L1-1\nimport:de7a8fc7b5c675aa2ed5881f97d9b29f" as N1
+rectangle "node:fs/promises\nimport L2-2\nimport:1ac3fb5fb5b39b72f896c1971b7945b1" as N2
+rectangle "node:perf_hooks\nimport L3-3\nimport:d82388b261e6aa989295baacbc2860b8" as N3
+rectangle "revision\nconstant L5-5\nconstant:db86486cfa72d3d6c6455311268a2aa0" as N4
+rectangle "model\nconstant L6-6\nconstant:9c066fd66c10240a0f9420666b9f3e80" as N5
+rectangle "started\nconstant L9-9\nconstant:bd5a4a76eceb6d111e449f4ecdc058f7" as N6
+rectangle "engine\nconstant L10-13\nconstant:aff0dd8ad4132b7869130b71ec25fbfa" as N7
+rectangle "loadSeconds\nconstant L14-14\nconstant:d62bad62fb3da5f80f2dc215106eade8" as N8
+rectangle "response\nconstant L15-15\nconstant:1349a40f663fc327dd8cbc657e73ec56" as N9
+rectangle "voice\nconstant L17-17\nconstant:f0a592c9e44669a38085f3f2312a031f" as N10
+rectangle "paragraphs\nconstant L18-22\nconstant:9ead4d39977981bd044d370fc10c0a0d" as N11
+rectangle "chunks\nconstant L23-23\nconstant:6ffeeaf5cc0b1c2944b114e2e5e67d3b" as N12
+rectangle "before\nconstant L25-25\nconstant:43655356634f05ebcb3533c056245b05" as N13
+rectangle "output\nconstant L26-26\nconstant:60f96fdfbc0e1c5486c03fe419dff242" as N14
+rectangle "synthesisSeconds\nconstant L27-27\nconstant:57eaa045cdf3076e0a4cb54d6fbdcb98" as N15
+rectangle "playbackSeconds\nconstant L28-28\nconstant:e5694387c206c5d830fdc6764c5efbe1" as N16
+rectangle "result\nconstant L30-30\nconstant:61ee184f508b598b1c04cbfb2d81c01e" as N17
+rectangle "report\nconstant L34-38\nconstant:851c684fb0cd174354b9815a91044f31" as N18
+N0 --> N1 : contains E160
+N0 --> N2 : contains E161
+N0 --> N3 : contains E162
+N0 --> N4 : contains E163
+N0 --> N5 : contains E164
+N0 --> N6 : contains E165
+N0 --> N7 : contains E166
+N0 --> N8 : contains E167
+N0 --> N9 : contains E168
+N0 --> N10 : contains E169
+N0 --> N11 : contains E170
+N0 --> N12 : contains E171
+N0 --> N13 : contains E172
+N0 --> N14 : contains E173
+N0 --> N15 : contains E174
+N0 --> N16 : contains E175
+N0 --> N17 : contains E176
+N0 --> N18 : contains E177
+N17 --> N16 : references E178
+N17 --> N15 : references E179
+N14 --> N7 : calls E3965
+@enduml

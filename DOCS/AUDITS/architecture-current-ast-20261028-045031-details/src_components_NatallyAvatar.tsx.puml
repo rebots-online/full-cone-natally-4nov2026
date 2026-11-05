@@ -1,0 +1,25 @@
+@startuml
+title src/components/NatallyAvatar.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "NatallyAvatar.tsx\nfile L1-431\nfile:src/components/NatallyAvatar.tsx" as N0
+rectangle "react\nimport L1-1\nimport:125d5b7ae6ccf0939ecf281f654793a6" as N1
+rectangle "NatallyAvatarProps\ninterface L6-11\ninterface:e05aa52cd9ac311663826c710bbed95d" as N2
+rectangle "size\nproperty L7-7\nproperty:eb1eb8804abdaf370acf9d4973173b48" as N3
+rectangle "isAnimated\nproperty L8-8\nproperty:3fad49b90b053fad1c06eee7b4d0dd98" as N4
+rectangle "isSpeaking\nproperty L9-9\nproperty:bbabd13c4da23dedb0f73a5f098ae53c" as N5
+rectangle "className\nproperty L10-10\nproperty:48b2f94af3c6d4c40752a99c46a0af79" as N6
+rectangle "NatallyAvatar\nfunction L22-430\nfunction:ddcefc0f66f06464030b4cb584ca73b9" as N7
+rectangle "updateMotion\nfunction L36-36\nfunction:d5a2445bbb18af2f5cb77007d96e5f46" as N8
+N0 --> N1 : contains E858
+N0 --> N2 : contains E859
+N2 --> N3 : contains E860
+N2 --> N4 : contains E861
+N2 --> N5 : contains E862
+N2 --> N6 : contains E863
+N0 --> N7 : contains E864
+N7 --> N8 : contains E865
+N7 --> N8 : calls E4620
+N7 --> N8 : references E4621
+@enduml

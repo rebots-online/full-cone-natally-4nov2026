@@ -1,0 +1,84 @@
+@startuml
+title server.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "server.ts\nfile L1-488\nfile:server.ts" as N0
+rectangle "express\nimport L1-1\nimport:1cb08003e14076d13c5415b74af79775" as N1
+rectangle "path\nimport L2-2\nimport:ee0f0c045b11fde70a97779cdc76b937" as N2
+rectangle "fs\nimport L3-3\nimport:9b825b8179376fd06593ef9aa5f5764e" as N3
+rectangle "url\nimport L4-4\nimport:1aa91ef99ba9a6958e48bf5453cabfcc" as N4
+rectangle "@google/genai\nimport L5-5\nimport:c98ef4723beb18cafb418679e796fbda" as N5
+rectangle "mime\nimport L6-6\nimport:5138ea69c3f0e9532b9142f70d480491" as N6
+rectangle "./server/inference/registry\nimport L7-7\nimport:b0dd43754e7cd81d675303580baa8fd8" as N7
+rectangle "./server/inference/types\nimport L8-8\nimport:15cb50aad0fc088d076e20bc378dd6dc" as N8
+rectangle "./server/inference/metering\nimport L9-9\nimport:76b7a02f4f4689467e1d47768f84ab80" as N9
+rectangle "__filename\nconstant L11-11\nconstant:a18b5208a905a6f53a3566c93dceafb2" as N10
+rectangle "__dirname\nconstant L12-12\nconstant:d0c170d141f003697e18765b938bf5cb" as N11
+rectangle "detectedKeyLeakedOrInvalid\nvariable L14-14\nvariable:8bf6682d27d50f87113962eb7ed6f2c8" as N12
+rectangle "lastKnownApiKey\nvariable L15-15\nvariable:f79995bfdee1c78a250601da6f5d469a" as N13
+rectangle "syncEnvFile\nfunction L18-47\nfunction:2c25187b823f3993b66779653cffbc7c" as N14
+rectangle "getAIClient\nfunction L50-65\nfunction:3af433ce6913d502e9fc33373a4676aa" as N15
+rectangle "app\nconstant L67-67\nconstant:4a92873ad604b8ff961f0dcd31d07053" as N16
+rectangle "PORT\nconstant L68-68\nconstant:79a17bf6a2e099af99ab76848f49dd71" as N17
+rectangle "WavConversionOptions\ninterface L72-76\ninterface:c268d4894044abaccc4c0091671acb2e" as N18
+rectangle "numChannels\nproperty L73-73\nproperty:9b125ee83f3baa442881a846eb493f4a" as N19
+rectangle "sampleRate\nproperty L74-74\nproperty:5c4797c26085c7b2e616e9ca5086dff8" as N20
+rectangle "bitsPerSample\nproperty L75-75\nproperty:d66a157e5e9d4ea32f4908bcb012ce22" as N21
+rectangle "parseMimeType\nfunction L78-106\nfunction:6465610d9c2cf5ab3c9b81c6217be164" as N22
+rectangle "createWavHeader\nfunction L108-129\nfunction:1c5c40fec0e9edc86752a7bb4f410ddb" as N23
+rectangle "convertToWav\nfunction L131-136\nfunction:8d204fd3daf23374ac8d1a2bca400596" as N24
+rectangle "splitIntoSpeechChunks\nfunction L139-171\nfunction:467cd4d2ca399786afd2d513b11a1af4" as N25
+rectangle "serverTtsCache\nconstant L174-174\nconstant:d958ce051a36e3d02816c0ea22c13e54" as N26
+rectangle "POST /api/tts\nroute L177-177\nroute:server.ts:177:POST:/api/tts" as N27
+rectangle "POST /api/chat\nroute L367-367\nroute:server.ts:367:POST:/api/chat" as N28
+rectangle "POST /api/readings\nroute L424-424\nroute:server.ts:424:POST:/api/readings" as N29
+rectangle "startServer\nfunction L462-482\nfunction:26f53c4a32a12097967f892a73081d65" as N30
+N0 --> N1 : contains E414
+N0 --> N2 : contains E415
+N0 --> N3 : contains E416
+N0 --> N4 : contains E417
+N0 --> N5 : contains E418
+N0 --> N6 : contains E419
+N0 --> N7 : contains E420
+N0 --> N8 : contains E421
+N0 --> N9 : contains E422
+N0 --> N10 : contains E423
+N0 --> N11 : contains E424
+N0 --> N12 : contains E425
+N0 --> N13 : contains E426
+N0 --> N14 : contains E427
+N0 --> N15 : contains E428
+N0 --> N16 : contains E429
+N0 --> N17 : contains E430
+N0 --> N18 : contains E431
+N18 --> N19 : contains E432
+N18 --> N20 : contains E433
+N18 --> N21 : contains E434
+N0 --> N22 : contains E435
+N0 --> N23 : contains E436
+N0 --> N24 : contains E437
+N0 --> N25 : contains E438
+N0 --> N26 : contains E439
+N0 --> N30 : contains E440
+N11 --> N10 : references E441
+N14 --> N12 : references E442
+N15 --> N12 : references E443
+N15 --> N13 : references E444
+N30 --> N17 : references E445
+N30 --> N11 : references E446
+N0 --> N7 : imports E2892
+N0 --> N8 : imports E2893
+N0 --> N9 : imports E2895
+N0 --> N14 : calls E4073
+N15 --> N14 : calls E4074
+N22 --> N18 : references E4075
+N22 --> N18 : references E4077
+N23 --> N18 : references E4078
+N24 --> N22 : calls E4079
+N24 --> N23 : calls E4080
+N0 --> N15 : calls E4081
+N0 --> N24 : calls E4082
+N0 --> N25 : calls E4083
+N0 --> N30 : calls E4084
+@enduml

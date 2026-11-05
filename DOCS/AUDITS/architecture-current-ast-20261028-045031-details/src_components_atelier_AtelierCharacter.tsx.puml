@@ -1,0 +1,55 @@
+@startuml
+title src/components/atelier/AtelierCharacter.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AtelierCharacter.tsx\nfile L1-128\nfile:src/components/atelier/AtelierCharacter.tsx" as N0
+rectangle "react\nimport L1-1\nimport:863c40f90b7298de89c303deef598253" as N1
+rectangle "../../services/voiceService\nimport L2-2\nimport:9fe2c61acc7aacedf2c643090cf940a8" as N2
+rectangle "./AtelierScene\nimport L3-3\nimport:0baada2d68d37665c6938cce45801977" as N3
+rectangle "LEFT_HAND_PATH\nconstant L5-5\nconstant:5446db19bff20d1da2773520aaa61630" as N4
+rectangle "RIGHT_HAND_PATH\nconstant L6-6\nconstant:6d2c9398389eb21b634a3991fd448d62" as N5
+rectangle "HEAD_PATH\nconstant L10-10\nconstant:2abcbec7522c3cda8791f6133da7f37a" as N6
+rectangle "ANTENNA_PATH\nconstant L11-11\nconstant:e7688107cccb320f798c0a96c22b62c8" as N7
+rectangle "AtelierCharacter\nfunction L15-127\nfunction:6a94453b35810f7de9f9b476985444c7" as N8
+rectangle "clearMouth\nfunction L23-23\nfunction:41f0e03889b361f0ca4fe0f2d4c95f87" as N9
+rectangle "performanceEvent\nfunction L35-62\nfunction:5bff15e3c6be953f5645460aee2fe6f5" as N10
+rectangle "apply\nfunction L57-57\nfunction:aec526bd194fe8c92ab5024b6791a5dc" as N11
+rectangle "mishap\nfunction L68-85\nfunction:aed8761dc9e4f596e7fbc5fdd6a6ca9b" as N12
+rectangle "ref\nfunction L90-90\nfunction:3b629a1d8e666465cf8fbcf58a700ccc" as N13
+N0 --> N1 : contains E609
+N0 --> N2 : contains E610
+N0 --> N3 : contains E611
+N0 --> N4 : contains E612
+N0 --> N5 : contains E613
+N0 --> N6 : contains E614
+N0 --> N7 : contains E615
+N0 --> N8 : contains E616
+N8 --> N9 : contains E617
+N8 --> N10 : contains E618
+N10 --> N11 : contains E619
+N8 --> N12 : contains E620
+N8 --> N13 : contains E621
+N8 --> N7 : references E622
+N8 --> N6 : references E623
+N8 --> N5 : references E624
+N8 --> N4 : references E625
+N10 --> N9 : calls E4328
+N10 --> N11 : calls E4329
+N8 --> N9 : calls E4330
+N12 --> N9 : calls E4331
+N8 --> N9 : calls E4332
+N8 --> N13 : calls E4333
+N8 --> N13 : calls E4334
+N8 --> N13 : calls E4335
+N8 --> N13 : calls E4336
+N8 --> N13 : calls E4337
+N8 --> N13 : calls E4338
+N8 --> N13 : calls E4339
+N8 --> N13 : calls E4340
+N8 --> N13 : calls E4341
+N8 --> N13 : calls E4342
+N10 --> N11 : references E4343
+N8 --> N10 : references E4344
+N8 --> N12 : references E4345
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+title src/services/nativeAuth.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "nativeAuth.ts\nfile L1-24\nfile:src/services/nativeAuth.ts" as N0
+rectangle "@tauri-apps/api/core\nimport L1-1\nimport:484e1503e0f352a81566571e0e7a30cc" as N1
+rectangle "firebase/auth\nimport L2-2\nimport:894a1420dac15721e9bd10e2571afc16" as N2
+rectangle "isNativeDesktop\nfunction L4-6\nfunction:f0100abcaf03473f9a91dc077c845c19" as N3
+rectangle "signInNative\nfunction L8-18\nfunction:9fd531f2382390961dc4b63e3c5273d1" as N4
+rectangle "cancelNativeSignIn\nfunction L20-23\nfunction:6e3d6a326dea8f08a21df31f2a5dddf2" as N5
+N0 --> N1 : contains E1847
+N0 --> N2 : contains E1848
+N0 --> N3 : contains E1849
+N0 --> N4 : contains E1850
+N0 --> N5 : contains E1851
+N5 --> N3 : calls E5828
+@enduml

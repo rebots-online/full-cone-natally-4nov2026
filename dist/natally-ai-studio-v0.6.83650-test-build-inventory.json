@@ -1,0 +1,93 @@
+{
+  "major": 0,
+  "minor": 6,
+  "build": 83650,
+  "version": "0.6.83650",
+  "semverVersion": "0.6.83650",
+  "versionCode": 6,
+  "stampedAt": "2026-10-26T12:50:38.983Z",
+  "msiVersion": "0.0.6.18114",
+  "prefix": "natally-ai-studio-v0.6.83650",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "9d33808e631f875ac4c832dbbf3e22ea95540cd9",
+  "invocationId": "44c744b4-c40e-45f6-8a7c-985261e0dc00",
+  "phase": "frozen",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "failed",
+      "error": "Windows build failed: 1; any valid available artifacts were staged"
+    },
+    "nsis": {
+      "state": "failed",
+      "error": "Windows build failed: 1; any valid available artifacts were staged"
+    },
+    "msi": {
+      "state": "failed",
+      "error": "Windows build failed: 1; any valid available artifacts were staged"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "wsl failed with exit 1"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "wsl failed with exit 1"
+    },
+    "apk": {
+      "state": "failed",
+      "error": "node failed with exit 1"
+    },
+    "aab": {
+      "state": "failed",
+      "error": "node failed with exit 1"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "node failed with exit 1"
+    },
+    "web": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.6.83650-webapp.zip",
+      "bytes": 21431988,
+      "sha256": "ebea0d2e53620527c55d583c059136a557638b1c237b1fab97b4569f975e73d0",
+      "evidence": "Web production bundle and visible v0.6.83650; archive includes site, version and installer",
+      "verifiedAt": "2026-10-26T12:53:09.335Z"
+    },
+    "web-installer": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.6.83650-install-web.sh",
+      "bytes": 2978,
+      "sha256": "f9e6c73b94b45f4746b62b353059ed153a93e412a447e84d0fe9423a97807bce",
+      "evidence": "nginx/Apache installer; syntax and both previews pass under Ubuntu 24.04 Bash; target-server installation not exercised",
+      "verifiedAt": "2026-10-26T12:53:10.225Z"
+    }
+  },
+  "sourceFingerprint": "b56d3c61607d33933a8df095deec3c8fb45f6f7082401296c94edda36a44c3d2",
+  "inputError": "Release inputs changed or are not frozen. Start a new full matrix invocation; do not reuse this stamp.",
+  "sourceInputsMatch": false,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols"
+  ],
+  "completedAt": "2026-10-26T12:53:28.749Z"
+}

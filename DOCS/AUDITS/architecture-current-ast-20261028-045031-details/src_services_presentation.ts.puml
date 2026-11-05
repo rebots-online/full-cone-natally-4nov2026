@@ -1,0 +1,97 @@
+@startuml
+title src/services/presentation.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "presentation.ts\nfile L1-98\nfile:src/services/presentation.ts" as N0
+rectangle "./ephemeris\nimport L1-1\nimport:14e24552eb0ad61f33e0fdcb9d5c6823" as N1
+rectangle "./chartTargets\nimport L2-2\nimport:c56007f3cd0e772dbb4af64f0f23b369" as N2
+rectangle "PresentationView\ntype_alias L3-3\ntype_alias:5a8e701c4249728c48a96a08aa7fdef6" as N3
+rectangle "PresentationPanel\ntype_alias L4-4\ntype_alias:9754c97bc1249c7726258d32b38a9496" as N4
+rectangle "PresentationAction\ntype_alias L5-5\ntype_alias:49d807f85e4f65a460ba70248668e69b" as N5
+rectangle "PresentationCue\ninterface L6-6\ninterface:b150e832741bf6e5313c4875e85f8cc2" as N6
+rectangle "action\nproperty L6-6\nproperty:04ab6b2ae0991c6d11994ccea5327516" as N7
+rectangle "offset\nproperty L6-6\nproperty:b73c4717ed02fa3048e5d264f52e9245" as N8
+rectangle "PresentationReceipt\ninterface L7-7\ninterface:9c29687d03bbaafbb8adbe327f64edfe" as N9
+rectangle "status\nproperty L7-7\nproperty:09b36b1a732842a5723f7f11dc1d7be7" as N10
+rectangle "chartKey\nproperty L7-7\nproperty:5c60386a49e44989d18d651256983337" as N11
+rectangle "sequence\nproperty L7-7\nproperty:5df18384c0bf3d0af515ab06ae3a610a" as N12
+rectangle "action\nproperty L7-7\nproperty:d12ea82d179e9d90bea3b2fbc7d94031" as N13
+rectangle "PresentationState\ninterface L8-8\ninterface:3ddf8faee9b4a5ff62c09fb378164b07" as N14
+rectangle "focusTargets\nproperty L8-8\nproperty:2cf0593f0147e66bbc107cb7cb8ef799" as N15
+rectangle "panel\nproperty L8-8\nproperty:4d90d3526d6a00cee9d7514a8685dd95" as N16
+rectangle "view\nproperty L8-8\nproperty:a09cf3fe567b1329a5a1ad521bb3c5fe" as N17
+rectangle "chartKey\nproperty L8-8\nproperty:a37b839baddd6b6d9d1fca994b142bf4" as N18
+rectangle "follow\nproperty L8-8\nproperty:b58834cb0d6bd8c988a7a57c73600e3e" as N19
+rectangle "lastReceipt\nproperty L8-8\nproperty:df7fbd77a44196e8a33b1cee35d9262b" as N20
+rectangle "selectedTargets\nproperty L8-8\nproperty:dffaeb668131c9d2e89ae474effa4c15" as N21
+rectangle "sequence\nproperty L8-8\nproperty:ef9613bc0f4b5547b6210c0f7c5d4b6f" as N22
+rectangle "initialPresentation\nfunction L9-9\nfunction:4a1e6fd868b105591292a921dddba9b6" as N23
+rectangle "validatePresentationAction\nfunction L10-19\nfunction:f09d187dda51bd880ad51d1eb827857d" as N24
+rectangle "reducePresentation\nfunction L20-30\nfunction:a72d9cffb8b52dbc69217fa78740fd02" as N25
+rectangle "validatePresentationCues\nfunction L31-44\nfunction:5155fe986e94c08c4efa014db0f00108" as N26
+rectangle "presentationActionsAt\nfunction L45-45\nfunction:4f6a3f8b16f2e880fb74f060ee0860eb" as N27
+rectangle "presentationFocusAt\nfunction L47-54\nfunction:7f7012c359f691fc385691e922064447" as N28
+rectangle "presentationViewAt\nfunction L55-62\nfunction:b73959277544d8b2115a25a55594bef0" as N29
+rectangle "withReadingCamera\nfunction L65-92\nfunction:4b331137f9b4338f52cfb3d32a526f0c" as N30
+rectangle "buildPresentationContext\nfunction L93-97\nfunction:2660614e7b507282fc6f9ef8e398985a" as N31
+N0 --> N1 : contains E1887
+N0 --> N2 : contains E1888
+N0 --> N3 : contains E1889
+N0 --> N4 : contains E1890
+N0 --> N5 : contains E1891
+N0 --> N6 : contains E1892
+N6 --> N8 : contains E1893
+N6 --> N7 : contains E1894
+N0 --> N9 : contains E1895
+N9 --> N12 : contains E1896
+N9 --> N11 : contains E1897
+N9 --> N13 : contains E1898
+N9 --> N10 : contains E1899
+N0 --> N14 : contains E1900
+N14 --> N18 : contains E1901
+N14 --> N21 : contains E1902
+N14 --> N15 : contains E1903
+N14 --> N17 : contains E1904
+N14 --> N16 : contains E1905
+N14 --> N19 : contains E1906
+N14 --> N22 : contains E1907
+N14 --> N20 : contains E1908
+N0 --> N23 : contains E1909
+N0 --> N24 : contains E1910
+N0 --> N25 : contains E1911
+N0 --> N26 : contains E1912
+N0 --> N27 : contains E1913
+N0 --> N28 : contains E1914
+N0 --> N29 : contains E1915
+N0 --> N30 : contains E1916
+N0 --> N31 : contains E1917
+N5 --> N3 : references E5850
+N5 --> N4 : references E5851
+N7 --> N5 : references E5852
+N13 --> N5 : references E5853
+N17 --> N3 : references E5854
+N16 --> N4 : references E5855
+N20 --> N9 : references E5856
+N23 --> N14 : references E5857
+N24 --> N5 : references E5860
+N25 --> N14 : references E5863
+N25 --> N5 : references E5864
+N25 --> N14 : references E5866
+N25 --> N24 : calls E5868
+N26 --> N6 : references E5872
+N26 --> N6 : references E5875
+N26 --> N24 : calls E5876
+N27 --> N6 : references E5879
+N27 --> N5 : references E5880
+N28 --> N6 : references E5882
+N28 --> N5 : references E5883
+N28 --> N5 : references E5885
+N29 --> N6 : references E5886
+N29 --> N3 : references E5887
+N29 --> N3 : references E5889
+N30 --> N6 : references E5890
+N30 --> N6 : references E5891
+N30 --> N6 : references E5893
+N31 --> N14 : references E5894
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+title tests/birth-date.test.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "birth-date.test.ts\nfile L1-94\nfile:tests/birth-date.test.ts" as N0
+rectangle "node:test\nimport L1-1\nimport:cf32b28320732d147b35ef19b944bd15" as N1
+rectangle "node:assert/strict\nimport L2-2\nimport:5ba117e1d47c58a31ac3e0b53d524430" as N2
+rectangle "react\nimport L3-3\nimport:1c93a2d802667cf77c93b9e133acf2de" as N3
+rectangle "react-dom/server\nimport L4-4\nimport:a4a3553d0f0e04e6d2a75ec4f770953b" as N4
+rectangle "../src/services/birthDate\nimport L5-5\nimport:f520f724f865b92caa33207a219a0bc5" as N5
+rectangle "../src/components/onboarding/BirthDateFields\nimport L6-6\nimport:f686ebffed8b2747081e8a109cddec6b" as N6
+rectangle "maximum\nconstant L8-8\nconstant:55bd514c2818f8e840345d584ddccc34" as N7
+N0 --> N1 : contains E2619
+N0 --> N2 : contains E2620
+N0 --> N3 : contains E2621
+N0 --> N4 : contains E2622
+N0 --> N5 : contains E2623
+N0 --> N6 : contains E2624
+N0 --> N7 : contains E2625
+@enduml

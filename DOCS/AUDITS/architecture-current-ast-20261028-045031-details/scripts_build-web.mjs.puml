@@ -1,0 +1,19 @@
+@startuml
+title scripts/build-web.mjs — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "build-web.mjs\nfile L1-14\nfile:scripts/build-web.mjs" as N0
+rectangle "node:fs\nimport L2-2\nimport:74d7c21023af6e764c9ddac373772ff6" as N1
+rectangle "node:child_process\nimport L3-3\nimport:1b54a6404e181508776da35dd373d445" as N2
+rectangle "./release-state.mjs\nimport L4-4\nimport:af86faac02617b7c3d9685efe0b9d921" as N3
+rectangle "./pwa-build.mjs\nimport L5-5\nimport:b313177b1b7c703e7e73ee4c836a1ed5" as N4
+rectangle "release\nconstant L6-6\nconstant:51dd55b0ffc86877391adb4eb02ad0e7" as N5
+rectangle "entry\nconstant L7-7\nconstant:4ea2dc8ebe783cc8e4ff88c316a5aa4c" as N6
+N0 --> N1 : contains E185
+N0 --> N2 : contains E186
+N0 --> N3 : contains E187
+N0 --> N4 : contains E188
+N0 --> N5 : contains E189
+N0 --> N6 : contains E190
+@enduml

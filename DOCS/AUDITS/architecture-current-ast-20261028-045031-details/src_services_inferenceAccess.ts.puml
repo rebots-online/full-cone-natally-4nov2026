@@ -1,0 +1,34 @@
+@startuml
+title src/services/inferenceAccess.ts — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "inferenceAccess.ts\nfile L1-53\nfile:src/services/inferenceAccess.ts" as N0
+rectangle "./accountStorage\nimport L1-1\nimport:a7d36773b4e6e1d0dd2b38c16d5224bf" as N1
+rectangle "keyStorageBase\nconstant L3-3\nconstant:1be7fc3093535e546974ea25752d824d" as N2
+rectangle "sourceStorageBase\nconstant L4-4\nconstant:046f188c0358799436ab06f7c516a03d" as N3
+rectangle "InferenceKeySource\ntype_alias L5-5\ntype_alias:ffdd7b123ae4be97c05b5d6f198215c7" as N4
+rectangle "loadInferenceKeySource\nfunction L7-13\nfunction:b76f28cf75ce019ce18f04ed35f28e08" as N5
+rectangle "loadInferenceKey\nfunction L15-24\nfunction:aae804d223ca27dd685377743a4cf100" as N6
+rectangle "installInferenceKey\nfunction L27-45\nfunction:147e7ef41685a91959d399fea6c651d2" as N7
+rectangle "removeInferenceKey\nfunction L47-52\nfunction:d3a5a59ff8a73a0460086192b39ee959" as N8
+N0 --> N1 : contains E1747
+N0 --> N2 : contains E1748
+N0 --> N3 : contains E1749
+N0 --> N4 : contains E1750
+N0 --> N5 : contains E1751
+N0 --> N6 : contains E1752
+N0 --> N7 : contains E1753
+N0 --> N8 : contains E1754
+N5 --> N3 : references E1755
+N6 --> N3 : references E1756
+N6 --> N2 : references E1757
+N7 --> N3 : references E1758
+N7 --> N2 : references E1759
+N8 --> N3 : references E1760
+N8 --> N2 : references E1761
+N5 --> N4 : references E5744
+N5 --> N6 : calls E5747
+N7 --> N4 : references E5750
+N7 --> N6 : calls E5753
+@enduml

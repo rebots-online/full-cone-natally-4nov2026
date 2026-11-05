@@ -1,0 +1,97 @@
+{
+  "major": 0,
+  "minor": 1,
+  "build": 73726,
+  "version": "0.1.73726",
+  "versionCode": 1,
+  "stampedAt": "2026-10-19T15:26:27.721Z",
+  "msiVersion": "0.0.1.8190",
+  "prefix": "natally-ai-studio-v0.1.73726",
+  "kind": "tauri2-test-build",
+  "productionRelease": false,
+  "gitCommit": "a4d4892715c9aed33add2bc32c0d840fde5240f3",
+  "phase": "frozen",
+  "required": [
+    "windows-exe",
+    "nsis",
+    "msi",
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web",
+    "web-installer"
+  ],
+  "artifacts": {
+    "windows-exe": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.1.73726-win11-x64-standalone.exe",
+      "bytes": 18352128,
+      "sha256": "c1d855f645610113ed2ab117c34180d00c0f7d4266a0b9318ccf6910f81b0816",
+      "evidence": "PE ProductVersion=0.1.73726; unsigned Tauri test, WebView2 required",
+      "verifiedAt": "2026-10-19T15:33:38.687Z"
+    },
+    "nsis": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.1.73726-win11-x64-nsis.exe",
+      "bytes": 11542572,
+      "sha256": "71002dce5de4df1144c2badc8134311e48eadb8cc0c20ca11208662480bcb826",
+      "evidence": "Tauri package version 0.1.73726; MSI numeric mapping 0.0.1.8190; unsigned test installer",
+      "verifiedAt": "2026-10-19T15:33:38.973Z"
+    },
+    "msi": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.1.73726-win11-x64-msi.msi",
+      "bytes": 12472320,
+      "sha256": "6c4073f8297ff20b10f6e4cd1670d5d86bb14234be683f9090227adad5cabd6d",
+      "evidence": "Tauri package version 0.1.73726; MSI numeric mapping 0.0.1.8190; unsigned test installer",
+      "verifiedAt": "2026-10-19T15:33:39.348Z"
+    },
+    "appimage": {
+      "state": "failed",
+      "error": "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+    },
+    "deb": {
+      "state": "failed",
+      "error": "The existing Ubuntu-24.04 is not responding; no substitute distribution was created"
+    },
+    "apk": {
+      "state": "failed",
+      "error": "Android build failed: 1; available artifacts were staged"
+    },
+    "aab": {
+      "state": "failed",
+      "error": "Android build failed: 1; available artifacts were staged"
+    },
+    "android-symbols": {
+      "state": "failed",
+      "error": "Android build failed: 1; available artifacts were staged"
+    },
+    "web": {
+      "state": "verified",
+      "path": "dist/natally-ai-studio-v0.1.73726-webapp.zip",
+      "bytes": 11853090,
+      "sha256": "c10fc8329d2c0d1159269e986ecfec1a8cde74628cea7db78db8a306a86b11a3",
+      "evidence": "Web production bundle and visible v0.1.73726; archive includes site, version and installer",
+      "verifiedAt": "2026-10-19T15:27:26.410Z"
+    },
+    "web-installer": {
+      "state": "failed",
+      "error": "Web ZIP collected; installer validation requires the existing Ubuntu-24.04 to respond"
+    }
+  },
+  "sourceFingerprint": "bde987983e99d6b3b138e6b2173627e6dc98b6d65221f635c6b8a17f79b954ed",
+  "inputError": "Release inputs changed or are not frozen. Start a new full matrix invocation; do not reuse this stamp.",
+  "sourceInputsMatch": false,
+  "artifactMatrixComplete": false,
+  "missing": [
+    "appimage",
+    "deb",
+    "apk",
+    "aab",
+    "android-symbols",
+    "web-installer"
+  ],
+  "completedAt": "2026-10-19T15:41:09.289Z"
+}

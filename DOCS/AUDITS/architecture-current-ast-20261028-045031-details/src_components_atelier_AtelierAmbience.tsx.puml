@@ -1,0 +1,35 @@
+@startuml
+title src/components/atelier/AtelierAmbience.tsx — indexed symbols
+caption Descriptive snapshot f3470d4 | IDs below map to graph.json
+skinparam linetype ortho
+skinparam shadowing false
+rectangle "AtelierAmbience.tsx\nfile L1-52\nfile:src/components/atelier/AtelierAmbience.tsx" as N0
+rectangle "react\nimport L1-1\nimport:d8ff052e4ffd6e69323b393ce97dd845" as N1
+rectangle "../../services/presentation\nimport L2-2\nimport:252b02782be52504a0d9325f38e6fd12" as N2
+rectangle "./AtelierScene\nimport L3-3\nimport:32f42f87c85194ec259ae79ff6ac26c2" as N3
+rectangle "AtelierAmbience\nfunction L5-51\nfunction:0700b070f143f1ea77eb3da27cb19571" as N4
+rectangle "adjust\nfunction L14-20\nfunction:48907a4979cf54715a9729cb6ce2ad83" as N5
+rectangle "stop\nfunction L21-21\nfunction:576e40d53befe628a0471b9991cb1aed" as N6
+rectangle "activate\nfunction L24-24\nfunction:13a26a7b563437dbe65b640d0e6b4554" as N7
+rectangle "visibility\nfunction L25-25\nfunction:a6db2c91cb7b744abfc0ff31630b9005" as N8
+rectangle "start\nfunction L32-49\nfunction:1aad807d0a327900ea1a512f29b06e06" as N9
+N0 --> N1 : contains E600
+N0 --> N2 : contains E601
+N0 --> N3 : contains E602
+N0 --> N4 : contains E603
+N4 --> N5 : contains E604
+N4 --> N6 : contains E605
+N4 --> N7 : contains E606
+N4 --> N8 : contains E607
+N4 --> N9 : contains E608
+N4 --> N5 : calls E4317
+N7 --> N9 : calls E4318
+N8 --> N7 : calls E4319
+N4 --> N7 : calls E4320
+N4 --> N6 : calls E4321
+N9 --> N5 : calls E4322
+N9 --> N6 : calls E4323
+N4 --> N9 : calls E4324
+N4 --> N7 : references E4325
+N4 --> N8 : references E4326
+@enduml

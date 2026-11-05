@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-28",
+  "identityPublishedThrough": "8356c2163665a0dc1479f97deda5a8a9aa6572e8",
+  "paymentNative": {
+    "phase": "payment-native",
+    "head": "1fc6132733357f7c5540564a61f6bd3070f8d2fa",
+    "remoteVerifiedEachLine": true,
+    "commits": 1431,
+    "oneSourceLinePerCommit": true,
+    "finalNormalizedBlobsMatch": 17
+  },
+  "completedMatrix": {
+    "version": "1.13.86779",
+    "productionRelease": false,
+    "files": [
+      "package.json",
+      "package-lock.json",
+      "src-tauri/Cargo.toml",
+      "src-tauri/Cargo.lock",
+      "src-tauri/tauri.conf.json",
+      "version.json",
+      "version.txt",
+      "dist/natally-ai-studio-v1.13.86779-NOT-A-RELEASE.md",
+      "dist/natally-ai-studio-v1.13.86779-build.log",
+      "dist/natally-ai-studio-v1.13.86779-test-build-inventory.json",
+      "dist/natally-ai-studio-v1.13.86779-test-build-inventory.xml"
+    ],
+    "remote": "fc738752137f8713a55b6d464cca9c6f9449a213",
+    "commit": "fc738752137f8713a55b6d464cca9c6f9449a213",
+    "phase": "matrix"
+  },
+  "deployExisting": {
+    "base": "fc738752137f8713a55b6d464cca9c6f9449a213",
+    "head": "c6c0df570ec244460c1a22e71034d6e6fbab64e7",
+    "commits": 735,
+    "remoteVerifiedEachLine": true,
+    "oneSourceLinePerCommit": true,
+    "finalNormalizedBlobsMatch": 5
+  },
+  "unchangedProtectedWorkingFiles": true,
+  "unrelatedMarketingResumeFooterExcluded": true,
+  "verificationBoundary": "Source/blob/publication verification. Existing build and deployment evidence remains separate from real store purchasing, known-purchaser Restore, ROCHE grants and automatic managed-key acceptance."
+}
