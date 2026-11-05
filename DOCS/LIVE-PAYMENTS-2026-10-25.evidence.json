@@ -1,0 +1,126 @@
+{
+  "observedAt": "2026-10-26T03:26:04Z",
+  "branch": "codex/live-payments",
+  "sourceCommit": "20a3531178cceca547adc1983883a16cc5cb9e68",
+  "assetCommit": "990961da548aa83f7acc8b751fac0c2a64cab9ac",
+  "backendConfigCommit": "9e72b1356473b4b17c67eaa6ba35826c64d73bcd",
+  "frontend": {
+    "production": "https://natally.surge.sh",
+    "release": "https://1792984505278-natally.surge.sh",
+    "deployed": true,
+    "hashes": [
+      {
+        "file": "index.html",
+        "sha256": "19FADACC6E414E60FA1A1A30D3FE21F3DBB537DC08E35DDF429DF95995C464F6",
+        "matchesLive": true
+      },
+      {
+        "file": "assets/app-BYfvbgE5.js",
+        "sha256": "64E12EBD7D09F30FD0FC2DCF4E5B1D2E097A8D802858DB21B5F462BB6DEE258D",
+        "matchesLive": true
+      },
+      {
+        "file": "assets/app-d72iUPKE.css",
+        "sha256": "06B6AC18AE8B7ED0B559FBCACFD558D1BA99D71536D1AFCFB049EE62BCA7A983",
+        "matchesLive": true
+      }
+    ],
+    "browser": {
+      "surface": "Codex in-app browser",
+      "observed": "Signed-out Natally sign-in screen",
+      "capturedWarningsAndErrors": 0,
+      "authenticatedCheckoutVerified": false
+    }
+  },
+  "backend": {
+    "siteId": "f48513f6-0319-4672-8959-4d3f4c7fd1b5",
+    "deployed": false,
+    "lastAttempt": {
+      "id": "6adec78f312a64be993861d0",
+      "state": "error",
+      "error": "Failed during stage 'building site': Build script returned non-zero exit code: 4",
+      "detailedLogAccessible": false
+    },
+    "localFunctionBundling": "passed",
+    "databaseProvisioned": null,
+    "liveUnsignedPost": {
+      "/billing/access": 401,
+      "/billing/customer": 404,
+      "/billing/revenuecat/webhook": 404
+    }
+  },
+  "revenuecat": {
+    "projectId": "projaba0bd94",
+    "appId": "app941a60bf95",
+    "currency": "ROCHE",
+    "offeringId": "ofrng352609e01b",
+    "pricePlan": "d1e26d09-ea31-4f6b-b072-90be9a58ef84",
+    "products": [
+      {
+        "id": "proda88125bed7",
+        "usdMicros": 990000
+      },
+      {
+        "id": "prod2f046e3b64",
+        "usdMicros": 990000
+      }
+    ],
+    "pricesAppliedAndReadBack": true,
+    "webhookRegistered": false,
+    "webhookRegistrationBlock": "Automatic approval review: blocked by policy",
+    "realPaymentMade": false
+  },
+  "firebase": {
+    "verifiedAt": "2026-10-26T04:27:04Z",
+    "administrationAccount": "robinsaiworld@gmail.com",
+    "projectId": "gen-lang-client-0714568880",
+    "projectNumber": "358982402678",
+    "appId": "1:358982402678:web:b58ae851992532cf66d557",
+    "databaseId": "ai-studio-remixastrosphere-1ee57c33-6487-411a-a872-59fbf4cbfc63",
+    "localDisplayName": "Natally",
+    "remoteDisplayNameChanged": true,
+    "remoteProjectDisplayName": "Natally",
+    "remoteWebAppDisplayName": "Natally",
+    "oauthBrandDisplayName": "Natally",
+    "oauthBrandSaved": true,
+    "oauthPublishingStatus": "Testing",
+    "oauthSupportEmail": "robinsaiworld@gmail.com",
+    "oauthDeveloperContact": "robinsaiworld@gmail.com",
+    "authDomain": "gen-lang-client-0714568880.firebaseapp.com",
+    "projectAppAndDatabaseIdsPreserved": true,
+    "verificationScreenshot": "DEMONSTRATIONS/2026-10-26-natally-google-branding.jpg",
+    "capabilitySyncLiveVerified": false,
+    "managementSignIn": "authenticated"
+  },
+  "checks": {
+    "billingTests": {
+      "passed": 12,
+      "failed": 0
+    },
+    "productionBuild": "passed",
+    "typecheck": "pre-existing tests/mascot.test.tsx:16 avatarUrl prop error",
+    "dependencyAudit": {
+      "high": 8,
+      "critical": 1,
+      "resolved": false
+    }
+  },
+  "runtimeSecretsInstalled": [
+    "REVENUECAT_WEBHOOK_AUTH",
+    "BILLING_KEY_ENCRYPTION_KEY"
+  ],
+  "remainingExternalConfiguration": [
+    "REVENUECAT_SECRET_API_KEY",
+    "FIREBASE_SERVICE_ACCOUNT_JSON",
+    "OPENROUTER_ADMIN_KEY",
+    "Netlify Database or BILLING_DATABASE_URL",
+    "ALBY_NWC_URL",
+    "BLINK_API_KEY",
+    "BLINK_WALLET_ID",
+    "X402_FACILITATOR_URL",
+    "X402_FACILITATOR_TOKEN if required by provider",
+    "X402_NETWORK",
+    "X402_ASSET",
+    "X402_PAY_TO"
+  ]
+}

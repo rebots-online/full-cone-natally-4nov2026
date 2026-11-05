@@ -1,0 +1,24 @@
+# Continuous purchase-to-reading demonstration
+
+Architected with BP01–BP12 and the billing checklist, 23 October 2026. This is one
+continuous user trajectory with receipts at the relevant moment, not isolated success
+screens. Keep the full earlier onboarding/reading/atelier/export journey open.
+Any external service that is unavailable leaves its scene unfinished. Do not simulate
+settlement, impersonate a paying customer, or label a callback as provider confirmation.
+
+| Scene | User trajectory and visible evidence | Requirements / tasks |
+| --- | --- | --- |
+| BJ1 | Begin on the real released app. Sign in, show account identity and reading-access state. Follow the existing authorized erase → refresh → six onboarding steps path; choose Plain English, then complete onboarding without a permission error. Retain the complete initial reading, own Gen-Z voice, spoken/chart passage alignment and full/inset interaction from JR1–JR4. | BP10; BP-2, RP-1, DI-2 |
+| BJ2 | Show the $30 PDF/hosted SPA offer, ten included conversational turns summarized in both, actual currency and one-year term. Show the policy's separate internal cost provision and complete cost/subsidy calculation alongside the operator record; no $12 customer inference balance. Dismiss the offer outside and continue free. Explore the reading and follow a download action back to the same offer; no charge or grant has occurred. | BP01, BP06, BP08, BP11–BP12; BP-3 |
+| BJ3 | On a customer account without managed access, complete a real authorized qualifying RevenueCat purchase. Show its receipt/reference and the client automatically entering preparing-access state. Show authenticated service reconciliation of that same transaction, one ledger allocation, one created managed key hash, and the provider's observed limit. Do not display bearer secrets in the shared recording. | BP02–BP07, BP09; BP-4, BP-5 |
+| BJ4 | Return to the reading without copying a key manually. Show ten included turns, direct browser inference, natural voice and relationship highlighting. Continue through five questions about the reading; one completed answer consumes one turn despite tools/TTS/replay. After the second and fifth answer, open the PDF and SPA summary and show the same revision covering all completed exchanges with the original observation retained. Show the sixth-question continuation offer, while purchased summary and replay remain accessible. Recover any interrupted exchange under its same turn ID without a duplicate debit. Show hosted expiry one year from purchase, unaffected by summary updates. | BP07–BP09, BP11–BP12; BP-3, BP-5, existing download/archive tasks |
+| BJ5 | From this same session, purchase a configured top-up. Show paid USD basis and configured allocation fraction, then the exact added allowance. Show the key hash/generation unchanged, cumulative limit increased once and usage retained. Continue a reading with that same key. | BP03, BP05–BP07; BP-4, BP-5 |
+| BJ6 | Close/reopen or refresh the app, use Restore/Check access and show recovered access. Follow the same settled transaction through repeated reconciliation and duplicate webhook delivery; show unchanged ledger grant count and unchanged absolute limit. A lost response must recover the original operation, not add another allowance. | BP02, BP04–BP07; BP-4, BP-5 |
+| BJ7 | Navigate to Robin's development account and show the personal-key label and unlimited provider metadata. A managed-access check must not replace or cap it. Switch accounts during a pending access request, then return: no key, entitlement or late response may cross accounts. | BP05–BP07; BP-3, BP-5 |
+| BJ8 | In the same recorded operational journey, open the real purchase record and its available provider recovery/history. Demonstrate an authorized refund/reversal if one is available: retain consumed usage and reverse the original grant once. Distinguish renewal cancellation from refund. Follow any pending operation through retry to its final provider readback. If these events cannot actually be exercised, leave the corresponding clauses unfinished. | BP04, BP05, BP09; BP-4, BP-5 |
+| BJ9 | End on the app with the correct account, ready access and playable reading. Show the exact deployment revision, source commit, remote master and clean working tree. Retain the recording plus timestamps/receipt identifiers mapping all preceding scenes to the checklist; do not expose private credentials or another user's data. | BP01–BP10; BP-5 |
+
+Configuration absence is demonstrable as an honest unavailable state but does not
+complete purchase, key issuance, archive hosting or refund scenes. No extra paid
+transaction or irreversible refund is authorized merely by this script; use the
+operator-authorized transaction and scope when demonstrating those actions.
