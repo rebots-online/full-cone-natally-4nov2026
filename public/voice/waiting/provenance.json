@@ -1,0 +1,24 @@
+{
+  "model": "onnx-community/Supertonic-TTS-ONNX",
+  "revision": "cff123c84b0655d9d647641f1b532c3cbb8f7faa",
+  "voice": "F4",
+  "speed": 0.9,
+  "generatedAt": "2026-10-23T19:14:19.564Z",
+  "phrases": {
+    "look-v2": "Let me take a closer look.",
+    "moment-v2": "Give me a moment.",
+    "thread-v2": "Let me follow that thread."
+  },
+  "preparation": {
+    "look-v2": {
+      "sourceFile": "closer.wav",
+      "steps": 5
+    },
+    "moment-v2": {
+      "steps": 16
+    },
+    "thread-v2": {
+      "steps": 16
+    }
+  }
+}

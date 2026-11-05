@@ -1,0 +1,15 @@
+{
+  "id": "d033e062f274489b97cf17ee3c1bc851",
+  "name": "projects/8460014353109836944/screens/d033e062f274489b97cf17ee3c1bc851",
+  "deviceType": "DESKTOP",
+  "title": "natally-ai-studio \u2014 Profile and billing preview",
+  "width": "2560",
+  "height": "2048",
+  "sourceHtmlSha256": "302685475a299408c28af56edf5edbbe739f814c59f2eac53dc15089946cdeb4",
+  "stitchDesignSystem": "assets/ab5e069a119a4701859c9b86d2cd2c50",
+  "observedDate": "2026-10-21",
+  "getScreenReadbackSha256": "302685475a299408c28af56edf5edbbe739f814c59f2eac53dc15089946cdeb4",
+  "cloudArtifactReadbackVerified": true,
+  "listedInProjectCanvas": false,
+  "canvasStatus": "get_screen succeeds, but get_project/list_screens do not yet enumerate the generated source. Do not claim canvas synchronization."
+}

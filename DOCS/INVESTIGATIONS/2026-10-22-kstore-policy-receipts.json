@@ -1,0 +1,102 @@
+{
+  "receipts": [
+    {
+      "path": "SPEC_CONVENTIONS/architecture-checklist-continuous-demonstration.md",
+      "source": "admin-manual",
+      "sha256": "de4cc7460df6bd7d6cfaf35986ea22747c06339c76ee7f9c2c0385a1fe5f080e",
+      "duplicate": false,
+      "indexing": "pending",
+      "doc_uuid": "01a1646f-fd0f-8001-a6cd-ff6133f3c6c5",
+      "revision": 1,
+      "chunks": 6,
+      "entity_uuids": [
+        "01a1646f-fd12-8001-a6ce-52c20b0e1b3d",
+        "01a1646f-fd14-8001-a6cf-23581bee11e0",
+        "01a1646f-fd14-8001-a6d0-18de862b4674",
+        "01a1646f-fd15-8001-a6d1-28e9520153d7",
+        "01a1646f-fd15-8001-a6d2-de7a3b96839e",
+        "01a1646f-fd16-8001-a6d3-58d299362a19"
+      ],
+      "written_at": "2026-10-22T16:27:03.294259+00:00",
+      "verified": {
+        "doc_uuid": "01a1646f-fd0f-8001-a6cd-ff6133f3c6c5",
+        "revision": 1,
+        "revision_sha256": "de4cc7460df6bd7d6cfaf35986ea22747c06339c76ee7f9c2c0385a1fe5f080e",
+        "byte_exact_readback": true,
+        "postgres_entities": 6
+      },
+      "served": {
+        "doc_uuid": "01a1646f-fd0f-8001-a6cd-ff6133f3c6c5",
+        "revision": 1,
+        "source_type": "admin-manual",
+        "sha256": "de4cc7460df6bd7d6cfaf35986ea22747c06339c76ee7f9c2c0385a1fe5f080e",
+        "byte_exact_readback": true,
+        "verified_at": "2026-10-22T16:27:03.762557+00:00"
+      }
+    },
+    {
+      "path": "operations/urgent-tasks/KSTORE-URGENT-20261022-KICKSTART-HOOK-COMPLETION.json",
+      "source": "agent-task-ledger",
+      "sha256": "b12f2ad0c6dffcb61a0eff261c4e8bc9c9f3926d174b1d974fd7172ae60d35a6",
+      "duplicate": false,
+      "indexing": "pending",
+      "doc_uuid": "01a1646f-ffbb-8001-a6d4-ff2936dd7ad6",
+      "revision": 1,
+      "chunks": 1,
+      "entity_uuids": [
+        "01a1646f-ffbd-8001-a6d5-89c332bdaed3"
+      ],
+      "written_at": "2026-10-22T16:27:03.970345+00:00",
+      "verified": {
+        "doc_uuid": "01a1646f-ffbb-8001-a6d4-ff2936dd7ad6",
+        "revision": 1,
+        "revision_sha256": "b12f2ad0c6dffcb61a0eff261c4e8bc9c9f3926d174b1d974fd7172ae60d35a6",
+        "byte_exact_readback": true,
+        "postgres_entities": 1
+      },
+      "served": {
+        "doc_uuid": "01a1646f-ffbb-8001-a6d4-ff2936dd7ad6",
+        "revision": 1,
+        "source_type": "agent-task-ledger",
+        "sha256": "b12f2ad0c6dffcb61a0eff261c4e8bc9c9f3926d174b1d974fd7172ae60d35a6",
+        "byte_exact_readback": true,
+        "verified_at": "2026-10-22T16:27:04.440583+00:00"
+      }
+    },
+    {
+      "path": "DOCS/TOOLING_CONVENTIONS/conversation-task-list.md",
+      "source": "admin-manual",
+      "sha256": "c4594eafe18606a6735ef4f14ae00cf0cded221e7d8e0687d9b3878fb7a36fbb",
+      "duplicate": false,
+      "indexing": "pending",
+      "doc_uuid": "01a0ebad-54c2-8001-a568-70a0e435b1be",
+      "revision": 5,
+      "chunks": 6,
+      "entity_uuids": [
+        "01a16470-02f6-8001-a6d6-23cc3e3cdf12",
+        "01a16470-02f7-8001-a6d7-b99825a0d0dd",
+        "01a16470-02f8-8001-a6d8-d7e29a25a6b0",
+        "01a16470-02f8-8001-a6d9-2c4bf2e65442",
+        "01a16470-02f9-8001-a6da-6fa6b775f437",
+        "01a16470-02f9-8001-a6db-2e29b6a3858f"
+      ],
+      "written_at": "2026-10-22T16:27:04.797553+00:00",
+      "verified": {
+        "doc_uuid": "01a0ebad-54c2-8001-a568-70a0e435b1be",
+        "revision": 5,
+        "revision_sha256": "c4594eafe18606a6735ef4f14ae00cf0cded221e7d8e0687d9b3878fb7a36fbb",
+        "byte_exact_readback": true,
+        "postgres_entities": 6
+      },
+      "served": {
+        "doc_uuid": "01a0ebad-54c2-8001-a568-70a0e435b1be",
+        "revision": 5,
+        "source_type": "admin-manual",
+        "sha256": "c4594eafe18606a6735ef4f14ae00cf0cded221e7d8e0687d9b3878fb7a36fbb",
+        "byte_exact_readback": true,
+        "verified_at": "2026-10-22T16:27:05.231399+00:00"
+      }
+    }
+  ],
+  "task_dispatch": "unconfirmed; no spawn endpoint exposed"
+}

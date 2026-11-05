@@ -1,0 +1,20 @@
+{
+  "projectId": "projaba0bd94",
+  "projectName": "Robin's AI World",
+  "offeringId": "ofrng352609e01b",
+  "offeringLookupKey": "Natally",
+  "offeringDisplayName": "Natally",
+  "isCurrent": false,
+  "dashboardUrl": "https://app.revenuecat.com/projects/aba0bd94/product-catalog/offerings/ofrng352609e01b",
+  "createdAndReadBackAt": "2026-10-21",
+  "access": "Authenticated RevenueCat MCP through Codex CLI transport; no model turn",
+  "currencyDisplay": "$ROCHE",
+  "currencyCode": null,
+  "currencyBindingStatus": "Awaiting operator choice between existing active AICREDIT (named ROCHE) and ROCHE (named Roche Credit). Do not create or merge currencies.",
+  "newCurrencyCreated": false,
+  "newProductsOrPricesCreated": false,
+  "existingDefaultOfferingId": "ofrngf3e410be57",
+  "existingDefaultPreserved": true,
+  "paymentIntegrationComplete": false,
+  "branch": "codex/revenuecat-alby-preview"
+}
