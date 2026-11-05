@@ -1,0 +1,30 @@
+{
+  "desired_states": [
+    {
+      "store": "rc_billing",
+      "common": {
+        "pricing": {
+          "currency_prices": {
+            "USD": {
+              "amount_micros": 990000
+            }
+          }
+        }
+      },
+      "product_id": "proda88125bed7"
+    },
+    {
+      "store": "rc_billing",
+      "common": {
+        "pricing": {
+          "currency_prices": {
+            "USD": {
+              "amount_micros": 990000
+            }
+          }
+        }
+      },
+      "product_id": "prod2f046e3b64"
+    }
+  ]
+}

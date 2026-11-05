@@ -1,0 +1,53 @@
+{
+  "path": "INFRASTRUCTURE.md",
+  "source": "admin-manual",
+  "sha256": "2892e0db0da058c36b5744fa7592b82d2b62183e266fb0a2160aac0039c85e40",
+  "duplicate": false,
+  "indexing": "pending",
+  "doc_uuid": "01a0c77d-15e5-8039-bac8-2cd15c8a6d15",
+  "revision": 3,
+  "chunks": 25,
+  "entity_uuids": [
+    "01a1780a-303a-8001-9f7d-7cdb20a68731",
+    "01a1780a-3069-8001-9f7e-11e9ccc84009",
+    "01a1780a-3084-8001-9f7f-60c057de8a27",
+    "01a1780a-30a7-8001-9f80-49bc9f7708a8",
+    "01a1780a-30c9-8001-9f81-e5d4fd31778a",
+    "01a1780a-30fd-8001-9f82-2e2e1c4dea29",
+    "01a1780a-3155-8001-9f83-37f2c14eea8c",
+    "01a1780a-318e-8001-9f84-1a58d3534cc8",
+    "01a1780a-31af-8001-9f85-e08639a0b85e",
+    "01a1780a-31bb-8001-9f86-23e83deb5779",
+    "01a1780a-31dc-8001-9f87-21eebd2db51f",
+    "01a1780a-31f9-8001-9f88-ff230d00b718",
+    "01a1780a-3210-8001-9f89-eb7623d92237",
+    "01a1780a-324c-8001-9f8a-84130fc86a98",
+    "01a1780a-327e-8001-9f8b-113d9da12de0",
+    "01a1780a-32d7-8001-9f8c-eb3e5bead886",
+    "01a1780a-32f4-8001-9f8d-291900a96372",
+    "01a1780a-3316-8001-9f8e-2e13a686e9d2",
+    "01a1780a-3324-8001-9f8f-e07e25c7fd28",
+    "01a1780a-332a-8001-9f90-a6cad2a0940c",
+    "01a1780a-332b-8001-9f91-d8515ebadaaf",
+    "01a1780a-3333-8001-9f92-87f6cb02db05",
+    "01a1780a-3334-8001-9f93-af8e8ac6e2a8",
+    "01a1780a-3334-8001-9f94-460a19842d19",
+    "01a1780a-3335-8001-9f95-bb5575978de2"
+  ],
+  "written_at": "2026-10-26T11:48:17.340655+00:00",
+  "verified": {
+    "doc_uuid": "01a0c77d-15e5-8039-bac8-2cd15c8a6d15",
+    "revision": 3,
+    "revision_sha256": "2892e0db0da058c36b5744fa7592b82d2b62183e266fb0a2160aac0039c85e40",
+    "byte_exact_readback": true,
+    "postgres_entities": 25
+  },
+  "served": {
+    "doc_uuid": "01a0c77d-15e5-8039-bac8-2cd15c8a6d15",
+    "revision": 3,
+    "source_type": "admin-manual",
+    "sha256": "2892e0db0da058c36b5744fa7592b82d2b62183e266fb0a2160aac0039c85e40",
+    "byte_exact_readback": true,
+    "verified_at": "2026-10-26T11:48:18.152368+00:00"
+  }
+}

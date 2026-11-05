@@ -1,0 +1,110 @@
+# src/services/chartFocusVisuals.ts
+
+Source SHA-256: 4a6097a8135c70fe44b3364434eb15f1c0b02a9ae8008a48dc34e1fed41091ee
+
+| ID | Parent | Syntax kind | Lines | Source text |
+| --- | --- | --- | --- | --- |
+| Sf6a0dbaa5d69_N1 | — | program | 1–9 | program  |
+| Sf6a0dbaa5d69_N2 | Sf6a0dbaa5d69_N1 | comment | 1–1 | /** Tunable art direction, not an empirical timing or golden-ratio claim. */ |
+| Sf6a0dbaa5d69_N3 | Sf6a0dbaa5d69_N1 | export_statement | 2–2 | export_statement  |
+| Sf6a0dbaa5d69_N4 | Sf6a0dbaa5d69_N3 | lexical_declaration | 2–2 | lexical_declaration  |
+| Sf6a0dbaa5d69_N5 | Sf6a0dbaa5d69_N4 | variable_declarator | 2–2 | variable_declarator CHART_FOCUS |
+| Sf6a0dbaa5d69_N6 | Sf6a0dbaa5d69_N5 | identifier | 2–2 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N7 | Sf6a0dbaa5d69_N5 | as_expression | 2–2 | as_expression  |
+| Sf6a0dbaa5d69_N8 | Sf6a0dbaa5d69_N7 | object | 2–2 | object  |
+| Sf6a0dbaa5d69_N9 | Sf6a0dbaa5d69_N8 | pair | 2–2 | pair  |
+| Sf6a0dbaa5d69_N10 | Sf6a0dbaa5d69_N9 | property_identifier | 2–2 | dim |
+| Sf6a0dbaa5d69_N11 | Sf6a0dbaa5d69_N9 | number | 2–2 | 0.19 |
+| Sf6a0dbaa5d69_N12 | Sf6a0dbaa5d69_N8 | pair | 2–2 | pair  |
+| Sf6a0dbaa5d69_N13 | Sf6a0dbaa5d69_N12 | property_identifier | 2–2 | steadyHalo |
+| Sf6a0dbaa5d69_N14 | Sf6a0dbaa5d69_N12 | number | 2–2 | 0.64 |
+| Sf6a0dbaa5d69_N15 | Sf6a0dbaa5d69_N8 | pair | 2–2 | pair  |
+| Sf6a0dbaa5d69_N16 | Sf6a0dbaa5d69_N15 | property_identifier | 2–2 | peakHalo |
+| Sf6a0dbaa5d69_N17 | Sf6a0dbaa5d69_N15 | number | 2–2 | 0.94 |
+| Sf6a0dbaa5d69_N18 | Sf6a0dbaa5d69_N8 | pair | 2–2 | pair  |
+| Sf6a0dbaa5d69_N19 | Sf6a0dbaa5d69_N18 | property_identifier | 2–2 | pulseMs |
+| Sf6a0dbaa5d69_N20 | Sf6a0dbaa5d69_N18 | number | 2–2 | 720 |
+| Sf6a0dbaa5d69_N21 | Sf6a0dbaa5d69_N8 | pair | 2–2 | pair  |
+| Sf6a0dbaa5d69_N22 | Sf6a0dbaa5d69_N21 | property_identifier | 2–2 | pulses |
+| Sf6a0dbaa5d69_N23 | Sf6a0dbaa5d69_N21 | number | 2–2 | 2 |
+| Sf6a0dbaa5d69_N24 | Sf6a0dbaa5d69_N1 | export_statement | 3–8 | export_statement  |
+| Sf6a0dbaa5d69_N25 | Sf6a0dbaa5d69_N24 | function_declaration | 3–8 | function_declaration chartHaloOpacity |
+| Sf6a0dbaa5d69_N26 | Sf6a0dbaa5d69_N25 | identifier | 3–3 | chartHaloOpacity |
+| Sf6a0dbaa5d69_N27 | Sf6a0dbaa5d69_N25 | formal_parameters | 3–3 | formal_parameters  |
+| Sf6a0dbaa5d69_N28 | Sf6a0dbaa5d69_N27 | required_parameter | 3–3 | required_parameter  |
+| Sf6a0dbaa5d69_N29 | Sf6a0dbaa5d69_N28 | identifier | 3–3 | elapsedMs |
+| Sf6a0dbaa5d69_N30 | Sf6a0dbaa5d69_N28 | type_annotation | 3–3 | type_annotation  |
+| Sf6a0dbaa5d69_N31 | Sf6a0dbaa5d69_N30 | predefined_type | 3–3 | number |
+| Sf6a0dbaa5d69_N32 | Sf6a0dbaa5d69_N27 | required_parameter | 3–3 | required_parameter  |
+| Sf6a0dbaa5d69_N33 | Sf6a0dbaa5d69_N32 | identifier | 3–3 | reducedMotion |
+| Sf6a0dbaa5d69_N34 | Sf6a0dbaa5d69_N32 | type_annotation | 3–3 | type_annotation  |
+| Sf6a0dbaa5d69_N35 | Sf6a0dbaa5d69_N34 | predefined_type | 3–3 | boolean |
+| Sf6a0dbaa5d69_N36 | Sf6a0dbaa5d69_N25 | type_annotation | 3–3 | type_annotation  |
+| Sf6a0dbaa5d69_N37 | Sf6a0dbaa5d69_N36 | predefined_type | 3–3 | number |
+| Sf6a0dbaa5d69_N38 | Sf6a0dbaa5d69_N25 | statement_block | 3–8 | statement_block  |
+| Sf6a0dbaa5d69_N39 | Sf6a0dbaa5d69_N38 | lexical_declaration | 4–4 | lexical_declaration  |
+| Sf6a0dbaa5d69_N40 | Sf6a0dbaa5d69_N39 | variable_declarator | 4–4 | variable_declarator duration |
+| Sf6a0dbaa5d69_N41 | Sf6a0dbaa5d69_N40 | identifier | 4–4 | duration |
+| Sf6a0dbaa5d69_N42 | Sf6a0dbaa5d69_N40 | binary_expression | 4–4 | binary_expression  |
+| Sf6a0dbaa5d69_N43 | Sf6a0dbaa5d69_N42 | member_expression | 4–4 | member_expression  |
+| Sf6a0dbaa5d69_N44 | Sf6a0dbaa5d69_N43 | identifier | 4–4 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N45 | Sf6a0dbaa5d69_N43 | property_identifier | 4–4 | pulseMs |
+| Sf6a0dbaa5d69_N46 | Sf6a0dbaa5d69_N42 | member_expression | 4–4 | member_expression  |
+| Sf6a0dbaa5d69_N47 | Sf6a0dbaa5d69_N46 | identifier | 4–4 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N48 | Sf6a0dbaa5d69_N46 | property_identifier | 4–4 | pulses |
+| Sf6a0dbaa5d69_N49 | Sf6a0dbaa5d69_N38 | if_statement | 5–5 | if_statement  |
+| Sf6a0dbaa5d69_N50 | Sf6a0dbaa5d69_N49 | parenthesized_expression | 5–5 | parenthesized_expression  |
+| Sf6a0dbaa5d69_N51 | Sf6a0dbaa5d69_N50 | binary_expression | 5–5 | binary_expression  |
+| Sf6a0dbaa5d69_N52 | Sf6a0dbaa5d69_N51 | identifier | 5–5 | reducedMotion |
+| Sf6a0dbaa5d69_N53 | Sf6a0dbaa5d69_N51 | binary_expression | 5–5 | binary_expression  |
+| Sf6a0dbaa5d69_N54 | Sf6a0dbaa5d69_N53 | identifier | 5–5 | elapsedMs |
+| Sf6a0dbaa5d69_N55 | Sf6a0dbaa5d69_N53 | identifier | 5–5 | duration |
+| Sf6a0dbaa5d69_N56 | Sf6a0dbaa5d69_N49 | return_statement | 5–5 | return_statement  |
+| Sf6a0dbaa5d69_N57 | Sf6a0dbaa5d69_N56 | member_expression | 5–5 | member_expression  |
+| Sf6a0dbaa5d69_N58 | Sf6a0dbaa5d69_N57 | identifier | 5–5 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N59 | Sf6a0dbaa5d69_N57 | property_identifier | 5–5 | steadyHalo |
+| Sf6a0dbaa5d69_N60 | Sf6a0dbaa5d69_N38 | lexical_declaration | 6–6 | lexical_declaration  |
+| Sf6a0dbaa5d69_N61 | Sf6a0dbaa5d69_N60 | variable_declarator | 6–6 | variable_declarator wave |
+| Sf6a0dbaa5d69_N62 | Sf6a0dbaa5d69_N61 | identifier | 6–6 | wave |
+| Sf6a0dbaa5d69_N63 | Sf6a0dbaa5d69_N61 | binary_expression | 6–6 | binary_expression  |
+| Sf6a0dbaa5d69_N64 | Sf6a0dbaa5d69_N63 | parenthesized_expression | 6–6 | parenthesized_expression  |
+| Sf6a0dbaa5d69_N65 | Sf6a0dbaa5d69_N64 | binary_expression | 6–6 | binary_expression  |
+| Sf6a0dbaa5d69_N66 | Sf6a0dbaa5d69_N65 | number | 6–6 | 1 |
+| Sf6a0dbaa5d69_N67 | Sf6a0dbaa5d69_N65 | call_expression | 6–6 | call_expression  |
+| Sf6a0dbaa5d69_N68 | Sf6a0dbaa5d69_N67 | member_expression | 6–6 | member_expression  |
+| Sf6a0dbaa5d69_N69 | Sf6a0dbaa5d69_N68 | identifier | 6–6 | Math |
+| Sf6a0dbaa5d69_N70 | Sf6a0dbaa5d69_N68 | property_identifier | 6–6 | cos |
+| Sf6a0dbaa5d69_N71 | Sf6a0dbaa5d69_N67 | arguments | 6–6 | arguments  |
+| Sf6a0dbaa5d69_N72 | Sf6a0dbaa5d69_N71 | binary_expression | 6–6 | binary_expression  |
+| Sf6a0dbaa5d69_N73 | Sf6a0dbaa5d69_N72 | binary_expression | 6–6 | binary_expression  |
+| Sf6a0dbaa5d69_N74 | Sf6a0dbaa5d69_N73 | binary_expression | 6–6 | binary_expression  |
+| Sf6a0dbaa5d69_N75 | Sf6a0dbaa5d69_N74 | call_expression | 6–6 | call_expression  |
+| Sf6a0dbaa5d69_N76 | Sf6a0dbaa5d69_N75 | member_expression | 6–6 | member_expression  |
+| Sf6a0dbaa5d69_N77 | Sf6a0dbaa5d69_N76 | identifier | 6–6 | Math |
+| Sf6a0dbaa5d69_N78 | Sf6a0dbaa5d69_N76 | property_identifier | 6–6 | max |
+| Sf6a0dbaa5d69_N79 | Sf6a0dbaa5d69_N75 | arguments | 6–6 | arguments  |
+| Sf6a0dbaa5d69_N80 | Sf6a0dbaa5d69_N79 | number | 6–6 | 0 |
+| Sf6a0dbaa5d69_N81 | Sf6a0dbaa5d69_N79 | identifier | 6–6 | elapsedMs |
+| Sf6a0dbaa5d69_N82 | Sf6a0dbaa5d69_N74 | number | 6–6 | 2 |
+| Sf6a0dbaa5d69_N83 | Sf6a0dbaa5d69_N73 | member_expression | 6–6 | member_expression  |
+| Sf6a0dbaa5d69_N84 | Sf6a0dbaa5d69_N83 | identifier | 6–6 | Math |
+| Sf6a0dbaa5d69_N85 | Sf6a0dbaa5d69_N83 | property_identifier | 6–6 | PI |
+| Sf6a0dbaa5d69_N86 | Sf6a0dbaa5d69_N72 | member_expression | 6–6 | member_expression  |
+| Sf6a0dbaa5d69_N87 | Sf6a0dbaa5d69_N86 | identifier | 6–6 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N88 | Sf6a0dbaa5d69_N86 | property_identifier | 6–6 | pulseMs |
+| Sf6a0dbaa5d69_N89 | Sf6a0dbaa5d69_N63 | number | 6–6 | 2 |
+| Sf6a0dbaa5d69_N90 | Sf6a0dbaa5d69_N38 | return_statement | 7–7 | return_statement  |
+| Sf6a0dbaa5d69_N91 | Sf6a0dbaa5d69_N90 | binary_expression | 7–7 | binary_expression  |
+| Sf6a0dbaa5d69_N92 | Sf6a0dbaa5d69_N91 | member_expression | 7–7 | member_expression  |
+| Sf6a0dbaa5d69_N93 | Sf6a0dbaa5d69_N92 | identifier | 7–7 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N94 | Sf6a0dbaa5d69_N92 | property_identifier | 7–7 | steadyHalo |
+| Sf6a0dbaa5d69_N95 | Sf6a0dbaa5d69_N91 | binary_expression | 7–7 | binary_expression  |
+| Sf6a0dbaa5d69_N96 | Sf6a0dbaa5d69_N95 | parenthesized_expression | 7–7 | parenthesized_expression  |
+| Sf6a0dbaa5d69_N97 | Sf6a0dbaa5d69_N96 | binary_expression | 7–7 | binary_expression  |
+| Sf6a0dbaa5d69_N98 | Sf6a0dbaa5d69_N97 | member_expression | 7–7 | member_expression  |
+| Sf6a0dbaa5d69_N99 | Sf6a0dbaa5d69_N98 | identifier | 7–7 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N100 | Sf6a0dbaa5d69_N98 | property_identifier | 7–7 | peakHalo |
+| Sf6a0dbaa5d69_N101 | Sf6a0dbaa5d69_N97 | member_expression | 7–7 | member_expression  |
+| Sf6a0dbaa5d69_N102 | Sf6a0dbaa5d69_N101 | identifier | 7–7 | CHART_FOCUS |
+| Sf6a0dbaa5d69_N103 | Sf6a0dbaa5d69_N101 | property_identifier | 7–7 | steadyHalo |
+| Sf6a0dbaa5d69_N104 | Sf6a0dbaa5d69_N95 | identifier | 7–7 | wave |
