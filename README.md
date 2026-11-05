@@ -90,6 +90,14 @@ Vite 8 · React 19 · TypeScript · Tailwind CSS 4 · Three.js · Swiss Ephemeri
 
 ## Coordinated Tauri 2 test build
 
+For a local web compile and browser inspection without release side effects, run
+`bash build_all.sh --verify-web`. This compiles the real app and landing into
+`build/verify-web/site`, without changing versions, resolving stored credentials,
+installing native tools, pushing Git, or deploying. It is not a release and does
+not generate a release service worker. Production builds still use the complete
+coordinator below. The no-deploy GitHub workflow retains desktop/mobile screenshots
+and the compiled site as verification artifacts.
+
 Run **one command on either build computer** (Windows 11 or Ubuntu 24.04):
 
 ```bash
