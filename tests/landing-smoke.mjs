@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { readFile, stat, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { chromium } from 'playwright';
+import { chromium, devices } from 'playwright';
 import mime from 'mime';
 
 const root = path.resolve('build/verify-web/site');
@@ -25,8 +25,8 @@ const origin = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ headless: true });
 const results = [];
 try {
-  for (const [name, viewport] of [['desktop', { width: 1440, height: 1000 }], ['mobile', { width: 390, height: 844 }]]) {
-    const context = await browser.newContext({ viewport, reducedMotion: 'reduce', serviceWorkers: 'block' });
+  for (const [name, device] of [['desktop', { viewport: { width: 1440, height: 1000 } }], ['mobile', devices['Pixel 7']]]) {
+    const context = await browser.newContext({ ...device, reducedMotion: 'reduce', serviceWorkers: 'block' });
     // Exercise local UI only: no sign-in, payments, inference or production writes.
     await context.route('**/*', route => new URL(route.request().url()).origin === origin
       ? route.continue() : route.abort());
@@ -42,11 +42,18 @@ try {
       assert.ok(await page.getByRole('button', { name: /Sound On/ }).isVisible(), `${name}: actual room controls mounted`);
       assert.ok(await page.locator('a[href*="app.html"]').count(), `${name}: app entry remains available`);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${name}: no horizontal overflow`);
+      await page.screenshot({ path: path.join(evidence, `landing-${name}-viewport.png`) });
       await page.screenshot({ path: path.join(evidence, `landing-${name}.png`), fullPage: true });
-      await page.goto(`${origin}/app.html?app=1`, { waitUntil: 'networkidle' });
-      await page.waitForFunction(() => (document.getElementById('root')?.textContent || '').trim().length > 0);
-      assert.doesNotMatch(await page.locator('#root').innerText(), /Failed to load the app/);
+      await page.getByRole('link', { name: 'Explore the room free first', exact: true }).click();
+      await page.waitForURL(url => url.pathname === '/app.html' && url.searchParams.get('app') === '1');
+      await page.getByRole('dialog', { name: 'Sign in to Natally', exact: true }).waitFor({ state: 'visible' });
+      assert.ok(await page.getByRole('button', { name: 'Continue with Google', exact: true }).isEnabled(), `${name}: usable sign-in entry`);
+      assert.doesNotMatch(await page.locator('#root').innerText(), /Failed to load the app|Restoring your sign-in|Loading your saved|could not be loaded/);
       await page.screenshot({ path: path.join(evidence, `app-${name}.png`), fullPage: true });
+      await page.goBack({ waitUntil: 'networkidle' });
+      await page.locator('.marketing-frame').waitFor({ state: 'visible' });
+      await page.goForward({ waitUntil: 'networkidle' });
+      await page.getByRole('button', { name: 'Continue with Google', exact: true }).waitFor({ state: 'visible' });
       assert.deepEqual(errors, [], `${name}: no uncaught JavaScript errors`);
       results.push({ viewport: name, result: 'passed', errors });
     } catch (error) {
@@ -62,4 +69,4 @@ try {
   await browser.close();
   await new Promise(resolve => server.close(resolve));
 }
-console.log('PASS: actual landing artwork, controls, responsive layout and app entry on desktop and mobile.');
+console.log('PASS: actual landing artwork, mounted controls, responsive layout, free-entry navigation, usable sign-in and Back/Forward on desktop and a touch mobile profile.');

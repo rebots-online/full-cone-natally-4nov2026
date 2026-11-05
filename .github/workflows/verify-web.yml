@@ -36,7 +36,9 @@ jobs:
         run: node --import tsx --test tests/release-state.test.mjs tests/web-verification.test.ts
       - name: Compile the current web application without publishing
         run: bash build_all.sh --verify-web
-      - run: npx playwright install --with-deps chromium
+      # GitHub's Ubuntu image already supplies Chromium's shared libraries.
+      # Download the pinned browser without an unrelated apt upgrade/install.
+      - run: npx playwright install chromium
       - name: Inspect desktop and mobile runtime
         run: node tests/landing-smoke.mjs
       - uses: actions/upload-artifact@v4
